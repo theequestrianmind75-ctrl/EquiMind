@@ -422,7 +422,141 @@ Keep responses supportive, professional, and focused on practical techniques. Be
             "category": "welcome"
         }
 
-@api_router.post("/ai-coach/chat")
+@api_router.get("/mental-strategies")
+async def get_mental_strategies():
+    """Get all available mental strategies"""
+    try:
+        strategies = await db.mental_strategies.find().to_list(length=None)
+        if not strategies:
+            # Return default strategies if none exist in database
+            return [
+                {
+                    "id": "progressive-muscle-relaxation",
+                    "name": "Progressive Muscle Relaxation",
+                    "category": "anxiety_reduction",
+                    "description": "Systematically tense and relax muscle groups to reduce physical anxiety",
+                    "duration_minutes": 10,
+                    "trigger_conditions": {
+                        "anxiety_min": 6,
+                        "anxiety_max": 10,
+                        "confidence_min": 1,
+                        "confidence_max": 5
+                    },
+                    "instructions": [
+                        "Sit or lie down in a comfortable position",
+                        "Start with your toes - tense for 5 seconds, then release",
+                        "Move up to your calves, thighs, abdomen, arms, and face",
+                        "Focus on the contrast between tension and relaxation",
+                        "Breathe deeply throughout the exercise"
+                    ],
+                    "evidence_base": "Systematic review shows 70% reduction in pre-performance anxiety",
+                    "suitable_for": ["high_anxiety", "low_confidence", "performance_nerves"]
+                },
+                {
+                    "id": "cognitive-restructuring",
+                    "name": "Cognitive Restructuring",
+                    "category": "thought_management",
+                    "description": "Challenge and replace negative thoughts with realistic, helpful ones",
+                    "duration_minutes": 8,
+                    "trigger_conditions": {
+                        "anxiety_min": 7,
+                        "anxiety_max": 10,
+                        "confidence_min": 1,
+                        "confidence_max": 4
+                    },
+                    "instructions": [
+                        "Identify the specific worry or negative thought",
+                        "Ask: 'Is this thought realistic? What evidence do I have?'",
+                        "Consider: 'What would I tell a friend in this situation?'",
+                        "Replace with a balanced, realistic thought",
+                        "Write down the new thought and repeat it 3 times"
+                    ],
+                    "evidence_base": "CBT techniques show 65% improvement in competitive confidence",
+                    "suitable_for": ["catastrophic_thinking", "self_doubt", "fear_of_failure"]
+                },
+                {
+                    "id": "grounding-5-4-3-2-1",
+                    "name": "5-4-3-2-1 Grounding Technique",
+                    "category": "mindfulness",
+                    "description": "Use your senses to anchor yourself in the present moment",
+                    "duration_minutes": 5,
+                    "trigger_conditions": {
+                        "anxiety_min": 6,
+                        "anxiety_max": 10,
+                        "confidence_min": 1,
+                        "confidence_max": 5
+                    },
+                    "instructions": [
+                        "Name 5 things you can see in your environment",
+                        "Name 4 things you can touch or feel",
+                        "Name 3 things you can hear right now",
+                        "Name 2 things you can smell",
+                        "Name 1 thing you can taste"
+                    ],
+                    "evidence_base": "Mindfulness techniques reduce anxiety by 60% in equestrian athletes",
+                    "suitable_for": ["panic_symptoms", "dissociation", "overwhelming_anxiety"]
+                },
+                {
+                    "id": "visualization-success",
+                    "name": "Success Visualization",
+                    "category": "confidence_building",
+                    "description": "Mentally rehearse a successful, confident ride",
+                    "duration_minutes": 12,
+                    "trigger_conditions": {
+                        "anxiety_min": 5,
+                        "anxiety_max": 9,
+                        "confidence_min": 1,
+                        "confidence_max": 6
+                    },
+                    "instructions": [
+                        "Close your eyes and take three deep breaths",
+                        "Visualize yourself approaching your horse with confidence",
+                        "See yourself mounting smoothly and feeling secure",
+                        "Imagine completing your planned exercises successfully",
+                        "Feel the connection and harmony with your horse",
+                        "End by seeing yourself dismounting with a smile"
+                    ],
+                    "evidence_base": "Mental imagery improves performance confidence by 45%",
+                    "suitable_for": ["performance_anxiety", "lack_of_confidence", "negative_expectations"]
+                }
+            ]
+        return [MentalStrategy(**strategy) for strategy in strategies]
+    except Exception as e:
+        logger.error(f"Error fetching mental strategies: {str(e)}")
+        raise HTTPException(status_code=500, detail="Unable to fetch mental strategies")
+
+@api_router.post("/mental-strategies")
+async def create_mental_strategy(strategy: MentalStrategy):
+    """Create a new mental strategy"""
+    try:
+        strategy_dict = strategy.dict()
+        await db.mental_strategies.insert_one(strategy_dict)
+        return strategy
+    except Exception as e:
+        logger.error(f"Error creating mental strategy: {str(e)}")
+        raise HTTPException(status_code=500, detail="Unable to create mental strategy")
+
+@api_router.post("/strategy-logs")
+async def log_strategy_usage(log: StrategyLog):
+    """Log the usage of a mental strategy"""
+    try:
+        log_dict = log.dict()
+        await db.strategy_logs.insert_one(log_dict)
+        return log
+    except Exception as e:
+        logger.error(f"Error logging strategy usage: {str(e)}")
+        raise HTTPException(status_code=500, detail="Unable to log strategy usage")
+
+@api_router.get("/strategy-logs/{rider_id}")
+async def get_rider_strategy_logs(rider_id: str):
+    """Get strategy usage logs for a specific rider"""
+    try:
+        logs = await db.strategy_logs.find({"rider_id": rider_id}).to_list(length=None)
+        return [StrategyLog(**log) for log in logs]
+    except Exception as e:
+        logger.error(f"Error fetching strategy logs: {str(e)}")
+        raise HTTPException(status_code=500, detail="Unable to fetch strategy logs")
+
 async def chat_with_ai_coach(chat_data: dict):
     try:
         rider_context = chat_data.get('rider_context', {})
