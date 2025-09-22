@@ -300,6 +300,8 @@ const PreRidePreparation = ({ currentRider }) => {
       console.error('Error logging strategy usage:', error);
     }
   };
+
+  const saveEmotionAssessment = async () => {
     if (!currentSession) return;
 
     try {
