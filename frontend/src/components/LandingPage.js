@@ -144,12 +144,7 @@ const LandingPage = ({ onGetStarted }) => {
               <span className="gradient-text bg-gradient-to-r from-blue-200 to-white bg-clip-text text-transparent">Excel in the Saddle</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Combining clinical expertise with deep equestrian knowledge to deliver 
-              results that transform both rider performance and horse-rider relationships.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16">
               <button
                 onClick={handleGetStarted}
                 className="professional-button text-white px-8 py-4 rounded-xl font-bold text-lg hover-lift flex items-center space-x-3"
@@ -160,23 +155,11 @@ const LandingPage = ({ onGetStarted }) => {
               
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/30 transition-all flex items-center space-x-3"
+                className="professional-button text-white px-8 py-4 rounded-xl font-semibold hover-lift flex items-center space-x-3"
               >
-                <Play className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5" />
                 <span>Learn More</span>
               </button>
-            </div>
-            
-            <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <stat.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="text-2xl font-bold text-white">{stat.number}</div>
-                  <div className="text-blue-200 text-sm">{stat.label}</div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
