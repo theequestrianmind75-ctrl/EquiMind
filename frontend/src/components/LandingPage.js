@@ -131,8 +131,11 @@ const LandingPage = ({ onGetStarted }) => {
             src="https://customer-assets.emergentagent.com/job_equihero/artifacts/jkqy4a6h_jumping%20knees.jpg" 
             alt="Show Jumping" 
             className="w-full h-full object-cover opacity-30"
+            style={{ objectPosition: '30% center' }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-indigo-900/50"></div>
+          {/* Hide watermark in bottom right corner */}
+          <div className="absolute bottom-0 right-0 w-32 h-16 bg-gradient-to-l from-blue-900/90 to-transparent"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 text-center">
