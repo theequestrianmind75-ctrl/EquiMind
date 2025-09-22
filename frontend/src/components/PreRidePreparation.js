@@ -573,6 +573,118 @@ const PreRidePreparation = ({ currentRider }) => {
           </div>
         </div>
 
+        {/* Mental Strategies Section - Conditionally Displayed */}
+        {recommendedStrategies.length > 0 && (
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border-2 border-orange-200">
+            <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+              <Brain className="w-6 h-6 text-orange-600 mr-3" />
+              Mental Strategies
+              <div className="ml-3 px-3 py-1 bg-orange-100 text-orange-800 text-xs font-semibold rounded-full">
+                Recommended for You
+              </div>
+            </h2>
+            
+            <div className="mb-6 p-4 bg-orange-50 rounded-lg border border-orange-200">
+              <div className="flex items-center space-x-2 mb-2">
+                <AlertTriangle className="w-5 h-5 text-orange-600" />
+                <h3 className="font-semibold text-orange-800">Evidence-Based Interventions</h3>
+              </div>
+              <p className="text-orange-700 text-sm">
+                Based on your current anxiety level ({anxietyLevel}/10) and confidence level ({confidenceLevel}/10), 
+                these clinically-proven strategies are recommended to optimize your mental state before riding.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {recommendedStrategies.map((strategy) => (
+                <div key={strategy.id} className="border border-gray-200 rounded-xl p-6 hover-lift bg-gradient-to-br from-white to-orange-50">
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <h3 className="font-bold text-gray-900 mb-1">{strategy.name}</h3>
+                      <p className="text-xs text-orange-600 font-medium uppercase tracking-wide">
+                        {strategy.category.replace('_', ' ')}
+                      </p>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-xs text-gray-500">Duration</div>
+                      <div className="font-semibold text-orange-600">{strategy.duration_minutes} min</div>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-600 text-sm mb-4">{strategy.description}</p>
+                  
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-800 text-sm mb-2">Key Steps:</h4>
+                    <div className="space-y-1">
+                      {strategy.instructions.slice(0, 3).map((instruction, index) => (
+                        <p key={index} className="text-xs text-gray-600">
+                          {index + 1}. {instruction}
+                        </p>
+                      ))}
+                      {strategy.instructions.length > 3 && (
+                        <p className="text-xs text-gray-500 italic">
+                          + {strategy.instructions.length - 3} more steps...
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="mb-4 p-3 bg-blue-50 rounded-lg">
+                    <h4 className="font-semibold text-blue-800 text-xs mb-1">Evidence Base:</h4>
+                    <p className="text-blue-700 text-xs">{strategy.evidence_base}</p>
+                  </div>
+                  
+                  <button
+                    onClick={() => startMentalStrategy(strategy)}
+                    disabled={isStrategyActive}
+                    className="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-gray-400 text-white px-4 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
+                  >
+                    <Play className="w-4 h-4" />
+                    <span>Start Strategy</span>
+                  </button>
+                </div>
+              ))}
+            </div>
+
+            {/* Active Strategy Display */}
+            {isStrategyActive && selectedStrategy && (
+              <div className="mt-8 p-6 bg-orange-50 rounded-xl border-2 border-orange-300">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-orange-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Brain className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{selectedStrategy.name}</h3>
+                  <p className="text-gray-600 mb-4">{selectedStrategy.description}</p>
+                </div>
+
+                <div className="bg-white rounded-lg p-6 mb-6">
+                  <h4 className="font-bold text-gray-900 mb-4">Follow These Steps:</h4>
+                  <div className="space-y-3">
+                    {selectedStrategy.instructions.map((instruction, index) => (
+                      <div key={index} className="flex items-start space-x-3">
+                        <div className="w-6 h-6 bg-orange-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
+                          {index + 1}
+                        </div>
+                        <p className="text-gray-700">{instruction}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <button
+                    onClick={completeMentalStrategy}
+                    className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center space-x-2 mx-auto"
+                  >
+                    <CheckCircle className="w-5 h-5" />
+                    <span>Complete Strategy</span>
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
         {/* Breathing Exercises */}
         <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8">
           <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
