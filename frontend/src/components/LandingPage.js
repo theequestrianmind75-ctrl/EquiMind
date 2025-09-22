@@ -214,7 +214,7 @@ const LandingPage = ({ onGetStarted }) => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              The Equestrian Mindset Approach
+              The EquiMind Approach
             </h2>
             <p className="text-xl text-gray-600">
               Three proven steps to mental mastery in equestrian sports
