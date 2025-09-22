@@ -35,7 +35,7 @@ const LandingPage = ({ onGetStarted }) => {
     {
       icon: Heart,
       title: 'Mental Health Solutions',
-      description: 'Clinical-grade techniques for managing performance anxiety and building confidence.',
+      description: 'Evidence-based strategies you can use now for managing performance anxiety and building confidence.',
       color: 'text-blue-700'
     },
     {
