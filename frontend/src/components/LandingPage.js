@@ -226,35 +226,27 @@ const LandingPage = ({ onGetStarted }) => {
               {
                 step: '01',
                 title: 'Assess Your Mental Performance',
-                description: 'Complete comprehensive evaluation to understand your unique patterns, challenges, and strengths as a rider.',
-                image: heroImages[1]
+                description: 'Complete comprehensive evaluation to understand your unique patterns, challenges, and strengths as a rider.'
               },
               {
                 step: '02',
                 title: 'Build Mental Skills',
-                description: 'Follow evidence-based training protocols designed by a licensed clinical therapist for your specific needs.',
-                image: heroImages[2]
+                description: 'Follow evidence-based training protocols designed by a licensed clinical therapist for your specific needs.'
               },
               {
                 step: '03',
                 title: 'Perform with Confidence',
-                description: 'Apply your new mental skills in training and competition, with ongoing support and guidance.',
-                image: heroImages[0]
+                description: 'Apply your new mental skills in training and competition, with ongoing support and guidance.'
               }
             ].map((item, index) => (
               <div key={index} className="text-center group">
-                <div className="relative mb-8">
-                  <img 
-                    src={item.image} 
-                    alt={item.title}
-                    className="w-full h-64 object-cover rounded-2xl group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-brand-dark rounded-full flex items-center justify-center text-white font-bold text-lg">
+                <div className="professional-card rounded-2xl p-8 mb-6 h-64 flex flex-col justify-center">
+                  <div className="w-12 h-12 bg-gradient-brand-dark rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-4">
                     {item.step}
                   </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{item.title}</h3>
+                  <p className="text-gray-600">{item.description}</p>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
               </div>
             ))}
           </div>
