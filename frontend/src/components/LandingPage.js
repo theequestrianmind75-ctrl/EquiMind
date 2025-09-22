@@ -388,7 +388,7 @@ const LandingPage = ({ onGetStarted }) => {
                     className="w-8 h-8 object-contain filter brightness-0 invert"
                   />
                 </div>
-                <h3 className="text-2xl font-bold">The Equestrian Mind</h3>
+                <h3 className="text-2xl font-bold">EquiMind</h3>
               </div>
               <p className="text-gray-400">
                 Empowering equestrians through evidence-based mental performance coaching.
