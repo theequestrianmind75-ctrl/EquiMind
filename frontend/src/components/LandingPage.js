@@ -187,7 +187,7 @@ const LandingPage = ({ onGetStarted }) => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why The Equestrian Mind Works
+              Why EquiMind Works
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Combining clinical expertise with deep equestrian knowledge to deliver 
