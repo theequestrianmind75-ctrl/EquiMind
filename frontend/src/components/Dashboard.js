@@ -220,7 +220,7 @@ const Dashboard = ({ currentRider, onLogout }) => {
               {getGreeting()}, {currentRider?.name}
             </h1>
             <p className="text-xl text-blue-100 max-w-2xl">
-              Continue your mental performance training journey with evidence-based techniques and professional guidance.
+              We are glad your back continuing your mental performance journey!
             </p>
           </div>
         </div>
