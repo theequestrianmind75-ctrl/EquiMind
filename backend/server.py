@@ -350,6 +350,190 @@ async def get_rider_analytics(rider_id: str):
         "emergency_events_count": await db.emergency_events.count_documents({"rider_id": rider_id})
     }
 
+# AI Coaching Routes
+@api_router.post("/ai-coach/initialize")
+async def initialize_ai_coach(context_data: dict):
+    try:
+        # Initialize AI chat with context
+        chat = LlmChat(
+            api_key=os.environ.get('EMERGENT_LLM_KEY'),
+            session_id=f"coach-{context_data.get('rider_name', 'rider')}-{int(datetime.now().timestamp())}",
+            system_message=f"""You are an expert equestrian mental performance coach specializing in anxiety management and confidence building for riders.
+
+Your client profile:
+- Name: {context_data.get('rider_name', 'Rider')}
+- Experience Level: {context_data.get('experience_level', 'Intermediate')}
+- Disciplines: {', '.join(context_data.get('preferred_disciplines', ['General']))}
+- Current Emotional State: {context_data.get('current_emotional_state', 'neutral')}
+- Session Type: {context_data.get('session_type', 'general')}
+
+You provide:
+- Evidence-based mental training techniques
+- Personalized anxiety management strategies
+- Confidence-building exercises
+- Pre-ride preparation guidance
+- Emergency anxiety support when needed
+
+Keep responses supportive, professional, and focused on practical techniques. Be encouraging but realistic. Always prioritize safety and mental well-being."""
+        ).with_model("openai", "gpt-4o-mini")
+        
+        # Send initialization message
+        welcome_message = UserMessage(
+            text=f"Hello! I'm starting a {context_data.get('session_type', 'general')} session focused on {context_data.get('ride_type', 'general training')}. My current emotional state is {context_data.get('current_emotional_state', 'neutral')}. Please provide me with a personalized welcome message and initial guidance."
+        )
+        
+        response = await chat.send_message(welcome_message)
+        
+        return {
+            "message": response,
+            "session_id": chat.session_id,
+            "category": "welcome"
+        }
+        
+    except Exception as e:
+        logger.error(f"AI coach initialization error: {str(e)}")
+        # Fallback message
+        return {
+            "message": f"Hello {context_data.get('rider_name', 'there')}! I'm your AI equestrian coach, here to help you with mental training and anxiety management. Based on your {context_data.get('experience_level', 'intermediate')} level experience in {', '.join(context_data.get('preferred_disciplines', ['riding']))}, I'll provide personalized guidance for your session today. How are you feeling about your upcoming ride?",
+            "category": "welcome"
+        }
+
+@api_router.post("/ai-coach/chat")
+async def chat_with_ai_coach(chat_data: dict):
+    try:
+        rider_context = chat_data.get('rider_context', {})
+        
+        # Initialize chat with context
+        chat = LlmChat(
+            api_key=os.environ.get('EMERGENT_LLM_KEY'),
+            session_id=f"coach-{rider_context.get('name', 'rider')}-session",
+            system_message=f"""You are an expert equestrian mental performance coach. 
+
+Current client context:
+- Name: {rider_context.get('name', 'Rider')}
+- Experience: {rider_context.get('experience_level', 'Intermediate')}
+- Disciplines: {', '.join(rider_context.get('preferred_disciplines', ['General']))}
+- Current emotional state: {rider_context.get('current_emotional_state', 'neutral')}
+- Session type: {rider_context.get('session_type', 'general')}
+
+Provide personalized, evidence-based advice for equestrian mental training. Focus on:
+- Practical anxiety management techniques
+- Confidence building strategies
+- Breathing exercises and mindfulness
+- Horse-rider connection advice
+- Safety-first approach
+
+Keep responses concise (2-3 sentences), supportive, and actionable."""
+        ).with_model("openai", "gpt-4o-mini")
+        
+        # Send user message
+        user_message = UserMessage(text=chat_data.get('message', ''))
+        response = await chat.send_message(user_message)
+        
+        # Determine category based on message content
+        message_lower = chat_data.get('message', '').lower()
+        category = 'general'
+        if any(word in message_lower for word in ['anxious', 'scared', 'nervous', 'worry']):
+            category = 'concern'
+        elif any(word in message_lower for word in ['technique', 'how to', 'method']):
+            category = 'technique'
+        elif any(word in message_lower for word in ['good', 'great', 'better', 'progress']):
+            category = 'encouragement'
+        
+        return {
+            "message": response,
+            "category": category,
+            "confidence": 0.9
+        }
+        
+    except Exception as e:
+        logger.error(f"AI coach chat error: {str(e)}")
+        # Fallback response
+        return {
+            "message": "I understand you're looking for guidance. Let's focus on some deep breathing exercises to help center yourself. Try the 4-7-8 technique: inhale for 4 counts, hold for 7, exhale for 8. This can help calm your nerves before and during your ride.",
+            "category": "technique"
+        }
+
+@api_router.post("/ai-coach/competition-plan")
+async def generate_competition_plan(plan_data: dict):
+    try:
+        chat = LlmChat(
+            api_key=os.environ.get('EMERGENT_LLM_KEY'),
+            session_id=f"comp-plan-{int(datetime.now().timestamp())}",
+            system_message="""You are an expert equestrian sports psychologist specializing in competition preparation. 
+
+Generate personalized mental training plans for competitive riders based on:
+- Competition type and stress level
+- Days until competition
+- Rider experience level
+- Preferred disciplines
+
+Provide structured, evidence-based training phases with specific daily routines and mental strategies."""
+        ).with_model("openai", "gpt-4o-mini")
+        
+        competition_type = plan_data.get('competition_type', 'local_show')
+        days_until = plan_data.get('days_until_competition', 14)
+        experience = plan_data.get('rider_experience', 'Intermediate')
+        disciplines = ', '.join(plan_data.get('preferred_disciplines', ['general']))
+        
+        prompt = f"""Create a {days_until}-day mental training plan for a {experience} level rider competing in a {competition_type} focusing on {disciplines}.
+
+Structure the response as JSON with:
+1. Training phases (3 phases with tasks)
+2. Daily routine (4 time slots with activities)
+3. Mental strategies (4 key strategies)
+4. Emergency protocols (4 emergency techniques)
+
+Focus on evidence-based techniques for anxiety management, confidence building, and peak performance."""
+        
+        user_message = UserMessage(text=prompt)
+        response = await chat.send_message(user_message)
+        
+        # Try to parse JSON response, fallback to structured data if needed
+        try:
+            import json
+            plan = json.loads(response)
+            return plan
+        except:
+            # Return structured fallback plan
+            return {
+                "phases": [
+                    {
+                        "name": "Mental Foundation",
+                        "duration": max(1, days_until // 3),
+                        "tasks": [
+                            "Daily 10-minute meditation",
+                            "Positive visualization exercises",
+                            "Competition scenario mental rehearsal",
+                            "Anxiety management technique practice"
+                        ],
+                        "color": "bg-blue-500"
+                    }
+                ],
+                "dailyRoutine": [
+                    {"time": "Morning", "activity": "Mindfulness meditation", "duration": 10},
+                    {"time": "Pre-training", "activity": "Emotional check-in", "duration": 5},
+                    {"time": "Post-training", "activity": "Performance visualization", "duration": 15},
+                    {"time": "Evening", "activity": "Relaxation techniques", "duration": 10}
+                ],
+                "mentalStrategies": [
+                    "Focus on process goals rather than outcomes",
+                    "Develop consistent pre-competition routines",
+                    "Practice positive self-talk and affirmations",
+                    "Use mental imagery for successful performances"
+                ],
+                "emergencyStrategies": [
+                    "4-7-8 breathing for immediate anxiety relief",
+                    "5-4-3-2-1 grounding technique for overwhelming stress",
+                    "Progressive muscle relaxation for tension",
+                    "Emergency contact protocol with support team"
+                ]
+            }
+        
+    except Exception as e:
+        logger.error(f"Competition plan generation error: {str(e)}")
+        return {"error": "Unable to generate plan", "message": str(e)}
+
 # Include the router in the main app
 app.include_router(api_router)
 
