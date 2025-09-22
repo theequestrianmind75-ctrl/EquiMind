@@ -213,17 +213,8 @@ const Dashboard = ({ currentRider, onLogout }) => {
       </nav>
 
       {/* Header Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src={heroImages[0]} 
-            alt="Equestrian" 
-            className="w-full h-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-indigo-900/60"></div>
-        </div>
-        
-        <div className="relative max-w-7xl mx-auto px-4 py-16">
+      <div className="bg-gradient-brand-dark">
+        <div className="max-w-7xl mx-auto px-4 py-16">
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold text-white">
               {getGreeting()}, {currentRider?.name}
