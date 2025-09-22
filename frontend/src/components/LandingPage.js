@@ -253,43 +253,6 @@ const LandingPage = ({ onGetStarted }) => {
         </div>
       </section>
 
-      {/* Professional Credentials */}
-      <section className="py-20 bg-gradient-brand-dark">
-        <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-8">
-            <img 
-              src="https://customer-assets.emergentagent.com/job_equihero/artifacts/e0yoq28q_horse%20head%20.png" 
-              alt="EquiMind" 
-              className="w-12 h-12 object-contain filter brightness-0 invert"
-            />
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            Kristi Seymour, LPC, MBA
-          </h2>
-          <p className="text-xl text-blue-100 mb-12 leading-relaxed">
-            Over 20 years of licensed clinical experience and 50 years of being an equestrian. 
-            I empower riders with evidence-based mental tools to overcome challenges, 
-            build confidence, and excel in competition and in life.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-              <div className="text-3xl font-bold mb-2">50+</div>
-              <div className="text-blue-200">Years Equestrian</div>
-            </div>
-            <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-              <div className="text-3xl font-bold mb-2">LPC</div>
-              <div className="text-blue-200">Licensed Clinical</div>
-            </div>
-            <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-              <div className="text-3xl font-bold mb-2">MBA</div>
-              <div className="text-blue-200">Business Administration</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials */}
       <section id="testimonials" className="py-20">
         <div className="max-w-7xl mx-auto px-4">
