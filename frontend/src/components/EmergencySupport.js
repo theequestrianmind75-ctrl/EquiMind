@@ -203,7 +203,7 @@ const EmergencySupport = ({ currentRider }) => {
                 onClick={textSupport}
                 className="flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
-                <Phone className="w-5 h-5" />
+                <MessageSquare className="w-5 h-5" />
                 <span>Text Support</span>
               </button>
             </div>
