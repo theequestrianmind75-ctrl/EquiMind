@@ -243,7 +243,7 @@ const AuthPage = ({ onAuthSuccess }) => {
               <div className="w-8 h-8 rounded-lg flex items-center justify-center">
                 <img 
                   src="https://customer-assets.emergentagent.com/job_equihero/artifacts/e0yoq28q_horse%20head%20.png" 
-                  alt="The Equestrian Mind" 
+                  alt="EquiMind" 
                   className="w-6 h-6 object-contain"
                 />
               </div>
