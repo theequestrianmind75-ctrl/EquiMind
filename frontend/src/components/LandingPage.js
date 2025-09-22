@@ -372,7 +372,7 @@ const LandingPage = ({ onGetStarted }) => {
                 alt="EquiMind" 
                 className="w-16 h-16 object-contain mx-auto mb-4"
               />
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">About The Equestrian Mind</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">About EquiMind</h3>
               <p className="text-gray-600 mb-6">
                 Evidence-based mental performance coaching designed specifically for equestrians. 
                 Led by Kristi Seymour, a Licensed Clinical Professional with over 50 years of equestrian experience, 
