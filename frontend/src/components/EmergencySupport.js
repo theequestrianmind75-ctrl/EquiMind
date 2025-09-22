@@ -138,10 +138,18 @@ const EmergencySupport = ({ currentRider }) => {
     }
   };
 
-  const callSupport = () => {
-    logEmergencyEvent('Support call initiated');
-    toast.success('Connecting to support team...');
-    // In a real app, this would initiate a call or chat
+  const call911 = () => {
+    logEmergencyEvent('911 call initiated');
+    toast.success('Calling 911...');
+    // Initiate actual 911 call
+    window.location.href = 'tel:911';
+  };
+
+  const textSupport = () => {
+    logEmergencyEvent('Support text initiated');
+    toast.success('Opening text message...');
+    // Initiate text message to support number
+    window.location.href = 'sms:4358170812';
   };
 
   const formatTime = (seconds) => {
