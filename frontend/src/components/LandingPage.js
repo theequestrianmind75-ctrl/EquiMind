@@ -181,11 +181,15 @@ const LandingPage = ({ onGetStarted }) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="professional-card rounded-2xl p-8 hover-lift group">
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <feature.icon className={`w-7 h-7 ${feature.color}`} />
+                <div className="w-16 h-16 rounded-xl bg-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
+                  <img 
+                    src="https://customer-assets.emergentagent.com/job_equihero/artifacts/e0yoq28q_horse%20head%20.png" 
+                    alt="EquiMind" 
+                    className="w-12 h-12 object-contain"
+                  />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-center">{feature.description}</p>
               </div>
             ))}
           </div>
