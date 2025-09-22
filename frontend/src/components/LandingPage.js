@@ -128,16 +128,16 @@ const LandingPage = ({ onGetStarted }) => {
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0">
           <img 
-            src={heroImages[0]} 
-            alt="Equestrian" 
-            className="w-full h-full object-cover opacity-20"
+            src="https://customer-assets.emergentagent.com/job_equihero/artifacts/jkqy4a6h_jumping%20knees.jpg" 
+            alt="Show Jumping" 
+            className="w-full h-full object-cover opacity-30"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-indigo-900/50"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-16 leading-tight">
               Strengthen Your Mindset
               <br />
               <br />
@@ -157,8 +157,8 @@ const LandingPage = ({ onGetStarted }) => {
                 onClick={() => setIsModalOpen(true)}
                 className="professional-button text-white px-8 py-4 rounded-xl font-semibold hover-lift flex items-center space-x-3"
               >
-                <ArrowRight className="w-5 h-5" />
                 <span>Learn More</span>
+                <ArrowRight className="w-5 h-5" />
               </button>
             </div>
           </div>
