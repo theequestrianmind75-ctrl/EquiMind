@@ -247,7 +247,7 @@ const AuthPage = ({ onAuthSuccess }) => {
                   className="w-6 h-6 object-contain"
                 />
               </div>
-              <span className="text-xl font-bold text-brand-primary">The Equestrian Mind</span>
+              <span className="text-xl font-bold text-brand-primary">EquiMind</span>
             </div>
           </div>
 
