@@ -233,11 +233,14 @@ const LandingPage = ({ onGetStarted }) => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-brand-dark">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Ready to Transform Your Riding?
           </h2>
+          <h3 className="text-2xl md:text-3xl font-bold text-blue-200 mb-8">
+            LET'S DO THIS!
+          </h3>
           <p className="text-xl text-blue-100 mb-12">
-            Join riders who have overcome anxiety and achieved their equestrian dreams through evidence-based mental training.
+            Join riders who have overcome mental struggles and achieved their equestrian dreams through evidence-based mental strategies.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
