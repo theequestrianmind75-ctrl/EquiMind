@@ -44,9 +44,10 @@ const PreRidePreparation = ({ currentRider }) => {
     physical_condition: '',
     notes: ''
   });
-  const [voiceMemo, setVoiceMemo] = useState('');
-  const [isRecording, setIsRecording] = useState(false);
-  const [completedSteps, setCompletedSteps] = useState(new Set());
+  const [mentalStrategies, setMentalStrategies] = useState([]);
+  const [recommendedStrategies, setRecommendedStrategies] = useState([]);
+  const [selectedStrategy, setSelectedStrategy] = useState(null);
+  const [isStrategyActive, setIsStrategyActive] = useState(false);
 
   // Progress calculation
   const totalSteps = 5;
