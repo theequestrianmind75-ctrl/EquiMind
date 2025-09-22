@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 import axios from 'axios';
 import { 
-  Heart, 
   TrendingUp, 
   Clock, 
   Shield, 
@@ -101,7 +100,7 @@ const Dashboard = ({ currentRider, onLogout }) => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-100">
+      <div className="min-h-screen bg-brand-light">
         <div className="max-w-7xl mx-auto px-4 py-8">
           <div className="animate-pulse space-y-8">
             <div className="h-32 bg-white/50 rounded-2xl"></div>
@@ -124,7 +123,7 @@ const Dashboard = ({ currentRider, onLogout }) => {
   };
 
   const getEmotionalStateColor = (level) => {
-    if (level >= 8) return 'text-emerald-600';
+    if (level >= 8) return 'text-brand-primary';
     if (level >= 6) return 'text-green-600';
     if (level >= 4) return 'text-yellow-600';
     return 'text-red-600';
@@ -136,17 +135,21 @@ const Dashboard = ({ currentRider, onLogout }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-100">
+    <div className="min-h-screen bg-brand-light">
       
       {/* Navigation Bar */}
-      <nav className="bg-white/80 backdrop-blur-sm border-b border-emerald-100 sticky top-0 z-50">
+      <nav className="bg-white/90 backdrop-blur-sm border-b border-blue-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center">
-                <Heart className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_equihero/artifacts/e0yoq28q_horse%20head%20.png" 
+                  alt="The Equestrian Mind" 
+                  className="w-8 h-8 object-contain"
+                />
               </div>
-              <h1 className="text-2xl font-bold gradient-text">EquiMind</h1>
+              <h1 className="text-2xl font-bold text-brand-primary">The Equestrian Mind</h1>
             </div>
             
             <div className="flex items-center space-x-4">
@@ -164,7 +167,7 @@ const Dashboard = ({ currentRider, onLogout }) => {
                   onClick={() => setShowUserMenu(!showUserMenu)}
                   className="flex items-center space-x-3 bg-white hover:bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 transition-colors"
                 >
-                  <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-gradient-brand-dark rounded-full flex items-center justify-center">
                     <User className="w-4 h-4 text-white" />
                   </div>
                   <span className="hidden md:block font-medium text-gray-900">
@@ -217,7 +220,7 @@ const Dashboard = ({ currentRider, onLogout }) => {
             alt="Equestrian" 
             className="w-full h-full object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/80 to-teal-900/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-indigo-900/60"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 py-16">
@@ -225,8 +228,8 @@ const Dashboard = ({ currentRider, onLogout }) => {
             <h1 className="text-4xl md:text-5xl font-bold text-white">
               {getGreeting()}, {currentRider?.name}
             </h1>
-            <p className="text-xl text-emerald-100 max-w-2xl">
-              Ready to elevate your equestrian performance with evidence-based mental training?
+            <p className="text-xl text-blue-100 max-w-2xl">
+              Continue your mental performance training journey with evidence-based techniques and professional guidance.
             </p>
           </div>
         </div>
@@ -237,10 +240,10 @@ const Dashboard = ({ currentRider, onLogout }) => {
         
         {/* Quick Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 hover-lift">
+          <div className="professional-card rounded-2xl p-6 hover-lift">
             <div className="flex items-center space-x-3">
-              <div className="p-3 bg-emerald-100 rounded-xl">
-                <TrendingUp className="w-6 h-6 text-emerald-600" />
+              <div className="p-3 bg-blue-100 rounded-xl">
+                <TrendingUp className="w-6 h-6 text-brand-primary" />
               </div>
               <div>
                 <p className="text-sm text-gray-600">Confidence Level</p>
@@ -251,10 +254,10 @@ const Dashboard = ({ currentRider, onLogout }) => {
             </div>
           </div>
           
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 hover-lift">
+          <div className="professional-card rounded-2xl p-6 hover-lift">
             <div className="flex items-center space-x-3">
-              <div className="p-3 bg-blue-100 rounded-xl">
-                <Calendar className="w-6 h-6 text-blue-600" />
+              <div className="p-3 bg-indigo-100 rounded-xl">
+                <Calendar className="w-6 h-6 text-indigo-600" />
               </div>
               <div>
                 <p className="text-sm text-gray-600">Total Sessions</p>
@@ -265,7 +268,7 @@ const Dashboard = ({ currentRider, onLogout }) => {
             </div>
           </div>
           
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 hover-lift">
+          <div className="professional-card rounded-2xl p-6 hover-lift">
             <div className="flex items-center space-x-3">
               <div className="p-3 bg-purple-100 rounded-xl">
                 <Brain className="w-6 h-6 text-purple-600" />
@@ -279,14 +282,14 @@ const Dashboard = ({ currentRider, onLogout }) => {
             </div>
           </div>
           
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 hover-lift">
+          <div className="professional-card rounded-2xl p-6 hover-lift">
             <div className="flex items-center space-x-3">
-              <div className="p-3 bg-orange-100 rounded-xl">
-                <Award className="w-6 h-6 text-orange-600" />
+              <div className="p-3 bg-emerald-100 rounded-xl">
+                <Award className="w-6 h-6 text-emerald-600" />
               </div>
               <div>
                 <p className="text-sm text-gray-600">Completion Rate</p>
-                <p className="text-2xl font-bold text-orange-600">
+                <p className="text-2xl font-bold text-emerald-600">
                   {Math.round(((analytics?.completed_sessions || 0) / (analytics?.total_sessions || 1)) * 100)}%
                 </p>
               </div>
@@ -295,8 +298,8 @@ const Dashboard = ({ currentRider, onLogout }) => {
         </div>
 
         {/* Quick Actions */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Start Your Session</h2>
+        <div className="professional-card rounded-2xl p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Begin Your Mental Training Session</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
@@ -311,7 +314,7 @@ const Dashboard = ({ currentRider, onLogout }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
                   <h3 className="text-xl font-bold text-white mb-2">Show Jumping</h3>
-                  <p className="text-emerald-200 text-sm">Mental preparation for jumping disciplines</p>
+                  <p className="text-blue-200 text-sm">Mental preparation for jumping disciplines</p>
                   <div className="flex items-center mt-3 text-white">
                     <Play className="w-5 h-5 mr-2" />
                     <span className="font-semibold">Start Session</span>
@@ -331,7 +334,7 @@ const Dashboard = ({ currentRider, onLogout }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
                   <h3 className="text-xl font-bold text-white mb-2">Dressage</h3>
-                  <p className="text-emerald-200 text-sm">Focus and harmony preparation</p>
+                  <p className="text-blue-200 text-sm">Focus and harmony preparation</p>
                   <div className="flex items-center mt-3 text-white">
                     <Play className="w-5 h-5 mr-2" />
                     <span className="font-semibold">Start Session</span>
@@ -351,7 +354,7 @@ const Dashboard = ({ currentRider, onLogout }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
                   <h3 className="text-xl font-bold text-white mb-2">General Training</h3>
-                  <p className="text-emerald-200 text-sm">All-around mental preparation</p>
+                  <p className="text-blue-200 text-sm">All-around mental performance</p>
                   <div className="flex items-center mt-3 text-white">
                     <Play className="w-5 h-5 mr-2" />
                     <span className="font-semibold">Start Session</span>
@@ -366,15 +369,15 @@ const Dashboard = ({ currentRider, onLogout }) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           
           {/* Recent Sessions */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Recent Activity</h2>
+          <div className="professional-card rounded-2xl p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Recent Training Activity</h2>
             
             {recentSessions.length > 0 ? (
               <div className="space-y-4">
                 {recentSessions.slice(0, 3).map((session, index) => (
                   <div key={session.id || index} className="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                    <div className="p-2 bg-emerald-100 rounded-lg">
-                      <Activity className="w-5 h-5 text-emerald-600" />
+                    <div className="p-2 bg-blue-100 rounded-lg">
+                      <Activity className="w-5 h-5 text-brand-primary" />
                     </div>
                     <div className="flex-1">
                       <h3 className="font-semibold text-gray-900 capitalize">
@@ -387,7 +390,7 @@ const Dashboard = ({ currentRider, onLogout }) => {
                     </div>
                     {session.performance_score && (
                       <div className="text-right">
-                        <p className="font-bold text-emerald-600">{session.performance_score}/10</p>
+                        <p className="font-bold text-brand-primary">{session.performance_score}/10</p>
                         <p className="text-xs text-gray-500">Score</p>
                       </div>
                     )}
@@ -397,14 +400,14 @@ const Dashboard = ({ currentRider, onLogout }) => {
             ) : (
               <div className="text-center py-8">
                 <Clock className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600">No recent sessions. Start your first session above!</p>
+                <p className="text-gray-600">No recent sessions. Start your first training session above!</p>
               </div>
             )}
           </div>
 
           {/* Mental Health Tools */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Mental Health Tools</h2>
+          <div className="professional-card rounded-2xl p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Professional Support Tools</h2>
             
             <div className="space-y-4">
               <button
@@ -416,7 +419,7 @@ const Dashboard = ({ currentRider, onLogout }) => {
                 </div>
                 <div className="text-left">
                   <h3 className="font-semibold text-gray-900">Emergency Support</h3>
-                  <p className="text-sm text-gray-600">Immediate anxiety & fear management</p>
+                  <p className="text-sm text-gray-600">Clinical-grade anxiety & fear management</p>
                 </div>
               </button>
               
@@ -425,11 +428,11 @@ const Dashboard = ({ currentRider, onLogout }) => {
                 className="w-full flex items-center space-x-4 p-4 bg-blue-50 hover:bg-blue-100 rounded-xl transition-colors group"
               >
                 <div className="p-2 bg-blue-100 group-hover:bg-blue-200 rounded-lg">
-                  <Brain className="w-5 h-5 text-blue-600" />
+                  <Brain className="w-5 h-5 text-brand-primary" />
                 </div>
                 <div className="text-left">
-                  <h3 className="font-semibold text-gray-900">Pre-Ride Preparation</h3>
-                  <p className="text-sm text-gray-600">Breathing exercises & emotional assessment</p>
+                  <h3 className="font-semibold text-gray-900">Mental Performance Training</h3>
+                  <p className="text-sm text-gray-600">Evidence-based exercises & assessment</p>
                 </div>
               </button>
               
@@ -441,8 +444,8 @@ const Dashboard = ({ currentRider, onLogout }) => {
                   <Settings className="w-5 h-5 text-purple-600" />
                 </div>
                 <div className="text-left">
-                  <h3 className="font-semibold text-gray-900">Rider Profile</h3>
-                  <p className="text-sm text-gray-600">Manage preferences & progress tracking</p>
+                  <h3 className="font-semibold text-gray-900">Training Profile</h3>
+                  <p className="text-sm text-gray-600">Customize your mental training plan</p>
                 </div>
               </button>
             </div>
@@ -451,17 +454,17 @@ const Dashboard = ({ currentRider, onLogout }) => {
 
         {/* Progress Insight */}
         {analytics && (
-          <div className="bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-brand-dark rounded-2xl p-8 text-white">
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-2xl font-bold mb-2">Your Progress Insight</h2>
-                <p className="text-emerald-100 text-lg">
+                <h2 className="text-2xl font-bold mb-2">Your Mental Performance Progress</h2>
+                <p className="text-blue-100 text-lg">
                   Your confidence has been {analytics.recent_performance_trend} with an average of {analytics.avg_confidence_level}/10. 
-                  Keep up the excellent work!
+                  Continue applying evidence-based techniques for continued improvement.
                 </p>
               </div>
               <div className="hidden md:block">
-                <Target className="w-16 h-16 text-emerald-200" />
+                <Target className="w-16 h-16 text-blue-200" />
               </div>
             </div>
           </div>

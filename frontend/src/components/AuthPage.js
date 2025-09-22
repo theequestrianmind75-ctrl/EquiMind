@@ -3,7 +3,6 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { toast } from 'sonner';
 import axios from 'axios';
 import { 
-  Heart, 
   Mail, 
   Lock, 
   User, 
@@ -114,7 +113,7 @@ const AuthPage = ({ onAuthSuccess }) => {
         const response = await axios.post(`${API}/riders`, riderData);
         
         if (response.data) {
-          toast.success('Account created successfully! Welcome to EquiMind!');
+          toast.success('Welcome to The Equestrian Mind! Your mental training journey begins now.');
           
           // Store authentication info (in a real app, you'd use proper JWT tokens)
           localStorage.setItem('equimind_user', JSON.stringify(response.data));
@@ -125,7 +124,6 @@ const AuthPage = ({ onAuthSuccess }) => {
         }
       } else {
         // Sign in (simplified for demo - in production you'd have proper authentication)
-        // For now, we'll create a demo user or find existing one
         const demoUser = {
           id: 'user-' + Date.now(),
           name: formData.email.split('@')[0].charAt(0).toUpperCase() + formData.email.split('@')[0].slice(1),
@@ -136,7 +134,7 @@ const AuthPage = ({ onAuthSuccess }) => {
         };
         
         localStorage.setItem('equimind_user', JSON.stringify(demoUser));
-        toast.success('Welcome back to EquiMind!');
+        toast.success('Welcome back to The Equestrian Mind!');
         
         if (onAuthSuccess) {
           onAuthSuccess(demoUser);
@@ -157,7 +155,7 @@ const AuthPage = ({ onAuthSuccess }) => {
         };
         
         localStorage.setItem('equimind_user', JSON.stringify(localUser));
-        toast.success('Account created successfully! Welcome to EquiMind!');
+        toast.success('Welcome to The Equestrian Mind! Your mental training journey begins now.');
         
         if (onAuthSuccess) {
           onAuthSuccess(localUser);
@@ -173,7 +171,7 @@ const AuthPage = ({ onAuthSuccess }) => {
   const heroImage = 'https://images.unsplash.com/photo-1594768816441-1dd241ffaa67?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwyfHxlcXVlc3RyaWFufGVufDB8fHx8MTc1ODUwMTU5NXww&ixlib=rb-4.1.0&q=85';
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-100 flex">
+    <div className="min-h-screen bg-brand-light flex">
       
       {/* Left Side - Image & Branding */}
       <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden">
@@ -182,33 +180,37 @@ const AuthPage = ({ onAuthSuccess }) => {
           alt="Equestrian" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/80 to-teal-900/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/85 to-indigo-900/65"></div>
         
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-12">
           <div className="max-w-md text-center">
             <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-8">
-              <Heart className="w-8 h-8 text-white" />
+              <img 
+                src="https://customer-assets.emergentagent.com/job_equihero/artifacts/e0yoq28q_horse%20head%20.png" 
+                alt="The Equestrian Mind" 
+                className="w-10 h-10 object-contain filter brightness-0 invert"
+              />
             </div>
             
             <h1 className="text-4xl font-bold mb-6">
-              Transform Your Riding Experience
+              Transform Your Mental Performance
             </h1>
             
-            <p className="text-emerald-100 text-lg mb-8 leading-relaxed">
-              Join thousands of riders who have overcome anxiety and achieved peak performance 
-              through evidence-based mental training.
+            <p className="text-blue-100 text-lg mb-8 leading-relaxed">
+              Join riders worldwide who have overcome anxiety and achieved peak performance 
+              through evidence-based mental training from a Licensed Clinical Professional.
             </p>
             
             <div className="space-y-4">
               {[
-                'Reduce riding anxiety by up to 85%',
-                'Build unshakeable confidence',
-                'Strengthen horse-rider connection',
-                'Access emergency support 24/7'
+                'Reduce riding anxiety with proven techniques',
+                'Build unshakeable confidence in the saddle',
+                'Strengthen your horse-rider connection',
+                'Access professional support when needed'
               ].map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-emerald-300 flex-shrink-0" />
-                  <span className="text-emerald-100">{benefit}</span>
+                  <CheckCircle className="w-5 h-5 text-blue-300 flex-shrink-0" />
+                  <span className="text-blue-100">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -217,7 +219,7 @@ const AuthPage = ({ onAuthSuccess }) => {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
               ))}
-              <span className="ml-2 text-emerald-200">4.9/5 from 2,000+ riders</span>
+              <span className="ml-2 text-blue-200">Licensed Clinical Professional • 50+ Years Experience</span>
             </div>
           </div>
         </div>
@@ -238,22 +240,26 @@ const AuthPage = ({ onAuthSuccess }) => {
             </button>
             
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
-                <Heart className="w-5 h-5 text-white" />
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_equihero/artifacts/e0yoq28q_horse%20head%20.png" 
+                  alt="The Equestrian Mind" 
+                  className="w-6 h-6 object-contain"
+                />
               </div>
-              <span className="text-xl font-bold gradient-text">EquiMind</span>
+              <span className="text-xl font-bold text-brand-primary">The Equestrian Mind</span>
             </div>
           </div>
 
           {/* Mode Toggle */}
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              {mode === 'signup' ? 'Join EquiMind' : 'Welcome Back'}
+              {mode === 'signup' ? 'Join The Equestrian Mind' : 'Welcome Back'}
             </h2>
             <p className="text-gray-600 mb-6">
               {mode === 'signup' 
-                ? 'Start your journey to confident, anxiety-free riding'
-                : 'Continue your equestrian mental training journey'
+                ? 'Begin your journey to confident, anxiety-free riding with professional guidance'
+                : 'Continue your mental performance training journey'
               }
             </p>
             
@@ -297,7 +303,7 @@ const AuthPage = ({ onAuthSuccess }) => {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary transition-colors"
                     placeholder="Enter your full name"
                     required
                   />
@@ -317,7 +323,7 @@ const AuthPage = ({ onAuthSuccess }) => {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary transition-colors"
                   placeholder="Enter your email"
                   required
                 />
@@ -336,7 +342,7 @@ const AuthPage = ({ onAuthSuccess }) => {
                   name="password"
                   value={formData.password}
                   onChange={handleInputChange}
-                  className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                  className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary transition-colors"
                   placeholder="Enter your password"
                   required
                 />
@@ -363,7 +369,7 @@ const AuthPage = ({ onAuthSuccess }) => {
                     name="confirmPassword"
                     value={formData.confirmPassword}
                     onChange={handleInputChange}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary transition-colors"
                     placeholder="Confirm your password"
                     required
                   />
@@ -381,7 +387,7 @@ const AuthPage = ({ onAuthSuccess }) => {
                   name="experience_level"
                   value={formData.experience_level}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary transition-colors"
                   required
                 >
                   {experienceLevels.map(level => (
@@ -405,7 +411,7 @@ const AuthPage = ({ onAuthSuccess }) => {
                       onClick={() => handleDisciplineToggle(discipline.id)}
                       className={`p-3 rounded-lg border transition-all text-left ${
                         formData.preferred_disciplines.includes(discipline.id)
-                          ? 'bg-emerald-50 border-emerald-500 text-emerald-700'
+                          ? 'bg-blue-50 border-brand-primary text-brand-primary'
                           : 'bg-gray-50 border-gray-300 text-gray-700 hover:bg-gray-100'
                       }`}
                     >
@@ -421,7 +427,7 @@ const AuthPage = ({ onAuthSuccess }) => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 disabled:from-gray-400 disabled:to-gray-500 text-white py-3 px-4 rounded-lg font-semibold transition-all flex items-center justify-center space-x-2"
+              className="w-full professional-button text-white py-3 px-4 rounded-lg font-semibold transition-all flex items-center justify-center space-x-2 disabled:opacity-50"
             >
               {isLoading ? (
                 <>
@@ -429,7 +435,7 @@ const AuthPage = ({ onAuthSuccess }) => {
                   <span>{mode === 'signup' ? 'Creating Account...' : 'Signing In...'}</span>
                 </>
               ) : (
-                <span>{mode === 'signup' ? 'Create Account' : 'Sign In'}</span>
+                <span>{mode === 'signup' ? 'Begin Mental Training' : 'Sign In'}</span>
               )}
             </button>
 
@@ -440,7 +446,7 @@ const AuthPage = ({ onAuthSuccess }) => {
                 <button
                   type="button"
                   onClick={() => setMode(mode === 'signup' ? 'signin' : 'signup')}
-                  className="text-emerald-600 hover:text-emerald-700 font-semibold transition-colors"
+                  className="text-brand-primary hover:text-blue-700 font-semibold transition-colors"
                 >
                   {mode === 'signup' ? 'Sign In' : 'Sign Up'}
                 </button>
@@ -451,9 +457,9 @@ const AuthPage = ({ onAuthSuccess }) => {
               <div className="text-center">
                 <p className="text-xs text-gray-500 leading-relaxed">
                   By creating an account, you agree to our{' '}
-                  <a href="#" className="text-emerald-600 hover:underline">Terms of Service</a>{' '}
+                  <a href="#" className="text-brand-primary hover:underline">Terms of Service</a>{' '}
                   and{' '}
-                  <a href="#" className="text-emerald-600 hover:underline">Privacy Policy</a>
+                  <a href="#" className="text-brand-primary hover:underline">Privacy Policy</a>
                 </p>
               </div>
             )}
