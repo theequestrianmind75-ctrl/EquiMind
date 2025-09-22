@@ -186,7 +186,6 @@ const EmergencySupport = ({ currentRider }) => {
                 </div>
                 <div>
                   <h1 className="text-2xl font-bold">Emergency Support</h1>
-                  <p className="text-red-100">Immediate anxiety & fear management</p>
                 </div>
               </div>
             </div>
