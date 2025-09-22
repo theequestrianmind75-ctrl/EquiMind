@@ -48,6 +48,9 @@ const PreRidePreparation = ({ currentRider }) => {
   const [recommendedStrategies, setRecommendedStrategies] = useState([]);
   const [selectedStrategy, setSelectedStrategy] = useState(null);
   const [isStrategyActive, setIsStrategyActive] = useState(false);
+  const [voiceMemo, setVoiceMemo] = useState('');
+  const [isRecording, setIsRecording] = useState(false);
+  const [completedSteps, setCompletedSteps] = useState(new Set());
 
   // Progress calculation
   const totalSteps = 5;
