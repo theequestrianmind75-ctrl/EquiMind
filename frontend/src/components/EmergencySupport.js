@@ -388,40 +388,6 @@ const EmergencySupport = ({ currentRider }) => {
           </div>
         </div>
 
-        {/* Support Resources */}
-        <div className="bg-white rounded-2xl p-8 shadow-lg">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Additional Support Resources
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors">
-              <Phone className="w-8 h-8 text-emerald-600 mb-4" />
-              <h3 className="font-bold text-gray-900 mb-2">24/7 Support Hotline</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Speak with a qualified equestrian mental health specialist
-              </p>
-              <button
-                onClick={callSupport}
-                className="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-3 px-4 rounded-lg font-semibold transition-colors"
-              >
-                Call Now
-              </button>
-            </div>
-            
-            <div className="p-6 border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors">
-              <Heart className="w-8 h-8 text-pink-600 mb-4" />
-              <h3 className="font-bold text-gray-900 mb-2">Peer Support Network</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Connect with other riders who understand your experience
-              </p>
-              <button className="w-full bg-pink-500 hover:bg-pink-600 text-white py-3 px-4 rounded-lg font-semibold transition-colors">
-                Join Community
-              </button>
-            </div>
-          </div>
-        </div>
-
         {/* Recovery Actions */}
         <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-8">
           <h2 className="text-xl font-bold text-emerald-800 mb-4">
