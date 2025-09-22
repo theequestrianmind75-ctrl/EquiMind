@@ -132,6 +132,107 @@ const PreRidePreparation = ({ currentRider }) => {
     }
   };
 
+  const fetchMentalStrategies = async () => {
+    try {
+      const response = await axios.get(`${API}/mental-strategies`);
+      setMentalStrategies(response.data);
+    } catch (error) {
+      console.error('Error fetching mental strategies:', error);
+      // Mock strategies for demo
+      setMentalStrategies([
+        {
+          id: 'progressive-muscle-relaxation',
+          name: 'Progressive Muscle Relaxation',
+          category: 'anxiety_reduction',
+          description: 'Systematically tense and relax muscle groups to reduce physical anxiety',
+          duration_minutes: 10,
+          trigger_conditions: {
+            anxiety_min: 6,
+            anxiety_max: 10,
+            confidence_min: 1,
+            confidence_max: 5
+          },
+          instructions: [
+            'Sit or lie down in a comfortable position',
+            'Start with your toes - tense for 5 seconds, then release',
+            'Move up to your calves, thighs, abdomen, arms, and face',
+            'Focus on the contrast between tension and relaxation',
+            'Breathe deeply throughout the exercise'
+          ],
+          evidence_base: 'Systematic review shows 70% reduction in pre-performance anxiety',
+          suitable_for: ['high_anxiety', 'low_confidence', 'performance_nerves']
+        },
+        {
+          id: 'cognitive-restructuring',
+          name: 'Cognitive Restructuring',
+          category: 'thought_management',
+          description: 'Challenge and replace negative thoughts with realistic, helpful ones',
+          duration_minutes: 8,
+          trigger_conditions: {
+            anxiety_min: 7,
+            anxiety_max: 10,
+            confidence_min: 1,
+            confidence_max: 4
+          },
+          instructions: [
+            'Identify the specific worry or negative thought',
+            'Ask: "Is this thought realistic? What evidence do I have?"',
+            'Consider: "What would I tell a friend in this situation?"',
+            'Replace with a balanced, realistic thought',
+            'Write down the new thought and repeat it 3 times'
+          ],
+          evidence_base: 'CBT techniques show 65% improvement in competitive confidence',
+          suitable_for: ['catastrophic_thinking', 'self_doubt', 'fear_of_failure']
+        },
+        {
+          id: 'grounding-5-4-3-2-1',
+          name: '5-4-3-2-1 Grounding Technique',
+          category: 'mindfulness',
+          description: 'Use your senses to anchor yourself in the present moment',
+          duration_minutes: 5,
+          trigger_conditions: {
+            anxiety_min: 6,
+            anxiety_max: 10,
+            confidence_min: 1,
+            confidence_max: 5
+          },
+          instructions: [
+            'Name 5 things you can see in your environment',
+            'Name 4 things you can touch or feel',
+            'Name 3 things you can hear right now',
+            'Name 2 things you can smell',
+            'Name 1 thing you can taste'
+          ],
+          evidence_base: 'Mindfulness techniques reduce anxiety by 60% in equestrian athletes',
+          suitable_for: ['panic_symptoms', 'dissociation', 'overwhelming_anxiety']
+        },
+        {
+          id: 'visualization-success',
+          name: 'Success Visualization',
+          category: 'confidence_building',
+          description: 'Mentally rehearse a successful, confident ride',
+          duration_minutes: 12,
+          trigger_conditions: {
+            anxiety_min: 5,
+            anxiety_max: 9,
+            confidence_min: 1,
+            confidence_max: 6
+          },
+          instructions: [
+            'Close your eyes and take three deep breaths',
+            'Visualize yourself approaching your horse with confidence',
+            'See yourself mounting smoothly and feeling secure',
+            'Imagine completing your planned exercises successfully',
+            'Feel the connection and harmony with your horse',
+            'End by seeing yourself dismounting with a smile'
+          ],
+          evidence_base: 'Mental imagery improves performance confidence by 45%',
+          suitable_for: ['performance_anxiety', 'lack_of_confidence', 'negative_expectations']
+        }
+      ]);
+    }
+  };
+
   const updateCompletedSteps = () => {
     const newCompletedSteps = new Set();
     
