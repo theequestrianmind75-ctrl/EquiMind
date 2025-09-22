@@ -59,11 +59,13 @@ const PreRidePreparation = ({ currentRider }) => {
   useEffect(() => {
     initializeSession();
     fetchBreathingExercises();
+    fetchMentalStrategies();
   }, []);
 
   useEffect(() => {
     updateCompletedSteps();
-  }, [emotionLevel, selectedExercise, horseObservation, voiceMemo]);
+    updateRecommendedStrategies();
+  }, [emotionLevel, anxietyLevel, confidenceLevel, selectedExercise, horseObservation, voiceMemo]);
 
   const initializeSession = async () => {
     try {
