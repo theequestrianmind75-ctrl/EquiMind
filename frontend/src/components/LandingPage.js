@@ -28,24 +28,18 @@ const LandingPage = ({ onGetStarted }) => {
   const features = [
     {
       icon: Brain,
-      title: 'Evidence-Based Performance Coaching',
-      description: 'Licensed clinical therapist with 50+ years of equestrian experience providing scientifically-proven mental training techniques.',
+      title: 'Real Time Coaching',
+      description: 'Immediate guidance and support during your riding sessions with AI-powered insights.',
       color: 'text-blue-600'
     },
     {
-      icon: Target,
-      title: 'Personalized Mental Performance Plans',
-      description: 'Tailored approaches to overcome challenges, enhance focus, and build deeper partnerships with your horse.',
-      color: 'text-indigo-600'
-    },
-    {
-      icon: Shield,
-      title: 'Anxiety & Fear Management',
-      description: 'Immediate access to clinical-grade techniques for managing performance anxiety and building confidence.',
+      icon: Heart,
+      title: 'Mental Health Solutions',
+      description: 'Clinical-grade techniques for managing performance anxiety and building confidence.',
       color: 'text-blue-700'
     },
     {
-      icon: Heart,
+      icon: Target,
       title: 'Horse-Rider Connection',
       description: 'Strengthen the trust, understanding, and communication that creates an unbreakable bond with your horse.',
       color: 'text-blue-800'
