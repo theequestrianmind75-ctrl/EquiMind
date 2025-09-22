@@ -1,54 +1,89 @@
-import { useEffect } from "react";
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Toaster } from 'sonner';
+import './App.css';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+// Components
+import Dashboard from './components/Dashboard';
+import PreRidePreparation from './components/PreRidePreparation';
+import DuringRideCoaching from './components/DuringRideCoaching';
+import PostRideAnalysis from './components/PostRideAnalysis';
+import EmergencySupport from './components/EmergencySupport';
+import RiderProfile from './components/RiderProfile';
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
+const App = () => {
+  const [currentRider, setCurrentRider] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    helloWorldApi();
+    // Initialize demo rider profile
+    const initializeRider = () => {
+      const demoRider = {
+        id: 'demo-rider-001',
+        name: 'Sarah Johnson',
+        email: 'sarah.johnson@example.com',
+        experience_level: 'Advanced',
+        preferred_disciplines: ['show_jumping', 'dressage'],
+        created_at: new Date().toISOString()
+      };
+      setCurrentRider(demoRider);
+      setIsLoading(false);
+    };
+
+    initializeRider();
   }, []);
 
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-100 flex items-center justify-center">
+        <div className="flex flex-col items-center space-y-4">
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-emerald-500 border-t-transparent"></div>
+          <p className="text-emerald-700 font-medium text-lg">Loading EquiMind...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Toaster 
+          position="top-right" 
+          richColors 
+          closeButton
+          duration={4000}
+        />
+        
+        <Routes>
+          <Route path="/" element={<Navigate to="/dashboard" replace />} />
+          <Route 
+            path="/dashboard" 
+            element={<Dashboard currentRider={currentRider} />} 
+          />
+          <Route 
+            path="/pre-ride" 
+            element={<PreRidePreparation currentRider={currentRider} />} 
+          />
+          <Route 
+            path="/during-ride" 
+            element={<DuringRideCoaching currentRider={currentRider} />} 
+          />
+          <Route 
+            path="/post-ride" 
+            element={<PostRideAnalysis currentRider={currentRider} />} 
+          />
+          <Route 
+            path="/emergency" 
+            element={<EmergencySupport currentRider={currentRider} />} 
+          />
+          <Route 
+            path="/profile" 
+            element={<RiderProfile currentRider={currentRider} setCurrentRider={setCurrentRider} />} 
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 };
-
-function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
-}
 
 export default App;
