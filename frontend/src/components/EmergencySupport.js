@@ -189,14 +189,23 @@ const EmergencySupport = ({ currentRider }) => {
                 </div>
               </div>
             </div>
-            
-            <button
-              onClick={callSupport}
-              className="flex items-center space-x-2 bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors"
-            >
-              <Phone className="w-5 h-5" />
-              <span>Call Support</span>
-            </button>
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={call911}
+                className="flex items-center space-x-2 bg-red-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-800 transition-colors"
+              >
+                <Phone className="w-5 h-5" />
+                <span>CALL 911</span>
+              </button>
+              
+              <button
+                onClick={textSupport}
+                className="flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              >
+                <Phone className="w-5 h-5" />
+                <span>Text Support</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
