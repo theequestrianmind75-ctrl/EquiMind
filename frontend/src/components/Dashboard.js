@@ -149,7 +149,7 @@ const Dashboard = ({ currentRider, onLogout }) => {
                   className="w-8 h-8 object-contain"
                 />
               </div>
-              <h1 className="text-2xl font-bold text-brand-primary">The Equestrian Mind</h1>
+              <h1 className="text-2xl font-bold text-brand-primary">EquiMind</h1>
             </div>
             
             <div className="flex items-center space-x-4">
