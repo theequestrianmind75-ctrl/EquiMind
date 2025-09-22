@@ -28,56 +28,56 @@ const LandingPage = ({ onGetStarted }) => {
   const features = [
     {
       icon: Brain,
-      title: 'Evidence-Based Mental Training',
-      description: 'Scientifically-proven techniques to reduce anxiety and build confidence in the saddle.',
-      color: 'text-purple-600'
+      title: 'Evidence-Based Performance Coaching',
+      description: 'Licensed clinical therapist with 50+ years of equestrian experience providing scientifically-proven mental training techniques.',
+      color: 'text-blue-600'
+    },
+    {
+      icon: Target,
+      title: 'Personalized Mental Performance Plans',
+      description: 'Tailored approaches to overcome challenges, enhance focus, and build deeper partnerships with your horse.',
+      color: 'text-indigo-600'
+    },
+    {
+      icon: Shield,
+      title: 'Anxiety & Fear Management',
+      description: 'Immediate access to clinical-grade techniques for managing performance anxiety and building confidence.',
+      color: 'text-blue-700'
     },
     {
       icon: Heart,
       title: 'Horse-Rider Connection',
-      description: 'Tools to strengthen your bond and communication with your equine partner.',
-      color: 'text-red-600'
-    },
-    {
-      icon: Shield,
-      title: 'Emergency Anxiety Support',
-      description: 'Immediate access to calming techniques when you need them most.',
-      color: 'text-emerald-600'
-    },
-    {
-      icon: Target,
-      title: 'Personalized AI Coaching',
-      description: 'Custom guidance tailored to your discipline, experience level, and goals.',
-      color: 'text-blue-600'
+      description: 'Strengthen the trust, understanding, and communication that creates an unbreakable bond with your horse.',
+      color: 'text-blue-800'
     }
   ];
 
   const testimonials = [
     {
-      name: 'Emma Rodriguez',
+      name: 'Sarah M.',
       role: 'Show Jumping Competitor',
-      quote: 'EquiMind transformed my competition anxiety into confidence. I\'ve never felt so prepared mentally.',
+      quote: 'The mental skills training transformed my competition anxiety into confidence. I finally feel prepared mentally for every ride.',
       rating: 5
     },
     {
-      name: 'Dr. James Mitchell',
+      name: 'Dr. James R.',
       role: 'Dressage Professional',
-      quote: 'The evidence-based approach really works. My students see improvement in just weeks.',
+      quote: 'The evidence-based approach really works. My students see improvement in just weeks. Highly recommend this program.',
       rating: 5
     },
     {
-      name: 'Sarah Chen',
+      name: 'Emma T.',
       role: 'Amateur Rider',
-      quote: 'Finally, a tool that understands the unique mental challenges of equestrian sports.',
+      quote: 'Finally, a program that understands the unique mental challenges of equestrian sports. Life-changing experience.',
       rating: 5
     }
   ];
 
   const stats = [
-    { number: '10,000+', label: 'Riders Helped', icon: Users },
+    { number: '50+', label: 'Years Experience', icon: Users },
     { number: '95%', label: 'Anxiety Reduction', icon: TrendingUp },
-    { number: '4.9/5', label: 'User Rating', icon: Star },
-    { number: '500+', label: 'Success Stories', icon: Award }
+    { number: '4.9/5', label: 'Client Rating', icon: Star },
+    { number: 'LPC, MBA', label: 'Licensed Credentials', icon: Award }
   ];
 
   const handleGetStarted = () => {
@@ -89,35 +89,39 @@ const LandingPage = ({ onGetStarted }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-100">
+    <div className="min-h-screen bg-brand-light">
       
       {/* Navigation */}
-      <nav className="bg-white/80 backdrop-blur-sm border-b border-emerald-100 sticky top-0 z-50">
+      <nav className="bg-white/90 backdrop-blur-sm border-b border-blue-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center">
-                <Heart className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_equihero/artifacts/e0yoq28q_horse%20head%20.png" 
+                  alt="The Equestrian Mind" 
+                  className="w-10 h-10 object-contain"
+                />
               </div>
-              <h1 className="text-2xl font-bold gradient-text">EquiMind</h1>
+              <h1 className="text-2xl font-bold text-brand-primary">The Equestrian Mind</h1>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-gray-700 hover:text-emerald-600 transition-colors">Features</a>
-              <a href="#testimonials" className="text-gray-700 hover:text-emerald-600 transition-colors">Success Stories</a>
-              <a href="#pricing" className="text-gray-700 hover:text-emerald-600 transition-colors">Pricing</a>
+              <a href="#features" className="text-gray-700 hover:text-brand-primary transition-colors">Features</a>
+              <a href="#testimonials" className="text-gray-700 hover:text-brand-primary transition-colors">Success Stories</a>
+              <a href="#coaching" className="text-gray-700 hover:text-brand-primary transition-colors">Coaching</a>
             </div>
             
             <div className="flex items-center space-x-4">
               <button
                 onClick={() => navigate('/auth?mode=signin')}
-                className="text-emerald-600 hover:text-emerald-700 font-semibold transition-colors"
+                className="text-brand-primary hover:text-blue-700 font-semibold transition-colors"
               >
                 Sign In
               </button>
               <button
                 onClick={handleGetStarted}
-                className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+                className="professional-button text-white px-6 py-2 rounded-lg font-semibold"
               >
                 Get Started
               </button>
@@ -134,26 +138,26 @@ const LandingPage = ({ onGetStarted }) => {
             alt="Equestrian" 
             className="w-full h-full object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/60 to-teal-900/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-indigo-900/50"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              Master Your Mind,
+              Strengthen Your Mindset
               <br />
-              <span className="gradient-text">Excel in the Saddle</span>
+              <span className="gradient-text bg-gradient-to-r from-blue-200 to-white bg-clip-text text-transparent">Excel in the Saddle</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-emerald-100 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Evidence-based mental training for equestrians. Overcome anxiety, build confidence, 
-              and achieve peak performance with personalized AI coaching.
+            <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Evidence-based equestrian performance coaching from a Licensed Clinical Therapist 
+              with 50+ years of riding experience. Overcome anxiety, build confidence, and achieve peak performance.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <button
                 onClick={handleGetStarted}
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all hover-lift flex items-center space-x-3"
+                className="professional-button text-white px-8 py-4 rounded-xl font-bold text-lg hover-lift flex items-center space-x-3"
               >
                 <span>Start Your Journey</span>
                 <ArrowRight className="w-6 h-6" />
@@ -164,7 +168,7 @@ const LandingPage = ({ onGetStarted }) => {
                 className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/30 transition-all flex items-center space-x-3"
               >
                 <Play className="w-5 h-5" />
-                <span>Watch Demo</span>
+                <span>Learn More</span>
               </button>
             </div>
             
@@ -175,7 +179,7 @@ const LandingPage = ({ onGetStarted }) => {
                     <stat.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="text-2xl font-bold text-white">{stat.number}</div>
-                  <div className="text-emerald-200 text-sm">{stat.label}</div>
+                  <div className="text-blue-200 text-sm">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -188,18 +192,18 @@ const LandingPage = ({ onGetStarted }) => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why EquiMind Works
+              Why The Equestrian Mind Works
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Combining cutting-edge psychology with equestrian expertise to deliver 
-              results that transform both rider and horse.
+              Combining clinical expertise with deep equestrian knowledge to deliver 
+              results that transform both rider performance and horse-rider relationships.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 hover-lift group">
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+              <div key={index} className="professional-card rounded-2xl p-8 hover-lift group">
+                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                   <feature.icon className={`w-7 h-7 ${feature.color}`} />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
@@ -215,10 +219,10 @@ const LandingPage = ({ onGetStarted }) => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Simple. Effective. Proven.
+              The Equestrian Mindset Approach
             </h2>
             <p className="text-xl text-gray-600">
-              Three steps to mental mastery in equestrian sports
+              Three proven steps to mental mastery in equestrian sports
             </p>
           </div>
           
@@ -226,20 +230,20 @@ const LandingPage = ({ onGetStarted }) => {
             {[
               {
                 step: '01',
-                title: 'Assess Your Mental State',
-                description: 'Complete our comprehensive evaluation to understand your unique anxiety patterns and confidence levels.',
+                title: 'Assess Your Mental Performance',
+                description: 'Complete comprehensive evaluation to understand your unique patterns, challenges, and strengths as a rider.',
                 image: heroImages[1]
               },
               {
                 step: '02',
-                title: 'Train With AI Guidance',
-                description: 'Follow personalized mental training protocols designed specifically for your discipline and experience level.',
+                title: 'Build Mental Skills',
+                description: 'Follow evidence-based training protocols designed by a licensed clinical therapist for your specific needs.',
                 image: heroImages[2]
               },
               {
                 step: '03',
-                title: 'Perform With Confidence',
-                description: 'Apply your new mental skills in training and competition, with emergency support always available.',
+                title: 'Perform with Confidence',
+                description: 'Apply your new mental skills in training and competition, with ongoing support and guidance.',
                 image: heroImages[0]
               }
             ].map((item, index) => (
@@ -250,7 +254,7 @@ const LandingPage = ({ onGetStarted }) => {
                     alt={item.title}
                     className="w-full h-64 object-cover rounded-2xl group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-brand-dark rounded-full flex items-center justify-center text-white font-bold text-lg">
                     {item.step}
                   </div>
                 </div>
@@ -258,6 +262,43 @@ const LandingPage = ({ onGetStarted }) => {
                 <p className="text-gray-600">{item.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Professional Credentials */}
+      <section className="py-20 bg-gradient-brand-dark">
+        <div className="max-w-4xl mx-auto px-4 text-center text-white">
+          <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-8">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_equihero/artifacts/e0yoq28q_horse%20head%20.png" 
+              alt="The Equestrian Mind" 
+              className="w-12 h-12 object-contain filter brightness-0 invert"
+            />
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            Kristi Seymour, LPC, MBA
+          </h2>
+          <p className="text-xl text-blue-100 mb-12 leading-relaxed">
+            Over 20 years of licensed clinical experience and 50 years of being an equestrian. 
+            I empower riders with evidence-based mental tools to overcome challenges, 
+            build confidence, and excel in competition and in life.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl">
+              <div className="text-3xl font-bold mb-2">50+</div>
+              <div className="text-blue-200">Years Equestrian</div>
+            </div>
+            <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl">
+              <div className="text-3xl font-bold mb-2">LPC</div>
+              <div className="text-blue-200">Licensed Clinical</div>
+            </div>
+            <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl">
+              <div className="text-3xl font-bold mb-2">MBA</div>
+              <div className="text-blue-200">Business Administration</div>
+            </div>
           </div>
         </div>
       </section>
@@ -276,7 +317,7 @@ const LandingPage = ({ onGetStarted }) => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 hover-lift">
+              <div key={index} className="professional-card rounded-2xl p-8 hover-lift">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
@@ -294,37 +335,37 @@ const LandingPage = ({ onGetStarted }) => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-500 to-teal-600">
+      <section className="py-20 bg-gradient-brand-dark">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to Transform Your Riding?
           </h2>
-          <p className="text-xl text-emerald-100 mb-12">
-            Join thousands of riders who have overcome anxiety and achieved their equestrian dreams.
+          <p className="text-xl text-blue-100 mb-12">
+            Join riders who have overcome anxiety and achieved their equestrian dreams through evidence-based mental training.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <button
               onClick={handleGetStarted}
-              className="bg-white text-emerald-600 hover:bg-emerald-50 px-8 py-4 rounded-xl font-bold text-lg transition-all hover-lift flex items-center space-x-3"
+              className="bg-white text-brand-primary hover:bg-blue-50 px-8 py-4 rounded-xl font-bold text-lg transition-all hover-lift flex items-center space-x-3"
             >
-              <span>Start Free Trial</span>
+              <span>Start Your Mental Training</span>
               <ArrowRight className="w-6 h-6" />
             </button>
             
-            <p className="text-emerald-100 text-sm">
-              No credit card required • 14-day free trial
+            <p className="text-blue-100 text-sm">
+              Evidence-based approach • Licensed professional • 50+ years experience
             </p>
           </div>
           
-          <div className="mt-12 flex items-center justify-center space-x-8 text-emerald-200">
+          <div className="mt-12 flex items-center justify-center space-x-8 text-blue-200">
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5" />
-              <span>Cancel anytime</span>
+              <span>Licensed Clinical Therapist</span>
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5" />
-              <span>Expert support</span>
+              <span>Evidence-based methods</span>
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5" />
@@ -340,23 +381,27 @@ const LandingPage = ({ onGetStarted }) => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center">
-                  <Heart className="w-6 h-6 text-white" />
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center">
+                  <img 
+                    src="https://customer-assets.emergentagent.com/job_equihero/artifacts/e0yoq28q_horse%20head%20.png" 
+                    alt="The Equestrian Mind" 
+                    className="w-8 h-8 object-contain filter brightness-0 invert"
+                  />
                 </div>
-                <h3 className="text-2xl font-bold">EquiMind</h3>
+                <h3 className="text-2xl font-bold">The Equestrian Mind</h3>
               </div>
               <p className="text-gray-400">
-                Empowering equestrians through evidence-based mental training.
+                Empowering equestrians through evidence-based mental performance coaching.
               </p>
             </div>
             
             <div>
-              <h4 className="font-bold mb-4">Product</h4>
+              <h4 className="font-bold mb-4">Services</h4>
               <div className="space-y-2 text-gray-400">
-                <div>Features</div>
-                <div>Pricing</div>
-                <div>Success Stories</div>
-                <div>FAQ</div>
+                <div>Performance Coaching</div>
+                <div>Mental Training</div>
+                <div>Anxiety Management</div>
+                <div>Competition Prep</div>
               </div>
             </div>
             
@@ -366,7 +411,7 @@ const LandingPage = ({ onGetStarted }) => {
                 <div>Help Center</div>
                 <div>Contact</div>
                 <div>Emergency Support</div>
-                <div>Community</div>
+                <div>Resources</div>
               </div>
             </div>
             
@@ -375,26 +420,32 @@ const LandingPage = ({ onGetStarted }) => {
               <div className="space-y-2 text-gray-400">
                 <div>Privacy Policy</div>
                 <div>Terms of Service</div>
-                <div>Cookie Policy</div>
+                <div>Professional Credentials</div>
               </div>
             </div>
           </div>
           
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 EquiMind. All rights reserved. Built with passion for equestrians.</p>
+            <p>&copy; 2025 The Equestrian Mind. All rights reserved. Licensed Clinical Professional.</p>
           </div>
         </div>
       </footer>
 
-      {/* Demo Modal */}
+      {/* Info Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl p-8 max-w-2xl w-full">
             <div className="text-center">
-              <Play className="w-16 h-16 text-emerald-600 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Coming Soon</h3>
+              <img 
+                src="https://customer-assets.emergentagent.com/job_equihero/artifacts/e0yoq28q_horse%20head%20.png" 
+                alt="The Equestrian Mind" 
+                className="w-16 h-16 object-contain mx-auto mb-4"
+              />
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">About The Equestrian Mind</h3>
               <p className="text-gray-600 mb-6">
-                Our demo video is currently in production. Get started now to experience EquiMind firsthand!
+                Evidence-based mental performance coaching designed specifically for equestrians. 
+                Led by Kristi Seymour, a Licensed Clinical Professional with over 50 years of equestrian experience, 
+                our approach combines clinical expertise with deep understanding of horse-rider relationships.
               </p>
               <div className="flex space-x-4 justify-center">
                 <button
@@ -408,9 +459,9 @@ const LandingPage = ({ onGetStarted }) => {
                     setIsModalOpen(false);
                     handleGetStarted();
                   }}
-                  className="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg transition-colors"
+                  className="professional-button text-white px-6 py-3 rounded-lg"
                 >
-                  Get Started Instead
+                  Get Started
                 </button>
               </div>
             </div>
