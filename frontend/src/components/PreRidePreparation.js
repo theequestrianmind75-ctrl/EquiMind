@@ -245,6 +245,25 @@ const PreRidePreparation = ({ currentRider }) => {
     setCompletedSteps(newCompletedSteps);
   };
 
+  const updateRecommendedStrategies = () => {
+    // Implement your rule: high anxiety (6-10) AND low confidence (1-5)
+    const shouldRecommendStrategies = anxietyLevel >= 6 && confidenceLevel <= 5;
+    
+    if (shouldRecommendStrategies) {
+      const suitable = mentalStrategies.filter(strategy => {
+        const conditions = strategy.trigger_conditions;
+        return anxietyLevel >= conditions.anxiety_min && 
+               anxietyLevel <= conditions.anxiety_max &&
+               confidenceLevel >= conditions.confidence_min && 
+               confidenceLevel <= conditions.confidence_max;
+      });
+      
+      setRecommendedStrategies(suitable);
+    } else {
+      setRecommendedStrategies([]);
+    }
+  };
+
   const saveEmotionAssessment = async () => {
     if (!currentSession) return;
 
