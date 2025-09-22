@@ -303,21 +303,6 @@ const LandingPage = ({ onGetStarted }) => {
               <ArrowRight className="w-6 h-6" />
             </button>
           </div>
-          
-          <div className="mt-12 flex items-center justify-center space-x-8 text-blue-200">
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="w-5 h-5" />
-              <span>Licensed Clinical Therapist</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="w-5 h-5" />
-              <span>Evidence-based methods</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="w-5 h-5" />
-              <span>Proven results</span>
-            </div>
-          </div>
         </div>
       </section>
 
