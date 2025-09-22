@@ -4,6 +4,8 @@ import { Toaster } from 'sonner';
 import './App.css';
 
 // Components
+import LandingPage from './components/LandingPage';
+import AuthPage from './components/AuthPage';
 import Dashboard from './components/Dashboard';
 import PreRidePreparation from './components/PreRidePreparation';
 import DuringRideCoaching from './components/DuringRideCoaching';
@@ -16,22 +18,34 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Initialize demo rider profile
-    const initializeRider = () => {
-      const demoRider = {
-        id: 'demo-rider-001',
-        name: 'Sarah Johnson',
-        email: 'sarah.johnson@example.com',
-        experience_level: 'Advanced',
-        preferred_disciplines: ['show_jumping', 'dressage'],
-        created_at: new Date().toISOString()
-      };
-      setCurrentRider(demoRider);
-      setIsLoading(false);
+    // Check for existing authentication
+    const checkAuthStatus = () => {
+      try {
+        const storedUser = localStorage.getItem('equimind_user');
+        if (storedUser) {
+          const userData = JSON.parse(storedUser);
+          setCurrentRider(userData);
+        }
+      } catch (error) {
+        console.error('Error loading user data:', error);
+        localStorage.removeItem('equimind_user');
+      } finally {
+        setIsLoading(false);
+      }
     };
 
-    initializeRider();
+    checkAuthStatus();
   }, []);
+
+  const handleAuthSuccess = (userData) => {
+    setCurrentRider(userData);
+    setIsLoading(false);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('equimind_user');
+    setCurrentRider(null);
+  };
 
   if (isLoading) {
     return (
@@ -55,31 +69,63 @@ const App = () => {
         />
         
         <Routes>
-          <Route path="/" element={<Navigate to="/dashboard" replace />} />
+          {/* Public Routes */}
           <Route 
-            path="/dashboard" 
-            element={<Dashboard currentRider={currentRider} />} 
+            path="/" 
+            element={
+              currentRider ? 
+                <Navigate to="/dashboard" replace /> : 
+                <LandingPage onGetStarted={() => window.location.href = '/auth'} />
+            } 
           />
+          
           <Route 
-            path="/pre-ride" 
-            element={<PreRidePreparation currentRider={currentRider} />} 
+            path="/auth" 
+            element={
+              currentRider ? 
+                <Navigate to="/dashboard" replace /> : 
+                <AuthPage onAuthSuccess={handleAuthSuccess} />
+            } 
           />
-          <Route 
-            path="/during-ride" 
-            element={<DuringRideCoaching currentRider={currentRider} />} 
-          />
-          <Route 
-            path="/post-ride" 
-            element={<PostRideAnalysis currentRider={currentRider} />} 
-          />
-          <Route 
-            path="/emergency" 
-            element={<EmergencySupport currentRider={currentRider} />} 
-          />
-          <Route 
-            path="/profile" 
-            element={<RiderProfile currentRider={currentRider} setCurrentRider={setCurrentRider} />} 
-          />
+
+          {/* Protected Routes */}
+          {currentRider ? (
+            <>
+              <Route 
+                path="/dashboard" 
+                element={<Dashboard currentRider={currentRider} onLogout={handleLogout} />} 
+              />
+              <Route 
+                path="/pre-ride" 
+                element={<PreRidePreparation currentRider={currentRider} />} 
+              />
+              <Route 
+                path="/during-ride" 
+                element={<DuringRideCoaching currentRider={currentRider} />} 
+              />
+              <Route 
+                path="/post-ride" 
+                element={<PostRideAnalysis currentRider={currentRider} />} 
+              />
+              <Route 
+                path="/emergency" 
+                element={<EmergencySupport currentRider={currentRider} />} 
+              />
+              <Route 
+                path="/profile" 
+                element={
+                  <RiderProfile 
+                    currentRider={currentRider} 
+                    setCurrentRider={setCurrentRider}
+                    onLogout={handleLogout}
+                  />
+                } 
+              />
+            </>
+          ) : (
+            // Redirect unauthenticated users to landing page
+            <Route path="*" element={<Navigate to="/" replace />} />
+          )}
         </Routes>
       </div>
     </Router>
