@@ -1,0 +1,20 @@
+# Flutter & Dart
+.dart_tool/
+.buildlog/
+.idea/
+.packages
+.pub-cache/
+.pub/
+
+# iOS
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Flutter.xcframework
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/App.framework
+ios/Flutter/Flutter.podspec
+
+# Secrets
+env.json
+.env
