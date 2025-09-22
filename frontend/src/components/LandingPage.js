@@ -240,7 +240,7 @@ const LandingPage = ({ onGetStarted }) => {
             LET'S DO THIS!
           </h3>
           <p className="text-xl text-blue-100 mb-12">
-            Join riders who have overcome mental struggles and achieved their equestrian dreams through evidence-based mental strategies.
+            Join riders who have transformed their mental performance challenges into success, using proven, evidence-based strategies.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
