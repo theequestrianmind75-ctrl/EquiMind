@@ -292,67 +292,31 @@ const Dashboard = ({ currentRider, onLogout }) => {
         <div className="professional-card rounded-2xl p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Begin Your Mental Training Session</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
             {/* Show Jumping Session */}
-            <div className="group cursor-pointer" onClick={() => startNewSession('pre_ride', 'show_jumping')}>
-              <div className="relative overflow-hidden rounded-2xl transition-all duration-300 group-hover:scale-105">
-                <img 
-                  src="https://images.unsplash.com/photo-1512934772407-b292436089ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxzaG93JTIwanVtcGluZ3xlbnwwfHx8fDE3NTg1MDE2MDB8MA&ixlib=rb-4.1.0&q=85" 
-                  alt="Show Jumping" 
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-xl font-bold text-white mb-2">Show Jumping</h3>
-                  <p className="text-blue-200 text-sm">Mental preparation for jumping disciplines</p>
-                  <div className="flex items-center mt-3 text-white">
-                    <Play className="w-5 h-5 mr-2" />
-                    <span className="font-semibold">Start Session</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <button
+              onClick={() => startNewSession('pre_ride', 'show_jumping')}
+              className="professional-button text-white py-6 px-8 rounded-xl font-semibold text-lg hover-lift transition-all"
+            >
+              Show Jumping
+            </button>
 
             {/* Dressage Session */}
-            <div className="group cursor-pointer" onClick={() => startNewSession('pre_ride', 'dressage')}>
-              <div className="relative overflow-hidden rounded-2xl transition-all duration-300 group-hover:scale-105">
-                <img 
-                  src="https://images.unsplash.com/flagged/photo-1568382007362-5d0d0a26b422?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxkcmVzc2FnZXxlbnwwfHx8fDE3NTg1MDE2MDZ8MA&ixlib=rb-4.1.0&q=85" 
-                  alt="Dressage" 
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-xl font-bold text-white mb-2">Dressage</h3>
-                  <p className="text-blue-200 text-sm">Focus and harmony preparation</p>
-                  <div className="flex items-center mt-3 text-white">
-                    <Play className="w-5 h-5 mr-2" />
-                    <span className="font-semibold">Start Session</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <button
+              onClick={() => startNewSession('pre_ride', 'dressage')}
+              className="professional-button text-white py-6 px-8 rounded-xl font-semibold text-lg hover-lift transition-all"
+            >
+              Dressage
+            </button>
 
             {/* General Training Session */}
-            <div className="group cursor-pointer" onClick={() => startNewSession('pre_ride', 'general_training')}>
-              <div className="relative overflow-hidden rounded-2xl transition-all duration-300 group-hover:scale-105">
-                <img 
-                  src="https://images.unsplash.com/photo-1695133996154-e09d82de12b9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHw0fHxlcXVlc3RyaWFufGVufDB8fHx8MTc1ODUwMTU5NXww&ixlib=rb-4.1.0&q=85" 
-                  alt="General Training" 
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-xl font-bold text-white mb-2">General Training</h3>
-                  <p className="text-blue-200 text-sm">All-around mental performance</p>
-                  <div className="flex items-center mt-3 text-white">
-                    <Play className="w-5 h-5 mr-2" />
-                    <span className="font-semibold">Start Session</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <button
+              onClick={() => startNewSession('pre_ride', 'general_training')}
+              className="professional-button text-white py-6 px-8 rounded-xl font-semibold text-lg hover-lift transition-all"
+            >
+              General Training
+            </button>
           </div>
         </div>
 
