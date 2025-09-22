@@ -146,12 +146,13 @@ const LandingPage = ({ onGetStarted }) => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Strengthen Your Mindset
               <br />
+              <br />
               <span className="gradient-text bg-gradient-to-r from-blue-200 to-white bg-clip-text text-transparent">Excel in the Saddle</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Evidence-based equestrian performance coaching from a Licensed Clinical Therapist 
-              with 50+ years of riding experience. Overcome anxiety, build confidence, and achieve peak performance.
+              Combining clinical expertise with deep equestrian knowledge to deliver 
+              results that transform both rider performance and horse-rider relationships.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
