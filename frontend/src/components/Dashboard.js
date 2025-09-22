@@ -14,17 +14,22 @@ import {
   AlertTriangle,
   Brain,
   Target,
-  Activity
+  Activity,
+  LogOut,
+  User,
+  Menu,
+  X
 } from 'lucide-react';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
-const Dashboard = ({ currentRider }) => {
+const Dashboard = ({ currentRider, onLogout }) => {
   const navigate = useNavigate();
   const [analytics, setAnalytics] = useState(null);
   const [recentSessions, setRecentSessions] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [showUserMenu, setShowUserMenu] = useState(false);
 
   useEffect(() => {
     if (currentRider?.id) {
@@ -46,7 +51,6 @@ const Dashboard = ({ currentRider }) => {
       
     } catch (error) {
       console.error('Error fetching dashboard data:', error);
-      toast.error('Unable to load dashboard data');
       
       // Set mock data for demo
       setAnalytics({
@@ -87,6 +91,14 @@ const Dashboard = ({ currentRider }) => {
     navigate('/emergency');
   };
 
+  const handleLogout = () => {
+    if (onLogout) {
+      onLogout();
+    }
+    toast.success('Signed out successfully');
+    navigate('/');
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-100">
@@ -125,6 +137,78 @@ const Dashboard = ({ currentRider }) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-100">
+      
+      {/* Navigation Bar */}
+      <nav className="bg-white/80 backdrop-blur-sm border-b border-emerald-100 sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center">
+                <Heart className="w-6 h-6 text-white" />
+              </div>
+              <h1 className="text-2xl font-bold gradient-text">EquiMind</h1>
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={handleEmergencySupport}
+                className="hidden md:flex items-center space-x-2 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors emergency-pulse"
+              >
+                <Shield className="w-4 h-4" />
+                <span>Emergency</span>
+              </button>
+              
+              {/* User Menu */}
+              <div className="relative">
+                <button
+                  onClick={() => setShowUserMenu(!showUserMenu)}
+                  className="flex items-center space-x-3 bg-white hover:bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 transition-colors"
+                >
+                  <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center">
+                    <User className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="hidden md:block font-medium text-gray-900">
+                    {currentRider?.name}
+                  </span>
+                  <Menu className="w-4 h-4 text-gray-600" />
+                </button>
+                
+                {showUserMenu && (
+                  <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2">
+                    <div className="px-4 py-3 border-b border-gray-100">
+                      <p className="font-medium text-gray-900">{currentRider?.name}</p>
+                      <p className="text-sm text-gray-600">{currentRider?.email}</p>
+                    </div>
+                    
+                    <button
+                      onClick={() => {
+                        setShowUserMenu(false);
+                        navigate('/profile');
+                      }}
+                      className="w-full text-left px-4 py-2 hover:bg-gray-50 flex items-center space-x-3"
+                    >
+                      <Settings className="w-4 h-4 text-gray-600" />
+                      <span>Profile Settings</span>
+                    </button>
+                    
+                    <button
+                      onClick={() => {
+                        setShowUserMenu(false);
+                        handleLogout();
+                      }}
+                      className="w-full text-left px-4 py-2 hover:bg-gray-50 flex items-center space-x-3 text-red-600"
+                    >
+                      <LogOut className="w-4 h-4" />
+                      <span>Sign Out</span>
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
       {/* Header Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0">
@@ -137,23 +221,13 @@ const Dashboard = ({ currentRider }) => {
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 py-16">
-          <div className="flex items-center justify-between">
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl font-bold text-white">
-                {getGreeting()}, {currentRider?.name}
-              </h1>
-              <p className="text-xl text-emerald-100 max-w-2xl">
-                Ready to elevate your equestrian performance with evidence-based mental training?
-              </p>
-            </div>
-            
-            <button
-              onClick={handleEmergencySupport}
-              className="hidden md:flex items-center space-x-2 bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 emergency-pulse"
-            >
-              <Shield className="w-5 h-5" />
-              <span>Emergency Support</span>
-            </button>
+          <div className="space-y-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-white">
+              {getGreeting()}, {currentRider?.name}
+            </h1>
+            <p className="text-xl text-emerald-100 max-w-2xl">
+              Ready to elevate your equestrian performance with evidence-based mental training?
+            </p>
           </div>
         </div>
       </div>
@@ -401,6 +475,14 @@ const Dashboard = ({ currentRider }) => {
       >
         <Shield className="w-6 h-6" />
       </button>
+
+      {/* Click outside to close user menu */}
+      {showUserMenu && (
+        <div 
+          className="fixed inset-0 z-40" 
+          onClick={() => setShowUserMenu(false)}
+        ></div>
+      )}
     </div>
   );
 };
