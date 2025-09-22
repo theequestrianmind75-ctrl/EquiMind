@@ -103,7 +103,7 @@ const LandingPage = ({ onGetStarted }) => {
                   className="w-10 h-10 object-contain"
                 />
               </div>
-              <h1 className="text-2xl font-bold text-brand-primary">The Equestrian Mind</h1>
+              <h1 className="text-2xl font-bold text-brand-primary">EquiMind</h1>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
