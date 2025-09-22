@@ -88,7 +88,7 @@ const LandingPage = ({ onGetStarted }) => {
       {/* Navigation */}
       <nav className="bg-white/90 backdrop-blur-sm border-b border-blue-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-center">
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 rounded-xl flex items-center justify-center">
                 <img 
@@ -98,27 +98,6 @@ const LandingPage = ({ onGetStarted }) => {
                 />
               </div>
               <h1 className="text-2xl font-bold text-brand-primary">EquiMind</h1>
-            </div>
-            
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-gray-700 hover:text-brand-primary transition-colors">Features</a>
-              <a href="#testimonials" className="text-gray-700 hover:text-brand-primary transition-colors">Success Stories</a>
-              <a href="#coaching" className="text-gray-700 hover:text-brand-primary transition-colors">Coaching</a>
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <button
-                onClick={() => navigate('/auth?mode=signin')}
-                className="text-brand-primary hover:text-blue-700 font-semibold transition-colors"
-              >
-                Sign In
-              </button>
-              <button
-                onClick={handleGetStarted}
-                className="professional-button text-white px-6 py-2 rounded-lg font-semibold"
-              >
-                Get Started
-              </button>
             </div>
           </div>
         </div>
