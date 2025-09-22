@@ -196,50 +196,6 @@ const LandingPage = ({ onGetStarted }) => {
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-20 bg-white/50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              The EquiMind Approach
-            </h2>
-            <p className="text-xl text-gray-600">
-              Three proven steps to mental mastery in equestrian sports
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                step: '01',
-                title: 'Assess Your Mental Performance',
-                description: 'Complete comprehensive evaluation to understand your unique patterns, challenges, and strengths as a rider.'
-              },
-              {
-                step: '02',
-                title: 'Build Mental Skills',
-                description: 'Follow evidence-based training protocols designed by a licensed clinical therapist for your specific needs.'
-              },
-              {
-                step: '03',
-                title: 'Perform with Confidence',
-                description: 'Apply your new mental skills in training and competition, with ongoing support and guidance.'
-              }
-            ].map((item, index) => (
-              <div key={index} className="text-center group">
-                <div className="professional-card rounded-2xl p-8 mb-6 h-64 flex flex-col justify-center">
-                  <div className="w-12 h-12 bg-gradient-brand-dark rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-4">
-                    {item.step}
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials */}
       <section id="testimonials" className="py-20">
         <div className="max-w-7xl mx-auto px-4">
