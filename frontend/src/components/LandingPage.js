@@ -384,7 +384,7 @@ const LandingPage = ({ onGetStarted }) => {
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center">
                   <img 
                     src="https://customer-assets.emergentagent.com/job_equihero/artifacts/e0yoq28q_horse%20head%20.png" 
-                    alt="The Equestrian Mind" 
+                    alt="EquiMind" 
                     className="w-8 h-8 object-contain filter brightness-0 invert"
                   />
                 </div>
