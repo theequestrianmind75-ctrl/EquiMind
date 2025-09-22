@@ -438,7 +438,7 @@ const LandingPage = ({ onGetStarted }) => {
             <div className="text-center">
               <img 
                 src="https://customer-assets.emergentagent.com/job_equihero/artifacts/e0yoq28q_horse%20head%20.png" 
-                alt="The Equestrian Mind" 
+                alt="EquiMind" 
                 className="w-16 h-16 object-contain mx-auto mb-4"
               />
               <h3 className="text-2xl font-bold text-gray-900 mb-4">About The Equestrian Mind</h3>
