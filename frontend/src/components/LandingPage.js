@@ -302,10 +302,6 @@ const LandingPage = ({ onGetStarted }) => {
               <span>Start Your Mental Training</span>
               <ArrowRight className="w-6 h-6" />
             </button>
-            
-            <p className="text-blue-100 text-sm">
-              Evidence-based approach • Licensed professional • 50+ years experience
-            </p>
           </div>
           
           <div className="mt-12 flex items-center justify-center space-x-8 text-blue-200">
