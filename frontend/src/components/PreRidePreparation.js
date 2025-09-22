@@ -264,7 +264,42 @@ const PreRidePreparation = ({ currentRider }) => {
     }
   };
 
-  const saveEmotionAssessment = async () => {
+  const startMentalStrategy = (strategy) => {
+    setSelectedStrategy(strategy);
+    setIsStrategyActive(true);
+    toast.success(`Starting ${strategy.name}`);
+    
+    // Log the strategy usage
+    logStrategyUsage(strategy);
+  };
+
+  const completeMentalStrategy = () => {
+    if (selectedStrategy) {
+      setIsStrategyActive(false);
+      toast.success(`Completed ${selectedStrategy.name}!`);
+      // Update progress to reflect strategy completion
+      setCompletedSteps(prev => new Set([...prev, 'mental_strategy']));
+      setSelectedStrategy(null);
+    }
+  };
+
+  const logStrategyUsage = async (strategy) => {
+    try {
+      const strategyData = {
+        rider_id: currentRider.id,
+        session_id: currentSession?.id,
+        strategy_id: strategy.id,
+        strategy_name: strategy.name,
+        trigger_anxiety: anxietyLevel,
+        trigger_confidence: confidenceLevel,
+        usage_timestamp: new Date().toISOString()
+      };
+
+      await axios.post(`${API}/strategy-logs`, strategyData);
+    } catch (error) {
+      console.error('Error logging strategy usage:', error);
+    }
+  };
     if (!currentSession) return;
 
     try {
