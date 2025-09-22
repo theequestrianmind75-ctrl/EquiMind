@@ -104,6 +104,30 @@ class RidingSession(BaseModel):
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     completed_at: Optional[datetime] = None
 
+class MentalStrategy(BaseModel):
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    name: str
+    category: str
+    description: str
+    duration_minutes: int
+    trigger_conditions: Dict[str, int]
+    instructions: List[str]
+    evidence_base: str
+    suitable_for: List[str]
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+class StrategyLog(BaseModel):
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    rider_id: str
+    session_id: str
+    strategy_id: str
+    strategy_name: str
+    trigger_anxiety: int
+    trigger_confidence: int
+    usage_timestamp: datetime
+    completed: bool = False
+    effectiveness_rating: Optional[int] = None
+
 class EmergencyEvent(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     rider_id: str
