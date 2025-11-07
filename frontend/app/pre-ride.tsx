@@ -362,13 +362,13 @@ const styles = StyleSheet.create({
   },
   rideTypeButton: {
     width: '48%',
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     padding: 16,
     borderRadius: 12,
     alignItems: 'center',
     margin: '1%',
     borderWidth: 2,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   rideTypeButtonActive: {
     borderColor: '#3b82f6',
@@ -394,11 +394,11 @@ const styles = StyleSheet.create({
     width: 32,
     height: 32,
     borderRadius: 16,
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 2,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   scaleButtonActive: {
     backgroundColor: '#3b82f6',
@@ -422,7 +422,7 @@ const styles = StyleSheet.create({
     color: '#64748b',
   },
   notesInput: {
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     borderRadius: 12,
     padding: 16,
     color: '#1e293b',
@@ -430,7 +430,7 @@ const styles = StyleSheet.create({
     minHeight: 120,
     textAlignVertical: 'top',
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   startButton: {
     flexDirection: 'row',

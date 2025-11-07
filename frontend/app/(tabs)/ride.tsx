@@ -95,12 +95,12 @@ const styles = StyleSheet.create({
   optionCard: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     padding: 20,
     borderRadius: 16,
     marginBottom: 16,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   iconContainer: {
     width: 72,

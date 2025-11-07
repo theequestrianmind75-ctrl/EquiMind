@@ -135,12 +135,12 @@ const styles = StyleSheet.create({
   categoryCard: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     padding: 20,
     borderRadius: 12,
     marginBottom: 16,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   iconCircle: {
     width: 64,
@@ -166,13 +166,13 @@ const styles = StyleSheet.create({
   },
   infoCard: {
     flexDirection: 'row',
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     padding: 16,
     borderRadius: 12,
     marginTop: 8,
     marginBottom: 24,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   infoText: {
     flex: 1,

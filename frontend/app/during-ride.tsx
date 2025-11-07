@@ -224,13 +224,13 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   statusCard: {
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     padding: 32,
     borderRadius: 16,
     alignItems: 'center',
     marginBottom: 24,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   statusIndicator: {
     width: 96,
@@ -268,8 +268,8 @@ const styles = StyleSheet.create({
     borderColor: '#10b981',
   },
   controlButtonInactive: {
-    backgroundColor: '#f8fafc',
-    borderColor: '#e2e8f0',
+    backgroundColor: '#A7D2BB',
+    borderColor: '#375B50',
   },
   controlButtonText: {
     fontSize: 16,
@@ -300,12 +300,12 @@ const styles = StyleSheet.create({
     marginLeft: 12,
   },
   adviceCard: {
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     padding: 20,
     borderRadius: 12,
     marginBottom: 24,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   adviceHeader: {
     flexDirection: 'row',
@@ -324,12 +324,12 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
   infoCard: {
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     padding: 20,
     borderRadius: 12,
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   infoTitle: {
     fontSize: 18,

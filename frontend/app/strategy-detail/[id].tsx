@@ -271,13 +271,13 @@ const styles = StyleSheet.create({
   },
   metaCard: {
     flex: 1,
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     padding: 20,
     borderRadius: 12,
     alignItems: 'center',
     marginHorizontal: 6,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   metaValue: {
     fontSize: 24,
@@ -322,12 +322,12 @@ const styles = StyleSheet.create({
   },
   levelCard: {
     flex: 1,
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     padding: 16,
     borderRadius: 12,
     marginHorizontal: 6,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   levelLabel: {
     fontSize: 12,
@@ -341,11 +341,11 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
   instructionsCard: {
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     padding: 20,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   instructionsText: {
     fontSize: 14,
@@ -357,14 +357,14 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   tag: {
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     paddingHorizontal: 12,
     paddingVertical: 8,
     borderRadius: 8,
     marginRight: 8,
     marginBottom: 8,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   tagText: {
     fontSize: 12,

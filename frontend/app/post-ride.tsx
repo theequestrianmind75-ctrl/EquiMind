@@ -278,12 +278,12 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   noSessionCard: {
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     padding: 48,
     borderRadius: 16,
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   noSessionTitle: {
     fontSize: 24,
@@ -313,12 +313,12 @@ const styles = StyleSheet.create({
   },
   sessionInfo: {
     flexDirection: 'row',
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     padding: 16,
     borderRadius: 12,
     marginBottom: 24,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   sessionInfoText: {
     marginLeft: 12,
@@ -354,11 +354,11 @@ const styles = StyleSheet.create({
     width: 32,
     height: 32,
     borderRadius: 16,
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 2,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   scaleButtonActive: {
     backgroundColor: '#8b5cf6',
@@ -382,7 +382,7 @@ const styles = StyleSheet.create({
     color: '#64748b',
   },
   notesInput: {
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     borderRadius: 12,
     padding: 16,
     color: '#1e293b',
@@ -390,7 +390,7 @@ const styles = StyleSheet.create({
     minHeight: 150,
     textAlignVertical: 'top',
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   completeButton: {
     flexDirection: 'row',

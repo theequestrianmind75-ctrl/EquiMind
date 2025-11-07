@@ -285,12 +285,12 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   introCard: {
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     padding: 20,
     borderRadius: 12,
     marginBottom: 24,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   introTitle: {
     fontSize: 20,
@@ -304,12 +304,12 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
   diagramCard: {
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     padding: 20,
     borderRadius: 12,
     marginBottom: 24,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
     alignItems: 'center',
   },
   sectionTitle: {
@@ -337,12 +337,12 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   pointCard: {
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     padding: 20,
     borderRadius: 12,
     marginBottom: 16,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   pointHeader: {
     flexDirection: 'row',
@@ -384,12 +384,12 @@ const styles = StyleSheet.create({
     lineHeight: 20,
   },
   usageCard: {
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     padding: 24,
     borderRadius: 12,
     marginBottom: 32,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
     alignItems: 'center',
   },
   usageTitle: {

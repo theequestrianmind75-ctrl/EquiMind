@@ -215,12 +215,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
   sessionCard: {
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#A7D2BB',
     padding: 16,
     borderRadius: 12,
     marginBottom: 16,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
+    borderColor: '#375B50',
   },
   sessionHeader: {
     flexDirection: 'row',
