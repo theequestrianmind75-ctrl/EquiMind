@@ -327,6 +327,23 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#94a3b8',
     lineHeight: 22,
+    marginBottom: 12,
+  },
+  guideButton: {
+    flexDirection: 'row',
+    backgroundColor: '#ec4899',
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 12,
+  },
+  guideButtonText: {
+    color: '#ffffff',
+    fontSize: 14,
+    fontWeight: '600',
+    marginLeft: 8,
   },
   subtitle: {
     fontSize: 14,
