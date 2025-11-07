@@ -128,6 +128,15 @@ export default function CategoryDetail() {
       .replace(/Coach:\s*/gi, '')
       .trim();
     
+    // Split by double newlines to get paragraphs
+    const paragraphs = cleaned.split(/\n\n+/);
+    
+    // If there are multiple paragraphs, skip the first one (description) and return the rest
+    if (paragraphs.length > 1) {
+      // Remove the first paragraph and join the rest
+      return paragraphs.slice(1).join('\n\n').trim();
+    }
+    
     return cleaned;
   };
 
