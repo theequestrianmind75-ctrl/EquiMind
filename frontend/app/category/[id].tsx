@@ -30,26 +30,37 @@ const CATEGORIES: any = {
     title: 'Mindfulness and Flow',
     color: '#10b981',
     keywords: ['mindfulness', 'flow'],
+    excludeKeywords: ['tapping', 'eft'],
   },
   breathing: {
     title: 'Breathing',
     color: '#3b82f6',
     keywords: ['breathing'],
+    excludeKeywords: ['tapping', 'eft'],
   },
   emotional: {
     title: 'Emotional Regulation',
     color: '#f59e0b',
     keywords: ['activation', 'emotional', 'regulation'],
+    excludeKeywords: ['tapping', 'eft'],
   },
   grounding: {
     title: 'Grounding',
     color: '#06b6d4',
     keywords: ['grounding'],
+    excludeKeywords: ['tapping', 'eft'],
   },
   somatic: {
     title: 'Somatic Tools',
     color: '#8b5cf6',
     keywords: ['somatic'],
+    excludeKeywords: ['tapping', 'eft'],
+  },
+  tapping: {
+    title: 'Tapping',
+    color: '#ec4899',
+    keywords: ['tapping', 'eft'],
+    description: 'EFT (Emotional Freedom Technique) or "tapping" uses gentle tapping on specific acupressure points to reduce stress and anxiety. This technique helps calm your nervous system before riding, during challenging moments, or after a difficult session.',
   },
 };
 
