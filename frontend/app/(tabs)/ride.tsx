@@ -64,19 +64,6 @@ export default function Ride() {
             <Ionicons name="chevron-forward" size={28} color="#64748b" />
           </TouchableOpacity>
         ))}
-
-        <View style={styles.infoCard}>
-          <Ionicons name="information-circle" size={32} color="#3b82f6" />
-          <Text style={styles.infoTitle}>How it Works</Text>
-          <Text style={styles.infoText}>
-            <Text style={styles.bold}>Pre-Ride:</Text> Set your mental state and choose strategies
-            {"\n\n"}
-            <Text style={styles.bold}>During Ride:</Text> Say "advice" to trigger voice coaching with
-            real-time guidance
-            {"\n\n"}
-            <Text style={styles.bold}>Post-Ride:</Text> Reflect on your session and track progress
-          </Text>
-        </View>
       </ScrollView>
     </SafeAreaView>
   );
