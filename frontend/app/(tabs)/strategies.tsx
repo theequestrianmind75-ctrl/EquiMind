@@ -51,6 +51,14 @@ const CATEGORIES = [
     color: '#8b5cf6',
     keywords: ['somatic'],
   },
+  {
+    id: 'tapping',
+    title: 'Tapping',
+    description: 'EFT tapping techniques for stress relief',
+    icon: 'hand-left',
+    color: '#ec4899',
+    keywords: ['tapping', 'eft'],
+  },
 ];
 
 export default function Strategies() {
