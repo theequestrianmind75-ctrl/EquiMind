@@ -67,6 +67,11 @@ class SessionCreate(BaseModel):
     confidence_level: Optional[int] = None
     notes: Optional[str] = None
     strategies_used: Optional[List[str]] = []
+    # Horse information
+    horse_energy_level: Optional[int] = None  # 1-10 scale
+    horse_focus_level: Optional[int] = None  # 1-10 scale
+    horse_responsiveness: Optional[int] = None  # 1-10 scale
+    horse_notes: Optional[str] = None
 
 class SessionUpdate(BaseModel):
     anxiety_level: Optional[int] = None
@@ -74,6 +79,11 @@ class SessionUpdate(BaseModel):
     notes: Optional[str] = None
     strategies_used: Optional[List[str]] = None
     completed: Optional[bool] = None
+    # Horse information updates
+    horse_energy_level: Optional[int] = None
+    horse_focus_level: Optional[int] = None
+    horse_responsiveness: Optional[int] = None
+    horse_notes: Optional[str] = None
 
 class Session(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
@@ -85,6 +95,11 @@ class Session(BaseModel):
     notes: Optional[str] = None
     strategies_used: List[str] = []
     completed: bool = False
+    # Horse information
+    horse_energy_level: Optional[int] = None
+    horse_focus_level: Optional[int] = None
+    horse_responsiveness: Optional[int] = None
+    horse_notes: Optional[str] = None
     created_at: datetime = Field(default_factory=datetime.utcnow)
     completed_at: Optional[datetime] = None
 
