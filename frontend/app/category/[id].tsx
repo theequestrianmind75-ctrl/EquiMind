@@ -220,6 +220,15 @@ export default function CategoryDetail() {
         {category.description && (
           <View style={styles.descriptionCard}>
             <Text style={styles.descriptionText}>{category.description}</Text>
+            {id === 'tapping' && (
+              <TouchableOpacity
+                style={styles.guideButton}
+                onPress={() => router.push('/tapping-guide' as any)}
+              >
+                <Ionicons name="book" size={20} color="#ffffff" />
+                <Text style={styles.guideButtonText}>View Full Tapping Guide</Text>
+              </TouchableOpacity>
+            )}
           </View>
         )}
         
