@@ -44,12 +44,19 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: '100%',
     height: '100%',
-    opacity: 0.3,
+    opacity: 0.05,
+    resizeMode: 'center',
   },
   overlay: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  logo: {
+    width: 120,
+    height: 120,
+    marginBottom: 24,
+    resizeMode: 'contain',
   },
   text: {
     marginTop: 16,
