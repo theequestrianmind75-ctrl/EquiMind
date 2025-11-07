@@ -157,11 +157,17 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#334155',
   },
+  heroLogo: {
+    width: 80,
+    height: 80,
+    resizeMode: 'contain',
+    marginBottom: 16,
+  },
   heroTitle: {
     fontSize: 24,
     fontWeight: 'bold',
     color: '#f1f5f9',
-    marginTop: 16,
+    marginTop: 8,
     textAlign: 'center',
   },
   heroSubtitle: {
