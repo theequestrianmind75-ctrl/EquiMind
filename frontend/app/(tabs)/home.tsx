@@ -218,32 +218,32 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#94a3b8',
   },
-  featureGrid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    marginHorizontal: -6,
-  },
-  featureCard: {
-    width: '48%',
+  connectionCard: {
     backgroundColor: '#1e293b',
-    padding: 20,
+    padding: 24,
     borderRadius: 12,
-    margin: '1%',
     borderWidth: 1,
     borderColor: '#334155',
     alignItems: 'center',
+    marginBottom: 16,
   },
-  featureTitle: {
-    fontSize: 14,
-    fontWeight: '600',
+  connectionIcon: {
+    width: 64,
+    height: 64,
+    resizeMode: 'contain',
+    marginBottom: 16,
+  },
+  connectionText: {
+    fontSize: 16,
     color: '#f1f5f9',
-    marginTop: 12,
     textAlign: 'center',
+    lineHeight: 24,
+    fontWeight: '500',
   },
-  featureDescription: {
-    fontSize: 12,
+  connectionDescription: {
+    fontSize: 14,
     color: '#94a3b8',
-    marginTop: 4,
+    lineHeight: 22,
     textAlign: 'center',
   },
 });
