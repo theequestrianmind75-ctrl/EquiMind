@@ -84,12 +84,28 @@ export default function CategoryDetail() {
       const response = await api.get('/mental-strategies');
       const allStrategies = response.data;
 
-      // Filter strategies by category keywords
-      const filtered = allStrategies.filter((s: Strategy) =>
-        category.keywords.some((keyword: string) =>
-          s.category.toLowerCase().includes(keyword.toLowerCase())
-        )
-      );
+      // Filter strategies by category keywords and exclude keywords
+      const filtered = allStrategies.filter((s: Strategy) => {
+        const categoryLower = s.category.toLowerCase();
+        const nameLower = s.name.toLowerCase();
+        const instructionsLower = s.instructions.toLowerCase();
+        
+        // Check if strategy matches category keywords
+        const matchesCategory = category.keywords.some((keyword: string) =>
+          categoryLower.includes(keyword.toLowerCase()) ||
+          nameLower.includes(keyword.toLowerCase()) ||
+          instructionsLower.includes(keyword.toLowerCase())
+        );
+        
+        // Check if strategy should be excluded (e.g., tapping in non-tapping categories)
+        const shouldExclude = category.excludeKeywords && category.excludeKeywords.some((keyword: string) =>
+          categoryLower.includes(keyword.toLowerCase()) ||
+          nameLower.includes(keyword.toLowerCase()) ||
+          instructionsLower.includes(keyword.toLowerCase())
+        );
+        
+        return matchesCategory && !shouldExclude;
+      });
 
       // Remove duplicates by using a Map keyed by strategy ID
       const uniqueStrategies = Array.from(
