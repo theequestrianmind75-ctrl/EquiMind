@@ -140,11 +140,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 48,
   },
+  heroImage: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    marginBottom: 16,
+  },
   title: {
     fontSize: 32,
     fontWeight: 'bold',
     color: '#f1f5f9',
-    marginTop: 16,
+    marginTop: 8,
   },
   subtitle: {
     fontSize: 14,
