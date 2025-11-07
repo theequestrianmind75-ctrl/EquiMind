@@ -68,12 +68,12 @@ export default function Home() {
           />
           <Text style={styles.heroTitle}>How It Works</Text>
           <Text style={styles.heroDescription}>
-            <Text style={styles.bold}>Pre-Ride:</Text> Set your mental state and choose strategies
+            <Text style={styles.bold}>Pre-Ride:</Text> Set your mental state and choose strategies for you and your horse
             {"\n\n"}
             <Text style={styles.bold}>During Ride:</Text> Say "advice" to trigger voice coaching with
-            real-time guidance
+            real-time guidance for both you and your horse
             {"\n\n"}
-            <Text style={styles.bold}>Post-Ride:</Text> Reflect on your session and track progress
+            <Text style={styles.bold}>Post-Ride:</Text> Reflect on your session and track progress for you and your horse
           </Text>
         </View>
 
