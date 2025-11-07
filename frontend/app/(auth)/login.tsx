@@ -42,6 +42,10 @@ export default function Login() {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Image
+        source={require('../../assets/images/horse-head-logo.png')}
+        style={styles.backgroundLogo}
+      />
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={styles.keyboardView}
@@ -49,10 +53,10 @@ export default function Login() {
         <ScrollView contentContainerStyle={styles.scrollContent}>
           <View style={styles.header}>
             <Image
-              source={require('../../assets/images/gray-jumper.jpg')}
-              style={styles.heroImage}
+              source={require('../../assets/images/horse-head-logo.png')}
+              style={styles.heroLogo}
             />
-            <Text style={styles.title}>EquiMind</Text>
+            <Text style={styles.title}>The Equestrian Mind</Text>
             <Text style={styles.subtitle}>Mental Performance Training</Text>
           </View>
 
