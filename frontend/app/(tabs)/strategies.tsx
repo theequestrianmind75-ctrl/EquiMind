@@ -70,85 +70,37 @@ export default function Strategies() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
-  if (loading) {
-    return (
-      <SafeAreaView style={styles.container} edges={['top']}>
-        <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#3b82f6" />
-          <Text style={styles.loadingText}>Loading strategies...</Text>
-        </View>
-      </SafeAreaView>
-    );
-  }
-
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
       <View style={styles.header}>
-        <Text style={styles.title}>Mental Strategies</Text>
-        <Text style={styles.subtitle}>{filteredStrategies.length} strategies available</Text>
-      </View>
-
-      <View style={styles.searchContainer}>
-        <Ionicons name="search" size={20} color="#64748b" style={styles.searchIcon} />
-        <TextInput
-          style={styles.searchInput}
-          placeholder="Search strategies..."
-          placeholderTextColor="#64748b"
-          value={searchQuery}
-          onChangeText={setSearchQuery}
-        />
-        {searchQuery ? (
-          <TouchableOpacity onPress={() => setSearchQuery('')}>
-            <Ionicons name="close-circle" size={20} color="#64748b" />
-          </TouchableOpacity>
-        ) : null}
+        <Text style={styles.title}>Rider Tools</Text>
+        <Text style={styles.subtitle}>Choose a category to explore techniques</Text>
       </View>
 
       <ScrollView style={styles.scrollView}>
-        {filteredStrategies.map((strategy) => (
+        {CATEGORIES.map((category) => (
           <TouchableOpacity
-            key={strategy.id}
-            style={styles.strategyCard}
-            onPress={() => router.push(`/strategy-detail/${strategy.id}` as any)}
+            key={category.id}
+            style={styles.categoryCard}
+            onPress={() => router.push(`/category/${category.id}` as any)}
           >
-            <View style={styles.strategyHeader}>
-              <View
-                style={[
-                  styles.categoryBadge,
-                  { backgroundColor: getCategoryColor(strategy.category) + '20' },
-                ]}
-              >
-                <Text style={[styles.categoryText, { color: getCategoryColor(strategy.category) }]}>
-                  {strategy.category.split(',')[0].trim()}
-                </Text>
-              </View>
-              <View style={styles.rating}>
-                <Ionicons name="star" size={16} color="#f59e0b" />
-                <Text style={styles.ratingText}>{strategy.effectiveness_rating.toFixed(1)}</Text>
-              </View>
+            <View style={[styles.iconCircle, { backgroundColor: category.color + '20' }]}>
+              <Ionicons name={category.icon as any} size={32} color={category.color} />
             </View>
-
-            <Text style={styles.strategyName}>{strategy.name}</Text>
-
-            <View style={styles.strategyMeta}>
-              <View style={styles.metaItem}>
-                <Ionicons name="time-outline" size={16} color="#64748b" />
-                <Text style={styles.metaText}>{strategy.duration_minutes} min</Text>
-              </View>
-              <View style={styles.metaItem}>
-                <Ionicons name="pulse-outline" size={16} color="#64748b" />
-                <Text style={styles.metaText}>
-                  Anxiety {Math.min(...strategy.anxiety_level)}-{Math.max(...strategy.anxiety_level)}
-                </Text>
-              </View>
+            <View style={styles.categoryContent}>
+              <Text style={styles.categoryTitle}>{category.title}</Text>
+              <Text style={styles.categoryDescription}>{category.description}</Text>
             </View>
-
-            <TouchableOpacity style={styles.viewButton}>
-              <Text style={styles.viewButtonText}>View Details</Text>
-              <Ionicons name="arrow-forward" size={16} color="#3b82f6" />
-            </TouchableOpacity>
+            <Ionicons name="chevron-forward" size={24} color="#64748b" />
           </TouchableOpacity>
         ))}
+
+        <View style={styles.infoCard}>
+          <Ionicons name="information-circle" size={24} color="#3b82f6" />
+          <Text style={styles.infoText}>
+            These tools are personalized based on your pre-ride anxiety and confidence levels.
+          </Text>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
