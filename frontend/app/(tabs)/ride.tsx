@@ -1,0 +1,167 @@
+import React from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { useRouter } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
+
+export default function Ride() {
+  const router = useRouter();
+
+  const rideOptions = [
+    {
+      id: 'pre-ride',
+      title: 'Pre-Ride Preparation',
+      description: 'Set your intention and prepare mentally',
+      icon: 'checkmark-circle',
+      color: '#10b981',
+      route: '/pre-ride',
+    },
+    {
+      id: 'during-ride',
+      title: 'During Ride Coaching',
+      description: 'Real-time voice coaching with TTS',
+      icon: 'mic',
+      color: '#3b82f6',
+      route: '/during-ride',
+    },
+    {
+      id: 'post-ride',
+      title: 'Post-Ride Analysis',
+      description: 'Reflect and review your session',
+      icon: 'analytics',
+      color: '#8b5cf6',
+      route: '/post-ride',
+    },
+  ];
+
+  return (
+    <SafeAreaView style={styles.container} edges={['top']}>
+      <View style={styles.header}>
+        <Text style={styles.title}>Riding Sessions</Text>
+        <Text style={styles.subtitle}>Choose your session phase</Text>
+      </View>
+
+      <ScrollView style={styles.scrollView}>
+        {rideOptions.map((option) => (
+          <TouchableOpacity
+            key={option.id}
+            style={styles.optionCard}
+            onPress={() => router.push(option.route as any)}
+          >
+            <View style={[styles.iconContainer, { backgroundColor: option.color + '20' }]}>
+              <Ionicons name={option.icon as any} size={40} color={option.color} />
+            </View>
+            <View style={styles.optionContent}>
+              <Text style={styles.optionTitle}>{option.title}</Text>
+              <Text style={styles.optionDescription}>{option.description}</Text>
+            </View>
+            <Ionicons name="chevron-forward" size={28} color="#64748b" />
+          </TouchableOpacity>
+        ))}
+
+        <View style={styles.infoCard}>
+          <Ionicons name="information-circle" size={32} color="#3b82f6" />
+          <Text style={styles.infoTitle}>How it Works</Text>
+          <Text style={styles.infoText}>
+            <Text style={styles.bold}>Pre-Ride:</Text> Set your mental state and choose strategies
+            {"\n\n"}
+            <Text style={styles.bold}>During Ride:</Text> Say "advice" to trigger voice coaching with
+            real-time guidance
+            {"\n\n"}
+            <Text style={styles.bold}>Post-Ride:</Text> Reflect on your session and track progress
+          </Text>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#0f172a',
+  },
+  header: {
+    padding: 24,
+    paddingBottom: 16,
+  },
+  title: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: '#f1f5f9',
+  },
+  subtitle: {
+    fontSize: 14,
+    color: '#94a3b8',
+    marginTop: 4,
+  },
+  scrollView: {
+    flex: 1,
+    paddingHorizontal: 24,
+  },
+  optionCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#1e293b',
+    padding: 20,
+    borderRadius: 16,
+    marginBottom: 16,
+    borderWidth: 1,
+    borderColor: '#334155',
+  },
+  iconContainer: {
+    width: 72,
+    height: 72,
+    borderRadius: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 16,
+  },
+  optionContent: {
+    flex: 1,
+  },
+  optionTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#f1f5f9',
+    marginBottom: 6,
+  },
+  optionDescription: {
+    fontSize: 14,
+    color: '#94a3b8',
+    lineHeight: 20,
+  },
+  infoCard: {
+    backgroundColor: '#1e293b',
+    padding: 24,
+    borderRadius: 16,
+    marginBottom: 24,
+    borderWidth: 1,
+    borderColor: '#334155',
+    alignItems: 'center',
+  },
+  infoTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#f1f5f9',
+    marginTop: 12,
+    marginBottom: 16,
+  },
+  infoText: {
+    fontSize: 14,
+    color: '#94a3b8',
+    lineHeight: 22,
+    textAlign: 'left',
+    width: '100%',
+  },
+  bold: {
+    fontWeight: '600',
+    color: '#f1f5f9',
+  },
+});
