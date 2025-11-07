@@ -219,6 +219,8 @@ async def get_strategy(strategy_id: str, current_user: dict = Depends(get_curren
     strategy = await db.mental_strategies.find_one({"id": strategy_id})
     if not strategy:
         raise HTTPException(status_code=404, detail="Strategy not found")
+    if '_id' in strategy:
+        del strategy['_id']
     return strategy
 
 # ==================== SESSION ROUTES ====================
