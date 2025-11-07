@@ -44,8 +44,12 @@ export default function PreRide() {
         anxiety_level: anxietyLevel,
         confidence_level: confidenceLevel,
         notes: notes || null,
+        horse_energy_level: horseEnergyLevel,
+        horse_focus_level: horseFocusLevel,
+        horse_responsiveness: horseResponsiveness,
+        horse_notes: horseNotes || null,
       });
-      Alert.alert('Success', 'Pre-ride session created!', [
+      Alert.alert('Success', 'Pre-ride session created for you and your horse!', [
         { text: 'OK', onPress: () => router.back() },
       ]);
     } catch (error: any) {
