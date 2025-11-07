@@ -290,6 +290,19 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 24,
   },
+  descriptionCard: {
+    backgroundColor: '#1e293b',
+    padding: 16,
+    borderRadius: 12,
+    marginBottom: 16,
+    borderWidth: 1,
+    borderColor: '#334155',
+  },
+  descriptionText: {
+    fontSize: 14,
+    color: '#94a3b8',
+    lineHeight: 22,
+  },
   subtitle: {
     fontSize: 14,
     color: '#94a3b8',
