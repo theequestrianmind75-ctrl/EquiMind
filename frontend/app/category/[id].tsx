@@ -80,7 +80,12 @@ export default function CategoryDetail() {
         )
       );
 
-      setStrategies(filtered);
+      // Remove duplicates by using a Map keyed by strategy ID
+      const uniqueStrategies = Array.from(
+        new Map(filtered.map((s: Strategy) => [s.id, s])).values()
+      );
+
+      setStrategies(uniqueStrategies);
     } catch (error) {
       console.error('Error fetching strategies:', error);
     } finally {
