@@ -62,6 +62,13 @@ const CATEGORIES: any = {
     keywords: ['tapping', 'eft'],
     description: 'EFT (Emotional Freedom Technique) or "tapping" uses gentle tapping on specific acupressure points to reduce stress and anxiety. This technique helps calm your nervous system before riding, during challenging moments, or after a difficult session.',
   },
+  'horse-rider': {
+    title: 'Horse-Rider Connection',
+    color: '#14b8a6',
+    keywords: ['co-regulation', 'cueing', 'connection', 'horse-rider'],
+    description: 'These tools focus on strengthening the bond between you and your horse. By understanding co-regulation, improving communication through cueing, and building trust, you create a partnership that enhances both performance and the riding experience.',
+    excludeKeywords: ['tapping', 'eft'],
+  },
 };
 
 export default function CategoryDetail() {
