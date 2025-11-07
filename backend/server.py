@@ -310,6 +310,20 @@ async def delete_session(session_id: str, current_user: dict = Depends(get_curre
         raise HTTPException(status_code=404, detail="Session not found")
     return {"message": "Session deleted successfully"}
 
+# ==================== EXPORT ROUTE ====================
+
+@api_router.get("/export/tools")
+async def export_tools():
+    """Download all rider tools as CSV file"""
+    file_path = "/app/rider_tools_export.csv"
+    if not os.path.exists(file_path):
+        raise HTTPException(status_code=404, detail="Export file not found")
+    return FileResponse(
+        path=file_path,
+        filename="equimind_rider_tools.csv",
+        media_type="text/csv"
+    )
+
 # Include the router in the main app
 app.include_router(api_router)
 
