@@ -192,6 +192,11 @@ async def get_mental_strategies(
     
     strategies = await db.mental_strategies.find(query).to_list(1000)
     
+    # Remove MongoDB _id field
+    for s in strategies:
+        if '_id' in s:
+            del s['_id']
+    
     # Filter by anxiety and confidence levels if provided
     if min_anxiety is not None or max_anxiety is not None or min_confidence is not None or max_confidence is not None:
         filtered = []
