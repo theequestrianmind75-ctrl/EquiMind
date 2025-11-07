@@ -23,50 +23,52 @@ interface Strategy {
   confidence_level: number[];
 }
 
+const CATEGORIES = [
+  {
+    id: 'mindfulness',
+    title: 'Mindfulness and Flow',
+    description: 'Stay present and connected with your horse',
+    icon: 'leaf',
+    color: '#10b981',
+    keywords: ['mindfulness', 'flow'],
+  },
+  {
+    id: 'breathing',
+    title: 'Breathing',
+    description: 'Regulate your nervous system through breath',
+    icon: 'fitness',
+    color: '#3b82f6',
+    keywords: ['breathing'],
+  },
+  {
+    id: 'emotional',
+    title: 'Emotional Regulation',
+    description: 'Manage emotions and maintain composure',
+    icon: 'heart',
+    color: '#f59e0b',
+    keywords: ['activation', 'emotional', 'regulation'],
+  },
+  {
+    id: 'grounding',
+    title: 'Grounding',
+    description: 'Connect to the present moment and your body',
+    icon: 'footsteps',
+    color: '#06b6d4',
+    keywords: ['grounding'],
+  },
+  {
+    id: 'somatic',
+    title: 'Somatic Tools',
+    description: 'Body-based techniques for mental clarity',
+    icon: 'body',
+    color: '#8b5cf6',
+    keywords: ['somatic'],
+  },
+];
+
 export default function Strategies() {
   const router = useRouter();
-  const [strategies, setStrategies] = useState<Strategy[]>([]);
-  const [filteredStrategies, setFilteredStrategies] = useState<Strategy[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState('');
-
-  useEffect(() => {
-    fetchStrategies();
-  }, []);
-
-  useEffect(() => {
-    if (searchQuery) {
-      const filtered = strategies.filter(
-        (s) =>
-          s.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          s.category.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-      setFilteredStrategies(filtered);
-    } else {
-      setFilteredStrategies(strategies);
-    }
-  }, [searchQuery, strategies]);
-
-  const fetchStrategies = async () => {
-    try {
-      const response = await api.get('/mental-strategies');
-      setStrategies(response.data);
-      setFilteredStrategies(response.data);
-    } catch (error) {
-      console.error('Error fetching strategies:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const getCategoryColor = (category: string) => {
-    if (category.includes('Mindfulness')) return '#10b981';
-    if (category.includes('Breathing')) return '#3b82f6';
-    if (category.includes('Somatic')) return '#8b5cf6';
-    if (category.includes('Activation')) return '#f59e0b';
-    if (category.includes('Cognitive')) return '#06b6d4';
-    return '#6366f1';
-  };
+  const [loading, setLoading] = useState(false);
 
   if (loading) {
     return (
