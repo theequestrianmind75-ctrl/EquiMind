@@ -120,12 +120,31 @@ export default function CategoryDetail() {
     }
   };
 
+  const cleanInstructions = (instructions: string): string => {
+    // Remove "Micro Script:" and "Audio Script:" labels
+    let cleaned = instructions
+      .replace(/Micro Script:\s*/gi, '')
+      .replace(/Audio Script:\s*/gi, '')
+      .replace(/Coach:\s*/gi, '')
+      .trim();
+    
+    return cleaned;
+  };
+
   const extractAudioScript = (instructions: string): string => {
+    // Try to find audio script section
     const match = instructions.match(/Audio Script:\s*([\s\S]*?)(?:\n\n|$)/);
     if (match && match[1]) {
-      return match[1].trim();
+      return match[1].replace(/Coach:\s*/gi, '').trim();
     }
-    return instructions;
+    
+    // If no audio script found, try to find text after "Micro Script:"
+    const microMatch = instructions.match(/Micro Script:\s*([\s\S]*?)(?:\n\n|Audio Script:|$)/);
+    if (microMatch && microMatch[1]) {
+      return microMatch[1].replace(/Coach:\s*/gi, '').trim();
+    }
+    
+    return instructions.replace(/Coach:\s*/gi, '').trim();
   };
 
   const handlePlayAudio = (strategy: Strategy) => {
