@@ -48,6 +48,10 @@ export default function Signup() {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Image
+        source={require('../../assets/images/horse-head-logo.png')}
+        style={styles.backgroundLogo}
+      />
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={styles.keyboardView}
@@ -55,11 +59,11 @@ export default function Signup() {
         <ScrollView contentContainerStyle={styles.scrollContent}>
           <View style={styles.header}>
             <Image
-              source={require('../../assets/images/gray-jumper.jpg')}
-              style={styles.heroImage}
+              source={require('../../assets/images/horse-head-logo.png')}
+              style={styles.heroLogo}
             />
-            <Text style={styles.title}>Create Account</Text>
-            <Text style={styles.subtitle}>Join EquiMind Today</Text>
+            <Text style={styles.title}>Join The Equestrian Mind</Text>
+            <Text style={styles.subtitle}>Mental Performance Training</Text>
           </View>
 
           <View style={styles.form}>
