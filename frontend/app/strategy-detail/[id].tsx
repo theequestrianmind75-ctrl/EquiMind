@@ -292,7 +292,7 @@ const styles = StyleSheet.create({
   },
   audioButton: {
     flexDirection: 'row',
-    backgroundColor: '#3b82f6',
+    backgroundColor: '#375B50',
     padding: 16,
     borderRadius: 12,
     alignItems: 'center',

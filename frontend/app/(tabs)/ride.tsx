@@ -27,7 +27,7 @@ export default function Ride() {
       title: 'During Ride Coaching',
       description: 'Real-time voice coaching with TTS',
       icon: 'mic',
-      color: '#3b82f6',
+      color: '#375B50',
       route: '/during-ride',
     },
     {

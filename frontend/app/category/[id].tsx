@@ -34,7 +34,7 @@ const CATEGORIES: any = {
   },
   breathing: {
     title: 'Breathing',
-    color: '#3b82f6',
+    color: '#375B50',
     keywords: ['breathing'],
     excludeKeywords: ['tapping', 'eft'],
   },
@@ -393,7 +393,7 @@ const styles = StyleSheet.create({
   },
   audioButton: {
     flexDirection: 'row',
-    backgroundColor: '#3b82f6',
+    backgroundColor: '#375B50',
     paddingVertical: 10,
     paddingHorizontal: 16,
     borderRadius: 8,

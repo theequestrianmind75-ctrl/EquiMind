@@ -284,7 +284,7 @@ const styles = StyleSheet.create({
   },
   adviceButton: {
     flexDirection: 'row',
-    backgroundColor: '#3b82f6',
+    backgroundColor: '#375B50',
     padding: 20,
     borderRadius: 12,
     alignItems: 'center',

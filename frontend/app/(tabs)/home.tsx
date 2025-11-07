@@ -35,7 +35,7 @@ export default function Home() {
       title: 'During Ride',
       description: 'Real-time coaching with voice trigger',
       icon: 'mic',
-      color: '#3b82f6',
+      color: '#375B50',
       route: '/during-ride',
     },
     {

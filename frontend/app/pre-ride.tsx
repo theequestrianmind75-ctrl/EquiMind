@@ -381,7 +381,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   rideTypeLabelActive: {
-    color: '#3b82f6',
+    color: '#375B50',
   },
   sliderContainer: {
     marginTop: 8,
@@ -401,7 +401,7 @@ const styles = StyleSheet.create({
     borderColor: '#375B50',
   },
   scaleButtonActive: {
-    backgroundColor: '#3b82f6',
+    backgroundColor: '#375B50',
     borderColor: '#3b82f6',
   },
   scaleButtonText: {
@@ -434,7 +434,7 @@ const styles = StyleSheet.create({
   },
   startButton: {
     flexDirection: 'row',
-    backgroundColor: '#10b981',
+    backgroundColor: '#375B50',
     borderRadius: 12,
     padding: 16,
     alignItems: 'center',

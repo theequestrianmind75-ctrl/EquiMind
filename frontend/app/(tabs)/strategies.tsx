@@ -24,7 +24,7 @@ const CATEGORIES = [
     title: 'Breathing',
     description: 'Regulate your nervous system through breath',
     icon: 'fitness',
-    color: '#3b82f6',
+    color: '#375B50',
     keywords: ['breathing'],
   },
   {
