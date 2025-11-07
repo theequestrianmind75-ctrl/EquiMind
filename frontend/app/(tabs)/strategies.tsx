@@ -59,6 +59,14 @@ const CATEGORIES = [
     color: '#ec4899',
     keywords: ['tapping', 'eft'],
   },
+  {
+    id: 'horse-rider',
+    title: 'Horse-Rider Connection',
+    description: 'Build trust, communication, and partnership',
+    icon: 'git-network',
+    color: '#14b8a6',
+    keywords: ['co-regulation', 'cueing', 'connection', 'horse'],
+  },
 ];
 
 export default function Strategies() {
