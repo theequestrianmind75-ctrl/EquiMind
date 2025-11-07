@@ -138,6 +138,7 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 28,
     fontWeight: 'bold',
+    fontFamily: 'PlayfairDisplay_700Bold',
     color: '#1e293b',
     marginTop: 4,
   },
