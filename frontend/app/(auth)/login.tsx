@@ -47,7 +47,10 @@ export default function Login() {
       >
         <ScrollView contentContainerStyle={styles.scrollContent}>
           <View style={styles.header}>
-            <Ionicons name="horse" size={64} color="#3b82f6" />
+            <Image
+              source={require('../../assets/images/gray-jumper.jpg')}
+              style={styles.heroImage}
+            />
             <Text style={styles.title}>EquiMind</Text>
             <Text style={styles.subtitle}>Mental Performance Training</Text>
           </View>
