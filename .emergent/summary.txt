@@ -1,0 +1,109 @@
+<analysis>
+The previous AI engineer successfully developed the EquiMind mental performance training mobile app using Expo/React Native, connected to an existing FastAPI backend. The development followed a phased approach, starting with backend authentication and core APIs, then building the mobile frontend with file-based routing and state management. Key features like mental strategies, session management, pre/during/post-ride coaching (with TTS), and a comprehensive Tapping guide were implemented. The engineer meticulously addressed user feedback, including UI/UX redesigns, branding updates (fonts, colors, logos), and content integration (horse-rider connection). Debugging efforts included fixing  web compatibility and resolving CSV download issues, which became a recurring challenge. The current state is a fully functional, branded MVP, with the last task focused on providing the user with the CSV data.
+</analysis>
+
+<product_requirements>
+The primary goal is to convert the existing web-based EquiMind mental performance training app (https://equimind-app.emergent.host, FastAPI backend) into a mobile application using Expo/React Native. Key features to be implemented include pre-ride preparation, during-ride coaching with Text-to-Speech (TTS), post-ride analysis, a mental strategies library, and session history tracking, all connecting to the existing FastAPI backend.
+
+Explicit requests and refinements from the user during development:
+- Implement user login/signup with JWT authentication.
+- Utilize  for real-time coaching triggered by a voice command like advice.
+- Redesign the Strategies page (renamed to Rider Tools) to group tools by categories (Mindfulness & Flow, Breathing, Emotional Regulation, Grounding, Somatic, Tapping, Horse-Rider Connection) and filter them based on pre-ride anxiety/confidence levels.
+- Move the How It Works section from the Ride page to the Home page.
+- Deduplicate tools appearing under Rider Tools categories.
+- Create a dedicated Tapping category, explaining its mechanism and centralizing all tapping-related tools. Remove Micro Scripts and Audio Script labels from tool instructions.
+- Remove the first descriptive paragraph from each tool's instructions, retaining only the core intervention text.
+- Integrate Horse-Rider Connection messaging throughout the app, including a new category in Rider Tools and pre-ride horse assessment fields (energy, focus, responsiveness) to influence during/post-ride information.
+- Implement a white background with sage-colored boxes/cards, hunter green accents, Playfair Display for headings, and Arimo for body text, while ensuring brand consistency with the equestrian mind logo.
+- Provide an Excel/CSV export of all rider tools.
+</product_requirements>
+
+<key_technical_concepts>
+- **Expo/React Native**: Mobile app development framework.
+- **Expo Router**: File-based routing for navigation.
+- **FastAPI**: Backend API framework.
+- **MongoDB**: Database for backend data storage.
+- **Zustand**: Lightweight state management for frontend.
+- **Axios**: HTTP client for API requests.
+- **Expo-Speech**: Text-to-Speech functionality.
+- **Expo-Secure-Store / AsyncStorage**: Secure and persistent token storage.
+- **JWT Authentication**: User authentication and authorization.
+- **Python-Bcrypt**: Password hashing.
+- **CORS**: Cross-Origin Resource Sharing for API communication.
+- **Google Fonts (Arimo, Playfair Display)**: Custom font integration.
+</key_technical_concepts>
+
+<code_architecture>
+The application follows a full-stack architecture with an Expo/React Native frontend, a FastAPI backend, and a MongoDB database.
+
+**Directory Structure:**
+
+
+**Key Files and Modifications:**
+
+-   :
+    -   **Importance:** FastAPI backend entry point, defines all API endpoints and database interactions.
+    -   **Changes:** Implemented user authentication (registration, login with JWT),  and  MongoDB models, CRUD operations for  and  data. Added , ,  fields to  model. Fixed MongoDB  serialization issues. Introduced  endpoint for CSV download.
+-   :
+    -   **Importance:** Initial loading/welcome screen and main entry point for Expo Router.
+    -   **Changes:** Integrated  and  for branding. Updated theme application and font loading logic.
+-   :
+    -   **Importance:** Handles user authentication logic, token storage, and API integration.
+    -   **Changes:** Uses  (with  fallback) for token persistence.
+-   :
+    -   **Importance:** Zustand store for global application state (e.g., authentication status, user data).
+    -   **Changes:** Manages , , and  states.
+-   :
+    -   **Importance:** Centralized API client using  with authentication interceptors.
+    -   **Changes:** Uses  (with  fallback) for retrieving auth tokens. Configured  from environment variables.
+-   :
+    -   **Importance:** Provides a cross-platform abstraction for persistent storage ( for native,  for web).
+    -   **Changes:** Implemented , ,  with platform-specific logic to resolve web preview errors.
+-    & :
+    -   **Importance:** User authentication screens.
+    -   **Changes:** Redesigned with  as background/branding. Applied new sage/white/hunter color palette and custom fonts.
+-   :
+    -   **Importance:** Defines the bottom tab navigation structure.
+    -   **Changes:** Configured tab items (, , , ), icons, and labels (Strategies changed to Rider Tools). Applied new color theme and fonts.
+-   :
+    -   **Importance:** Main dashboard/home screen.
+    -   **Changes:** Moved How It Works section here, replacing previous hero card. Integrated horse-rider connection messaging. Applied new fonts and color palette.
+-   :
+    -   **Importance:** Displays categories of mental strategies (Rider Tools).
+    -   **Changes:** Redesigned to show category cards instead of individual tools. Added Horse-Rider Connection and Tapping categories. Applied new styling.
+-   :
+    -   **Importance:** Displays tools within a selected category.
+    -   **Changes:** Implemented tool deduplication. Removed first paragraph from tool instructions. Links to  for the Tapping category. Applied new styling.
+-   :
+    -   **Importance:** User input screen for pre-ride assessment.
+    -   **Changes:** Added UI elements for horse assessment fields (, , ) and integrated their values into the session creation API call.
+-   :
+    -   **Importance:** Screen for real-time coaching with TTS.
+    -   **Changes:** Implemented  for audio feedback.
+-   :
+    -   **Importance:** Dedicated screen for the comprehensive Tapping (EFT) guide.
+    -   **Changes:** Created to display detailed tapping point instructions and images (sourced from ). Fixed multiple syntax errors related to smart quotes.
+-   :
+    -   **Importance:** Centralized theme definition (colors, fonts).
+    -   **Changes:** Defined , , ,  colors,  for headings,  for body text. Swapped sage and white for background and cards/buttons.
+-   :
+    -   **Importance:** Exported data of all mental strategies.
+    -   **Changes:** Contains 144 tools with cleaned instructions.
+</code_architecture>
+
+<pending_tasks>
+- The primary pending task is to ensure the user can successfully download the  file. Multiple attempts to provide a direct download URL have failed.
+- The  and  pages need to be updated to consume and display the newly added horse information from the pre-ride assessment. This was explicitly requested but not yet fully implemented in the UI.
+</pending_tasks>
+
+<current_work>
+Immediately before this summary request, the AI engineer was attempting to resolve the persistent issue of the user being unable to download the  file. Several methods, including providing direct API endpoints, copying to public static folders, and attempting a browser console script, have failed from the user's perspective. The AI engineer also offered to email the file (which was not possible) or display the content in chunks. The user chose to have the content displayed in the chat.
+
+Concurrently, the AI engineer addressed a user concern regarding the deployed app automatically signing in, explaining it was due to stored authentication tokens and providing troubleshooting steps (incognito mode, clearing browser data) and creating a  route for easier user-initiated logouts.
+
+The very last action was the AI engineer providing the full CSV content directly in the chat, broken into sections for the user to copy.
+</current_work>
+
+<optional_next_step>
+Verify with the user if they successfully copied the CSV content and if the tool data is accessible to them now.
+</optional_next_step>
