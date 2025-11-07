@@ -20,12 +20,16 @@ export default function Index() {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../assets/images/gray-jumper.jpg')}
+        source={require('../assets/images/horse-head-logo.png')}
         style={styles.backgroundImage}
       />
       <View style={styles.overlay}>
+        <Image
+          source={require('../assets/images/horse-head-logo.png')}
+          style={styles.logo}
+        />
         <ActivityIndicator size="large" color="#3b82f6" />
-        <Text style={styles.text}>Loading EquiMind...</Text>
+        <Text style={styles.text}>Loading The Equestrian Mind...</Text>
       </View>
     </View>
   );
