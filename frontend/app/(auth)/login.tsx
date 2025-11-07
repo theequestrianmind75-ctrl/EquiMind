@@ -142,13 +142,13 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 28,
     fontWeight: 'bold',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginTop: 8,
     textAlign: 'center',
   },
   subtitle: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     marginTop: 8,
   },
   form: {
@@ -157,12 +157,12 @@ const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     borderRadius: 12,
     marginBottom: 16,
     paddingHorizontal: 16,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   inputIcon: {
     marginRight: 12,
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
   input: {
     flex: 1,
     height: 56,
-    color: '#f1f5f9',
+    color: '#1e293b',
     fontSize: 16,
   },
   button: {
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
     marginTop: 24,
   },
   footerText: {
-    color: '#94a3b8',
+    color: '#64748b',
     fontSize: 14,
   },
   link: {

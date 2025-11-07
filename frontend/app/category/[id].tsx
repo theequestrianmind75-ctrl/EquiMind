@@ -281,7 +281,7 @@ export default function CategoryDetail() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0f172a',
+    backgroundColor: '#ffffff',
   },
   loadingContainer: {
     flex: 1,
@@ -290,7 +290,7 @@ const styles = StyleSheet.create({
   },
   loadingText: {
     marginTop: 16,
-    color: '#94a3b8',
+    color: '#64748b',
     fontSize: 16,
   },
   header: {
@@ -306,7 +306,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#f1f5f9',
+    color: '#1e293b',
   },
   placeholder: {
     width: 40,
@@ -316,16 +316,16 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   descriptionCard: {
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 16,
     borderRadius: 12,
     marginBottom: 16,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   descriptionText: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     lineHeight: 22,
     marginBottom: 12,
   },
@@ -347,16 +347,16 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     marginBottom: 24,
   },
   toolCard: {
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 20,
     borderRadius: 12,
     marginBottom: 16,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   toolHeader: {
     flexDirection: 'row',
@@ -368,7 +368,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 18,
     fontWeight: '600',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginRight: 12,
   },
   duration: {
@@ -385,7 +385,7 @@ const styles = StyleSheet.create({
   },
   instructionsText: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     lineHeight: 22,
   },
   toolActions: {
@@ -417,12 +417,12 @@ const styles = StyleSheet.create({
   emptyTitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginTop: 16,
   },
   emptyText: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     marginTop: 8,
     textAlign: 'center',
   },

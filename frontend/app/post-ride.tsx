@@ -240,7 +240,7 @@ export default function PostRide() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0f172a',
+    backgroundColor: '#ffffff',
   },
   loadingContainer: {
     flex: 1,
@@ -249,7 +249,7 @@ const styles = StyleSheet.create({
   },
   loadingText: {
     marginTop: 16,
-    color: '#94a3b8',
+    color: '#64748b',
     fontSize: 16,
   },
   header: {
@@ -265,7 +265,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#f1f5f9',
+    color: '#1e293b',
   },
   placeholder: {
     width: 40,
@@ -278,22 +278,22 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   noSessionCard: {
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 48,
     borderRadius: 16,
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   noSessionTitle: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginTop: 16,
   },
   noSessionText: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     marginTop: 8,
     textAlign: 'center',
   },
@@ -313,12 +313,12 @@ const styles = StyleSheet.create({
   },
   sessionInfo: {
     flexDirection: 'row',
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 16,
     borderRadius: 12,
     marginBottom: 24,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   sessionInfoText: {
     marginLeft: 12,
@@ -327,11 +327,11 @@ const styles = StyleSheet.create({
   sessionInfoTitle: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#f1f5f9',
+    color: '#1e293b',
   },
   sessionInfoSubtitle: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     marginTop: 4,
   },
   section: {
@@ -340,7 +340,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginBottom: 16,
   },
   sliderContainer: {
@@ -354,11 +354,11 @@ const styles = StyleSheet.create({
     width: 32,
     height: 32,
     borderRadius: 16,
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 2,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   scaleButtonActive: {
     backgroundColor: '#8b5cf6',
@@ -367,7 +367,7 @@ const styles = StyleSheet.create({
   scaleButtonText: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#94a3b8',
+    color: '#64748b',
   },
   scaleButtonTextActive: {
     color: '#ffffff',
@@ -382,15 +382,15 @@ const styles = StyleSheet.create({
     color: '#64748b',
   },
   notesInput: {
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     borderRadius: 12,
     padding: 16,
-    color: '#f1f5f9',
+    color: '#1e293b',
     fontSize: 14,
     minHeight: 150,
     textAlignVertical: 'top',
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   completeButton: {
     flexDirection: 'row',

@@ -199,7 +199,7 @@ export default function DuringRide() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0f172a',
+    backgroundColor: '#ffffff',
   },
   header: {
     flexDirection: 'row',
@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#f1f5f9',
+    color: '#1e293b',
   },
   placeholder: {
     width: 40,
@@ -224,13 +224,13 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   statusCard: {
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 32,
     borderRadius: 16,
     alignItems: 'center',
     marginBottom: 24,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   statusIndicator: {
     width: 96,
@@ -243,12 +243,12 @@ const styles = StyleSheet.create({
   statusTitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginBottom: 8,
   },
   statusSubtitle: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     textAlign: 'center',
   },
   controls: {
@@ -268,8 +268,8 @@ const styles = StyleSheet.create({
     borderColor: '#10b981',
   },
   controlButtonInactive: {
-    backgroundColor: '#1e293b',
-    borderColor: '#334155',
+    backgroundColor: '#f8fafc',
+    borderColor: '#e2e8f0',
   },
   controlButtonText: {
     fontSize: 16,
@@ -280,7 +280,7 @@ const styles = StyleSheet.create({
     color: '#10b981',
   },
   controlButtonTextInactive: {
-    color: '#94a3b8',
+    color: '#64748b',
   },
   adviceButton: {
     flexDirection: 'row',
@@ -300,12 +300,12 @@ const styles = StyleSheet.create({
     marginLeft: 12,
   },
   adviceCard: {
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 20,
     borderRadius: 12,
     marginBottom: 24,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   adviceHeader: {
     flexDirection: 'row',
@@ -315,32 +315,32 @@ const styles = StyleSheet.create({
   adviceTitle: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginLeft: 8,
   },
   adviceText: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     lineHeight: 22,
   },
   infoCard: {
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 20,
     borderRadius: 12,
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   infoTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginTop: 12,
     marginBottom: 12,
   },
   infoText: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     lineHeight: 22,
     textAlign: 'left',
     width: '100%',

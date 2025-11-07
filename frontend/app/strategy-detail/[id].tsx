@@ -211,7 +211,7 @@ export default function StrategyDetail() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0f172a',
+    backgroundColor: '#ffffff',
   },
   loadingContainer: {
     flex: 1,
@@ -220,7 +220,7 @@ const styles = StyleSheet.create({
   },
   loadingText: {
     marginTop: 16,
-    color: '#94a3b8',
+    color: '#64748b',
     fontSize: 16,
   },
   header: {
@@ -236,7 +236,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#f1f5f9',
+    color: '#1e293b',
   },
   placeholder: {
     width: 40,
@@ -262,7 +262,7 @@ const styles = StyleSheet.create({
   strategyName: {
     fontSize: 28,
     fontWeight: 'bold',
-    color: '#f1f5f9',
+    color: '#1e293b',
     lineHeight: 36,
   },
   metaRow: {
@@ -271,23 +271,23 @@ const styles = StyleSheet.create({
   },
   metaCard: {
     flex: 1,
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 20,
     borderRadius: 12,
     alignItems: 'center',
     marginHorizontal: 6,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   metaValue: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginTop: 8,
   },
   metaLabel: {
     fontSize: 12,
-    color: '#94a3b8',
+    color: '#64748b',
     marginTop: 4,
   },
   audioButton: {
@@ -314,7 +314,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginBottom: 12,
   },
   levelRow: {
@@ -322,34 +322,34 @@ const styles = StyleSheet.create({
   },
   levelCard: {
     flex: 1,
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 16,
     borderRadius: 12,
     marginHorizontal: 6,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   levelLabel: {
     fontSize: 12,
-    color: '#94a3b8',
+    color: '#64748b',
     marginTop: 8,
   },
   levelValue: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginTop: 4,
   },
   instructionsCard: {
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 20,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   instructionsText: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     lineHeight: 24,
   },
   tagContainer: {
@@ -357,18 +357,18 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   tag: {
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     paddingHorizontal: 12,
     paddingVertical: 8,
     borderRadius: 8,
     marginRight: 8,
     marginBottom: 8,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   tagText: {
     fontSize: 12,
-    color: '#94a3b8',
+    color: '#64748b',
     fontWeight: '600',
   },
 });

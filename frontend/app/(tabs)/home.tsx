@@ -120,7 +120,7 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0f172a',
+    backgroundColor: '#ffffff',
   },
   scrollView: {
     flex: 1,
@@ -133,26 +133,26 @@ const styles = StyleSheet.create({
   },
   greeting: {
     fontSize: 16,
-    color: '#94a3b8',
+    color: '#64748b',
   },
   name: {
     fontSize: 28,
     fontWeight: 'bold',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginTop: 4,
   },
   logoutButton: {
     padding: 8,
   },
   heroCard: {
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     margin: 24,
     marginTop: 0,
     padding: 32,
     borderRadius: 16,
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   heroLogo: {
     width: 60,
@@ -163,19 +163,19 @@ const styles = StyleSheet.create({
   heroTitle: {
     fontSize: 22,
     fontWeight: 'bold',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginBottom: 16,
     textAlign: 'center',
   },
   heroDescription: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     lineHeight: 22,
     textAlign: 'left',
   },
   bold: {
     fontWeight: '600',
-    color: '#f1f5f9',
+    color: '#1e293b',
   },
   section: {
     padding: 24,
@@ -184,18 +184,18 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginBottom: 16,
   },
   actionCard: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 16,
     borderRadius: 12,
     marginBottom: 12,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   actionIcon: {
     width: 56,
@@ -211,19 +211,19 @@ const styles = StyleSheet.create({
   actionTitle: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginBottom: 4,
   },
   actionDescription: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
   },
   connectionCard: {
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 24,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
     alignItems: 'center',
     marginBottom: 16,
   },
@@ -235,14 +235,14 @@ const styles = StyleSheet.create({
   },
   connectionText: {
     fontSize: 16,
-    color: '#f1f5f9',
+    color: '#1e293b',
     textAlign: 'center',
     lineHeight: 24,
     fontWeight: '500',
   },
   connectionDescription: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     lineHeight: 22,
     textAlign: 'center',
   },

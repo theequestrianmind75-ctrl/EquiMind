@@ -166,7 +166,7 @@ export default function History() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0f172a',
+    backgroundColor: '#ffffff',
   },
   loadingContainer: {
     flex: 1,
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
   },
   loadingText: {
     marginTop: 16,
-    color: '#94a3b8',
+    color: '#64748b',
     fontSize: 16,
   },
   header: {
@@ -185,11 +185,11 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     fontWeight: 'bold',
-    color: '#f1f5f9',
+    color: '#1e293b',
   },
   subtitle: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     marginTop: 4,
   },
   emptyContainer: {
@@ -201,12 +201,12 @@ const styles = StyleSheet.create({
   emptyTitle: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginTop: 16,
   },
   emptyText: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     marginTop: 8,
     textAlign: 'center',
   },
@@ -215,12 +215,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
   sessionCard: {
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 16,
     borderRadius: 12,
     marginBottom: 16,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   sessionHeader: {
     flexDirection: 'row',
@@ -241,11 +241,11 @@ const styles = StyleSheet.create({
   sessionType: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#f1f5f9',
+    color: '#1e293b',
   },
   sessionDate: {
     fontSize: 12,
-    color: '#94a3b8',
+    color: '#64748b',
     marginTop: 2,
   },
   completedBadge: {
@@ -275,7 +275,7 @@ const styles = StyleSheet.create({
   detailText: {
     marginLeft: 6,
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
   },
   notesContainer: {
     marginTop: 12,
@@ -286,12 +286,12 @@ const styles = StyleSheet.create({
   notesLabel: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#94a3b8',
+    color: '#64748b',
     marginBottom: 4,
   },
   notesText: {
     fontSize: 14,
-    color: '#f1f5f9',
+    color: '#1e293b',
     lineHeight: 20,
   },
 });

@@ -112,7 +112,7 @@ export default function Strategies() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0f172a',
+    backgroundColor: '#ffffff',
   },
   header: {
     padding: 24,
@@ -121,11 +121,11 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     fontWeight: 'bold',
-    color: '#f1f5f9',
+    color: '#1e293b',
   },
   subtitle: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     marginTop: 4,
   },
   scrollView: {
@@ -135,12 +135,12 @@ const styles = StyleSheet.create({
   categoryCard: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 20,
     borderRadius: 12,
     marginBottom: 16,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   iconCircle: {
     width: 64,
@@ -156,28 +156,28 @@ const styles = StyleSheet.create({
   categoryTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginBottom: 4,
   },
   categoryDescription: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     lineHeight: 20,
   },
   infoCard: {
     flexDirection: 'row',
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 16,
     borderRadius: 12,
     marginTop: 8,
     marginBottom: 24,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   infoText: {
     flex: 1,
     fontSize: 13,
-    color: '#94a3b8',
+    color: '#64748b',
     marginLeft: 12,
     lineHeight: 20,
   },

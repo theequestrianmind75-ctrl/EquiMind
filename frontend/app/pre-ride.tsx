@@ -307,7 +307,7 @@ export default function PreRide() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0f172a',
+    backgroundColor: '#ffffff',
   },
   header: {
     flexDirection: 'row',
@@ -322,7 +322,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#f1f5f9',
+    color: '#1e293b',
   },
   placeholder: {
     width: 40,
@@ -352,7 +352,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginBottom: 16,
   },
   rideTypeGrid: {
@@ -362,13 +362,13 @@ const styles = StyleSheet.create({
   },
   rideTypeButton: {
     width: '48%',
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 16,
     borderRadius: 12,
     alignItems: 'center',
     margin: '1%',
     borderWidth: 2,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   rideTypeButtonActive: {
     borderColor: '#3b82f6',
@@ -377,7 +377,7 @@ const styles = StyleSheet.create({
   rideTypeLabel: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#94a3b8',
+    color: '#64748b',
     marginTop: 8,
   },
   rideTypeLabelActive: {
@@ -394,11 +394,11 @@ const styles = StyleSheet.create({
     width: 32,
     height: 32,
     borderRadius: 16,
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 2,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   scaleButtonActive: {
     backgroundColor: '#3b82f6',
@@ -407,7 +407,7 @@ const styles = StyleSheet.create({
   scaleButtonText: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#94a3b8',
+    color: '#64748b',
   },
   scaleButtonTextActive: {
     color: '#ffffff',
@@ -422,15 +422,15 @@ const styles = StyleSheet.create({
     color: '#64748b',
   },
   notesInput: {
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     borderRadius: 12,
     padding: 16,
-    color: '#f1f5f9',
+    color: '#1e293b',
     fontSize: 14,
     minHeight: 120,
     textAlignVertical: 'top',
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   startButton: {
     flexDirection: 'row',

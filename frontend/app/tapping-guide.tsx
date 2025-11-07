@@ -260,7 +260,7 @@ export default function TappingGuide() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0f172a',
+    backgroundColor: '#ffffff',
   },
   header: {
     flexDirection: 'row',
@@ -275,7 +275,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#f1f5f9',
+    color: '#1e293b',
   },
   placeholder: {
     width: 40,
@@ -285,12 +285,12 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   introCard: {
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 20,
     borderRadius: 12,
     marginBottom: 24,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   introTitle: {
     fontSize: 20,
@@ -300,22 +300,22 @@ const styles = StyleSheet.create({
   },
   introText: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     lineHeight: 22,
   },
   diagramCard: {
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 20,
     borderRadius: 12,
     marginBottom: 24,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
     alignItems: 'center',
   },
   sectionTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginBottom: 16,
   },
   diagram: {
@@ -337,12 +337,12 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   pointCard: {
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 20,
     borderRadius: 12,
     marginBottom: 16,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
   },
   pointHeader: {
     flexDirection: 'row',
@@ -367,7 +367,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 16,
     fontWeight: '600',
-    color: '#f1f5f9',
+    color: '#1e293b',
   },
   pointSection: {
     marginBottom: 12,
@@ -380,34 +380,34 @@ const styles = StyleSheet.create({
   },
   pointText: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     lineHeight: 20,
   },
   usageCard: {
-    backgroundColor: '#1e293b',
+    backgroundColor: '#f8fafc',
     padding: 24,
     borderRadius: 12,
     marginBottom: 32,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: '#e2e8f0',
     alignItems: 'center',
   },
   usageTitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#f1f5f9',
+    color: '#1e293b',
     marginTop: 12,
     marginBottom: 16,
   },
   usageText: {
     fontSize: 14,
-    color: '#94a3b8',
+    color: '#64748b',
     lineHeight: 22,
     textAlign: 'left',
     width: '100%',
   },
   bold: {
     fontWeight: '600',
-    color: '#f1f5f9',
+    color: '#1e293b',
   },
 });
