@@ -66,8 +66,15 @@ export default function Home() {
             source={require('../../assets/images/horse-head-logo.png')}
             style={styles.heroLogo}
           />
-          <Text style={styles.heroTitle}>Strengthen Your Mindset</Text>
-          <Text style={styles.heroSubtitle}>Excel in the Saddle</Text>
+          <Text style={styles.heroTitle}>How It Works</Text>
+          <Text style={styles.heroDescription}>
+            <Text style={styles.bold}>Pre-Ride:</Text> Set your mental state and choose strategies
+            {"\n\n"}
+            <Text style={styles.bold}>During Ride:</Text> Say "advice" to trigger voice coaching with
+            real-time guidance
+            {"\n\n"}
+            <Text style={styles.bold}>Post-Ride:</Text> Reflect on your session and track progress
+          </Text>
         </View>
 
         <View style={styles.section}>
