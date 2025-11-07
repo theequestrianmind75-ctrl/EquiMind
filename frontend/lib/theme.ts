@@ -1,41 +1,51 @@
-// The Equestrian Mind Brand Colors - Light Theme
+// The Equestrian Mind Brand Colors - Official Brand Theme
 export const theme = {
-  // Primary Colors
-  primary: '#2563eb', // Blue from chess piece logo
-  primaryLight: '#60a5fa',
-  primaryDark: '#1e40af',
+  // Brand Colors
+  sage: '#A7D2BB', // Light sage for cards
+  darkSage: '#BCCEC8', // Dark sage for alternating cards
+  hunter: '#375B50', // Hunter green for accents
   
-  // Secondary Colors
-  secondary: '#14b8a6', // Teal accent
-  secondaryLight: '#5eead4',
-  secondaryDark: '#0d9488',
+  // Primary Colors
+  primary: '#375B50', // Hunter green
+  primaryLight: '#5A8571',
+  primaryDark: '#2A463C',
   
   // Backgrounds
   background: '#ffffff', // White background
-  backgroundSecondary: '#f8fafc', // Very light gray
-  card: '#ffffff',
-  cardBorder: '#e2e8f0',
+  card: '#A7D2BB', // Sage for primary cards
+  cardSecondary: '#BCCEC8', // Dark sage for secondary cards
+  cardBorder: '#375B50', // Hunter green borders
   
   // Text Colors
   text: '#1e293b', // Dark slate for primary text
-  textSecondary: '#64748b', // Medium slate for secondary text
-  textLight: '#94a3b8', // Light slate for hints/captions
+  textSecondary: '#375B50', // Hunter green for secondary text
+  textLight: '#64748b', // Gray for hints/captions
+  textWhite: '#ffffff', // White text for dark backgrounds
+  
+  // Logo Color
+  logoColor: '#000000', // Black chess piece
   
   // Status Colors
-  success: '#10b981', // Green
+  success: '#375B50', // Hunter green
   warning: '#f59e0b', // Amber
-  error: '#ef4444', // Red
-  info: '#3b82f6', // Blue
+  error: '#dc2626', // Red
+  info: '#375B50', // Hunter green
   
   // Category Colors (for Rider Tools)
   categories: {
-    mindfulness: '#10b981', // Green
-    breathing: '#3b82f6', // Blue
-    emotional: '#f59e0b', // Amber
-    grounding: '#06b6d4', // Cyan
-    somatic: '#8b5cf6', // Purple
-    tapping: '#ec4899', // Pink
-    horseRider: '#14b8a6', // Teal
+    mindfulness: '#5A8571', // Light hunter
+    breathing: '#375B50', // Hunter green
+    emotional: '#8B9D93', // Muted sage
+    grounding: '#BCCEC8', // Dark sage
+    somatic: '#7FA892', // Mid sage
+    tapping: '#6B8679', // Sage-gray
+    horseRider: '#375B50', // Hunter green
+  },
+  
+  // Typography
+  fonts: {
+    heading: 'Playfair Display', // For headings
+    body: 'Arimo', // For body text
   },
   
   // Shadows
