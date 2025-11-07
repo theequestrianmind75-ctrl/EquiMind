@@ -112,13 +112,13 @@ export default function Login() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0f172a',
+    backgroundColor: '#ffffff',
   },
   backgroundLogo: {
     position: 'absolute',
     width: '100%',
     height: '100%',
-    opacity: 0.05,
+    opacity: 0.02,
     resizeMode: 'center',
   },
   keyboardView: {
