@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, ActivityIndicator, Image } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useAuthStore } from '../lib/store';
 
@@ -19,8 +19,14 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
-      <ActivityIndicator size="large" color="#2563eb" />
-      <Text style={styles.text}>Loading EquiMind...</Text>
+      <Image
+        source={require('../assets/images/gray-jumper.jpg')}
+        style={styles.backgroundImage}
+      />
+      <View style={styles.overlay}>
+        <ActivityIndicator size="large" color="#3b82f6" />
+        <Text style={styles.text}>Loading EquiMind...</Text>
+      </View>
     </View>
   );
 }
@@ -29,12 +35,22 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#0f172a',
+  },
+  backgroundImage: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    opacity: 0.3,
+  },
+  overlay: {
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
   text: {
     marginTop: 16,
-    color: '#94a3b8',
+    color: '#f1f5f9',
     fontSize: 16,
+    fontWeight: '600',
   },
 });
