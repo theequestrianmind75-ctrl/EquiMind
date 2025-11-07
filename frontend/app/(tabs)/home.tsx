@@ -61,7 +61,10 @@ export default function Home() {
         </View>
 
         <View style={styles.heroCard}>
-          <Ionicons name="horse" size={48} color="#3b82f6" />
+          <Image
+            source={require('../../assets/images/horse-head-logo.png')}
+            style={styles.heroLogo}
+          />
           <Text style={styles.heroTitle}>Strengthen Your Mindset</Text>
           <Text style={styles.heroSubtitle}>Excel in the Saddle</Text>
         </View>
