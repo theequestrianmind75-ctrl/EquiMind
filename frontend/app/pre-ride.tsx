@@ -334,6 +334,18 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 24,
   },
+  divider: {
+    height: 1,
+    backgroundColor: '#334155',
+    marginVertical: 32,
+  },
+  sectionHeader: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#14b8a6',
+    marginBottom: 24,
+    textAlign: 'center',
+  },
   section: {
     marginBottom: 32,
   },
