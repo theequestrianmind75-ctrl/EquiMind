@@ -111,16 +111,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#0f172a',
   },
-  loadingContainer: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  loadingText: {
-    marginTop: 16,
-    color: '#94a3b8',
-    fontSize: 16,
-  },
   header: {
     padding: 24,
     paddingBottom: 16,
@@ -135,31 +125,13 @@ const styles = StyleSheet.create({
     color: '#94a3b8',
     marginTop: 4,
   },
-  searchContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#1e293b',
-    marginHorizontal: 24,
-    marginBottom: 16,
-    paddingHorizontal: 16,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: '#334155',
-  },
-  searchIcon: {
-    marginRight: 12,
-  },
-  searchInput: {
-    flex: 1,
-    height: 48,
-    color: '#f1f5f9',
-    fontSize: 16,
-  },
   scrollView: {
     flex: 1,
     paddingHorizontal: 24,
   },
-  strategyCard: {
+  categoryCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
     backgroundColor: '#1e293b',
     padding: 20,
     borderRadius: 12,
@@ -167,61 +139,43 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#334155',
   },
-  strategyHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+  iconCircle: {
+    width: 64,
+    height: 64,
+    borderRadius: 32,
     alignItems: 'center',
-    marginBottom: 12,
+    justifyContent: 'center',
+    marginRight: 16,
   },
-  categoryBadge: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 8,
+  categoryContent: {
+    flex: 1,
   },
-  categoryText: {
-    fontSize: 12,
-    fontWeight: '600',
-  },
-  rating: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  ratingText: {
-    marginLeft: 4,
-    color: '#f1f5f9',
-    fontSize: 14,
-    fontWeight: '600',
-  },
-  strategyName: {
+  categoryTitle: {
     fontSize: 18,
     fontWeight: '600',
     color: '#f1f5f9',
-    marginBottom: 12,
+    marginBottom: 4,
   },
-  strategyMeta: {
-    flexDirection: 'row',
-    marginBottom: 12,
-  },
-  metaItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginRight: 16,
-  },
-  metaText: {
-    marginLeft: 4,
+  categoryDescription: {
+    fontSize: 14,
     color: '#94a3b8',
-    fontSize: 14,
+    lineHeight: 20,
   },
-  viewButton: {
+  infoCard: {
     flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 8,
+    backgroundColor: '#1e293b',
+    padding: 16,
+    borderRadius: 12,
+    marginTop: 8,
+    marginBottom: 24,
+    borderWidth: 1,
+    borderColor: '#334155',
   },
-  viewButtonText: {
-    color: '#3b82f6',
-    fontSize: 14,
-    fontWeight: '600',
-    marginRight: 4,
+  infoText: {
+    flex: 1,
+    fontSize: 13,
+    color: '#94a3b8',
+    marginLeft: 12,
+    lineHeight: 20,
   },
 });
