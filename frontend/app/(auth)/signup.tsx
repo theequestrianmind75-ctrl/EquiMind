@@ -132,6 +132,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#0f172a',
   },
+  backgroundLogo: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    opacity: 0.05,
+    resizeMode: 'center',
+  },
   keyboardView: {
     flex: 1,
   },
@@ -144,17 +151,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 48,
   },
-  heroImage: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
-    marginBottom: 16,
+  heroLogo: {
+    width: 100,
+    height: 100,
+    marginBottom: 20,
+    resizeMode: 'contain',
   },
   title: {
-    fontSize: 32,
+    fontSize: 28,
     fontWeight: 'bold',
     color: '#f1f5f9',
     marginTop: 8,
+    textAlign: 'center',
   },
   subtitle: {
     fontSize: 14,
