@@ -1,5 +1,7 @@
 import { create } from 'zustand';
 import * as SecureStore from 'expo-secure-store';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Platform } from 'react-native';
 import api from './api';
 
 interface User {
@@ -18,6 +20,31 @@ interface AuthState {
   loadUser: () => Promise<void>;
 }
 
+// Storage wrapper that works on web and native
+const storage = {
+  async setItem(key: string, value: string) {
+    if (Platform.OS === 'web') {
+      await AsyncStorage.setItem(key, value);
+    } else {
+      await SecureStore.setItemAsync(key, value);
+    }
+  },
+  async getItem(key: string) {
+    if (Platform.OS === 'web') {
+      return await AsyncStorage.getItem(key);
+    } else {
+      return await SecureStore.getItemAsync(key);
+    }
+  },
+  async removeItem(key: string) {
+    if (Platform.OS === 'web') {
+      await AsyncStorage.removeItem(key);
+    } else {
+      await SecureStore.deleteItemAsync(key);
+    }
+  },
+};
+
 export const useAuthStore = create<AuthState>((set) => ({
   user: null,
   token: null,
@@ -27,7 +54,7 @@ export const useAuthStore = create<AuthState>((set) => ({
     try {
       const response = await api.post('/auth/login', { email, password });
       const { access_token, user } = response.data;
-      await SecureStore.setItemAsync('auth_token', access_token);
+      await storage.setItem('auth_token', access_token);
       set({ token: access_token, user, loading: false });
     } catch (error: any) {
       throw new Error(error.response?.data?.detail || 'Login failed');
@@ -38,7 +65,7 @@ export const useAuthStore = create<AuthState>((set) => ({
     try {
       const response = await api.post('/auth/register', { email, password, name });
       const { access_token, user } = response.data;
-      await SecureStore.setItemAsync('auth_token', access_token);
+      await storage.setItem('auth_token', access_token);
       set({ token: access_token, user, loading: false });
     } catch (error: any) {
       throw new Error(error.response?.data?.detail || 'Registration failed');
@@ -46,13 +73,13 @@ export const useAuthStore = create<AuthState>((set) => ({
   },
 
   logout: async () => {
-    await SecureStore.deleteItemAsync('auth_token');
+    await storage.removeItem('auth_token');
     set({ token: null, user: null });
   },
 
   loadUser: async () => {
     try {
-      const token = await SecureStore.getItemAsync('auth_token');
+      const token = await storage.getItem('auth_token');
       if (token) {
         const response = await api.get('/auth/me');
         set({ user: response.data, token, loading: false });
@@ -60,7 +87,7 @@ export const useAuthStore = create<AuthState>((set) => ({
         set({ loading: false });
       }
     } catch (error) {
-      await SecureStore.deleteItemAsync('auth_token');
+      await storage.removeItem('auth_token');
       set({ loading: false });
     }
   },
