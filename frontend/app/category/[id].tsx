@@ -201,6 +201,12 @@ export default function CategoryDetail() {
       </View>
 
       <ScrollView style={styles.scrollView}>
+        {category.description && (
+          <View style={styles.descriptionCard}>
+            <Text style={styles.descriptionText}>{category.description}</Text>
+          </View>
+        )}
+        
         <Text style={styles.subtitle}>{strategies.length} tools available</Text>
 
         {strategies.map((strategy) => (
@@ -214,7 +220,7 @@ export default function CategoryDetail() {
             </View>
 
             <View style={styles.instructionsContainer}>
-              <Text style={styles.instructionsText}>{strategy.instructions}</Text>
+              <Text style={styles.instructionsText}>{cleanInstructions(strategy.instructions)}</Text>
             </View>
 
             <View style={styles.toolActions}>
