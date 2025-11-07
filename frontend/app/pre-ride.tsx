@@ -21,6 +21,11 @@ export default function PreRide() {
   const [anxietyLevel, setAnxietyLevel] = useState(5);
   const [confidenceLevel, setConfidenceLevel] = useState(5);
   const [notes, setNotes] = useState('');
+  // Horse information
+  const [horseEnergyLevel, setHorseEnergyLevel] = useState(5);
+  const [horseFocusLevel, setHorseFocusLevel] = useState(5);
+  const [horseResponsiveness, setHorseResponsiveness] = useState(5);
+  const [horseNotes, setHorseNotes] = useState('');
   const [loading, setLoading] = useState(false);
 
   const rideTypes = [
