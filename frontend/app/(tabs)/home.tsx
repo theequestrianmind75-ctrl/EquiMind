@@ -165,22 +165,27 @@ const styles = StyleSheet.create({
     borderColor: '#334155',
   },
   heroLogo: {
-    width: 80,
-    height: 80,
+    width: 60,
+    height: 60,
     resizeMode: 'contain',
     marginBottom: 16,
   },
   heroTitle: {
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: 'bold',
     color: '#f1f5f9',
-    marginTop: 8,
+    marginBottom: 16,
     textAlign: 'center',
   },
-  heroSubtitle: {
-    fontSize: 16,
+  heroDescription: {
+    fontSize: 14,
     color: '#94a3b8',
-    marginTop: 8,
+    lineHeight: 22,
+    textAlign: 'left',
+  },
+  bold: {
+    fontWeight: '600',
+    color: '#f1f5f9',
   },
   section: {
     padding: 24,
