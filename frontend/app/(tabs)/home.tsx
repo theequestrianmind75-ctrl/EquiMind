@@ -185,7 +185,8 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#1e293b',
+    fontFamily: 'PlayfairDisplay_700Bold',
+    color: '#375B50',
     marginBottom: 16,
   },
   actionCard: {
