@@ -249,7 +249,11 @@ async def create_session(session_data: SessionCreate, current_user: dict = Depen
         anxiety_level=session_data.anxiety_level,
         confidence_level=session_data.confidence_level,
         notes=session_data.notes,
-        strategies_used=session_data.strategies_used or []
+        strategies_used=session_data.strategies_used or [],
+        horse_energy_level=session_data.horse_energy_level,
+        horse_focus_level=session_data.horse_focus_level,
+        horse_responsiveness=session_data.horse_responsiveness,
+        horse_notes=session_data.horse_notes
     )
     
     await db.sessions.insert_one(session.dict())
