@@ -264,7 +264,7 @@ def test_mental_strategies_list():
         # Verify structure of first strategy
         if strategy_count > 0:
             strategy = data[0]
-            required_fields = ["id", "title", "description"]
+            required_fields = ["id", "name", "category"]
             for field in required_fields:
                 if field not in strategy:
                     results.add_fail("GET /mental-strategies", f"Missing field '{field}' in strategy")
