@@ -166,7 +166,7 @@ export default function History() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#A7D2BB',
   },
   loadingContainer: {
     flex: 1,
@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
   sessionCard: {
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 16,
     borderRadius: 12,
     marginBottom: 16,

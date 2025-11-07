@@ -199,7 +199,7 @@ export default function DuringRide() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#A7D2BB',
   },
   header: {
     flexDirection: 'row',
@@ -224,7 +224,7 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   statusCard: {
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 32,
     borderRadius: 16,
     alignItems: 'center',
@@ -268,7 +268,7 @@ const styles = StyleSheet.create({
     borderColor: '#10b981',
   },
   controlButtonInactive: {
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     borderColor: '#375B50',
   },
   controlButtonText: {
@@ -300,7 +300,7 @@ const styles = StyleSheet.create({
     marginLeft: 12,
   },
   adviceCard: {
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 20,
     borderRadius: 12,
     marginBottom: 24,
@@ -324,7 +324,7 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
   infoCard: {
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 20,
     borderRadius: 12,
     alignItems: 'center',

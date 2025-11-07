@@ -72,7 +72,7 @@ export default function Ride() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#A7D2BB',
   },
   header: {
     padding: 24,
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
   optionCard: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 20,
     borderRadius: 16,
     marginBottom: 16,

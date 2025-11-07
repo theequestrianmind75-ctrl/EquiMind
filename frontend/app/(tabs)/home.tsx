@@ -120,7 +120,7 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#A7D2BB',
   },
   scrollView: {
     flex: 1,
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   heroCard: {
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     margin: 24,
     marginTop: 0,
     padding: 32,
@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
   actionCard: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 16,
     borderRadius: 12,
     marginBottom: 12,
@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
     color: '#64748b',
   },
   connectionCard: {
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 24,
     borderRadius: 12,
     borderWidth: 1,

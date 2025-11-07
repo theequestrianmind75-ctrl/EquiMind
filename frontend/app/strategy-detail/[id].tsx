@@ -211,7 +211,7 @@ export default function StrategyDetail() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#A7D2BB',
   },
   loadingContainer: {
     flex: 1,
@@ -271,7 +271,7 @@ const styles = StyleSheet.create({
   },
   metaCard: {
     flex: 1,
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 20,
     borderRadius: 12,
     alignItems: 'center',
@@ -322,7 +322,7 @@ const styles = StyleSheet.create({
   },
   levelCard: {
     flex: 1,
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 16,
     borderRadius: 12,
     marginHorizontal: 6,
@@ -341,7 +341,7 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
   instructionsCard: {
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 20,
     borderRadius: 12,
     borderWidth: 1,
@@ -357,7 +357,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   tag: {
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     paddingHorizontal: 12,
     paddingVertical: 8,
     borderRadius: 8,

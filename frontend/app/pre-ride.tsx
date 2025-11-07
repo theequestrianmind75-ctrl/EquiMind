@@ -307,7 +307,7 @@ export default function PreRide() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#A7D2BB',
   },
   header: {
     flexDirection: 'row',
@@ -362,7 +362,7 @@ const styles = StyleSheet.create({
   },
   rideTypeButton: {
     width: '48%',
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 16,
     borderRadius: 12,
     alignItems: 'center',
@@ -394,7 +394,7 @@ const styles = StyleSheet.create({
     width: 32,
     height: 32,
     borderRadius: 16,
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 2,
@@ -422,7 +422,7 @@ const styles = StyleSheet.create({
     color: '#64748b',
   },
   notesInput: {
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     borderRadius: 12,
     padding: 16,
     color: '#1e293b',

@@ -281,7 +281,7 @@ export default function CategoryDetail() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#A7D2BB',
   },
   loadingContainer: {
     flex: 1,
@@ -316,7 +316,7 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   descriptionCard: {
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 16,
     borderRadius: 12,
     marginBottom: 16,
@@ -351,7 +351,7 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   toolCard: {
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 20,
     borderRadius: 12,
     marginBottom: 16,

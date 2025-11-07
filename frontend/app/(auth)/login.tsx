@@ -112,7 +112,7 @@ export default function Login() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#A7D2BB',
   },
   backgroundLogo: {
     position: 'absolute',
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     borderRadius: 12,
     marginBottom: 16,
     paddingHorizontal: 16,

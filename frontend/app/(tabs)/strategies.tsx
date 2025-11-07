@@ -112,7 +112,7 @@ export default function Strategies() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#A7D2BB',
   },
   header: {
     padding: 24,
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
   categoryCard: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 20,
     borderRadius: 12,
     marginBottom: 16,
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
   },
   infoCard: {
     flexDirection: 'row',
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 16,
     borderRadius: 12,
     marginTop: 8,

@@ -240,7 +240,7 @@ export default function PostRide() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#A7D2BB',
   },
   loadingContainer: {
     flex: 1,
@@ -278,7 +278,7 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   noSessionCard: {
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 48,
     borderRadius: 16,
     alignItems: 'center',
@@ -313,7 +313,7 @@ const styles = StyleSheet.create({
   },
   sessionInfo: {
     flexDirection: 'row',
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 16,
     borderRadius: 12,
     marginBottom: 24,
@@ -354,7 +354,7 @@ const styles = StyleSheet.create({
     width: 32,
     height: 32,
     borderRadius: 16,
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 2,
@@ -382,7 +382,7 @@ const styles = StyleSheet.create({
     color: '#64748b',
   },
   notesInput: {
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     borderRadius: 12,
     padding: 16,
     color: '#1e293b',

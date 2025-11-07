@@ -260,7 +260,7 @@ export default function TappingGuide() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#A7D2BB',
   },
   header: {
     flexDirection: 'row',
@@ -285,7 +285,7 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   introCard: {
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 20,
     borderRadius: 12,
     marginBottom: 24,
@@ -304,7 +304,7 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
   diagramCard: {
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 20,
     borderRadius: 12,
     marginBottom: 24,
@@ -337,7 +337,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   pointCard: {
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 20,
     borderRadius: 12,
     marginBottom: 16,
@@ -384,7 +384,7 @@ const styles = StyleSheet.create({
     lineHeight: 20,
   },
   usageCard: {
-    backgroundColor: '#A7D2BB',
+    backgroundColor: '#ffffff',
     padding: 24,
     borderRadius: 12,
     marginBottom: 32,
