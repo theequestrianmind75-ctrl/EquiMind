@@ -124,31 +124,4 @@ const styles = StyleSheet.create({
     color: '#94a3b8',
     lineHeight: 20,
   },
-  infoCard: {
-    backgroundColor: '#1e293b',
-    padding: 24,
-    borderRadius: 16,
-    marginBottom: 24,
-    borderWidth: 1,
-    borderColor: '#334155',
-    alignItems: 'center',
-  },
-  infoTitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#f1f5f9',
-    marginTop: 12,
-    marginBottom: 16,
-  },
-  infoText: {
-    fontSize: 14,
-    color: '#94a3b8',
-    lineHeight: 22,
-    textAlign: 'left',
-    width: '100%',
-  },
-  bold: {
-    fontWeight: '600',
-    color: '#f1f5f9',
-  },
 });
