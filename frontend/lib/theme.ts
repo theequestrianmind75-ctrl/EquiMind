@@ -11,8 +11,8 @@ export const theme = {
   primaryDark: '#2A463C',
   
   // Backgrounds
-  background: '#ffffff', // White background
-  card: '#A7D2BB', // Sage for primary cards
+  background: '#A7D2BB', // Sage green background
+  card: '#ffffff', // White for primary cards/buttons
   cardSecondary: '#BCCEC8', // Dark sage for secondary cards
   cardBorder: '#375B50', // Hunter green borders
   
