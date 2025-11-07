@@ -98,29 +98,19 @@ export default function Home() {
         </View>
 
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Features</Text>
-          <View style={styles.featureGrid}>
-            <View style={styles.featureCard}>
-              <Ionicons name="library" size={32} color="#3b82f6" />
-              <Text style={styles.featureTitle}>Mental Strategies</Text>
-              <Text style={styles.featureDescription}>Evidence-based techniques</Text>
-            </View>
-            <View style={styles.featureCard}>
-              <Ionicons name="headset" size={32} color="#10b981" />
-              <Text style={styles.featureTitle}>Voice Coaching</Text>
-              <Text style={styles.featureDescription}>Say "advice" for tips</Text>
-            </View>
-            <View style={styles.featureCard}>
-              <Ionicons name="trending-up" size={32} color="#8b5cf6" />
-              <Text style={styles.featureTitle}>Track Progress</Text>
-              <Text style={styles.featureDescription}>Monitor your growth</Text>
-            </View>
-            <View style={styles.featureCard}>
-              <Ionicons name="flash" size={32} color="#f59e0b" />
-              <Text style={styles.featureTitle}>Real-Time TTS</Text>
-              <Text style={styles.featureDescription}>Audio guidance</Text>
-            </View>
+          <Text style={styles.sectionTitle}>Horse-Rider Connection</Text>
+          <View style={styles.connectionCard}>
+            <Image
+              source={require('../../assets/images/horse-head-logo.png')}
+              style={styles.connectionIcon}
+            />
+            <Text style={styles.connectionText}>
+              Strengthen the trust, understanding, and communication that creates an unbreakable bond with your horse.
+            </Text>
           </View>
+          <Text style={styles.connectionDescription}>
+            Combining clinical expertise with deep equestrian knowledge to deliver results that transform both rider performance and horse-rider relationships.
+          </Text>
         </View>
       </ScrollView>
     </SafeAreaView>
