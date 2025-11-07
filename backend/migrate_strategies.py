@@ -16,7 +16,11 @@ async def migrate_strategies():
     
     # Load strategies from deployed API
     import requests
-    response = requests.get('https://equimind-app.emergent.host/api/mental-strategies')
+    import os
+    
+    # Use environment variable or fallback to production URL
+    source_api_url = os.environ.get('STRATEGIES_SOURCE_URL', 'https://equimind-app.emergent.host/api/mental-strategies')
+    response = requests.get(source_api_url)
     strategies = response.json()
     
     print(f"Loaded {len(strategies)} strategies")
