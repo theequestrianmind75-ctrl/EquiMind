@@ -38,13 +38,13 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0f172a',
+    backgroundColor: '#ffffff',
   },
   backgroundImage: {
     position: 'absolute',
     width: '100%',
     height: '100%',
-    opacity: 0.05,
+    opacity: 0.03,
     resizeMode: 'center',
   },
   overlay: {
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   },
   text: {
     marginTop: 16,
-    color: '#f1f5f9',
+    color: '#1e293b',
     fontSize: 16,
     fontWeight: '600',
   },
