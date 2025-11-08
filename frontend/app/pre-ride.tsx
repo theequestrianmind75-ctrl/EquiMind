@@ -180,7 +180,7 @@ export default function PreRide() {
           </View>
 
           <View style={styles.divider} />
-          <Text style={styles.sectionHeader}>Your Horse</Text>
+          <Text style={styles.sectionHeader}>YOUR HORSE</Text>
 
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Horse Energy Level: {horseEnergyLevel}/10</Text>
