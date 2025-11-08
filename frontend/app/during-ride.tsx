@@ -272,7 +272,7 @@ export default function DuringRide() {
         ) : null}
 
         <View style={styles.infoCard}>
-          <Ionicons name="lightbulb" size={32} color="#f59e0b" />
+          <Ionicons name="horse" size={32} color="#000000" />
           <Text style={styles.infoTitle}>How It Works</Text>
           <Text style={styles.infoText}>
             1. Activate voice trigger{"\n"}
