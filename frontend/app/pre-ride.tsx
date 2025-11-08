@@ -413,7 +413,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   rideTypeLabelActive: {
-    color: '#375B50',
+    color: '#ffffff',
   },
   sliderContainer: {
     marginTop: 8,
