@@ -1,0 +1,403 @@
+[
+  {
+    "id": "rider_01",
+    "category": "Rider",
+    "question": "How calm or tense do I feel right now?",
+    "answer_type": "scale",
+    "scale_min": 1,
+    "scale_max": 10,
+    "labels": ["Very tense", "Very calm"],
+    "metadata": {
+      "display_order": 1,
+      "data_type": "scale_int",
+      "metric_key": "rider.tension_inverse_calm",
+      "grid_dimension": "rider_range",
+      "cluster_weights": {
+        "anxiety_reduction": 0.5,
+        "confidence_building": 0.2,
+        "mindfulness": 0.2,
+        "thought_management": 0.1
+      },
+      "range_map": {"low": [1,3], "medium": [4,7], "high": [8,10]},
+      "recommended_strategy_tags": ["breathing", "grounding", "HRV", "body_scan"],
+      "trigger_rules": [
+        {"if": {"lte": 3}, "then": {"rider_range": "Low", "priority": "High", "suggest_tags": ["box_breath", "somatic_grounding"]}},
+        {"if": {"gte": 8}, "then": {"rider_range": "High", "priority": "Medium", "suggest_tags": ["focus_reset", "goal_lock_in"]}}
+      ],
+      "required": true,
+      "capture_context": "pre_ride"
+    }
+  },
+  {
+    "id": "rider_02",
+    "category": "Rider",
+    "question": "What is the main emotion I'm bringing into the ride today?",
+    "answer_type": "multiple_choice",
+    "options": ["Calm", "Anxious", "Distracted", "Focused", "Frustrated", "Excited"],
+    "metadata": {
+      "display_order": 2,
+      "data_type": "enum",
+      "metric_key": "rider.primary_emotion",
+      "grid_dimension": "rider_range",
+      "enum_map": {
+        "Calm": {"rider_range": "High", "clusters": {"mindfulness": 0.3, "confidence_building": 0.2}},
+        "Focused": {"rider_range": "High", "clusters": {"thought_management": 0.3, "confidence_building": 0.2}},
+        "Excited": {"rider_range": "Medium", "clusters": {"energy_management": 0.2}},
+        "Distracted": {"rider_range": "Low", "clusters": {"thought_management": 0.4}},
+        "Anxious": {"rider_range": "Low", "clusters": {"anxiety_reduction": 0.6}},
+        "Frustrated": {"rider_range": "Low", "clusters": {"thought_management": 0.3, "anxiety_reduction": 0.3}}
+      },
+      "recommended_strategy_tags": ["affect_labeling", "reframe", "paced_breathing"],
+      "trigger_rules": [
+        {"if": {"in": ["Anxious", "Frustrated"]}, "then": {"priority": "High", "suggest_tags": ["downshift_ritual", "5_4_3_2_1"]}}
+      ],
+      "required": true,
+      "capture_context": "pre_ride"
+    }
+  },
+  {
+    "id": "rider_03",
+    "category": "Rider",
+    "question": "Did I have any stressors before arriving at the barn that could affect my mood or focus?",
+    "answer_type": "yes_no",
+    "metadata": {
+      "display_order": 3,
+      "data_type": "boolean",
+      "metric_key": "rider.pre_barn_stressor",
+      "grid_dimension": "rider_range",
+      "cluster_weights": {"thought_management": 0.3, "anxiety_reduction": 0.4, "mindfulness": 0.3},
+      "recommended_strategy_tags": ["transition_reset", "micro_meditation"],
+      "trigger_rules": [
+        {"if": {"eq": "Yes"}, "then": {"priority": "High", "suggest_tags": ["barn_gate_reset", "name_it_to_tame_it"]}}
+      ],
+      "required": false,
+      "capture_context": "pre_ride"
+    }
+  },
+  {
+    "id": "rider_04",
+    "category": "Rider",
+    "question": "How connected do I feel to my body right now?",
+    "answer_type": "scale",
+    "scale_min": 1,
+    "scale_max": 10,
+    "labels": ["Disconnected", "Fully connected"],
+    "metadata": {
+      "display_order": 4,
+      "data_type": "scale_int",
+      "metric_key": "rider.interoceptive_connection",
+      "grid_dimension": "rider_range",
+      "range_map": {"low": [1,3], "medium": [4,7], "high": [8,10]},
+      "cluster_weights": {"mindfulness": 0.6, "anxiety_reduction": 0.2, "confidence_building": 0.2},
+      "recommended_strategy_tags": ["body_scan", "breath_to_stride_sync"],
+      "trigger_rules": [
+        {"if": {"lte": 3}, "then": {"priority": "High", "suggest_tags": ["feet_find_floor", "tack_touch_anchoring"]}}
+      ],
+      "required": true,
+      "capture_context": "pre_ride"
+    }
+  },
+  {
+    "id": "rider_05",
+    "category": "Rider",
+    "question": "How confident do I feel about my plan or goals for this ride?",
+    "answer_type": "scale",
+    "scale_min": 1,
+    "scale_max": 10,
+    "labels": ["Uncertain", "Very confident"],
+    "metadata": {
+      "display_order": 5,
+      "data_type": "scale_int",
+      "metric_key": "rider.confidence",
+      "grid_dimension": "rider_range",
+      "range_map": {"low": [1,3], "medium": [4,7], "high": [8,10]},
+      "cluster_weights": {"confidence_building": 0.7, "thought_management": 0.2, "mindfulness": 0.1},
+      "recommended_strategy_tags": ["goal_lock_in", "3_mini_wins", "if_then_plans"],
+      "trigger_rules": [
+        {"if": {"lte": 3}, "then": {"priority": "High", "suggest_tags": ["confidence_recall", "success_reel_visualization"]}}
+      ],
+      "required": true,
+      "capture_context": "pre_ride"
+    }
+  },
+  {
+    "id": "rider_06",
+    "category": "Rider",
+    "question": "Have I taken at least three slow, grounding breaths before tacking up?",
+    "answer_type": "yes_no",
+    "metadata": {
+      "display_order": 6,
+      "data_type": "boolean",
+      "metric_key": "rider.breathing_completed",
+      "grid_dimension": "rider_range",
+      "cluster_weights": {"anxiety_reduction": 0.4, "mindfulness": 0.4, "confidence_building": 0.2},
+      "recommended_strategy_tags": ["box_breath", "4_6_breath"],
+      "trigger_rules": [
+        {"if": {"eq": "No"}, "then": {"priority": "High", "suggest_tags": ["box_breath_now", "exhale_lengthen_6_8"]}}
+      ],
+      "required": false,
+      "capture_context": "pre_ride"
+    }
+  },
+  {
+    "id": "rider_07",
+    "category": "Rider",
+    "question": "What is one intention I'd like to bring into today's ride?",
+    "answer_type": "short_text",
+    "metadata": {
+      "display_order": 7,
+      "data_type": "short_text",
+      "metric_key": "rider.ride_intention",
+      "grid_dimension": "rider_range",
+      "nlp_tags": ["focus", "calm", "patience", "playfulness", "precision"],
+      "recommended_strategy_tags": ["intention_to_cue", "pre_mount_ritual"],
+      "trigger_rules": [],
+      "required": false,
+      "capture_context": "pre_ride"
+    }
+  },
+  {
+    "id": "horse_01",
+    "category": "Horse",
+    "question": "How does my horse's energy feel today?",
+    "answer_type": "multiple_choice",
+    "options": ["Low", "Balanced", "High"],
+    "metadata": {
+      "display_order": 8,
+      "data_type": "enum",
+      "metric_key": "horse.energy_state",
+      "grid_dimension": "horse_range",
+      "enum_map": {
+        "Low": {"horse_range": "Low", "clusters": {"energy_management": 0.5, "confidence": 0.2}},
+        "Balanced": {"horse_range": "Medium", "clusters": {"focus": 0.4}},
+        "High": {"horse_range": "High", "clusters": {"soothing": 0.6, "focus": 0.2}}
+      },
+      "recommended_strategy_tags": ["longer_walk_warmup", "transitions_to_balance", "in_hand_yield"],
+      "trigger_rules": [
+        {"if": {"eq": "High"}, "then": {"priority": "High", "suggest_tags": ["soothe_loop", "breathe_to_stride"]}},
+        {"if": {"eq": "Low"}, "then": {"priority": "Medium", "suggest_tags": ["energize_cavaletti", "tempo_changes"]}}
+      ],
+      "required": true,
+      "capture_context": "pre_ride"
+    }
+  },
+  {
+    "id": "horse_02",
+    "category": "Horse",
+    "question": "Has there been any change in feed, turnout, or routine in the last 24 hours?",
+    "answer_type": "yes_no",
+    "metadata": {
+      "display_order": 9,
+      "data_type": "boolean",
+      "metric_key": "horse.management_change_24h",
+      "grid_dimension": "horse_range",
+      "cluster_weights": {"energy_management": 0.5, "soothing": 0.3, "focus": 0.2},
+      "recommended_strategy_tags": ["extended_hand_walk", "check_girthy_points"],
+      "trigger_rules": [
+        {"if": {"eq": "Yes"}, "then": {"priority": "High", "suggest_tags": ["longer_groundwork", "gradual_warmup"]}}
+      ],
+      "required": false,
+      "capture_context": "pre_ride"
+    }
+  },
+  {
+    "id": "horse_03",
+    "category": "Horse",
+    "question": "How quickly did my horse settle during grooming or tacking up?",
+    "answer_type": "scale",
+    "scale_min": 1,
+    "scale_max": 10,
+    "labels": ["Did not settle", "Relaxed quickly"],
+    "metadata": {
+      "display_order": 10,
+      "data_type": "scale_int",
+      "metric_key": "horse.settle_speed",
+      "grid_dimension": "horse_range",
+      "range_map": {"low": [1,3], "medium": [4,7], "high": [8,10]},
+      "cluster_weights": {"soothing": 0.6, "focus": 0.3, "energy_management": 0.1},
+      "recommended_strategy_tags": ["withers_scritch_ritual", "halt_breathe_walk"],
+      "trigger_rules": [
+        {"if": {"lte": 3}, "then": {"priority": "High", "suggest_tags": ["soothe_loop", "eyes_soften_exercise"]}}
+      ],
+      "required": true,
+      "capture_context": "pre_ride"
+    }
+  },
+  {
+    "id": "horse_04",
+    "category": "Horse",
+    "question": "What is my horse showing me through body language right now?",
+    "answer_type": "multiple_choice",
+    "options": ["Relaxed", "Tense", "Distracted", "Curious"],
+    "metadata": {
+      "display_order": 11,
+      "data_type": "enum",
+      "metric_key": "horse.body_language",
+      "grid_dimension": "horse_range",
+      "enum_map": {
+        "Relaxed": {"horse_range": "High", "clusters": {"focus": 0.3}},
+        "Curious": {"horse_range": "Medium", "clusters": {"focus": 0.4}},
+        "Distracted": {"horse_range": "Low", "clusters": {"focus": 0.5}},
+        "Tense": {"horse_range": "Low", "clusters": {"soothing": 0.6}}
+      },
+      "recommended_strategy_tags": ["head_lower_cue", "circle_release"],
+      "trigger_rules": [
+        {"if": {"in": ["Tense", "Distracted"]}, "then": {"priority": "High", "suggest_tags": ["focus_reset_serpentine", "lick_chew_prompt"]}}
+      ],
+      "required": true,
+      "capture_context": "pre_ride"
+    }
+  },
+  {
+    "id": "horse_05",
+    "category": "Horse",
+    "question": "Has my horse had adequate warm-up, turnout, or movement before riding?",
+    "answer_type": "yes_no",
+    "metadata": {
+      "display_order": 12,
+      "data_type": "boolean",
+      "metric_key": "horse.pre_movement_done",
+      "grid_dimension": "horse_range",
+      "cluster_weights": {"energy_management": 0.5, "soothing": 0.3, "focus": 0.2},
+      "recommended_strategy_tags": ["hand_walk_8min", "loose_lunge_10min"],
+      "trigger_rules": [
+        {"if": {"eq": "No"}, "then": {"priority": "High", "suggest_tags": ["hand_walk_8min", "in_hand_flexions"]}}
+      ],
+      "required": false,
+      "capture_context": "pre_ride"
+    }
+  },
+  {
+    "id": "horse_06",
+    "category": "Horse",
+    "question": "What's one sign my horse gives me that tells me they are relaxed and ready to connect?",
+    "answer_type": "short_text",
+    "metadata": {
+      "display_order": 13,
+      "data_type": "short_text",
+      "metric_key": "horse.relaxation_indicator_text",
+      "grid_dimension": "horse_range",
+      "nlp_tags": ["lick_chew", "head_lower", "blink_rate", "breathing", "ear_soften"],
+      "recommended_strategy_tags": ["reinforce_relax_signal"],
+      "trigger_rules": [],
+      "required": false,
+      "capture_context": "pre_ride"
+    }
+  },
+  {
+    "id": "connection_01",
+    "category": "Connection",
+    "question": "Are our energy levels aligned right now?",
+    "answer_type": "multiple_choice",
+    "options": ["Too high", "Balanced", "Too low"],
+    "metadata": {
+      "display_order": 14,
+      "data_type": "enum",
+      "metric_key": "dyad.energy_alignment",
+      "grid_dimension": "connection_range",
+      "enum_map": {
+        "Balanced": {"connection_range": "Medium"},
+        "Too low": {"connection_range": "Low"},
+        "Too high": {"connection_range": "High"}
+      },
+      "recommended_strategy_tags": ["co_reg_breath", "match_then_lead"],
+      "trigger_rules": [
+        {"if": {"eq": "Too high"}, "then": {"priority": "High", "suggest_tags": ["co_reg_breath", "walk_halt_breathe"]}},
+        {"if": {"eq": "Too low"}, "then": {"priority": "Medium", "suggest_tags": ["energize_transitions", "pole_pickups"]}}
+      ],
+      "required": true,
+      "capture_context": "pre_ride"
+    }
+  },
+  {
+    "id": "connection_02",
+    "category": "Connection",
+    "question": "When I breathe deeply, does my horse's body language change?",
+    "answer_type": "multiple_choice",
+    "options": ["Yes", "No", "Unsure"],
+    "metadata": {
+      "display_order": 15,
+      "data_type": "enum",
+      "metric_key": "dyad.breath_coupling",
+      "grid_dimension": "connection_range",
+      "enum_map": {
+        "Yes": {"connection_range": "High"},
+        "Unsure": {"connection_range": "Medium"},
+        "No": {"connection_range": "Low"}
+      },
+      "recommended_strategy_tags": ["sync_breath_to_stride", "breath_anchor_touch"],
+      "trigger_rules": [
+        {"if": {"eq": "No"}, "then": {"priority": "High", "suggest_tags": ["match_breath_walk", "longer_exhale_cue"]}}
+      ],
+      "required": false,
+      "capture_context": "pre_ride"
+    }
+  },
+  {
+    "id": "connection_03",
+    "category": "Connection",
+    "question": "What word best describes our connection at this moment?",
+    "answer_type": "multiple_choice",
+    "options": ["Distant", "Neutral", "Tuned-in", "Flowing"],
+    "metadata": {
+      "display_order": 16,
+      "data_type": "enum",
+      "metric_key": "dyad.connection_quality",
+      "grid_dimension": "connection_range",
+      "enum_map": {
+        "Distant": {"connection_range": "Low"},
+        "Neutral": {"connection_range": "Medium"},
+        "Tuned-in": {"connection_range": "High"},
+        "Flowing": {"connection_range": "High"}
+      },
+      "recommended_strategy_tags": ["join_up_walk", "connection_ritual"],
+      "trigger_rules": [
+        {"if": {"eq": "Distant"}, "then": {"priority": "High", "suggest_tags": ["in_hand_mirrors", "circle_close_open"]}}
+      ],
+      "required": true,
+      "capture_context": "pre_ride"
+    }
+  },
+  {
+    "id": "connection_04",
+    "category": "Connection",
+    "question": "What do I think my horse needs from me today?",
+    "answer_type": "multiple_choice",
+    "options": ["Leadership", "Calmness", "Patience", "Playfulness"],
+    "metadata": {
+      "display_order": 17,
+      "data_type": "enum",
+      "metric_key": "dyad.rider_to_horse_need",
+      "grid_dimension": "connection_range",
+      "enum_map": {
+        "Leadership": {"rider_clusters": {"confidence_building": 0.5, "thought_management": 0.2}},
+        "Calmness": {"rider_clusters": {"anxiety_reduction": 0.6, "mindfulness": 0.2}, "horse_clusters": {"soothing": 0.4}},
+        "Patience": {"rider_clusters": {"mindfulness": 0.5}},
+        "Playfulness": {"horse_clusters": {"confidence": 0.3, "focus": 0.2}}
+      },
+      "recommended_strategy_tags": ["tone_setter_statement", "tempo_matching"],
+      "trigger_rules": [
+        {"if": {"eq": "Calmness"}, "then": {"priority": "High", "suggest_tags": ["co_reg_breath", "slow_stroke_withers"]}}
+      ],
+      "required": false,
+      "capture_context": "pre_ride"
+    }
+  },
+  {
+    "id": "connection_05",
+    "category": "Connection",
+    "question": "What small ritual or cue helps us start the ride in sync?",
+    "answer_type": "short_text",
+    "metadata": {
+      "display_order": 18,
+      "data_type": "short_text",
+      "metric_key": "dyad.start_ritual_text",
+      "grid_dimension": "connection_range",
+      "nlp_tags": ["withers_touch", "pause_breathe", "hand_walk", "halt_soften", "counted_breaths"],
+      "recommended_strategy_tags": ["ritual_reinforcement"],
+      "trigger_rules": [],
+      "required": false,
+      "capture_context": "pre_ride"
+    }
+  }
+]
