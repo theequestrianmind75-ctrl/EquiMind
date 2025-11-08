@@ -257,7 +257,7 @@ export default function CategoryDetail() {
     return (
       <SafeAreaView style={styles.container} edges={['top']}>
         <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color={category?.color || '#3b82f6'} />
+          <ActivityIndicator size="large" color={category?.color || '#000000'} />
           <Text style={styles.loadingText}>Loading tools...</Text>
         </View>
       </SafeAreaView>
@@ -566,12 +566,12 @@ const styles = StyleSheet.create({
     borderColor: '#375B50',
   },
   toolCardEditable: {
-    borderColor: '#3b82f6',
+    borderColor: '#000000',
     borderWidth: 2,
   },
   toolCardEditing: {
     backgroundColor: '#f0f9ff',
-    borderColor: '#3b82f6',
+    borderColor: '#000000',
   },
   toolHeader: {
     flexDirection: 'row',
@@ -723,7 +723,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f1f5f9',
   },
   modalSubmitButton: {
-    backgroundColor: '#3b82f6',
+    backgroundColor: '#000000',
   },
   modalButtonText: {
     fontSize: 16,

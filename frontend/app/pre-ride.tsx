@@ -89,7 +89,7 @@ export default function PreRide() {
                   <Ionicons
                     name={type.icon as any}
                     size={28}
-                    color={rideType === type.id ? '#3b82f6' : '#64748b'}
+                    color={rideType === type.id ? '#000000' : '#64748b'}
                   />
                   <Text
                     style={[
@@ -371,7 +371,7 @@ const styles = StyleSheet.create({
     borderColor: '#375B50',
   },
   rideTypeButtonActive: {
-    borderColor: '#3b82f6',
+    borderColor: '#000000',
     backgroundColor: '#1e3a8a',
   },
   rideTypeLabel: {
@@ -402,7 +402,7 @@ const styles = StyleSheet.create({
   },
   scaleButtonActive: {
     backgroundColor: '#375B50',
-    borderColor: '#3b82f6',
+    borderColor: '#000000',
   },
   scaleButtonText: {
     fontSize: 12,

@@ -162,7 +162,7 @@ export default function DuringRide() {
       <ScrollView style={styles.content}>
         {loading ? (
           <View style={styles.loadingContainer}>
-            <ActivityIndicator size="large" color="#3b82f6" />
+            <ActivityIndicator size="large" color="#000000" />
           </View>
         ) : currentSession && (
           <View style={styles.sessionCard}>
@@ -264,7 +264,7 @@ export default function DuringRide() {
         {lastAdvice ? (
           <View style={styles.adviceCard}>
             <View style={styles.adviceHeader}>
-              <Ionicons name="information-circle" size={24} color="#3b82f6" />
+              <Ionicons name="information-circle" size={24} color="#000000" />
               <Text style={styles.adviceTitle}>Last Advice</Text>
             </View>
             <Text style={styles.adviceText}>{lastAdvice}</Text>

@@ -28,7 +28,7 @@ export default function Index() {
           source={require('../assets/images/horse-head-logo.png')}
           style={styles.logo}
         />
-        <ActivityIndicator size="large" color="#3b82f6" />
+        <ActivityIndicator size="large" color="#000000" />
         <Text style={styles.text}>Loading The Equestrian Mind...</Text>
       </View>
     </View>

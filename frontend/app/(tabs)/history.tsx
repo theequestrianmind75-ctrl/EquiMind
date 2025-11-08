@@ -60,7 +60,7 @@ export default function History() {
 
   const getSessionColor = (sessionType: string) => {
     if (sessionType === 'pre-ride') return '#10b981';
-    if (sessionType === 'during-ride') return '#3b82f6';
+    if (sessionType === 'during-ride') return '#000000';
     if (sessionType === 'post-ride') return '#8b5cf6';
     return '#64748b';
   };
@@ -69,7 +69,7 @@ export default function History() {
     return (
       <SafeAreaView style={styles.container} edges={['top']}>
         <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#3b82f6" />
+          <ActivityIndicator size="large" color="#000000" />
           <Text style={styles.loadingText}>Loading sessions...</Text>
         </View>
       </SafeAreaView>
@@ -92,7 +92,7 @@ export default function History() {
       ) : (
         <ScrollView
           style={styles.scrollView}
-          refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor="#3b82f6" />}
+          refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor="#000000" />}
         >
           {sessions.map((session) => (
             <View key={session.id} style={styles.sessionCard}>

@@ -80,7 +80,7 @@ export default function StrategyDetail() {
 
   const getCategoryColor = (category: string) => {
     if (category.includes('Mindfulness')) return '#10b981';
-    if (category.includes('Breathing')) return '#3b82f6';
+    if (category.includes('Breathing')) return '#000000';
     if (category.includes('Somatic')) return '#8b5cf6';
     if (category.includes('Activation')) return '#f59e0b';
     if (category.includes('Cognitive')) return '#06b6d4';
@@ -91,7 +91,7 @@ export default function StrategyDetail() {
     return (
       <SafeAreaView style={styles.container} edges={['top']}>
         <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#3b82f6" />
+          <ActivityIndicator size="large" color="#000000" />
           <Text style={styles.loadingText}>Loading strategy...</Text>
         </View>
       </SafeAreaView>
@@ -139,7 +139,7 @@ export default function StrategyDetail() {
 
         <View style={styles.metaRow}>
           <View style={styles.metaCard}>
-            <Ionicons name="time" size={24} color="#3b82f6" />
+            <Ionicons name="time" size={24} color="#000000" />
             <Text style={styles.metaValue}>{strategy.duration_minutes}</Text>
             <Text style={styles.metaLabel}>Minutes</Text>
           </View>

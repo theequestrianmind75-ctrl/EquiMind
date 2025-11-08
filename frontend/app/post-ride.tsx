@@ -124,7 +124,7 @@ export default function PostRide() {
     return (
       <SafeAreaView style={styles.container} edges={['top']}>
         <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#3b82f6" />
+          <ActivityIndicator size="large" color="#000000" />
           <Text style={styles.loadingText}>Loading sessions...</Text>
         </View>
       </SafeAreaView>
@@ -159,7 +159,7 @@ export default function PostRide() {
           ) : (
             <>
               <View style={styles.sessionInfo}>
-                <Ionicons name="information-circle" size={24} color="#3b82f6" />
+                <Ionicons name="information-circle" size={24} color="#000000" />
                 <View style={styles.sessionInfoText}>
                   <Text style={styles.sessionInfoTitle}>Current Session</Text>
                   <Text style={styles.sessionInfoSubtitle}>
