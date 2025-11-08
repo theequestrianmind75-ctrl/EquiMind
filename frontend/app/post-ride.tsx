@@ -410,7 +410,7 @@ const styles = StyleSheet.create({
   horseTitle: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#1e293b',
+    color: '#000000',
     marginLeft: 12,
   },
   horseStats: {
