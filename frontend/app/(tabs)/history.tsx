@@ -27,6 +27,7 @@ interface Session {
 }
 
 export default function History() {
+  const router = useRouter();
   const [sessions, setSessions] = useState<Session[]>([]);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
