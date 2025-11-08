@@ -6,6 +6,9 @@ import {
   ScrollView,
   TouchableOpacity,
   ActivityIndicator,
+  TextInput,
+  Alert,
+  Modal,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter, useLocalSearchParams } from 'expo-router';
@@ -71,12 +74,20 @@ const CATEGORIES: any = {
   },
 };
 
+const ADMIN_PASSWORD = 'equimind2025';
+
 export default function CategoryDetail() {
   const router = useRouter();
   const { id } = useLocalSearchParams();
   const [strategies, setStrategies] = useState<Strategy[]>([]);
   const [loading, setLoading] = useState(true);
   const [playingId, setPlayingId] = useState<string | null>(null);
+  const [editMode, setEditMode] = useState(false);
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [editedStrategy, setEditedStrategy] = useState<Strategy | null>(null);
+  const [saving, setSaving] = useState(false);
+  const [showPasswordPrompt, setShowPasswordPrompt] = useState(false);
+  const [passwordInput, setPasswordInput] = useState('');
 
   const category = CATEGORIES[id as string];
 
@@ -182,6 +193,66 @@ export default function CategoryDetail() {
     });
   };
 
+  const handleEditModeToggle = () => {
+    if (!editMode) {
+      setShowPasswordPrompt(true);
+    } else {
+      setEditMode(false);
+      setEditingId(null);
+      setEditedStrategy(null);
+    }
+  };
+
+  const handlePasswordSubmit = () => {
+    if (passwordInput === ADMIN_PASSWORD) {
+      setEditMode(true);
+      setShowPasswordPrompt(false);
+      setPasswordInput('');
+      Alert.alert('Edit Mode Enabled', 'Click any tool to edit it');
+    } else {
+      Alert.alert('Incorrect Password', 'Please try again');
+      setPasswordInput('');
+    }
+  };
+
+  const handleEditClick = (strategy: Strategy) => {
+    if (!editMode) return;
+    setEditingId(strategy.id);
+    setEditedStrategy({...strategy});
+  };
+
+  const handleCancelEdit = () => {
+    setEditingId(null);
+    setEditedStrategy(null);
+  };
+
+  const handleSaveEdit = async () => {
+    if (!editedStrategy) return;
+
+    setSaving(true);
+    try {
+      await api.patch(`/mental-strategies/${editedStrategy.id}`, {
+        name: editedStrategy.name,
+        instructions: editedStrategy.instructions,
+        duration_minutes: editedStrategy.duration_minutes,
+        category: editedStrategy.category,
+      });
+
+      // Update local state
+      setStrategies(strategies.map(s => 
+        s.id === editedStrategy.id ? editedStrategy : s
+      ));
+      
+      setEditingId(null);
+      setEditedStrategy(null);
+      Alert.alert('Success', 'Tool updated successfully!');
+    } catch (error: any) {
+      Alert.alert('Error', error.message || 'Failed to update tool');
+    } finally {
+      setSaving(false);
+    }
+  };
+
   if (loading) {
     return (
       <SafeAreaView style={styles.container} edges={['top']}>
@@ -213,7 +284,13 @@ export default function CategoryDetail() {
           <Ionicons name="arrow-back" size={24} color="#f1f5f9" />
         </TouchableOpacity>
         <Text style={styles.title}>{category.title}</Text>
-        <View style={styles.placeholder} />
+        <TouchableOpacity onPress={handleEditModeToggle} style={styles.editButton}>
+          <Ionicons 
+            name={editMode ? 'close-circle' : 'create'} 
+            size={24} 
+            color={editMode ? '#ef4444' : '#375B50'} 
+          />
+        </TouchableOpacity>
       </View>
 
       <ScrollView style={styles.scrollView}>
@@ -232,48 +309,151 @@ export default function CategoryDetail() {
           </View>
         )}
         
+        {editMode && (
+          <View style={styles.editModeIndicator}>
+            <Ionicons name="create" size={20} color="#ef4444" />
+            <Text style={styles.editModeText}>Edit Mode Active - Click any tool to edit</Text>
+          </View>
+        )}
+
         <Text style={styles.subtitle}>{strategies.length} tools available</Text>
 
         {strategies.map((strategy) => (
-          <View key={strategy.id} style={styles.toolCard}>
-            <View style={styles.toolHeader}>
-              <Text style={styles.toolName}>{strategy.name}</Text>
-              <View style={styles.duration}>
-                <Ionicons name="time-outline" size={16} color="#64748b" />
-                <Text style={styles.durationText}>{strategy.duration_minutes} min</Text>
-              </View>
-            </View>
-
-            <View style={styles.instructionsContainer}>
-              <Text style={styles.instructionsText}>{cleanInstructions(strategy.instructions)}</Text>
-            </View>
-
-            <View style={styles.toolActions}>
-              <TouchableOpacity
-                style={[styles.audioButton, playingId === strategy.id && styles.audioButtonActive]}
-                onPress={() => handlePlayAudio(strategy)}
-              >
-                <Ionicons
-                  name={playingId === strategy.id ? 'stop-circle' : 'play-circle'}
-                  size={20}
-                  color="#ffffff"
+          <TouchableOpacity
+            key={strategy.id}
+            style={[
+              styles.toolCard,
+              editMode && styles.toolCardEditable,
+              editingId === strategy.id && styles.toolCardEditing,
+            ]}
+            onPress={() => editMode && handleEditClick(strategy)}
+            activeOpacity={editMode ? 0.7 : 1}
+          >
+            {editingId === strategy.id && editedStrategy ? (
+              // Edit Mode
+              <View style={styles.editContainer}>
+                <Text style={styles.editLabel}>Tool Name:</Text>
+                <TextInput
+                  style={styles.editInput}
+                  value={editedStrategy.name}
+                  onChangeText={(text) => setEditedStrategy({...editedStrategy, name: text})}
+                  multiline
                 />
-                <Text style={styles.audioButtonText}>
-                  {playingId === strategy.id ? 'Stop Audio' : 'Play Audio'}
-                </Text>
+
+                <Text style={styles.editLabel}>Duration (minutes):</Text>
+                <TextInput
+                  style={styles.editInput}
+                  value={String(editedStrategy.duration_minutes)}
+                  onChangeText={(text) => setEditedStrategy({
+                    ...editedStrategy, 
+                    duration_minutes: parseInt(text) || 0
+                  })}
+                  keyboardType="numeric"
+                />
+
+                <Text style={styles.editLabel}>Instructions:</Text>
+                <TextInput
+                  style={[styles.editInput, styles.editInputLarge]}
+                  value={editedStrategy.instructions}
+                  onChangeText={(text) => setEditedStrategy({...editedStrategy, instructions: text})}
+                  multiline
+                  numberOfLines={8}
+                />
+
+                <View style={styles.editActions}>
+                  <TouchableOpacity
+                    style={[styles.editActionButton, styles.cancelButton]}
+                    onPress={handleCancelEdit}
+                  >
+                    <Ionicons name="close" size={20} color="#ffffff" />
+                    <Text style={styles.editActionText}>Cancel</Text>
+                  </TouchableOpacity>
+
+                  <TouchableOpacity
+                    style={[styles.editActionButton, styles.saveButton, saving && styles.saveButtonDisabled]}
+                    onPress={handleSaveEdit}
+                    disabled={saving}
+                  >
+                    <Ionicons name="checkmark" size={20} color="#ffffff" />
+                    <Text style={styles.editActionText}>{saving ? 'Saving...' : 'Save'}</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            ) : (
+              // View Mode
+              <>
+                <View style={styles.toolHeader}>
+                  <Text style={styles.toolName}>{strategy.name}</Text>
+                  <View style={styles.duration}>
+                    <Ionicons name="time-outline" size={16} color="#64748b" />
+                    <Text style={styles.durationText}>{strategy.duration_minutes} min</Text>
+                  </View>
+                </View>
+
+                <View style={styles.instructionsContainer}>
+                  <Text style={styles.instructionsText}>{cleanInstructions(strategy.instructions)}</Text>
+                </View>
+
+                <View style={styles.toolActions}>
+                  <TouchableOpacity
+                    style={[styles.audioButton, playingId === strategy.id && styles.audioButtonActive]}
+                    onPress={() => handlePlayAudio(strategy)}
+                  >
+                    <Ionicons
+                      name={playingId === strategy.id ? 'stop-circle' : 'play-circle'}
+                      size={20}
+                      color="#ffffff"
+                    />
+                    <Text style={styles.audioButtonText}>
+                      {playingId === strategy.id ? 'Stop Audio' : 'Play Audio'}
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+              </>
+            )}
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
+
+      {/* Password Modal */}
+      <Modal
+        visible={showPasswordPrompt}
+        transparent={true}
+        animationType="fade"
+        onRequestClose={() => setShowPasswordPrompt(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalContent}>
+            <Text style={styles.modalTitle}>Enter Admin Password</Text>
+            <TextInput
+              style={styles.passwordInput}
+              value={passwordInput}
+              onChangeText={setPasswordInput}
+              secureTextEntry
+              placeholder="Password"
+              placeholderTextColor="#94a3b8"
+              autoFocus
+            />
+            <View style={styles.modalActions}>
+              <TouchableOpacity
+                style={[styles.modalButton, styles.modalCancelButton]}
+                onPress={() => {
+                  setShowPasswordPrompt(false);
+                  setPasswordInput('');
+                }}
+              >
+                <Text style={styles.modalButtonText}>Cancel</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[styles.modalButton, styles.modalSubmitButton]}
+                onPress={handlePasswordSubmit}
+              >
+                <Text style={[styles.modalButtonText, styles.modalSubmitButtonText]}>Submit</Text>
               </TouchableOpacity>
             </View>
           </View>
-        ))}
-
-        {strategies.length === 0 && (
-          <View style={styles.emptyContainer}>
-            <Ionicons name="document-outline" size={64} color="#64748b" />
-            <Text style={styles.emptyTitle}>No Tools Available</Text>
-            <Text style={styles.emptyText}>Check back later for new tools in this category</Text>
-          </View>
-        )}
-      </ScrollView>
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 }
@@ -307,9 +487,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '600',
     color: '#1e293b',
+    flex: 1,
+    textAlign: 'center',
   },
-  placeholder: {
-    width: 40,
+  editButton: {
+    padding: 8,
   },
   scrollView: {
     flex: 1,
@@ -345,6 +527,22 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     marginLeft: 8,
   },
+  editModeIndicator: {
+    flexDirection: 'row',
+    backgroundColor: '#fef2f2',
+    padding: 12,
+    borderRadius: 8,
+    marginBottom: 16,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#ef4444',
+  },
+  editModeText: {
+    marginLeft: 8,
+    fontSize: 14,
+    color: '#ef4444',
+    fontWeight: '600',
+  },
   subtitle: {
     fontSize: 14,
     color: '#64748b',
@@ -357,6 +555,14 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     borderWidth: 1,
     borderColor: '#375B50',
+  },
+  toolCardEditable: {
+    borderColor: '#3b82f6',
+    borderWidth: 2,
+  },
+  toolCardEditing: {
+    backgroundColor: '#f0f9ff',
+    borderColor: '#3b82f6',
   },
   toolHeader: {
     flexDirection: 'row',
@@ -408,22 +614,114 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     marginLeft: 8,
   },
-  emptyContainer: {
+  editContainer: {
+    width: '100%',
+  },
+  editLabel: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#1e293b',
+    marginBottom: 8,
+  },
+  editInput: {
+    backgroundColor: '#ffffff',
+    borderWidth: 1,
+    borderColor: '#cbd5e1',
+    borderRadius: 8,
+    padding: 12,
+    fontSize: 14,
+    color: '#1e293b',
+    marginBottom: 16,
+  },
+  editInputLarge: {
+    minHeight: 200,
+    textAlignVertical: 'top',
+  },
+  editActions: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 8,
+  },
+  editActionButton: {
+    flexDirection: 'row',
     flex: 1,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 64,
+    marginHorizontal: 4,
   },
-  emptyTitle: {
+  cancelButton: {
+    backgroundColor: '#64748b',
+  },
+  saveButton: {
+    backgroundColor: '#10b981',
+  },
+  saveButtonDisabled: {
+    opacity: 0.6,
+  },
+  editActionText: {
+    color: '#ffffff',
+    fontSize: 14,
+    fontWeight: '600',
+    marginLeft: 8,
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  modalContent: {
+    backgroundColor: '#ffffff',
+    borderRadius: 16,
+    padding: 24,
+    width: '100%',
+    maxWidth: 400,
+  },
+  modalTitle: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#1e293b',
-    marginTop: 16,
-  },
-  emptyText: {
-    fontSize: 14,
-    color: '#64748b',
-    marginTop: 8,
+    marginBottom: 20,
     textAlign: 'center',
+  },
+  passwordInput: {
+    backgroundColor: '#f8fafc',
+    borderWidth: 1,
+    borderColor: '#cbd5e1',
+    borderRadius: 8,
+    padding: 12,
+    fontSize: 16,
+    color: '#1e293b',
+    marginBottom: 20,
+  },
+  modalActions: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  modalButton: {
+    flex: 1,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 8,
+    alignItems: 'center',
+    marginHorizontal: 4,
+  },
+  modalCancelButton: {
+    backgroundColor: '#f1f5f9',
+  },
+  modalSubmitButton: {
+    backgroundColor: '#3b82f6',
+  },
+  modalButtonText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#64748b',
+  },
+  modalSubmitButtonText: {
+    color: '#ffffff',
   },
 });
