@@ -403,8 +403,8 @@ const styles = StyleSheet.create({
     borderColor: '#375B50',
   },
   rideTypeButtonActive: {
-    borderColor: '#000000',
-    backgroundColor: '#1e3a8a',
+    borderColor: '#375B50',
+    backgroundColor: '#375B50',
   },
   rideTypeLabel: {
     fontSize: 14,
