@@ -99,15 +99,22 @@ export default function Home() {
 
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Horse-Rider Connection</Text>
-          <View style={styles.connectionCard}>
-            <Image
-              source={require('../../assets/images/horse-head-logo.png')}
-              style={styles.connectionIcon}
-            />
+          <TouchableOpacity 
+            style={styles.connectionCard}
+            onPress={() => router.push('/horse-rider-connection' as any)}
+          >
+            <View style={styles.connectionHeader}>
+              <Ionicons name="tennisball" size={40} color="#000000" />
+              <Text style={styles.connectionTitle}>Build Your Partnership Profile</Text>
+            </View>
             <Text style={styles.connectionText}>
-              Strengthen the trust, understanding, and communication that creates an unbreakable bond with your horse.
+              Understanding your riding background and your horse's personality helps create a stronger bond and improves your communication.
             </Text>
-          </View>
+            <View style={styles.connectionButton}>
+              <Text style={styles.connectionButtonText}>Complete Profile</Text>
+              <Ionicons name="arrow-forward" size={20} color="#ffffff" />
+            </View>
+          </TouchableOpacity>
           <Text style={styles.connectionDescription}>
             Combining clinical expertise with deep equestrian knowledge to deliver results that transform both rider performance and horse-rider relationships.
           </Text>
