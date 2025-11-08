@@ -167,7 +167,7 @@ export default function DuringRide() {
         ) : currentSession && (
           <View style={styles.sessionCard}>
             <View style={styles.sessionHeader}>
-              <Ionicons name="tennisball" size={24} color="#000000" />
+              <Ionicons name="horse" size={24} color="#000000" />
               <Text style={styles.sessionTitle}>Your Horse Today</Text>
             </View>
             <View style={styles.horseStats}>
