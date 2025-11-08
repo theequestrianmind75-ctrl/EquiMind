@@ -168,6 +168,37 @@ export default function PreRide() {
           </View>
 
           <View style={styles.section}>
+            <Text style={styles.sectionTitle}>Your Energy Level: {riderEnergyLevel}/10</Text>
+            <View style={styles.sliderContainer}>
+              <View style={styles.scaleButtons}>
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => (
+                  <TouchableOpacity
+                    key={level}
+                    style={[
+                      styles.scaleButton,
+                      riderEnergyLevel === level && styles.scaleButtonActive,
+                    ]}
+                    onPress={() => setRiderEnergyLevel(level)}
+                  >
+                    <Text
+                      style={[
+                        styles.scaleButtonText,
+                        riderEnergyLevel === level && styles.scaleButtonTextActive,
+                      ]}
+                    >
+                      {level}
+                    </Text>
+                  </TouchableOpacity>
+                ))}
+              </View>
+              <View style={styles.scaleLabels}>
+                <Text style={styles.scaleLabel}>Low</Text>
+                <Text style={styles.scaleLabel}>High</Text>
+              </View>
+            </View>
+          </View>
+
+          <View style={styles.section}>
             <Text style={styles.sectionTitle}>Rider Notes (Optional)</Text>
             <TextInput
               style={styles.notesInput}
