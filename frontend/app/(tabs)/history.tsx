@@ -306,4 +306,20 @@ const styles = StyleSheet.create({
     color: '#1e293b',
     lineHeight: 20,
   },
+  viewSummaryButton: {
+    flexDirection: 'row',
+    backgroundColor: '#375B50',
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 12,
+  },
+  viewSummaryText: {
+    color: '#ffffff',
+    fontSize: 14,
+    fontWeight: '600',
+    marginLeft: 8,
+  },
 });
