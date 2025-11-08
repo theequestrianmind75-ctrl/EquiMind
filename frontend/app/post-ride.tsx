@@ -359,7 +359,7 @@ const styles = StyleSheet.create({
   },
   createButton: {
     flexDirection: 'row',
-    backgroundColor: '#8b5cf6',
+    backgroundColor: '#000000',
     padding: 16,
     borderRadius: 12,
     alignItems: 'center',
@@ -477,8 +477,8 @@ const styles = StyleSheet.create({
     borderColor: '#375B50',
   },
   scaleButtonActive: {
-    backgroundColor: '#8b5cf6',
-    borderColor: '#8b5cf6',
+    backgroundColor: '#000000',
+    borderColor: '#000000',
   },
   scaleButtonText: {
     fontSize: 12,
@@ -510,7 +510,7 @@ const styles = StyleSheet.create({
   },
   completeButton: {
     flexDirection: 'row',
-    backgroundColor: '#8b5cf6',
+    backgroundColor: '#000000',
     borderRadius: 12,
     padding: 16,
     alignItems: 'center',
