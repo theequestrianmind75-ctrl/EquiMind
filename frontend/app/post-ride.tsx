@@ -22,6 +22,10 @@ interface Session {
   ride_type: string;
   anxiety_level: number | null;
   confidence_level: number | null;
+  horse_energy_level: number | null;
+  horse_focus_level: number | null;
+  horse_responsiveness: number | null;
+  horse_notes: string | null;
   completed: boolean;
 }
 
@@ -95,6 +99,27 @@ export default function PostRide() {
     }
   };
 
+  const getEnergyLabel = (level: number | null) => {
+    if (!level) return 'Unknown';
+    if (level <= 3) return 'Low';
+    if (level <= 7) return 'Moderate';
+    return 'High';
+  };
+
+  const getFocusLabel = (level: number | null) => {
+    if (!level) return 'Unknown';
+    if (level <= 3) return 'Distracted';
+    if (level <= 7) return 'Moderate';
+    return 'Focused';
+  };
+
+  const getResponsivenessLabel = (level: number | null) => {
+    if (!level) return 'Unknown';
+    if (level <= 3) return 'Low';
+    if (level <= 7) return 'Moderate';
+    return 'High';
+  };
+
   if (loading) {
     return (
       <SafeAreaView style={styles.container} edges={['top']}>
@@ -143,6 +168,41 @@ export default function PostRide() {
                   </Text>
                 </View>
               </View>
+
+              {(selectedSession.horse_energy_level || selectedSession.horse_focus_level || selectedSession.horse_responsiveness) && (
+                <View style={styles.horseCard}>
+                  <View style={styles.horseHeader}>
+                    <Ionicons name="horse" size={24} color="#14b8a6" />
+                    <Text style={styles.horseTitle}>Horse Assessment (Pre-Ride)</Text>
+                  </View>
+                  <View style={styles.horseStats}>
+                    <View style={styles.horseStat}>
+                      <Text style={styles.horseStatLabel}>Energy</Text>
+                      <Text style={styles.horseStatValue}>
+                        {selectedSession.horse_energy_level || 'N/A'} - {getEnergyLabel(selectedSession.horse_energy_level)}
+                      </Text>
+                    </View>
+                    <View style={styles.horseStat}>
+                      <Text style={styles.horseStatLabel}>Focus</Text>
+                      <Text style={styles.horseStatValue}>
+                        {selectedSession.horse_focus_level || 'N/A'} - {getFocusLabel(selectedSession.horse_focus_level)}
+                      </Text>
+                    </View>
+                    <View style={styles.horseStat}>
+                      <Text style={styles.horseStatLabel}>Responsiveness</Text>
+                      <Text style={styles.horseStatValue}>
+                        {selectedSession.horse_responsiveness || 'N/A'} - {getResponsivenessLabel(selectedSession.horse_responsiveness)}
+                      </Text>
+                    </View>
+                  </View>
+                  {selectedSession.horse_notes && (
+                    <View style={styles.horseNotes}>
+                      <Text style={styles.horseNotesLabel}>Pre-Ride Horse Notes:</Text>
+                      <Text style={styles.horseNotesText}>{selectedSession.horse_notes}</Text>
+                    </View>
+                  )}
+                </View>
+              )}
 
               <View style={styles.section}>
                 <Text style={styles.sectionTitle}>Post-Ride Anxiety Level: {anxietyLevel}/10</Text>
@@ -333,6 +393,62 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#64748b',
     marginTop: 4,
+  },
+  horseCard: {
+    backgroundColor: '#ffffff',
+    padding: 20,
+    borderRadius: 12,
+    marginBottom: 24,
+    borderWidth: 1,
+    borderColor: '#375B50',
+  },
+  horseHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  horseTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#1e293b',
+    marginLeft: 12,
+  },
+  horseStats: {
+    marginBottom: 12,
+  },
+  horseStat: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 8,
+    borderBottomWidth: 1,
+    borderBottomColor: '#e2e8f0',
+  },
+  horseStatLabel: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#64748b',
+  },
+  horseStatValue: {
+    fontSize: 14,
+    color: '#1e293b',
+    fontWeight: '500',
+  },
+  horseNotes: {
+    marginTop: 12,
+    padding: 12,
+    backgroundColor: '#f8fafc',
+    borderRadius: 8,
+  },
+  horseNotesLabel: {
+    fontSize: 12,
+    fontWeight: '600',
+    color: '#64748b',
+    marginBottom: 4,
+  },
+  horseNotesText: {
+    fontSize: 13,
+    color: '#475569',
+    lineHeight: 18,
   },
   section: {
     marginBottom: 32,

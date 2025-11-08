@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Alert,
   ScrollView,
+  ActivityIndicator,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
@@ -19,15 +20,31 @@ interface Strategy {
   instructions: string;
 }
 
+interface Session {
+  id: string;
+  session_type: string;
+  ride_type: string;
+  anxiety_level: number | null;
+  confidence_level: number | null;
+  horse_energy_level: number | null;
+  horse_focus_level: number | null;
+  horse_responsiveness: number | null;
+  horse_notes: string | null;
+  completed: boolean;
+}
+
 export default function DuringRide() {
   const router = useRouter();
   const [isListening, setIsListening] = useState(false);
   const [lastAdvice, setLastAdvice] = useState('');
   const [strategies, setStrategies] = useState<Strategy[]>([]);
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const [currentSession, setCurrentSession] = useState<Session | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchStrategies();
+    fetchCurrentSession();
   }, []);
 
   const fetchStrategies = async () => {
@@ -36,6 +53,19 @@ export default function DuringRide() {
       setStrategies(response.data);
     } catch (error) {
       console.error('Error fetching strategies:', error);
+    }
+  };
+
+  const fetchCurrentSession = async () => {
+    try {
+      const response = await api.get('/sessions?completed=false&limit=1');
+      if (response.data && response.data.length > 0) {
+        setCurrentSession(response.data[0]);
+      }
+    } catch (error) {
+      console.error('Error fetching session:', error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -98,6 +128,27 @@ export default function DuringRide() {
     }
   };
 
+  const getEnergyLabel = (level: number | null) => {
+    if (!level) return 'Unknown';
+    if (level <= 3) return 'Low';
+    if (level <= 7) return 'Moderate';
+    return 'High';
+  };
+
+  const getFocusLabel = (level: number | null) => {
+    if (!level) return 'Unknown';
+    if (level <= 3) return 'Distracted';
+    if (level <= 7) return 'Moderate';
+    return 'Focused';
+  };
+
+  const getResponsivenessLabel = (level: number | null) => {
+    if (!level) return 'Unknown';
+    if (level <= 3) return 'Low';
+    if (level <= 7) return 'Moderate';
+    return 'High';
+  };
+
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
       <View style={styles.header}>
@@ -109,6 +160,45 @@ export default function DuringRide() {
       </View>
 
       <ScrollView style={styles.content}>
+        {loading ? (
+          <View style={styles.loadingContainer}>
+            <ActivityIndicator size="large" color="#3b82f6" />
+          </View>
+        ) : currentSession && (
+          <View style={styles.sessionCard}>
+            <View style={styles.sessionHeader}>
+              <Ionicons name="horse" size={24} color="#14b8a6" />
+              <Text style={styles.sessionTitle}>Your Horse Today</Text>
+            </View>
+            <View style={styles.horseStats}>
+              <View style={styles.horseStat}>
+                <Text style={styles.horseStatLabel}>Energy</Text>
+                <Text style={styles.horseStatValue}>
+                  {currentSession.horse_energy_level || 'N/A'} - {getEnergyLabel(currentSession.horse_energy_level)}
+                </Text>
+              </View>
+              <View style={styles.horseStat}>
+                <Text style={styles.horseStatLabel}>Focus</Text>
+                <Text style={styles.horseStatValue}>
+                  {currentSession.horse_focus_level || 'N/A'} - {getFocusLabel(currentSession.horse_focus_level)}
+                </Text>
+              </View>
+              <View style={styles.horseStat}>
+                <Text style={styles.horseStatLabel}>Responsiveness</Text>
+                <Text style={styles.horseStatValue}>
+                  {currentSession.horse_responsiveness || 'N/A'} - {getResponsivenessLabel(currentSession.horse_responsiveness)}
+                </Text>
+              </View>
+            </View>
+            {currentSession.horse_notes && (
+              <View style={styles.horseNotes}>
+                <Text style={styles.horseNotesLabel}>Notes:</Text>
+                <Text style={styles.horseNotesText}>{currentSession.horse_notes}</Text>
+              </View>
+            )}
+          </View>
+        )}
+
         <View style={styles.statusCard}>
           <View
             style={[
@@ -222,6 +312,66 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     padding: 24,
+  },
+  loadingContainer: {
+    padding: 40,
+    alignItems: 'center',
+  },
+  sessionCard: {
+    backgroundColor: '#ffffff',
+    padding: 20,
+    borderRadius: 12,
+    marginBottom: 24,
+    borderWidth: 1,
+    borderColor: '#375B50',
+  },
+  sessionHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  sessionTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#1e293b',
+    marginLeft: 12,
+  },
+  horseStats: {
+    marginBottom: 12,
+  },
+  horseStat: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 8,
+    borderBottomWidth: 1,
+    borderBottomColor: '#e2e8f0',
+  },
+  horseStatLabel: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#64748b',
+  },
+  horseStatValue: {
+    fontSize: 14,
+    color: '#1e293b',
+    fontWeight: '500',
+  },
+  horseNotes: {
+    marginTop: 12,
+    padding: 12,
+    backgroundColor: '#f8fafc',
+    borderRadius: 8,
+  },
+  horseNotesLabel: {
+    fontSize: 12,
+    fontWeight: '600',
+    color: '#64748b',
+    marginBottom: 4,
+  },
+  horseNotesText: {
+    fontSize: 13,
+    color: '#475569',
+    lineHeight: 18,
   },
   statusCard: {
     backgroundColor: '#ffffff',
