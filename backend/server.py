@@ -104,6 +104,15 @@ class Session(BaseModel):
     created_at: datetime = Field(default_factory=datetime.utcnow)
     completed_at: Optional[datetime] = None
 
+class StrategyUpdate(BaseModel):
+    name: Optional[str] = None
+    category: Optional[str] = None
+    description: Optional[str] = None
+    instructions: Optional[str] = None
+    duration_minutes: Optional[int] = None
+    anxiety_level: Optional[List[int]] = None
+    confidence_level: Optional[List[int]] = None
+
 # ==================== AUTH HELPERS ====================
 
 def hash_password(password: str) -> str:
@@ -238,6 +247,35 @@ async def get_strategy(strategy_id: str, current_user: dict = Depends(get_curren
     if '_id' in strategy:
         del strategy['_id']
     return strategy
+
+@api_router.patch("/mental-strategies/{strategy_id}")
+async def update_strategy(
+    strategy_id: str,
+    update_data: StrategyUpdate,
+    current_user: dict = Depends(get_current_user)
+):
+    """Update a mental strategy - admin function"""
+    strategy = await db.mental_strategies.find_one({"id": strategy_id})
+    if not strategy:
+        raise HTTPException(status_code=404, detail="Strategy not found")
+    
+    # Build update dict with only provided fields
+    update_dict = {k: v for k, v in update_data.dict().items() if v is not None}
+    
+    if not update_dict:
+        raise HTTPException(status_code=400, detail="No fields to update")
+    
+    # Update the strategy
+    await db.mental_strategies.update_one(
+        {"id": strategy_id},
+        {"$set": update_dict}
+    )
+    
+    # Return updated strategy
+    updated_strategy = await db.mental_strategies.find_one({"id": strategy_id})
+    if '_id' in updated_strategy:
+        del updated_strategy['_id']
+    return updated_strategy
 
 # ==================== SESSION ROUTES ====================
 
