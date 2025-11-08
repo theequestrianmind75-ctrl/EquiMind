@@ -61,7 +61,7 @@ export default function Ride() {
               <Text style={styles.optionTitle}>{option.title}</Text>
               <Text style={styles.optionDescription}>{option.description}</Text>
             </View>
-            <Ionicons name="chevron-forward" size={28} color="#64748b" />
+            <Ionicons name="chevron-forward" size={28} color="#000000" />
           </TouchableOpacity>
         ))}
       </ScrollView>
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     marginTop: 4,
   },
   scrollView: {
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
   },
   optionDescription: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     lineHeight: 20,
   },
 });

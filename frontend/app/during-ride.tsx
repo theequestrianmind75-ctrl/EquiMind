@@ -203,13 +203,13 @@ export default function DuringRide() {
           <View
             style={[
               styles.statusIndicator,
-              { backgroundColor: isListening ? '#10b98120' : '#64748b20' },
+              { backgroundColor: isListening ? '#10b98120' : '#00000020' },
             ]}
           >
             <Ionicons
               name={isListening ? 'mic' : 'mic-off'}
               size={48}
-              color={isListening ? '#10b981' : '#64748b'}
+              color={isListening ? '#10b981' : '#000000'}
             />
           </View>
           <Text style={styles.statusTitle}>
@@ -233,7 +233,7 @@ export default function DuringRide() {
             <Ionicons
               name={isListening ? 'mic' : 'mic-off'}
               size={28}
-              color={isListening ? '#10b981' : '#64748b'}
+              color={isListening ? '#10b981' : '#000000'}
             />
             <Text
               style={[
@@ -349,7 +349,7 @@ const styles = StyleSheet.create({
   horseStatLabel: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#64748b',
+    color: '#000000',
   },
   horseStatValue: {
     fontSize: 14,
@@ -365,7 +365,7 @@ const styles = StyleSheet.create({
   horseNotesLabel: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#64748b',
+    color: '#000000',
     marginBottom: 4,
   },
   horseNotesText: {
@@ -398,7 +398,7 @@ const styles = StyleSheet.create({
   },
   statusSubtitle: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     textAlign: 'center',
   },
   controls: {
@@ -430,7 +430,7 @@ const styles = StyleSheet.create({
     color: '#10b981',
   },
   controlButtonTextInactive: {
-    color: '#64748b',
+    color: '#000000',
   },
   adviceButton: {
     flexDirection: 'row',
@@ -470,7 +470,7 @@ const styles = StyleSheet.create({
   },
   adviceText: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     lineHeight: 22,
   },
   infoCard: {
@@ -490,7 +490,7 @@ const styles = StyleSheet.create({
   },
   infoText: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     lineHeight: 22,
     textAlign: 'left',
     width: '100%',

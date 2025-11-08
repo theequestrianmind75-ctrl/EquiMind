@@ -62,11 +62,11 @@ export default function Login() {
 
           <View style={styles.form}>
             <View style={styles.inputContainer}>
-              <Ionicons name="mail-outline" size={20} color="#64748b" style={styles.inputIcon} />
+              <Ionicons name="mail-outline" size={20} color="#000000" style={styles.inputIcon} />
               <TextInput
                 style={styles.input}
                 placeholder="Email"
-                placeholderTextColor="#64748b"
+                placeholderTextColor="#000000"
                 value={email}
                 onChangeText={setEmail}
                 keyboardType="email-address"
@@ -76,11 +76,11 @@ export default function Login() {
             </View>
 
             <View style={styles.inputContainer}>
-              <Ionicons name="lock-closed-outline" size={20} color="#64748b" style={styles.inputIcon} />
+              <Ionicons name="lock-closed-outline" size={20} color="#000000" style={styles.inputIcon} />
               <TextInput
                 style={styles.input}
                 placeholder="Password"
-                placeholderTextColor="#64748b"
+                placeholderTextColor="#000000"
                 value={password}
                 onChangeText={setPassword}
                 secureTextEntry
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     marginTop: 8,
   },
   form: {
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
     marginTop: 24,
   },
   footerText: {
-    color: '#64748b',
+    color: '#000000',
     fontSize: 14,
   },
   link: {

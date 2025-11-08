@@ -94,7 +94,7 @@ export default function Strategies() {
               <Text style={styles.categoryTitle}>{category.title}</Text>
               <Text style={styles.categoryDescription}>{category.description}</Text>
             </View>
-            <Ionicons name="chevron-forward" size={24} color="#64748b" />
+            <Ionicons name="chevron-forward" size={24} color="#000000" />
           </TouchableOpacity>
         ))}
 
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     marginTop: 4,
   },
   scrollView: {
@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
   },
   categoryDescription: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     lineHeight: 20,
   },
   infoCard: {
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
   infoText: {
     flex: 1,
     fontSize: 13,
-    color: '#64748b',
+    color: '#000000',
     marginLeft: 12,
     lineHeight: 20,
   },

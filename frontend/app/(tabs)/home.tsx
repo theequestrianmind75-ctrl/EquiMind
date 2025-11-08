@@ -92,7 +92,7 @@ export default function Home() {
                 <Text style={styles.actionTitle}>{action.title}</Text>
                 <Text style={styles.actionDescription}>{action.description}</Text>
               </View>
-              <Ionicons name="chevron-forward" size={24} color="#64748b" />
+              <Ionicons name="chevron-forward" size={24} color="#000000" />
             </TouchableOpacity>
           ))}
         </View>
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
   },
   greeting: {
     fontSize: 16,
-    color: '#64748b',
+    color: '#000000',
   },
   name: {
     fontSize: 28,
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
   },
   heroDescription: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     lineHeight: 22,
     textAlign: 'left',
   },
@@ -218,7 +218,7 @@ const styles = StyleSheet.create({
   },
   actionDescription: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
   },
   connectionCard: {
     backgroundColor: '#ffffff',
@@ -244,7 +244,7 @@ const styles = StyleSheet.create({
   },
   connectionDescription: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     lineHeight: 22,
     textAlign: 'center',
   },

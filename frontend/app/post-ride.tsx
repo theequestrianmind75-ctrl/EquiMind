@@ -148,7 +148,7 @@ export default function PostRide() {
         <ScrollView style={styles.scrollView}>
           {!selectedSession ? (
             <View style={styles.noSessionCard}>
-              <Ionicons name="document-text-outline" size={64} color="#64748b" />
+              <Ionicons name="document-text-outline" size={64} color="#000000" />
               <Text style={styles.noSessionTitle}>No Active Session</Text>
               <Text style={styles.noSessionText}>Create a post-ride session to track your progress</Text>
               <TouchableOpacity style={styles.createButton} onPress={createNewSession}>
@@ -271,7 +271,7 @@ export default function PostRide() {
                 <TextInput
                   style={styles.notesInput}
                   placeholder="What went well? What could be improved? How do you feel?"
-                  placeholderTextColor="#64748b"
+                  placeholderTextColor="#000000"
                   value={notes}
                   onChangeText={setNotes}
                   multiline
@@ -309,7 +309,7 @@ const styles = StyleSheet.create({
   },
   loadingText: {
     marginTop: 16,
-    color: '#64748b',
+    color: '#000000',
     fontSize: 16,
   },
   header: {
@@ -353,7 +353,7 @@ const styles = StyleSheet.create({
   },
   noSessionText: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     marginTop: 8,
     textAlign: 'center',
   },
@@ -391,7 +391,7 @@ const styles = StyleSheet.create({
   },
   sessionInfoSubtitle: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     marginTop: 4,
   },
   horseCard: {
@@ -426,7 +426,7 @@ const styles = StyleSheet.create({
   horseStatLabel: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#64748b',
+    color: '#000000',
   },
   horseStatValue: {
     fontSize: 14,
@@ -442,7 +442,7 @@ const styles = StyleSheet.create({
   horseNotesLabel: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#64748b',
+    color: '#000000',
     marginBottom: 4,
   },
   horseNotesText: {
@@ -483,7 +483,7 @@ const styles = StyleSheet.create({
   scaleButtonText: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#64748b',
+    color: '#000000',
   },
   scaleButtonTextActive: {
     color: '#ffffff',
@@ -495,7 +495,7 @@ const styles = StyleSheet.create({
   },
   scaleLabel: {
     fontSize: 12,
-    color: '#64748b',
+    color: '#000000',
   },
   notesInput: {
     backgroundColor: '#ffffff',

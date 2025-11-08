@@ -62,7 +62,7 @@ export default function History() {
     if (sessionType === 'pre-ride') return '#10b981';
     if (sessionType === 'during-ride') return '#000000';
     if (sessionType === 'post-ride') return '#8b5cf6';
-    return '#64748b';
+    return '#000000';
   };
 
   if (loading) {
@@ -85,7 +85,7 @@ export default function History() {
 
       {sessions.length === 0 ? (
         <View style={styles.emptyContainer}>
-          <Ionicons name="calendar-outline" size={64} color="#64748b" />
+          <Ionicons name="calendar-outline" size={64} color="#000000" />
           <Text style={styles.emptyTitle}>No Sessions Yet</Text>
           <Text style={styles.emptyText}>Start your first ride to see your history here</Text>
         </View>
@@ -128,7 +128,7 @@ export default function History() {
 
               <View style={styles.sessionDetails}>
                 <View style={styles.detailRow}>
-                  <Ionicons name="trail-sign-outline" size={16} color="#64748b" />
+                  <Ionicons name="trail-sign-outline" size={16} color="#000000" />
                   <Text style={styles.detailText}>
                     {session.ride_type.charAt(0).toUpperCase() + session.ride_type.slice(1)}
                   </Text>
@@ -136,14 +136,14 @@ export default function History() {
 
                 {session.anxiety_level !== null && (
                   <View style={styles.detailRow}>
-                    <Ionicons name="pulse-outline" size={16} color="#64748b" />
+                    <Ionicons name="pulse-outline" size={16} color="#000000" />
                     <Text style={styles.detailText}>Anxiety: {session.anxiety_level}/10</Text>
                   </View>
                 )}
 
                 {session.confidence_level !== null && (
                   <View style={styles.detailRow}>
-                    <Ionicons name="shield-checkmark-outline" size={16} color="#64748b" />
+                    <Ionicons name="shield-checkmark-outline" size={16} color="#000000" />
                     <Text style={styles.detailText}>Confidence: {session.confidence_level}/10</Text>
                   </View>
                 )}
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
   },
   loadingText: {
     marginTop: 16,
-    color: '#64748b',
+    color: '#000000',
     fontSize: 16,
   },
   header: {
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     marginTop: 4,
   },
   emptyContainer: {
@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
   },
   emptyText: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     marginTop: 8,
     textAlign: 'center',
   },
@@ -245,7 +245,7 @@ const styles = StyleSheet.create({
   },
   sessionDate: {
     fontSize: 12,
-    color: '#64748b',
+    color: '#000000',
     marginTop: 2,
   },
   completedBadge: {
@@ -275,7 +275,7 @@ const styles = StyleSheet.create({
   detailText: {
     marginLeft: 6,
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
   },
   notesContainer: {
     marginTop: 12,
@@ -286,7 +286,7 @@ const styles = StyleSheet.create({
   notesLabel: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#64748b',
+    color: '#000000',
     marginBottom: 4,
   },
   notesText: {

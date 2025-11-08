@@ -89,7 +89,7 @@ export default function PreRide() {
                   <Ionicons
                     name={type.icon as any}
                     size={28}
-                    color={rideType === type.id ? '#000000' : '#64748b'}
+                    color={rideType === type.id ? '#000000' : '#000000'}
                   />
                   <Text
                     style={[
@@ -171,7 +171,7 @@ export default function PreRide() {
             <TextInput
               style={styles.notesInput}
               placeholder="Set your intention, goals, or any thoughts..."
-              placeholderTextColor="#64748b"
+              placeholderTextColor="#000000"
               value={notes}
               onChangeText={setNotes}
               multiline
@@ -280,7 +280,7 @@ export default function PreRide() {
             <TextInput
               style={styles.notesInput}
               placeholder="How is your horse feeling today? Any observations..."
-              placeholderTextColor="#64748b"
+              placeholderTextColor="#000000"
               value={horseNotes}
               onChangeText={setHorseNotes}
               multiline
@@ -377,7 +377,7 @@ const styles = StyleSheet.create({
   rideTypeLabel: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#64748b',
+    color: '#000000',
     marginTop: 8,
   },
   rideTypeLabelActive: {
@@ -407,7 +407,7 @@ const styles = StyleSheet.create({
   scaleButtonText: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#64748b',
+    color: '#000000',
   },
   scaleButtonTextActive: {
     color: '#ffffff',
@@ -419,7 +419,7 @@ const styles = StyleSheet.create({
   },
   scaleLabel: {
     fontSize: 12,
-    color: '#64748b',
+    color: '#000000',
   },
   notesInput: {
     backgroundColor: '#ffffff',

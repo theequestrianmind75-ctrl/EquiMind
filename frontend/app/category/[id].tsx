@@ -394,7 +394,7 @@ export default function CategoryDetail() {
                 <View style={styles.toolHeader}>
                   <Text style={styles.toolName}>{strategy.name}</Text>
                   <View style={styles.duration}>
-                    <Ionicons name="time-outline" size={16} color="#64748b" />
+                    <Ionicons name="time-outline" size={16} color="#000000" />
                     <Text style={styles.durationText}>{strategy.duration_minutes} min</Text>
                   </View>
                 </View>
@@ -479,7 +479,7 @@ const styles = StyleSheet.create({
   },
   loadingText: {
     marginTop: 16,
-    color: '#64748b',
+    color: '#000000',
     fontSize: 16,
   },
   header: {
@@ -516,7 +516,7 @@ const styles = StyleSheet.create({
   },
   descriptionText: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     lineHeight: 22,
     marginBottom: 12,
   },
@@ -554,7 +554,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     marginBottom: 24,
   },
   toolCard: {
@@ -593,14 +593,14 @@ const styles = StyleSheet.create({
   durationText: {
     marginLeft: 4,
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
   },
   instructionsContainer: {
     marginBottom: 16,
   },
   instructionsText: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     lineHeight: 22,
   },
   toolActions: {
@@ -662,7 +662,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 4,
   },
   cancelButton: {
-    backgroundColor: '#64748b',
+    backgroundColor: '#000000',
   },
   saveButton: {
     backgroundColor: '#10b981',
@@ -728,7 +728,7 @@ const styles = StyleSheet.create({
   modalButtonText: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#64748b',
+    color: '#000000',
   },
   modalSubmitButtonText: {
     color: '#ffffff',

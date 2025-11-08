@@ -300,7 +300,7 @@ const styles = StyleSheet.create({
   },
   introText: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     lineHeight: 22,
   },
   diagramCard: {
@@ -325,7 +325,7 @@ const styles = StyleSheet.create({
   },
   imageCaption: {
     fontSize: 12,
-    color: '#64748b',
+    color: '#000000',
     fontStyle: 'italic',
     textAlign: 'center',
   },
@@ -380,7 +380,7 @@ const styles = StyleSheet.create({
   },
   pointText: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     lineHeight: 20,
   },
   usageCard: {
@@ -401,7 +401,7 @@ const styles = StyleSheet.create({
   },
   usageText: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     lineHeight: 22,
     textAlign: 'left',
     width: '100%',

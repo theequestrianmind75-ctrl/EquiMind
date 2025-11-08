@@ -220,7 +220,7 @@ const styles = StyleSheet.create({
   },
   loadingText: {
     marginTop: 16,
-    color: '#64748b',
+    color: '#000000',
     fontSize: 16,
   },
   header: {
@@ -287,7 +287,7 @@ const styles = StyleSheet.create({
   },
   metaLabel: {
     fontSize: 12,
-    color: '#64748b',
+    color: '#000000',
     marginTop: 4,
   },
   audioButton: {
@@ -331,7 +331,7 @@ const styles = StyleSheet.create({
   },
   levelLabel: {
     fontSize: 12,
-    color: '#64748b',
+    color: '#000000',
     marginTop: 8,
   },
   levelValue: {
@@ -349,7 +349,7 @@ const styles = StyleSheet.create({
   },
   instructionsText: {
     fontSize: 14,
-    color: '#64748b',
+    color: '#000000',
     lineHeight: 24,
   },
   tagContainer: {
@@ -368,7 +368,7 @@ const styles = StyleSheet.create({
   },
   tagText: {
     fontSize: 12,
-    color: '#64748b',
+    color: '#000000',
     fontWeight: '600',
   },
 });
