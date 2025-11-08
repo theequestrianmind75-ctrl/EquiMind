@@ -172,8 +172,8 @@ export default function PostRide() {
               {(selectedSession.horse_energy_level || selectedSession.horse_focus_level || selectedSession.horse_responsiveness) && (
                 <View style={styles.horseCard}>
                   <View style={styles.horseHeader}>
-                    <Ionicons name="horse" size={24} color="#14b8a6" />
-                    <Text style={styles.horseTitle}>Horse Assessment (Pre-Ride)</Text>
+                    <Ionicons name="tennisball" size={24} color="#000000" />
+                    <Text style={styles.horseTitle}>YOUR HORSE</Text>
                   </View>
                   <View style={styles.horseStats}>
                     <View style={styles.horseStat}>
