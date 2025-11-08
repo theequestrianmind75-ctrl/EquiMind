@@ -93,7 +93,7 @@ export default function Strategies() {
         <View style={styles.infoCard}>
           <Ionicons name="information-circle" size={24} color="#000000" />
           <Text style={styles.infoText}>
-            These tools are personalized based on your pre-ride anxiety and confidence levels.
+            These tools are personalized based on your pre-ride anxiety, confidence, and energy levels.
           </Text>
         </View>
       </ScrollView>
