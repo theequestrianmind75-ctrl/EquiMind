@@ -104,7 +104,7 @@ export default function Home() {
             onPress={() => router.push('/horse-rider-connection' as any)}
           >
             <View style={styles.connectionHeader}>
-              <Ionicons name="tennisball" size={40} color="#000000" />
+              <Ionicons name="horse" size={40} color="#000000" />
               <Text style={styles.connectionTitle}>Build Your Partnership Profile</Text>
             </View>
             <Text style={styles.connectionText}>
