@@ -374,7 +374,7 @@ const styles = StyleSheet.create({
   sectionHeader: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#14b8a6',
+    color: '#000000',
     marginBottom: 24,
     textAlign: 'center',
   },
