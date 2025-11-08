@@ -157,6 +157,16 @@ export default function History() {
                   <Text style={styles.notesText}>{session.notes}</Text>
                 </View>
               )}
+
+              {session.completed && (
+                <TouchableOpacity
+                  style={styles.viewSummaryButton}
+                  onPress={() => router.push(`/ride-summary?sessionId=${session.id}` as any)}
+                >
+                  <Ionicons name="document-text" size={20} color="#ffffff" />
+                  <Text style={styles.viewSummaryText}>View Summary</Text>
+                </TouchableOpacity>
+              )}
             </View>
           ))}
         </ScrollView>
