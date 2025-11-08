@@ -89,7 +89,7 @@ export default function PreRide() {
                   <Ionicons
                     name={type.icon as any}
                     size={28}
-                    color={rideType === type.id ? '#000000' : '#000000'}
+                    color="#000000"
                   />
                   <Text
                     style={[
