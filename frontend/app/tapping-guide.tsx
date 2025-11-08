@@ -39,7 +39,7 @@ export default function TappingGuide() {
         <View style={styles.diagramCard}>
           <Text style={styles.sectionTitle}>EFT Tapping Points Chart</Text>
           <Image
-            source={{ uri: 'https://www.thrivingnow.com/wp-content/uploads/2023/02/EFT-Tapping-Points-GenderNeutral.png' }}
+            source={{ uri: 'https://www.thrivingnow.com/wp-content/uploads/2022/10/EFT-Tapping-Points-Female-3300x6000-1.png' }}
             style={styles.diagram}
             resizeMode="contain"
           />
