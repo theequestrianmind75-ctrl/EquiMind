@@ -306,6 +306,15 @@ export default function CategoryDetail() {
                 <Text style={styles.guideButtonText}>View Full Tapping Guide</Text>
               </TouchableOpacity>
             )}
+            {id === 'horse-rider' && (
+              <TouchableOpacity
+                style={[styles.guideButton, { backgroundColor: '#14b8a6' }]}
+                onPress={() => router.push('/horse-rider-connection' as any)}
+              >
+                <Ionicons name="clipboard" size={20} color="#ffffff" />
+                <Text style={styles.guideButtonText}>Complete Rider Profile</Text>
+              </TouchableOpacity>
+            )}
           </View>
         )}
         
