@@ -240,7 +240,7 @@ export default function TappingGuide() {
         </View>
 
         <View style={styles.usageCard}>
-          <Ionicons name="information-circle" size={32} color="#ec4899" />
+          <Ionicons name="horse" size={32} color="#000000" />
           <Text style={styles.usageTitle}>How to Use EFT Tapping</Text>
           <Text style={styles.usageText}>
             <Text style={styles.bold}>Before Riding:</Text> Use tapping to calm pre-ride anxiety and set a positive intention.
