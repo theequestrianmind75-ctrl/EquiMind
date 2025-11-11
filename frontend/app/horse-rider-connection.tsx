@@ -57,7 +57,7 @@ export default function HorseRiderConnection() {
       >
         <ScrollView style={styles.scrollView}>
           <View style={styles.introCard}>
-            <Ionicons name="git-network" size={32} color="#14b8a6" />
+            <Ionicons name="horse" size={32} color="#000000" />
             <Text style={styles.introTitle}>Build Your Partnership Profile</Text>
             <Text style={styles.introText}>
               Understanding your riding background and your horse's personality helps create a stronger bond and improves your communication.
