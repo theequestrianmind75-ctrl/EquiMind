@@ -164,7 +164,7 @@ Status: ${session.completed ? 'Completed' : 'In Progress'}
       <ScrollView style={styles.scrollView}>
         <View style={styles.summaryCard}>
           <View style={styles.summaryHeader}>
-            <Ionicons name="horse" size={32} color="#375B50" />
+            <Ionicons name="shield" size={32} color="#375B50" />
             <View style={styles.summaryHeaderText}>
               <Text style={styles.summaryTitle}>{rideTypeLabel} Ride</Text>
               <Text style={styles.summaryDate}>{date}</Text>

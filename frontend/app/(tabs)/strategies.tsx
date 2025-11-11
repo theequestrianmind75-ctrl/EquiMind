@@ -91,7 +91,7 @@ export default function Strategies() {
         ))}
 
         <View style={styles.infoCard}>
-          <Ionicons name="horse" size={24} color="#000000" />
+          <Ionicons name="shield" size={24} color="#000000" />
           <Text style={styles.infoText}>
             These tools are personalized based on your pre-ride anxiety, confidence, and energy levels.
           </Text>

@@ -161,7 +161,7 @@ export default function DuringRide() {
 
       <ScrollView style={styles.content}>
         <View style={styles.infoCard}>
-          <Ionicons name="horse" size={32} color="#000000" />
+          <Ionicons name="shield" size={32} color="#000000" />
           <Text style={styles.infoTitle}>How It Works</Text>
           <Text style={styles.infoText}>
             1. Activate voice trigger{"\n"}
@@ -236,7 +236,7 @@ export default function DuringRide() {
         {lastAdvice ? (
           <View style={styles.adviceCard}>
             <View style={styles.adviceHeader}>
-              <Ionicons name="horse" size={24} color="#000000" />
+              <Ionicons name="shield" size={24} color="#000000" />
               <Text style={styles.adviceTitle}>Last Advice</Text>
             </View>
             <Text style={styles.adviceText}>{lastAdvice}</Text>

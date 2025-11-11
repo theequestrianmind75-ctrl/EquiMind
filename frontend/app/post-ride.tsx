@@ -159,7 +159,7 @@ export default function PostRide() {
           ) : (
             <>
               <View style={styles.sessionInfo}>
-                <Ionicons name="horse" size={24} color="#000000" />
+                <Ionicons name="shield" size={24} color="#000000" />
                 <View style={styles.sessionInfoText}>
                   <Text style={styles.sessionInfoTitle}>Current Session</Text>
                   <Text style={styles.sessionInfoSubtitle}>
@@ -172,7 +172,7 @@ export default function PostRide() {
               {(selectedSession.horse_energy_level || selectedSession.horse_focus_level || selectedSession.horse_responsiveness) && (
                 <View style={styles.horseCard}>
                   <View style={styles.horseHeader}>
-                    <Ionicons name="horse" size={24} color="#000000" />
+                    <Ionicons name="shield" size={24} color="#000000" />
                     <Text style={styles.horseTitle}>YOUR HORSE</Text>
                   </View>
                   <View style={styles.horseStats}>
