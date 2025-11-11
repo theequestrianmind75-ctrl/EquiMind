@@ -160,44 +160,16 @@ export default function DuringRide() {
       </View>
 
       <ScrollView style={styles.content}>
-        {loading ? (
-          <View style={styles.loadingContainer}>
-            <ActivityIndicator size="large" color="#000000" />
-          </View>
-        ) : currentSession && (
-          <View style={styles.sessionCard}>
-            <View style={styles.sessionHeader}>
-              <Ionicons name="horse" size={24} color="#000000" />
-              <Text style={styles.sessionTitle}>Your Horse Today</Text>
-            </View>
-            <View style={styles.horseStats}>
-              <View style={styles.horseStat}>
-                <Text style={styles.horseStatLabel}>Energy</Text>
-                <Text style={styles.horseStatValue}>
-                  {currentSession.horse_energy_level || 'N/A'} - {getEnergyLabel(currentSession.horse_energy_level)}
-                </Text>
-              </View>
-              <View style={styles.horseStat}>
-                <Text style={styles.horseStatLabel}>Focus</Text>
-                <Text style={styles.horseStatValue}>
-                  {currentSession.horse_focus_level || 'N/A'} - {getFocusLabel(currentSession.horse_focus_level)}
-                </Text>
-              </View>
-              <View style={styles.horseStat}>
-                <Text style={styles.horseStatLabel}>Responsiveness</Text>
-                <Text style={styles.horseStatValue}>
-                  {currentSession.horse_responsiveness || 'N/A'} - {getResponsivenessLabel(currentSession.horse_responsiveness)}
-                </Text>
-              </View>
-            </View>
-            {currentSession.horse_notes && (
-              <View style={styles.horseNotes}>
-                <Text style={styles.horseNotesLabel}>Notes:</Text>
-                <Text style={styles.horseNotesText}>{currentSession.horse_notes}</Text>
-              </View>
-            )}
-          </View>
-        )}
+        <View style={styles.infoCard}>
+          <Ionicons name="horse" size={32} color="#000000" />
+          <Text style={styles.infoTitle}>How It Works</Text>
+          <Text style={styles.infoText}>
+            1. Activate voice trigger{"\n"}
+            2. Say "advice" during your ride{"\n"}
+            3. Get real-time mental coaching via audio{"\n"}
+            4. Or tap "Get Advice Now" for instant guidance
+          </Text>
+        </View>
 
         <View style={styles.statusCard}>
           <View
