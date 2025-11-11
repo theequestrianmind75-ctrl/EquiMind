@@ -242,17 +242,6 @@ export default function DuringRide() {
             <Text style={styles.adviceText}>{lastAdvice}</Text>
           </View>
         ) : null}
-
-        <View style={styles.infoCard}>
-          <Ionicons name="horse" size={32} color="#000000" />
-          <Text style={styles.infoTitle}>How It Works</Text>
-          <Text style={styles.infoText}>
-            1. Activate voice trigger{"\n"}
-            2. Say "advice" during your ride{"\n"}
-            3. Get real-time mental coaching via audio{"\n"}
-            4. Or tap "Get Advice Now" for instant guidance
-          </Text>
-        </View>
       </ScrollView>
     </SafeAreaView>
   );
