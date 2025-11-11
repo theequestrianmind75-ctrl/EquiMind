@@ -159,7 +159,7 @@ export default function PostRide() {
           ) : (
             <>
               <View style={styles.sessionInfo}>
-                <Ionicons name="information-circle" size={24} color="#000000" />
+                <Ionicons name="horse" size={24} color="#000000" />
                 <View style={styles.sessionInfoText}>
                   <Text style={styles.sessionInfoTitle}>Current Session</Text>
                   <Text style={styles.sessionInfoSubtitle}>
