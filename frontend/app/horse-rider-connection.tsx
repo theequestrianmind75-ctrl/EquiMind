@@ -58,7 +58,11 @@ export default function HorseRiderConnection() {
       >
         <ScrollView style={styles.scrollView}>
           <View style={styles.introCard}>
-            <Ionicons name="shield" size={32} color="#000000" />
+            <Image 
+              source={{ uri: 'https://customer-assets.emergentagent.com/job_mental-equestrian/artifacts/337ywfin_black%20horse%20head.png' }}
+              style={styles.horseIcon}
+              resizeMode="contain"
+            />
             <Text style={styles.introTitle}>Build Your Partnership Profile</Text>
             <Text style={styles.introText}>
               Understanding your riding background and your horse's personality helps create a stronger bond and improves your communication.
