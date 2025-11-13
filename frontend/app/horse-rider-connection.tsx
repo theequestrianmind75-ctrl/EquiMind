@@ -257,6 +257,11 @@ const styles = StyleSheet.create({
     borderColor: '#375B50',
     alignItems: 'center',
   },
+  horseIcon: {
+    width: 48,
+    height: 48,
+    marginBottom: 12,
+  },
   introTitle: {
     fontSize: 20,
     fontWeight: 'bold',
