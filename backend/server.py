@@ -277,6 +277,43 @@ async def update_strategy(
         del updated_strategy['_id']
     return updated_strategy
 
+@api_router.post("/mental-strategies/bulk-update")
+async def bulk_update_strategies(
+    updates: List[dict],
+    current_user: dict = Depends(get_current_user)
+):
+    """Bulk update multiple strategies - admin function"""
+    updated_count = 0
+    
+    for update in updates:
+        strategy_id = update.get("id")
+        if not strategy_id:
+            continue
+            
+        strategy = await db.mental_strategies.find_one({"id": strategy_id})
+        if not strategy:
+            continue
+        
+        # Build update dict
+        update_dict = {}
+        if "instructions" in update:
+            update_dict["instructions"] = update["instructions"]
+        if "name" in update:
+            update_dict["name"] = update["name"]
+        if "category" in update:
+            update_dict["category"] = update["category"]
+        if "duration_minutes" in update:
+            update_dict["duration_minutes"] = update["duration_minutes"]
+        
+        if update_dict:
+            await db.mental_strategies.update_one(
+                {"id": strategy_id},
+                {"$set": update_dict}
+            )
+            updated_count += 1
+    
+    return {"updated": updated_count, "total": len(updates)}
+
 # ==================== SESSION ROUTES ====================
 
 @api_router.post("/sessions", response_model=Session)
