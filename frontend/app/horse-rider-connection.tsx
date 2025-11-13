@@ -59,7 +59,7 @@ export default function HorseRiderConnection() {
         <ScrollView style={styles.scrollView}>
           <View style={styles.introCard}>
             <Image 
-              source={{ uri: 'https://customer-assets.emergentagent.com/job_mental-equestrian/artifacts/337ywfin_black%20horse%20head.png' }}
+              source={{ uri: 'https://customer-assets.emergentagent.com/job_mental-equestrian/artifacts/337ywfin_black horse head.png' }}
               style={styles.horseIcon}
               resizeMode="contain"
             />
