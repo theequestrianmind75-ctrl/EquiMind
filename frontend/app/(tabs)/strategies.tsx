@@ -73,9 +73,13 @@ export default function Strategies() {
             style={styles.categoryCard}
             onPress={() => router.push(`/category/${category.id}` as any)}
           >
-            <View style={[styles.iconCircle, { backgroundColor: category.color + '20' }]}>
-              <Ionicons name={category.icon as any} size={32} color={category.color} />
-            </View>
+            {category.image ? (
+              <Image source={category.image} style={styles.categoryImage} />
+            ) : (
+              <View style={[styles.iconCircle, { backgroundColor: category.color + '20' }]}>
+                <Ionicons name={category.icon as any} size={32} color={category.color} />
+              </View>
+            )}
             <View style={styles.categoryContent}>
               <Text style={styles.categoryTitle}>{category.title}</Text>
               <Text style={styles.categoryDescription}>{category.description}</Text>
