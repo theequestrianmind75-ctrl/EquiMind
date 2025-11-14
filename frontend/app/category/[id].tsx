@@ -49,6 +49,12 @@ const CATEGORIES: any = {
     color: '#8b5cf6',
     keywords: ['somatic reset'],
   },
+  tapping: {
+    title: 'Tapping / EFT',
+    color: '#ec4899',
+    keywords: ['tapping / eft'],
+    description: 'EFT (Emotional Freedom Technique) combines modern psychology with ancient Chinese acupressure. By tapping on specific meridian points while focusing on your concerns, you send calming signals to your brain, helping release stress, anxiety, and emotional blocks. Perfect for pre-ride nerves, competition anxiety, or processing difficult experiences.',
+  },
 };
 
 const ADMIN_PASSWORD = 'equimind2025';
