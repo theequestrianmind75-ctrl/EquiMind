@@ -140,6 +140,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginRight: 16,
   },
+  categoryImage: {
+    width: 64,
+    height: 64,
+    borderRadius: 32,
+    marginRight: 16,
+  },
   categoryContent: {
     flex: 1,
   },
