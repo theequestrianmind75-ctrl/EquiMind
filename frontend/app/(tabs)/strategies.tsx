@@ -43,6 +43,15 @@ const CATEGORIES = [
     color: '#8b5cf6',
     keywords: ['somatic', 'reset'],
   },
+  {
+    id: 'tapping',
+    title: 'Tapping / EFT',
+    description: 'Emotional Freedom Technique for stress relief',
+    icon: 'hand-left',
+    color: '#ec4899',
+    keywords: ['tapping', 'eft'],
+    image: require('../../assets/images/tapping-feminine.jpg'),
+  },
 ];
 
 export default function Strategies() {
