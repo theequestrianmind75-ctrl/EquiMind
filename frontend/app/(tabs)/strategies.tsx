@@ -22,7 +22,7 @@ const CATEGORIES = [
   },
   {
     id: 'breathing',
-    title: 'Breathing / HRV',
+    title: 'Breathing / Heart Rate Variability',
     description: 'Regulate your nervous system through breath',
     icon: 'fitness',
     color: '#375B50',
