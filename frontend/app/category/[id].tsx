@@ -35,7 +35,7 @@ const CATEGORIES: any = {
     keywords: ['mindfulness & flow'],
   },
   breathing: {
-    title: 'Breathing / HRV',
+    title: 'Breathing / Heart Rate Variability',
     color: '#375B50',
     keywords: ['breathing / hrv'],
   },
