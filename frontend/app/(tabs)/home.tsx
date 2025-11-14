@@ -285,4 +285,21 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     textAlign: 'center',
   },
+  adminButton: {
+    flexDirection: 'row',
+    backgroundColor: '#ef4444',
+    paddingVertical: 16,
+    paddingHorizontal: 24,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: '#dc2626',
+  },
+  adminButtonText: {
+    color: '#ffffff',
+    fontSize: 16,
+    fontWeight: '600',
+    marginLeft: 8,
+  },
 });
