@@ -51,7 +51,6 @@ const CATEGORIES = [
     icon: 'hand-left',
     color: '#ec4899',
     keywords: ['tapping', 'eft'],
-    image: require('../../assets/images/tapping-hand.jpg'),
   },
 ];
 
