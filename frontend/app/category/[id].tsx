@@ -30,47 +30,24 @@ interface Strategy {
 
 const CATEGORIES: any = {
   mindfulness: {
-    title: 'Mindfulness and Flow',
+    title: 'Mindfulness & Flow',
     color: '#10b981',
-    keywords: ['mindfulness', 'flow'],
-    excludeKeywords: ['tapping', 'eft'],
+    keywords: ['mindfulness & flow'],
   },
   breathing: {
-    title: 'Breathing',
+    title: 'Breathing / HRV',
     color: '#375B50',
-    keywords: ['breathing'],
-    excludeKeywords: ['tapping', 'eft'],
-  },
-  emotional: {
-    title: 'Emotional Regulation',
-    color: '#f59e0b',
-    keywords: ['activation', 'emotional', 'regulation'],
-    excludeKeywords: ['tapping', 'eft'],
+    keywords: ['breathing / hrv'],
   },
   grounding: {
-    title: 'Grounding',
+    title: 'Activation / Grounding',
     color: '#06b6d4',
-    keywords: ['grounding'],
-    excludeKeywords: ['tapping', 'eft'],
+    keywords: ['activation / grounding'],
   },
   somatic: {
-    title: 'Somatic Tools',
+    title: 'Somatic Reset',
     color: '#8b5cf6',
-    keywords: ['somatic'],
-    excludeKeywords: ['tapping', 'eft'],
-  },
-  tapping: {
-    title: 'Tapping',
-    color: '#ec4899',
-    keywords: ['tapping', 'eft'],
-    description: 'EFT (Emotional Freedom Technique) or "tapping" uses gentle tapping on specific acupressure points to reduce stress and anxiety. This technique helps calm your nervous system before riding, during challenging moments, or after a difficult session.',
-  },
-  'horse-rider': {
-    title: 'Horse-Rider Connection',
-    color: '#14b8a6',
-    keywords: ['co-regulation', 'cueing', 'connection', 'horse-rider'],
-    description: 'These tools focus on strengthening the bond between you and your horse. By understanding co-regulation, improving communication through cueing, and building trust, you create a partnership that enhances both performance and the riding experience.',
-    excludeKeywords: ['tapping', 'eft'],
+    keywords: ['somatic reset'],
   },
 };
 
