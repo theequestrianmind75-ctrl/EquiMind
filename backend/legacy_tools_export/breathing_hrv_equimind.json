@@ -1,0 +1,866 @@
+[
+  {
+    "id": "f4fcbbe7-cbe7-419c-8ce6-901f075a8ce0",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 1,
+      "anxiety_max": 3,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019.  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "5b2cfcf3-b973-4ec8-8460-529b1abc2101",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 1,
+      "anxiety_max": 3,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019.  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "c12c4d93-49b3-4ed1-b388-23945c924db3",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 1,
+      "anxiety_max": 3,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019.  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "e3d62dbb-7ffe-439b-ad27-3bc01dda970d",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 1,
+      "anxiety_max": 3,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019.  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "36617896-25eb-473b-8f5e-2d00d1defd98",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 1,
+      "anxiety_max": 3,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "3e187d4d-1be8-4df0-9753-0238085389eb",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 1,
+      "anxiety_max": 3,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "46d51ac6-1d7b-469b-bd0a-acda2a77c96f",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 1,
+      "anxiety_max": 3,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "be3a7496-5256-4ae7-97d7-f5a3c58d212a",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 1,
+      "anxiety_max": 3,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "780b8c69-b9e9-458d-930e-3f7a96846e4f",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 1,
+      "anxiety_max": 3,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 5-senses sweep; savor 3 smooth strides..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "bf2d05aa-3dc8-4977-a4fc-89401d356a5c",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 1,
+      "anxiety_max": 3,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Count 1\u20132\u20133, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "1e5d6732-82ac-4077-b4ea-dff4f2c26104",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 1,
+      "anxiety_max": 3,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Approach\u2013retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "b9ce4fd7-1188-424c-b427-f2a957edca30",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 1,
+      "anxiety_max": 3,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "ebb7d295-f051-4b60-9b95-e41fc4714201",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 4,
+      "anxiety_max": 6,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "c219cdca-be6a-4604-a6d2-3fa66e65a15f",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 4,
+      "anxiety_max": 6,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "3a80cad4-e9bf-4f00-930a-dadf3681a6fe",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 4,
+      "anxiety_max": 6,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "a6af252b-04b3-497b-81de-8644c7de2615",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 4,
+      "anxiety_max": 6,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "a68cfe3d-65a3-4d1e-8e11-1fec15439363",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 4,
+      "anxiety_max": 6,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "74d5a90f-38b9-4487-9859-788801a91662",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 4,
+      "anxiety_max": 6,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "7bddb865-5780-4c42-8c95-a57cd11e0e6d",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 4,
+      "anxiety_max": 6,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "7e2db46e-ad3b-4278-86ce-a00fabc6d11e",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 4,
+      "anxiety_max": 6,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "d2bb1010-ebed-414f-b05f-a084930ffad2",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 4,
+      "anxiety_max": 6,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 5-senses sweep; savor 3 smooth strides..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "45fc151f-d8de-4fa5-b7db-944b094ae3de",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 4,
+      "anxiety_max": 6,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Count 1\u20132\u20133, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "9d20f483-290e-4c76-b578-832054884dfb",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 4,
+      "anxiety_max": 6,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Approach\u2013retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "2c824480-c7af-473d-a266-eaad2f73c9be",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 4,
+      "anxiety_max": 6,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "b77c3169-b865-45a7-a3eb-9d1bb51aae5f",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 6,
+      "anxiety_max": 10,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 5-senses sweep; savor 3 smooth strides..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "e5c4cc56-cbbe-40d9-a4c5-65a982a2ae1b",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 6,
+      "anxiety_max": 10,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Count 1\u20132\u20133, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "6b4f696a-db74-4fcd-8191-10f03119dad2",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 6,
+      "anxiety_max": 10,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Approach\u2013retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "ddc97840-ebab-408b-a498-01dd51c096e3",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 6,
+      "anxiety_max": 10,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "42186eef-68f1-4265-957a-43b7715daece",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 6,
+      "anxiety_max": 10,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 5-senses sweep; savor 3 smooth strides..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "5e7edc6f-ec81-4fbe-8628-1576433c6c07",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 6,
+      "anxiety_max": 10,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Count 1\u20132\u20133, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "56d2a004-fadf-4ec9-b712-8e1fd3be03ec",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 6,
+      "anxiety_max": 10,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Approach\u2013retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "fd1c27b9-fa19-40bb-a3e3-d45c2d854791",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 6,
+      "anxiety_max": 10,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "91d23e55-9d51-4d6c-982e-acf81789bd0a",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 6,
+      "anxiety_max": 10,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 5-senses sweep; savor 3 smooth strides..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "ee47fe48-6d8c-4ea5-818a-6afa26986405",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 6,
+      "anxiety_max": 10,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Count 1\u20132\u20133, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "49ab126a-eb1e-4082-afc1-b7726506d92d",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 6,
+      "anxiety_max": 10,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Approach\u2013retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "43cb6b66-b6a1-41de-be4b-69c9b2a2e79f",
+    "name": "Breathing / HRV",
+    "category": "breathing_hrv",
+    "description": "Breathing exercise to regulate the nervous system and improve rider-horse connection.",
+    "duration_minutes": 5,
+    "trigger_conditions": {
+      "anxiety_min": 6,
+      "anxiety_max": 10,
+      "confidence_min": 1,
+      "confidence_max": 5
+    },
+    "instructions": [
+      "Place your horse and yourself in a safe, low-demand context (halt or easy walk) before starting this tool.",
+      "Follow this focus: Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 \u2014 6\u20138 cycles. Say it: \u2018Rhythm before results.\u2019 Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+      "Continue for the suggested duration or several breaths/strides, then return to normal riding and briefly notice what feels different."
+    ],
+    "evidence_base": "Heart rate variability (HRV) research, respiratory sinus arrhythmia, autonomic regulation studies, and breathwork for performance.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "hyperarousal"
+    ]
+  }
+]
