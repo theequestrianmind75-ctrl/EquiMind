@@ -64,7 +64,7 @@ export default function Home() {
         <View style={styles.heroCard}>
           <Image
             source={require('../../assets/images/horse-head-logo.png')}
-            style={styles.heroLogo}
+            style={[styles.heroLogo, { tintColor: '#000000' }]}
           />
           <Text style={styles.heroTitle}>How It Works</Text>
           <Text style={styles.heroDescription}>
