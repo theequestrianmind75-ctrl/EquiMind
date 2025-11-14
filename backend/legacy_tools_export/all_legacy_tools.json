@@ -1,0 +1,3368 @@
+[
+  {
+    "_id": "69175fa890af047e517bb657",
+    "id": "31802147-adeb-4770-ae7d-28b6abddc388",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 3.5
+  },
+  {
+    "_id": "69175fa890af047e517bb658",
+    "id": "ccd6694d-ddaa-45cc-b1bb-501d961e42a8",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. 5-senses sweep; savor 3 smooth strides. Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 3.5
+  },
+  {
+    "_id": "69175fa890af047e517bb659",
+    "id": "333b4a47-f054-4a09-a20b-087dfaef9a9a",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. 5-senses sweep; savor 3 smooth strides. Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 3.5
+  },
+  {
+    "_id": "69175fa890af047e517bb65a",
+    "id": "afc0788b-6a57-4627-b3be-77b7c5212a43",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 3.5
+  },
+  {
+    "_id": "69175fa890af047e517bb65b",
+    "id": "f4fcbbe7-cbe7-419c-8ce6-901f075a8ce0",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’.  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 3.5
+  },
+  {
+    "_id": "69175fa890af047e517bb65c",
+    "id": "5b2cfcf3-b973-4ec8-8460-529b1abc2101",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’.  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 3.5
+  },
+  {
+    "_id": "69175fa890af047e517bb65d",
+    "id": "c12c4d93-49b3-4ed1-b388-23945c924db3",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’.  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 3.5
+  },
+  {
+    "_id": "69175fa890af047e517bb65e",
+    "id": "e3d62dbb-7ffe-439b-ad27-3bc01dda970d",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’.  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 3.5
+  },
+  {
+    "_id": "69175fa890af047e517bb65f",
+    "id": "9003c7ad-2fda-4eb2-8cef-db3b0256e023",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 3.5
+  },
+  {
+    "_id": "69175fa890af047e517bb660",
+    "id": "7428b545-166a-450a-ab69-7ceca3454f53",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 3.5
+  },
+  {
+    "_id": "69175fa890af047e517bb661",
+    "id": "133ce94f-dc50-4086-a7a3-5b7467d46de4",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 3.5
+  },
+  {
+    "_id": "69175fa890af047e517bb662",
+    "id": "efc045fe-c7d7-441b-8cc3-19400ab6a0f8",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 3.5
+  },
+  {
+    "_id": "69175fa890af047e517bb663",
+    "id": "089a1ce7-416e-4ab2-a5df-c3a62c6024c0",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. Name 3 things you see; light bilateral taps for 60–90s. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 3.5
+  },
+  {
+    "_id": "69175fa890af047e517bb664",
+    "id": "77bd9e40-bd02-4808-941c-6b5c2556b792",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. Name 3 things you see; light bilateral taps for 60–90s. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 3.5
+  },
+  {
+    "_id": "69175fa890af047e517bb665",
+    "id": "554306a4-0120-4a52-800c-1aa7c103d6b1",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. Name 3 things you see; light bilateral taps for 60–90s. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 3.5
+  },
+  {
+    "_id": "69175fa890af047e517bb666",
+    "id": "e5579de6-fea5-4466-9eaa-bcb62e9192c1",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Stay with rhythm. Notice what's working. Keep it easy. Name 3 things you see; light bilateral taps for 60–90s. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 3.5
+  },
+  {
+    "_id": "69175fa890af047e517bb667",
+    "id": "454661e7-59e7-4688-ba6c-000ec119f2d6",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew. Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb668",
+    "id": "5079e10c-89ef-4a91-b23e-2e9acccbfcff",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. 5-senses sweep; savor 3 smooth strides. Count 1–2–3, soften hands; big circle or serpentine for cadence. Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb669",
+    "id": "9b36315c-ce3d-42fd-b35b-737ba34c295a",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. 5-senses sweep; savor 3 smooth strides. Count 1–2–3, soften hands; big circle or serpentine for cadence. Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb66a",
+    "id": "90361267-b93a-40ed-b24b-6bb2813878c3",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew. Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb66b",
+    "id": "36617896-25eb-473b-8f5e-2d00d1defd98",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb66c",
+    "id": "3e187d4d-1be8-4df0-9753-0238085389eb",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb66d",
+    "id": "46d51ac6-1d7b-469b-bd0a-acda2a77c96f",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb66e",
+    "id": "be3a7496-5256-4ae7-97d7-f5a3c58d212a",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb66f",
+    "id": "17aa3d7c-ece2-4cf8-b38b-4f0affc3abb7",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. ‘This is hard; be kind.’ Three soothing breaths..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb670",
+    "id": "38555965-df41-4dad-9328-6798ddd6a714",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. ‘This is hard; be kind.’ Three soothing breaths..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb671",
+    "id": "d5ae2615-06be-48cb-9e0d-484b05da727b",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. ‘This is hard; be kind.’ Three soothing breaths..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb672",
+    "id": "8caaec1a-3503-47be-b273-f92e81c49e35",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. ‘This is hard; be kind.’ Three soothing breaths..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb673",
+    "id": "0e2dcacb-d34e-4b97-8c7b-ef39bc165281",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Name 3 things you see; light bilateral taps for 60–90s. Soft contact, steady cadence; reward the sigh lick chew. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb674",
+    "id": "ed5d5c60-f439-4152-bf52-af33dd44de1a",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb675",
+    "id": "41813921-b85a-4b2a-8396-f80aa329f1c6",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb676",
+    "id": "c9fb799b-cab6-4008-a52f-bf1f979d7ce8",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Name 3 things you see; light bilateral taps for 60–90s. Soft contact, steady cadence; reward the sigh lick chew. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb677",
+    "id": "6fc82cd1-5df1-46fe-a733-471722ecfa7f",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew. Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb678",
+    "id": "8aa83f4a-7f2f-4907-8799-2a1bf6eae635",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. 5-senses sweep; savor 3 smooth strides. Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb679",
+    "id": "3480c512-76a5-42c0-a177-3b2a1f281e99",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. 5-senses sweep; savor 3 smooth strides. Count 1–2–3, soften hands; big circle or serpentine for cadence. Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb67a",
+    "id": "07a1ad2a-c39b-4371-9b0c-6caeb44d8d5f",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb67b",
+    "id": "780b8c69-b9e9-458d-930e-3f7a96846e4f",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ 5-senses sweep; savor 3 smooth strides..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb67c",
+    "id": "bf2d05aa-3dc8-4977-a4fc-89401d356a5c",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb67d",
+    "id": "1e5d6732-82ac-4077-b4ea-dff4f2c26104",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb67e",
+    "id": "b9ce4fd7-1188-424c-b427-f2a957edca30",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb67f",
+    "id": "dd0360bc-1887-41d7-a2be-706f365577bf",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. 5-senses sweep; savor 3 smooth strides..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb680",
+    "id": "4f24ae79-77fc-45ae-aa28-68e232075edd",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb681",
+    "id": "21e1b959-dfb7-463a-a22a-a8479889e45e",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb682",
+    "id": "7a30f9fc-0325-48a8-9dee-7e1bb929f636",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb683",
+    "id": "a6f67cf0-9bab-4bb3-bed4-a128ee88823a",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Name 3 things you see; light bilateral taps for 60–90s. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb684",
+    "id": "cddbb8cb-bc00-4f9e-aa76-675a8d2fbb7e",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb685",
+    "id": "ed0eb191-dd05-4c66-a92f-0935488ceb55",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb686",
+    "id": "76b18cb3-3096-4c46-b166-926a2c9fe955",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Name 3 things you see; light bilateral taps for 60–90s. Soft contact, steady cadence; reward the sigh lick chew. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb687",
+    "id": "f1ded8c5-42dd-4230-8766-40056aedb1e2",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew. Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb688",
+    "id": "44304c5e-9bae-401f-b026-e2bcab93572b",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. 5-senses sweep; savor 3 smooth strides. Count 1–2–3, soften hands; big circle or serpentine for cadence. Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb689",
+    "id": "4d114bb4-6681-40b5-ad3d-10a6c67c050a",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. 5-senses sweep; savor 3 smooth strides. Count 1–2–3, soften hands; big circle or serpentine for cadence. Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb68a",
+    "id": "55681260-b6d3-4507-8c4b-079a00db666b",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew. Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb68b",
+    "id": "ebb7d295-f051-4b60-9b95-e41fc4714201",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb68c",
+    "id": "c219cdca-be6a-4604-a6d2-3fa66e65a15f",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb68d",
+    "id": "3a80cad4-e9bf-4f00-930a-dadf3681a6fe",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb68e",
+    "id": "a6af252b-04b3-497b-81de-8644c7de2615",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb68f",
+    "id": "52791810-1442-49c5-8ca5-a93a651b49e6",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. ‘This is hard; be kind.’ Three soothing breaths..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb690",
+    "id": "4048b3c3-e925-477c-a28f-34cc3d2fcab2",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. ‘This is hard; be kind.’ Three soothing breaths..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb691",
+    "id": "dfd697f4-0c21-46c0-80e0-693c7d710084",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. ‘This is hard; be kind.’ Three soothing breaths..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb692",
+    "id": "91ebd00d-980b-459c-a574-c9160cfd8e4f",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. ‘This is hard; be kind.’ Three soothing breaths..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb693",
+    "id": "a54eb9c2-4049-4eb9-9500-863218720a30",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Name 3 things you see; light bilateral taps for 60–90s. Soft contact, steady cadence; reward the sigh lick chew. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb694",
+    "id": "cb031b61-4e77-45a3-975b-684a03f81a4b",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb695",
+    "id": "017b5394-644e-4a19-8bbe-1d188af9c3ac",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb696",
+    "id": "a0b7c1a8-ad42-4c39-8751-2884eb466bcd",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Name 3 things you see; light bilateral taps for 60–90s. Soft contact, steady cadence; reward the sigh lick chew. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb697",
+    "id": "6b44b041-a38a-48df-8a31-28808c222219",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew. Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb698",
+    "id": "1bfe49f1-6cb6-4fb1-8b50-a922be5d7f9e",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. 5-senses sweep; savor 3 smooth strides. Count 1–2–3, soften hands; big circle or serpentine for cadence. Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb699",
+    "id": "2f71f9fb-aa50-4de9-acec-acf639341fc6",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. 5-senses sweep; savor 3 smooth strides. Count 1–2–3, soften hands; big circle or serpentine for cadence. Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb69a",
+    "id": "d61c0498-1dd0-4d12-ad36-d87526c4a59c",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew. Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb69b",
+    "id": "a68cfe3d-65a3-4d1e-8e11-1fec15439363",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb69c",
+    "id": "74d5a90f-38b9-4487-9859-788801a91662",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb69d",
+    "id": "7bddb865-5780-4c42-8c95-a57cd11e0e6d",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb69e",
+    "id": "7e2db46e-ad3b-4278-86ce-a00fabc6d11e",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Picture the line; cue word on the moment of effort..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb69f",
+    "id": "c8d6cdeb-bcd6-46a7-a918-fed78d14e67c",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. ‘This is hard; be kind.’ Three soothing breaths..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb6a0",
+    "id": "5a85fb60-4d9f-4ef2-aed4-7f75986b8cbe",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. ‘This is hard; be kind.’ Three soothing breaths..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb6a1",
+    "id": "f990f7b1-3a6e-42b2-9078-7cdfc475c245",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. ‘This is hard; be kind.’ Three soothing breaths..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb6a2",
+    "id": "d56111b0-ce6b-4281-96a5-0d61ea052ca4",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. ‘This is hard; be kind.’ Three soothing breaths..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb6a3",
+    "id": "1e1db10e-e7a9-4093-ba37-f0bba48c13d9",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Name 3 things you see; light bilateral taps for 60–90s. Soft contact, steady cadence; reward the sigh lick chew. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb6a4",
+    "id": "5f57a0cb-1e33-4726-92f9-4d3e872bcca2",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb6a5",
+    "id": "fe831e76-2317-4a21-8a2e-58a033927321",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb6a6",
+    "id": "89e16fbe-f8d8-4d26-8ba9-50cc121665a0",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Center. One process goal. Breathe 4 6 and find rhythm. Name 3 things you see; light bilateral taps for 60–90s. Soft contact, steady cadence; reward the sigh lick chew. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "69175fa890af047e517bb6a7",
+    "id": "208d81f4-5d61-4c65-9131-bef1779f9b77",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew. Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6a8",
+    "id": "7637d163-dbc6-4778-b102-09477c2f40c0",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. 5-senses sweep; savor 3 smooth strides. Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6a9",
+    "id": "5ddd5862-3786-44ae-9a16-4239fa265708",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. 5-senses sweep; savor 3 smooth strides. Count 1–2–3, soften hands; big circle or serpentine for cadence. Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6aa",
+    "id": "77bbe855-b593-4206-8d9d-cd31192a5954",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6ab",
+    "id": "d2bb1010-ebed-414f-b05f-a084930ffad2",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ 5-senses sweep; savor 3 smooth strides..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6ac",
+    "id": "45fc151f-d8de-4fa5-b7db-944b094ae3de",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6ad",
+    "id": "9d20f483-290e-4c76-b578-832054884dfb",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6ae",
+    "id": "2c824480-c7af-473d-a266-eaad2f73c9be",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6af",
+    "id": "4b8b073e-cf70-492b-aa55-02659620df13",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. 5-senses sweep; savor 3 smooth strides..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6b0",
+    "id": "1f409df9-54a7-45d5-a769-c9931ced5a34",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6b1",
+    "id": "6f44219a-2121-4a28-9cf2-35a1a41391fc",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6b2",
+    "id": "4cc615a4-5951-4530-b86b-c3b7262001d3",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6b3",
+    "id": "398b1cce-139d-46ac-b9cb-581131a74042",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Name 3 things you see; light bilateral taps for 60–90s. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6b4",
+    "id": "8963373e-6e42-4c66-94cb-7938c8e38429",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6b5",
+    "id": "fe0371e1-580c-4179-b056-e556b3ce3dc8",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6b6",
+    "id": "1f30008d-a14e-4afb-a295-a4f82a06891d",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Name 3 things you see; light bilateral taps for 60–90s. Soft contact, steady cadence; reward the sigh lick chew. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6b7",
+    "id": "2cc0dc9a-2729-4bd9-884f-5c4f1699b8fc",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew. Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6b8",
+    "id": "a341550c-a46c-423d-aacb-6dd0a37b848b",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. 5-senses sweep; savor 3 smooth strides. Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6b9",
+    "id": "e37caf9f-614c-4862-b86b-f090b71c3a86",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. 5-senses sweep; savor 3 smooth strides. Count 1–2–3, soften hands; big circle or serpentine for cadence. Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6ba",
+    "id": "40aaaba5-5a9f-44a1-84e3-87673dfd732a",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6bb",
+    "id": "b77c3169-b865-45a7-a3eb-9d1bb51aae5f",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ 5-senses sweep; savor 3 smooth strides..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6bc",
+    "id": "e5c4cc56-cbbe-40d9-a4c5-65a982a2ae1b",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6bd",
+    "id": "6b4f696a-db74-4fcd-8191-10f03119dad2",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6be",
+    "id": "ddc97840-ebab-408b-a498-01dd51c096e3",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6bf",
+    "id": "67e81afb-41e0-450a-bbff-b909c204b1b5",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. 5-senses sweep; savor 3 smooth strides..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6c0",
+    "id": "375758ba-3248-4fc4-93d6-e3b02f9362e8",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6c1",
+    "id": "08cb53e3-d283-4d4c-b5f8-cc6473acbfc1",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6c2",
+    "id": "9906529f-2381-4253-b497-1f6e1d60f0a9",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6c3",
+    "id": "b6e7eb5b-a012-47ca-b2f1-304eaa38856a",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Name 3 things you see; light bilateral taps for 60–90s. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6c4",
+    "id": "a5d5c682-fb22-49db-83c4-855dcdcbb95e",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6c5",
+    "id": "51bb6505-5dda-48bd-8c4b-1d7406fde092",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6c6",
+    "id": "8ec2f39c-37a0-4afa-a103-06c1cf3002a0",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Name 3 things you see; light bilateral taps for 60–90s. Soft contact, steady cadence; reward the sigh lick chew. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6c7",
+    "id": "5208fa76-d425-4420-9c0c-dc753d3952f6",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew. Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6c8",
+    "id": "a1a2a9fe-aa3f-48d2-856d-73b4111a12fa",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. 5-senses sweep; savor 3 smooth strides. Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6c9",
+    "id": "9927ce11-30e9-4e14-bb78-b3986cd41bf8",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. 5-senses sweep; savor 3 smooth strides. Count 1–2–3, soften hands; big circle or serpentine for cadence. Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6ca",
+    "id": "3e89f59d-080c-4c6e-a1b6-66a007df7f6c",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6cb",
+    "id": "42186eef-68f1-4265-957a-43b7715daece",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ 5-senses sweep; savor 3 smooth strides..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6cc",
+    "id": "5e7edc6f-ec81-4fbe-8628-1576433c6c07",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6cd",
+    "id": "56d2a004-fadf-4ec9-b712-8e1fd3be03ec",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6ce",
+    "id": "fd1c27b9-fa19-40bb-a3e3-d45c2d854791",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6cf",
+    "id": "8bb4c774-5a12-49ee-aa29-4661b6dbe3a5",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. 5-senses sweep; savor 3 smooth strides..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6d0",
+    "id": "4da3e191-b8bc-4195-8170-7bb9f86d2949",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6d1",
+    "id": "94d3b117-b9ec-48a6-b777-c2c677312b55",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6d2",
+    "id": "23a73719-51cc-48a7-b165-2f921025a6fb",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6d3",
+    "id": "584c24d9-4fdc-43ce-bf4f-0da369943d28",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Name 3 things you see; light bilateral taps for 60–90s. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6d4",
+    "id": "07bcbe9c-7525-4f5d-93bb-fd627a2745a1",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6d5",
+    "id": "91c2838b-53e3-4787-80ce-485b15fa25a9",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6d6",
+    "id": "d5f115cd-3ce0-4828-a389-1a63bd75cee0",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Name 3 things you see; light bilateral taps for 60–90s. Soft contact, steady cadence; reward the sigh lick chew. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6d7",
+    "id": "4f4c1d47-7238-4658-93af-70d1dc6cf89b",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew. Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6d8",
+    "id": "c09a8cdb-1948-48a6-8b75-13759f9e0a9c",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. 5-senses sweep; savor 3 smooth strides. Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6d9",
+    "id": "77f44cac-0d87-42e8-8d68-0efc680e5720",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. 5-senses sweep; savor 3 smooth strides. Count 1–2–3, soften hands; big circle or serpentine for cadence. Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6da",
+    "id": "ab686e87-b0d4-4e03-9d67-280c78bc3eaa",
+    "name": "Mindfulness & Flow",
+    "category": "Mindfulness & Flow",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6db",
+    "id": "91d23e55-9d51-4d6c-982e-acf81789bd0a",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ 5-senses sweep; savor 3 smooth strides..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6dc",
+    "id": "ee47fe48-6d8c-4ea5-818a-6afa26986405",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6dd",
+    "id": "49ab126a-eb1e-4082-afc1-b7726506d92d",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6de",
+    "id": "43cb6b66-b6a1-41de-be4b-69c9b2a2e79f",
+    "name": "Breathing / HRV",
+    "category": "Breathing / HRV",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Say it: ‘Rhythm before results.’ Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6df",
+    "id": "9fe3a6fe-9e33-4703-bdff-61947bb4bd79",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. 5-senses sweep; savor 3 smooth strides..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6e0",
+    "id": "80003442-9252-4c21-a185-b27294af9e0a",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6e1",
+    "id": "08bf4993-1576-4a90-a60a-ec822644902f",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Approach–retreat; stop when you see head-lower or breath release..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6e2",
+    "id": "e8be6d19-17cb-4355-aef3-098e9df262cb",
+    "name": "Somatic Reset",
+    "category": "Somatic Reset",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6e3",
+    "id": "69e1ff8c-52b8-48c0-926c-73be57fa1998",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Name 3 things you see; light bilateral taps for 60–90s. 5-senses sweep; savor 3 smooth strides. Soft contact, steady cadence; reward the sigh lick chew..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6e4",
+    "id": "c4a57c50-5c39-4729-8021-2f4dff6ac30d",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Inhale 4, exhale 6 — 6–8 cycles. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6e5",
+    "id": "bf70d4f2-8aa6-451b-bcab-e648285f48b2",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Name 3 things you see; light bilateral taps for 60–90s. Count 1–2–3, soften hands; big circle or serpentine for cadence. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "69175fa890af047e517bb6e6",
+    "id": "37e2b9c8-53a1-4921-ab73-e989b98f58dc",
+    "name": "Activation / Grounding",
+    "category": "Activation / Grounding",
+    "description": null,
+    "instructions": "Take a deep breath and center yourself. Pause. Create space. Breathe 4 in 6 out. Work just below threshold. Name 3 things you see; light bilateral taps for 60–90s. Soft contact, steady cadence; reward the sigh lick chew. Ground feet, micro-move, add energy with voice cue..  End with a calm breath, a soft hand, and note one small win before moving on.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "6917627393f5d6f7685db05a",
+    "id": "4a4047fb-1d63-434f-be9a-d401df6f9e57",
+    "name": "Pre-Ride Anxiety Release",
+    "category": "Tapping / EFT",
+    "description": "Calm your nerves before getting in the saddle",
+    "instructions": "Start with the Karate Chop point on the side of your hand. Tap gently while saying: \"Even though I feel nervous about this ride, I deeply and completely accept myself.\" Continue tapping through the sequence: Eyebrow, Side of Eye, Under Eye, Under Nose, Under Mouth, Collarbone, Under Arm, Top of Head. At each point, acknowledge your feelings: \"This nervousness... This anxiety... I choose to feel calm and confident... I am safe... My horse and I are a team.\" Complete 2-3 rounds until you feel more centered.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "6917627393f5d6f7685db05b",
+    "id": "cfbcc108-c016-4056-8a1c-845023b6e00f",
+    "name": "Fear of Falling Reset",
+    "category": "Tapping / EFT",
+    "description": "Release fear and build confidence after a fall or scary moment",
+    "instructions": "Begin at the Karate Chop point, tapping while saying: \"Even though I have this fear of falling, I am safe right now.\" Move through the points: Eyebrow - \"This fear in my body...\" Side of Eye - \"This worry about falling...\" Under Eye - \"Feeling unsafe...\" Under Nose - \"This fear...\" Under Mouth - \"I choose to feel grounded...\" Collarbone - \"I am learning and growing...\" Under Arm - \"My body knows how to balance...\" Top of Head - \"I trust myself and my horse.\" Repeat until fear diminishes.",
+    "duration_minutes": 7,
+    "anxiety_level": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "6917627393f5d6f7685db05c",
+    "id": "af144522-c4d8-4f42-917c-1d5385d3cbfb",
+    "name": "Competition Day Calm",
+    "category": "Tapping / EFT",
+    "description": "Reduce performance anxiety before showing",
+    "instructions": "Karate Chop setup: \"Even though I feel pressure to perform, I choose to enjoy this moment with my horse.\" Tap through the sequence: Eyebrow - \"This performance pressure...\" Side of Eye - \"This need to be perfect...\" Under Eye - \"Worrying about what others think...\" Under Nose - \"This anxiety about mistakes...\" Under Mouth - \"I release this pressure...\" Collarbone - \"I am prepared...\" Under Arm - \"My horse and I are partners...\" Top of Head - \"We ride with joy and confidence.\" 2-3 rounds.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.2
+  },
+  {
+    "_id": "6917627393f5d6f7685db05d",
+    "id": "0eef6efb-4ef2-47c9-aea6-6f3b861c8524",
+    "name": "Quick Confidence Boost",
+    "category": "Tapping / EFT",
+    "description": "Fast tapping sequence to build confidence before any challenge",
+    "instructions": "Rapid tapping sequence - spend just 10 seconds on each point. Karate Chop: \"I am capable and strong.\" Eyebrow: \"I trust myself.\" Side of Eye: \"I am confident.\" Under Eye: \"I feel safe.\" Under Nose: \"I am prepared.\" Under Mouth: \"I believe in myself.\" Collarbone: \"My horse trusts me.\" Under Arm: \"We work together.\" Top of Head: \"I am ready.\" Repeat 2 times quickly.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 3.8
+  },
+  {
+    "_id": "6917627393f5d6f7685db05e",
+    "id": "7164dbcf-c043-4bb0-a328-d4bde0752e28",
+    "name": "Post-Ride Processing",
+    "category": "Tapping / EFT",
+    "description": "Release stress and integrate lessons after a difficult ride",
+    "instructions": "Karate Chop: \"Even though that ride was challenging, I honor my effort and my horse's effort.\" Gently tap through points: Eyebrow - \"Whatever happened today...\" Side of Eye - \"Any disappointment I feel...\" Under Eye - \"Any frustration...\" Under Nose - \"I acknowledge these feelings...\" Under Mouth - \"I learned something today...\" Collarbone - \"I am growing as a rider...\" Under Arm - \"Tomorrow is a new day...\" Top of Head - \"I release this and move forward with grace.\" Take deep breaths between rounds.",
+    "duration_minutes": 6,
+    "anxiety_level": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "_id": "6917627393f5d6f7685db05f",
+    "id": "bd196ef6-e836-479b-947b-b035ff31f02b",
+    "name": "Trauma Release for Horse & Rider",
+    "category": "Tapping / EFT",
+    "description": "Gentle tapping to process past scary experiences",
+    "instructions": "This is for processing past events, not current danger. Karate Chop: \"Even though that scary thing happened, I am safe now.\" Very gently tap: Eyebrow - \"That memory...\" Side of Eye - \"How it made me feel...\" Under Eye - \"The fear that stayed with me...\" Under Nose - \"It's in the past now...\" Under Mouth - \"I am safe in this moment...\" Collarbone - \"My body can release this...\" Under Arm - \"I choose peace...\" Top of Head - \"I am healing.\" Go slowly, breathe deeply. Repeat as needed over several sessions.",
+    "duration_minutes": 8,
+    "anxiety_level": [
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "_id": "6917627393f5d6f7685db060",
+    "id": "a0c787b3-e913-4364-aa10-ab5ef3e90b9f",
+    "name": "Morning Ride Preparation",
+    "category": "Tapping / EFT",
+    "description": "Start your riding day centered and positive",
+    "instructions": "Karate Chop: \"Even though I don't know what today will bring, I welcome it with an open heart.\" Tap through: Eyebrow - \"Today is a new beginning...\" Side of Eye - \"I am open to learning...\" Under Eye - \"I feel grateful for my horse...\" Under Nose - \"We communicate with trust...\" Under Mouth - \"I ride with intention...\" Collarbone - \"My mind is clear...\" Under Arm - \"My body is ready...\" Top of Head - \"This will be a good day.\" Set your positive intention.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      3,
+      4,
+      5
+    ],
+    "confidence_level": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 3.5
+  },
+  {
+    "_id": "6917627393f5d6f7685db061",
+    "id": "0d56880e-f827-43b4-90ba-a1396ba09864",
+    "name": "Connection with Horse",
+    "category": "Tapping / EFT",
+    "description": "Enhance your energetic bond with your horse through tapping",
+    "instructions": "Do this near your horse if possible. Karate Chop: \"Even though we are separate beings, we connect as one.\" Tap gently: Eyebrow - \"I feel my horse's energy...\" Side of Eye - \"Our hearts align...\" Under Eye - \"We breathe together...\" Under Nose - \"Trust flows between us...\" Under Mouth - \"We understand each other...\" Collarbone - \"We move as partners...\" Under Arm - \"Our connection deepens...\" Top of Head - \"We are one team.\" Notice how your horse responds to your calm energy.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "effectiveness_rating": 4.0
+  }
+]

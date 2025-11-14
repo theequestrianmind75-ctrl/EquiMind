@@ -1,0 +1,17 @@
+{
+  "total_legacy_tools": 152,
+  "by_category": {
+    "Mindfulness & Flow": 36,
+    "Breathing / HRV": 36,
+    "Somatic Reset": 36,
+    "Activation / Grounding": 36,
+    "Tapping / EFT": 8
+  },
+  "files_created": [
+    "mindfulness_and_flow.json",
+    "breathing_hrv.json",
+    "somatic_reset.json",
+    "activation_grounding.json",
+    "tapping_eft.json"
+  ]
+}
