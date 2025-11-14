@@ -119,6 +119,16 @@ export default function Home() {
             Combining clinical expertise with deep equestrian knowledge to deliver results that transform both rider performance and horse-rider relationships.
           </Text>
         </View>
+
+        <View style={styles.section}>
+          <TouchableOpacity 
+            style={styles.adminButton}
+            onPress={() => router.push('/admin-text-editor' as any)}
+          >
+            <Ionicons name="create" size={24} color="#ffffff" />
+            <Text style={styles.adminButtonText}>Edit All Tools (Admin)</Text>
+          </TouchableOpacity>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
