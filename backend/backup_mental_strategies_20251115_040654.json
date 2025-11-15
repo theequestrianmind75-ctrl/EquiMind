@@ -1,0 +1,3441 @@
+[
+  {
+    "id": "bf880bc5-7da1-4c4a-be0e-7328861ce5b0",
+    "name": "Pre-Ride Anxiety Release",
+    "category": "Tapping / EFT",
+    "description": "Calm your nerves before getting in the saddle",
+    "instructions": "Start with the Karate Chop point on the side of your hand. Tap gently while saying: \"Even though I feel nervous about this ride, I deeply and completely accept myself.\" Continue tapping through the sequence: Eyebrow, Side of Eye, Under Eye, Under Nose, Under Mouth, Collarbone, Under Arm, Top of Head. At each point, acknowledge your feelings: \"This nervousness... This anxiety... I choose to feel calm and confident... I am safe... My horse and I are a team.\" Complete 2-3 rounds until you feel more centered.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "id": "13c08f36-7bc7-418a-89c0-6a4a7278e249",
+    "name": "Fear of Falling Reset",
+    "category": "Tapping / EFT",
+    "description": "Release fear and build confidence after a fall or scary moment",
+    "instructions": "Begin at the Karate Chop point, tapping while saying: \"Even though I have this fear of falling, I am safe right now.\" Move through the points: Eyebrow - \"This fear in my body...\" Side of Eye - \"This worry about falling...\" Under Eye - \"Feeling unsafe...\" Under Nose - \"This fear...\" Under Mouth - \"I choose to feel grounded...\" Collarbone - \"I am learning and growing...\" Under Arm - \"My body knows how to balance...\" Top of Head - \"I trust myself and my horse.\" Repeat until fear diminishes.",
+    "duration_minutes": 7,
+    "anxiety_level": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "id": "8199fe75-6c82-4c43-b056-cd35f229123b",
+    "name": "Competition Day Calm",
+    "category": "Tapping / EFT",
+    "description": "Reduce performance anxiety before showing",
+    "instructions": "Karate Chop setup: \"Even though I feel pressure to perform, I choose to enjoy this moment with my horse.\" Tap through the sequence: Eyebrow - \"This performance pressure...\" Side of Eye - \"This need to be perfect...\" Under Eye - \"Worrying about what others think...\" Under Nose - \"This anxiety about mistakes...\" Under Mouth - \"I release this pressure...\" Collarbone - \"I am prepared...\" Under Arm - \"My horse and I are partners...\" Top of Head - \"We ride with joy and confidence.\" 2-3 rounds.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.2
+  },
+  {
+    "id": "dae29c74-683a-447c-af48-7e9b6de8c858",
+    "name": "Quick Confidence Boost",
+    "category": "Tapping / EFT",
+    "description": "Fast tapping sequence to build confidence before any challenge",
+    "instructions": "Rapid tapping sequence - spend just 10 seconds on each point. Karate Chop: \"I am capable and strong.\" Eyebrow: \"I trust myself.\" Side of Eye: \"I am confident.\" Under Eye: \"I feel safe.\" Under Nose: \"I am prepared.\" Under Mouth: \"I believe in myself.\" Collarbone: \"My horse trusts me.\" Under Arm: \"We work together.\" Top of Head: \"I am ready.\" Repeat 2 times quickly.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 3.8
+  },
+  {
+    "id": "1c6e1d76-263f-430b-8163-7453dfe5a0b7",
+    "name": "Post-Ride Processing",
+    "category": "Tapping / EFT",
+    "description": "Release stress and integrate lessons after a difficult ride",
+    "instructions": "Karate Chop: \"Even though that ride was challenging, I honor my effort and my horse's effort.\" Gently tap through points: Eyebrow - \"Whatever happened today...\" Side of Eye - \"Any disappointment I feel...\" Under Eye - \"Any frustration...\" Under Nose - \"I acknowledge these feelings...\" Under Mouth - \"I learned something today...\" Collarbone - \"I am growing as a rider...\" Under Arm - \"Tomorrow is a new day...\" Top of Head - \"I release this and move forward with grace.\" Take deep breaths between rounds.",
+    "duration_minutes": 6,
+    "anxiety_level": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "id": "f02cab03-ecc4-47a4-8001-356288960c4c",
+    "name": "Trauma Release for Horse & Rider",
+    "category": "Tapping / EFT",
+    "description": "Gentle tapping to process past scary experiences",
+    "instructions": "This is for processing past events, not current danger. Karate Chop: \"Even though that scary thing happened, I am safe now.\" Very gently tap: Eyebrow - \"That memory...\" Side of Eye - \"How it made me feel...\" Under Eye - \"The fear that stayed with me...\" Under Nose - \"It's in the past now...\" Under Mouth - \"I am safe in this moment...\" Collarbone - \"My body can release this...\" Under Arm - \"I choose peace...\" Top of Head - \"I am healing.\" Go slowly, breathe deeply. Repeat as needed over several sessions.",
+    "duration_minutes": 8,
+    "anxiety_level": [
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "id": "a0e6f412-a56b-4040-905e-2e4d0b2c51d5",
+    "name": "Morning Ride Preparation",
+    "category": "Tapping / EFT",
+    "description": "Start your riding day centered and positive",
+    "instructions": "Karate Chop: \"Even though I don't know what today will bring, I welcome it with an open heart.\" Tap through: Eyebrow - \"Today is a new beginning...\" Side of Eye - \"I am open to learning...\" Under Eye - \"I feel grateful for my horse...\" Under Nose - \"We communicate with trust...\" Under Mouth - \"I ride with intention...\" Collarbone - \"My mind is clear...\" Under Arm - \"My body is ready...\" Top of Head - \"This will be a good day.\" Set your positive intention.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      3,
+      4,
+      5
+    ],
+    "confidence_level": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 3.5
+  },
+  {
+    "id": "3e93ecef-6242-4c54-a6e9-5b59df21c1ab",
+    "name": "Connection with Horse",
+    "category": "Tapping / EFT",
+    "description": "Enhance your energetic bond with your horse through tapping",
+    "instructions": "Do this near your horse if possible. Karate Chop: \"Even though we are separate beings, we connect as one.\" Tap gently: Eyebrow - \"I feel my horse's energy...\" Side of Eye - \"Our hearts align...\" Under Eye - \"We breathe together...\" Under Nose - \"Trust flows between us...\" Under Mouth - \"We understand each other...\" Collarbone - \"We move as partners...\" Under Arm - \"Our connection deepens...\" Top of Head - \"We are one team.\" Notice how your horse responds to your calm energy.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence_level": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "id": "d928b856-a68f-46d7-8dd3-8affd3641bb7",
+    "name": "HRV Coherence Breath (Inhale 4, Exhale 6)",
+    "category": "Breathing / HRV",
+    "description": "Creates heart-rate variability coherence by lengthening the exhale and synchronizing with horse movement.",
+    "instructions": "Place your horse in a relaxed walk or quiet halt.\nInhale softly through your nose for 4 counts, then exhale gently for 6 counts.\nRepeat for 6\u201310 breath cycles while monitoring your horse's relaxation.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "HeartMath HRV coherence protocols, autonomic regulation research.",
+    "suitable_for": [
+      "anxiety",
+      "focus",
+      "emotional_regulation"
+    ]
+  },
+  {
+    "id": "d0b1de16-c723-47f7-bb79-ef66ef39ae5c",
+    "name": "Long Exhale Relaxation Breath",
+    "category": "Breathing / HRV",
+    "description": "Uses elongated exhalation to shift the nervous system toward parasympathetic calm.",
+    "instructions": "At the walk, inhale normally.\nMake your exhale twice as long as the inhale, letting your shoulders drop.\nContinue for several cycles, noticing changes in your horse's stride.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Respiratory sinus arrhythmia research; breathwork for autonomic down-regulation.",
+    "suitable_for": [
+      "anxiety",
+      "hyperarousal",
+      "tension_release"
+    ]
+  },
+  {
+    "id": "922c23d3-e386-4bb0-9cb1-15c32b883cb3",
+    "name": "Breath-Per-Stride Synchronization",
+    "category": "Breathing / HRV",
+    "description": "Synchronizes breath rhythm to horse footfalls to increase stability and focus.",
+    "instructions": "At the walk, match your inhale to 2\u20133 steps and exhale to 3\u20134 steps.\nKeep your breathing smooth, allowing your pelvis to follow the horse.\nRide one arena lap maintaining this rhythm.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Sports synchrony and paced-breathing research.",
+    "suitable_for": [
+      "focus",
+      "body_awareness"
+    ]
+  },
+  {
+    "id": "829c9175-59fc-45db-be0f-68b95c830d50",
+    "name": "Co-Regulating with Horse Movement Breath",
+    "category": "Breathing / HRV",
+    "description": "Pairs breath with the horse's natural back swing to regulate tension.",
+    "instructions": "Feel your horse's back move under your seat.\nInhale as your pelvis rises and exhale as it settles.\nStay with the movement for 10\u201312 cycles.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Co-regulation and animal-assisted nervous-system synchronization research.",
+    "suitable_for": [
+      "connection",
+      "calming",
+      "body_awareness"
+    ]
+  },
+  {
+    "id": "bf342261-47e3-4a17-935a-6b6ee7a8e291",
+    "name": "Double-Length Exhale (4:8)",
+    "category": "Breathing / HRV",
+    "description": "Regulates the nervous system by extending the exhale to twice the length of the inhale.",
+    "instructions": "Inhale for 4 counts.\nExhale softly for 8 counts without pushing air out.\nContinue for 5\u20137 cycles.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Breathwork down-regulation studies (Huberman, RSA modulation).",
+    "suitable_for": [
+      "panic",
+      "high_arousal"
+    ]
+  },
+  {
+    "id": "d7ed58b9-9d3e-460c-adf7-1fffe518c3fa",
+    "name": "4-2-6 Performance Breath",
+    "category": "Breathing / HRV",
+    "description": "Performance-based breath pattern to reduce nervous-system activation before transitions or technical work.",
+    "instructions": "Inhale for 4 counts.\nHold for 2 counts.\nExhale for 6 counts and repeat.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Sports psychology breath-hold research; HRV optimization.",
+    "suitable_for": [
+      "show_anxiety",
+      "performance_stress"
+    ]
+  },
+  {
+    "id": "57fd1859-e0fb-496e-9046-14245afd9d60",
+    "name": "Heart-Focused Breathing",
+    "category": "Breathing / HRV",
+    "description": "Breathing as if in and out of the heart area to increase emotional coherence.",
+    "instructions": "Shift attention to the center of your chest.\nBreathe slowly as if the breath is moving through your heart space.\nStay with steady rhythm for 10\u201312 breaths.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "HeartMath emotional regulation and coherence training.",
+    "suitable_for": [
+      "emotional_regulation",
+      "connection"
+    ]
+  },
+  {
+    "id": "f8276305-9ef6-4d4d-8f72-9de3159e895d",
+    "name": "Breath Into Belt Line",
+    "category": "Breathing / HRV",
+    "description": "Expands diaphragm and lowers tension by breathing 360\u00b0 around the waistline.",
+    "instructions": "At the walk, breathe low into your belly and around your waist.\nFeel the belt-line expand evenly.\nRelease on the exhale and soften your seat.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Diaphragmatic breathing research; somatic therapy.",
+    "suitable_for": [
+      "tension",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "de9fc001-b42a-447a-9bfa-93175ff5b226",
+    "name": "Exhale Seat-Softening Breath",
+    "category": "Breathing / HRV",
+    "description": "Softens the seat and thighs during the exhale to improve freedom of horse movement.",
+    "instructions": "As you exhale, let your seat and thighs grow heavier and softer.\nContinue for 8-10 breath cycles while maintaining contact with your horse.\nNotice how your horse responds to the relaxation.",
+    "duration_minutes": 2,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic release and rider tension research.",
+    "suitable_for": [
+      "tension",
+      "overcontrol",
+      "connection"
+    ]
+  },
+  {
+    "id": "bd5e478a-d158-4903-9729-094c73aced21",
+    "name": "Five-Sense Horseback Scan",
+    "category": "Mindfulness & Flow",
+    "description": "On-horse mindfulness exercise using all five senses to anchor rider and horse into the present moment.",
+    "instructions": "Place your horse at a relaxed walk or quiet halt in a familiar, safe space.\nScan through sight, sound, touch, smell, and taste, noticing each sensation without judging.\nRemain present for 5\u201310 breaths and observe your horse's feedback.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "confidence_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Mindfulness-Based Stress Reduction (MBSR), sensory grounding research, equine-assisted mindfulness practices.",
+    "suitable_for": [
+      "anxiety",
+      "focus",
+      "emotional_awareness"
+    ]
+  },
+  {
+    "id": "c66a824d-121c-47d2-b7e8-d7acd034bea4",
+    "name": "Seat-Bone Awareness Tracking",
+    "category": "Mindfulness & Flow",
+    "description": "Mindfulness exercise focusing on awareness of the rider's seat bones and how they move with the horse.",
+    "instructions": "At the walk, notice each seat bone independently.\nObserve how they rise, lower, and follow the swing of the horse's back.\nMaintain awareness for one arena lap.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "confidence_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic mindfulness, body-awareness research, rider biomechanics studies.",
+    "suitable_for": [
+      "tension_release",
+      "focus",
+      "body_awareness"
+    ]
+  },
+  {
+    "id": "dfe791a3-01da-4ca0-b3d3-1359efcb861c",
+    "name": "Mindful Rein Contact Check",
+    "category": "Mindfulness & Flow",
+    "description": "Mindfulness practice to develop awareness of rein feel, hand tension, and communication with the horse's mouth.",
+    "instructions": "Pick up a neutral rein contact.\nNotice tension in fingers, wrists, and forearms.\nSoften your hands by 5% and observe changes in your horse.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "confidence_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Mindful touch research, equitation science, sports attentional control.",
+    "suitable_for": [
+      "performance_stress",
+      "precision",
+      "emotional_regulation"
+    ]
+  },
+  {
+    "id": "0de94306-c1a8-4b9a-9364-995f287a6e09",
+    "name": "Body-to-Horse Synchrony Check",
+    "category": "Mindfulness & Flow",
+    "description": "Enhances rider-horse synchrony by focusing attention on shared movement rhythm.",
+    "instructions": "Allow your body to follow your horse's movement without bracing.\nNotice where movement flows smoothly and where it feels blocked.\nSoften tension and rejoin your horse's rhythm.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "confidence_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Co-regulation research, equine biomechanics, mindfulness in motion.",
+    "suitable_for": [
+      "connection",
+      "focus",
+      "body_awareness"
+    ]
+  },
+  {
+    "id": "91fa2a6d-9473-4026-910b-acb02fdfdb39",
+    "name": "Mindful Listening to Arena Sounds",
+    "category": "Mindfulness & Flow",
+    "description": "Uses mindful hearing to broaden awareness and reduce tunnel vision during riding.",
+    "instructions": "At the walk, tune into ambient sounds in and outside the arena.\nLabel sounds neutrally as 'near', 'far', 'soft', or 'sharp'.\nAllow listening to expand your awareness instead of narrowing it.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "confidence_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Mindfulness-based sound grounding, attentional widening research.",
+    "suitable_for": [
+      "hypervigilance",
+      "performance_stress"
+    ]
+  },
+  {
+    "id": "a8c2bd85-b5e0-4a7f-b03a-e505089098d8",
+    "name": "Visual Horizon Soft-Gaze Practice",
+    "category": "Mindfulness & Flow",
+    "description": "A visual mindfulness exercise that softens the eyes and expands rider situational awareness.",
+    "instructions": "Lift your gaze to the horizon without fixing on a single point.\nSoften your peripheral vision and let your eyes relax.\nRide while maintaining wide, calm visual awareness.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "confidence_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Sports psychology visual field expansion, polyvagal theory.",
+    "suitable_for": [
+      "anxiety",
+      "hyperfocus",
+      "environmental_awareness"
+    ]
+  },
+  {
+    "id": "66c6741e-8af6-4070-a8a3-0da311e3a86e",
+    "name": "Noticing Micro-Tension (2 Percent Release)",
+    "category": "Mindfulness & Flow",
+    "description": "Mindfulness practice aimed at identifying and reducing tiny amounts of tension in the rider's body.",
+    "instructions": "Scan for tiny tension areas in shoulders, jaw, thighs, or hands.\nRelease tension by only 2%, keeping movements small and safe.\nNotice your horse soften in response.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic mindfulness, micro-relaxation research, horse-rider tension studies.",
+    "suitable_for": [
+      "tension",
+      "overcontrol",
+      "nervous_energy"
+    ]
+  },
+  {
+    "id": "dab8757a-83c7-4091-8ccb-0084ac0be456",
+    "name": "Rider Thought Labeling: 'This is a thought'",
+    "category": "Mindfulness & Flow",
+    "description": "Cognitive defusion practice to separate thoughts from actions while riding.",
+    "instructions": "Notice any stressful or distracting thought.\nLabel it: 'This is a thought, not a fact.'\nReturn focus to your horse's movement.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "ACT cognitive defusion, mindfulness-based cognitive therapy.",
+    "suitable_for": [
+      "overthinking",
+      "fear",
+      "show_anxiety"
+    ]
+  },
+  {
+    "id": "c1984d82-9284-44eb-8304-c141d350b36f",
+    "name": "Observation Without Judgment (MBSR)",
+    "category": "Mindfulness & Flow",
+    "description": "Encourages non-judgmental awareness of internal and external experience while mounted.",
+    "instructions": "Notice sensations, posture, and horse behavior without assigning meaning.\nPractice accepting what is happening rather than correcting immediately.\nStay with non-judgment for one arena long side.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "confidence_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Mindfulness-Based Stress Reduction (MBSR).",
+    "suitable_for": [
+      "self_criticism",
+      "perfectionism",
+      "emotional_regulation"
+    ]
+  },
+  {
+    "id": "bfb4045f-2ac1-4a7f-9ab1-3037dd05a778",
+    "name": "Noticing Horse Micro-Cues",
+    "category": "Mindfulness & Flow",
+    "description": "Enhances horse-rider communication by noticing subtle signals such as breath changes or ear flicks.",
+    "instructions": "Observe your horse's small signals: breath, ears, neck, stride.\nNotice patterns without reacting right away.\nStay curious, not critical, about what your horse communicates.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Equine behavior science, mindfulness-based observation.",
+    "suitable_for": [
+      "connection",
+      "communication",
+      "horse_reading_skill"
+    ]
+  },
+  {
+    "id": "5032130d-3db3-4738-948d-c98edcd72c9f",
+    "name": "Horseback Body Scan",
+    "category": "BODY RESET",
+    "description": "A mounted somatic body scan that releases tension and increases awareness of how the rider's body moves with the horse.",
+    "instructions": "Place your horse in a relaxed walk or halt.\nSlowly scan your body from head to toe, noticing where you are holding tension.\nRelease tension in small increments and observe how your horse responds.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic experiencing, MBSR body scan, equine-assisted regulation.",
+    "suitable_for": [
+      "tension_release",
+      "freeze_response",
+      "body_awareness"
+    ]
+  },
+  {
+    "id": "80f22ffb-44bc-4c4f-ba1a-18842d6f4ed1",
+    "name": "Conscious Swallow Reset",
+    "category": "BODY RESET",
+    "description": "Uses a slow, deliberate swallow to activate vagal pathways and reduce sympathetic arousal.",
+    "instructions": "Relax your tongue and jaw and take a slow breath in.\nGently swallow once, noticing the softening in your throat and chest.\nRepeat 2\u20133 times while maintaining steady contact with your horse.",
+    "duration_minutes": 2,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Polyvagal theory and vagal swallowing reflex research.",
+    "suitable_for": [
+      "hyperarousal",
+      "panic",
+      "tension"
+    ]
+  },
+  {
+    "id": "610201bb-6b11-4b82-9fb6-2085e848ef24",
+    "name": "Vagal Hum Exhale",
+    "category": "BODY RESET",
+    "description": "Uses humming on the exhale to stimulate the vagus nerve and calm both horse and rider.",
+    "instructions": "Take a slow inhale through your nose.\nExhale with a gentle hum, letting the vibration soften your chest and throat.\nRepeat for 4\u20136 cycles and observe your horse's breathing or ear position.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Vagal toning research, breath-based nervous-system regulation.",
+    "suitable_for": [
+      "panic",
+      "high_arousal",
+      "horse_tension"
+    ]
+  },
+  {
+    "id": "d9cb7aa5-1db7-489d-af5a-0af7f60f7fef",
+    "name": "Jaw Release \u2192 Horse Release",
+    "category": "BODY RESET",
+    "description": "Softening the rider's jaw signals relaxation through the whole body, often resulting in the horse softening as well.",
+    "instructions": "Relax your jaw by gently unclenching your teeth and letting your tongue drop from the roof of your mouth.\nTake one slow exhale as your jaw softens.\nNotice if your horse shows softening signals such as lowering its neck, licking, or blowing out.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic jaw release, equine-rider tension mirroring.",
+    "suitable_for": [
+      "tension",
+      "horse_softness",
+      "connection"
+    ]
+  },
+  {
+    "id": "61ff40d1-eb2d-4940-8a98-02a850d7eab2",
+    "name": "Pelvic Float Reset",
+    "category": "BODY RESET",
+    "description": "Encourages the pelvis to follow the horse's movement in a fluid, unbraced pattern.",
+    "instructions": "Imagine your pelvis floating like a buoy on water as your horse moves.\nLet your seat move freely without gripping or controlling.\nAllow small figure-8 motions to emerge naturally.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Feldenkrais-inspired somatic mobility; rider biomechanics.",
+    "suitable_for": [
+      "rigidity",
+      "seat_mobility",
+      "horse_back_relaxation"
+    ]
+  },
+  {
+    "id": "7577bf24-dfd8-49f1-80a6-e5a5d5bd2772",
+    "name": "Slow Blink Safety Signal",
+    "category": "BODY RESET",
+    "description": "Uses slow, soft eye blinks to cue the nervous system and the horse that there is no threat.",
+    "instructions": "Relax your eyes and close them softly for a brief moment.\nBlink slowly several times, keeping your jaw soft.\nPair the blinks with long exhales.",
+    "duration_minutes": 2,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Polyvagal safety cues; equine calming-signal research.",
+    "suitable_for": [
+      "hypervigilance",
+      "horse_anxiety",
+      "relational_safety"
+    ]
+  },
+  {
+    "id": "99945469-a609-4684-8904-d07b0530831f",
+    "name": "Polyvagal Anchor: Breath Down Spine",
+    "category": "BODY RESET",
+    "description": "Visualization of breath flowing down the spine to engage dorsal and ventral vagal regulation.",
+    "instructions": "Inhale and imagine the breath traveling from the top of your spine downward.\nExhale and imagine it grounding through your pelvis into the saddle.\nRepeat slowly for 6\u201310 breaths.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Polyvagal theory; somatic breath-based grounding.",
+    "suitable_for": [
+      "freeze_response",
+      "dissociation",
+      "tension"
+    ]
+  },
+  {
+    "id": "cd79fdb9-e46b-49cb-99d7-c74138353d60",
+    "name": "Shoulder Rolls (Micro-Movement)",
+    "category": "BODY RESET",
+    "description": "Uses small shoulder rolls to release guarding and improve upper-body softness while mounted.",
+    "instructions": "Roll your shoulders gently forward and then back in small circles.\nKeep the movement tiny so as not to unbalance the horse.\nPair the roll with a slow exhale.",
+    "duration_minutes": 2,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic micro-movement therapy, postural release.",
+    "suitable_for": [
+      "upper_body_tension",
+      "overcontrol"
+    ]
+  },
+  {
+    "id": "36afbb81-736f-40bd-92d9-89ad9f9186d0",
+    "name": "Sternum Drop Reset",
+    "category": "BODY RESET",
+    "description": "Softening the sternum releases bracing in the upper chest and improves breathing efficiency.",
+    "instructions": "Relax the front of your chest by imagining your sternum softening downward 1\u20132 centimeters.\nLet your rib cage widen naturally.\nNotice how your horse responds to your softer torso.",
+    "duration_minutes": 2,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic postural work; trauma-informed chest release.",
+    "suitable_for": [
+      "bracing",
+      "tension",
+      "shallow_breathing"
+    ]
+  },
+  {
+    "id": "cd06ed79-7085-4e82-8e89-624051b637c8",
+    "name": "Side-Body Release",
+    "category": "BODY RESET",
+    "description": "Releases bracing in the rider's lateral line to increase symmetry and softness.",
+    "instructions": "Gently lengthen through the right side of your body for one breath.\nThen lengthen the left side.\nReturn to neutral and notice improved softness and mobility.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic lateral-line release; body mapping.",
+    "suitable_for": [
+      "rigidity",
+      "asymmetry"
+    ]
+  },
+  {
+    "id": "cd7bb461-f99a-45f6-9ae1-9b2a690c1331",
+    "name": "TRE-Style Leg Soft Shake",
+    "category": "BODY RESET",
+    "description": "A micro-version of tension release (TRE) using gentle leg softening while mounted.",
+    "instructions": "Allow one leg at a time to shake or quiver gently without losing contact.\nKeep movements small and safe.\nNotice release of tension through your hips and pelvis.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "TRE trauma release exercises adapted for mounted safety.",
+    "suitable_for": [
+      "stored_tension",
+      "freeze_response"
+    ]
+  },
+  {
+    "id": "05576c5c-4887-4253-b1fa-5f881458ca5b",
+    "name": "Wrist Shake-Out",
+    "category": "BODY RESET",
+    "description": "Releases hand and wrist tension that can travel through the reins to the horse.",
+    "instructions": "Shake out one wrist at a time softly while keeping a neutral rein with the other hand.\nSwitch sides.\nReturn to the reins with softened fingers.",
+    "duration_minutes": 1,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic tension release, hand relaxation in fine-motor sports.",
+    "suitable_for": [
+      "overcontrol",
+      "hand_tension"
+    ]
+  },
+  {
+    "id": "adad247e-9774-4249-8970-252150e2e5a8",
+    "name": "Mirror Neuron Relaxation",
+    "category": "BODY RESET",
+    "description": "Uses calm visual focus to encourage the rider's body to soften through mirror-neuron pathways.",
+    "instructions": "Focus on something calm and steady in the environment (tree, wall, horizon).\nLet your body mimic the stillness you are observing.\nRide slowly while maintaining this soft gaze.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Mirror-neuron system research, equine-assisted therapy observations.",
+    "suitable_for": [
+      "hypervigilance",
+      "nervous_energy"
+    ]
+  },
+  {
+    "id": "d0178db0-daa3-43bf-ab0d-7f3a3491d46c",
+    "name": "Micro-Movement Spine Wave",
+    "category": "BODY RESET",
+    "description": "Small spinal undulation to release rigidity and improve harmony with horse movement.",
+    "instructions": "Gently create a wave-like motion up your spine, matching your horse's movement.\nKeep the wave subtle and fluid.\nRepeat for one long side of the arena.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Feldenkrais spinal mobility techniques.",
+    "suitable_for": [
+      "rigidity",
+      "bracing"
+    ]
+  },
+  {
+    "id": "d2ac1907-b934-42c9-914c-d353e38000fb",
+    "name": "Neck Softening Within Safety",
+    "category": "BODY RESET",
+    "description": "Releases neck tension without compromising stability or balance.",
+    "instructions": "Gently turn your head left and right within a safe range.\nDrop your chin slightly, softening the back of your neck.\nKeep shoulders soft while doing this.",
+    "duration_minutes": 2,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic neck release and posture regulation.",
+    "suitable_for": [
+      "tension",
+      "headache_prevention"
+    ]
+  },
+  {
+    "id": "8c468d3b-a24a-403f-ad27-9a58336e8649",
+    "name": "Glute Release to Seat Deepening",
+    "category": "BODY RESET",
+    "description": "Releases glutes to improve seat depth and reduce bouncing or gripping.",
+    "instructions": "Notice if your glutes feel tight or clenched.\nOn each exhale, allow them to relax downward.\nObserve how your horse's back responds to a deeper seat.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic tension release; rider seat biomechanics.",
+    "suitable_for": [
+      "seat_mobility",
+      "tension"
+    ]
+  },
+  {
+    "id": "34538057-4f7d-4095-9f3e-7efbd5ac879b",
+    "name": "Somatic Sigh Release",
+    "category": "BODY RESET",
+    "description": "Uses a gentle sigh to discharge upper-body tension.",
+    "instructions": "Take a soft inhale through your nose.\nExhale with a gentle sigh through your mouth.\nRepeat 3\u20134 times without collapsing your posture.",
+    "duration_minutes": 2,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic tension release and breath research.",
+    "suitable_for": [
+      "anxiety",
+      "tension"
+    ]
+  },
+  {
+    "id": "350a0572-4fb6-48a5-ad00-45009d4b3bb6",
+    "name": "Hand Open\u2013Close Release",
+    "category": "BODY RESET",
+    "description": "Opens and closes fingers gently to release hand bracing and rein tension.",
+    "instructions": "Open your fingers wide for a moment without losing rein feel.\nClose gently, then reopen softly.\nRepeat several times while keeping wrists relaxed.",
+    "duration_minutes": 1,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic hand release; neuromuscular relaxation.",
+    "suitable_for": [
+      "hand_tension",
+      "overcontrol"
+    ]
+  },
+  {
+    "id": "bc52a830-b7a3-4f8c-86eb-faef0c777278",
+    "name": "Thigh Softening Scan",
+    "category": "BODY RESET",
+    "description": "Releases gripping in the thighs to increase horse-rider harmony.",
+    "instructions": "Scan through both thighs to identify gripping or tension.\nRelease each thigh by 5\u201310% on every exhale.\nNotice how your horse's back and stride respond.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic release techniques; rider posture research.",
+    "suitable_for": [
+      "tension",
+      "stability"
+    ]
+  },
+  {
+    "id": "9467d631-ede0-4f7f-a831-566eedb514bb",
+    "name": "Lower Back Melt",
+    "category": "BODY RESET",
+    "description": "Relaxes the lower back to reduce bracing and improve balance.",
+    "instructions": "Imagine your lower back melting downward like warm wax.\nAllow the movement of your horse to gently mobilize your spine.\nMaintain softness for several breaths.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic lumbar release and mobility work.",
+    "suitable_for": [
+      "low_back_tension",
+      "rigidity"
+    ]
+  },
+  {
+    "id": "5c7a685a-690e-430d-bdc6-3e0d2cc52dca",
+    "name": "Internal Temperature Check",
+    "category": "BODY RESET",
+    "description": "Enhances interoception by noticing internal sensations of warmth, coolness, or temperature shifts.",
+    "instructions": "Notice internal sensations such as warmth in your chest or coolness in your hands.\nName each sensation without judging it.\nRide one lap while maintaining internal awareness.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Interoceptive awareness and somatic mindfulness.",
+    "suitable_for": [
+      "dissociation",
+      "anxiety"
+    ]
+  },
+  {
+    "id": "9d9b4c19-d2d0-4438-b1ca-34a560af2334",
+    "name": "Heartbeat Awareness",
+    "category": "BODY RESET",
+    "description": "Builds interoceptive awareness by noticing the pulse or heartbeat while riding.",
+    "instructions": "Bring your attention to your heartbeat or pulse sensations.\nNotice if the rhythm changes as you breathe and ride.\nPair heartbeat awareness with slow exhales.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Interoception research; somatic emotional regulation.",
+    "suitable_for": [
+      "panic",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "1a475168-e5ec-4d27-8878-4170941381b2",
+    "name": "Internal Energy Direction Downward",
+    "category": "BODY RESET",
+    "description": "Directs internal energy downward through the seat to create stability and security.",
+    "instructions": "Imagine energy flowing downward from your chest through your seat.\nLet gravity assist the downward flow until your seat deepens.\nStay connected with slow breathing.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Grounding and somatic energy-direction practices.",
+    "suitable_for": [
+      "anxiety",
+      "tension",
+      "instability"
+    ]
+  },
+  {
+    "id": "1407f987-c776-405f-927f-3a9794e54c96",
+    "name": "Breath-to-Tension Mapping",
+    "category": "BODY RESET",
+    "description": "Maps where breath flows and where it does not, revealing areas of hidden tension.",
+    "instructions": "Notice which parts of your body move with your breath.\nNotice which parts feel still or blocked.\nDirect breath gently toward blocked areas without forcing.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Breath mapping and somatic therapy research.",
+    "suitable_for": [
+      "tension",
+      "body_awareness"
+    ]
+  },
+  {
+    "id": "e3a41b6e-374d-48c7-ae25-41575470f56d",
+    "name": "Sensation Naming (Tight, Warm, Buzzing)",
+    "category": "BODY RESET",
+    "description": "Names sensations to reduce emotional overwhelm and increase regulation.",
+    "instructions": "Notice a sensation such as tightness, warmth, or buzzing.\nName it simply without judgment.\nStay with the sensation for one breath before shifting focus.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic experiencing and mindfulness naming practices.",
+    "suitable_for": [
+      "emotional_overwhelm",
+      "anxiety"
+    ]
+  },
+  {
+    "id": "73c204e3-35cb-4d02-9315-4e918c35e214",
+    "name": "Expand vs Contract Body Check",
+    "category": "BODY RESET",
+    "description": "Identifies whether the body is bracing (contracted) or softening (expanded).",
+    "instructions": "Ask yourself: \"Is my body expanding or contracting right now?\"\nIf contracting, soften one small area such as your jaw or ribs.\nRide one long side noticing the shift.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic contraction/expansion patterns in trauma and stress.",
+    "suitable_for": [
+      "bracing",
+      "fear"
+    ]
+  },
+  {
+    "id": "b640ecf0-20b8-43ce-97c2-d29bc2e7a07c",
+    "name": "Somatic Allowing Practice",
+    "category": "BODY RESET",
+    "description": "Encourages the body to allow sensations without resisting them, reducing fight-or-flight escalation.",
+    "instructions": "Notice a sensation or emotion arising in your body.\nSay internally: \"I can allow this sensation to be here.\"\nBreathe slowly and observe how the sensation shifts.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic experiencing; acceptance-based emotion regulation.",
+    "suitable_for": [
+      "anxiety",
+      "shutdown"
+    ]
+  },
+  {
+    "id": "dba648df-3918-4f6e-a07a-46ef575b3f36",
+    "name": "Micro-Postural Adjustments",
+    "category": "BODY RESET",
+    "description": "Uses tiny alignment shifts to break out of rigid posture cycles.",
+    "instructions": "Shift your posture by just 2\u20135%: soften your shoulders, lengthen your spine, or adjust your pelvis.\nKeep the adjustments tiny to stay balanced.\nRepeat small resets every few strides.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Micro-movement somatic regulation.",
+    "suitable_for": [
+      "rigidity",
+      "muscle_guarding"
+    ]
+  },
+  {
+    "id": "498ce8e8-7695-4ace-9514-2e6148e80d00",
+    "name": "Five Percent Softer Rule",
+    "category": "BODY RESET",
+    "description": "Asks the rider to soften their body by only 5%, preserving stability while reducing tension.",
+    "instructions": "Choose one body area (jaw, shoulders, hands, thighs).\nSoften that area by just 5%, not more.\nRide one lap and observe changes in your horse.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic micro-softening and nervous system down-regulation.",
+    "suitable_for": [
+      "tension",
+      "overcontrol"
+    ]
+  },
+  {
+    "id": "921a67a9-49a8-4b30-8b58-fdd117e5aefe",
+    "name": "Pressure Mapping Grip Awareness",
+    "category": "BODY RESET",
+    "description": "Raises awareness of where the rider is gripping unnecessarily.",
+    "instructions": "Scan your body for any gripping: thighs, glutes, hands, arms.\nRelease one gripping area by a small amount.\nRepeat for each area as needed.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic awareness and pressure mapping research.",
+    "suitable_for": [
+      "bracing",
+      "overcontrol"
+    ]
+  },
+  {
+    "id": "95401c24-9498-4c53-9805-89368c15105c",
+    "name": "Synchronize with Horse Swing",
+    "category": "BODY RESET",
+    "description": "Enhances rider-horse harmony by matching the swing of the horse's rib cage and back.",
+    "instructions": "Feel your horse's ribcage swing left and right under your seat.\nAllow your hips and lower back to follow the movement.\nStay soft and rhythmically connected for one arena lap.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Equine biomechanics; entrainment research.",
+    "suitable_for": [
+      "connection",
+      "rhythm",
+      "tension_release"
+    ]
+  },
+  {
+    "id": "8e7c5a03-5bca-4716-98df-d3c7bfc69652",
+    "name": "Seat Rhythm Calibration",
+    "category": "BODY RESET",
+    "description": "Improves seat timing and balance by calibrating movement against the horse's gait rhythm.",
+    "instructions": "Sit quietly at the walk and tune into the rhythm of the gait.\nMatch your seat movement precisely with each step.\nNotice increased stability and relaxation.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Rider biomechanics; somatic rhythm entrainment.",
+    "suitable_for": [
+      "balance",
+      "connection"
+    ]
+  },
+  {
+    "id": "b85a3c5b-111b-4900-8211-39613b2b5734",
+    "name": "Somatic Mirroring Exercise",
+    "category": "BODY RESET",
+    "description": "Encourages the rider to mirror the horse's relaxation patterns to create mutual regulation.",
+    "instructions": "Observe your horse's breathing, rhythm, and posture.\nMirror any softening or relaxing gesture your horse shows.\nAllow mutual regulation to develop between you.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Co-regulation and mirror neuron research.",
+    "suitable_for": [
+      "horse_connection",
+      "anxiety"
+    ]
+  },
+  {
+    "id": "df939cc3-1c7f-4797-b0c5-140b5ce00867",
+    "name": "Feel Horse Back Movement",
+    "category": "BODY RESET",
+    "description": "Trains the rider to sense the vertical and lateral movement of the horse's back.",
+    "instructions": "Focus on how your horse's back lifts and swings under you.\nFollow the movement without bracing or forcing.\nNotice any areas where your body stiffens and soften them.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Equine proprioception awareness; somatic seat training.",
+    "suitable_for": [
+      "seat_mobility",
+      "body_awareness"
+    ]
+  },
+  {
+    "id": "3ed17ca0-3bd0-4d71-bc83-2f07e5c0f973",
+    "name": "Co-Release Rider Exhale \u2192 Horse Softens",
+    "category": "BODY RESET",
+    "description": "Uses the rider's exhale as a cue for the horse to soften or release tension.",
+    "instructions": "On each slow exhale, soften your entire torso.\nNotice if your horse drops its head, blows out, or relaxes.\nContinue pattern for one arena lap.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Co-regulation research; equine behavioral mirroring.",
+    "suitable_for": [
+      "horse_tension",
+      "connection"
+    ]
+  },
+  {
+    "id": "68d9d624-4f94-4b90-a923-9ddc4617b931",
+    "name": "Heavy Seat Bones Grounder",
+    "category": "BODY RESET",
+    "description": "Helps the rider deepen into the saddle for stability and calm.",
+    "instructions": "Imagine your seat bones dropping heavily into the saddle.\nAllow gravity to create stable contact.\nMaintain soft legs while doing so.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic grounding principles; equitation seat training.",
+    "suitable_for": [
+      "instability",
+      "tension"
+    ]
+  },
+  {
+    "id": "3c7bf9a7-0e7f-4386-ab17-0babbdd796dc",
+    "name": "Breath and Seat Integration",
+    "category": "BODY RESET",
+    "description": "Coordinates breath with seat movement to enhance unity with the horse.",
+    "instructions": "On each inhale, feel your pelvis rise with your horse's movement.\nOn each exhale, allow your seat to deepen.\nMaintain integration for several cycles.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic breath-seat integration work.",
+    "suitable_for": [
+      "seat_mobility",
+      "connection"
+    ]
+  },
+  {
+    "id": "f690655e-c015-41ac-ae5b-ddf52266a1d7",
+    "name": "Aid from Soft Body, Not Tension",
+    "category": "BODY RESET",
+    "description": "Redirects effort from braced muscles into soft, effective rider aids.",
+    "instructions": "Before giving an aid, soften your torso and release gripping.\nGive the aid from softness rather than force.\nNotice your horse's acceptance of the aid.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Equitation science; somatic movement efficiency.",
+    "suitable_for": [
+      "overcontrol",
+      "tension"
+    ]
+  },
+  {
+    "id": "093d34d4-f8a0-4824-bd41-1a200cf3e15f",
+    "name": "Pelvis\u2013Hip\u2013Knee Line Releasing",
+    "category": "BODY RESET",
+    "description": "Releases the pelvis-hip-knee line to improve suppleness and reduce gripping.",
+    "instructions": "Notice the line from your pelvis to your knee on each side.\nSoften or lengthen through the line on the exhale.\nSwitch sides and maintain symmetry.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic line release and rider alignment.",
+    "suitable_for": [
+      "stability",
+      "softness"
+    ]
+  },
+  {
+    "id": "47c273c1-96a3-40f7-9cc9-93bccb608bce",
+    "name": "Soft Spine Visualization",
+    "category": "BODY RESET",
+    "description": "Encourages a flexible, responsive spine to reduce bracing.",
+    "instructions": "Visualize your spine as a flexible chain rather than a stiff rod.\nLet it respond fluidly to your horse's movement.\nHold softness for one arena long side.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic imagery; Feldenkrais-based mobility.",
+    "suitable_for": [
+      "rigidity",
+      "fear"
+    ]
+  },
+  {
+    "id": "2f7aba17-58a1-4235-9bc0-5e2364610828",
+    "name": "Collarbone Tapping",
+    "category": "Tapping / EFT",
+    "description": "On-horse EFT-style tapping on the collarbone points to reduce anxiety and reset the nervous system.",
+    "instructions": "Ensure your horse is walking calmly on a loose or neutral rein in a safe environment.\nWith one or two fingers, gently tap on the soft area just below your collarbone on one side, keeping the tapping light and rhythmic.\nBreathe slowly as you tap and, if helpful, name what you are feeling (for example, nervous, tight, overwhelmed).\nContinue for 30\u201360 seconds, then return both hands to the reins and notice any change in your body and your horse.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Emotional Freedom Techniques (EFT) research for anxiety and stress reduction; bilateral stimulation in trauma-focused therapies.",
+    "suitable_for": [
+      "anxiety",
+      "panic",
+      "performance_stress"
+    ]
+  },
+  {
+    "id": "8ff68b6d-4c99-48db-a625-f681b9e6a7cb",
+    "name": "Hand Karate Chop Tapping",
+    "category": "Tapping / EFT",
+    "description": "Tapping on the side of the hand (karate chop point) paired with a set-up statement to reduce distress.",
+    "instructions": "While your horse walks quietly, bring one hand to the side of the other hand (the karate chop edge).\nTap gently on the side of your hand with two or three fingers in a steady rhythm.\nOptionally repeat a phrase such as: Even though I feel anxious right now, I am doing the best I can.\nContinue for 30\u201360 seconds, then return to normal reins and notice your nervous system level.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "EFT set-up protocol; cognitive and somatic integration for distress tolerance.",
+    "suitable_for": [
+      "panic",
+      "negative_self_talk",
+      "performance_anxiety"
+    ]
+  },
+  {
+    "id": "a4d3a605-08bf-44e5-a7b6-e4ed49e2d7d0",
+    "name": "Alternating Shoulder Tapping",
+    "category": "Tapping / EFT",
+    "description": "Bilateral shoulder tapping to stimulate both brain hemispheres and support emotional regulation.",
+    "instructions": "With your horse in a calm walk, hold the reins in one hand if safe or loop them briefly.\nUse your right hand to gently tap your left shoulder a few times, then your left hand to tap your right shoulder, alternating right-left-right-left.\nKeep the tapping soft and rhythmic while breathing slowly.\nContinue for 20\u201340 taps, then return your hands to the reins and notice any sense of calm or clarity.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Bilateral stimulation methods used in EMDR and trauma-informed therapies.",
+    "suitable_for": [
+      "trauma_triggers",
+      "overwhelm",
+      "hyperarousal"
+    ]
+  },
+  {
+    "id": "a36dfbc3-06af-4eb6-b759-87622bd6fbdd",
+    "name": "Bilateral Thigh Tapping",
+    "category": "Tapping / EFT",
+    "description": "Tapping alternately on each thigh to ground the rider and calm the nervous system.",
+    "instructions": "At the walk, place one hand lightly on each thigh.\nTap alternately left, right, left, right on your thighs in a gentle, steady rhythm.\nPair the tapping with slower breathing and a neutral focus on your horse's movement.\nContinue for 30\u201360 seconds, then rest your hands back on the reins.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Bilateral tapping used in EMDR, DBT, and somatic trauma protocols.",
+    "suitable_for": [
+      "panic",
+      "flashbacks",
+      "emotional_overwhelm"
+    ]
+  },
+  {
+    "id": "866b8c74-e2d3-46fb-8a80-cee3cc15fa62",
+    "name": "Wrist Tapping Sequence",
+    "category": "Tapping / EFT",
+    "description": "Gentle tapping on the inside of the wrist to reduce activation before or during a ride.",
+    "instructions": "With your horse calmly walking, bring one hand toward the inside of the opposite wrist.\nTap gently on the inside of the wrist where a pulse might be felt.\nBreathe in for a slow count of four and out for a slow count of six as you tap.\nRepeat for 6\u201310 breaths, then return your hand to the reins.",
+    "duration_minutes": 2,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Acupressure-informed tapping points; EFT and anxiety reduction literature.",
+    "suitable_for": [
+      "anxiety",
+      "pre_ride_nerves"
+    ]
+  },
+  {
+    "id": "1e92a2d4-9ad5-4458-9822-f32b9fc13816",
+    "name": "Light Chest Tapping",
+    "category": "Tapping / EFT",
+    "description": "Soft tapping in the upper chest area to help release emotional pressure and support calmer breathing.",
+    "instructions": "Ensure your horse is relaxed at the walk or halt.\nUse fingertips to gently tap in the center of your upper chest, avoiding any painful areas.\nCoordinate the tapping with slow inhales and long exhales.\nContinue for 30\u201345 seconds, then notice any softening in your chest and shoulders.",
+    "duration_minutes": 2,
+    "anxiety_level": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "EFT tapping locations; somatic chest release for anxiety.",
+    "suitable_for": [
+      "chest_tightness",
+      "panic",
+      "emotional_pressure"
+    ]
+  },
+  {
+    "id": "c350c2a9-fa24-4348-b15c-7589c5fbf1a1",
+    "name": "Anxiety Set-Up Statement Tapping",
+    "category": "Tapping / EFT",
+    "description": "Uses a set-up statement plus tapping to acknowledge anxiety and build self-acceptance.",
+    "instructions": "While your horse is calmly walking, choose a tapping point such as the side of your hand or collarbone.\nTap gently and say three times (out loud or silently): Even though I feel anxious right now, I accept that this is how I feel and I am trying my best.\nContinue tapping on that point or move through other points as you ride (collarbone, chest, wrist).\nNotice changes in intensity of anxiety from 0\u201310.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "EFT treatment protocols for anxiety; acceptance-based approaches.",
+    "suitable_for": [
+      "performance_anxiety",
+      "fear_after_fall"
+    ]
+  },
+  {
+    "id": "bd652fda-5763-4c97-ba4f-1e8e135e9ae1",
+    "name": "Confidence Set-Up Statement Tapping",
+    "category": "Tapping / EFT",
+    "description": "Pairs tapping with a confidence-building set-up phrase to shift self-belief before or during a ride.",
+    "instructions": "Select a tapping point (for example, collarbone or side of hand) while your horse walks.\nTap and repeat: Even though part of me doubts myself, I am learning and I choose to ride with calm confidence.\nContinue tapping and repeating the phrase for 6\u201310 breaths.\nReturn to normal reins and test how it feels to ride from this updated mindset.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "EFT with positive cognitive restructuring for confidence.",
+    "suitable_for": [
+      "low_confidence",
+      "self_doubt"
+    ]
+  },
+  {
+    "id": "563d1e14-a880-4e4f-91a8-96266305328d",
+    "name": "Flow-State Tapping",
+    "category": "Tapping / EFT",
+    "description": "Tapping designed to support a focused, in-the-zone riding state by clearing distractions.",
+    "instructions": "With your horse at a walk, tap lightly on your collarbone or thighs in a steady bilateral rhythm.\nRepeat a brief phrase such as: Here, now, with my horse.\nMaintain tapping and phrase repetition for 45\u201360 seconds, then ride a simple pattern focusing on feel and rhythm.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Bilateral stimulation and sports flow-state research.",
+    "suitable_for": [
+      "focus",
+      "performance_stress",
+      "distraction"
+    ]
+  },
+  {
+    "id": "aeae268b-7230-401d-a216-cea7d208837c",
+    "name": "Pre-Competition EFT Sequence",
+    "category": "Tapping / EFT",
+    "description": "A short tapping sequence used before entering the ring to manage nerves and steady focus.",
+    "instructions": "While walking or halted near the arena, tap through a brief sequence: side of hand, collarbone, chest, wrist.\nAt each point, name what you feel (for example: nervous, tight, worried) and acknowledge your effort.\nFinish by tapping at the collarbone while repeating a calm phrase such as: I know my horse, I know my ride.\nTake one last slow breath and ride your entry line.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "EFT protocols applied to sports performance anxiety.",
+    "suitable_for": [
+      "show_anxiety",
+      "ring_nerves"
+    ]
+  },
+  {
+    "id": "d1199dc8-b9d0-47bc-80b7-72783c9ee2d1",
+    "name": "Right\u2013Left Rein Finger Tapping",
+    "category": "Tapping / EFT",
+    "description": "Tiny bilateral tapping using fingers on the reins to calm the nervous system without dropping contact.",
+    "instructions": "At the walk, gently tap your right fingers on the rein, then your left fingers, alternating rhythmically.\nKeep the taps very small so you do not disturb your horse's mouth.\nContinue for 20\u201330 seconds while breathing evenly.",
+    "duration_minutes": 2,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Discrete bilateral stimulation adapted for mounted use.",
+    "suitable_for": [
+      "subtle_anxiety",
+      "need_for_discreet_regulation"
+    ]
+  },
+  {
+    "id": "37b6a8fd-6a84-4db5-a981-9dffe5f8a3f0",
+    "name": "Right\u2013Left Thigh Alternating",
+    "category": "Tapping / EFT",
+    "description": "Alternating taps on each thigh for grounding and bilateral neural activation.",
+    "instructions": "Place one hand near each thigh while your horse walks.\nTap left thigh, then right thigh, in a slow, even rhythm.\nContinue tapping for 30\u201360 seconds, then place your hands back on the reins and feel your seat deepening into the saddle.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Bilateral stimulation, grounding techniques for trauma.",
+    "suitable_for": [
+      "overwhelm",
+      "flashbacks",
+      "panic"
+    ]
+  },
+  {
+    "id": "de54b14b-14ea-4422-bdbb-0f6037c4e2e2",
+    "name": "Rhythmic Belly Breath and Tap",
+    "category": "Tapping / EFT",
+    "description": "Combines belly breathing with tapping to support deep regulation.",
+    "instructions": "Place one hand lightly on your lower belly and the other hand on your thigh.\nAs you breathe into your belly, gently tap the hand on your thigh in rhythm with your breath.\nContinue for 6\u201310 breaths, then ride on and notice changes in your body tone.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Combined breathwork and bilateral tapping interventions.",
+    "suitable_for": [
+      "anxiety",
+      "somatic_tension"
+    ]
+  },
+  {
+    "id": "a73b07eb-f638-4d46-ab30-1f1eb63e071f",
+    "name": "Bilateral Seat Bone Shift",
+    "category": "Tapping / EFT",
+    "description": "Subtle alternating weight shifts in the seat, functioning like bilateral stimulation through the pelvis.",
+    "instructions": "At the walk, slightly increase weight onto your left seat bone, then your right, in a slow alternating rhythm.\nKeep the movement small and synchronized with your horse's stride.\nContinue for one or two long sides of the arena and observe your horse's response.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic bilateral movement; co-regulation via movement rhythms.",
+    "suitable_for": [
+      "dissociation",
+      "mild_anxiety"
+    ]
+  },
+  {
+    "id": "7ce60aa6-f0b9-4cf6-833b-648ac105cb14",
+    "name": "Foot Pressure Bilateral Switching",
+    "category": "Tapping / EFT",
+    "description": "Alternating heel or stirrup pressure to create bilateral grounding through the legs.",
+    "instructions": "Gently press more weight into your left stirrup, then your right, alternating in a calm rhythm.\nAvoid jabbing or gripping; keep the switches smooth.\nContinue for 30\u201360 seconds, then return to even weight.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Grounding via proprioceptive pressure and bilateral stimulation.",
+    "suitable_for": [
+      "anxiety",
+      "instability"
+    ]
+  },
+  {
+    "id": "29ca3d66-d740-4f1a-8feb-7022d5fc604a",
+    "name": "Tapping to Horse's Walk Rhythm",
+    "category": "Tapping / EFT",
+    "description": "Matches bilateral tapping to the 4-beat walk rhythm to enhance co-regulation.",
+    "instructions": "Notice the four-beat rhythm of your horse's walk.\nTap alternately on your thighs or shoulders in time with the steps.\nContinue for one arena lap while keeping your breathing slow and steady.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Rhythmic entrainment research; bilateral stimulation in motion.",
+    "suitable_for": [
+      "focus",
+      "anxiety"
+    ]
+  },
+  {
+    "id": "f8d2fa81-1057-4366-98c5-827f0b5ac83f",
+    "name": "Eye-Movement Bilateral Sweep",
+    "category": "Tapping / EFT",
+    "description": "Uses slow left-right eye movements to stimulate bilateral processing while mounted.",
+    "instructions": "While riding at a calm walk, choose two safe visual points in your environment\u2014one to your left and one to your right.\nSlowly move your eyes from left point to right point and back again, without turning your head drastically.\nRepeat the sweep several times while breathing slowly.\nReturn to a neutral forward gaze.",
+    "duration_minutes": 2,
+    "anxiety_level": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "EMDR-style bilateral eye movement adapted for in-saddle use.",
+    "suitable_for": [
+      "trauma_triggers",
+      "flashbacks",
+      "high_arousal"
+    ]
+  },
+  {
+    "id": "561e9551-f27f-4f3d-aed1-56512191f7db",
+    "name": "Shoulder-to-Hip Bilateral Scan",
+    "category": "Tapping / EFT",
+    "description": "Involves gentle touch or tapping from shoulder to opposite hip in alternation, supporting cross-body integration.",
+    "instructions": "Slide one hand briefly along the front of your body from left shoulder toward right hip, then return to the reins.\nRepeat on the other side from right shoulder toward left hip.\nKeep movements small and deliberate so as not to disturb your horse.\nContinue alternating sides for 30\u201360 seconds.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Cross-lateral bilateral stimulation; somatic integration methods.",
+    "suitable_for": [
+      "dissociation",
+      "stress",
+      "body_awareness"
+    ]
+  },
+  {
+    "id": "c9f75996-526b-4c94-a1e7-edb25859fac4",
+    "name": "Bilateral Breath Sides Awareness",
+    "category": "Tapping / EFT",
+    "description": "Focuses on breathing alternately into left and right sides of the ribcage for bilateral regulation.",
+    "instructions": "As you inhale, imagine breathing more into the left side of your ribs; as you exhale, relax.\nOn the next inhale, imagine breathing more into the right side.\nAlternate left and right for 8\u201310 breaths while walking your horse.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic breathwork; lateralized interoception practices.",
+    "suitable_for": [
+      "anxiety",
+      "body_awareness"
+    ]
+  },
+  {
+    "id": "fc9c3fee-5d12-451f-8b25-06c034191655",
+    "name": "Alternate Rein Slide Touch",
+    "category": "Tapping / EFT",
+    "description": "A discrete bilateral technique where the rider alternately slides fingers along each rein.",
+    "instructions": "At the walk, gently slide the fingers of your right hand a few centimeters along the rein, then return.\nThen slide the fingers of your left hand along the rein, alternating right and left.\nKeep the contact soft and consistent so the horse is not startled.\nContinue for 20\u201340 seconds while breathing slowly.",
+    "duration_minutes": 2,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Discrete bilateral stimulation; sensory grounding.",
+    "suitable_for": [
+      "subtle_anxiety",
+      "need_for_hidden_regulation"
+    ]
+  },
+  {
+    "id": "4b09f86c-955e-4dc1-b9e7-644df503317c",
+    "name": "Reset Tapping Before Transition",
+    "category": "Tapping / EFT",
+    "description": "Brief bilateral tapping to reset the nervous system immediately before a gait or movement transition.",
+    "instructions": "Before asking for a transition, briefly tap both thighs with your hands in an alternating pattern for a few seconds.\nTake one slow, deep breath while tapping.\nStop tapping, pick up your reins as needed, and cue the transition from a calmer state.",
+    "duration_minutes": 2,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Bilateral pre-performance reset strategies.",
+    "suitable_for": [
+      "transition_anxiety",
+      "rushy_transitions"
+    ]
+  },
+  {
+    "id": "e811d4e7-070c-465f-b222-e018d179ba92",
+    "name": "Tapping Into Focus (Pre-Jump or Test Prep)",
+    "category": "Tapping / EFT",
+    "description": "Helps riders transition from scattered attention into clear focus before a jump or test movement.",
+    "instructions": "At the walk or halt before a line or movement, tap alternately on your thighs or shoulders.\nSilently say: Focus here, now, on this next line.\nStop tapping, take one slow inhale and exhale, and ride the movement with your attention on specific cues (line, rhythm, hands, and seat).",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Performance tapping combined with attentional cueing.",
+    "suitable_for": [
+      "focus",
+      "show_anxiety"
+    ]
+  },
+  {
+    "id": "40fc169c-501a-4dbe-951c-f9987f545934",
+    "name": "Tapping Release for Overthinking",
+    "category": "Tapping / EFT",
+    "description": "Targets mental loops and overanalysis by combining tapping with cognitive defusion phrases.",
+    "instructions": "While your horse walks quietly, tap on your collarbone or thighs.\nRepeat phrases such as: These are just thoughts, not commands or My brain is busy, but my body can stay calm.\nContinue tapping and repeating for 1\u20132 minutes, then ride a simple pattern focusing only on feel.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "EFT plus ACT cognitive defusion strategies.",
+    "suitable_for": [
+      "overthinking",
+      "perfectionism"
+    ]
+  },
+  {
+    "id": "905d9dfe-ea29-40c5-96fd-78932f9068e0",
+    "name": "Tapping for Letting Go of Mistakes",
+    "category": "Tapping / EFT",
+    "description": "Supports emotional recovery after small riding mistakes so they do not derail the session.",
+    "instructions": "After a mistake or rough moment, keep your horse moving safely at the walk.\nTap gently on your chest or collarbone and say: I notice that happened, and I can learn without beating myself up.\nContinue tapping for 30\u201360 seconds, then reset and ride the line again if appropriate.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Self-compassion research; EFT for shame and performance recovery.",
+    "suitable_for": [
+      "shame",
+      "self_criticism",
+      "show_anxiety"
+    ]
+  },
+  {
+    "id": "92125fb0-68e3-48ca-bc49-6f73afcf2153",
+    "name": "Pre-Test Nerves EFT",
+    "category": "Tapping / EFT",
+    "description": "Short tapping protocol focusing on anticipatory nervousness before a dressage test or pattern.",
+    "instructions": "While mounted and waiting for your turn, tap through a few points such as side of hand, collarbone, and wrist.\nName your feelings honestly: I feel shaky, I am afraid of messing up, I want to do well.\nFinish by tapping your collarbone while saying: I can ride the best I can with the horse I have today.\nTake one long exhale and prepare to enter at A or start the pattern.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "EFT for performance anxiety; anticipatory stress protocols.",
+    "suitable_for": [
+      "show_anxiety",
+      "anticipatory_fear"
+    ]
+  },
+  {
+    "id": "01e4b759-4ceb-4dd9-910b-2bb9881573fe",
+    "name": "Power Phrase plus Tap",
+    "category": "Tapping / EFT",
+    "description": "Pairs a chosen power phrase with tapping to embody a confident riding identity.",
+    "instructions": "Choose a phrase like I ride with clarity or I am a calm, capable rider.\nTap gently on your chest or thighs while repeating the phrase in time with your breath.\nContinue for 45\u201360 seconds, then ride a simple line or figure focusing on that identity.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "EFT and identity-based behavior change research.",
+    "suitable_for": [
+      "low_confidence",
+      "self_doubt"
+    ]
+  },
+  {
+    "id": "907f03b9-2cb8-4695-8341-e283ab9ca16a",
+    "name": "Confidence Access Tapping",
+    "category": "Tapping / EFT",
+    "description": "Helps riders reconnect with a previous memory of competence and calm while tapping.",
+    "instructions": "Begin gentle tapping on your collarbone or wrist.\nRecall a time you felt confident and effective in the saddle or in another area of life.\nAs you tap, bring that memory into your body: posture, breath, and feeling.\nRide on from that memory state and notice any change.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Resource tapping; resourcing techniques in trauma therapy and sports psych.",
+    "suitable_for": [
+      "low_confidence",
+      "imposter_feelings"
+    ]
+  },
+  {
+    "id": "ffefb631-8d29-4a20-a8d6-00f87cf4f118",
+    "name": "Performance Identity Reset Tapping",
+    "category": "Tapping / EFT",
+    "description": "Resets identity from scared or stuck rider to curious learner or calm athlete.",
+    "instructions": "Tap on a chosen point (collarbone or hand) while saying: Even though part of me feels like a bad rider, I am choosing to be a learning athlete.\nRepeat for several tapping rounds, allowing the new identity phrase to settle in.\nContinue riding with that identity in mind, focusing on process instead of perfection.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "EFT combined with identity-based cognitive reframing.",
+    "suitable_for": [
+      "shame",
+      "self_criticism"
+    ]
+  },
+  {
+    "id": "5179a522-fab1-4a20-a859-218cc05c0a0f",
+    "name": "Course Memory Tapping",
+    "category": "Tapping / EFT",
+    "description": "Uses tapping to support memory and calm when remembering a jump course or pattern.",
+    "instructions": "While mounted and walking, tap alternately on your thighs or shoulders.\nSilently rehearse your course or pattern: fence numbers, lines, letters, or movements.\nIf anxious thoughts appear, acknowledge them and return to calmly reviewing the pattern while tapping.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Bilateral stimulation plus mental rehearsal in sport psychology.",
+    "suitable_for": [
+      "course_memory",
+      "show_anxiety"
+    ]
+  },
+  {
+    "id": "6b22d9cf-08de-4971-b1fc-78bad4f74354",
+    "name": "Visualization plus Tap Combo",
+    "category": "Tapping / EFT",
+    "description": "Combines positive ride visualization with tapping to strengthen neural pathways for success.",
+    "instructions": "At a walk or halt, begin gentle tapping on your thighs or collarbone.\nVisualize yourself riding a line, test, or exercise calmly and effectively.\nFeel the successful ride in your body while you tap.\nStop tapping, then ride a simplified version of what you visualized.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Sports imagery plus bilateral stimulation for performance.",
+    "suitable_for": [
+      "performance_stress",
+      "confidence"
+    ]
+  },
+  {
+    "id": "f17cf5e3-ccc2-40a1-babe-82580778cc28",
+    "name": "Tap plus Long Exhale",
+    "category": "Tapping / EFT",
+    "description": "Pairs bilateral tapping with prolonged exhalation to quickly down-regulate the nervous system.",
+    "instructions": "Tap alternately on your thighs or shoulders in a slow rhythm.\nInhale normally, then exhale for a slow count of six or longer as you keep tapping.\nRepeat the long exhale plus tapping for 4\u20136 breaths.",
+    "duration_minutes": 2,
+    "anxiety_level": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Breath-based vagal regulation plus bilateral stimulation.",
+    "suitable_for": [
+      "panic",
+      "high_arousal"
+    ]
+  },
+  {
+    "id": "72fd322e-724b-425f-9b48-b133d0627fb5",
+    "name": "Tap While Engaging Seat Rhythm",
+    "category": "Tapping / EFT",
+    "description": "Uses rhythmic seat motion plus tapping for full-body regulation.",
+    "instructions": "At the walk, let your seat move fluidly with your horse's back.\nLightly tap alternately on your thighs in time with the stride.\nContinue for one arena lap, focusing on the combined rhythm of seat, horse, and tapping.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Rhythmic regulation; bilateral entrainment strategies.",
+    "suitable_for": [
+      "tension",
+      "mild_anxiety",
+      "focus"
+    ]
+  },
+  {
+    "id": "7684f421-e8ad-495c-a8f3-1056a380fef8",
+    "name": "Tap While Relaxing Jaw",
+    "category": "Tapping / EFT",
+    "description": "Targets jaw tension while tapping to release upper-body bracing and worry.",
+    "instructions": "Begin gentle bilateral tapping on your thighs or shoulders.\nAt the same time, let your jaw soften and your tongue rest on the floor of your mouth.\nMaintain tapping for 30\u201360 seconds as jaw tension melts.\nReturn to normal riding focus and observe your horse's response.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic jaw release plus bilateral stimulation.",
+    "suitable_for": [
+      "tension",
+      "worry",
+      "horse_mouth_tension"
+    ]
+  },
+  {
+    "id": "96ec76d5-a7eb-4e36-94b1-45bfd4bfa8b3",
+    "name": "Tap plus Soft Gaze",
+    "category": "Tapping / EFT",
+    "description": "Supports a soft, wide visual field while using bilateral tapping to reduce hyperfocus or tunnel vision.",
+    "instructions": "Soften your eyes and allow your gaze to widen so you see more of the arena.\nTap alternately on your thighs or shoulders as you hold this soft, wide focus.\nContinue for one arena lap, then stop tapping and keep the soft gaze as you ride.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Visual field regulation plus bilateral tapping for anxiety.",
+    "suitable_for": [
+      "hyperfocus",
+      "tunnel_vision",
+      "ring_stress"
+    ]
+  },
+  {
+    "id": "8eac980e-ae12-48ad-a490-829b68326f76",
+    "name": "Tap to Reduce Hypervigilance",
+    "category": "Tapping / EFT",
+    "description": "Helps riders who are constantly scanning for danger bring their nervous system into a more balanced state.",
+    "instructions": "Begin bilateral tapping on your thighs, shoulders, or wrists while your horse walks in a safe area.\nAcknowledge: My body is on high alert, and I am not in immediate danger right now.\nLet your eyes briefly scan the environment once, then bring your gaze to a calm focal point.\nContinue tapping until your activation feels one or two points lower on a 0\u201310 scale.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Trauma-informed bilateral stimulation for hyperarousal.",
+    "suitable_for": [
+      "hypervigilance",
+      "PTSD_symptoms"
+    ]
+  },
+  {
+    "id": "e868c5a1-e8e7-4a6c-98dd-7ccb22f31dd1",
+    "name": "Tap to Anchor to Present",
+    "category": "Tapping / EFT",
+    "description": "Uses tapping plus present-focused cues to interrupt time-traveling into past falls or future fears.",
+    "instructions": "Tap alternately on your thighs or shoulders.\nSay quietly: Right now I am here, on this horse, in this arena.\nAdd simple details: It is [today's weather], I can feel the saddle, I hear hoofbeats.\nContinue for 30\u201360 seconds until the present feels more real than old memories or imagined disasters.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Grounding and orientation techniques plus bilateral stimulation.",
+    "suitable_for": [
+      "flashbacks",
+      "anticipatory_anxiety"
+    ]
+  },
+  {
+    "id": "e803e0d6-2c8d-4ca8-a246-06b731bd5164",
+    "name": "I Am Safe Tapping Loop",
+    "category": "Tapping / EFT",
+    "description": "Reinforces safety messages while tapping when there is no actual immediate threat.",
+    "instructions": "Begin tapping alternately on your collarbone or thighs.\nRepeat softly: In this moment, I am safe enough to ride.\nScan your environment quickly once to confirm there is no real threat.\nContinue tapping and repeating the phrase for 45\u201360 seconds.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Safety cueing in trauma therapy plus EFT techniques.",
+    "suitable_for": [
+      "general_anxiety",
+      "post-fall_fear"
+    ]
+  },
+  {
+    "id": "5883439c-d09a-4cc3-b28f-ca0afc5e757c",
+    "name": "Tap for Freeze Response",
+    "category": "Tapping / EFT",
+    "description": "Designed for riders who go into a freeze or shut-down response in the saddle.",
+    "instructions": "If you notice yourself going numb or frozen, keep your horse walking on a small, safe circle if possible.\nTap firmly but gently on your thighs or shoulders in an alternating rhythm.\nQuietly say: I am here, I am in my body, I can move.\nContinue until you feel even a small return of warmth, sensation, or emotion, then pair with grounding breath.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Bilateral stimulation for freeze and shutdown states in trauma work.",
+    "suitable_for": [
+      "freeze_response",
+      "shutdown",
+      "dissociation"
+    ]
+  },
+  {
+    "id": "854f76f3-996d-4412-8294-a76e53440d18",
+    "name": "Tap for After-Spook Reset",
+    "category": "Tapping / EFT",
+    "description": "Helps the rider's nervous system recover after a horse spook or sudden event.",
+    "instructions": "Once the horse is back under control and walking safely, begin light tapping on your thighs or shoulders.\nAcknowledge: That scared me, and I handled it enough to still be here.\nPair tapping with long exhales until your heart rate begins to slow.\nDecide calmly whether to continue the session or take a break.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Post-incident grounding; bilateral stimulation for acute stress.",
+    "suitable_for": [
+      "post_spook_anxiety",
+      "acute_stress"
+    ]
+  },
+  {
+    "id": "ab50f1a8-5fc0-4852-89a2-ae9dfc33aa27",
+    "name": "Grounding Statement plus Bilateral Tap",
+    "category": "Tapping / EFT",
+    "description": "Combines bilateral tapping with a simple grounding sentence to stabilize the rider and support the horse.",
+    "instructions": "Tap alternately on your thighs or shoulders while your horse walks calmly.\nChoose one grounding statement such as: One breath, one stride, one step at a time.\nRepeat the statement in time with your tapping for 45\u201360 seconds.\nStop tapping and keep the grounding statement in mind as you continue riding.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Combined grounding statements and bilateral stimulation for emotional regulation.",
+    "suitable_for": [
+      "anxiety",
+      "overwhelm",
+      "performance_stress"
+    ]
+  }
+]
