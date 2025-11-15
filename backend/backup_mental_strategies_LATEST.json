@@ -21,7 +21,13 @@
       4,
       5
     ],
-    "effectiveness_rating": 4.0
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Emotional Freedom Techniques (EFT), acupressure research, and energy psychology studies.",
+    "suitable_for": [
+      "anxiety",
+      "fear",
+      "emotional_release"
+    ]
   },
   {
     "id": "13c08f36-7bc7-418a-89c0-6a4a7278e249",
@@ -41,7 +47,13 @@
       2,
       3
     ],
-    "effectiveness_rating": 4.5
+    "effectiveness_rating": 4.5,
+    "evidence_base": "Emotional Freedom Techniques (EFT), acupressure research, and energy psychology studies.",
+    "suitable_for": [
+      "anxiety",
+      "fear",
+      "emotional_release"
+    ]
   },
   {
     "id": "8199fe75-6c82-4c43-b056-cd35f229123b",
@@ -62,7 +74,13 @@
       4,
       5
     ],
-    "effectiveness_rating": 4.2
+    "effectiveness_rating": 4.2,
+    "evidence_base": "Emotional Freedom Techniques (EFT), acupressure research, and energy psychology studies.",
+    "suitable_for": [
+      "anxiety",
+      "fear",
+      "emotional_release"
+    ]
   },
   {
     "id": "dae29c74-683a-447c-af48-7e9b6de8c858",
@@ -82,7 +100,13 @@
       6,
       7
     ],
-    "effectiveness_rating": 3.8
+    "effectiveness_rating": 3.8,
+    "evidence_base": "Emotional Freedom Techniques (EFT), acupressure research, and energy psychology studies.",
+    "suitable_for": [
+      "anxiety",
+      "fear",
+      "emotional_release"
+    ]
   },
   {
     "id": "1c6e1d76-263f-430b-8163-7453dfe5a0b7",
@@ -103,7 +127,13 @@
       5,
       6
     ],
-    "effectiveness_rating": 4.0
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Emotional Freedom Techniques (EFT), acupressure research, and energy psychology studies.",
+    "suitable_for": [
+      "anxiety",
+      "fear",
+      "emotional_release"
+    ]
   },
   {
     "id": "f02cab03-ecc4-47a4-8001-356288960c4c",
@@ -122,7 +152,13 @@
       2,
       3
     ],
-    "effectiveness_rating": 4.5
+    "effectiveness_rating": 4.5,
+    "evidence_base": "Emotional Freedom Techniques (EFT), acupressure research, and energy psychology studies.",
+    "suitable_for": [
+      "anxiety",
+      "fear",
+      "emotional_release"
+    ]
   },
   {
     "id": "a0e6f412-a56b-4040-905e-2e4d0b2c51d5",
@@ -142,7 +178,13 @@
       7,
       8
     ],
-    "effectiveness_rating": 3.5
+    "effectiveness_rating": 3.5,
+    "evidence_base": "Emotional Freedom Techniques (EFT), acupressure research, and energy psychology studies.",
+    "suitable_for": [
+      "anxiety",
+      "fear",
+      "emotional_release"
+    ]
   },
   {
     "id": "3e93ecef-6242-4c54-a6e9-5b59df21c1ab",
@@ -163,7 +205,13 @@
       8,
       9
     ],
-    "effectiveness_rating": 4.0
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Emotional Freedom Techniques (EFT), acupressure research, and energy psychology studies.",
+    "suitable_for": [
+      "anxiety",
+      "fear",
+      "emotional_release"
+    ]
   },
   {
     "id": "d928b856-a68f-46d7-8dd3-8affd3641bb7",
