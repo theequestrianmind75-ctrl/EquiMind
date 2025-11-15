@@ -108,8 +108,11 @@ ${s.instructions}
         }
       }
       
-      // Send bulk update to backend
-      const response = await api.post('/mental-strategies/bulk-update', updates);
+      // Send bulk update to backend using admin endpoint
+      const response = await api.post('/admin/bulk-update', {
+        password: ADMIN_PASSWORD,
+        updates
+      });
       
       Alert.alert('Success', `Updated ${response.data.updated} tools!`, [
         { text: 'OK', onPress: () => router.back() }
