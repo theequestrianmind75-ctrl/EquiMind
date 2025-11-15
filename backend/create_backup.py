@@ -8,8 +8,9 @@ load_dotenv()
 
 # Connect to MongoDB
 mongo_url = os.getenv('MONGO_URL', 'mongodb://localhost:27017/')
+db_name = os.getenv('DB_NAME', 'test_database')
 client = MongoClient(mongo_url)
-db = client['equimind_mobile']
+db = client[db_name]
 
 # Create backup
 backup_data = {
