@@ -11,7 +11,7 @@ from pathlib import Path
 async def init_production_database():
     """Initialize production database with backup if empty or corrupted"""
     
-    # Get environment variables
+    # Get environment variables with fallbacks
     mongo_url = os.environ.get('MONGO_URL', 'mongodb://localhost:27017')
     db_name = os.environ.get('DB_NAME', 'equimind')
     
