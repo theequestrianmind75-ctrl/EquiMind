@@ -44,9 +44,9 @@ const CATEGORIES: any = {
     keywords: ['activation / grounding'],
   },
   somatic: {
-    title: 'Somatic Reset',
+    title: 'Body Reset',
     color: '#8b5cf6',
-    keywords: ['somatic reset'],
+    keywords: ['body reset'],
   },
   tapping: {
     title: 'Tapping / EFT',
