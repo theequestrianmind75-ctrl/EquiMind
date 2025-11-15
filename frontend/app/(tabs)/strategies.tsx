@@ -38,7 +38,7 @@ const CATEGORIES = [
   },
   {
     id: 'somatic',
-    title: 'BODY RESET',
+    title: 'Body Reset',
     description: 'Body-based techniques for mental clarity',
     icon: 'body',
     color: '#8b5cf6',
