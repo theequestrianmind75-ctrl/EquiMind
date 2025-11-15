@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ScrollView, ActivityIndicator } from 'react-nat
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const ADMIN_PASSWORD = 'equimind2025';
-const API_URL = 'https://rider-tools.preview.emergentagent.com/api';
+const API_URL = 'https://equimind-debug.preview.emergentagent.com/api';
 
 export default function TestAdmin() {
   const [tools, setTools] = useState<any[]>([]);

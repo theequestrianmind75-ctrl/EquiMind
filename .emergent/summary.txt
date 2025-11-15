@@ -1,0 +1,74 @@
+<analysis>
+The trajectory details a debugging-intensive development cycle for the EquiMind app, triggered by the user's report that the admin text editor was empty. The root cause was an ephemeral preview database that had been wiped. The initial restoration from a backup file revealed a deeper issue: data corruption, where all 243 tools were missing their  field.
+
+The engineer systematically resolved this by writing and executing a series of Python scripts to re-populate the database with 107 complete tools, deleting the corrupted data, and creating a new, clean backup. Subsequent issues included fixing a frontend/backend authentication mismatch for the admin editor by creating new password-protected API endpoints. This was followed by a stubborn Metro bundler caching problem that prevented the frontend from using the new endpoints.
+
+The user's frustration with data loss and deployment failures pivoted the work towards ensuring production stability. The engineer implemented a robust automatic database restoration script () that runs on server startup, guaranteeing data integrity upon deployment.
+
+The final and most critical issue identified was the production deployment failing to connect to the database. The logs showed it was attempting to connect to . The engineer correctly diagnosed that the application was loading the local  file in the production environment, overriding the platform-provided Atlas MongoDB connection string. The work concluded with advising the user to contact platform support to have the correct production environment variables set.
+
+The user's primary language is English. Future responses should be in English.
+</analysis>
+
+<product_requirements>
+EquiMind is a mental performance mobile app designed for equestrians. Its core function is to provide a library of Rider Tools—mental strategies and exercises—to help riders manage their emotional state before and during rides.
+
+**Core Features:**
+*   **Rider Tools Library:** A categorized collection of over 100 mental strategies with detailed instructions.
+*   **Admin Text Editor:** A password-protected web page () allowing the user to efficiently perform bulk edits on all tool content in a single text area.
+*   **Pre-Ride Assessment:** A feature (partially implemented) to assess the rider and horse's state to suggest relevant tools.
+*   **User Authentication:** A standard JWT-based system for login and registration.
+
+**Development Context:**
+The initial project involved restoring a lost library of tools and fixing data corruption. The work then shifted to making the application robust for production. This included creating an automatic database restore mechanism to handle the ephemeral nature of the development environment and to ensure data is present upon deployment. The most recent focus has been on debugging production deployment failures to provide the user with a stable editing environment.
+</product_requirements>
+
+<key_technical_concepts>
+- **Full-Stack:** Python (FastAPI) backend with a React Native (Expo) frontend.
+- **Database:** MongoDB. Data integrity and restoration have been central themes.
+- **API & Auth:** RESTful API using JWT for user routes and a separate password-based protection for new admin endpoints.
+- **Deployment & Environment:** Issues with ephemeral preview databases and Metro bundler caching led to creating a robust startup script () to ensure data persistence in production. The final issue revolves around environment variable precedence in a Kubernetes/containerized deployment.
+</key_technical_concepts>
+
+<code_architecture>
+The application uses a monorepo structure with  and  directories.
+
+**Directory Structure:**
+
+
+- ****
+    - **Importance:** This is the core of the backend. It defines all API routes, handles database connections, and contains the application's business logic.
+    - **Changes:** This file was heavily modified. New admin-specific endpoints (, ) were added to bypass JWT authentication for the text editor. A crucial  handler was added to call , ensuring the database is automatically populated from a backup when the server starts. Logging and error handling were also improved.
+
+- ****
+    - **Importance:** This is the critical page for the user's content management workflow.
+    - **Changes:** The  and  functions were updated to call the new, password-protected admin endpoints (). The  call upon saving was removed to prevent the user from being logged out, and a simple  was added for user feedback.
+
+- ****
+    - **Importance:** This new script makes the application deployment-ready and resilient to data loss.
+    - **Changes:** Created from scratch. It connects to the database, checks if the tools collection is empty or contains corrupted data (tools without instructions), and if so, deletes the existing data and restores it from . This script is executed automatically on server startup.
+
+- ** files ( and )**
+    - **Importance:** These files manage environment-specific configurations like database URLs and secrets.
+    - **Changes:** The  was added to  to remove hardcoded credentials. The core unresolved issue is that the  in  is being used in the production environment, causing connection failures.
+</code_architecture>
+
+<pending_tasks>
+- **Set Production Environment Variables:** The user must contact platform support to ensure the production  and  environment variables are correctly set for their deployment, which will resolve the critical connection error.
+- **Implement Deep Assessment Feature:** An 18-question assessment schema exists but is not implemented in the frontend or backend.
+- **CSV Download Functionality:** A user-facing feature to download tools as a CSV was requested but not fully implemented as a primary feature.
+</pending_tasks>
+
+<current_work>
+The most recent work was a critical diagnosis of a production deployment failure. The user reported that after deploying, the tools were not loading in the live app, on their phone, or in the admin text editor, and login was failing.
+
+The engineer investigated the production logs and found a , indicating the backend was trying to connect to . This revealed that the production container was incorrectly using the  from the local  file instead of the production Atlas MongoDB URL that should be provided by the Emergent deployment platform as an environment variable.
+
+All API calls were failing with a 500 Internal Server Error because no database connection could be established.
+
+The last action taken by the previous engineer was to explain this root cause to the user. The engineer clarified that the application code is correct in its attempt to read from environment variables, but the deployment environment itself lacks the necessary  and  variables. The final instruction to the user was to contact Emergent support to have these environment variables configured for their production deployment, which is the only way to resolve the issue.
+</current_work>
+
+<optional_next_step>
+Guide the user to contact Emergent support with a clear, specific request to set the  and  environment variables for their production deployment. After they confirm it's done, verify the production site is working.
+</optional_next_step>
