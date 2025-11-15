@@ -128,40 +128,7 @@ export default function CategoryDetail() {
     return cleaned;
   };
 
-  const extractAudioScript = (instructions: string): string => {
-    // Try to find audio script section
-    const match = instructions.match(/Audio Script:\s*([\s\S]*?)(?:\n\n|$)/);
-    if (match && match[1]) {
-      return match[1].replace(/Coach:\s*/gi, '').trim();
-    }
-    
-    // If no audio script found, try to find text after "Micro Script:"
-    const microMatch = instructions.match(/Micro Script:\s*([\s\S]*?)(?:\n\n|Audio Script:|$)/);
-    if (microMatch && microMatch[1]) {
-      return microMatch[1].replace(/Coach:\s*/gi, '').trim();
-    }
-    
-    return instructions.replace(/Coach:\s*/gi, '').trim();
-  };
-
-  const handlePlayAudio = (strategy: Strategy) => {
-    if (playingId === strategy.id) {
-      Speech.stop();
-      setPlayingId(null);
-      return;
-    }
-
-    const audioScript = extractAudioScript(strategy.instructions);
-    setPlayingId(strategy.id);
-
-    Speech.speak(audioScript, {
-      language: 'en',
-      pitch: 1.0,
-      rate: 0.9,
-      onDone: () => setPlayingId(null),
-      onError: () => setPlayingId(null),
-    });
-  };
+  // Audio functionality removed - tools are now text-only for riders to read
 
   const handleEditModeToggle = () => {
     if (!editMode) {
