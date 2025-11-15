@@ -126,7 +126,7 @@ backend:
     file: "backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: true
           agent: "main"
@@ -134,6 +134,9 @@ backend:
         - working: true
           agent: "testing"
           comment: "All 4 mental strategies tests passed: list all strategies (144 confirmed), filter by category (82 breathing strategies), get strategy detail by ID, and 404 for non-existent strategy. Data structure verified with fields: id, name, category, instructions, anxiety_level, confidence_level."
+        - working: true
+          agent: "main"
+          comment: "Database expanded to 136 tools (added 30 new tools from Word documents). Fixed 'Body Reset' category bug - frontend now correctly filters and displays 59 Body Reset tools. Categories: BODY RESET (59), Breathing/HRV (19), Mindfulness & Flow (10), Tapping/EFT (48). Need to test API endpoints with new data."
   
   - task: "Session Management API"
     implemented: true
