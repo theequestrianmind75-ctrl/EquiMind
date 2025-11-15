@@ -20,7 +20,7 @@ backup_data = {
     'sessions': list(db.sessions.find({}))
 }
 
-# Convert ObjectId to string for JSON serialization
+# Convert ObjectId and datetime to string for JSON serialization
 def convert_objectid(obj):
     if isinstance(obj, dict):
         return {k: convert_objectid(v) for k, v in obj.items()}
@@ -28,6 +28,8 @@ def convert_objectid(obj):
         return [convert_objectid(item) for item in obj]
     elif hasattr(obj, '__str__') and type(obj).__name__ == 'ObjectId':
         return str(obj)
+    elif isinstance(obj, datetime):
+        return obj.isoformat()
     return obj
 
 backup_data = convert_objectid(backup_data)
