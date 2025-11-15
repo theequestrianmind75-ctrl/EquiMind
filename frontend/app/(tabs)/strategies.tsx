@@ -29,14 +29,6 @@ const CATEGORIES = [
     keywords: ['breathing', 'hrv'],
   },
   {
-    id: 'grounding',
-    title: 'Activation / Grounding',
-    description: 'Connect to the present moment and your body',
-    icon: 'footsteps',
-    color: '#06b6d4',
-    keywords: ['activation', 'grounding'],
-  },
-  {
     id: 'somatic',
     title: 'Body Reset',
     description: 'Body-based techniques for mental clarity',
