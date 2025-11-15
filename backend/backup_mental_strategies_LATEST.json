@@ -1,3058 +1,466 @@
 [
   {
-    "id": "b84a31f7-989a-424e-a1d4-6c3101c46681",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
+    "id": "bf880bc5-7da1-4c4a-be0e-7328861ce5b0",
+    "name": "Pre-Ride Anxiety Release",
+    "category": "Tapping / EFT",
+    "description": "Calm your nerves before getting in the saddle",
+    "instructions": "Start with the Karate Chop point on the side of your hand. Tap gently while saying: \"Even though I feel nervous about this ride, I deeply and completely accept myself.\" Continue tapping through the sequence: Eyebrow, Side of Eye, Under Eye, Under Nose, Under Mouth, Collarbone, Under Arm, Top of Head. At each point, acknowledge your feelings: \"This nervousness... This anxiety... I choose to feel calm and confident... I am safe... My horse and I are a team.\" Complete 2-3 rounds until you feel more centered.",
     "duration_minutes": 5,
     "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
+      5,
       6,
       7,
       8,
       9,
       10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "id": "13c08f36-7bc7-418a-89c0-6a4a7278e249",
+    "name": "Fear of Falling Reset",
+    "category": "Tapping / EFT",
+    "description": "Release fear and build confidence after a fall or scary moment",
+    "instructions": "Begin at the Karate Chop point, tapping while saying: \"Even though I have this fear of falling, I am safe right now.\" Move through the points: Eyebrow - \"This fear in my body...\" Side of Eye - \"This worry about falling...\" Under Eye - \"Feeling unsafe...\" Under Nose - \"This fear...\" Under Mouth - \"I choose to feel grounded...\" Collarbone - \"I am learning and growing...\" Under Arm - \"My body knows how to balance...\" Top of Head - \"I trust myself and my horse.\" Repeat until fear diminishes.",
+    "duration_minutes": 7,
+    "anxiety_level": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "id": "8199fe75-6c82-4c43-b056-cd35f229123b",
+    "name": "Competition Day Calm",
+    "category": "Tapping / EFT",
+    "description": "Reduce performance anxiety before showing",
+    "instructions": "Karate Chop setup: \"Even though I feel pressure to perform, I choose to enjoy this moment with my horse.\" Tap through the sequence: Eyebrow - \"This performance pressure...\" Side of Eye - \"This need to be perfect...\" Under Eye - \"Worrying about what others think...\" Under Nose - \"This anxiety about mistakes...\" Under Mouth - \"I release this pressure...\" Collarbone - \"I am prepared...\" Under Arm - \"My horse and I are partners...\" Top of Head - \"We ride with joy and confidence.\" 2-3 rounds.",
+    "duration_minutes": 5,
+    "anxiety_level": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_level": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "effectiveness_rating": 4.2
+  },
+  {
+    "id": "dae29c74-683a-447c-af48-7e9b6de8c858",
+    "name": "Quick Confidence Boost",
+    "category": "Tapping / EFT",
+    "description": "Fast tapping sequence to build confidence before any challenge",
+    "instructions": "Rapid tapping sequence - spend just 10 seconds on each point. Karate Chop: \"I am capable and strong.\" Eyebrow: \"I trust myself.\" Side of Eye: \"I am confident.\" Under Eye: \"I feel safe.\" Under Nose: \"I am prepared.\" Under Mouth: \"I believe in myself.\" Collarbone: \"My horse trusts me.\" Under Arm: \"We work together.\" Top of Head: \"I am ready.\" Repeat 2 times quickly.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      4,
+      5,
+      6
+    ],
+    "confidence_level": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 3.8
+  },
+  {
+    "id": "1c6e1d76-263f-430b-8163-7453dfe5a0b7",
+    "name": "Post-Ride Processing",
+    "category": "Tapping / EFT",
+    "description": "Release stress and integrate lessons after a difficult ride",
+    "instructions": "Karate Chop: \"Even though that ride was challenging, I honor my effort and my horse's effort.\" Gently tap through points: Eyebrow - \"Whatever happened today...\" Side of Eye - \"Any disappointment I feel...\" Under Eye - \"Any frustration...\" Under Nose - \"I acknowledge these feelings...\" Under Mouth - \"I learned something today...\" Collarbone - \"I am growing as a rider...\" Under Arm - \"Tomorrow is a new day...\" Top of Head - \"I release this and move forward with grace.\" Take deep breaths between rounds.",
+    "duration_minutes": 6,
+    "anxiety_level": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence_level": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "effectiveness_rating": 4.0
+  },
+  {
+    "id": "f02cab03-ecc4-47a4-8001-356288960c4c",
+    "name": "Trauma Release for Horse & Rider",
+    "category": "Tapping / EFT",
+    "description": "Gentle tapping to process past scary experiences",
+    "instructions": "This is for processing past events, not current danger. Karate Chop: \"Even though that scary thing happened, I am safe now.\" Very gently tap: Eyebrow - \"That memory...\" Side of Eye - \"How it made me feel...\" Under Eye - \"The fear that stayed with me...\" Under Nose - \"It's in the past now...\" Under Mouth - \"I am safe in this moment...\" Collarbone - \"My body can release this...\" Under Arm - \"I choose peace...\" Top of Head - \"I am healing.\" Go slowly, breathe deeply. Repeat as needed over several sessions.",
+    "duration_minutes": 8,
+    "anxiety_level": [
+      8,
+      9,
+      10
+    ],
+    "confidence_level": [
+      1,
+      2,
+      3
+    ],
+    "effectiveness_rating": 4.5
+  },
+  {
+    "id": "a0e6f412-a56b-4040-905e-2e4d0b2c51d5",
+    "name": "Morning Ride Preparation",
+    "category": "Tapping / EFT",
+    "description": "Start your riding day centered and positive",
+    "instructions": "Karate Chop: \"Even though I don't know what today will bring, I welcome it with an open heart.\" Tap through: Eyebrow - \"Today is a new beginning...\" Side of Eye - \"I am open to learning...\" Under Eye - \"I feel grateful for my horse...\" Under Nose - \"We communicate with trust...\" Under Mouth - \"I ride with intention...\" Collarbone - \"My mind is clear...\" Under Arm - \"My body is ready...\" Top of Head - \"This will be a good day.\" Set your positive intention.",
+    "duration_minutes": 4,
+    "anxiety_level": [
+      3,
+      4,
+      5
+    ],
+    "confidence_level": [
+      5,
+      6,
+      7,
+      8
     ],
     "effectiveness_rating": 3.5
   },
   {
-    "id": "7bf13a79-50e4-449b-8ff4-bc53e1e2a448",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
+    "id": "3e93ecef-6242-4c54-a6e9-5b59df21c1ab",
+    "name": "Connection with Horse",
+    "category": "Tapping / EFT",
+    "description": "Enhance your energetic bond with your horse through tapping",
+    "instructions": "Do this near your horse if possible. Karate Chop: \"Even though we are separate beings, we connect as one.\" Tap gently: Eyebrow - \"I feel my horse's energy...\" Side of Eye - \"Our hearts align...\" Under Eye - \"We breathe together...\" Under Nose - \"Trust flows between us...\" Under Mouth - \"We understand each other...\" Collarbone - \"We move as partners...\" Under Arm - \"Our connection deepens...\" Top of Head - \"We are one team.\" Notice how your horse responds to your calm energy.",
     "duration_minutes": 5,
     "anxiety_level": [
-      1,
       2,
-      3
+      3,
+      4,
+      5
     ],
     "confidence_level": [
       6,
       7,
       8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 3.5
-  },
-  {
-    "id": "4bea5ea3-caca-46f9-8351-2b2fc7e98a37",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 3.5
-  },
-  {
-    "id": "5e9a3c57-8cbb-425e-8682-2493faad8ee7",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 3.5
-  },
-  {
-    "id": "9cf670dd-8663-43c4-b622-92d35c1fb87e",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 3.5
-  },
-  {
-    "id": "90f27117-be3c-487a-9cec-da55c71ef1c1",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 3.5
-  },
-  {
-    "id": "b75a32a7-b3f3-43e6-a96f-699dab328265",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 3.5
-  },
-  {
-    "id": "8a77daa9-78fd-42f4-8aeb-d0aad9b8e2ea",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 3.5
-  },
-  {
-    "id": "61d0d52d-f28a-4967-8d65-cc347c0342ae",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 3.5
-  },
-  {
-    "id": "af178cf8-203c-44d5-8f9f-64e0ee797008",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 3.5
-  },
-  {
-    "id": "088f0251-48d7-4e51-a508-47243b590103",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 3.5
-  },
-  {
-    "id": "2188d4a2-9ba6-4b87-81d1-feedd9bf7e9b",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 3.5
-  },
-  {
-    "id": "54d10ade-5bbb-4ed2-a5fe-0c4d8746b9c7",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 3.5
-  },
-  {
-    "id": "f5cb0724-c6fb-4b64-87eb-e40237645d6c",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 3.5
-  },
-  {
-    "id": "97b7190a-ebe9-4c9b-b264-d464a7a6bbf2",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 3.5
-  },
-  {
-    "id": "1fbda16d-6ceb-48ae-99ac-436134895ed0",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 3.5
-  },
-  {
-    "id": "722b1691-10f7-4785-9938-2a310a19a8de",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
+      9
     ],
     "effectiveness_rating": 4.0
   },
   {
-    "id": "0d3abb7c-833d-4cfe-959d-e381b5befc3a",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
+    "id": "d928b856-a68f-46d7-8dd3-8affd3641bb7",
+    "name": "HRV Coherence Breath (Inhale 4, Exhale 6)",
+    "category": "Breathing / HRV",
+    "description": "Creates heart-rate variability coherence by lengthening the exhale and synchronizing with horse movement.",
+    "instructions": "Place your horse in a relaxed walk or quiet halt.\nInhale softly through your nose for 4 counts, then exhale gently for 6 counts.\nRepeat for 6\u201310 breath cycles while monitoring your horse's relaxation.",
+    "duration_minutes": 3,
     "anxiety_level": [
-      1,
-      2,
-      3
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
     ],
     "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "HeartMath HRV coherence protocols, autonomic regulation research.",
+    "suitable_for": [
+      "anxiety",
+      "focus",
+      "emotional_regulation"
+    ]
+  },
+  {
+    "id": "d0b1de16-c723-47f7-bb79-ef66ef39ae5c",
+    "name": "Long Exhale Relaxation Breath",
+    "category": "Breathing / HRV",
+    "description": "Uses elongated exhalation to shift the nervous system toward parasympathetic calm.",
+    "instructions": "At the walk, inhale normally.\nMake your exhale twice as long as the inhale, letting your shoulders drop.\nContinue for several cycles, noticing changes in your horse's stride.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      3,
+      4,
+      5,
       6,
       7,
       8,
       9,
       10
     ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "28e79504-27a6-4209-9c98-d660178825d2",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
+    "confidence_level": [
       1,
       2,
-      3
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Respiratory sinus arrhythmia research; breathwork for autonomic down-regulation.",
+    "suitable_for": [
+      "anxiety",
+      "hyperarousal",
+      "tension_release"
+    ]
+  },
+  {
+    "id": "922c23d3-e386-4bb0-9cb1-15c32b883cb3",
+    "name": "Breath-Per-Stride Synchronization",
+    "category": "Breathing / HRV",
+    "description": "Synchronizes breath rhythm to horse footfalls to increase stability and focus.",
+    "instructions": "At the walk, match your inhale to 2\u20133 steps and exhale to 3\u20134 steps.\nKeep your breathing smooth, allowing your pelvis to follow the horse.\nRide one arena lap maintaining this rhythm.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
     ],
     "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Sports synchrony and paced-breathing research.",
+    "suitable_for": [
+      "focus",
+      "body_awareness"
+    ]
+  },
+  {
+    "id": "829c9175-59fc-45db-be0f-68b95c830d50",
+    "name": "Co-Regulating with Horse Movement Breath",
+    "category": "Breathing / HRV",
+    "description": "Pairs breath with the horse's natural back swing to regulate tension.",
+    "instructions": "Feel your horse's back move under your seat.\nInhale as your pelvis rises and exhale as it settles.\nStay with the movement for 10\u201312 cycles.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      3,
+      4,
+      5,
       6,
       7,
       8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "18ebe781-3bf8-4b11-986f-cc4638efe8c1",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
+      9
     ],
     "confidence_level": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Co-regulation and animal-assisted nervous-system synchronization research.",
+    "suitable_for": [
+      "connection",
+      "calming",
+      "body_awareness"
+    ]
+  },
+  {
+    "id": "bf342261-47e3-4a17-935a-6b6ee7a8e291",
+    "name": "Double-Length Exhale (4:8)",
+    "category": "Breathing / HRV",
+    "description": "Regulates the nervous system by extending the exhale to twice the length of the inhale.",
+    "instructions": "Inhale for 4 counts.\nExhale softly for 8 counts without pushing air out.\nContinue for 5\u20137 cycles.",
+    "duration_minutes": 3,
+    "anxiety_level": [
+      4,
+      5,
       6,
       7,
       8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "21394427-88d8-4aeb-8286-582fba5b7319",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
+      9
     ],
     "confidence_level": [
       1,
       2,
       3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "bf2be555-493d-482d-893b-d475f818f331",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "192fa957-8aa4-4259-8f4f-eb1a7ebd0aa5",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "18a252ed-5e73-49c9-a122-2bdc52bd2a43",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "2094e28c-c3fe-491f-bc9b-9231d3463c95",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "15999f43-4227-4886-a932-443a6a6b654b",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "941591b7-e5d4-48e3-938d-eb590343f877",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "f0afda08-f59a-4cb3-a6ef-1d653fe0c1b5",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "f2bd5b6b-8eae-4f92-bdae-00669cad3657",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "1963f0ed-4271-43f1-878a-4027d3e9edea",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "c472e4dc-3998-4a8a-8e16-f0821c5bca2e",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "c1ebc5f0-4ddc-437a-a860-111c0469f5ef",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "ea1aad69-c95d-4d9c-bae5-49d6d2e83639",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "85f65d3e-c3c4-495e-9664-e00ec1bd7419",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Breathing / HRV",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "640be2be-5e81-49c5-8f5e-297e3ddc22eb",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "10503f49-fb22-46d2-8336-2ea7209dcf4f",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Activation / Grounding",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "0c70af13-2da7-4b40-919a-503de0d99213",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Mindfulness & Flow",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "ae95a38d-9937-43d5-ace5-c88935b86d10",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "45e95179-01c5-441e-8175-17be329fbf37",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "cd6e1b8b-f2fb-45a8-800a-00c5b2e57897",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Activation / Grounding",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "2fdfdb23-5518-44e0-9038-ca4ddc0a0bb1",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Mindfulness & Flow",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "7b8a5261-f0be-4fe9-a2ee-ffc7311f40a6",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "fd92d918-25f6-433a-b93f-7d28ebcaaf6d",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "7b7bfbee-07c4-4596-86ba-06c031bb529d",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Activation / Grounding",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "fa4fc8ce-bf61-477c-b1d3-73e16dc6a461",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Mindfulness & Flow",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "2ccda981-e0e0-43ed-b142-e025f3111b06",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Breathing / HRV",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "41ff451a-7d69-4131-9ff2-00f8ad976587",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "b4101f15-76b1-4743-8231-96cafa6097ad",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      1,
-      2,
-      3
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "a35041f4-49ca-4fa2-be09-13f559108e31",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
       4,
       5,
       6
     ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.0
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Breathwork down-regulation studies (Huberman, RSA modulation).",
+    "suitable_for": [
+      "panic",
+      "high_arousal"
+    ]
   },
   {
-    "id": "67d8b1ac-280d-4ccf-a0dd-823d46a88479",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
+    "id": "d7ed58b9-9d3e-460c-adf7-1fffe518c3fa",
+    "name": "4-2-6 Performance Breath",
+    "category": "Breathing / HRV",
+    "description": "Performance-based breath pattern to reduce nervous-system activation before transitions or technical work.",
+    "instructions": "Inhale for 4 counts.\nHold for 2 counts.\nExhale for 6 counts and repeat.",
+    "duration_minutes": 3,
     "anxiety_level": [
       4,
       5,
-      6
-    ],
-    "confidence_level": [
       6,
       7,
       8,
       9,
       10
     ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "e624a1a7-2e66-44ec-b28a-c1c59145ff97",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
+    "confidence_level": [
+      1,
+      2,
+      3,
       4,
       5,
-      6
-    ],
-    "confidence_level": [
       6,
-      7,
-      8,
-      9,
-      10
+      7
     ],
-    "effectiveness_rating": 4.0
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Sports psychology breath-hold research; HRV optimization.",
+    "suitable_for": [
+      "show_anxiety",
+      "performance_stress"
+    ]
   },
   {
-    "id": "3b7ed57d-025f-41e3-acd0-130c54ba1365",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
+    "id": "57fd1859-e0fb-496e-9046-14245afd9d60",
+    "name": "Heart-Focused Breathing",
+    "category": "Breathing / HRV",
+    "description": "Breathing as if in and out of the heart area to increase emotional coherence.",
+    "instructions": "Shift attention to the center of your chest.\nBreathe slowly as if the breath is moving through your heart space.\nStay with steady rhythm for 10\u201312 breaths.",
+    "duration_minutes": 3,
     "anxiety_level": [
+      2,
+      3,
       4,
       5,
-      6
-    ],
-    "confidence_level": [
       6,
       7,
-      8,
-      9,
-      10
+      8
     ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "119bb036-8227-4b45-b055-8baeeaac6b2b",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
+    "confidence_level": [
+      1,
+      2,
+      3,
       4,
       5,
-      6
+      6,
+      7
     ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
+    "effectiveness_rating": 4.0,
+    "evidence_base": "HeartMath emotional regulation and coherence training.",
+    "suitable_for": [
+      "emotional_regulation",
+      "connection"
+    ]
   },
   {
-    "id": "4509ad3d-c372-4c12-9652-3702be5e8e7b",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
+    "id": "f8276305-9ef6-4d4d-8f72-9de3159e895d",
+    "name": "Breath Into Belt Line",
+    "category": "Breathing / HRV",
+    "description": "Expands diaphragm and lowers tension by breathing 360\u00b0 around the waistline.",
+    "instructions": "At the walk, breathe low into your belly and around your waist.\nFeel the belt-line expand evenly.\nRelease on the exhale and soften your seat.",
+    "duration_minutes": 3,
     "anxiety_level": [
+      3,
       4,
       5,
-      6
+      6,
+      7,
+      8
     ],
     "confidence_level": [
       1,
       2,
       3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "0f84f6ed-c703-4b43-8d09-2c84c02214c3",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
       4,
       5,
-      6
+      6,
+      7
     ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Diaphragmatic breathing research; somatic therapy.",
+    "suitable_for": [
+      "tension",
+      "hyperarousal"
+    ]
   },
   {
-    "id": "aeac5fbc-1154-4be9-b923-4d99294fbb4a",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
+    "id": "de9fc001-b42a-447a-9bfa-93175ff5b226",
+    "name": "Exhale Seat-Softening Breath",
+    "category": "Breathing / HRV",
+    "description": "Softens the seat and thighs during the exhale to improve freedom of horse movement.",
+    "instructions": "As you exhale, let your seat and thighs grow heavier and softer.\nContinue for 8-10 breath cycles while maintaining contact with your horse.\nNotice how your horse responds to the relaxation.",
+    "duration_minutes": 2,
     "anxiety_level": [
+      2,
+      3,
       4,
       5,
-      6
+      6,
+      7,
+      8
     ],
     "confidence_level": [
       1,
       2,
       3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "59067112-3125-474e-acd9-b061895fc112",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
       4,
       5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "18677d71-f380-460a-a895-d358066f428f",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "0f0d89ef-f992-4a77-b099-91104aa41791",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "008b4950-995f-412e-9f8e-a179589112ca",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "285ebaac-40d5-42a6-8d82-e8c666570a96",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "7818577c-9731-4d63-bb45-0e6ce96ed04f",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "3ffa4070-775b-4f96-8fa0-25f61baa2766",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "98fd756e-a9f4-4349-9979-9f5c7d9ac07b",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "75814fdf-8806-4f8c-b5e0-ca5b1fd6f060",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "d361931f-ea68-4978-8558-c99857be7d30",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "774f8853-f616-4702-80ce-4f0f6442372c",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "7e717cfb-37a4-44a9-8ed3-3c70ff51f64c",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "5e8e6919-cba6-4779-ab58-c10013a8f8c8",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "3e07fa93-b894-4638-ae5b-8f5913ed03cb",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "c54ca431-1191-4663-8afb-d35615ef271f",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "8d9309fa-ed07-458c-9f7b-cbb5fc3eac48",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "cf02128b-22ed-4b30-95dd-2b0d77b60b66",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "ce3a3912-efb0-4e16-bf81-f45da4ffa34b",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "f7d88616-95b5-4752-8a92-fab7d272a0f4",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "c411a6c7-7afd-4dd8-93f2-fddb34dece1f",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "c6f5b321-d008-4a67-ad05-2fb535a1f330",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "4d9029c2-87f4-4754-989f-8181d47d56f9",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "239ecc4e-644c-4aa5-821a-927c3083b721",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "63f5d1f4-99ba-4606-8c55-9840ff1aa0e3",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.0
-  },
-  {
-    "id": "119bd7ce-018d-4957-aa65-89e60e735f74",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "83d35dee-b43d-41e8-8630-205624cf1a3b",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Breathing / HRV",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "7d44260e-409a-4fa0-9e44-499f86d3c6db",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "ddef4d3f-a34b-45c2-94b9-6b7d6b667626",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Activation / Grounding",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "d2f67400-ef74-4452-9fbf-ee0c8e1353c2",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Mindfulness & Flow",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "0656e39d-fc95-4f20-9b49-1eaa7590efb1",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "ec15eded-cb67-4f20-853a-6b853ac2d2b7",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "e53a8888-b169-4a72-a56b-ec4b875b3cfc",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Activation / Grounding",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "b98fc9a1-c8ec-4267-a1c0-5b37b014723c",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Mindfulness & Flow",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "745871fa-9a51-4736-89f5-324908f907dd",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "835c5c4b-16ce-4663-a62f-67ebd69dacd6",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "0f3e84e3-1068-459c-9f3d-817c3b954f76",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Activation / Grounding",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "cdd313e6-7ffe-49cc-b7a5-6d22241e4b09",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Mindfulness & Flow",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "0ff355bd-dcb4-4b67-a259-bbe69b171bef",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Breathing / HRV",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "20f9da70-c657-435a-8302-f19e75ed32f7",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "24c5ca69-2f71-4e0e-bb83-f20ada6508b0",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      4,
-      5,
-      6
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "bceeaa51-73b4-4da3-86b3-1c8a2d5a53bd",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "d7f20d78-f4ad-4d30-9457-567baf850393",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Breathing / HRV",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "fe45dcb5-27dc-4db9-8664-72d7334b0856",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "9523cda2-6ef3-40b3-bdf4-26f742d632f6",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Activation / Grounding",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "30bb8535-b693-4bd1-bb14-f177fd2a92dd",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Mindfulness & Flow",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "52ddda60-bc68-491d-baaf-72ce6f924e21",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "964b5184-faae-4996-ae56-06d9ade19493",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "d5035391-c014-4c23-930b-3268afd333f0",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Activation / Grounding",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "36999cee-9f2b-44e9-8d65-0151c3791c4e",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Mindfulness & Flow",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "7b5cc8f1-9979-43e1-8c74-b5ed731494cb",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "97646671-d2bb-41e3-8750-f5e45b1dff85",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "3aba328f-4110-4ad4-8422-4c56b2dfcb36",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Activation / Grounding",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "4047cf64-b1b4-43aa-b59e-2d9945b5cb31",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Mindfulness & Flow",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "e34b19cd-d3ab-4b78-b86d-ad152c01ba86",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Breathing / HRV",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "78da3cce-b2bb-4fda-b737-fde48403593a",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "442749fb-3b53-49c9-a2e0-6d08c02233d1",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "1c6c5e04-dd5d-490c-b132-092d8d5af29e",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "395d8f9e-d00b-4671-b39d-2df057deb344",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Breathing / HRV",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "a9bb6e74-f953-4e72-bcb2-a226791d487c",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "0549e2b1-fb38-44d2-8a23-7d95db9150dd",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Activation / Grounding",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "1760ec22-e9c1-4d14-a8a0-fdbfb8a8d906",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Mindfulness & Flow",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "aed6b7bd-d2ba-4cd1-afc6-17c861421d9e",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "2bd36467-3e97-4773-abbb-eea44332d7ce",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "8fca41cc-9242-40c9-bc7b-91f6697d4d06",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Activation / Grounding",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "1989f302-0c70-4f14-9d08-1693289565d6",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Mindfulness & Flow",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "d398cbf6-80ae-4e05-875c-94faba5d8e38",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "27c13a12-ecba-4e28-b443-e28ce361f892",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "6fa90da5-e43e-48a1-bb62-dd55daf3a683",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Activation / Grounding",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "0a35ff49-540e-406e-aeaf-6845b857a770",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Mindfulness & Flow",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "16fe621d-e01e-4891-8b7b-0e8d510bc33a",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Breathing / HRV",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "953c6374-1cc0-40f4-be67-727257a1b7d0",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "06579ffd-6340-49ce-ae9f-a68bc902bc09",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "263a97f5-3188-4fa1-83f0-831d0a769ce3",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "60f49808-40e1-4399-823a-91beedab94d5",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Breathing / HRV",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "5a8a86bd-e721-409a-9bd3-881455902266",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "f9e879dd-747d-4ac4-be5e-caf9e18ec457",
-    "name": "Mindfulness & Flow",
-    "category": "Mindfulness & Flow, Cueing & Co-Regulation, Imagery / Rehearsal, Activation / Grounding",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "b24541a5-8752-4e37-bb3c-27bd8d3b6cc0",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Mindfulness & Flow",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "a6b1f5a4-678e-4a54-94dd-bd473e55249e",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
       6,
       7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "7224c3f4-09d5-47e0-8797-4dac03eafc58",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "35f9d695-0655-41c5-9238-e3d5b72c8520",
-    "name": "Breathing / HRV",
-    "category": "Breathing / HRV, Cognitive Reframe, Imagery / Rehearsal, Activation / Grounding",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "37ea704e-8078-4659-a004-1ee3fb032bd9",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Mindfulness & Flow",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "d1628de0-75ab-4f91-9181-125e749f8129",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Cueing & Co-Regulation",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "d74b109c-cba7-49a9-aa01-246a96ee108f",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "e24670e8-0c06-452a-9b99-7b643235c1b6",
-    "name": "Somatic Reset",
-    "category": "Somatic Reset, Breathing / HRV, Self-Compassion, Activation / Grounding",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "2b5da984-483e-4a48-8db1-eb4a6d236c38",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Mindfulness & Flow",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "9c105121-b912-4367-b7a6-5c2a97a761dc",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Breathing / HRV",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "171753a8-4f3b-4cb9-8b72-c4579a79f4d2",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
-    ],
-    "effectiveness_rating": 4.5
-  },
-  {
-    "id": "1783d460-8e18-465e-bcb4-d1fbecc101ed",
-    "name": "Activation / Grounding",
-    "category": "Activation / Grounding, Somatic Reset, Cueing & Co-Regulation, Safety / Threshold Work",
-    "description": null,
-    "instructions": "",
-    "duration_minutes": 5,
-    "anxiety_level": [
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3
+      8
     ],
-    "effectiveness_rating": 4.5
+    "effectiveness_rating": 4.0,
+    "evidence_base": "Somatic release and rider tension research.",
+    "suitable_for": [
+      "tension",
+      "overcontrol",
+      "connection"
+    ]
   },
   {
-    "id": "2ecedfdf-0610-4510-ac85-ded04248134b",
+    "id": "bd5e478a-d158-4903-9729-094c73aced21",
     "name": "Five-Sense Horseback Scan",
     "category": "Mindfulness & Flow",
     "description": "On-horse mindfulness exercise using all five senses to anchor rider and horse into the present moment.",
-    "instructions": "",
+    "instructions": "Place your horse at a relaxed walk or quiet halt in a familiar, safe space.\nScan through sight, sound, touch, smell, and taste, noticing each sensation without judging.\nRemain present for 5\u201310 breaths and observe your horse's feedback.",
     "duration_minutes": 5,
     "anxiety_level": [
       2,
@@ -3079,11 +487,11 @@
     ]
   },
   {
-    "id": "61f657da-18e7-4c58-a557-f67a885f2f23",
+    "id": "c66a824d-121c-47d2-b7e8-d7acd034bea4",
     "name": "Seat-Bone Awareness Tracking",
     "category": "Mindfulness & Flow",
     "description": "Mindfulness exercise focusing on awareness of the rider's seat bones and how they move with the horse.",
-    "instructions": "",
+    "instructions": "At the walk, notice each seat bone independently.\nObserve how they rise, lower, and follow the swing of the horse's back.\nMaintain awareness for one arena lap.",
     "duration_minutes": 5,
     "anxiety_level": [
       2,
@@ -3110,11 +518,11 @@
     ]
   },
   {
-    "id": "c0e8173e-0efa-46aa-b3b6-b8f4d56b54fe",
+    "id": "dfe791a3-01da-4ca0-b3d3-1359efcb861c",
     "name": "Mindful Rein Contact Check",
     "category": "Mindfulness & Flow",
     "description": "Mindfulness practice to develop awareness of rein feel, hand tension, and communication with the horse's mouth.",
-    "instructions": "",
+    "instructions": "Pick up a neutral rein contact.\nNotice tension in fingers, wrists, and forearms.\nSoften your hands by 5% and observe changes in your horse.",
     "duration_minutes": 5,
     "anxiety_level": [
       2,
@@ -3141,11 +549,11 @@
     ]
   },
   {
-    "id": "6d6e426e-af7f-4766-a573-ff7cbc59cf0e",
+    "id": "0de94306-c1a8-4b9a-9364-995f287a6e09",
     "name": "Body-to-Horse Synchrony Check",
     "category": "Mindfulness & Flow",
     "description": "Enhances rider-horse synchrony by focusing attention on shared movement rhythm.",
-    "instructions": "",
+    "instructions": "Allow your body to follow your horse's movement without bracing.\nNotice where movement flows smoothly and where it feels blocked.\nSoften tension and rejoin your horse's rhythm.",
     "duration_minutes": 5,
     "anxiety_level": [
       2,
@@ -3172,11 +580,11 @@
     ]
   },
   {
-    "id": "cd643278-352b-4ca5-9ad8-f1c3a702b47f",
+    "id": "91fa2a6d-9473-4026-910b-acb02fdfdb39",
     "name": "Mindful Listening to Arena Sounds",
     "category": "Mindfulness & Flow",
     "description": "Uses mindful hearing to broaden awareness and reduce tunnel vision during riding.",
-    "instructions": "",
+    "instructions": "At the walk, tune into ambient sounds in and outside the arena.\nLabel sounds neutrally as 'near', 'far', 'soft', or 'sharp'.\nAllow listening to expand your awareness instead of narrowing it.",
     "duration_minutes": 5,
     "anxiety_level": [
       2,
@@ -3202,11 +610,11 @@
     ]
   },
   {
-    "id": "ee6504dc-940f-41d2-bfe6-a70bb16384ad",
+    "id": "a8c2bd85-b5e0-4a7f-b03a-e505089098d8",
     "name": "Visual Horizon Soft-Gaze Practice",
     "category": "Mindfulness & Flow",
     "description": "A visual mindfulness exercise that softens the eyes and expands rider situational awareness.",
-    "instructions": "",
+    "instructions": "Lift your gaze to the horizon without fixing on a single point.\nSoften your peripheral vision and let your eyes relax.\nRide while maintaining wide, calm visual awareness.",
     "duration_minutes": 4,
     "anxiety_level": [
       2,
@@ -3233,11 +641,11 @@
     ]
   },
   {
-    "id": "43ab3128-bfc9-413c-8f38-ce0c59600b90",
+    "id": "66c6741e-8af6-4070-a8a3-0da311e3a86e",
     "name": "Noticing Micro-Tension (2 Percent Release)",
     "category": "Mindfulness & Flow",
     "description": "Mindfulness practice aimed at identifying and reducing tiny amounts of tension in the rider's body.",
-    "instructions": "",
+    "instructions": "Scan for tiny tension areas in shoulders, jaw, thighs, or hands.\nRelease tension by only 2%, keeping movements small and safe.\nNotice your horse soften in response.",
     "duration_minutes": 3,
     "anxiety_level": [
       1,
@@ -3267,11 +675,11 @@
     ]
   },
   {
-    "id": "b10e932c-a04c-4cf6-a383-f86bae2e5ee9",
+    "id": "dab8757a-83c7-4091-8ccb-0084ac0be456",
     "name": "Rider Thought Labeling: 'This is a thought'",
     "category": "Mindfulness & Flow",
     "description": "Cognitive defusion practice to separate thoughts from actions while riding.",
-    "instructions": "",
+    "instructions": "Notice any stressful or distracting thought.\nLabel it: 'This is a thought, not a fact.'\nReturn focus to your horse's movement.",
     "duration_minutes": 4,
     "anxiety_level": [
       2,
@@ -3301,11 +709,11 @@
     ]
   },
   {
-    "id": "35e7a758-2131-4cde-9643-698a0834f3b2",
+    "id": "c1984d82-9284-44eb-8304-c141d350b36f",
     "name": "Observation Without Judgment (MBSR)",
     "category": "Mindfulness & Flow",
     "description": "Encourages non-judgmental awareness of internal and external experience while mounted.",
-    "instructions": "",
+    "instructions": "Notice sensations, posture, and horse behavior without assigning meaning.\nPractice accepting what is happening rather than correcting immediately.\nStay with non-judgment for one arena long side.",
     "duration_minutes": 5,
     "anxiety_level": [
       2,
@@ -3332,11 +740,11 @@
     ]
   },
   {
-    "id": "14713626-682a-4552-9ea0-5164efad5a24",
+    "id": "bfb4045f-2ac1-4a7f-9ab1-3037dd05a778",
     "name": "Noticing Horse Micro-Cues",
     "category": "Mindfulness & Flow",
     "description": "Enhances horse-rider communication by noticing subtle signals such as breath changes or ear flicks.",
-    "instructions": "",
+    "instructions": "Observe your horse's small signals: breath, ears, neck, stride.\nNotice patterns without reacting right away.\nStay curious, not critical, about what your horse communicates.",
     "duration_minutes": 5,
     "anxiety_level": [
       1,
@@ -3367,301 +775,11 @@
     ]
   },
   {
-    "id": "65b6c7ac-e795-45dc-94da-fb331bc55686",
-    "name": "HRV Coherence Breath (Inhale 4, Exhale 6)",
-    "category": "Breathing / HRV",
-    "description": "Creates heart-rate variability coherence by lengthening the exhale and synchronizing with horse movement.",
-    "instructions": "",
-    "duration_minutes": 3,
-    "anxiety_level": [
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7
-    ],
-    "effectiveness_rating": 4.0,
-    "evidence_base": "HeartMath HRV coherence protocols, autonomic regulation research.",
-    "suitable_for": [
-      "anxiety",
-      "focus",
-      "emotional_regulation"
-    ]
-  },
-  {
-    "id": "57b99c03-2dc4-413d-9cad-5291dee2decd",
-    "name": "Long Exhale Relaxation Breath",
-    "category": "Breathing / HRV",
-    "description": "Uses elongated exhalation to shift the nervous system toward parasympathetic calm.",
-    "instructions": "",
-    "duration_minutes": 3,
-    "anxiety_level": [
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7
-    ],
-    "effectiveness_rating": 4.0,
-    "evidence_base": "Respiratory sinus arrhythmia research; breathwork for autonomic down-regulation.",
-    "suitable_for": [
-      "anxiety",
-      "hyperarousal",
-      "tension_release"
-    ]
-  },
-  {
-    "id": "396158e0-a29a-4cfe-ae2d-e7c56e5dc057",
-    "name": "Breath-Per-Stride Synchronization",
-    "category": "Breathing / HRV",
-    "description": "Synchronizes breath rhythm to horse footfalls to increase stability and focus.",
-    "instructions": "",
-    "duration_minutes": 3,
-    "anxiety_level": [
-      3,
-      4,
-      5,
-      6,
-      7,
-      8
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7
-    ],
-    "effectiveness_rating": 4.0,
-    "evidence_base": "Sports synchrony and paced-breathing research.",
-    "suitable_for": [
-      "focus",
-      "body_awareness"
-    ]
-  },
-  {
-    "id": "109c664d-63ca-4558-ba4c-689ceb36cc71",
-    "name": "Co-Regulating with Horse Movement Breath",
-    "category": "Breathing / HRV",
-    "description": "Pairs breath with the horse's natural back swing to regulate tension.",
-    "instructions": "",
-    "duration_minutes": 3,
-    "anxiety_level": [
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7
-    ],
-    "effectiveness_rating": 4.0,
-    "evidence_base": "Co-regulation and animal-assisted nervous-system synchronization research.",
-    "suitable_for": [
-      "connection",
-      "calming",
-      "body_awareness"
-    ]
-  },
-  {
-    "id": "d66cfab5-9b38-4ac7-b38c-1e5fda4edc37",
-    "name": "Double-Length Exhale (4:8)",
-    "category": "Breathing / HRV",
-    "description": "Regulates the nervous system by extending the exhale to twice the length of the inhale.",
-    "instructions": "",
-    "duration_minutes": 3,
-    "anxiety_level": [
-      4,
-      5,
-      6,
-      7,
-      8,
-      9
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6
-    ],
-    "effectiveness_rating": 4.0,
-    "evidence_base": "Breathwork down-regulation studies (Huberman, RSA modulation).",
-    "suitable_for": [
-      "panic",
-      "high_arousal"
-    ]
-  },
-  {
-    "id": "0cb4aa30-5733-40cc-93a1-2c6d75854afd",
-    "name": "4-2-6 Performance Breath",
-    "category": "Breathing / HRV",
-    "description": "Performance-based breath pattern to reduce nervous-system activation before transitions or technical work.",
-    "instructions": "",
-    "duration_minutes": 3,
-    "anxiety_level": [
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7
-    ],
-    "effectiveness_rating": 4.0,
-    "evidence_base": "Sports psychology breath-hold research; HRV optimization.",
-    "suitable_for": [
-      "show_anxiety",
-      "performance_stress"
-    ]
-  },
-  {
-    "id": "d3ffbdc6-018d-483a-9300-cdf6320ddd8f",
-    "name": "Heart-Focused Breathing",
-    "category": "Breathing / HRV",
-    "description": "Breathing as if in and out of the heart area to increase emotional coherence.",
-    "instructions": "",
-    "duration_minutes": 3,
-    "anxiety_level": [
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7
-    ],
-    "effectiveness_rating": 4.0,
-    "evidence_base": "HeartMath emotional regulation and coherence training.",
-    "suitable_for": [
-      "emotional_regulation",
-      "connection"
-    ]
-  },
-  {
-    "id": "f1dc72f6-2620-43aa-9521-82994348f02a",
-    "name": "Breath Into Belt Line",
-    "category": "Breathing / HRV",
-    "description": "Expands diaphragm and lowers tension by breathing 360\u00b0 around the waistline.",
-    "instructions": "",
-    "duration_minutes": 3,
-    "anxiety_level": [
-      3,
-      4,
-      5,
-      6,
-      7,
-      8
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7
-    ],
-    "effectiveness_rating": 4.0,
-    "evidence_base": "Diaphragmatic breathing research; somatic therapy.",
-    "suitable_for": [
-      "tension",
-      "hyperarousal"
-    ]
-  },
-  {
-    "id": "24090a15-8bed-4db5-911d-3eda9ce6951c",
-    "name": "Exhale Seat-Softening Breath",
-    "category": "Breathing / HRV",
-    "description": "Softens the seat and thighs during the exhale to improve freedom of horse movement.",
-    "instructions": "",
-    "duration_minutes": 2,
-    "anxiety_level": [
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8
-    ],
-    "confidence_level": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8
-    ],
-    "effectiveness_rating": 4.0,
-    "evidence_base": "Somatic release and rider tension research.",
-    "suitable_for": [
-      "tension",
-      "overcontrol",
-      "connection"
-    ]
-  },
-  {
-    "id": "460c7448-7a7b-41ce-8c5f-7cf8519c4448",
+    "id": "5032130d-3db3-4738-948d-c98edcd72c9f",
     "name": "Horseback Body Scan",
     "category": "Somatic Reset",
     "description": "A mounted somatic body scan that releases tension and increases awareness of how the rider's body moves with the horse.",
-    "instructions": "",
+    "instructions": "Place your horse in a relaxed walk or halt.\nSlowly scan your body from head to toe, noticing where you are holding tension.\nRelease tension in small increments and observe how your horse responds.",
     "duration_minutes": 4,
     "anxiety_level": [
       3,
@@ -3690,11 +808,11 @@
     ]
   },
   {
-    "id": "b1ce2741-dde9-41ee-811b-dbbc441501e5",
+    "id": "80f22ffb-44bc-4c4f-ba1a-18842d6f4ed1",
     "name": "Conscious Swallow Reset",
     "category": "Somatic Reset",
     "description": "Uses a slow, deliberate swallow to activate vagal pathways and reduce sympathetic arousal.",
-    "instructions": "",
+    "instructions": "Relax your tongue and jaw and take a slow breath in.\nGently swallow once, noticing the softening in your throat and chest.\nRepeat 2\u20133 times while maintaining steady contact with your horse.",
     "duration_minutes": 2,
     "anxiety_level": [
       3,
@@ -3722,11 +840,11 @@
     ]
   },
   {
-    "id": "49182464-d503-465e-b4f0-5abaea09ea09",
+    "id": "610201bb-6b11-4b82-9fb6-2085e848ef24",
     "name": "Vagal Hum Exhale",
     "category": "Somatic Reset",
     "description": "Uses humming on the exhale to stimulate the vagus nerve and calm both horse and rider.",
-    "instructions": "",
+    "instructions": "Take a slow inhale through your nose.\nExhale with a gentle hum, letting the vibration soften your chest and throat.\nRepeat for 4\u20136 cycles and observe your horse's breathing or ear position.",
     "duration_minutes": 3,
     "anxiety_level": [
       3,
@@ -3755,11 +873,11 @@
     ]
   },
   {
-    "id": "76a637e9-420e-4894-8c1a-df363ba2a938",
+    "id": "d9cb7aa5-1db7-489d-af5a-0af7f60f7fef",
     "name": "Jaw Release \u2192 Horse Release",
     "category": "Somatic Reset",
     "description": "Softening the rider's jaw signals relaxation through the whole body, often resulting in the horse softening as well.",
-    "instructions": "",
+    "instructions": "Relax your jaw by gently unclenching your teeth and letting your tongue drop from the roof of your mouth.\nTake one slow exhale as your jaw softens.\nNotice if your horse shows softening signals such as lowering its neck, licking, or blowing out.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -3790,11 +908,11 @@
     ]
   },
   {
-    "id": "5a1dd9b8-ea22-4db5-ac3c-3bf815ca3443",
+    "id": "61ff40d1-eb2d-4940-8a98-02a850d7eab2",
     "name": "Pelvic Float Reset",
     "category": "Somatic Reset",
     "description": "Encourages the pelvis to follow the horse's movement in a fluid, unbraced pattern.",
-    "instructions": "",
+    "instructions": "Imagine your pelvis floating like a buoy on water as your horse moves.\nLet your seat move freely without gripping or controlling.\nAllow small figure-8 motions to emerge naturally.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -3825,11 +943,11 @@
     ]
   },
   {
-    "id": "7f61cf07-5c68-4426-b9b1-bc08fedd713d",
+    "id": "7577bf24-dfd8-49f1-80a6-e5a5d5bd2772",
     "name": "Slow Blink Safety Signal",
     "category": "Somatic Reset",
     "description": "Uses slow, soft eye blinks to cue the nervous system and the horse that there is no threat.",
-    "instructions": "",
+    "instructions": "Relax your eyes and close them softly for a brief moment.\nBlink slowly several times, keeping your jaw soft.\nPair the blinks with long exhales.",
     "duration_minutes": 2,
     "anxiety_level": [
       1,
@@ -3859,11 +977,11 @@
     ]
   },
   {
-    "id": "35a3b1ef-047a-40a7-9ec8-e9f98c35d317",
+    "id": "99945469-a609-4684-8904-d07b0530831f",
     "name": "Polyvagal Anchor: Breath Down Spine",
     "category": "Somatic Reset",
     "description": "Visualization of breath flowing down the spine to engage dorsal and ventral vagal regulation.",
-    "instructions": "",
+    "instructions": "Inhale and imagine the breath traveling from the top of your spine downward.\nExhale and imagine it grounding through your pelvis into the saddle.\nRepeat slowly for 6\u201310 breaths.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -3894,11 +1012,11 @@
     ]
   },
   {
-    "id": "ccabc35f-3a42-4220-8937-86f980385741",
+    "id": "cd79fdb9-e46b-49cb-99d7-c74138353d60",
     "name": "Shoulder Rolls (Micro-Movement)",
     "category": "Somatic Reset",
     "description": "Uses small shoulder rolls to release guarding and improve upper-body softness while mounted.",
-    "instructions": "",
+    "instructions": "Roll your shoulders gently forward and then back in small circles.\nKeep the movement tiny so as not to unbalance the horse.\nPair the roll with a slow exhale.",
     "duration_minutes": 2,
     "anxiety_level": [
       1,
@@ -3928,11 +1046,11 @@
     ]
   },
   {
-    "id": "370207c5-b283-400f-be32-e364b499f566",
+    "id": "36afbb81-736f-40bd-92d9-89ad9f9186d0",
     "name": "Sternum Drop Reset",
     "category": "Somatic Reset",
     "description": "Softening the sternum releases bracing in the upper chest and improves breathing efficiency.",
-    "instructions": "",
+    "instructions": "Relax the front of your chest by imagining your sternum softening downward 1\u20132 centimeters.\nLet your rib cage widen naturally.\nNotice how your horse responds to your softer torso.",
     "duration_minutes": 2,
     "anxiety_level": [
       2,
@@ -3963,11 +1081,11 @@
     ]
   },
   {
-    "id": "f32caf2b-6877-4058-8d1b-0bb262fc1f2c",
+    "id": "cd06ed79-7085-4e82-8e89-624051b637c8",
     "name": "Side-Body Release",
     "category": "Somatic Reset",
     "description": "Releases bracing in the rider's lateral line to increase symmetry and softness.",
-    "instructions": "",
+    "instructions": "Gently lengthen through the right side of your body for one breath.\nThen lengthen the left side.\nReturn to neutral and notice improved softness and mobility.",
     "duration_minutes": 3,
     "anxiety_level": [
       1,
@@ -3998,11 +1116,11 @@
     ]
   },
   {
-    "id": "bea6a602-2211-42bc-b17c-36ec05b8ed51",
+    "id": "cd7bb461-f99a-45f6-9ae1-9b2a690c1331",
     "name": "TRE-Style Leg Soft Shake",
     "category": "Somatic Reset",
     "description": "A micro-version of tension release (TRE) using gentle leg softening while mounted.",
-    "instructions": "",
+    "instructions": "Allow one leg at a time to shake or quiver gently without losing contact.\nKeep movements small and safe.\nNotice release of tension through your hips and pelvis.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -4031,11 +1149,11 @@
     ]
   },
   {
-    "id": "f2492ff3-47ab-48a3-bc4e-836a163eafe4",
+    "id": "05576c5c-4887-4253-b1fa-5f881458ca5b",
     "name": "Wrist Shake-Out",
     "category": "Somatic Reset",
     "description": "Releases hand and wrist tension that can travel through the reins to the horse.",
-    "instructions": "",
+    "instructions": "Shake out one wrist at a time softly while keeping a neutral rein with the other hand.\nSwitch sides.\nReturn to the reins with softened fingers.",
     "duration_minutes": 1,
     "anxiety_level": [
       1,
@@ -4067,11 +1185,11 @@
     ]
   },
   {
-    "id": "d6b9cf3a-4e30-4e4d-ae73-8c1eea5e082e",
+    "id": "adad247e-9774-4249-8970-252150e2e5a8",
     "name": "Mirror Neuron Relaxation",
     "category": "Somatic Reset",
     "description": "Uses calm visual focus to encourage the rider's body to soften through mirror-neuron pathways.",
-    "instructions": "",
+    "instructions": "Focus on something calm and steady in the environment (tree, wall, horizon).\nLet your body mimic the stillness you are observing.\nRide slowly while maintaining this soft gaze.",
     "duration_minutes": 3,
     "anxiety_level": [
       1,
@@ -4103,11 +1221,11 @@
     ]
   },
   {
-    "id": "973fefd8-b988-40ee-b46f-6df19a7ea729",
+    "id": "d0178db0-daa3-43bf-ab0d-7f3a3491d46c",
     "name": "Micro-Movement Spine Wave",
     "category": "Somatic Reset",
     "description": "Small spinal undulation to release rigidity and improve harmony with horse movement.",
-    "instructions": "",
+    "instructions": "Gently create a wave-like motion up your spine, matching your horse's movement.\nKeep the wave subtle and fluid.\nRepeat for one long side of the arena.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -4136,11 +1254,11 @@
     ]
   },
   {
-    "id": "6b68a58a-0a03-4282-bbfc-279a02644eb2",
+    "id": "d2ac1907-b934-42c9-914c-d353e38000fb",
     "name": "Neck Softening Within Safety",
     "category": "Somatic Reset",
     "description": "Releases neck tension without compromising stability or balance.",
-    "instructions": "",
+    "instructions": "Gently turn your head left and right within a safe range.\nDrop your chin slightly, softening the back of your neck.\nKeep shoulders soft while doing this.",
     "duration_minutes": 2,
     "anxiety_level": [
       1,
@@ -4171,11 +1289,11 @@
     ]
   },
   {
-    "id": "071a2f9f-3b83-4466-9e62-b642dc760055",
+    "id": "8c468d3b-a24a-403f-ad27-9a58336e8649",
     "name": "Glute Release to Seat Deepening",
     "category": "Somatic Reset",
     "description": "Releases glutes to improve seat depth and reduce bouncing or gripping.",
-    "instructions": "",
+    "instructions": "Notice if your glutes feel tight or clenched.\nOn each exhale, allow them to relax downward.\nObserve how your horse's back responds to a deeper seat.",
     "duration_minutes": 3,
     "anxiety_level": [
       1,
@@ -4206,11 +1324,11 @@
     ]
   },
   {
-    "id": "d15daf99-b781-4d69-a2f1-b139d0ea8e14",
+    "id": "34538057-4f7d-4095-9f3e-7efbd5ac879b",
     "name": "Somatic Sigh Release",
     "category": "Somatic Reset",
     "description": "Uses a gentle sigh to discharge upper-body tension.",
-    "instructions": "",
+    "instructions": "Take a soft inhale through your nose.\nExhale with a gentle sigh through your mouth.\nRepeat 3\u20134 times without collapsing your posture.",
     "duration_minutes": 2,
     "anxiety_level": [
       2,
@@ -4240,11 +1358,11 @@
     ]
   },
   {
-    "id": "b7ef9812-459a-47d0-a464-7e12928eb853",
+    "id": "350a0572-4fb6-48a5-ad00-45009d4b3bb6",
     "name": "Hand Open\u2013Close Release",
     "category": "Somatic Reset",
     "description": "Opens and closes fingers gently to release hand bracing and rein tension.",
-    "instructions": "",
+    "instructions": "Open your fingers wide for a moment without losing rein feel.\nClose gently, then reopen softly.\nRepeat several times while keeping wrists relaxed.",
     "duration_minutes": 1,
     "anxiety_level": [
       1,
@@ -4275,11 +1393,11 @@
     ]
   },
   {
-    "id": "3e74f69d-4b66-4479-8db0-3c2c50708dbf",
+    "id": "bc52a830-b7a3-4f8c-86eb-faef0c777278",
     "name": "Thigh Softening Scan",
     "category": "Somatic Reset",
     "description": "Releases gripping in the thighs to increase horse-rider harmony.",
-    "instructions": "",
+    "instructions": "Scan through both thighs to identify gripping or tension.\nRelease each thigh by 5\u201310% on every exhale.\nNotice how your horse's back and stride respond.",
     "duration_minutes": 3,
     "anxiety_level": [
       1,
@@ -4311,11 +1429,11 @@
     ]
   },
   {
-    "id": "bcb7f609-ea2c-439f-8371-e2284288d672",
+    "id": "9467d631-ede0-4f7f-a831-566eedb514bb",
     "name": "Lower Back Melt",
     "category": "Somatic Reset",
     "description": "Relaxes the lower back to reduce bracing and improve balance.",
-    "instructions": "",
+    "instructions": "Imagine your lower back melting downward like warm wax.\nAllow the movement of your horse to gently mobilize your spine.\nMaintain softness for several breaths.",
     "duration_minutes": 3,
     "anxiety_level": [
       1,
@@ -4347,11 +1465,11 @@
     ]
   },
   {
-    "id": "dd8b1be8-d158-4f5f-925e-4a05ef01629c",
+    "id": "5c7a685a-690e-430d-bdc6-3e0d2cc52dca",
     "name": "Internal Temperature Check",
     "category": "Somatic Reset",
     "description": "Enhances interoception by noticing internal sensations of warmth, coolness, or temperature shifts.",
-    "instructions": "",
+    "instructions": "Notice internal sensations such as warmth in your chest or coolness in your hands.\nName each sensation without judging it.\nRide one lap while maintaining internal awareness.",
     "duration_minutes": 3,
     "anxiety_level": [
       1,
@@ -4382,11 +1500,11 @@
     ]
   },
   {
-    "id": "a0c78126-9222-4081-aa4a-05699edbc39b",
+    "id": "9d9b4c19-d2d0-4438-b1ca-34a560af2334",
     "name": "Heartbeat Awareness",
     "category": "Somatic Reset",
     "description": "Builds interoceptive awareness by noticing the pulse or heartbeat while riding.",
-    "instructions": "",
+    "instructions": "Bring your attention to your heartbeat or pulse sensations.\nNotice if the rhythm changes as you breathe and ride.\nPair heartbeat awareness with slow exhales.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -4415,11 +1533,11 @@
     ]
   },
   {
-    "id": "e7feb1ca-6f5e-42c3-8d87-f83c13d8c30e",
+    "id": "1a475168-e5ec-4d27-8878-4170941381b2",
     "name": "Internal Energy Direction Downward",
     "category": "Somatic Reset",
     "description": "Directs internal energy downward through the seat to create stability and security.",
-    "instructions": "",
+    "instructions": "Imagine energy flowing downward from your chest through your seat.\nLet gravity assist the downward flow until your seat deepens.\nStay connected with slow breathing.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -4449,11 +1567,11 @@
     ]
   },
   {
-    "id": "187ce6db-b69a-40e7-bfbf-1c251c58caf1",
+    "id": "1407f987-c776-405f-927f-3a9794e54c96",
     "name": "Breath-to-Tension Mapping",
     "category": "Somatic Reset",
     "description": "Maps where breath flows and where it does not, revealing areas of hidden tension.",
-    "instructions": "",
+    "instructions": "Notice which parts of your body move with your breath.\nNotice which parts feel still or blocked.\nDirect breath gently toward blocked areas without forcing.",
     "duration_minutes": 4,
     "anxiety_level": [
       2,
@@ -4482,11 +1600,11 @@
     ]
   },
   {
-    "id": "28664f30-ca7d-4b28-8287-6c99be047c11",
+    "id": "e3a41b6e-374d-48c7-ae25-41575470f56d",
     "name": "Sensation Naming (Tight, Warm, Buzzing)",
     "category": "Somatic Reset",
     "description": "Names sensations to reduce emotional overwhelm and increase regulation.",
-    "instructions": "",
+    "instructions": "Notice a sensation such as tightness, warmth, or buzzing.\nName it simply without judgment.\nStay with the sensation for one breath before shifting focus.",
     "duration_minutes": 3,
     "anxiety_level": [
       3,
@@ -4514,11 +1632,11 @@
     ]
   },
   {
-    "id": "23c99a8c-9660-44f3-b8fa-ca70d4396206",
+    "id": "73c204e3-35cb-4d02-9315-4e918c35e214",
     "name": "Expand vs Contract Body Check",
     "category": "Somatic Reset",
     "description": "Identifies whether the body is bracing (contracted) or softening (expanded).",
-    "instructions": "",
+    "instructions": "Ask yourself: \"Is my body expanding or contracting right now?\"\nIf contracting, soften one small area such as your jaw or ribs.\nRide one long side noticing the shift.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -4548,11 +1666,11 @@
     ]
   },
   {
-    "id": "70d96de4-71d6-41e9-83eb-82a4405f8438",
+    "id": "b640ecf0-20b8-43ce-97c2-d29bc2e7a07c",
     "name": "Somatic Allowing Practice",
     "category": "Somatic Reset",
     "description": "Encourages the body to allow sensations without resisting them, reducing fight-or-flight escalation.",
-    "instructions": "",
+    "instructions": "Notice a sensation or emotion arising in your body.\nSay internally: \"I can allow this sensation to be here.\"\nBreathe slowly and observe how the sensation shifts.",
     "duration_minutes": 4,
     "anxiety_level": [
       2,
@@ -4581,11 +1699,11 @@
     ]
   },
   {
-    "id": "07360710-8a68-4e07-bc46-e82566660d61",
+    "id": "dba648df-3918-4f6e-a07a-46ef575b3f36",
     "name": "Micro-Postural Adjustments",
     "category": "Somatic Reset",
     "description": "Uses tiny alignment shifts to break out of rigid posture cycles.",
-    "instructions": "",
+    "instructions": "Shift your posture by just 2\u20135%: soften your shoulders, lengthen your spine, or adjust your pelvis.\nKeep the adjustments tiny to stay balanced.\nRepeat small resets every few strides.",
     "duration_minutes": 3,
     "anxiety_level": [
       1,
@@ -4616,11 +1734,11 @@
     ]
   },
   {
-    "id": "132b1dec-36e1-4e27-9aa9-37fa2fd086aa",
+    "id": "498ce8e8-7695-4ace-9514-2e6148e80d00",
     "name": "Five Percent Softer Rule",
     "category": "Somatic Reset",
     "description": "Asks the rider to soften their body by only 5%, preserving stability while reducing tension.",
-    "instructions": "",
+    "instructions": "Choose one body area (jaw, shoulders, hands, thighs).\nSoften that area by just 5%, not more.\nRide one lap and observe changes in your horse.",
     "duration_minutes": 3,
     "anxiety_level": [
       1,
@@ -4652,11 +1770,11 @@
     ]
   },
   {
-    "id": "c09241c9-88cc-4920-a75b-2724ea3af345",
+    "id": "921a67a9-49a8-4b30-8b58-fdd117e5aefe",
     "name": "Pressure Mapping Grip Awareness",
     "category": "Somatic Reset",
     "description": "Raises awareness of where the rider is gripping unnecessarily.",
-    "instructions": "",
+    "instructions": "Scan your body for any gripping: thighs, glutes, hands, arms.\nRelease one gripping area by a small amount.\nRepeat for each area as needed.",
     "duration_minutes": 3,
     "anxiety_level": [
       1,
@@ -4687,11 +1805,11 @@
     ]
   },
   {
-    "id": "13ef3dad-b904-4b8d-a9b1-a12ef9d378fb",
+    "id": "95401c24-9498-4c53-9805-89368c15105c",
     "name": "Synchronize with Horse Swing",
     "category": "Somatic Reset",
     "description": "Enhances rider-horse harmony by matching the swing of the horse's rib cage and back.",
-    "instructions": "",
+    "instructions": "Feel your horse's ribcage swing left and right under your seat.\nAllow your hips and lower back to follow the movement.\nStay soft and rhythmically connected for one arena lap.",
     "duration_minutes": 3,
     "anxiety_level": [
       1,
@@ -4722,11 +1840,11 @@
     ]
   },
   {
-    "id": "bdc813a1-8326-45d7-bf37-2216d72c1741",
+    "id": "8e7c5a03-5bca-4716-98df-d3c7bfc69652",
     "name": "Seat Rhythm Calibration",
     "category": "Somatic Reset",
     "description": "Improves seat timing and balance by calibrating movement against the horse's gait rhythm.",
-    "instructions": "",
+    "instructions": "Sit quietly at the walk and tune into the rhythm of the gait.\nMatch your seat movement precisely with each step.\nNotice increased stability and relaxation.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -4755,11 +1873,11 @@
     ]
   },
   {
-    "id": "58561040-0711-4bb3-a1b0-a6c645107c63",
+    "id": "b85a3c5b-111b-4900-8211-39613b2b5734",
     "name": "Somatic Mirroring Exercise",
     "category": "Somatic Reset",
     "description": "Encourages the rider to mirror the horse's relaxation patterns to create mutual regulation.",
-    "instructions": "",
+    "instructions": "Observe your horse's breathing, rhythm, and posture.\nMirror any softening or relaxing gesture your horse shows.\nAllow mutual regulation to develop between you.",
     "duration_minutes": 3,
     "anxiety_level": [
       1,
@@ -4789,11 +1907,11 @@
     ]
   },
   {
-    "id": "2e395ab3-48a1-486f-bc8e-faec52738352",
+    "id": "df939cc3-1c7f-4797-b0c5-140b5ce00867",
     "name": "Feel Horse Back Movement",
     "category": "Somatic Reset",
     "description": "Trains the rider to sense the vertical and lateral movement of the horse's back.",
-    "instructions": "",
+    "instructions": "Focus on how your horse's back lifts and swings under you.\nFollow the movement without bracing or forcing.\nNotice any areas where your body stiffens and soften them.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -4822,11 +1940,11 @@
     ]
   },
   {
-    "id": "c4f72e5c-a204-4c6c-bf75-49a04c29d0b0",
+    "id": "3ed17ca0-3bd0-4d71-bc83-2f07e5c0f973",
     "name": "Co-Release Rider Exhale \u2192 Horse Softens",
     "category": "Somatic Reset",
     "description": "Uses the rider's exhale as a cue for the horse to soften or release tension.",
-    "instructions": "",
+    "instructions": "On each slow exhale, soften your entire torso.\nNotice if your horse drops its head, blows out, or relaxes.\nContinue pattern for one arena lap.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -4856,11 +1974,11 @@
     ]
   },
   {
-    "id": "6ee11705-9911-430b-8256-e7cc0e9fab68",
+    "id": "68d9d624-4f94-4b90-a923-9ddc4617b931",
     "name": "Heavy Seat Bones Grounder",
     "category": "Somatic Reset",
     "description": "Helps the rider deepen into the saddle for stability and calm.",
-    "instructions": "",
+    "instructions": "Imagine your seat bones dropping heavily into the saddle.\nAllow gravity to create stable contact.\nMaintain soft legs while doing so.",
     "duration_minutes": 3,
     "anxiety_level": [
       1,
@@ -4892,11 +2010,11 @@
     ]
   },
   {
-    "id": "71fbb6df-fb21-400c-821a-29bd94a2e9c8",
+    "id": "3c7bf9a7-0e7f-4386-ab17-0babbdd796dc",
     "name": "Breath and Seat Integration",
     "category": "Somatic Reset",
     "description": "Coordinates breath with seat movement to enhance unity with the horse.",
-    "instructions": "",
+    "instructions": "On each inhale, feel your pelvis rise with your horse's movement.\nOn each exhale, allow your seat to deepen.\nMaintain integration for several cycles.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -4926,11 +2044,11 @@
     ]
   },
   {
-    "id": "f69ca1a9-9be6-4d11-9e38-56c4e6e0c2a3",
+    "id": "f690655e-c015-41ac-ae5b-ddf52266a1d7",
     "name": "Aid from Soft Body, Not Tension",
     "category": "Somatic Reset",
     "description": "Redirects effort from braced muscles into soft, effective rider aids.",
-    "instructions": "",
+    "instructions": "Before giving an aid, soften your torso and release gripping.\nGive the aid from softness rather than force.\nNotice your horse's acceptance of the aid.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -4960,11 +2078,11 @@
     ]
   },
   {
-    "id": "ea629898-80bf-4b51-aef8-297c67e8aa3a",
+    "id": "093d34d4-f8a0-4824-bd41-1a200cf3e15f",
     "name": "Pelvis\u2013Hip\u2013Knee Line Releasing",
     "category": "Somatic Reset",
     "description": "Releases the pelvis-hip-knee line to improve suppleness and reduce gripping.",
-    "instructions": "",
+    "instructions": "Notice the line from your pelvis to your knee on each side.\nSoften or lengthen through the line on the exhale.\nSwitch sides and maintain symmetry.",
     "duration_minutes": 4,
     "anxiety_level": [
       1,
@@ -4996,11 +2114,11 @@
     ]
   },
   {
-    "id": "b088c37f-6903-4725-a4fd-871530224276",
+    "id": "47c273c1-96a3-40f7-9cc9-93bccb608bce",
     "name": "Soft Spine Visualization",
     "category": "Somatic Reset",
     "description": "Encourages a flexible, responsive spine to reduce bracing.",
-    "instructions": "",
+    "instructions": "Visualize your spine as a flexible chain rather than a stiff rod.\nLet it respond fluidly to your horse's movement.\nHold softness for one arena long side.",
     "duration_minutes": 3,
     "anxiety_level": [
       1,
@@ -5032,11 +2150,11 @@
     ]
   },
   {
-    "id": "1af0157d-2597-4179-9182-4d4c0c6809df",
+    "id": "2f7aba17-58a1-4235-9bc0-5e2364610828",
     "name": "Collarbone Tapping",
     "category": "Tapping / EFT",
     "description": "On-horse EFT-style tapping on the collarbone points to reduce anxiety and reset the nervous system.",
-    "instructions": "",
+    "instructions": "Ensure your horse is walking calmly on a loose or neutral rein in a safe environment.\nWith one or two fingers, gently tap on the soft area just below your collarbone on one side, keeping the tapping light and rhythmic.\nBreathe slowly as you tap and, if helpful, name what you are feeling (for example, nervous, tight, overwhelmed).\nContinue for 30\u201360 seconds, then return both hands to the reins and notice any change in your body and your horse.",
     "duration_minutes": 3,
     "anxiety_level": [
       4,
@@ -5065,11 +2183,11 @@
     ]
   },
   {
-    "id": "d898bc32-a57c-4417-81fd-fb7a8af80437",
+    "id": "8ff68b6d-4c99-48db-a625-f681b9e6a7cb",
     "name": "Hand Karate Chop Tapping",
     "category": "Tapping / EFT",
     "description": "Tapping on the side of the hand (karate chop point) paired with a set-up statement to reduce distress.",
-    "instructions": "",
+    "instructions": "While your horse walks quietly, bring one hand to the side of the other hand (the karate chop edge).\nTap gently on the side of your hand with two or three fingers in a steady rhythm.\nOptionally repeat a phrase such as: Even though I feel anxious right now, I am doing the best I can.\nContinue for 30\u201360 seconds, then return to normal reins and notice your nervous system level.",
     "duration_minutes": 3,
     "anxiety_level": [
       4,
@@ -5098,11 +2216,11 @@
     ]
   },
   {
-    "id": "7c1f7fe8-6307-48c6-81bb-1b7edbdce90c",
+    "id": "a4d3a605-08bf-44e5-a7b6-e4ed49e2d7d0",
     "name": "Alternating Shoulder Tapping",
     "category": "Tapping / EFT",
     "description": "Bilateral shoulder tapping to stimulate both brain hemispheres and support emotional regulation.",
-    "instructions": "",
+    "instructions": "With your horse in a calm walk, hold the reins in one hand if safe or loop them briefly.\nUse your right hand to gently tap your left shoulder a few times, then your left hand to tap your right shoulder, alternating right-left-right-left.\nKeep the tapping soft and rhythmic while breathing slowly.\nContinue for 20\u201340 taps, then return your hands to the reins and notice any sense of calm or clarity.",
     "duration_minutes": 3,
     "anxiety_level": [
       4,
@@ -5131,11 +2249,11 @@
     ]
   },
   {
-    "id": "36ba69e1-7444-4a55-9127-d02d4d7958fe",
+    "id": "a36dfbc3-06af-4eb6-b759-87622bd6fbdd",
     "name": "Bilateral Thigh Tapping",
     "category": "Tapping / EFT",
     "description": "Tapping alternately on each thigh to ground the rider and calm the nervous system.",
-    "instructions": "",
+    "instructions": "At the walk, place one hand lightly on each thigh.\nTap alternately left, right, left, right on your thighs in a gentle, steady rhythm.\nPair the tapping with slower breathing and a neutral focus on your horse's movement.\nContinue for 30\u201360 seconds, then rest your hands back on the reins.",
     "duration_minutes": 3,
     "anxiety_level": [
       4,
@@ -5164,11 +2282,11 @@
     ]
   },
   {
-    "id": "d21f22cf-d99f-42d1-a3cf-f7360f742fb0",
+    "id": "866b8c74-e2d3-46fb-8a80-cee3cc15fa62",
     "name": "Wrist Tapping Sequence",
     "category": "Tapping / EFT",
     "description": "Gentle tapping on the inside of the wrist to reduce activation before or during a ride.",
-    "instructions": "",
+    "instructions": "With your horse calmly walking, bring one hand toward the inside of the opposite wrist.\nTap gently on the inside of the wrist where a pulse might be felt.\nBreathe in for a slow count of four and out for a slow count of six as you tap.\nRepeat for 6\u201310 breaths, then return your hand to the reins.",
     "duration_minutes": 2,
     "anxiety_level": [
       3,
@@ -5196,11 +2314,11 @@
     ]
   },
   {
-    "id": "633f3b78-9d9f-4e3c-abf8-111d6f7bf66a",
+    "id": "1e92a2d4-9ad5-4458-9822-f32b9fc13816",
     "name": "Light Chest Tapping",
     "category": "Tapping / EFT",
     "description": "Soft tapping in the upper chest area to help release emotional pressure and support calmer breathing.",
-    "instructions": "",
+    "instructions": "Ensure your horse is relaxed at the walk or halt.\nUse fingertips to gently tap in the center of your upper chest, avoiding any painful areas.\nCoordinate the tapping with slow inhales and long exhales.\nContinue for 30\u201345 seconds, then notice any softening in your chest and shoulders.",
     "duration_minutes": 2,
     "anxiety_level": [
       4,
@@ -5228,11 +2346,11 @@
     ]
   },
   {
-    "id": "fa169f71-a8bf-467c-9a1b-8f45ab1a7d51",
+    "id": "c350c2a9-fa24-4348-b15c-7589c5fbf1a1",
     "name": "Anxiety Set-Up Statement Tapping",
     "category": "Tapping / EFT",
     "description": "Uses a set-up statement plus tapping to acknowledge anxiety and build self-acceptance.",
-    "instructions": "",
+    "instructions": "While your horse is calmly walking, choose a tapping point such as the side of your hand or collarbone.\nTap gently and say three times (out loud or silently): Even though I feel anxious right now, I accept that this is how I feel and I am trying my best.\nContinue tapping on that point or move through other points as you ride (collarbone, chest, wrist).\nNotice changes in intensity of anxiety from 0\u201310.",
     "duration_minutes": 4,
     "anxiety_level": [
       5,
@@ -5258,11 +2376,11 @@
     ]
   },
   {
-    "id": "e5a67ce8-571c-478e-a6fc-73092f2389a6",
+    "id": "bd652fda-5763-4c97-ba4f-1e8e135e9ae1",
     "name": "Confidence Set-Up Statement Tapping",
     "category": "Tapping / EFT",
     "description": "Pairs tapping with a confidence-building set-up phrase to shift self-belief before or during a ride.",
-    "instructions": "",
+    "instructions": "Select a tapping point (for example, collarbone or side of hand) while your horse walks.\nTap and repeat: Even though part of me doubts myself, I am learning and I choose to ride with calm confidence.\nContinue tapping and repeating the phrase for 6\u201310 breaths.\nReturn to normal reins and test how it feels to ride from this updated mindset.",
     "duration_minutes": 4,
     "anxiety_level": [
       3,
@@ -5288,11 +2406,11 @@
     ]
   },
   {
-    "id": "b0573bb4-c06d-4104-a175-f9e6230ec55f",
+    "id": "563d1e14-a880-4e4f-91a8-96266305328d",
     "name": "Flow-State Tapping",
     "category": "Tapping / EFT",
     "description": "Tapping designed to support a focused, in-the-zone riding state by clearing distractions.",
-    "instructions": "",
+    "instructions": "With your horse at a walk, tap lightly on your collarbone or thighs in a steady bilateral rhythm.\nRepeat a brief phrase such as: Here, now, with my horse.\nMaintain tapping and phrase repetition for 45\u201360 seconds, then ride a simple pattern focusing on feel and rhythm.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -5321,11 +2439,11 @@
     ]
   },
   {
-    "id": "6d946fd2-209c-4bb6-9b69-82e759081bf2",
+    "id": "aeae268b-7230-401d-a216-cea7d208837c",
     "name": "Pre-Competition EFT Sequence",
     "category": "Tapping / EFT",
     "description": "A short tapping sequence used before entering the ring to manage nerves and steady focus.",
-    "instructions": "",
+    "instructions": "While walking or halted near the arena, tap through a brief sequence: side of hand, collarbone, chest, wrist.\nAt each point, name what you feel (for example: nervous, tight, worried) and acknowledge your effort.\nFinish by tapping at the collarbone while repeating a calm phrase such as: I know my horse, I know my ride.\nTake one last slow breath and ride your entry line.",
     "duration_minutes": 4,
     "anxiety_level": [
       5,
@@ -5351,11 +2469,11 @@
     ]
   },
   {
-    "id": "811c086a-1f78-4677-86f0-64b6aa5291fd",
+    "id": "d1199dc8-b9d0-47bc-80b7-72783c9ee2d1",
     "name": "Right\u2013Left Rein Finger Tapping",
     "category": "Tapping / EFT",
     "description": "Tiny bilateral tapping using fingers on the reins to calm the nervous system without dropping contact.",
-    "instructions": "",
+    "instructions": "At the walk, gently tap your right fingers on the rein, then your left fingers, alternating rhythmically.\nKeep the taps very small so you do not disturb your horse's mouth.\nContinue for 20\u201330 seconds while breathing evenly.",
     "duration_minutes": 2,
     "anxiety_level": [
       3,
@@ -5384,11 +2502,11 @@
     ]
   },
   {
-    "id": "08d1eec7-d128-46bf-a3ce-9a54b71fe21d",
+    "id": "37b6a8fd-6a84-4db5-a981-9dffe5f8a3f0",
     "name": "Right\u2013Left Thigh Alternating",
     "category": "Tapping / EFT",
     "description": "Alternating taps on each thigh for grounding and bilateral neural activation.",
-    "instructions": "",
+    "instructions": "Place one hand near each thigh while your horse walks.\nTap left thigh, then right thigh, in a slow, even rhythm.\nContinue tapping for 30\u201360 seconds, then place your hands back on the reins and feel your seat deepening into the saddle.",
     "duration_minutes": 3,
     "anxiety_level": [
       4,
@@ -5417,11 +2535,11 @@
     ]
   },
   {
-    "id": "f5ea8fdf-37e7-4624-b044-03af9d762e5f",
+    "id": "de54b14b-14ea-4422-bdbb-0f6037c4e2e2",
     "name": "Rhythmic Belly Breath and Tap",
     "category": "Tapping / EFT",
     "description": "Combines belly breathing with tapping to support deep regulation.",
-    "instructions": "",
+    "instructions": "Place one hand lightly on your lower belly and the other hand on your thigh.\nAs you breathe into your belly, gently tap the hand on your thigh in rhythm with your breath.\nContinue for 6\u201310 breaths, then ride on and notice changes in your body tone.",
     "duration_minutes": 3,
     "anxiety_level": [
       3,
@@ -5449,11 +2567,11 @@
     ]
   },
   {
-    "id": "6c4ec206-8ce3-445f-b19d-06bbf5372ce9",
+    "id": "a73b07eb-f638-4d46-ab30-1f1eb63e071f",
     "name": "Bilateral Seat Bone Shift",
     "category": "Tapping / EFT",
     "description": "Subtle alternating weight shifts in the seat, functioning like bilateral stimulation through the pelvis.",
-    "instructions": "",
+    "instructions": "At the walk, slightly increase weight onto your left seat bone, then your right, in a slow alternating rhythm.\nKeep the movement small and synchronized with your horse's stride.\nContinue for one or two long sides of the arena and observe your horse's response.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -5482,11 +2600,11 @@
     ]
   },
   {
-    "id": "916ca934-2e4a-405d-888d-09def5d22e5a",
+    "id": "7ce60aa6-f0b9-4cf6-833b-648ac105cb14",
     "name": "Foot Pressure Bilateral Switching",
     "category": "Tapping / EFT",
     "description": "Alternating heel or stirrup pressure to create bilateral grounding through the legs.",
-    "instructions": "",
+    "instructions": "Gently press more weight into your left stirrup, then your right, alternating in a calm rhythm.\nAvoid jabbing or gripping; keep the switches smooth.\nContinue for 30\u201360 seconds, then return to even weight.",
     "duration_minutes": 3,
     "anxiety_level": [
       3,
@@ -5515,11 +2633,11 @@
     ]
   },
   {
-    "id": "622073bd-e108-4b1f-bf39-c0dd6098c0b1",
+    "id": "29ca3d66-d740-4f1a-8feb-7022d5fc604a",
     "name": "Tapping to Horse's Walk Rhythm",
     "category": "Tapping / EFT",
     "description": "Matches bilateral tapping to the 4-beat walk rhythm to enhance co-regulation.",
-    "instructions": "",
+    "instructions": "Notice the four-beat rhythm of your horse's walk.\nTap alternately on your thighs or shoulders in time with the steps.\nContinue for one arena lap while keeping your breathing slow and steady.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -5549,11 +2667,11 @@
     ]
   },
   {
-    "id": "b56ac2b0-19da-4963-b281-d95672a4145f",
+    "id": "f8d2fa81-1057-4366-98c5-827f0b5ac83f",
     "name": "Eye-Movement Bilateral Sweep",
     "category": "Tapping / EFT",
     "description": "Uses slow left-right eye movements to stimulate bilateral processing while mounted.",
-    "instructions": "",
+    "instructions": "While riding at a calm walk, choose two safe visual points in your environment\u2014one to your left and one to your right.\nSlowly move your eyes from left point to right point and back again, without turning your head drastically.\nRepeat the sweep several times while breathing slowly.\nReturn to a neutral forward gaze.",
     "duration_minutes": 2,
     "anxiety_level": [
       4,
@@ -5582,11 +2700,11 @@
     ]
   },
   {
-    "id": "1b93af4c-93d4-46d8-aa1f-c8e8da60c24c",
+    "id": "561e9551-f27f-4f3d-aed1-56512191f7db",
     "name": "Shoulder-to-Hip Bilateral Scan",
     "category": "Tapping / EFT",
     "description": "Involves gentle touch or tapping from shoulder to opposite hip in alternation, supporting cross-body integration.",
-    "instructions": "",
+    "instructions": "Slide one hand briefly along the front of your body from left shoulder toward right hip, then return to the reins.\nRepeat on the other side from right shoulder toward left hip.\nKeep movements small and deliberate so as not to disturb your horse.\nContinue alternating sides for 30\u201360 seconds.",
     "duration_minutes": 3,
     "anxiety_level": [
       3,
@@ -5615,11 +2733,11 @@
     ]
   },
   {
-    "id": "6600015e-350b-43eb-93bd-dc264fed1dd7",
+    "id": "c9f75996-526b-4c94-a1e7-edb25859fac4",
     "name": "Bilateral Breath Sides Awareness",
     "category": "Tapping / EFT",
     "description": "Focuses on breathing alternately into left and right sides of the ribcage for bilateral regulation.",
-    "instructions": "",
+    "instructions": "As you inhale, imagine breathing more into the left side of your ribs; as you exhale, relax.\nOn the next inhale, imagine breathing more into the right side.\nAlternate left and right for 8\u201310 breaths while walking your horse.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -5647,11 +2765,11 @@
     ]
   },
   {
-    "id": "972f6886-2e29-4e1e-9e9d-20f5888c6625",
+    "id": "fc9c3fee-5d12-451f-8b25-06c034191655",
     "name": "Alternate Rein Slide Touch",
     "category": "Tapping / EFT",
     "description": "A discrete bilateral technique where the rider alternately slides fingers along each rein.",
-    "instructions": "",
+    "instructions": "At the walk, gently slide the fingers of your right hand a few centimeters along the rein, then return.\nThen slide the fingers of your left hand along the rein, alternating right and left.\nKeep the contact soft and consistent so the horse is not startled.\nContinue for 20\u201340 seconds while breathing slowly.",
     "duration_minutes": 2,
     "anxiety_level": [
       2,
@@ -5681,11 +2799,11 @@
     ]
   },
   {
-    "id": "59724173-cda6-4d08-918c-75d53fff7e57",
+    "id": "4b09f86c-955e-4dc1-b9e7-644df503317c",
     "name": "Reset Tapping Before Transition",
     "category": "Tapping / EFT",
     "description": "Brief bilateral tapping to reset the nervous system immediately before a gait or movement transition.",
-    "instructions": "",
+    "instructions": "Before asking for a transition, briefly tap both thighs with your hands in an alternating pattern for a few seconds.\nTake one slow, deep breath while tapping.\nStop tapping, pick up your reins as needed, and cue the transition from a calmer state.",
     "duration_minutes": 2,
     "anxiety_level": [
       3,
@@ -5713,11 +2831,11 @@
     ]
   },
   {
-    "id": "17d16e0c-1915-4a44-be8d-ef94d556918a",
+    "id": "e811d4e7-070c-465f-b222-e018d179ba92",
     "name": "Tapping Into Focus (Pre-Jump or Test Prep)",
     "category": "Tapping / EFT",
     "description": "Helps riders transition from scattered attention into clear focus before a jump or test movement.",
-    "instructions": "",
+    "instructions": "At the walk or halt before a line or movement, tap alternately on your thighs or shoulders.\nSilently say: Focus here, now, on this next line.\nStop tapping, take one slow inhale and exhale, and ride the movement with your attention on specific cues (line, rhythm, hands, and seat).",
     "duration_minutes": 3,
     "anxiety_level": [
       3,
@@ -5745,11 +2863,11 @@
     ]
   },
   {
-    "id": "92299cfa-349f-4274-b674-65850c629687",
+    "id": "40fc169c-501a-4dbe-951c-f9987f545934",
     "name": "Tapping Release for Overthinking",
     "category": "Tapping / EFT",
     "description": "Targets mental loops and overanalysis by combining tapping with cognitive defusion phrases.",
-    "instructions": "",
+    "instructions": "While your horse walks quietly, tap on your collarbone or thighs.\nRepeat phrases such as: These are just thoughts, not commands or My brain is busy, but my body can stay calm.\nContinue tapping and repeating for 1\u20132 minutes, then ride a simple pattern focusing only on feel.",
     "duration_minutes": 4,
     "anxiety_level": [
       3,
@@ -5777,11 +2895,11 @@
     ]
   },
   {
-    "id": "be4f96c6-05f0-4edc-8600-2a5cad3e7380",
+    "id": "905d9dfe-ea29-40c5-96fd-78932f9068e0",
     "name": "Tapping for Letting Go of Mistakes",
     "category": "Tapping / EFT",
     "description": "Supports emotional recovery after small riding mistakes so they do not derail the session.",
-    "instructions": "",
+    "instructions": "After a mistake or rough moment, keep your horse moving safely at the walk.\nTap gently on your chest or collarbone and say: I notice that happened, and I can learn without beating myself up.\nContinue tapping for 30\u201360 seconds, then reset and ride the line again if appropriate.",
     "duration_minutes": 4,
     "anxiety_level": [
       3,
@@ -5810,11 +2928,11 @@
     ]
   },
   {
-    "id": "6254787f-a7b1-4ddd-b6cf-09370b206d05",
+    "id": "92125fb0-68e3-48ca-bc49-6f73afcf2153",
     "name": "Pre-Test Nerves EFT",
     "category": "Tapping / EFT",
     "description": "Short tapping protocol focusing on anticipatory nervousness before a dressage test or pattern.",
-    "instructions": "",
+    "instructions": "While mounted and waiting for your turn, tap through a few points such as side of hand, collarbone, and wrist.\nName your feelings honestly: I feel shaky, I am afraid of messing up, I want to do well.\nFinish by tapping your collarbone while saying: I can ride the best I can with the horse I have today.\nTake one long exhale and prepare to enter at A or start the pattern.",
     "duration_minutes": 4,
     "anxiety_level": [
       5,
@@ -5840,11 +2958,11 @@
     ]
   },
   {
-    "id": "f700d94c-981a-44ef-860e-99daceb8f77e",
+    "id": "01e4b759-4ceb-4dd9-910b-2bb9881573fe",
     "name": "Power Phrase plus Tap",
     "category": "Tapping / EFT",
     "description": "Pairs a chosen power phrase with tapping to embody a confident riding identity.",
-    "instructions": "",
+    "instructions": "Choose a phrase like I ride with clarity or I am a calm, capable rider.\nTap gently on your chest or thighs while repeating the phrase in time with your breath.\nContinue for 45\u201360 seconds, then ride a simple line or figure focusing on that identity.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -5873,11 +2991,11 @@
     ]
   },
   {
-    "id": "be56485e-fd83-4d21-be66-65f8c76cb3bc",
+    "id": "907f03b9-2cb8-4695-8341-e283ab9ca16a",
     "name": "Confidence Access Tapping",
     "category": "Tapping / EFT",
     "description": "Helps riders reconnect with a previous memory of competence and calm while tapping.",
-    "instructions": "",
+    "instructions": "Begin gentle tapping on your collarbone or wrist.\nRecall a time you felt confident and effective in the saddle or in another area of life.\nAs you tap, bring that memory into your body: posture, breath, and feeling.\nRide on from that memory state and notice any change.",
     "duration_minutes": 4,
     "anxiety_level": [
       3,
@@ -5904,11 +3022,11 @@
     ]
   },
   {
-    "id": "6507435b-0e2c-4500-8c68-08ad960d2ba6",
+    "id": "ffefb631-8d29-4a20-a8d6-00f87cf4f118",
     "name": "Performance Identity Reset Tapping",
     "category": "Tapping / EFT",
     "description": "Resets identity from scared or stuck rider to curious learner or calm athlete.",
-    "instructions": "",
+    "instructions": "Tap on a chosen point (collarbone or hand) while saying: Even though part of me feels like a bad rider, I am choosing to be a learning athlete.\nRepeat for several tapping rounds, allowing the new identity phrase to settle in.\nContinue riding with that identity in mind, focusing on process instead of perfection.",
     "duration_minutes": 4,
     "anxiety_level": [
       3,
@@ -5936,11 +3054,11 @@
     ]
   },
   {
-    "id": "b46985b4-7db6-4361-8532-dd7ef7b89a8b",
+    "id": "5179a522-fab1-4a20-a859-218cc05c0a0f",
     "name": "Course Memory Tapping",
     "category": "Tapping / EFT",
     "description": "Uses tapping to support memory and calm when remembering a jump course or pattern.",
-    "instructions": "",
+    "instructions": "While mounted and walking, tap alternately on your thighs or shoulders.\nSilently rehearse your course or pattern: fence numbers, lines, letters, or movements.\nIf anxious thoughts appear, acknowledge them and return to calmly reviewing the pattern while tapping.",
     "duration_minutes": 3,
     "anxiety_level": [
       3,
@@ -5967,11 +3085,11 @@
     ]
   },
   {
-    "id": "109cc60e-e57c-4498-b159-d255e59bbfc6",
+    "id": "6b22d9cf-08de-4971-b1fc-78bad4f74354",
     "name": "Visualization plus Tap Combo",
     "category": "Tapping / EFT",
     "description": "Combines positive ride visualization with tapping to strengthen neural pathways for success.",
-    "instructions": "",
+    "instructions": "At a walk or halt, begin gentle tapping on your thighs or collarbone.\nVisualize yourself riding a line, test, or exercise calmly and effectively.\nFeel the successful ride in your body while you tap.\nStop tapping, then ride a simplified version of what you visualized.",
     "duration_minutes": 4,
     "anxiety_level": [
       2,
@@ -5999,11 +3117,11 @@
     ]
   },
   {
-    "id": "1f6ca0e2-71c0-4d61-9756-7148fb1ccda1",
+    "id": "f17cf5e3-ccc2-40a1-babe-82580778cc28",
     "name": "Tap plus Long Exhale",
     "category": "Tapping / EFT",
     "description": "Pairs bilateral tapping with prolonged exhalation to quickly down-regulate the nervous system.",
-    "instructions": "",
+    "instructions": "Tap alternately on your thighs or shoulders in a slow rhythm.\nInhale normally, then exhale for a slow count of six or longer as you keep tapping.\nRepeat the long exhale plus tapping for 4\u20136 breaths.",
     "duration_minutes": 2,
     "anxiety_level": [
       4,
@@ -6030,11 +3148,11 @@
     ]
   },
   {
-    "id": "f3aecdc5-a364-420f-80bc-a7f25e8e0d5e",
+    "id": "72fd322e-724b-425f-9b48-b133d0627fb5",
     "name": "Tap While Engaging Seat Rhythm",
     "category": "Tapping / EFT",
     "description": "Uses rhythmic seat motion plus tapping for full-body regulation.",
-    "instructions": "",
+    "instructions": "At the walk, let your seat move fluidly with your horse's back.\nLightly tap alternately on your thighs in time with the stride.\nContinue for one arena lap, focusing on the combined rhythm of seat, horse, and tapping.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -6064,11 +3182,11 @@
     ]
   },
   {
-    "id": "a518ae66-e9c0-4ee8-8e20-ea7602eece47",
+    "id": "7684f421-e8ad-495c-a8f3-1056a380fef8",
     "name": "Tap While Relaxing Jaw",
     "category": "Tapping / EFT",
     "description": "Targets jaw tension while tapping to release upper-body bracing and worry.",
-    "instructions": "",
+    "instructions": "Begin gentle bilateral tapping on your thighs or shoulders.\nAt the same time, let your jaw soften and your tongue rest on the floor of your mouth.\nMaintain tapping for 30\u201360 seconds as jaw tension melts.\nReturn to normal riding focus and observe your horse's response.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -6099,11 +3217,11 @@
     ]
   },
   {
-    "id": "ce60c831-48db-4ff2-acbe-22135cc02eb0",
+    "id": "96ec76d5-a7eb-4e36-94b1-45bfd4bfa8b3",
     "name": "Tap plus Soft Gaze",
     "category": "Tapping / EFT",
     "description": "Supports a soft, wide visual field while using bilateral tapping to reduce hyperfocus or tunnel vision.",
-    "instructions": "",
+    "instructions": "Soften your eyes and allow your gaze to widen so you see more of the arena.\nTap alternately on your thighs or shoulders as you hold this soft, wide focus.\nContinue for one arena lap, then stop tapping and keep the soft gaze as you ride.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -6134,11 +3252,11 @@
     ]
   },
   {
-    "id": "52dc367d-9937-4319-8029-c8733cf21acd",
+    "id": "8eac980e-ae12-48ad-a490-829b68326f76",
     "name": "Tap to Reduce Hypervigilance",
     "category": "Tapping / EFT",
     "description": "Helps riders who are constantly scanning for danger bring their nervous system into a more balanced state.",
-    "instructions": "",
+    "instructions": "Begin bilateral tapping on your thighs, shoulders, or wrists while your horse walks in a safe area.\nAcknowledge: My body is on high alert, and I am not in immediate danger right now.\nLet your eyes briefly scan the environment once, then bring your gaze to a calm focal point.\nContinue tapping until your activation feels one or two points lower on a 0\u201310 scale.",
     "duration_minutes": 4,
     "anxiety_level": [
       5,
@@ -6164,11 +3282,11 @@
     ]
   },
   {
-    "id": "89b51398-770f-4880-b38c-fbc0ccc0a9dc",
+    "id": "e868c5a1-e8e7-4a6c-98dd-7ccb22f31dd1",
     "name": "Tap to Anchor to Present",
     "category": "Tapping / EFT",
     "description": "Uses tapping plus present-focused cues to interrupt time-traveling into past falls or future fears.",
-    "instructions": "",
+    "instructions": "Tap alternately on your thighs or shoulders.\nSay quietly: Right now I am here, on this horse, in this arena.\nAdd simple details: It is [today's weather], I can feel the saddle, I hear hoofbeats.\nContinue for 30\u201360 seconds until the present feels more real than old memories or imagined disasters.",
     "duration_minutes": 4,
     "anxiety_level": [
       3,
@@ -6196,11 +3314,11 @@
     ]
   },
   {
-    "id": "828f00f2-8af1-46ce-8f71-7a7e0e65e72b",
+    "id": "e803e0d6-2c8d-4ca8-a246-06b731bd5164",
     "name": "I Am Safe Tapping Loop",
     "category": "Tapping / EFT",
     "description": "Reinforces safety messages while tapping when there is no actual immediate threat.",
-    "instructions": "",
+    "instructions": "Begin tapping alternately on your collarbone or thighs.\nRepeat softly: In this moment, I am safe enough to ride.\nScan your environment quickly once to confirm there is no real threat.\nContinue tapping and repeating the phrase for 45\u201360 seconds.",
     "duration_minutes": 3,
     "anxiety_level": [
       3,
@@ -6228,11 +3346,11 @@
     ]
   },
   {
-    "id": "78bca950-e8fe-4f62-9d7d-f789b6aaacb8",
+    "id": "5883439c-d09a-4cc3-b28f-ca0afc5e757c",
     "name": "Tap for Freeze Response",
     "category": "Tapping / EFT",
     "description": "Designed for riders who go into a freeze or shut-down response in the saddle.",
-    "instructions": "",
+    "instructions": "If you notice yourself going numb or frozen, keep your horse walking on a small, safe circle if possible.\nTap firmly but gently on your thighs or shoulders in an alternating rhythm.\nQuietly say: I am here, I am in my body, I can move.\nContinue until you feel even a small return of warmth, sensation, or emotion, then pair with grounding breath.",
     "duration_minutes": 4,
     "anxiety_level": [
       5,
@@ -6258,11 +3376,11 @@
     ]
   },
   {
-    "id": "a1da7af1-a23e-4d48-aee6-defb21c77840",
+    "id": "854f76f3-996d-4412-8294-a76e53440d18",
     "name": "Tap for After-Spook Reset",
     "category": "Tapping / EFT",
     "description": "Helps the rider's nervous system recover after a horse spook or sudden event.",
-    "instructions": "",
+    "instructions": "Once the horse is back under control and walking safely, begin light tapping on your thighs or shoulders.\nAcknowledge: That scared me, and I handled it enough to still be here.\nPair tapping with long exhales until your heart rate begins to slow.\nDecide calmly whether to continue the session or take a break.",
     "duration_minutes": 4,
     "anxiety_level": [
       5,
@@ -6288,11 +3406,11 @@
     ]
   },
   {
-    "id": "deb2c54c-beec-452c-a872-1fcfe7ba0a6e",
+    "id": "ab50f1a8-5fc0-4852-89a2-ae9dfc33aa27",
     "name": "Grounding Statement plus Bilateral Tap",
     "category": "Tapping / EFT",
     "description": "Combines bilateral tapping with a simple grounding sentence to stabilize the rider and support the horse.",
-    "instructions": "",
+    "instructions": "Tap alternately on your thighs or shoulders while your horse walks calmly.\nChoose one grounding statement such as: One breath, one stride, one step at a time.\nRepeat the statement in time with your tapping for 45\u201360 seconds.\nStop tapping and keep the grounding statement in mind as you continue riding.",
     "duration_minutes": 3,
     "anxiety_level": [
       3,
