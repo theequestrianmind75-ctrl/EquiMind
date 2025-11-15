@@ -339,22 +339,6 @@ export default function CategoryDetail() {
                 <View style={styles.instructionsContainer}>
                   <Text style={styles.instructionsText}>{cleanInstructions(strategy.instructions)}</Text>
                 </View>
-
-                <View style={styles.toolActions}>
-                  <TouchableOpacity
-                    style={[styles.audioButton, playingId === strategy.id && styles.audioButtonActive]}
-                    onPress={() => handlePlayAudio(strategy)}
-                  >
-                    <Ionicons
-                      name={playingId === strategy.id ? 'stop-circle' : 'play-circle'}
-                      size={20}
-                      color="#ffffff"
-                    />
-                    <Text style={styles.audioButtonText}>
-                      {playingId === strategy.id ? 'Stop Audio' : 'Play Audio'}
-                    </Text>
-                  </TouchableOpacity>
-                </View>
               </>
             )}
           </TouchableOpacity>
