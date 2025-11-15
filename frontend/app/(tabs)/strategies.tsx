@@ -38,11 +38,11 @@ const CATEGORIES = [
   },
   {
     id: 'somatic',
-    title: 'Somatic Reset',
+    title: 'BODY RESET',
     description: 'Body-based techniques for mental clarity',
     icon: 'body',
     color: '#8b5cf6',
-    keywords: ['somatic', 'reset'],
+    keywords: ['body', 'reset', 'somatic'],
   },
   {
     id: 'tapping',
