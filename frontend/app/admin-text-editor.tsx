@@ -114,11 +114,26 @@ ${s.instructions}
         updates
       });
       
-      Alert.alert('Success', `Updated ${response.data.updated} tools!`, [
-        { text: 'OK', onPress: () => router.back() }
-      ]);
+      console.log('Save response:', response.data);
+      
+      // Don't navigate away - just show success and reload data
+      Alert.alert(
+        'Success', 
+        `Updated ${response.data.updated} tools! ${response.data.skipped ? `(${response.data.skipped} skipped)` : ''}`,
+        [
+          { 
+            text: 'OK', 
+            onPress: () => {
+              // Reload the tools to show updated data
+              setLoading(true);
+              fetchStrategies();
+            }
+          }
+        ]
+      );
     } catch (error: any) {
-      Alert.alert('Error', error.message || 'Failed to save changes');
+      console.error('Save error:', error);
+      Alert.alert('Error', error.response?.data?.detail || error.message || 'Failed to save changes');
     } finally {
       setSaving(false);
     }
