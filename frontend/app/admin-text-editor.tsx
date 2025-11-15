@@ -74,6 +74,7 @@ ${s.instructions}
       // Parse the edited text back into tools
       const toolBlocks = editedText.split('========================================');
       const updates: any[] = [];
+      let emptyInstructionsCount = 0;
       
       for (const block of toolBlocks) {
         if (!block.trim()) continue;
@@ -100,12 +101,29 @@ ${s.instructions}
         if (instructionsStart > 0) {
           const instructions = lines.slice(instructionsStart).join('\n').trim();
           
-          updates.push({
-            id,
-            name,
-            instructions
-          });
+          // CRITICAL: Only add if instructions exist
+          if (instructions && instructions.length > 10) {
+            updates.push({
+              id,
+              name,
+              instructions
+            });
+          } else {
+            emptyInstructionsCount++;
+            console.warn(`Tool ${name} (${id}) has empty or very short instructions - skipping update`);
+          }
         }
+      }
+      
+      // Safety check - don't save if most tools have empty instructions
+      if (emptyInstructionsCount > updates.length) {
+        Alert.alert(
+          'Warning',
+          `Found ${emptyInstructionsCount} tools with empty instructions vs ${updates.length} with content. This might corrupt your data. Please check your edits.`,
+          [{ text: 'OK' }]
+        );
+        setSaving(false);
+        return;
       }
       
       // Send bulk update to backend using admin endpoint
