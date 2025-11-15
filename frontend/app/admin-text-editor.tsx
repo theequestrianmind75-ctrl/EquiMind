@@ -43,7 +43,9 @@ export default function AdminTextEditor() {
 
   const fetchStrategies = async () => {
     try {
-      const response = await api.get('/mental-strategies');
+      const response = await api.post('/admin/mental-strategies', {
+        password: ADMIN_PASSWORD
+      });
       setStrategies(response.data);
       
       // Convert to text format
