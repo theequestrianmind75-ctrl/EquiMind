@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, ScrollView, ActivityIndicator } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const ADMIN_PASSWORD = 'equimind2025';
-const API_URL = 'https://mental-equestrian-1.preview.emergentagent.com/api';
+const ADMIN_PASSWORD = process.env.EXPO_PUBLIC_ADMIN_PASSWORD || 'equimind2025';
+const API_URL = process.env.EXPO_PUBLIC_BACKEND_URL ? `${process.env.EXPO_PUBLIC_BACKEND_URL}/api` : 'http://localhost:8001/api';
 
 export default function TestAdmin() {
   const [tools, setTools] = useState<any[]>([]);
