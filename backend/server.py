@@ -481,6 +481,19 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+@app.on_event("startup")
+async def startup_db_init():
+    """Initialize database on startup - restore from backup if needed"""
+    try:
+        from init_production_db import init_production_database
+        logger.info("🚀 Starting database initialization check...")
+        await init_production_database()
+        logger.info("✅ Database initialization complete")
+    except Exception as e:
+        logger.error(f"⚠️  Database initialization failed: {e}")
+        # Don't crash the app, just log the error
+        pass
+
 @app.on_event("shutdown")
 async def shutdown_db_client():
     client.close()
