@@ -182,7 +182,7 @@ ${s.instructions}
       <View style={styles.infoBar}>
         <Ionicons name="information-circle" size={20} color="#3b82f6" />
         <Text style={styles.infoText}>
-          Edit any text below. Use Ctrl+F to find/replace. Click Save All when done.
+          [v2 - FIXED] Edit any text below. Use Ctrl+F to find/replace. Click Save All when done.
         </Text>
       </View>
 
