@@ -777,7 +777,7 @@
   {
     "id": "5032130d-3db3-4738-948d-c98edcd72c9f",
     "name": "Horseback Body Scan",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "A mounted somatic body scan that releases tension and increases awareness of how the rider's body moves with the horse.",
     "instructions": "Place your horse in a relaxed walk or halt.\nSlowly scan your body from head to toe, noticing where you are holding tension.\nRelease tension in small increments and observe how your horse responds.",
     "duration_minutes": 4,
@@ -810,7 +810,7 @@
   {
     "id": "80f22ffb-44bc-4c4f-ba1a-18842d6f4ed1",
     "name": "Conscious Swallow Reset",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Uses a slow, deliberate swallow to activate vagal pathways and reduce sympathetic arousal.",
     "instructions": "Relax your tongue and jaw and take a slow breath in.\nGently swallow once, noticing the softening in your throat and chest.\nRepeat 2\u20133 times while maintaining steady contact with your horse.",
     "duration_minutes": 2,
@@ -842,7 +842,7 @@
   {
     "id": "610201bb-6b11-4b82-9fb6-2085e848ef24",
     "name": "Vagal Hum Exhale",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Uses humming on the exhale to stimulate the vagus nerve and calm both horse and rider.",
     "instructions": "Take a slow inhale through your nose.\nExhale with a gentle hum, letting the vibration soften your chest and throat.\nRepeat for 4\u20136 cycles and observe your horse's breathing or ear position.",
     "duration_minutes": 3,
@@ -875,7 +875,7 @@
   {
     "id": "d9cb7aa5-1db7-489d-af5a-0af7f60f7fef",
     "name": "Jaw Release \u2192 Horse Release",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Softening the rider's jaw signals relaxation through the whole body, often resulting in the horse softening as well.",
     "instructions": "Relax your jaw by gently unclenching your teeth and letting your tongue drop from the roof of your mouth.\nTake one slow exhale as your jaw softens.\nNotice if your horse shows softening signals such as lowering its neck, licking, or blowing out.",
     "duration_minutes": 3,
@@ -910,7 +910,7 @@
   {
     "id": "61ff40d1-eb2d-4940-8a98-02a850d7eab2",
     "name": "Pelvic Float Reset",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Encourages the pelvis to follow the horse's movement in a fluid, unbraced pattern.",
     "instructions": "Imagine your pelvis floating like a buoy on water as your horse moves.\nLet your seat move freely without gripping or controlling.\nAllow small figure-8 motions to emerge naturally.",
     "duration_minutes": 3,
@@ -945,7 +945,7 @@
   {
     "id": "7577bf24-dfd8-49f1-80a6-e5a5d5bd2772",
     "name": "Slow Blink Safety Signal",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Uses slow, soft eye blinks to cue the nervous system and the horse that there is no threat.",
     "instructions": "Relax your eyes and close them softly for a brief moment.\nBlink slowly several times, keeping your jaw soft.\nPair the blinks with long exhales.",
     "duration_minutes": 2,
@@ -979,7 +979,7 @@
   {
     "id": "99945469-a609-4684-8904-d07b0530831f",
     "name": "Polyvagal Anchor: Breath Down Spine",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Visualization of breath flowing down the spine to engage dorsal and ventral vagal regulation.",
     "instructions": "Inhale and imagine the breath traveling from the top of your spine downward.\nExhale and imagine it grounding through your pelvis into the saddle.\nRepeat slowly for 6\u201310 breaths.",
     "duration_minutes": 3,
@@ -1014,7 +1014,7 @@
   {
     "id": "cd79fdb9-e46b-49cb-99d7-c74138353d60",
     "name": "Shoulder Rolls (Micro-Movement)",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Uses small shoulder rolls to release guarding and improve upper-body softness while mounted.",
     "instructions": "Roll your shoulders gently forward and then back in small circles.\nKeep the movement tiny so as not to unbalance the horse.\nPair the roll with a slow exhale.",
     "duration_minutes": 2,
@@ -1048,7 +1048,7 @@
   {
     "id": "36afbb81-736f-40bd-92d9-89ad9f9186d0",
     "name": "Sternum Drop Reset",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Softening the sternum releases bracing in the upper chest and improves breathing efficiency.",
     "instructions": "Relax the front of your chest by imagining your sternum softening downward 1\u20132 centimeters.\nLet your rib cage widen naturally.\nNotice how your horse responds to your softer torso.",
     "duration_minutes": 2,
@@ -1083,7 +1083,7 @@
   {
     "id": "cd06ed79-7085-4e82-8e89-624051b637c8",
     "name": "Side-Body Release",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Releases bracing in the rider's lateral line to increase symmetry and softness.",
     "instructions": "Gently lengthen through the right side of your body for one breath.\nThen lengthen the left side.\nReturn to neutral and notice improved softness and mobility.",
     "duration_minutes": 3,
@@ -1118,7 +1118,7 @@
   {
     "id": "cd7bb461-f99a-45f6-9ae1-9b2a690c1331",
     "name": "TRE-Style Leg Soft Shake",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "A micro-version of tension release (TRE) using gentle leg softening while mounted.",
     "instructions": "Allow one leg at a time to shake or quiver gently without losing contact.\nKeep movements small and safe.\nNotice release of tension through your hips and pelvis.",
     "duration_minutes": 3,
@@ -1151,7 +1151,7 @@
   {
     "id": "05576c5c-4887-4253-b1fa-5f881458ca5b",
     "name": "Wrist Shake-Out",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Releases hand and wrist tension that can travel through the reins to the horse.",
     "instructions": "Shake out one wrist at a time softly while keeping a neutral rein with the other hand.\nSwitch sides.\nReturn to the reins with softened fingers.",
     "duration_minutes": 1,
@@ -1187,7 +1187,7 @@
   {
     "id": "adad247e-9774-4249-8970-252150e2e5a8",
     "name": "Mirror Neuron Relaxation",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Uses calm visual focus to encourage the rider's body to soften through mirror-neuron pathways.",
     "instructions": "Focus on something calm and steady in the environment (tree, wall, horizon).\nLet your body mimic the stillness you are observing.\nRide slowly while maintaining this soft gaze.",
     "duration_minutes": 3,
@@ -1223,7 +1223,7 @@
   {
     "id": "d0178db0-daa3-43bf-ab0d-7f3a3491d46c",
     "name": "Micro-Movement Spine Wave",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Small spinal undulation to release rigidity and improve harmony with horse movement.",
     "instructions": "Gently create a wave-like motion up your spine, matching your horse's movement.\nKeep the wave subtle and fluid.\nRepeat for one long side of the arena.",
     "duration_minutes": 3,
@@ -1256,7 +1256,7 @@
   {
     "id": "d2ac1907-b934-42c9-914c-d353e38000fb",
     "name": "Neck Softening Within Safety",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Releases neck tension without compromising stability or balance.",
     "instructions": "Gently turn your head left and right within a safe range.\nDrop your chin slightly, softening the back of your neck.\nKeep shoulders soft while doing this.",
     "duration_minutes": 2,
@@ -1291,7 +1291,7 @@
   {
     "id": "8c468d3b-a24a-403f-ad27-9a58336e8649",
     "name": "Glute Release to Seat Deepening",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Releases glutes to improve seat depth and reduce bouncing or gripping.",
     "instructions": "Notice if your glutes feel tight or clenched.\nOn each exhale, allow them to relax downward.\nObserve how your horse's back responds to a deeper seat.",
     "duration_minutes": 3,
@@ -1326,7 +1326,7 @@
   {
     "id": "34538057-4f7d-4095-9f3e-7efbd5ac879b",
     "name": "Somatic Sigh Release",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Uses a gentle sigh to discharge upper-body tension.",
     "instructions": "Take a soft inhale through your nose.\nExhale with a gentle sigh through your mouth.\nRepeat 3\u20134 times without collapsing your posture.",
     "duration_minutes": 2,
@@ -1360,7 +1360,7 @@
   {
     "id": "350a0572-4fb6-48a5-ad00-45009d4b3bb6",
     "name": "Hand Open\u2013Close Release",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Opens and closes fingers gently to release hand bracing and rein tension.",
     "instructions": "Open your fingers wide for a moment without losing rein feel.\nClose gently, then reopen softly.\nRepeat several times while keeping wrists relaxed.",
     "duration_minutes": 1,
@@ -1395,7 +1395,7 @@
   {
     "id": "bc52a830-b7a3-4f8c-86eb-faef0c777278",
     "name": "Thigh Softening Scan",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Releases gripping in the thighs to increase horse-rider harmony.",
     "instructions": "Scan through both thighs to identify gripping or tension.\nRelease each thigh by 5\u201310% on every exhale.\nNotice how your horse's back and stride respond.",
     "duration_minutes": 3,
@@ -1431,7 +1431,7 @@
   {
     "id": "9467d631-ede0-4f7f-a831-566eedb514bb",
     "name": "Lower Back Melt",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Relaxes the lower back to reduce bracing and improve balance.",
     "instructions": "Imagine your lower back melting downward like warm wax.\nAllow the movement of your horse to gently mobilize your spine.\nMaintain softness for several breaths.",
     "duration_minutes": 3,
@@ -1467,7 +1467,7 @@
   {
     "id": "5c7a685a-690e-430d-bdc6-3e0d2cc52dca",
     "name": "Internal Temperature Check",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Enhances interoception by noticing internal sensations of warmth, coolness, or temperature shifts.",
     "instructions": "Notice internal sensations such as warmth in your chest or coolness in your hands.\nName each sensation without judging it.\nRide one lap while maintaining internal awareness.",
     "duration_minutes": 3,
@@ -1502,7 +1502,7 @@
   {
     "id": "9d9b4c19-d2d0-4438-b1ca-34a560af2334",
     "name": "Heartbeat Awareness",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Builds interoceptive awareness by noticing the pulse or heartbeat while riding.",
     "instructions": "Bring your attention to your heartbeat or pulse sensations.\nNotice if the rhythm changes as you breathe and ride.\nPair heartbeat awareness with slow exhales.",
     "duration_minutes": 3,
@@ -1535,7 +1535,7 @@
   {
     "id": "1a475168-e5ec-4d27-8878-4170941381b2",
     "name": "Internal Energy Direction Downward",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Directs internal energy downward through the seat to create stability and security.",
     "instructions": "Imagine energy flowing downward from your chest through your seat.\nLet gravity assist the downward flow until your seat deepens.\nStay connected with slow breathing.",
     "duration_minutes": 3,
@@ -1569,7 +1569,7 @@
   {
     "id": "1407f987-c776-405f-927f-3a9794e54c96",
     "name": "Breath-to-Tension Mapping",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Maps where breath flows and where it does not, revealing areas of hidden tension.",
     "instructions": "Notice which parts of your body move with your breath.\nNotice which parts feel still or blocked.\nDirect breath gently toward blocked areas without forcing.",
     "duration_minutes": 4,
@@ -1602,7 +1602,7 @@
   {
     "id": "e3a41b6e-374d-48c7-ae25-41575470f56d",
     "name": "Sensation Naming (Tight, Warm, Buzzing)",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Names sensations to reduce emotional overwhelm and increase regulation.",
     "instructions": "Notice a sensation such as tightness, warmth, or buzzing.\nName it simply without judgment.\nStay with the sensation for one breath before shifting focus.",
     "duration_minutes": 3,
@@ -1634,7 +1634,7 @@
   {
     "id": "73c204e3-35cb-4d02-9315-4e918c35e214",
     "name": "Expand vs Contract Body Check",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Identifies whether the body is bracing (contracted) or softening (expanded).",
     "instructions": "Ask yourself: \"Is my body expanding or contracting right now?\"\nIf contracting, soften one small area such as your jaw or ribs.\nRide one long side noticing the shift.",
     "duration_minutes": 3,
@@ -1668,7 +1668,7 @@
   {
     "id": "b640ecf0-20b8-43ce-97c2-d29bc2e7a07c",
     "name": "Somatic Allowing Practice",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Encourages the body to allow sensations without resisting them, reducing fight-or-flight escalation.",
     "instructions": "Notice a sensation or emotion arising in your body.\nSay internally: \"I can allow this sensation to be here.\"\nBreathe slowly and observe how the sensation shifts.",
     "duration_minutes": 4,
@@ -1701,7 +1701,7 @@
   {
     "id": "dba648df-3918-4f6e-a07a-46ef575b3f36",
     "name": "Micro-Postural Adjustments",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Uses tiny alignment shifts to break out of rigid posture cycles.",
     "instructions": "Shift your posture by just 2\u20135%: soften your shoulders, lengthen your spine, or adjust your pelvis.\nKeep the adjustments tiny to stay balanced.\nRepeat small resets every few strides.",
     "duration_minutes": 3,
@@ -1736,7 +1736,7 @@
   {
     "id": "498ce8e8-7695-4ace-9514-2e6148e80d00",
     "name": "Five Percent Softer Rule",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Asks the rider to soften their body by only 5%, preserving stability while reducing tension.",
     "instructions": "Choose one body area (jaw, shoulders, hands, thighs).\nSoften that area by just 5%, not more.\nRide one lap and observe changes in your horse.",
     "duration_minutes": 3,
@@ -1772,7 +1772,7 @@
   {
     "id": "921a67a9-49a8-4b30-8b58-fdd117e5aefe",
     "name": "Pressure Mapping Grip Awareness",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Raises awareness of where the rider is gripping unnecessarily.",
     "instructions": "Scan your body for any gripping: thighs, glutes, hands, arms.\nRelease one gripping area by a small amount.\nRepeat for each area as needed.",
     "duration_minutes": 3,
@@ -1807,7 +1807,7 @@
   {
     "id": "95401c24-9498-4c53-9805-89368c15105c",
     "name": "Synchronize with Horse Swing",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Enhances rider-horse harmony by matching the swing of the horse's rib cage and back.",
     "instructions": "Feel your horse's ribcage swing left and right under your seat.\nAllow your hips and lower back to follow the movement.\nStay soft and rhythmically connected for one arena lap.",
     "duration_minutes": 3,
@@ -1842,7 +1842,7 @@
   {
     "id": "8e7c5a03-5bca-4716-98df-d3c7bfc69652",
     "name": "Seat Rhythm Calibration",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Improves seat timing and balance by calibrating movement against the horse's gait rhythm.",
     "instructions": "Sit quietly at the walk and tune into the rhythm of the gait.\nMatch your seat movement precisely with each step.\nNotice increased stability and relaxation.",
     "duration_minutes": 3,
@@ -1875,7 +1875,7 @@
   {
     "id": "b85a3c5b-111b-4900-8211-39613b2b5734",
     "name": "Somatic Mirroring Exercise",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Encourages the rider to mirror the horse's relaxation patterns to create mutual regulation.",
     "instructions": "Observe your horse's breathing, rhythm, and posture.\nMirror any softening or relaxing gesture your horse shows.\nAllow mutual regulation to develop between you.",
     "duration_minutes": 3,
@@ -1909,7 +1909,7 @@
   {
     "id": "df939cc3-1c7f-4797-b0c5-140b5ce00867",
     "name": "Feel Horse Back Movement",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Trains the rider to sense the vertical and lateral movement of the horse's back.",
     "instructions": "Focus on how your horse's back lifts and swings under you.\nFollow the movement without bracing or forcing.\nNotice any areas where your body stiffens and soften them.",
     "duration_minutes": 3,
@@ -1942,7 +1942,7 @@
   {
     "id": "3ed17ca0-3bd0-4d71-bc83-2f07e5c0f973",
     "name": "Co-Release Rider Exhale \u2192 Horse Softens",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Uses the rider's exhale as a cue for the horse to soften or release tension.",
     "instructions": "On each slow exhale, soften your entire torso.\nNotice if your horse drops its head, blows out, or relaxes.\nContinue pattern for one arena lap.",
     "duration_minutes": 3,
@@ -1976,7 +1976,7 @@
   {
     "id": "68d9d624-4f94-4b90-a923-9ddc4617b931",
     "name": "Heavy Seat Bones Grounder",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Helps the rider deepen into the saddle for stability and calm.",
     "instructions": "Imagine your seat bones dropping heavily into the saddle.\nAllow gravity to create stable contact.\nMaintain soft legs while doing so.",
     "duration_minutes": 3,
@@ -2012,7 +2012,7 @@
   {
     "id": "3c7bf9a7-0e7f-4386-ab17-0babbdd796dc",
     "name": "Breath and Seat Integration",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Coordinates breath with seat movement to enhance unity with the horse.",
     "instructions": "On each inhale, feel your pelvis rise with your horse's movement.\nOn each exhale, allow your seat to deepen.\nMaintain integration for several cycles.",
     "duration_minutes": 3,
@@ -2046,7 +2046,7 @@
   {
     "id": "f690655e-c015-41ac-ae5b-ddf52266a1d7",
     "name": "Aid from Soft Body, Not Tension",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Redirects effort from braced muscles into soft, effective rider aids.",
     "instructions": "Before giving an aid, soften your torso and release gripping.\nGive the aid from softness rather than force.\nNotice your horse's acceptance of the aid.",
     "duration_minutes": 3,
@@ -2080,7 +2080,7 @@
   {
     "id": "093d34d4-f8a0-4824-bd41-1a200cf3e15f",
     "name": "Pelvis\u2013Hip\u2013Knee Line Releasing",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Releases the pelvis-hip-knee line to improve suppleness and reduce gripping.",
     "instructions": "Notice the line from your pelvis to your knee on each side.\nSoften or lengthen through the line on the exhale.\nSwitch sides and maintain symmetry.",
     "duration_minutes": 4,
@@ -2116,7 +2116,7 @@
   {
     "id": "47c273c1-96a3-40f7-9cc9-93bccb608bce",
     "name": "Soft Spine Visualization",
-    "category": "Somatic Reset",
+    "category": "BODY RESET",
     "description": "Encourages a flexible, responsive spine to reduce bracing.",
     "instructions": "Visualize your spine as a flexible chain rather than a stiff rod.\nLet it respond fluidly to your horse's movement.\nHold softness for one arena long side.",
     "duration_minutes": 3,
