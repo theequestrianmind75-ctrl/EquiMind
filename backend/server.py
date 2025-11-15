@@ -319,7 +319,7 @@ async def bulk_update_strategies(
 class AdminAuth(BaseModel):
     password: str
 
-ADMIN_PASSWORD = "equimind2025"
+ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD', 'equimind2025')
 
 @api_router.post("/admin/mental-strategies")
 async def get_admin_mental_strategies(auth: AdminAuth):
