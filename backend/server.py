@@ -314,6 +314,69 @@ async def bulk_update_strategies(
     
     return {"updated": updated_count, "total": len(updates)}
 
+# ==================== ADMIN ROUTES (NO JWT REQUIRED) ====================
+
+class AdminAuth(BaseModel):
+    password: str
+
+ADMIN_PASSWORD = "equimind2025"
+
+@api_router.post("/admin/mental-strategies")
+async def get_admin_mental_strategies(auth: AdminAuth):
+    """Get all mental strategies for admin text editor - password protected"""
+    if auth.password != ADMIN_PASSWORD:
+        raise HTTPException(status_code=401, detail="Invalid admin password")
+    
+    strategies = await db.mental_strategies.find({}).to_list(1000)
+    
+    # Remove MongoDB _id field
+    for s in strategies:
+        if '_id' in s:
+            del s['_id']
+    
+    return strategies
+
+@api_router.post("/admin/bulk-update")
+async def admin_bulk_update_strategies(
+    request: dict
+):
+    """Bulk update strategies for admin - password protected"""
+    password = request.get("password")
+    if password != ADMIN_PASSWORD:
+        raise HTTPException(status_code=401, detail="Invalid admin password")
+    
+    updates = request.get("updates", [])
+    updated_count = 0
+    
+    for update in updates:
+        strategy_id = update.get("id")
+        if not strategy_id:
+            continue
+            
+        strategy = await db.mental_strategies.find_one({"id": strategy_id})
+        if not strategy:
+            continue
+        
+        # Build update dict
+        update_dict = {}
+        if "instructions" in update:
+            update_dict["instructions"] = update["instructions"]
+        if "name" in update:
+            update_dict["name"] = update["name"]
+        if "category" in update:
+            update_dict["category"] = update["category"]
+        if "duration_minutes" in update:
+            update_dict["duration_minutes"] = update["duration_minutes"]
+        
+        if update_dict:
+            await db.mental_strategies.update_one(
+                {"id": strategy_id},
+                {"$set": update_dict}
+            )
+            updated_count += 1
+    
+    return {"updated": updated_count, "total": len(updates)}
+
 # ==================== SESSION ROUTES ====================
 
 @api_router.post("/sessions", response_model=Session)
