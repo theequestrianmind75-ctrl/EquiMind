@@ -63,7 +63,6 @@ export default function CategoryDetail() {
   const { id } = useLocalSearchParams();
   const [strategies, setStrategies] = useState<Strategy[]>([]);
   const [loading, setLoading] = useState(true);
-  const [playingId, setPlayingId] = useState<string | null>(null);
   const [editMode, setEditMode] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editedStrategy, setEditedStrategy] = useState<Strategy | null>(null);
