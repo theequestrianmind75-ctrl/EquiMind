@@ -346,24 +346,31 @@ async def admin_bulk_update_strategies(
         raise HTTPException(status_code=401, detail="Invalid admin password")
     
     updates = request.get("updates", [])
+    logger.info(f"📝 Bulk update request: {len(updates)} tools to update")
+    
     updated_count = 0
+    skipped_count = 0
     
     for update in updates:
         strategy_id = update.get("id")
         if not strategy_id:
+            logger.warning(f"⚠️  Skipping update - no ID provided")
+            skipped_count += 1
             continue
             
         strategy = await db.mental_strategies.find_one({"id": strategy_id})
         if not strategy:
+            logger.warning(f"⚠️  Strategy not found: {strategy_id}")
+            skipped_count += 1
             continue
         
-        # Build update dict
+        # Build update dict - only update if value is provided and not empty
         update_dict = {}
-        if "instructions" in update:
+        if "instructions" in update and update["instructions"]:
             update_dict["instructions"] = update["instructions"]
-        if "name" in update:
+        if "name" in update and update["name"]:
             update_dict["name"] = update["name"]
-        if "category" in update:
+        if "category" in update and update["category"]:
             update_dict["category"] = update["category"]
         if "duration_minutes" in update:
             update_dict["duration_minutes"] = update["duration_minutes"]
@@ -374,8 +381,12 @@ async def admin_bulk_update_strategies(
                 {"$set": update_dict}
             )
             updated_count += 1
+        else:
+            logger.warning(f"⚠️  No valid fields to update for tool: {strategy.get('name')}")
+            skipped_count += 1
     
-    return {"updated": updated_count, "total": len(updates)}
+    logger.info(f"✅ Bulk update complete: {updated_count} updated, {skipped_count} skipped")
+    return {"updated": updated_count, "total": len(updates), "skipped": skipped_count}
 
 # ==================== SESSION ROUTES ====================
 
