@@ -14,8 +14,8 @@ local_db_name = 'test_database'
 
 # Production MongoDB Atlas connection
 # URL encode special characters in username and password
-prod_username = quote_plus('theequestrianmind75@gmail.com')
-prod_password = quote_plus('Jumpers75!')
+prod_username = quote_plus('equimind_admin')
+prod_password = quote_plus('SecurePass2024!')
 prod_mongo_url = f'mongodb+srv://{prod_username}:{prod_password}@cluster0.wzahss.mongodb.net/?appName=Cluster0'
 prod_db_name = 'equimind_production'
 
