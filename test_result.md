@@ -267,3 +267,5 @@ agent_communication:
       message: "EquiMind mobile app MVP completed. Backend has authentication, strategies API, and session management. Frontend has all screens including auth, strategies library, pre/during/post-ride screens with TTS coaching, and session history. Ready for testing."
     - agent: "testing"
       message: "Backend testing completed successfully. All 16 tests passed (6 authentication, 4 mental strategies, 6 session management). Verified: JWT authentication with proper error handling, 144 mental strategies with filtering, full CRUD operations for sessions. Backend is production-ready. Frontend testing skipped as per system limitations (mobile app requires device/emulator)."
+    - agent: "main"
+      message: "Data unification complete. Created database backup, fixed 'Body Reset' category bug (was showing as 'Somatic' with no tools), processed 2 remaining Word documents (Breathing HRV + Body reset), and merged 30 new tools into database. Database now has 136 total tools: BODY RESET (59), Breathing/HRV (19), Mindfulness & Flow (10), Tapping/EFT (48). Body category now displays correctly in frontend with all 59 tools visible."
