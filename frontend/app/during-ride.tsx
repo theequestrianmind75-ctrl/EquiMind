@@ -99,9 +99,10 @@ export default function DuringRide() {
     setIsSpeaking(true);
 
     Speech.speak(audioScript, {
-      language: 'en',
-      pitch: 1.0,
-      rate: 0.9,
+      language: 'en-US',
+      pitch: 1.1,
+      rate: 0.85,
+      voice: 'com.apple.ttsbundle.Samantha-compact', // More natural iOS voice
       onDone: () => setIsSpeaking(false),
       onError: () => {
         setIsSpeaking(false);
