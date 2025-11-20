@@ -181,7 +181,7 @@ export default function PostRide() {
               </View>
 
               <View style={styles.divider} />
-              <Text style={styles.sectionHeader}>RIDER</Text>
+              <Text style={styles.sectionHeader}>{selectedSession.rider_name ? selectedSession.rider_name.toUpperCase() : 'RIDER'}</Text>
 
               <View style={styles.section}>
                 <Text style={styles.sectionTitle}>Anxiety Level: {anxietyLevel}/10</Text>
