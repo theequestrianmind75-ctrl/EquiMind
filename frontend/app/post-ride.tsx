@@ -77,6 +77,9 @@ export default function PostRide() {
       await api.patch(`/sessions/${selectedSession.id}`, {
         anxiety_level: anxietyLevel,
         confidence_level: confidenceLevel,
+        horse_energy_level: horseEnergyLevel,
+        horse_focus_level: horseFocusLevel,
+        horse_responsiveness: horseResponsiveness,
         notes: notes || null,
         completed: true,
       });
