@@ -109,6 +109,9 @@ export default function PreRide() {
             </View>
           </View>
 
+          <View style={styles.divider} />
+          <Text style={styles.sectionHeader}>{riderName ? riderName.toUpperCase() : 'RIDER'}</Text>
+
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Rider Name (Optional)</Text>
             <TextInput
