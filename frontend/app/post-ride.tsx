@@ -179,45 +179,11 @@ export default function PostRide() {
                 </View>
               </View>
 
-              {(selectedSession.horse_energy_level || selectedSession.horse_focus_level || selectedSession.horse_responsiveness) && (
-                <View style={styles.horseCard}>
-                  <View style={styles.horseHeader}>
-                    <Ionicons name="shield" size={24} color="#000000" />
-                    <Text style={styles.horseTitle}>
-                      {selectedSession.horse_name ? selectedSession.horse_name.toUpperCase() : 'YOUR HORSE'}
-                    </Text>
-                  </View>
-                  <View style={styles.horseStats}>
-                    <View style={styles.horseStat}>
-                      <Text style={styles.horseStatLabel}>Energy</Text>
-                      <Text style={styles.horseStatValue}>
-                        {selectedSession.horse_energy_level || 'N/A'} - {getEnergyLabel(selectedSession.horse_energy_level)}
-                      </Text>
-                    </View>
-                    <View style={styles.horseStat}>
-                      <Text style={styles.horseStatLabel}>Focus</Text>
-                      <Text style={styles.horseStatValue}>
-                        {selectedSession.horse_focus_level || 'N/A'} - {getFocusLabel(selectedSession.horse_focus_level)}
-                      </Text>
-                    </View>
-                    <View style={styles.horseStat}>
-                      <Text style={styles.horseStatLabel}>Responsiveness</Text>
-                      <Text style={styles.horseStatValue}>
-                        {selectedSession.horse_responsiveness || 'N/A'} - {getResponsivenessLabel(selectedSession.horse_responsiveness)}
-                      </Text>
-                    </View>
-                  </View>
-                  {selectedSession.horse_notes && (
-                    <View style={styles.horseNotes}>
-                      <Text style={styles.horseNotesLabel}>Pre-Ride Horse Notes:</Text>
-                      <Text style={styles.horseNotesText}>{selectedSession.horse_notes}</Text>
-                    </View>
-                  )}
-                </View>
-              )}
+              <View style={styles.divider} />
+              <Text style={styles.sectionHeader}>RIDER</Text>
 
               <View style={styles.section}>
-                <Text style={styles.sectionTitle}>Post-Ride Anxiety Level: {anxietyLevel}/10</Text>
+                <Text style={styles.sectionTitle}>Anxiety Level: {anxietyLevel}/10</Text>
                 <View style={styles.sliderContainer}>
                   <View style={styles.scaleButtons}>
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => (
