@@ -443,10 +443,7 @@ export default function PostRide() {
               </View>
 
               <View style={styles.recommendationsCard}>
-                <View style={styles.recommendationsHeader}>
-                  <Ionicons name="bulb" size={24} color="#f59e0b" />
-                  <Text style={styles.recommendationsTitle}>Personalized Recommendations</Text>
-                </View>
+                <Text style={styles.recommendationsTitle}>Personalized Recommendations</Text>
                 <Text style={styles.recommendationsSubtitle}>
                   Evidence-based strategies from sports performance research
                 </Text>
