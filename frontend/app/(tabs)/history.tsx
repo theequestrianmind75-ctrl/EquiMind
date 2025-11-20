@@ -187,6 +187,8 @@ export default function History() {
                 </TouchableOpacity>
               )}
             </View>
+          )))}
+            </View>
           ))}
         </ScrollView>
       )}
