@@ -524,6 +524,18 @@ const styles = StyleSheet.create({
     color: '#475569',
     lineHeight: 18,
   },
+  divider: {
+    height: 1,
+    backgroundColor: '#334155',
+    marginVertical: 32,
+  },
+  sectionHeader: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#000000',
+    marginBottom: 24,
+    textAlign: 'center',
+  },
   section: {
     marginBottom: 32,
   },
