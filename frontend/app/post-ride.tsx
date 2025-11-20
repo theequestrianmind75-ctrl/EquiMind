@@ -437,7 +437,7 @@ export default function PostRide() {
                 {loadingRecommendations ? (
                   <View style={styles.recommendationItem}>
                     <ActivityIndicator size="small" color="#f59e0b" />
-                    <Text style={styles.recommendationText}>Loading personalized recommendations...</Text>
+                    <Text style={styles.recommendationText}>Loading recommendations...</Text>
                   </View>
                 ) : (
                   recommendations.map((rec, index) => (
