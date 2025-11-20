@@ -279,7 +279,7 @@ export default function PostRide() {
               </View>
 
               <View style={styles.section}>
-                <Text style={styles.sectionTitle}>Horse Focus Level: {horseFocusLevel}/10</Text>
+                <Text style={styles.sectionTitle}>Focus Level: {horseFocusLevel}/10</Text>
                 <View style={styles.sliderContainer}>
                   <View style={styles.scaleButtons}>
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => (
@@ -310,7 +310,7 @@ export default function PostRide() {
               </View>
 
               <View style={styles.section}>
-                <Text style={styles.sectionTitle}>Horse Responsiveness: {horseResponsiveness}/10</Text>
+                <Text style={styles.sectionTitle}>Responsiveness: {horseResponsiveness}/10</Text>
                 <View style={styles.sliderContainer}>
                   <View style={styles.scaleButtons}>
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => (
