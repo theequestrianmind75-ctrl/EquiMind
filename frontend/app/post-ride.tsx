@@ -22,6 +22,7 @@ interface Session {
   ride_type: string;
   anxiety_level: number | null;
   confidence_level: number | null;
+  horse_name: string | null;
   horse_energy_level: number | null;
   horse_focus_level: number | null;
   horse_responsiveness: number | null;
