@@ -95,12 +95,29 @@ export default function PostRide() {
       // Sort by priority and take top 4
       const topRecs = matchedRecs
         .sort((a: any, b: any) => b.priority - a.priority)
-        .slice(0, 4)
-        .map((rec: any) => rec.text);
+        .slice(0, 4);
       
       setRecommendations(topRecs.length > 0 ? topRecs : [
-        "💭 Great job completing your session! Review the Rider Tools library for techniques that match your specific goals."
+        { text: "💭 Great job completing your session! Review the Rider Tools library for techniques that match your specific goals.", suggested_tool_names: [] }
       ]);
+      
+      // Collect all suggested tool names from recommendations
+      const allToolNames = new Set<string>();
+      topRecs.forEach((rec: any) => {
+        if (rec.suggested_tool_names) {
+          rec.suggested_tool_names.forEach((name: string) => allToolNames.add(name));
+        }
+      });
+      
+      // Fetch the actual tools from the database
+      if (allToolNames.size > 0) {
+        const toolsResponse = await api.get('/mental-strategies');
+        const allTools = toolsResponse.data;
+        const matchedTools = allTools.filter((tool: any) => 
+          allToolNames.has(tool.name)
+        ).slice(0, 3); // Show max 3 tools
+        setRecommendedTools(matchedTools);
+      }
     } catch (error) {
       console.error('Error loading recommendations:', error);
       setRecommendations([
