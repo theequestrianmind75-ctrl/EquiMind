@@ -44,7 +44,8 @@ export default function PostRide() {
   const [horseEnergyLevel, setHorseEnergyLevel] = useState(5);
   const [horseFocusLevel, setHorseFocusLevel] = useState(5);
   const [horseResponsiveness, setHorseResponsiveness] = useState(5);
-  const [recommendations, setRecommendations] = useState<string[]>([]);
+  const [recommendations, setRecommendations] = useState<any[]>([]);
+  const [recommendedTools, setRecommendedTools] = useState<any[]>([]);
   const [loadingRecommendations, setLoadingRecommendations] = useState(true);
 
   const determineTriggersAndLoadRecommendations = async () => {
