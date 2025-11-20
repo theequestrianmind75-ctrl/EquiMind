@@ -38,7 +38,7 @@ export default function History() {
 
   const fetchSessions = async () => {
     try {
-      const response = await api.get('/sessions?limit=50');
+      const response = await api.get('/sessions?limit=100');
       setSessions(response.data);
     } catch (error) {
       console.error('Error fetching sessions:', error);
@@ -46,6 +46,22 @@ export default function History() {
       setLoading(false);
       setRefreshing(false);
     }
+  };
+
+  const groupSessionsByMonth = () => {
+    const grouped: { [key: string]: Session[] } = {};
+    
+    sessions.forEach((session) => {
+      const date = new Date(session.created_at);
+      const monthKey = format(date, 'MMMM yyyy'); // e.g., "November 2024"
+      
+      if (!grouped[monthKey]) {
+        grouped[monthKey] = [];
+      }
+      grouped[monthKey].push(session);
+    });
+    
+    return grouped;
   };
 
   const onRefresh = () => {
