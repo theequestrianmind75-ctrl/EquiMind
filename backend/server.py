@@ -497,6 +497,89 @@ async def delete_session(session_id: str, current_user: dict = Depends(get_curre
         raise HTTPException(status_code=404, detail="Session not found")
     return {"message": "Session deleted successfully"}
 
+# ==================== RECOMMENDATIONS ENDPOINTS ====================
+
+@api_router.get("/recommendations", response_model=List[Recommendation])
+async def get_recommendations():
+    """Get all active recommendations"""
+    recommendations = await db.recommendations.find({"active": True}).sort("priority", -1).to_list(length=100)
+    return [
+        Recommendation(
+            id=str(rec["_id"]),
+            text=rec["text"],
+            trigger_condition=rec["trigger_condition"],
+            priority=rec["priority"],
+            active=rec["active"],
+            created_at=rec.get("created_at", datetime.utcnow())
+        )
+        for rec in recommendations
+    ]
+
+@api_router.get("/admin/recommendations", response_model=List[Recommendation])
+async def get_all_recommendations_admin():
+    """Get all recommendations (including inactive) - Admin only"""
+    recommendations = await db.recommendations.find({}).sort("priority", -1).to_list(length=1000)
+    return [
+        Recommendation(
+            id=str(rec["_id"]),
+            text=rec["text"],
+            trigger_condition=rec["trigger_condition"],
+            priority=rec["priority"],
+            active=rec["active"],
+            created_at=rec.get("created_at", datetime.utcnow())
+        )
+        for rec in recommendations
+    ]
+
+@api_router.post("/admin/recommendations", response_model=Recommendation)
+async def create_recommendation(rec_data: RecommendationCreate):
+    """Create new recommendation - Admin only"""
+    rec_id = str(uuid.uuid4())
+    rec_dict = {
+        "_id": rec_id,
+        "id": rec_id,
+        "text": rec_data.text,
+        "trigger_condition": rec_data.trigger_condition,
+        "priority": rec_data.priority,
+        "active": rec_data.active,
+        "created_at": datetime.utcnow()
+    }
+    await db.recommendations.insert_one(rec_dict)
+    return Recommendation(**rec_dict)
+
+@api_router.patch("/admin/recommendations/{rec_id}", response_model=Recommendation)
+async def update_recommendation(rec_id: str, rec_update: RecommendationUpdate):
+    """Update recommendation - Admin only"""
+    update_data = {k: v for k, v in rec_update.dict().items() if v is not None}
+    if not update_data:
+        raise HTTPException(status_code=400, detail="No update data provided")
+    
+    result = await db.recommendations.update_one(
+        {"id": rec_id},
+        {"$set": update_data}
+    )
+    
+    if result.matched_count == 0:
+        raise HTTPException(status_code=404, detail="Recommendation not found")
+    
+    updated_rec = await db.recommendations.find_one({"id": rec_id})
+    return Recommendation(
+        id=str(updated_rec["_id"]),
+        text=updated_rec["text"],
+        trigger_condition=updated_rec["trigger_condition"],
+        priority=updated_rec["priority"],
+        active=updated_rec["active"],
+        created_at=updated_rec.get("created_at", datetime.utcnow())
+    )
+
+@api_router.delete("/admin/recommendations/{rec_id}")
+async def delete_recommendation(rec_id: str):
+    """Delete recommendation - Admin only"""
+    result = await db.recommendations.delete_one({"id": rec_id})
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Recommendation not found")
+    return {"message": "Recommendation deleted successfully"}
+
 # ==================== EXPORT ROUTE ====================
 
 @app.get("/export/tools")
