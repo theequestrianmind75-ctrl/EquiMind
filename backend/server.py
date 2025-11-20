@@ -129,6 +129,26 @@ class StrategyUpdate(BaseModel):
     anxiety_level: Optional[List[int]] = None
     confidence_level: Optional[List[int]] = None
 
+class RecommendationCreate(BaseModel):
+    text: str  # The recommendation text
+    trigger_condition: str  # e.g., "high_anxiety", "low_confidence", "anxiety_increased"
+    priority: int = 1  # Higher priority shows first
+    active: bool = True
+
+class RecommendationUpdate(BaseModel):
+    text: Optional[str] = None
+    trigger_condition: Optional[str] = None
+    priority: Optional[int] = None
+    active: Optional[bool] = None
+
+class Recommendation(BaseModel):
+    id: str
+    text: str
+    trigger_condition: str
+    priority: int
+    active: bool
+    created_at: datetime
+
 # ==================== AUTH HELPERS ====================
 
 def hash_password(password: str) -> str:
