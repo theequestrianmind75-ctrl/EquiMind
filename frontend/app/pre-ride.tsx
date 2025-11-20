@@ -44,6 +44,7 @@ export default function PreRide() {
       await api.post('/sessions', {
         session_type: 'pre-ride',
         ride_type: rideType,
+        rider_name: riderName || null,
         anxiety_level: anxietyLevel,
         confidence_level: confidenceLevel,
         notes: notes || null,
