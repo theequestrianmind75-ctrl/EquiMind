@@ -558,6 +558,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#375B50',
   },
+  sessionLogo: {
+    width: 28,
+    height: 28,
+    resizeMode: 'contain',
+  },
   sessionInfoText: {
     marginLeft: 12,
     flex: 1,
