@@ -92,6 +92,7 @@ class SessionUpdate(BaseModel):
     strategies_used: Optional[List[str]] = None
     completed: Optional[bool] = None
     # Horse information updates
+    horse_name: Optional[str] = None
     horse_energy_level: Optional[int] = None
     horse_focus_level: Optional[int] = None
     horse_responsiveness: Optional[int] = None
