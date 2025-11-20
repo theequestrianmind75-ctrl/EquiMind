@@ -247,6 +247,16 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 24,
   },
+  monthHeader: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#1e293b',
+    marginTop: 24,
+    marginBottom: 12,
+    paddingBottom: 8,
+    borderBottomWidth: 2,
+    borderBottomColor: '#375B50',
+  },
   sessionCard: {
     backgroundColor: '#ffffff',
     padding: 16,
