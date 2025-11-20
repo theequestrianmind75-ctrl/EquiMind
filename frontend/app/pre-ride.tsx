@@ -110,6 +110,17 @@ export default function PreRide() {
           </View>
 
           <View style={styles.section}>
+            <Text style={styles.sectionTitle}>Rider Name (Optional)</Text>
+            <TextInput
+              style={styles.horseNameInput}
+              placeholder="Enter your name..."
+              placeholderTextColor="#64748b"
+              value={riderName}
+              onChangeText={setRiderName}
+            />
+          </View>
+
+          <View style={styles.section}>
             <Text style={styles.sectionTitle}>Anxiety Level: {anxietyLevel}/10</Text>
             <View style={styles.sliderContainer}>
               <View style={styles.scaleButtons}>
