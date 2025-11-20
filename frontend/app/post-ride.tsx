@@ -171,7 +171,10 @@ export default function PostRide() {
           ) : (
             <>
               <View style={styles.sessionInfo}>
-                <Ionicons name="shield" size={24} color="#000000" />
+                <Image 
+                  source={require('../../assets/images/horse-head-logo.png')} 
+                  style={styles.sessionLogo}
+                />
                 <View style={styles.sessionInfoText}>
                   <Text style={styles.sessionInfoTitle}>Current Session</Text>
                   <Text style={styles.sessionInfoSubtitle}>
