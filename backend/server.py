@@ -513,6 +513,7 @@ async def get_recommendations():
             trigger_condition=rec["trigger_condition"],
             priority=rec["priority"],
             active=rec["active"],
+            suggested_tool_names=rec.get("suggested_tool_names", []),
             created_at=rec.get("created_at", datetime.utcnow())
         )
         for rec in recommendations
