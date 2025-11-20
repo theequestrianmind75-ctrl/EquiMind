@@ -87,6 +87,7 @@ class SessionCreate(BaseModel):
     horse_notes: Optional[str] = None
 
 class SessionUpdate(BaseModel):
+    rider_name: Optional[str] = None
     anxiety_level: Optional[int] = None
     confidence_level: Optional[int] = None
     notes: Optional[str] = None
