@@ -727,16 +727,11 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#f59e0b',
   },
-  recommendationsHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 8,
-  },
   recommendationsTitle: {
     fontSize: 18,
     fontWeight: 'bold',
     color: '#000000',
-    marginLeft: 12,
+    marginBottom: 8,
   },
   recommendationsSubtitle: {
     fontSize: 13,
