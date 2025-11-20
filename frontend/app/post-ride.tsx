@@ -276,6 +276,99 @@ export default function PostRide() {
               </View>
 
               <View style={styles.section}>
+                <Text style={styles.sectionTitle}>Horse Energy Level: {horseEnergyLevel}/10</Text>
+                <View style={styles.sliderContainer}>
+                  <View style={styles.scaleButtons}>
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => (
+                      <TouchableOpacity
+                        key={level}
+                        style={[
+                          styles.scaleButton,
+                          horseEnergyLevel === level && styles.scaleButtonActive,
+                        ]}
+                        onPress={() => setHorseEnergyLevel(level)}
+                      >
+                        <Text
+                          style={[
+                            styles.scaleButtonText,
+                            horseEnergyLevel === level && styles.scaleButtonTextActive,
+                          ]}
+                        >
+                          {level}
+                        </Text>
+                      </TouchableOpacity>
+                    ))}
+                  </View>
+                  <View style={styles.scaleLabels}>
+                    <Text style={styles.scaleLabel}>Low</Text>
+                    <Text style={styles.scaleLabel}>High</Text>
+                  </View>
+                </View>
+              </View>
+
+              <View style={styles.section}>
+                <Text style={styles.sectionTitle}>Horse Focus Level: {horseFocusLevel}/10</Text>
+                <View style={styles.sliderContainer}>
+                  <View style={styles.scaleButtons}>
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => (
+                      <TouchableOpacity
+                        key={level}
+                        style={[
+                          styles.scaleButton,
+                          horseFocusLevel === level && styles.scaleButtonActive,
+                        ]}
+                        onPress={() => setHorseFocusLevel(level)}
+                      >
+                        <Text
+                          style={[
+                            styles.scaleButtonText,
+                            horseFocusLevel === level && styles.scaleButtonTextActive,
+                          ]}
+                        >
+                          {level}
+                        </Text>
+                      </TouchableOpacity>
+                    ))}
+                  </View>
+                  <View style={styles.scaleLabels}>
+                    <Text style={styles.scaleLabel}>Distracted</Text>
+                    <Text style={styles.scaleLabel}>Focused</Text>
+                  </View>
+                </View>
+              </View>
+
+              <View style={styles.section}>
+                <Text style={styles.sectionTitle}>Horse Responsiveness: {horseResponsiveness}/10</Text>
+                <View style={styles.sliderContainer}>
+                  <View style={styles.scaleButtons}>
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => (
+                      <TouchableOpacity
+                        key={level}
+                        style={[
+                          styles.scaleButton,
+                          horseResponsiveness === level && styles.scaleButtonActive,
+                        ]}
+                        onPress={() => setHorseResponsiveness(level)}
+                      >
+                        <Text
+                          style={[
+                            styles.scaleButtonText,
+                            horseResponsiveness === level && styles.scaleButtonTextActive,
+                          ]}
+                        >
+                          {level}
+                        </Text>
+                      </TouchableOpacity>
+                    ))}
+                  </View>
+                  <View style={styles.scaleLabels}>
+                    <Text style={styles.scaleLabel}>Low</Text>
+                    <Text style={styles.scaleLabel}>High</Text>
+                  </View>
+                </View>
+              </View>
+
+              <View style={styles.section}>
                 <Text style={styles.sectionTitle}>Reflection Notes</Text>
                 <TextInput
                   style={styles.notesInput}
