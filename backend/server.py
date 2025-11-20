@@ -134,12 +134,14 @@ class RecommendationCreate(BaseModel):
     trigger_condition: str  # e.g., "high_anxiety", "low_confidence", "anxiety_increased"
     priority: int = 1  # Higher priority shows first
     active: bool = True
+    suggested_tool_names: Optional[List[str]] = []  # Tool names to suggest
 
 class RecommendationUpdate(BaseModel):
     text: Optional[str] = None
     trigger_condition: Optional[str] = None
     priority: Optional[int] = None
     active: Optional[bool] = None
+    suggested_tool_names: Optional[List[str]] = None
 
 class Recommendation(BaseModel):
     id: str
@@ -147,6 +149,7 @@ class Recommendation(BaseModel):
     trigger_condition: str
     priority: int
     active: bool
+    suggested_tool_names: List[str] = []
     created_at: datetime
 
 # ==================== AUTH HELPERS ====================
