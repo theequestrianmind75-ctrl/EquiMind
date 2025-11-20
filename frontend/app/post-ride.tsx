@@ -434,11 +434,18 @@ export default function PostRide() {
                 <Text style={styles.recommendationsSubtitle}>
                   Evidence-based strategies from sports performance research
                 </Text>
-                {generateRecommendations().map((rec, index) => (
-                  <View key={index} style={styles.recommendationItem}>
-                    <Text style={styles.recommendationText}>{rec}</Text>
+                {loadingRecommendations ? (
+                  <View style={styles.recommendationItem}>
+                    <ActivityIndicator size="small" color="#f59e0b" />
+                    <Text style={styles.recommendationText}>Loading personalized recommendations...</Text>
                   </View>
-                ))}
+                ) : (
+                  recommendations.map((rec, index) => (
+                    <View key={index} style={styles.recommendationItem}>
+                      <Text style={styles.recommendationText}>{rec}</Text>
+                    </View>
+                  ))
+                )}
               </View>
 
               <TouchableOpacity
