@@ -44,6 +44,77 @@ export default function PostRide() {
   const [horseEnergyLevel, setHorseEnergyLevel] = useState(5);
   const [horseFocusLevel, setHorseFocusLevel] = useState(5);
   const [horseResponsiveness, setHorseResponsiveness] = useState(5);
+  const [recommendations, setRecommendations] = useState<string[]>([]);
+  const [loadingRecommendations, setLoadingRecommendations] = useState(true);
+
+  const determineTriggersAndLoadRecommendations = async () => {
+    try {
+      const triggers: string[] = [];
+      
+      // Analyze anxiety patterns
+      const preAnxiety = selectedSession?.anxiety_level || 5;
+      const postAnxiety = anxietyLevel;
+      const anxietyChange = postAnxiety - preAnxiety;
+      
+      // Analyze confidence patterns
+      const preConfidence = selectedSession?.confidence_level || 5;
+      const postConfidence = confidenceLevel;
+      const confidenceChange = postConfidence - preConfidence;
+      
+      // Analyze horse metrics
+      const horseEnergy = horseEnergyLevel;
+      const horseFocus = horseFocusLevel;
+      
+      // Determine which triggers apply
+      if (postAnxiety >= 7) triggers.push('high_anxiety');
+      if (anxietyChange >= 2) triggers.push('anxiety_increased');
+      if (postConfidence <= 4) triggers.push('low_confidence');
+      if (confidenceChange <= -2) triggers.push('confidence_decreased');
+      if (postAnxiety >= 6 && postConfidence <= 4) triggers.push('high_anxiety_low_confidence');
+      if (horseEnergy >= 7 && postConfidence <= 4) triggers.push('high_horse_energy_low_confidence');
+      if (horseFocus <= 4) triggers.push('low_horse_focus');
+      if (postAnxiety <= 3 && postConfidence >= 7) triggers.push('optimal_performance');
+      if (anxietyChange <= -2 && confidenceChange >= 2) triggers.push('good_improvement');
+      if (horseEnergy >= 5 && horseEnergy <= 7 && horseFocus >= 6 && horseResponsiveness >= 6) {
+        triggers.push('optimal_horse_metrics');
+      }
+      
+      // If no triggers, use default
+      if (triggers.length === 0) triggers.push('default');
+      
+      // Fetch recommendations from backend
+      const response = await api.get('/recommendations');
+      const allRecs = response.data;
+      
+      // Filter recommendations that match our triggers
+      const matchedRecs = allRecs.filter((rec: any) => 
+        triggers.includes(rec.trigger_condition)
+      );
+      
+      // Sort by priority and take top 4
+      const topRecs = matchedRecs
+        .sort((a: any, b: any) => b.priority - a.priority)
+        .slice(0, 4)
+        .map((rec: any) => rec.text);
+      
+      setRecommendations(topRecs.length > 0 ? topRecs : [
+        "💭 Great job completing your session! Review the Rider Tools library for techniques that match your specific goals."
+      ]);
+    } catch (error) {
+      console.error('Error loading recommendations:', error);
+      setRecommendations([
+        "💭 Great job completing your session! Review the Rider Tools library for techniques that match your specific goals."
+      ]);
+    } finally {
+      setLoadingRecommendations(false);
+    }
+  };
+
+  useEffect(() => {
+    if (selectedSession) {
+      determineTriggersAndLoadRecommendations();
+    }
+  }, [selectedSession, anxietyLevel, confidenceLevel, horseEnergyLevel, horseFocusLevel, horseResponsiveness]);
 
   useEffect(() => {
     fetchIncompleteSessions();
@@ -109,90 +180,6 @@ export default function PostRide() {
     } catch (error: any) {
       Alert.alert('Error', error.message || 'Failed to create session');
     }
-  };
-
-  const generateRecommendations = () => {
-    const recommendations: string[] = [];
-    
-    // Analyze anxiety patterns
-    const preAnxiety = selectedSession?.anxiety_level || 5;
-    const postAnxiety = anxietyLevel;
-    const anxietyChange = postAnxiety - preAnxiety;
-    
-    // Analyze confidence patterns
-    const preConfidence = selectedSession?.confidence_level || 5;
-    const postConfidence = confidenceLevel;
-    const confidenceChange = postConfidence - preConfidence;
-    
-    // Analyze horse metrics
-    const horseEnergy = horseEnergyLevel;
-    const horseFocus = horseFocusLevel;
-    
-    // High post-ride anxiety (7+)
-    if (postAnxiety >= 7) {
-      recommendations.push("🧘 Try 'Box Breath' or '4:8 Tension Melt Exhale' from BODY RESET before your next ride to regulate your nervous system.");
-      recommendations.push("💡 Consider practicing 'The Safe Seat Reset' during rides when anxiety spikes - it activates your parasympathetic nervous system.");
-    }
-    
-    // Anxiety increased during ride
-    if (anxietyChange >= 2) {
-      recommendations.push("🎯 Your anxiety increased during the ride. Try 'Cognitive Grounding Through Sensory Anchors' (identify 3 things you see, 2 things you feel) to stay present.");
-      recommendations.push("💭 Practice 'Thought Labeling + Releasing' - name the anxious thought and separate from it: 'That's an anxious thought, I don't have to act on it.'");
-    }
-    
-    // Low confidence (≤4)
-    if (postConfidence <= 4) {
-      recommendations.push("💪 Build confidence with 'Micro-Goal Cueing' - set small achievable goals like '5 steady strides' or 'one smooth corner.'");
-      recommendations.push("🌟 Try EFT Tapping sequences specifically for confidence building - research shows tapping reduces cortisol by 24%.");
-    }
-    
-    // Confidence decreased
-    if (confidenceChange <= -2) {
-      recommendations.push("🔄 Your confidence dropped during this ride. This is normal! Review what went well first, then identify one specific skill to practice next time.");
-      recommendations.push("📚 Consider the 'Peripheral Vision Expansion' technique - widening your gaze reduces amygdala activation and improves calm focus.");
-    }
-    
-    // High anxiety + Low confidence combination
-    if (postAnxiety >= 6 && postConfidence <= 4) {
-      recommendations.push("⚠️ High anxiety + low confidence pattern detected. This is a common cycle. Start with 'Breath-Sync Regulation' (3-count inhale, 4-5 count exhale) to interrupt the stress response.");
-      recommendations.push("🐴 Practice 'Co-Regulation' - match your breathing to your horse's rhythm. Research shows horses' calm state can regulate rider's nervous system.");
-    }
-    
-    // High horse energy + low rider confidence
-    if (horseEnergy >= 7 && postConfidence <= 4) {
-      recommendations.push("🐎 Your horse's high energy may be overwhelming your confidence. Practice 'Interoception Check-In' - notice where tension lives in your body and soften by 5%.");
-      recommendations.push("💡 Use 'Dual Awareness' statements: 'My horse has energy AND I can stay grounded.' This DBT technique prevents catastrophic thinking.");
-    }
-    
-    // Low horse focus
-    if (horseFocus <= 4) {
-      recommendations.push("👁️ Your horse's focus was low. Try the 'Micro-Shake Release' for yourself between exercises - releasing your tension helps your horse regulate too.");
-      recommendations.push("🎯 Consider shorter, more varied exercises next session. Horses' attention spans are 10-15 minutes - break training into smaller chunks.");
-    }
-    
-    // Great performance! Anxiety low + confidence high
-    if (postAnxiety <= 3 && postConfidence >= 7) {
-      recommendations.push("✨ Excellent session! Low anxiety + high confidence. Document what you did in pre-ride prep - this is your optimal state formula.");
-      recommendations.push("🎊 Consider this your 'flow state' session. Research shows this anxiety-confidence combo predicts peak performance. Repeat your pre-ride routine!");
-    }
-    
-    // Good improvement
-    if (anxietyChange <= -2 && confidenceChange >= 2) {
-      recommendations.push("📈 Great progress! Your anxiety decreased AND confidence increased. You're building emotional resilience - this is the goal of mental training.");
-    }
-    
-    // Horse metrics all good
-    if (horseEnergy >= 5 && horseEnergy <= 7 && horseFocus >= 6 && horseResponsiveness >= 6) {
-      recommendations.push("🐴 Your horse showed optimal metrics (balanced energy, good focus, strong responsiveness). Your mental state likely contributed to this - keep doing what you're doing!");
-    }
-    
-    // Default recommendation if no specific patterns
-    if (recommendations.length === 0) {
-      recommendations.push("💭 Great job completing your session! Review the Rider Tools library for techniques that match your specific goals.");
-      recommendations.push("📊 Track patterns over multiple sessions to identify your optimal pre-ride preparation routine.");
-    }
-    
-    return recommendations.slice(0, 4); // Return max 4 recommendations
   };
 
   const getEnergyLabel = (level: number | null) => {
