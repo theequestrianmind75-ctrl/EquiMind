@@ -112,7 +112,10 @@ export default function History() {
           style={styles.scrollView}
           refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor="#000000" />}
         >
-          {sessions.map((session) => (
+          {Object.entries(groupSessionsByMonth()).map(([month, monthSessions]) => (
+            <View key={month}>
+              <Text style={styles.monthHeader}>{month}</Text>
+              {monthSessions.map((session) => (
             <View key={session.id} style={styles.sessionCard}>
               <View style={styles.sessionHeader}>
                 <View
