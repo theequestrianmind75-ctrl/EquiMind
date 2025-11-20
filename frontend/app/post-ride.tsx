@@ -785,4 +785,40 @@ const styles = StyleSheet.create({
     color: '#1e293b',
     lineHeight: 20,
   },
+  toolsSection: {
+    marginTop: 20,
+    paddingTop: 16,
+    borderTopWidth: 1,
+    borderTopColor: '#f59e0b',
+  },
+  toolsSectionTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#000000',
+    marginBottom: 12,
+  },
+  toolButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: '#ffffff',
+    padding: 14,
+    borderRadius: 8,
+    marginBottom: 10,
+    borderWidth: 2,
+    borderColor: '#375B50',
+  },
+  toolButtonContent: {
+    flex: 1,
+  },
+  toolButtonName: {
+    fontSize: 15,
+    fontWeight: '600',
+    color: '#000000',
+    marginBottom: 4,
+  },
+  toolButtonDuration: {
+    fontSize: 13,
+    color: '#64748b',
+  },
 });
