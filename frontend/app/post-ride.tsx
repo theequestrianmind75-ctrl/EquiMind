@@ -442,6 +442,21 @@ export default function PostRide() {
                 />
               </View>
 
+              <View style={styles.recommendationsCard}>
+                <View style={styles.recommendationsHeader}>
+                  <Ionicons name="bulb" size={24} color="#f59e0b" />
+                  <Text style={styles.recommendationsTitle}>Personalized Recommendations</Text>
+                </View>
+                <Text style={styles.recommendationsSubtitle}>
+                  Evidence-based strategies from sports performance research
+                </Text>
+                {generateRecommendations().map((rec, index) => (
+                  <View key={index} style={styles.recommendationItem}>
+                    <Text style={styles.recommendationText}>{rec}</Text>
+                  </View>
+                ))}
+              </View>
+
               <TouchableOpacity
                 style={[styles.completeButton, saving && styles.completeButtonDisabled]}
                 onPress={handleComplete}
