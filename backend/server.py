@@ -412,6 +412,7 @@ async def create_session(session_data: SessionCreate, current_user: dict = Depen
         confidence_level=session_data.confidence_level,
         notes=session_data.notes,
         strategies_used=session_data.strategies_used or [],
+        horse_name=session_data.horse_name,
         horse_energy_level=session_data.horse_energy_level,
         horse_focus_level=session_data.horse_focus_level,
         horse_responsiveness=session_data.horse_responsiveness,
