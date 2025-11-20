@@ -214,7 +214,7 @@ export default function PostRide() {
               </View>
 
               <View style={styles.section}>
-                <Text style={styles.sectionTitle}>Post-Ride Confidence Level: {confidenceLevel}/10</Text>
+                <Text style={styles.sectionTitle}>Confidence Level: {confidenceLevel}/10</Text>
                 <View style={styles.sliderContainer}>
                   <View style={styles.scaleButtons}>
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => (
@@ -244,8 +244,11 @@ export default function PostRide() {
                 </View>
               </View>
 
+              <View style={styles.divider} />
+              <Text style={styles.sectionHeader}>{selectedSession.horse_name ? selectedSession.horse_name.toUpperCase() : 'YOUR HORSE'}</Text>
+
               <View style={styles.section}>
-                <Text style={styles.sectionTitle}>Horse Energy Level: {horseEnergyLevel}/10</Text>
+                <Text style={styles.sectionTitle}>Energy Level: {horseEnergyLevel}/10</Text>
                 <View style={styles.sliderContainer}>
                   <View style={styles.scaleButtons}>
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => (
