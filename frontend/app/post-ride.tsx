@@ -183,7 +183,9 @@ export default function PostRide() {
                 <View style={styles.horseCard}>
                   <View style={styles.horseHeader}>
                     <Ionicons name="shield" size={24} color="#000000" />
-                    <Text style={styles.horseTitle}>YOUR HORSE</Text>
+                    <Text style={styles.horseTitle}>
+                      {selectedSession.horse_name ? selectedSession.horse_name.toUpperCase() : 'YOUR HORSE'}
+                    </Text>
                   </View>
                   <View style={styles.horseStats}>
                     <View style={styles.horseStat}>
