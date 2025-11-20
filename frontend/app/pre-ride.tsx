@@ -23,6 +23,8 @@ export default function PreRide() {
   const [notes, setNotes] = useState('');
   // Horse information
   const [horseEnergyLevel, setHorseEnergyLevel] = useState(5);
+  const [horseFocusLevel, setHorseFocusLevel] = useState(5);
+  const [horseResponsiveness, setHorseResponsiveness] = useState(5);
   const [horseNotes, setHorseNotes] = useState('');
   const [riderEnergyLevel, setRiderEnergyLevel] = useState(5);
   const [loading, setLoading] = useState(false);
