@@ -458,11 +458,32 @@ export default function PostRide() {
                     <Text style={styles.recommendationText}>Loading recommendations...</Text>
                   </View>
                 ) : (
-                  recommendations.map((rec, index) => (
-                    <View key={index} style={styles.recommendationItem}>
-                      <Text style={styles.recommendationText}>{rec}</Text>
-                    </View>
-                  ))
+                  <>
+                    {recommendations.map((rec, index) => (
+                      <View key={index} style={styles.recommendationItem}>
+                        <Text style={styles.recommendationText}>{rec.text || rec}</Text>
+                      </View>
+                    ))}
+                    
+                    {recommendedTools.length > 0 && (
+                      <View style={styles.toolsSection}>
+                        <Text style={styles.toolsSectionTitle}>🎯 Suggested Tools to Try:</Text>
+                        {recommendedTools.map((tool, index) => (
+                          <TouchableOpacity
+                            key={index}
+                            style={styles.toolButton}
+                            onPress={() => router.push(`/strategy-detail/${tool.id}` as any)}
+                          >
+                            <View style={styles.toolButtonContent}>
+                              <Text style={styles.toolButtonName}>{tool.name}</Text>
+                              <Text style={styles.toolButtonDuration}>{tool.duration_minutes} min</Text>
+                            </View>
+                            <Ionicons name="arrow-forward-circle" size={24} color="#375B50" />
+                          </TouchableOpacity>
+                        ))}
+                      </View>
+                    )}
+                  </>
                 )}
               </View>
 
