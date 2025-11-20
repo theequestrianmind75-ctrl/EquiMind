@@ -214,7 +214,18 @@ export default function PreRide() {
           </View>
 
           <View style={styles.divider} />
-          <Text style={styles.sectionHeader}>YOUR HORSE</Text>
+          <Text style={styles.sectionHeader}>{horseName ? horseName.toUpperCase() : 'YOUR HORSE'}</Text>
+
+          <View style={styles.section}>
+            <Text style={styles.sectionTitle}>Horse Name (Optional)</Text>
+            <TextInput
+              style={styles.horseNameInput}
+              placeholder="Enter your horse's name..."
+              placeholderTextColor="#64748b"
+              value={horseName}
+              onChangeText={setHorseName}
+            />
+          </View>
 
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Horse Energy Level: {horseEnergyLevel}/10</Text>
