@@ -20,6 +20,7 @@ interface Session {
   id: string;
   session_type: string;
   ride_type: string;
+  rider_name: string | null;
   anxiety_level: number | null;
   confidence_level: number | null;
   horse_name: string | null;
