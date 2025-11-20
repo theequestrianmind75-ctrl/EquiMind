@@ -105,6 +105,7 @@ class Session(BaseModel):
     rider_id: str
     session_type: str
     ride_type: str
+    rider_name: Optional[str] = None
     anxiety_level: Optional[int] = None
     confidence_level: Optional[int] = None
     notes: Optional[str] = None
