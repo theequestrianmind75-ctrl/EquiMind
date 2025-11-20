@@ -38,6 +38,9 @@ export default function PostRide() {
   const [anxietyLevel, setAnxietyLevel] = useState(5);
   const [confidenceLevel, setConfidenceLevel] = useState(5);
   const [notes, setNotes] = useState('');
+  const [horseEnergyLevel, setHorseEnergyLevel] = useState(5);
+  const [horseFocusLevel, setHorseFocusLevel] = useState(5);
+  const [horseResponsiveness, setHorseResponsiveness] = useState(5);
 
   useEffect(() => {
     fetchIncompleteSessions();
