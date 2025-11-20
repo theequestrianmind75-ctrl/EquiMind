@@ -466,6 +466,16 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#000000',
   },
+  horseNameInput: {
+    backgroundColor: '#ffffff',
+    borderRadius: 12,
+    padding: 16,
+    color: '#1e293b',
+    fontSize: 16,
+    fontWeight: '600',
+    borderWidth: 1,
+    borderColor: '#375B50',
+  },
   notesInput: {
     backgroundColor: '#ffffff',
     borderRadius: 12,
