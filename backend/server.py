@@ -74,6 +74,7 @@ class Token(BaseModel):
 class SessionCreate(BaseModel):
     session_type: str  # "pre-ride", "during-ride", "post-ride"
     ride_type: str  # "training", "competition", "trail", etc.
+    rider_name: Optional[str] = None
     anxiety_level: Optional[int] = None
     confidence_level: Optional[int] = None
     notes: Optional[str] = None
