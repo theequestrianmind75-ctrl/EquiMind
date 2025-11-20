@@ -109,6 +109,7 @@ class Session(BaseModel):
     strategies_used: List[str] = []
     completed: bool = False
     # Horse information
+    horse_name: Optional[str] = None
     horse_energy_level: Optional[int] = None
     horse_focus_level: Optional[int] = None
     horse_responsiveness: Optional[int] = None
