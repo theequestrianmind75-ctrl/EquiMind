@@ -79,6 +79,7 @@ class SessionCreate(BaseModel):
     notes: Optional[str] = None
     strategies_used: Optional[List[str]] = []
     # Horse information
+    horse_name: Optional[str] = None
     horse_energy_level: Optional[int] = None  # 1-10 scale
     horse_focus_level: Optional[int] = None  # 1-10 scale
     horse_responsiveness: Optional[int] = None  # 1-10 scale
