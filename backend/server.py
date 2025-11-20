@@ -412,6 +412,7 @@ async def create_session(session_data: SessionCreate, current_user: dict = Depen
         rider_id=current_user["user_id"],
         session_type=session_data.session_type,
         ride_type=session_data.ride_type,
+        rider_name=session_data.rider_name,
         anxiety_level=session_data.anxiety_level,
         confidence_level=session_data.confidence_level,
         notes=session_data.notes,
