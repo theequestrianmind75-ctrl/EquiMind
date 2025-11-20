@@ -256,7 +256,7 @@ export default function PostRide() {
             <>
               <View style={styles.sessionInfo}>
                 <Image 
-                  source={require('../../assets/images/horse-head-logo.png')} 
+                  source={require('../assets/images/horse-head-logo.png')} 
                   style={styles.sessionLogo}
                 />
                 <View style={styles.sessionInfoText}>
