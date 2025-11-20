@@ -55,6 +55,9 @@ export default function PostRide() {
         setSelectedSession(latestSession);
         setAnxietyLevel(latestSession.anxiety_level || 5);
         setConfidenceLevel(latestSession.confidence_level || 5);
+        setHorseEnergyLevel(latestSession.horse_energy_level || 5);
+        setHorseFocusLevel(latestSession.horse_focus_level || 5);
+        setHorseResponsiveness(latestSession.horse_responsiveness || 5);
       }
     } catch (error) {
       console.error('Error fetching sessions:', error);
