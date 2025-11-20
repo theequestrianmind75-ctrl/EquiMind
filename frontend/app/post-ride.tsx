@@ -722,4 +722,42 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     marginLeft: 8,
   },
+  recommendationsCard: {
+    backgroundColor: '#fffbeb',
+    padding: 20,
+    borderRadius: 12,
+    marginBottom: 24,
+    borderWidth: 2,
+    borderColor: '#f59e0b',
+  },
+  recommendationsHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  recommendationsTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#000000',
+    marginLeft: 12,
+  },
+  recommendationsSubtitle: {
+    fontSize: 13,
+    color: '#78350f',
+    marginBottom: 16,
+    fontStyle: 'italic',
+  },
+  recommendationItem: {
+    backgroundColor: '#ffffff',
+    padding: 14,
+    borderRadius: 8,
+    marginBottom: 12,
+    borderLeftWidth: 4,
+    borderLeftColor: '#f59e0b',
+  },
+  recommendationText: {
+    fontSize: 14,
+    color: '#1e293b',
+    lineHeight: 20,
+  },
 });
