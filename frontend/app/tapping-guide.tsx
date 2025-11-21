@@ -96,10 +96,6 @@ export default function TappingGuide() {
             <Text style={styles.pointText}>Follow the ridge of bone from your eyebrow down to the side of the eye.</Text>
           </View>
           <View style={styles.pointSection}>
-            <Text style={styles.pointLabel}>Meridian:</Text>
-            <Text style={styles.pointText}>Gallbladder</Text>
-          </View>
-          <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
             <Text style={styles.pointText}>Releases resentment and anger and promotes clarity and compassion.</Text>
           </View>
