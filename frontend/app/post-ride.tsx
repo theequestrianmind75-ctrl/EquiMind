@@ -472,7 +472,10 @@ export default function PostRide() {
                           <TouchableOpacity
                             key={index}
                             style={styles.toolButton}
-                            onPress={() => router.push(`/strategy-detail/${tool.id}` as any)}
+                            onPress={() => {
+                              console.log('Navigating to tool:', tool.id, tool.name);
+                              router.push(`/strategy-detail/${encodeURIComponent(tool.id)}`);
+                            }}
                           >
                             <View style={styles.toolButtonContent}>
                               <Text style={styles.toolButtonName}>{tool.name}</Text>
