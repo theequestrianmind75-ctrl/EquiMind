@@ -25,9 +25,23 @@ export default function TappingGuide() {
 
       <ScrollView style={styles.scrollView} contentContainerStyle={styles.contentContainer}>
         <View style={styles.introCard}>
-          <Text style={styles.introTitle}>The 9-Point EFT Tapping Sequence</Text>
+          <Text style={styles.redQuestion}>What is EFT Tapping?</Text>
           <Text style={styles.introText}>
-            Tap each point 5-7 times while focusing on your specific concern. Use 2-3 fingers with gentle but firm pressure.
+            EFT (Emotional Freedom Techniques) is a mind-body technique that combines acupressure with psychological principles. By tapping on specific points while focusing on emotional concerns, you can reduce stress, calm anxiety, and improve mental clarity. In sports, EFT is used to manage performance anxiety, release limiting beliefs, and help athletes achieve optimal mental states for peak performance.
+          </Text>
+
+          <Text style={[styles.redQuestion, styles.questionSpacing]}>How to Use Tapping</Text>
+          <Text style={styles.introText}>
+            Tap each point 5-7 times while focusing on your specific concern. Use 2-3 fingers with gentle but firm pressure. Move through all 9 points in sequence.
+          </Text>
+
+          <Text style={[styles.redQuestion, styles.questionSpacing]}>When to Use Tapping</Text>
+          <Text style={styles.introText}>
+            <Text style={styles.bold}>Before Riding:</Text> Calm pre-ride nerves and set positive intentions.
+            {'\n\n'}
+            <Text style={styles.bold}>During Riding:</Text> If you feel stressed or overwhelmed, pause. Tapping would be recommended before continuing.
+            {'\n\n'}
+            <Text style={styles.bold}>After Riding:</Text> Process emotions and release tension from your session.
           </Text>
         </View>
 
