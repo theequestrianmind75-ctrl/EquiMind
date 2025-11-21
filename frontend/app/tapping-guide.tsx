@@ -130,9 +130,6 @@ export default function TappingGuide() {
             <Text style={styles.pointText}>In the space between your nose and upper lip.</Text>
           </View>
           <View style={styles.pointSection}>
-            <Text style={styles.pointLabel}>Meridian:</Text>
-            <Text style={styles.pointText}>Governing Vessel</Text>
-          </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
             <Text style={styles.pointText}>Releases shame and powerlessness and promotes self-acceptance and empowerment.</Text>
@@ -151,9 +148,6 @@ export default function TappingGuide() {
             <Text style={styles.pointText}>In the crease between your chin and bottom lip.</Text>
           </View>
           <View style={styles.pointSection}>
-            <Text style={styles.pointLabel}>Meridian:</Text>
-            <Text style={styles.pointText}>Central</Text>
-          </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
             <Text style={styles.pointText}>Releases confusion and uncertainty and promotes clarity, certainty, and confidence.</Text>
@@ -172,9 +166,6 @@ export default function TappingGuide() {
             <Text style={styles.pointText}>One inch down and one inch out from where your collarbones meet in the center.</Text>
           </View>
           <View style={styles.pointSection}>
-            <Text style={styles.pointLabel}>Meridian:</Text>
-            <Text style={styles.pointText}>Kidney</Text>
-          </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
             <Text style={styles.pointText}>Releases feeling stuck and promotes ease in moving forward and boosts confidence.</Text>
@@ -193,9 +184,6 @@ export default function TappingGuide() {
             <Text style={styles.pointText}>About four inches below the armpit on your side.</Text>
           </View>
           <View style={styles.pointSection}>
-            <Text style={styles.pointLabel}>Meridian:</Text>
-            <Text style={styles.pointText}>Spleen</Text>
-          </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
             <Text style={styles.pointText}>Releases guilt, worry, and obsessing and promotes clarity, confidence, and relaxation.</Text>
@@ -214,9 +202,6 @@ export default function TappingGuide() {
             <Text style={styles.pointText}>Right on the center of the top of your head, at the crown.</Text>
           </View>
           <View style={styles.pointSection}>
-            <Text style={styles.pointLabel}>Meridian:</Text>
-            <Text style={styles.pointText}>Crown Chakra and Multiple Meridians</Text>
-          </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
             <Text style={styles.pointText}>Opens the crown chakra and promotes spiritual connection while anchoring balance.</Text>
