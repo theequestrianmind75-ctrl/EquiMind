@@ -283,9 +283,20 @@ async def get_mental_strategies(
 
 @api_router.get("/mental-strategies/{strategy_id}")
 async def get_strategy(strategy_id: str, current_user: dict = Depends(get_current_user)):
+    # Try to find by 'id' field first
     strategy = await db.mental_strategies.find_one({"id": strategy_id})
+    
+    # If not found, try finding by _id (MongoDB ObjectId)
+    if not strategy:
+        try:
+            from bson import ObjectId
+            strategy = await db.mental_strategies.find_one({"_id": ObjectId(strategy_id)})
+        except Exception:
+            pass
+    
     if not strategy:
         raise HTTPException(status_code=404, detail="Strategy not found")
+    
     if '_id' in strategy:
         # If no 'id' field, use _id as id
         if 'id' not in strategy:
