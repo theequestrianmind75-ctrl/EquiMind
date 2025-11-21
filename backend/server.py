@@ -319,6 +319,9 @@ async def update_strategy(
     # Return updated strategy
     updated_strategy = await db.mental_strategies.find_one({"id": strategy_id})
     if '_id' in updated_strategy:
+        # If no 'id' field, use _id as id
+        if 'id' not in updated_strategy:
+            updated_strategy['id'] = str(updated_strategy['_id'])
         del updated_strategy['_id']
     return updated_strategy
 
