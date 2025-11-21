@@ -326,25 +326,6 @@ const styles = StyleSheet.create({
     color: '#1e293b',
     lineHeight: 20,
   },
-  usageCard: {
-    backgroundColor: '#fffbeb',
-    borderRadius: 12,
-    padding: 20,
-    marginBottom: 16,
-    borderWidth: 2,
-    borderColor: '#f59e0b',
-  },
-  usageTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#000000',
-    marginBottom: 12,
-  },
-  usageText: {
-    fontSize: 15,
-    color: '#1e293b',
-    lineHeight: 24,
-  },
   bold: {
     fontWeight: '600',
     color: '#1e293b',
