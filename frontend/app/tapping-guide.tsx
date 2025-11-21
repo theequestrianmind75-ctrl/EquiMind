@@ -31,6 +31,14 @@ export default function TappingGuide() {
           </Text>
         </View>
 
+        <View style={styles.imageContainer}>
+          <Image 
+            source={require('../assets/images/tapping-feminine.jpg')}
+            style={styles.tappingImage}
+            resizeMode="contain"
+          />
+        </View>
+
         <View style={styles.pointCard}>
           <View style={styles.pointHeader}>
             <View style={styles.pointNumber}>
