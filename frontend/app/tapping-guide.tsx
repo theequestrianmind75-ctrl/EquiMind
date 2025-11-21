@@ -202,7 +202,7 @@ export default function TappingGuide() {
           </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
-            <Text style={styles.pointText}>Releases limited thinking and promotes connection to intuition, wisdom, and spiritual connection.</Text>
+            <Text style={styles.pointText}>Reduces stress. Calming the brains stress center (the amygdala).</Text>
           </View>
         </View>
 
