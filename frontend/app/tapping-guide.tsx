@@ -66,7 +66,7 @@ export default function TappingGuide() {
           </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
-            <Text style={styles.pointText}>Releases feeling stuck and promotes ease in moving forward and letting go.</Text>
+            <Text style={styles.pointText}>Releases feelings that are stuck. Helps you move forward and let go.</Text>
           </View>
         </View>
 
@@ -83,7 +83,7 @@ export default function TappingGuide() {
           </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
-            <Text style={styles.pointText}>Releases trauma, hurt, and sadness and promotes peace and emotional healing.</Text>
+            <Text style={styles.pointText}>Releases trauma, hurt and sadness. Creating peace and emotional healing.</Text>
           </View>
         </View>
 
@@ -100,7 +100,7 @@ export default function TappingGuide() {
           </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
-            <Text style={styles.pointText}>Releases resentment and anger and promotes clarity and compassion.</Text>
+            <Text style={styles.pointText}>Releases resentments and anger. Improves clarity and compassion.</Text>
           </View>
         </View>
 
@@ -117,7 +117,7 @@ export default function TappingGuide() {
           </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
-            <Text style={styles.pointText}>Releases fear and anxiety and promotes contentment, calmness, and safety.</Text>
+            <Text style={styles.pointText}>Releases fear and anxiety. Creating contentment, calmness and safety.</Text>
           </View>
         </View>
 
@@ -134,7 +134,7 @@ export default function TappingGuide() {
           </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
-            <Text style={styles.pointText}>Releases shame and powerlessness and promotes self-acceptance and empowerment.</Text>
+            <Text style={styles.pointText}>Releases shame and powerlessness. Improving self-acceptance and empowerment.</Text>
           </View>
         </View>
 
@@ -151,7 +151,7 @@ export default function TappingGuide() {
           </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
-            <Text style={styles.pointText}>Releases confusion and uncertainty and promotes clarity and confidence in decisions.</Text>
+            <Text style={styles.pointText}>Releases confusion and uncertainty while improving clarity, certainty and confidence.</Text>
           </View>
         </View>
 
@@ -164,11 +164,11 @@ export default function TappingGuide() {
           </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Location:</Text>
-            <Text style={styles.pointText}>About 1 inch down and 1 inch out from the U-shaped notch at the base of your throat.</Text>
+            <Text style={styles.pointText}>Where your collarbones meet in the center, go one inch down and one inch left or right. Begin tapping there.</Text>
           </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
-            <Text style={styles.pointText}>Releases feeling stuck and stress and promotes moving forward with ease and clarity.</Text>
+            <Text style={styles.pointText}>Releases feelings that are stuck. Allowing you to move forward while boosting your confidence.</Text>
           </View>
         </View>
 
@@ -185,7 +185,7 @@ export default function TappingGuide() {
           </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
-            <Text style={styles.pointText}>Releases worry, insecurity, and guilt and promotes confidence and clarity.</Text>
+            <Text style={styles.pointText}>Releases guilt and worry. Creating clarity, confidence and calmness.</Text>
           </View>
         </View>
 
