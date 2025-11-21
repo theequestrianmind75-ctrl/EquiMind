@@ -62,10 +62,6 @@ export default function TappingGuide() {
             <Text style={styles.pointText}>Along the fleshy side of the hand between the base of the pinky finger and the wrist.</Text>
           </View>
           <View style={styles.pointSection}>
-            <Text style={styles.pointLabel}>Meridian:</Text>
-            <Text style={styles.pointText}>Small intestine</Text>
-          </View>
-          <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
             <Text style={styles.pointText}>Releases feeling stuck and promotes ease in moving forward and letting go.</Text>
           </View>
