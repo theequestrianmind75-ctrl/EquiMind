@@ -219,9 +219,9 @@ frontend:
   
   - task: "Post-Ride Analysis Screen"
     implemented: true
-    working: false
-    file: "frontend/app/post-ride.tsx"
-    stuck_count: 1
+    working: true
+    file: "frontend/app/post-ride.tsx, backend/server.py"
+    stuck_count: 0
     priority: "high"
     needs_retesting: true
     status_history:
@@ -231,6 +231,9 @@ frontend:
         - working: false
           agent: "user"
           comment: "Bug reported: When clicking on suggested tool boxes in post-ride analysis, the next page shows no tools. Navigation to strategy-detail page is broken."
+        - working: true
+          agent: "main"
+          comment: "Fixed: Updated backend GET /api/mental-strategies/{strategy_id} and PATCH endpoints to search by both 'id' field and MongoDB '_id' ObjectId. The issue was that tools from MongoDB have ObjectId in _id field, and when fetched, the backend converts _id to id (string). However, the single strategy lookup only searched by 'id' field which didn't exist in database. Now it tries 'id' first, then falls back to searching by _id as ObjectId. This allows navigation from post-ride suggested tools to work correctly."
   
   - task: "Session History"
     implemented: true
