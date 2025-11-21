@@ -287,6 +287,9 @@ async def get_strategy(strategy_id: str, current_user: dict = Depends(get_curren
     if not strategy:
         raise HTTPException(status_code=404, detail="Strategy not found")
     if '_id' in strategy:
+        # If no 'id' field, use _id as id
+        if 'id' not in strategy:
+            strategy['id'] = str(strategy['_id'])
         del strategy['_id']
     return strategy
 
