@@ -206,18 +206,6 @@ export default function TappingGuide() {
           </View>
         </View>
 
-        <View style={styles.usageCard}>
-          <Text style={styles.usageTitle}>When to Use EFT Tapping</Text>
-          <Text style={styles.usageText}>
-            <Text style={styles.bold}>Before Riding:</Text> Calm pre-ride nerves and set positive intentions.
-            {'\n\n'}
-            <Text style={styles.bold}>During Riding:</Text> If you feel stressed or overwhelmed, pause. Tapping would be recommended before continuing.
-            {'\n\n'}
-            <Text style={styles.bold}>After Riding:</Text> Process emotions and release tension from your session.
-            {'\n\n'}
-            Tap each point 5-7 times while focusing on your stress or concern. Move through all 9 points in sequence.
-          </Text>
-        </View>
       </ScrollView>
     </SafeAreaView>
   );
