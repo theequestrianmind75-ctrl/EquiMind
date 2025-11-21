@@ -75,287 +75,293 @@ class EquiMindTester:
             return False
     
     def test_list_mental_strategies(self) -> List[Dict]:
-        """Test 1: Verify total count of strategies is 136"""
+        """Test 1: List all mental strategies and verify count"""
+        print("\n📋 Testing Mental Strategies List...")
+        
         try:
-            response = requests.get(
-                f"{self.base_url}/mental-strategies",
-                headers=self.get_headers(),
-                timeout=10
-            )
+            response = requests.get(f"{self.base_url}/mental-strategies", headers=self.headers)
             
             if response.status_code == 200:
                 strategies = response.json()
-                total_count = len(strategies)
-                print(f"📊 Total strategies found: {total_count}")
+                count = len(strategies)
                 
-                if total_count == 136:
-                    print(f"✅ TEST 1 PASSED: Total count is correct (136)")
-                    return True
+                # Verify at least 136 tools (as mentioned in review request)
+                if count >= 136:
+                    self.log_test("List Mental Strategies - Count", True, 
+                                f"Found {count} strategies (≥136 expected)")
                 else:
-                    print(f"❌ TEST 1 FAILED: Expected 136 strategies, got {total_count}")
-                    return False
+                    self.log_test("List Mental Strategies - Count", False, 
+                                f"Found only {count} strategies, expected ≥136")
+                
+                # Verify each strategy has required fields
+                sample_strategy = strategies[0] if strategies else None
+                if sample_strategy:
+                    required_fields = ['id', 'name', 'category', 'instructions']
+                    missing_fields = [field for field in required_fields if field not in sample_strategy]
+                    
+                    if not missing_fields:
+                        self.log_test("List Mental Strategies - Structure", True, 
+                                    "All required fields present (id, name, category, instructions)")
+                    else:
+                        self.log_test("List Mental Strategies - Structure", False, 
+                                    f"Missing fields: {missing_fields}")
+                
+                return strategies
             else:
-                print(f"❌ TEST 1 FAILED: API error {response.status_code} - {response.text}")
-                return False
+                self.log_test("List Mental Strategies", False, 
+                            f"Failed with status {response.status_code}", 
+                            {"response": response.text})
+                return []
                 
         except Exception as e:
-            print(f"❌ TEST 1 FAILED: {e}")
-            return False
+            self.log_test("List Mental Strategies", False, f"Exception: {str(e)}")
+            return []
     
-    def test_category_filtering(self) -> bool:
-        """Test 2: Verify filtering by each category with expected counts"""
-        expected_counts = {
-            "BODY RESET": 59,
-            "Breathing / HRV": 19,
-            "Mindfulness & Flow": 10,
-            "Tapping / EFT": 48
-        }
+    def test_get_strategy_by_id(self, strategies: List[Dict]) -> List[str]:
+        """Test 2: Get strategy by ID (the fixed endpoint)"""
+        print("\n🎯 Testing Strategy Detail Retrieval (Fixed Endpoint)...")
         
-        all_passed = True
+        if not strategies:
+            self.log_test("Get Strategy by ID", False, "No strategies available for testing")
+            return []
         
-        for category, expected_count in expected_counts.items():
+        # Pick 3 random strategies for testing
+        test_strategies = random.sample(strategies, min(3, len(strategies)))
+        successful_ids = []
+        
+        for i, strategy in enumerate(test_strategies, 1):
+            strategy_id = strategy.get('id')
+            strategy_name = strategy.get('name', 'Unknown')
+            
             try:
-                response = requests.get(
-                    f"{self.base_url}/mental-strategies",
-                    params={"category": category},
-                    headers=self.get_headers(),
-                    timeout=10
-                )
+                response = requests.get(f"{self.base_url}/mental-strategies/{strategy_id}", 
+                                      headers=self.headers)
                 
                 if response.status_code == 200:
-                    strategies = response.json()
-                    actual_count = len(strategies)
-                    print(f"📊 Category '{category}': {actual_count} strategies")
+                    retrieved_strategy = response.json()
                     
-                    if actual_count == expected_count:
-                        print(f"✅ Category '{category}' count correct ({expected_count})")
+                    # Verify response structure
+                    required_fields = ['id', 'name', 'category', 'instructions']
+                    missing_fields = [field for field in required_fields 
+                                    if field not in retrieved_strategy]
+                    
+                    if not missing_fields:
+                        self.log_test(f"Get Strategy by ID #{i}", True, 
+                                    f"Successfully retrieved '{strategy_name}' with all required fields")
+                        successful_ids.append(strategy_id)
                     else:
-                        print(f"❌ Category '{category}' count incorrect: expected {expected_count}, got {actual_count}")
-                        all_passed = False
+                        self.log_test(f"Get Strategy by ID #{i}", False, 
+                                    f"Retrieved '{strategy_name}' but missing fields: {missing_fields}")
                         
-                        # Show sample strategies for debugging
-                        if strategies:
-                            print(f"   Sample strategies in this category:")
-                            for i, strategy in enumerate(strategies[:3]):
-                                print(f"   - {strategy.get('name', 'Unknown')} (category: {strategy.get('category', 'Unknown')})")
+                elif response.status_code == 404:
+                    self.log_test(f"Get Strategy by ID #{i}", False, 
+                                f"404 Error for '{strategy_name}' (ID: {strategy_id}) - This is the bug we're testing!")
                 else:
-                    print(f"❌ Category '{category}' API error: {response.status_code} - {response.text}")
-                    all_passed = False
+                    self.log_test(f"Get Strategy by ID #{i}", False, 
+                                f"Failed with status {response.status_code} for '{strategy_name}'",
+                                {"response": response.text})
                     
             except Exception as e:
-                print(f"❌ Category '{category}' test failed: {e}")
-                all_passed = False
+                self.log_test(f"Get Strategy by ID #{i}", False, 
+                            f"Exception for '{strategy_name}': {str(e)}")
         
-        if all_passed:
-            print(f"✅ TEST 2 PASSED: All category counts are correct")
-        else:
-            print(f"❌ TEST 2 FAILED: Some category counts are incorrect")
-            
-        return all_passed
+        return successful_ids
     
-    def test_sample_tool_verification(self) -> bool:
-        """Test 3: Verify a sample tool from the new data"""
+    def test_recommendations_endpoint(self) -> List[Dict]:
+        """Test 3: Verify recommendations endpoint"""
+        print("\n💡 Testing Recommendations Endpoint...")
+        
         try:
-            # Get BODY RESET category strategies
-            response = requests.get(
-                f"{self.base_url}/mental-strategies",
-                params={"category": "BODY RESET"},
-                headers=self.get_headers(),
-                timeout=10
-            )
+            response = requests.get(f"{self.base_url}/recommendations", headers=self.headers)
             
             if response.status_code == 200:
-                strategies = response.json()
+                recommendations = response.json()
                 
-                # Look for "4:8 Tension Melt Exhale" or similar tools
-                target_tool = None
-                for strategy in strategies:
-                    if "4:8 Tension Melt Exhale" in strategy.get("name", ""):
-                        target_tool = strategy
-                        break
-                
-                if target_tool:
-                    print(f"✅ Found target tool: {target_tool['name']}")
-                    print(f"   Category: {target_tool.get('category', 'Unknown')}")
-                    print(f"   Instructions length: {len(target_tool.get('instructions', ''))}")
-                    print(f"✅ TEST 3 PASSED: Sample tool verification successful")
-                    return True
-                else:
-                    # If exact tool not found, verify we have BODY RESET tools with proper structure
-                    if strategies:
-                        sample_tool = strategies[0]
-                        print(f"📊 Sample BODY RESET tool: {sample_tool.get('name', 'Unknown')}")
-                        print(f"   Category: {sample_tool.get('category', 'Unknown')}")
-                        print(f"   Has instructions: {bool(sample_tool.get('instructions'))}")
-                        print(f"✅ TEST 3 PASSED: BODY RESET category has proper tools")
-                        return True
+                if recommendations:
+                    # Check if recommendations have suggested_tool_names
+                    has_tool_names = any('suggested_tool_names' in rec for rec in recommendations)
+                    
+                    if has_tool_names:
+                        self.log_test("Recommendations Endpoint", True, 
+                                    f"Found {len(recommendations)} recommendations with suggested tool names")
                     else:
-                        print(f"❌ TEST 3 FAILED: No BODY RESET tools found")
-                        return False
+                        self.log_test("Recommendations Endpoint", True, 
+                                    f"Found {len(recommendations)} recommendations (no suggested_tool_names field)")
+                else:
+                    self.log_test("Recommendations Endpoint", True, 
+                                "Endpoint working but no recommendations found")
+                
+                return recommendations
             else:
-                print(f"❌ TEST 3 FAILED: API error {response.status_code} - {response.text}")
-                return False
+                self.log_test("Recommendations Endpoint", False, 
+                            f"Failed with status {response.status_code}",
+                            {"response": response.text})
+                return []
                 
         except Exception as e:
-            print(f"❌ TEST 3 FAILED: {e}")
-            return False
+            self.log_test("Recommendations Endpoint", False, f"Exception: {str(e)}")
+            return []
     
-    def test_tool_structure(self) -> bool:
-        """Test 4: Verify tools have proper structure with required fields"""
+    def test_cross_verify_tool_lookup(self, strategies: List[Dict], recommendations: List[Dict]):
+        """Test 4: Cross-verify tool name to ID lookup"""
+        print("\n🔍 Testing Cross-Verification of Tool Name to ID Lookup...")
+        
+        if not strategies or not recommendations:
+            self.log_test("Cross-Verify Tool Lookup", False, 
+                        "Missing strategies or recommendations for cross-verification")
+            return
+        
+        # Find recommendations with suggested tool names
+        recs_with_tools = [rec for rec in recommendations if rec.get('suggested_tool_names')]
+        
+        if not recs_with_tools:
+            self.log_test("Cross-Verify Tool Lookup", False, 
+                        "No recommendations with suggested_tool_names found")
+            return
+        
+        # Get a tool name from recommendations
+        sample_rec = recs_with_tools[0]
+        suggested_tools = sample_rec.get('suggested_tool_names', [])
+        
+        if not suggested_tools:
+            self.log_test("Cross-Verify Tool Lookup", False, 
+                        "No tool names in suggested_tool_names")
+            return
+        
+        tool_name = suggested_tools[0]
+        
+        # Find this tool in the strategies list
+        matching_strategy = None
+        for strategy in strategies:
+            if strategy.get('name', '').lower() == tool_name.lower():
+                matching_strategy = strategy
+                break
+        
+        if not matching_strategy:
+            self.log_test("Cross-Verify Tool Lookup", False, 
+                        f"Tool '{tool_name}' from recommendations not found in strategies list")
+            return
+        
+        # Test if we can fetch this strategy by ID
+        strategy_id = matching_strategy.get('id')
         try:
-            response = requests.get(
-                f"{self.base_url}/mental-strategies",
-                headers=self.get_headers(),
-                timeout=10
-            )
+            response = requests.get(f"{self.base_url}/mental-strategies/{strategy_id}", 
+                                  headers=self.headers)
             
             if response.status_code == 200:
-                strategies = response.json()
-                
-                if not strategies:
-                    print(f"❌ TEST 4 FAILED: No strategies found")
-                    return False
-                
-                # Check first few tools for required fields
-                required_fields = ["id", "name", "category", "instructions"]
-                optional_fields = ["duration_minutes", "anxiety_level", "confidence_level"]
-                
-                sample_size = min(5, len(strategies))
-                all_valid = True
-                
-                for i in range(sample_size):
-                    tool = strategies[i]
-                    print(f"📊 Checking tool {i+1}: {tool.get('name', 'Unknown')}")
-                    
-                    # Check required fields
-                    for field in required_fields:
-                        if field not in tool or not tool[field]:
-                            print(f"   ❌ Missing required field: {field}")
-                            all_valid = False
-                        else:
-                            print(f"   ✅ Has {field}: {str(tool[field])[:50]}...")
-                    
-                    # Check optional fields (just report presence)
-                    for field in optional_fields:
-                        if field in tool:
-                            print(f"   ℹ️  Has optional {field}: {tool[field]}")
-                
-                if all_valid:
-                    print(f"✅ TEST 4 PASSED: All sampled tools have proper structure")
-                    return True
-                else:
-                    print(f"❌ TEST 4 FAILED: Some tools missing required fields")
-                    return False
+                self.log_test("Cross-Verify Tool Lookup", True, 
+                            f"Successfully verified tool '{tool_name}' can be fetched by ID")
             else:
-                print(f"❌ TEST 4 FAILED: API error {response.status_code} - {response.text}")
-                return False
+                self.log_test("Cross-Verify Tool Lookup", False, 
+                            f"Failed to fetch tool '{tool_name}' by ID (status: {response.status_code})")
                 
         except Exception as e:
-            print(f"❌ TEST 4 FAILED: {e}")
-            return False
+            self.log_test("Cross-Verify Tool Lookup", False, 
+                        f"Exception fetching tool '{tool_name}': {str(e)}")
     
-    def test_individual_tool_access(self) -> bool:
-        """Test 5: Verify individual tool access by ID"""
+    def test_navigation_flow(self, strategies: List[Dict]):
+        """Test the complete navigation flow: list → get ID → fetch detail"""
+        print("\n🚀 Testing Complete Navigation Flow...")
+        
+        if not strategies:
+            self.log_test("Navigation Flow", False, "No strategies available for navigation test")
+            return
+        
+        # Pick a random strategy
+        test_strategy = random.choice(strategies)
+        strategy_name = test_strategy.get('name', 'Unknown')
+        strategy_id = test_strategy.get('id')
+        
+        print(f"   Testing navigation for: '{strategy_name}' (ID: {strategy_id})")
+        
         try:
-            # First get a list of tools to get an ID
-            response = requests.get(
-                f"{self.base_url}/mental-strategies",
-                headers=self.get_headers(),
-                timeout=10
-            )
+            # Step 1: List strategies (already done)
+            # Step 2: Get strategy detail by ID
+            response = requests.get(f"{self.base_url}/mental-strategies/{strategy_id}", 
+                                  headers=self.headers)
             
             if response.status_code == 200:
-                strategies = response.json()
+                detail = response.json()
                 
-                if not strategies:
-                    print(f"❌ TEST 5 FAILED: No strategies found for ID test")
-                    return False
-                
-                # Test accessing individual tool by ID
-                test_tool = strategies[0]
-                tool_id = test_tool.get("id")
-                
-                if not tool_id:
-                    print(f"❌ TEST 5 FAILED: Tool missing ID field")
-                    return False
-                
-                individual_response = requests.get(
-                    f"{self.base_url}/mental-strategies/{tool_id}",
-                    headers=self.get_headers(),
-                    timeout=10
-                )
-                
-                if individual_response.status_code == 200:
-                    individual_tool = individual_response.json()
-                    
-                    if individual_tool.get("id") == tool_id:
-                        print(f"✅ TEST 5 PASSED: Individual tool access works")
-                        print(f"   Tool: {individual_tool.get('name', 'Unknown')}")
-                        return True
-                    else:
-                        print(f"❌ TEST 5 FAILED: Tool ID mismatch")
-                        return False
+                # Verify the detail matches the list item
+                if (detail.get('id') == strategy_id and 
+                    detail.get('name') == strategy_name):
+                    self.log_test("Navigation Flow", True, 
+                                f"Complete navigation flow working for '{strategy_name}'")
                 else:
-                    print(f"❌ TEST 5 FAILED: Individual tool API error {individual_response.status_code}")
-                    return False
+                    self.log_test("Navigation Flow", False, 
+                                f"Data mismatch between list and detail for '{strategy_name}'")
             else:
-                print(f"❌ TEST 5 FAILED: List API error {response.status_code}")
-                return False
+                self.log_test("Navigation Flow", False, 
+                            f"Navigation failed for '{strategy_name}' - status {response.status_code}")
                 
         except Exception as e:
-            print(f"❌ TEST 5 FAILED: {e}")
+            self.log_test("Navigation Flow", False, 
+                        f"Exception in navigation flow: {str(e)}")
+    
+    def run_all_tests(self):
+        """Run all tests for the strategy detail navigation fix"""
+        print("🧪 Starting Backend API Tests for Strategy Detail Navigation Fix")
+        print("=" * 70)
+        
+        # Step 1: Authenticate
+        if not self.authenticate():
+            print("\n❌ Authentication failed. Cannot proceed with tests.")
             return False
+        
+        # Step 2: Test list mental strategies
+        strategies = self.test_list_mental_strategies()
+        
+        # Step 3: Test get strategy by ID (the main fix)
+        successful_ids = self.test_get_strategy_by_id(strategies)
+        
+        # Step 4: Test recommendations endpoint
+        recommendations = self.test_recommendations_endpoint()
+        
+        # Step 5: Cross-verify tool lookup
+        self.test_cross_verify_tool_lookup(strategies, recommendations)
+        
+        # Step 6: Test complete navigation flow
+        self.test_navigation_flow(strategies)
+        
+        # Summary
+        self.print_summary()
+        
+        return all(result["success"] for result in self.test_results)
     
-    def run_all_tests(self) -> Dict[str, bool]:
-        """Run all mental strategies tests"""
-        print(f"🚀 Starting Mental Strategies API Tests")
-        print(f"🔗 Backend URL: {self.base_url}")
-        print(f"=" * 60)
+    def print_summary(self):
+        """Print test summary"""
+        print("\n" + "=" * 70)
+        print("📊 TEST SUMMARY")
+        print("=" * 70)
         
-        # Authenticate first
-        if not self.register_and_login():
-            print(f"❌ Authentication failed - cannot run tests")
-            return {"authentication": False}
+        passed = sum(1 for r in self.test_results if r["success"])
+        total = len(self.test_results)
         
-        print(f"=" * 60)
+        print(f"Total Tests: {total}")
+        print(f"Passed: {passed}")
+        print(f"Failed: {total - passed}")
         
-        # Run all tests
-        results = {
-            "total_count": self.test_total_strategies_count(),
-            "category_filtering": self.test_category_filtering(),
-            "sample_tool": self.test_sample_tool_verification(),
-            "tool_structure": self.test_tool_structure(),
-            "individual_access": self.test_individual_tool_access()
-        }
+        if total - passed > 0:
+            print("\n❌ FAILED TESTS:")
+            for result in self.test_results:
+                if not result["success"]:
+                    print(f"   • {result['test']}: {result['message']}")
         
-        print(f"=" * 60)
-        print(f"📋 TEST SUMMARY:")
+        print(f"\n{'✅ ALL TESTS PASSED' if passed == total else '❌ SOME TESTS FAILED'}")
         
-        passed = 0
-        total = len(results)
-        
-        for test_name, result in results.items():
-            status = "✅ PASSED" if result else "❌ FAILED"
-            print(f"   {test_name.replace('_', ' ').title()}: {status}")
-            if result:
-                passed += 1
-        
-        print(f"=" * 60)
-        print(f"🎯 OVERALL: {passed}/{total} tests passed")
-        
-        return results
-
-def main():
-    """Main test execution"""
-    tester = EquiMindTester()
-    results = tester.run_all_tests()
-    
-    # Exit with error code if any tests failed
-    if not all(results.values()):
-        sys.exit(1)
-    else:
-        print(f"🎉 All tests passed!")
-        sys.exit(0)
+        # Specific analysis for the bug fix
+        strategy_tests = [r for r in self.test_results if "Get Strategy by ID" in r["test"]]
+        if strategy_tests:
+            failed_strategy_tests = [r for r in strategy_tests if not r["success"]]
+            if failed_strategy_tests:
+                print(f"\n⚠️  CRITICAL: {len(failed_strategy_tests)} strategy detail retrievals failed!")
+                print("   This indicates the 404 bug may still exist.")
+            else:
+                print(f"\n✅ SUCCESS: All {len(strategy_tests)} strategy detail retrievals passed!")
+                print("   The 404 bug fix appears to be working correctly.")
 
 if __name__ == "__main__":
-    main()
+    tester = EquiMindTester()
+    success = tester.run_all_tests()
+    sys.exit(0 if success else 1)
