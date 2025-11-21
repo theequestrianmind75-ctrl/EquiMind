@@ -188,7 +188,7 @@ export default function TappingGuide() {
           <Text style={styles.usageText}>
             <Text style={styles.bold}>Before Riding:</Text> Calm pre-ride nerves and set positive intentions.
             {'\n\n'}
-            <Text style={styles.bold}>During Riding:</Text> Take a moment to tap if you feel overwhelmed (at walk or halt).
+            <Text style={styles.bold}>During Riding:</Text> If you feel stressed or overwhelmed, pause. Tapping would be recommended before continuing.
             {'\n\n'}
             <Text style={styles.bold}>After Riding:</Text> Process emotions and release tension from your session.
             {'\n\n'}
