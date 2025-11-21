@@ -74,7 +74,7 @@ class EquiMindTester:
             self.log_test("Authentication", False, f"Exception: {str(e)}")
             return False
     
-    def test_total_strategies_count(self) -> bool:
+    def test_list_mental_strategies(self) -> List[Dict]:
         """Test 1: Verify total count of strategies is 136"""
         try:
             response = requests.get(
