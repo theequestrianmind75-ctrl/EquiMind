@@ -1,26 +1,39 @@
 #!/usr/bin/env python3
 """
-Backend API Testing for EquiMind Mental Strategies
-Testing the updated database with 136 tools and category filtering
+Backend API Testing for EquiMind Strategy Detail Navigation Fix
+Testing the fix for 404 errors when clicking on suggested tool boxes in post-ride analysis
 """
 
 import requests
 import json
 import sys
-from typing import Dict, List, Any
+import random
+from typing import Dict, List, Optional
 
-# Backend URL from frontend environment
+# Get backend URL from frontend .env
 BACKEND_URL = "https://rider-tools-1.preview.emergentagent.com/api"
 
 class EquiMindTester:
     def __init__(self):
         self.base_url = BACKEND_URL
         self.token = None
-        self.user_data = {
-            "email": "rider.test@equimind.com",
-            "password": "SecureRider2025!",
-            "name": "Test Rider"
-        }
+        self.headers = {}
+        self.test_results = []
+        
+    def log_test(self, test_name: str, success: bool, message: str, details: Optional[Dict] = None):
+        """Log test results"""
+        status = "✅ PASS" if success else "❌ FAIL"
+        print(f"{status} {test_name}: {message}")
+        
+        self.test_results.append({
+            "test": test_name,
+            "success": success,
+            "message": message,
+            "details": details or {}
+        })
+        
+        if not success:
+            print(f"   Details: {details}")
         
     def register_and_login(self) -> bool:
         """Register a test user and get authentication token"""
