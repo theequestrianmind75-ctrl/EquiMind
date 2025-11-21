@@ -368,10 +368,13 @@ async def get_admin_mental_strategies(auth: AdminAuth):
     
     strategies = await db.mental_strategies.find({}).to_list(1000)
     
-    # Remove MongoDB _id field
-    for s in strategies:
-        if '_id' in s:
-            del s['_id']
+    # Remove MongoDB _id and ensure id field exists
+    for strategy in strategies:
+        if '_id' in strategy:
+            # If no 'id' field, use _id as id
+            if 'id' not in strategy:
+                strategy['id'] = str(strategy['_id'])
+            del strategy['_id']
     
     return strategies
 
