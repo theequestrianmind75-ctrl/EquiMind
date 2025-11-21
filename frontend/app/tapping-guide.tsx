@@ -248,16 +248,20 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#375B50',
   },
-  introTitle: {
+  redQuestion: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000000',
-    marginBottom: 12,
+    color: '#dc2626',
+    marginBottom: 8,
+  },
+  questionSpacing: {
+    marginTop: 20,
   },
   introText: {
     fontSize: 15,
     color: '#1e293b',
     lineHeight: 22,
+    marginBottom: 8,
   },
   imageContainer: {
     backgroundColor: '#ffffff',
