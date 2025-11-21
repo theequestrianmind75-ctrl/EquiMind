@@ -219,15 +219,18 @@ frontend:
   
   - task: "Post-Ride Analysis Screen"
     implemented: true
-    working: "NA"
+    working: false
     file: "frontend/app/post-ride.tsx"
-    stuck_count: 0
+    stuck_count: 1
     priority: "high"
     needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Reflect on session with updated anxiety/confidence levels and notes."
+        - working: false
+          agent: "user"
+          comment: "Bug reported: When clicking on suggested tool boxes in post-ride analysis, the next page shows no tools. Navigation to strategy-detail page is broken."
   
   - task: "Session History"
     implemented: true
