@@ -311,7 +311,19 @@ async def update_strategy(
     current_user: dict = Depends(get_current_user)
 ):
     """Update a mental strategy - admin function"""
+    # Try to find by 'id' field first
     strategy = await db.mental_strategies.find_one({"id": strategy_id})
+    query_field = {"id": strategy_id}
+    
+    # If not found, try finding by _id (MongoDB ObjectId)
+    if not strategy:
+        try:
+            from bson import ObjectId
+            strategy = await db.mental_strategies.find_one({"_id": ObjectId(strategy_id)})
+            query_field = {"_id": ObjectId(strategy_id)}
+        except Exception:
+            pass
+    
     if not strategy:
         raise HTTPException(status_code=404, detail="Strategy not found")
     
@@ -323,12 +335,12 @@ async def update_strategy(
     
     # Update the strategy
     await db.mental_strategies.update_one(
-        {"id": strategy_id},
+        query_field,
         {"$set": update_dict}
     )
     
     # Return updated strategy
-    updated_strategy = await db.mental_strategies.find_one({"id": strategy_id})
+    updated_strategy = await db.mental_strategies.find_one(query_field)
     if '_id' in updated_strategy:
         # If no 'id' field, use _id as id
         if 'id' not in updated_strategy:
