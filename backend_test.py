@@ -34,52 +34,45 @@ class EquiMindTester:
         
         if not success:
             print(f"   Details: {details}")
+    
+    def authenticate(self) -> bool:
+        """Authenticate and get JWT token"""
+        print("\n🔐 Testing Authentication...")
         
-    def register_and_login(self) -> bool:
-        """Register a test user and get authentication token"""
+        # Try to login with existing test user
+        login_data = {
+            "email": "sarah.rider@example.com",
+            "password": "securepass123"
+        }
+        
         try:
-            # Try to register (might fail if user exists)
-            register_response = requests.post(
-                f"{self.base_url}/auth/register",
-                json=self.user_data,
-                timeout=10
-            )
+            response = requests.post(f"{self.base_url}/auth/login", json=login_data)
             
-            if register_response.status_code == 201 or register_response.status_code == 200:
-                data = register_response.json()
-                self.token = data["access_token"]
-                print(f"✅ User registered successfully")
-                return True
-            elif register_response.status_code == 400:
-                # User already exists, try login
-                login_response = requests.post(
-                    f"{self.base_url}/auth/login",
-                    json={"email": self.user_data["email"], "password": self.user_data["password"]},
-                    timeout=10
-                )
+            if response.status_code == 401:
+                # User doesn't exist, create one
+                print("   Creating test user...")
+                register_data = {
+                    "email": "sarah.rider@example.com",
+                    "password": "securepass123",
+                    "name": "Sarah Rider"
+                }
                 
-                if login_response.status_code == 200:
-                    data = login_response.json()
-                    self.token = data["access_token"]
-                    print(f"✅ User logged in successfully")
-                    return True
-                else:
-                    print(f"❌ Login failed: {login_response.status_code} - {login_response.text}")
-                    return False
+                response = requests.post(f"{self.base_url}/auth/register", json=register_data)
+                
+            if response.status_code in [200, 201]:
+                data = response.json()
+                self.token = data["access_token"]
+                self.headers = {"Authorization": f"Bearer {self.token}"}
+                self.log_test("Authentication", True, f"Successfully authenticated as {data['user']['name']}")
+                return True
             else:
-                print(f"❌ Registration failed: {register_response.status_code} - {register_response.text}")
+                self.log_test("Authentication", False, f"Failed with status {response.status_code}", 
+                            {"response": response.text})
                 return False
                 
         except Exception as e:
-            print(f"❌ Authentication error: {e}")
+            self.log_test("Authentication", False, f"Exception: {str(e)}")
             return False
-    
-    def get_headers(self) -> Dict[str, str]:
-        """Get headers with authentication token"""
-        return {
-            "Authorization": f"Bearer {self.token}",
-            "Content-Type": "application/json"
-        }
     
     def test_total_strategies_count(self) -> bool:
         """Test 1: Verify total count of strategies is 136"""
