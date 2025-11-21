@@ -79,10 +79,6 @@ export default function TappingGuide() {
             <Text style={styles.pointText}>Where your hair begins on the inner part of your eyebrow, right on the bone.</Text>
           </View>
           <View style={styles.pointSection}>
-            <Text style={styles.pointLabel}>Meridian:</Text>
-            <Text style={styles.pointText}>Bladder</Text>
-          </View>
-          <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
             <Text style={styles.pointText}>Releases trauma, hurt, and sadness and promotes peace and emotional healing.</Text>
           </View>
