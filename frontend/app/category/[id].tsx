@@ -487,6 +487,50 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     marginLeft: 8,
   },
+  wiseMindCard: {
+    backgroundColor: '#ffffff',
+    padding: 20,
+    borderRadius: 12,
+    marginBottom: 16,
+    borderWidth: 1,
+    borderColor: '#10b981',
+  },
+  wiseMindTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#1e293b',
+    marginBottom: 12,
+  },
+  wiseMindDescription: {
+    fontSize: 14,
+    color: '#000000',
+    lineHeight: 22,
+    marginBottom: 16,
+  },
+  wiseMindImage: {
+    width: '100%',
+    height: 200,
+    marginBottom: 16,
+  },
+  wiseMindLegend: {
+    marginTop: 8,
+  },
+  legendItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  legendDot: {
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+    marginRight: 8,
+  },
+  legendText: {
+    fontSize: 13,
+    color: '#000000',
+    flex: 1,
+  },
   editModeIndicator: {
     flexDirection: 'row',
     backgroundColor: '#fef2f2',
