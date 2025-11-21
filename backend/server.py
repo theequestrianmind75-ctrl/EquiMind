@@ -256,10 +256,13 @@ async def get_mental_strategies(
     
     strategies = await db.mental_strategies.find(query).to_list(1000)
     
-    # Remove MongoDB _id field
-    for s in strategies:
-        if '_id' in s:
-            del s['_id']
+    # Remove MongoDB _id and ensure id field exists
+    for strategy in strategies:
+        if '_id' in strategy:
+            # If no 'id' field, use _id as id
+            if 'id' not in strategy:
+                strategy['id'] = str(strategy['_id'])
+            del strategy['_id']
     
     # Filter by anxiety and confidence levels if provided
     if min_anxiety is not None or max_anxiety is not None or min_confidence is not None or max_confidence is not None:
