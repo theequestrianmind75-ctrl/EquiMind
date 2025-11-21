@@ -130,7 +130,6 @@ export default function TappingGuide() {
             <Text style={styles.pointText}>In the space between your nose and upper lip.</Text>
           </View>
           <View style={styles.pointSection}>
-          <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
             <Text style={styles.pointText}>Releases shame and powerlessness and promotes self-acceptance and empowerment.</Text>
           </View>
