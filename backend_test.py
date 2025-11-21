@@ -10,7 +10,7 @@ import sys
 from typing import Dict, List, Any
 
 # Backend URL from frontend environment
-BACKEND_URL = "https://mental-equestrian-1.preview.emergentagent.com/api"
+BACKEND_URL = "https://rider-tools-1.preview.emergentagent.com/api"
 
 class EquiMindTester:
     def __init__(self):

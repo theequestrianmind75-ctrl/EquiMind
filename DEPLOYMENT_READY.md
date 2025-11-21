@@ -47,15 +47,15 @@ When you redeploy, the backend will automatically:
 ## Testing in Preview (Optional)
 
 Before deploying, you can test the restoration:
-1. Visit: https://mental-equestrian-1.preview.emergentagent.com/test-admin
+1. Visit: https://rider-tools-1.preview.emergentagent.com/test-admin
 2. Verify you see 107 tools with full instructions
 3. Check categories show correctly
 
 ## Backup Files Available
 
 If needed, you can download backups:
-- JSON: https://mental-equestrian-1.preview.emergentagent.com/tools_backup_working.json
-- CSV: https://mental-equestrian-1.preview.emergentagent.com/tools_export.csv
+- JSON: https://rider-tools-1.preview.emergentagent.com/tools_backup_working.json
+- CSV: https://rider-tools-1.preview.emergentagent.com/tools_export.csv
 
 ## What This Fixes
 
