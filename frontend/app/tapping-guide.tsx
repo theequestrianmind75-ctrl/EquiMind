@@ -257,6 +257,19 @@ const styles = StyleSheet.create({
     color: '#1e293b',
     lineHeight: 22,
   },
+  imageContainer: {
+    backgroundColor: '#ffffff',
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 16,
+    borderWidth: 1,
+    borderColor: '#375B50',
+    alignItems: 'center',
+  },
+  tappingImage: {
+    width: '100%',
+    height: 300,
+  },
   pointCard: {
     backgroundColor: '#ffffff',
     borderRadius: 12,
