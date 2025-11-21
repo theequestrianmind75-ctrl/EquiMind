@@ -256,6 +256,35 @@ export default function CategoryDetail() {
           </View>
         )}
         
+        {id === 'mindfulness' && (
+          <View style={styles.wiseMindCard}>
+            <Text style={styles.wiseMindTitle}>🧠 Understanding Wise Mind</Text>
+            <Text style={styles.wiseMindDescription}>
+              Wise Mind is the balance between Emotional Mind (feelings, intuition) and Thinking Mind (logic, reason). 
+              It's where you make your best decisions - integrating both emotion and logic.
+            </Text>
+            <Image 
+              source={require('../../assets/images/wise-mind-diagram.png')} 
+              style={styles.wiseMindImage}
+              resizeMode="contain"
+            />
+            <View style={styles.wiseMindLegend}>
+              <View style={styles.legendItem}>
+                <View style={[styles.legendDot, { backgroundColor: '#ef4444' }]} />
+                <Text style={styles.legendText}>Emotional Mind: Feelings-driven decisions</Text>
+              </View>
+              <View style={styles.legendItem}>
+                <View style={[styles.legendDot, { backgroundColor: '#3b82f6' }]} />
+                <Text style={styles.legendText}>Thinking Mind: Logic-driven decisions</Text>
+              </View>
+              <View style={styles.legendItem}>
+                <View style={[styles.legendDot, { backgroundColor: '#10b981' }]} />
+                <Text style={styles.legendText}>Wise Mind: Balanced, integrated decisions</Text>
+              </View>
+            </View>
+          </View>
+        )}
+        
         {editMode && (
           <View style={styles.editModeIndicator}>
             <Ionicons name="create" size={20} color="#ef4444" />
