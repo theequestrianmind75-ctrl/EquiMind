@@ -113,10 +113,6 @@ export default function TappingGuide() {
             <Text style={styles.pointText}>Directly under the eye, on the ridge of bone.</Text>
           </View>
           <View style={styles.pointSection}>
-            <Text style={styles.pointLabel}>Meridian:</Text>
-            <Text style={styles.pointText}>Stomach</Text>
-          </View>
-          <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
             <Text style={styles.pointText}>Releases fear and anxiety and promotes contentment, calmness, and safety.</Text>
           </View>
