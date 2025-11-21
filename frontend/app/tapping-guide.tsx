@@ -5,7 +5,6 @@ import {
   StyleSheet,
   ScrollView,
   TouchableOpacity,
-  Image,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
@@ -15,51 +14,32 @@ export default function TappingGuide() {
   const router = useRouter();
 
   return (
-    <SafeAreaView style={styles.container} edges={['top']}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="#f1f5f9" />
+          <Ionicons name="arrow-back" size={24} color="#000000" />
         </TouchableOpacity>
-        <Text style={styles.title}>Tapping (EFT) Guide</Text>
-        <View style={styles.placeholder} />
+        <Text style={styles.headerTitle}>EFT Tapping Guide</Text>
       </View>
 
-      <ScrollView style={styles.scrollView}>
+      <ScrollView style={styles.scrollView} contentContainerStyle={styles.contentContainer}>
         <View style={styles.introCard}>
-          <Text style={styles.introTitle}>What is EFT Tapping?</Text>
+          <Text style={styles.introTitle}>The 9-Point EFT Tapping Sequence</Text>
           <Text style={styles.introText}>
-            Tapping, also known as EFT (Emotional Freedom Techniques), is a powerful technique that combines modern psychology and ancient Chinese acupressure.
-            {'\n\n'}
-            During a Tapping session, you focus on whatever may be causing you stress while gently tapping with your fingers on specific points on the body.
-            {'\n\n'}
-            Tapping on these points sends calming signals to the brain, letting it know that it is safe to relax.
+            Tap each point 5-7 times while focusing on your specific concern. Use 2-3 fingers with gentle but firm pressure.
           </Text>
         </View>
-
-        <View style={styles.diagramCard}>
-          <Text style={styles.sectionTitle}>EFT Tapping Points Chart</Text>
-          <Image
-            source={{ uri: 'https://www.thrivingnow.com/wp-content/uploads/2022/10/EFT-Tapping-Points-Female-3300x6000-1.png' }}
-            style={styles.diagram}
-            resizeMode="contain"
-          />
-          <Text style={styles.imageCaption}>
-            The 9 main EFT tapping points used for stress relief
-          </Text>
-        </View>
-
-        <Text style={styles.sectionHeader}>The 9 Tapping Points</Text>
 
         <View style={styles.pointCard}>
           <View style={styles.pointHeader}>
             <View style={styles.pointNumber}>
               <Text style={styles.pointNumberText}>1</Text>
             </View>
-            <Text style={styles.pointName}>Side of the Hand (Karate Chop)</Text>
+            <Text style={styles.pointName}>Karate Chop Point (KC)</Text>
           </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Location:</Text>
-            <Text style={styles.pointText}>Along the fleshy side of the hand between the base of the pinky finger and the wrist.</Text>
+            <Text style={styles.pointText}>The fleshy outer edge of the hand, below the pinkie finger.</Text>
           </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
@@ -72,11 +52,11 @@ export default function TappingGuide() {
             <View style={styles.pointNumber}>
               <Text style={styles.pointNumberText}>2</Text>
             </View>
-            <Text style={styles.pointName}>Eyebrow (EB)</Text>
+            <Text style={styles.pointName}>Beginning of the Eyebrow (EB)</Text>
           </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Location:</Text>
-            <Text style={styles.pointText}>Where your hair begins on the inner part of your eyebrow, right on the bone.</Text>
+            <Text style={styles.pointText}>The inner edge of the eyebrow, just above the bridge of the nose.</Text>
           </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
@@ -140,16 +120,15 @@ export default function TappingGuide() {
             <View style={styles.pointNumber}>
               <Text style={styles.pointNumberText}>6</Text>
             </View>
-            <Text style={styles.pointName}>Under the Mouth (UM)</Text>
+            <Text style={styles.pointName}>Chin Point (CP)</Text>
           </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Location:</Text>
-            <Text style={styles.pointText}>In the crease between your chin and bottom lip.</Text>
+            <Text style={styles.pointText}>In the crease between your lower lip and chin.</Text>
           </View>
           <View style={styles.pointSection}>
-          <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
-            <Text style={styles.pointText}>Releases confusion and uncertainty and promotes clarity, certainty, and confidence.</Text>
+            <Text style={styles.pointText}>Releases confusion and uncertainty and promotes clarity and confidence in decisions.</Text>
           </View>
         </View>
 
@@ -158,16 +137,15 @@ export default function TappingGuide() {
             <View style={styles.pointNumber}>
               <Text style={styles.pointNumberText}>7</Text>
             </View>
-            <Text style={styles.pointName}>Collarbone (CB)</Text>
+            <Text style={styles.pointName}>Collarbone Point (CB)</Text>
           </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Location:</Text>
-            <Text style={styles.pointText}>One inch down and one inch out from where your collarbones meet in the center.</Text>
+            <Text style={styles.pointText}>About 1 inch down and 1 inch out from the U-shaped notch at the base of your throat.</Text>
           </View>
           <View style={styles.pointSection}>
-          <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
-            <Text style={styles.pointText}>Releases feeling stuck and promotes ease in moving forward and boosts confidence.</Text>
+            <Text style={styles.pointText}>Releases feeling stuck and stress and promotes moving forward with ease and clarity.</Text>
           </View>
         </View>
 
@@ -180,12 +158,11 @@ export default function TappingGuide() {
           </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Location:</Text>
-            <Text style={styles.pointText}>About four inches below the armpit on your side.</Text>
+            <Text style={styles.pointText}>On the side of your body, about 4 inches below the armpit (at bra line for women).</Text>
           </View>
           <View style={styles.pointSection}>
-          <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
-            <Text style={styles.pointText}>Releases guilt, worry, and obsessing and promotes clarity, confidence, and relaxation.</Text>
+            <Text style={styles.pointText}>Releases worry, insecurity, and guilt and promotes confidence and clarity.</Text>
           </View>
         </View>
 
@@ -194,26 +171,24 @@ export default function TappingGuide() {
             <View style={styles.pointNumber}>
               <Text style={styles.pointNumberText}>9</Text>
             </View>
-            <Text style={styles.pointName}>Top of the Head (TH)</Text>
+            <Text style={styles.pointName}>Top of Head (TH)</Text>
           </View>
           <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Location:</Text>
-            <Text style={styles.pointText}>Right on the center of the top of your head, at the crown.</Text>
+            <Text style={styles.pointText}>The crown of the head, directly at the center top.</Text>
           </View>
           <View style={styles.pointSection}>
-          <View style={styles.pointSection}>
             <Text style={styles.pointLabel}>Benefits:</Text>
-            <Text style={styles.pointText}>Opens the crown chakra and promotes spiritual connection while anchoring balance.</Text>
+            <Text style={styles.pointText}>Releases limited thinking and promotes connection to intuition, wisdom, and spiritual connection.</Text>
           </View>
         </View>
 
         <View style={styles.usageCard}>
-          <Ionicons name="shield" size={32} color="#000000" />
-          <Text style={styles.usageTitle}>How to Use EFT Tapping</Text>
+          <Text style={styles.usageTitle}>When to Use EFT Tapping</Text>
           <Text style={styles.usageText}>
-            <Text style={styles.bold}>Before Riding:</Text> Use tapping to calm pre-ride anxiety and set a positive intention.
+            <Text style={styles.bold}>Before Riding:</Text> Calm pre-ride nerves and set positive intentions.
             {'\n\n'}
-            <Text style={styles.bold}>During Challenges:</Text> If you feel stressed or overwhelmed, pause and tap through the sequence.
+            <Text style={styles.bold}>During Riding:</Text> Take a moment to tap if you feel overwhelmed (at walk or halt).
             {'\n\n'}
             <Text style={styles.bold}>After Riding:</Text> Process emotions and release tension from your session.
             {'\n\n'}
@@ -233,81 +208,50 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: 16,
-    paddingTop: 8,
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    backgroundColor: '#ffffff',
+    borderBottomWidth: 1,
+    borderBottomColor: '#e5e7eb',
   },
   backButton: {
     padding: 8,
   },
-  title: {
-    fontSize: 18,
-    fontWeight: '600',
-    color: '#1e293b',
-  },
-  placeholder: {
-    width: 40,
+  headerTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#000000',
+    marginLeft: 16,
   },
   scrollView: {
     flex: 1,
-    padding: 24,
+  },
+  contentContainer: {
+    padding: 16,
   },
   introCard: {
     backgroundColor: '#ffffff',
-    padding: 20,
     borderRadius: 12,
-    marginBottom: 24,
+    padding: 20,
+    marginBottom: 16,
     borderWidth: 1,
     borderColor: '#375B50',
   },
   introTitle: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
-    color: '#ec4899',
+    color: '#000000',
     marginBottom: 12,
   },
   introText: {
-    fontSize: 14,
-    color: '#000000',
-    lineHeight: 22,
-  },
-  diagramCard: {
-    backgroundColor: '#ffffff',
-    padding: 20,
-    borderRadius: 12,
-    marginBottom: 24,
-    borderWidth: 1,
-    borderColor: '#375B50',
-    alignItems: 'center',
-  },
-  sectionTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
+    fontSize: 15,
     color: '#1e293b',
-    marginBottom: 16,
-  },
-  diagram: {
-    width: '100%',
-    height: 400,
-    marginBottom: 12,
-  },
-  imageCaption: {
-    fontSize: 12,
-    color: '#000000',
-    fontStyle: 'italic',
-    textAlign: 'center',
-  },
-  sectionHeader: {
-    fontSize: 22,
-    fontWeight: 'bold',
-    color: '#ec4899',
-    marginBottom: 16,
-    marginTop: 8,
+    lineHeight: 22,
   },
   pointCard: {
     backgroundColor: '#ffffff',
-    padding: 20,
     borderRadius: 12,
+    padding: 16,
     marginBottom: 16,
     borderWidth: 1,
     borderColor: '#375B50',
@@ -316,63 +260,62 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 16,
+    paddingBottom: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: '#e5e7eb',
   },
   pointNumber: {
     width: 36,
     height: 36,
     borderRadius: 18,
-    backgroundColor: '#ec4899',
-    alignItems: 'center',
+    backgroundColor: '#375B50',
     justifyContent: 'center',
+    alignItems: 'center',
     marginRight: 12,
   },
   pointNumberText: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold',
     color: '#ffffff',
   },
   pointName: {
-    flex: 1,
-    fontSize: 16,
+    fontSize: 17,
     fontWeight: '600',
-    color: '#1e293b',
+    color: '#000000',
+    flex: 1,
   },
   pointSection: {
     marginBottom: 12,
   },
   pointLabel: {
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: '600',
-    color: '#ec4899',
+    color: '#375B50',
     marginBottom: 4,
   },
   pointText: {
     fontSize: 14,
-    color: '#000000',
+    color: '#1e293b',
     lineHeight: 20,
   },
   usageCard: {
-    backgroundColor: '#ffffff',
-    padding: 24,
+    backgroundColor: '#fffbeb',
     borderRadius: 12,
-    marginBottom: 32,
-    borderWidth: 1,
-    borderColor: '#375B50',
-    alignItems: 'center',
+    padding: 20,
+    marginBottom: 16,
+    borderWidth: 2,
+    borderColor: '#f59e0b',
   },
   usageTitle: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
-    color: '#1e293b',
-    marginTop: 12,
-    marginBottom: 16,
+    color: '#000000',
+    marginBottom: 12,
   },
   usageText: {
-    fontSize: 14,
-    color: '#000000',
-    lineHeight: 22,
-    textAlign: 'left',
-    width: '100%',
+    fontSize: 15,
+    color: '#1e293b',
+    lineHeight: 24,
   },
   bold: {
     fontWeight: '600',
