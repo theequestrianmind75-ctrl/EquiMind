@@ -742,6 +742,12 @@ const styles = StyleSheet.create({
     color: '#1e293b',
     marginBottom: 16,
   },
+  helperText: {
+    fontSize: 13,
+    color: '#64748b',
+    marginBottom: 12,
+    fontStyle: 'italic',
+  },
   sliderContainer: {
     marginTop: 8,
   },
