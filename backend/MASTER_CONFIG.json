@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "description": "EquiMind master config for triggers, tools, and trigger-to-tool mapping (including competition nerves, low energy, and context).",
+  "triggers": [
+    {
+      "id": "high_anxiety",
+      "name": "High Anxiety",
+      "short_label": "High Anxiety",
+      "description": "Rider reports high anxiety, fear, or intense nervousness (for example, 8–10 on a 1–10 scale).",
+      "notes_for_ui": "Your anxiety is high right now. Let's help your body and mind settle so you and your horse feel safer."
+    },
+    {
+      "id": "anxiety_increased",
+      "name": "Anxiety Increased",
+      "short_label": "Anxiety Increased",
+      "description": "Rider reports a noticeable increase in anxiety from their baseline, but not at peak level yet.",
+      "notes_for_ui": "You've noticed your anxiety creeping up. This is a great time to ground before it spikes."
+    },
+    {
+      "id": "low_confidence",
+      "name": "Low Confidence",
+      "short_label": "Low Confidence",
+      "description": "Rider reports generally low belief in their abilities or skills for this ride.",
+      "notes_for_ui": "You're not feeling very confident. Let's build up your sense of capability step by step."
+    },
+    {
+      "id": "confidence_decreased",
+      "name": "Confidence Decreased",
+      "short_label": "Confidence Dip",
+      "description": "Rider feels a recent drop in confidence compared to their usual level.",
+      "notes_for_ui": "Your confidence has dipped. Let's process what happened and support you in getting it back."
+    },
+    {
+      "id": "high_anxiety_low_confidence",
+      "name": "High Anxiety + Low Confidence",
+      "short_label": "High Anxiety + Low Confidence",
+      "description": "Rider reports both high anxiety and low confidence at the same time.",
+      "notes_for_ui": "You're feeling both anxious and unsure. We'll slow things down and co-regulate you and your horse together."
+    },
+    {
+      "id": "high_horse_energy_low_confidence",
+      "name": "High Horse Energy + Low Rider Confidence",
+      "short_label": "Spicy Horse + Low Confidence",
+      "description": "Horse is high energy or reactive while the rider reports low confidence.",
+      "notes_for_ui": "Your horse is feeling spicy and your confidence is low. Let's focus on body awareness and safety together."
+    },
+    {
+      "id": "low_horse_focus",
+      "name": "Low Horse Focus",
+      "short_label": "Low Horse Focus",
+      "description": "Horse seems distracted, tense, or not tuned in to the rider.",
+      "notes_for_ui": "Your horse's focus is scattered. We'll use tools to release tension and reconnect."
+    },
+    {
+      "id": "optimal_performance",
+      "name": "Optimal Performance",
+      "short_label": "In the Zone",
+      "description": "Rider feels 'in the zone' or near their best performance state.",
+      "notes_for_ui": "You're in a really solid place. We'll help you reinforce this flow state."
+    },
+    {
+      "id": "good_improvement",
+      "name": "Good Improvement",
+      "short_label": "Good Improvement",
+      "description": "Rider notices clear progress or positive change compared to previous rides.",
+      "notes_for_ui": "You've made good progress. Let's highlight and reinforce what's working."
+    },
+    {
+      "id": "optimal_horse_metrics",
+      "name": "Optimal Horse Metrics",
+      "short_label": "Optimal Horse Metrics",
+      "description": "Horse is moving, responding, or recovering in ways that meet or exceed goals or expected metrics.",
+      "notes_for_ui": "Your horse is giving you really good data today. We'll sync your mindset with their performance."
+    },
+    {
+      "id": "default",
+      "name": "Default / General Exploration",
+      "short_label": "Default",
+      "description": "Used when no specific trigger is detected or the rider wants to browse general tools.",
+      "notes_for_ui": "Not sure where to start? Let's explore some tools together."
+    },
+    {
+      "id": "high_confidence_high_anxiety",
+      "name": "High Confidence + High Anxiety (Competition Nerves)",
+      "short_label": "Competition Nerves",
+      "description": "Rider reports feeling confident in skills but noticeably nervous, buzzing, or keyed up. A high-confidence, high-anxiety competition state where arousal needs to be balanced, not eliminated.",
+      "notes_for_ui": "You feel capable, but your nerves are high. Let's channel that energy into focus instead of overwhelm."
+    },
+    {
+      "id": "low_energy_low_motivation",
+      "name": "Low Energy / Low Motivation (Apathy or Exhaustion)",
+      "short_label": "Low Energy / Motivation",
+      "description": "Rider feels flat, tired, unmotivated, or emotionally drained. Not primarily anxious or scared—more depleted, apathetic, or low-drive.",
+      "notes_for_ui": "You're not broken—you're tired. Let's gently build a bit of momentum and reconnect with why you ride."
+    },
+    {
+      "id": "context_competition_vs_training",
+      "name": "Competition vs Training Context",
+      "short_label": "Context: Competition or Training",
+      "description": "Distinguishes whether the rider is currently in a show/competition setting or a schooling/training ride. The same emotional state will get different tools depending on this context.",
+      "notes_for_ui": "Are you in show mode or training mode right now? This helps match tools to what today actually looks like."
+    }
+  ],
+  "trigger_tool_index": {
+    "high_confidence_high_anxiety": {
+      "trigger_name": "High Confidence + High Anxiety (Competition Nerves)",
+      "tool_categories": [
+        "Arousal Balancing / Competition Nerves",
+        "Breathing / HRV",
+        "Visualization / Imagery",
+        "Competition Focus / Pre-Ride Routine"
+      ],
+      "tool_ids": [
+        "arousal-balance-90s-reset",
+        "competition-nerves-label-and-aim",
+        "walk-ring-pressure-release",
+        "show-ring-box-breathing",
+        "competition-exhale-extend",
+        "clear-round-mini-visualization",
+        "competition-start-gate-visual",
+        "ride-your-strength-highlight",
+        "competition-pre-ride-focus-3x3",
+        "mounting-block-focus-sequence",
+        "in-gate-one-thing-focus"
+      ]
+    },
+    "low_energy_low_motivation": {
+      "trigger_name": "Low Energy / Low Motivation",
+      "tool_categories": [
+        "Activation / Grounding",
+        "Somatic Reset / Gentle Movement",
+        "Values & Motivation Reflection"
+      ],
+      "tool_ids": [
+        "low-energy-5-minute-activation",
+        "grounding-check-in-activate",
+        "micro-goal-activation-ride",
+        "gentle-shoulder-and-hip-reset",
+        "barn-aisle-stretch-walk",
+        "mounted-walk-body-wake-up",
+        "why-i-ride-values-reminder",
+        "values-check-when-tired",
+        "future-rider-self-note"
+      ]
+    },
+    "competition_mode": {
+      "trigger_name": "Competition Mode",
+      "tool_categories": [
+        "Arousal Balancing / Competition Nerves",
+        "Breathing / HRV",
+        "Visualization / Imagery",
+        "Competition Focus / Pre-Ride Routine"
+      ],
+      "tool_ids": [
+        "arousal-balance-90s-reset",
+        "competition-nerves-label-and-aim",
+        "walk-ring-pressure-release",
+        "show-ring-box-breathing",
+        "competition-exhale-extend",
+        "clear-round-mini-visualization",
+        "competition-start-gate-visual",
+        "ride-your-strength-highlight",
+        "competition-pre-ride-focus-3x3",
+        "mounting-block-focus-sequence",
+        "in-gate-one-thing-focus"
+      ]
+    },
+    "training_mode": {
+      "trigger_name": "Training Mode",
+      "tool_categories": [
+        "Mindfulness / Grounding",
+        "Horse Connection & Focus",
+        "Skill Development / Exploration",
+        "Activation / Grounding",
+        "Somatic Reset / Gentle Movement"
+      ],
+      "tool_ids": [
+        "training-ride-mindfulness-scan",
+        "arena-edges-5-senses",
+        "hand-graze-connection-ritual",
+        "focus-circle-in-hand",
+        "10-minute-skill-focus-block",
+        "playful-pattern-exploration",
+        "low-energy-5-minute-activation",
+        "grounding-check-in-activate",
+        "gentle-shoulder-and-hip-reset",
+        "barn-aisle-stretch-walk",
+        "mounted-walk-body-wake-up"
+      ]
+    }
+  }
+}
