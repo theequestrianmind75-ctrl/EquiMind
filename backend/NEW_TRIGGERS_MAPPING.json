@@ -1,0 +1,70 @@
+[
+  {
+    "trigger_id": "high_confidence_high_anxiety",
+    "trigger_name": "High Confidence + High Anxiety (Competition Nerves)",
+    "description": "Rider reports feeling confident in skills but noticeably nervous, buzzing, or keyed up. This is a high-confidence, high-anxiety competition state where arousal needs to be balanced, not eliminated.",
+    "notes_for_ui": "You feel capable, but your nerves are high. Let's channel that energy into focus instead of overwhelm.",
+    "tool_categories": [
+      "Breathing / HRV",
+      "Tapping / EFT",
+      "Mindfulness & Flow"
+    ],
+    "selection_logic": "Prioritize Breathing / HRV tools for arousal regulation, then Tapping / EFT for nervous system balance, then Mindfulness & Flow for competition focus.",
+    "recommended_tool_names": [
+      "4-2-6 Performance Breath",
+      "Pre-Ride Anxiety Release",
+      "Heart-Focused Breathing"
+    ]
+  },
+  {
+    "trigger_id": "low_energy_low_motivation",
+    "trigger_name": "Low Energy / Low Motivation (Apathy or Exhaustion)",
+    "description": "Rider feels flat, tired, unmotivated, or emotionally drained. Not primarily anxious or scared—more depleted, apathetic, or low-drive.",
+    "notes_for_ui": "You're not broken—you're tired. Let's gently build a bit of momentum and reconnect with why you ride.",
+    "tool_categories": [
+      "BODY RESET",
+      "Breathing / HRV",
+      "Mindfulness & Flow"
+    ],
+    "selection_logic": "Prefer activating but gentle BODY RESET tools first (shoulder rolls, soft shakes), then Breathing / HRV for energy shift, then Mindfulness & Flow for reconnection.",
+    "recommended_tool_names": [
+      "Shoulder Rolls (Micro-Movement)",
+      "Heart-Focused Breathing",
+      "Five-Sense Horseback Scan"
+    ]
+  },
+  {
+    "trigger_id": "context_competition",
+    "trigger_name": "Competition Context",
+    "description": "Rider is in a show/competition setting. Tools should focus on performance readiness, arousal regulation, and pre-ride routine.",
+    "notes_for_ui": "You're in show mode. Let's get you competition-ready.",
+    "tool_categories": [
+      "Breathing / HRV",
+      "Tapping / EFT",
+      "BODY RESET"
+    ],
+    "selection_logic": "Competition context modifier: prioritize performance-focused breathing, pre-ride anxiety release tapping, and quick physical resets.",
+    "recommended_tool_names": [
+      "4-2-6 Performance Breath",
+      "Pre-Ride Anxiety Release",
+      "Conscious Swallow Reset"
+    ]
+  },
+  {
+    "trigger_id": "context_training",
+    "trigger_name": "Training Context",
+    "description": "Rider is in a schooling/training setting. Tools can be more exploratory, skill-building focused, and relationship-oriented.",
+    "notes_for_ui": "You're in training mode. Let's work on skill development and connection.",
+    "tool_categories": [
+      "Mindfulness & Flow",
+      "BODY RESET",
+      "Breathing / HRV"
+    ],
+    "selection_logic": "Training context modifier: prioritize mindfulness for awareness, body scanning for interoception, and connection-focused tools.",
+    "recommended_tool_names": [
+      "Five-Sense Horseback Scan",
+      "Horseback Body Scan",
+      "Breath-Per-Stride Synchronization"
+    ]
+  }
+]
