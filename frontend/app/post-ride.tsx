@@ -361,6 +361,38 @@ export default function PostRide() {
                 </View>
               </View>
 
+              <View style={styles.section}>
+                <Text style={styles.sectionTitle}>Energy Level: {riderEnergyLevel}/10</Text>
+                <Text style={styles.helperText}>How energized or depleted do you feel?</Text>
+                <View style={styles.sliderContainer}>
+                  <View style={styles.scaleButtons}>
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => (
+                      <TouchableOpacity
+                        key={level}
+                        style={[
+                          styles.scaleButton,
+                          riderEnergyLevel === level && styles.scaleButtonActive,
+                        ]}
+                        onPress={() => setRiderEnergyLevel(level)}
+                      >
+                        <Text
+                          style={[
+                            styles.scaleButtonText,
+                            riderEnergyLevel === level && styles.scaleButtonTextActive,
+                          ]}
+                        >
+                          {level}
+                        </Text>
+                      </TouchableOpacity>
+                    ))}
+                  </View>
+                  <View style={styles.scaleLabels}>
+                    <Text style={styles.scaleLabel}>Depleted</Text>
+                    <Text style={styles.scaleLabel}>Energized</Text>
+                  </View>
+                </View>
+              </View>
+
               <View style={styles.divider} />
               <Text style={styles.sectionHeader}>{selectedSession.horse_name ? selectedSession.horse_name.toUpperCase() : 'YOUR HORSE'}</Text>
 
