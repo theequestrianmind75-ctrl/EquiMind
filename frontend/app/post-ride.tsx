@@ -68,7 +68,21 @@ export default function PostRide() {
       const horseEnergy = horseEnergyLevel;
       const horseFocus = horseFocusLevel;
       
-      // Determine which triggers apply
+      // Get context from session
+      const sessionContext = selectedSession?.context || 'training';
+      
+      // NEW TRIGGERS - Check first (higher priority)
+      // High confidence + high anxiety (Competition Nerves)
+      if (postConfidence >= 7 && postAnxiety >= 7) {
+        triggers.push('high_confidence_high_anxiety');
+      }
+      
+      // Low energy + low motivation
+      if (riderEnergyLevel <= 3 && postAnxiety <= 5) {
+        triggers.push('low_energy_low_motivation');
+      }
+      
+      // EXISTING TRIGGERS
       if (postAnxiety >= 7) triggers.push('high_anxiety');
       if (anxietyChange >= 2) triggers.push('anxiety_increased');
       if (postConfidence <= 4) triggers.push('low_confidence');
@@ -82,8 +96,15 @@ export default function PostRide() {
         triggers.push('optimal_horse_metrics');
       }
       
-      // If no triggers, use default
-      if (triggers.length === 0) triggers.push('default');
+      // Add context as a trigger
+      if (sessionContext === 'competition') {
+        triggers.push('competition_mode');
+      } else {
+        triggers.push('training_mode');
+      }
+      
+      // If no emotional triggers, use default
+      if (triggers.length === 1) triggers.push('default'); // Only context was added
       
       // Fetch recommendations from backend
       const response = await api.get('/recommendations');
