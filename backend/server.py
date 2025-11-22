@@ -107,6 +107,7 @@ class Session(BaseModel):
     rider_id: str
     session_type: str
     ride_type: str
+    context: str = "training"  # "training" or "competition" - NEW FIELD
     rider_name: Optional[str] = None
     anxiety_level: Optional[int] = None
     confidence_level: Optional[int] = None
