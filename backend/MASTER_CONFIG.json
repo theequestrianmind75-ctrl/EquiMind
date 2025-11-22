@@ -102,6 +102,50 @@
     }
   ],
   "trigger_tool_index": {
+    "high_anxiety": {
+      "trigger_name": "High Anxiety",
+      "tool_categories": ["Breathing / HRV", "BODY RESET", "Tapping / EFT"]
+    },
+    "anxiety_increased": {
+      "trigger_name": "Anxiety Increased",
+      "tool_categories": ["Mindfulness / Grounding", "Mindfulness & Flow", "BODY RESET"]
+    },
+    "low_confidence": {
+      "trigger_name": "Low Confidence",
+      "tool_categories": ["Mindfulness & Flow", "Values & Motivation Reflection", "Skill Development / Exploration"]
+    },
+    "confidence_decreased": {
+      "trigger_name": "Confidence Decreased",
+      "tool_categories": ["Mindfulness & Flow", "Mindfulness / Grounding", "Values & Motivation Reflection"]
+    },
+    "high_anxiety_low_confidence": {
+      "trigger_name": "High Anxiety + Low Confidence",
+      "tool_categories": ["BODY RESET", "Breathing / HRV", "Mindfulness / Grounding"]
+    },
+    "high_horse_energy_low_confidence": {
+      "trigger_name": "High Horse Energy + Low Confidence",
+      "tool_categories": ["BODY RESET", "Somatic Reset / Gentle Movement", "Horse Connection & Focus"]
+    },
+    "low_horse_focus": {
+      "trigger_name": "Low Horse Focus",
+      "tool_categories": ["Horse Connection & Focus", "Somatic Reset / Gentle Movement", "Mindfulness / Grounding"]
+    },
+    "optimal_performance": {
+      "trigger_name": "Optimal Performance",
+      "tool_categories": ["Mindfulness & Flow", "Visualization / Imagery", "Skill Development / Exploration"]
+    },
+    "good_improvement": {
+      "trigger_name": "Good Improvement",
+      "tool_categories": ["Mindfulness & Flow", "Values & Motivation Reflection"]
+    },
+    "optimal_horse_metrics": {
+      "trigger_name": "Optimal Horse Metrics",
+      "tool_categories": ["Horse Connection & Focus", "Mindfulness & Flow", "BODY RESET"]
+    },
+    "default": {
+      "trigger_name": "General Exploration / Default",
+      "tool_categories": ["Mindfulness & Flow", "Activation / Grounding", "Mindfulness / Grounding"]
+    },
     "high_confidence_high_anxiety": {
       "trigger_name": "High Confidence + High Anxiety (Competition Nerves)",
       "tool_categories": [
