@@ -41,6 +41,7 @@ export default function PostRide() {
   const [saving, setSaving] = useState(false);
   const [anxietyLevel, setAnxietyLevel] = useState(5);
   const [confidenceLevel, setConfidenceLevel] = useState(5);
+  const [riderEnergyLevel, setRiderEnergyLevel] = useState(5); // NEW: For low_energy trigger
   const [notes, setNotes] = useState('');
   const [horseEnergyLevel, setHorseEnergyLevel] = useState(5);
   const [horseFocusLevel, setHorseFocusLevel] = useState(5);
