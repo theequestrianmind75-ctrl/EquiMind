@@ -155,7 +155,7 @@ export default function PostRide() {
     if (selectedSession) {
       determineTriggersAndLoadRecommendations();
     }
-  }, [selectedSession, anxietyLevel, confidenceLevel, horseEnergyLevel, horseFocusLevel, horseResponsiveness]);
+  }, [selectedSession, anxietyLevel, confidenceLevel, riderEnergyLevel, horseEnergyLevel, horseFocusLevel, horseResponsiveness]);
 
   useEffect(() => {
     fetchIncompleteSessions();
