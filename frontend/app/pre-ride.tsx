@@ -495,6 +495,39 @@ const styles = StyleSheet.create({
   rideTypeLabelActive: {
     color: '#ffffff',
   },
+  helperText: {
+    fontSize: 13,
+    color: '#64748b',
+    marginBottom: 12,
+  },
+  contextButtons: {
+    flexDirection: 'row',
+    gap: 12,
+  },
+  contextButton: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+    padding: 16,
+    borderRadius: 12,
+    alignItems: 'center',
+    borderWidth: 2,
+    borderColor: '#3b82f6',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    gap: 8,
+  },
+  contextButtonActive: {
+    backgroundColor: '#3b82f6',
+    borderColor: '#2563eb',
+  },
+  contextButtonText: {
+    fontSize: 15,
+    fontWeight: '600',
+    color: '#3b82f6',
+  },
+  contextButtonTextActive: {
+    color: '#ffffff',
+  },
   sliderContainer: {
     marginTop: 8,
   },
