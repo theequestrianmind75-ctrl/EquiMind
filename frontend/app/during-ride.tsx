@@ -100,9 +100,11 @@ export default function DuringRide() {
 
     Speech.speak(audioScript, {
       language: 'en-US',
-      pitch: 1.1,
-      rate: 0.85,
-      voice: 'com.apple.ttsbundle.Samantha-compact', // More natural iOS voice
+      pitch: 1.0,
+      rate: 0.9,
+      // Use more natural, warm voice - Ava for iOS, default high-quality for Android
+      voice: 'com.apple.speech.synthesis.voice.Ava', // Premium natural female voice (iOS)
+      quality: Speech.VoiceQuality.Enhanced,
       onDone: () => setIsSpeaking(false),
       onError: () => {
         setIsSpeaking(false);
