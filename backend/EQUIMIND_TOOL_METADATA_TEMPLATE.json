@@ -1,0 +1,102 @@
+{
+  "metadata_structure_version": "1.0",
+  "description": "Official EquiMind Tool Metadata Structure for Database",
+  
+  "required_fields": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the tool (kebab-case)",
+      "example": "3-minute-halt-stop-skill"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name of the tool",
+      "example": "The 3-Minute Halt (DBT STOP Skill)"
+    },
+    "category": {
+      "type": "string",
+      "description": "Must match one of the 14 existing categories exactly",
+      "valid_values": [
+        "Activation / Grounding",
+        "Arousal Balancing / Competition Nerves",
+        "BODY RESET",
+        "Breathing / HRV",
+        "Competition Focus / Pre-Ride Routine",
+        "Distress Tolerance",
+        "Horse Connection & Focus",
+        "Mindfulness & Flow",
+        "Mindfulness / Grounding",
+        "Skill Development / Exploration",
+        "Somatic Reset / Gentle Movement",
+        "Tapping / EFT",
+        "Values & Motivation Reflection",
+        "Visualization / Imagery"
+      ]
+    },
+    "instructions": {
+      "type": "string",
+      "description": "Complete step-by-step instructions for using the tool (can be multi-paragraph)",
+      "example": "This DBT skill helps you pause and regain safety when distress spikes. 1) STOP: Physically freeze..."
+    },
+    "duration_minutes": {
+      "type": "integer",
+      "description": "How long the exercise takes in minutes",
+      "example": 3
+    }
+  },
+
+  "optional_fields": {
+    "description": {
+      "type": "string",
+      "description": "Brief one-sentence summary of the tool",
+      "example": "A pause-and-reset tool to interrupt emotional escalation and regain cognitive clarity."
+    },
+    "anxiety_level": {
+      "type": "array of integers",
+      "description": "Which anxiety levels (1-10) this tool is suitable for",
+      "example": [5, 6, 7, 8, 9, 10]
+    },
+    "confidence_level": {
+      "type": "array of integers",
+      "description": "Which confidence levels (1-10) this tool is suitable for",
+      "example": [1, 2, 3, 4, 5]
+    },
+    "effectiveness_rating": {
+      "type": "float",
+      "description": "Research-based or clinical effectiveness rating (0.0-5.0)",
+      "example": 4.0
+    },
+    "evidence_base": {
+      "type": "string",
+      "description": "Research backing or clinical approach this tool is based on",
+      "example": "DBT distress tolerance skills, Sports psychology, HRV research"
+    },
+    "suitable_for": {
+      "type": "array of strings",
+      "description": "Tags for what conditions/situations this tool addresses",
+      "example": ["high_anxiety", "panic", "decision_making", "safety_assessment"]
+    }
+  },
+
+  "complete_example": {
+    "id": "3-minute-halt-stop-skill",
+    "name": "The 3-Minute Halt (DBT STOP Skill)",
+    "category": "Distress Tolerance",
+    "description": "A pause-and-reset tool to interrupt emotional escalation and regain cognitive clarity before making riding decisions.",
+    "instructions": "This DBT skill helps you pause and regain safety when distress spikes. 1) STOP: Physically freeze. Do not react. Take your hands off the reins if needed. 2) TAKE A BREATH: Slow, deep breath in through your nose for 4 counts, out for 6 counts. Repeat 2-3 times. 3) OBSERVE: Notice what you feel in your body (tight chest, shaky hands), what you are thinking (I can't do this, my horse is going to bolt), and what the situation actually is (my horse shifted weight, I heard a loud noise). 4) PROCEED MINDFULLY: Ask yourself: What is the wise choice right now? Options: dismount and walk, do simple circles at the walk, take a break, or end the ride early. Choose the safest, most grounded action.",
+    "duration_minutes": 3,
+    "anxiety_level": [6, 7, 8, 9, 10],
+    "confidence_level": [1, 2, 3, 4, 5],
+    "effectiveness_rating": 4.5,
+    "evidence_base": "DBT distress tolerance module, Crisis intervention research",
+    "suitable_for": ["high_anxiety", "panic", "decision_making", "crisis_moment", "safety_assessment"]
+  },
+
+  "notes": [
+    "The 'id' field should be unique across all tools",
+    "The 'category' field MUST match exactly (case-sensitive)",
+    "Instructions can be as long as needed - use numbered steps for clarity",
+    "New metadata fields like 'rider_range', 'horse_range', 'clusters', 'priority' are NOT currently in the database",
+    "If you want to add new fields, we can extend the schema, but current tools use the fields listed above"
+  ]
+}
