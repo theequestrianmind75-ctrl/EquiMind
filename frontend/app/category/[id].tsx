@@ -250,6 +250,15 @@ export default function CategoryDetail() {
                 <Text style={styles.guideButtonText}>View Full Tapping Guide</Text>
               </TouchableOpacity>
             )}
+            {id === 'distress' && (
+              <TouchableOpacity
+                style={[styles.guideButton, styles.crisisButton]}
+                activeOpacity={1}
+              >
+                <Ionicons name="alert-circle" size={20} color="#ffffff" />
+                <Text style={styles.guideButtonText}>Crisis Tools Below</Text>
+              </TouchableOpacity>
+            )}
             {id === 'horse-rider' && (
               <TouchableOpacity
                 style={[styles.guideButton, { backgroundColor: '#14b8a6' }]}
