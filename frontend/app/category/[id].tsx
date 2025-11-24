@@ -496,6 +496,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 12,
   },
+  crisisButton: {
+    backgroundColor: '#ef4444',
+    borderWidth: 2,
+    borderColor: '#dc2626',
+  },
   guideButtonText: {
     color: '#ffffff',
     fontSize: 14,
