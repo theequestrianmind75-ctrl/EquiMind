@@ -259,7 +259,7 @@ export default function CategoryDetail() {
               >
                 <Ionicons name="alert-circle" size={20} color="#ffffff" />
                 <Text style={styles.guideButtonText}>
-                  {showCrisisOnly ? 'Show All Tools' : 'Show Crisis Tools Only'}
+                  {showCrisisOnly ? 'Show All Tools' : 'Crisis Tools'}
                 </Text>
               </TouchableOpacity>
             )}
