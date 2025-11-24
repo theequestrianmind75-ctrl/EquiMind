@@ -254,11 +254,13 @@ export default function CategoryDetail() {
             )}
             {id === 'distress' && (
               <TouchableOpacity
-                style={[styles.guideButton, styles.crisisButton]}
-                activeOpacity={1}
+                style={[styles.guideButton, styles.crisisButton, showCrisisOnly && styles.crisisButtonActive]}
+                onPress={() => setShowCrisisOnly(!showCrisisOnly)}
               >
                 <Ionicons name="alert-circle" size={20} color="#ffffff" />
-                <Text style={styles.guideButtonText}>Crisis Tools Below</Text>
+                <Text style={styles.guideButtonText}>
+                  {showCrisisOnly ? 'Show All Tools' : 'Show Crisis Tools Only'}
+                </Text>
               </TouchableOpacity>
             )}
             {id === 'horse-rider' && (
