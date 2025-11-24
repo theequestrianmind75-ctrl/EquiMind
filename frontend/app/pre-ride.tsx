@@ -109,55 +109,6 @@ export default function PreRide() {
             </View>
           </View>
 
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>Ride Context</Text>
-            <Text style={styles.helperText}>Are you in training or competition mode?</Text>
-            <View style={styles.contextButtons}>
-              <TouchableOpacity
-                style={[
-                  styles.contextButton,
-                  context === 'training' && styles.contextButtonActive,
-                ]}
-                onPress={() => setContext('training')}
-              >
-                <Ionicons
-                  name="school-outline"
-                  size={24}
-                  color={context === 'training' ? '#ffffff' : '#3b82f6'}
-                />
-                <Text
-                  style={[
-                    styles.contextButtonText,
-                    context === 'training' && styles.contextButtonTextActive,
-                  ]}
-                >
-                  Training
-                </Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={[
-                  styles.contextButton,
-                  context === 'competition' && styles.contextButtonActive,
-                ]}
-                onPress={() => setContext('competition')}
-              >
-                <Ionicons
-                  name="trophy-outline"
-                  size={24}
-                  color={context === 'competition' ? '#ffffff' : '#3b82f6'}
-                />
-                <Text
-                  style={[
-                    styles.contextButtonText,
-                    context === 'competition' && styles.contextButtonTextActive,
-                  ]}
-                >
-                  Competition
-                </Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-
           <View style={styles.divider} />
           <Text style={styles.sectionHeader}>{riderName ? riderName.toUpperCase() : 'RIDER'}</Text>
 
