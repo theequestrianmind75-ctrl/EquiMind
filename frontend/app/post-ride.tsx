@@ -68,8 +68,8 @@ export default function PostRide() {
       const horseEnergy = horseEnergyLevel;
       const horseFocus = horseFocusLevel;
       
-      // Get context from session
-      const sessionContext = selectedSession?.context || 'training';
+      // Get ride type from session (competition vs training)
+      const rideType = selectedSession?.ride_type || 'training';
       
       // NEW TRIGGERS - Check first (higher priority)
       // High confidence + high anxiety (Competition Nerves)
