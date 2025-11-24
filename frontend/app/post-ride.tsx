@@ -515,7 +515,6 @@ export default function PostRide() {
                   <>
                     {recommendations.map((rec, index) => (
                       <View key={index} style={styles.recommendationItem}>
-                        <Ionicons name="arrow-forward" size={20} color="#f59e0b" style={styles.recommendationIcon} />
                         <Text style={styles.recommendationText}>{rec.text || rec}</Text>
                       </View>
                     ))}
