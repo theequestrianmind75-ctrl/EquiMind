@@ -26,6 +26,7 @@ interface Strategy {
   anxiety_level: number[];
   confidence_level: number[];
   effectiveness_rating: number;
+  is_crisis_tool?: boolean;
 }
 
 const CATEGORIES: any = {
