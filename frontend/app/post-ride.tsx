@@ -96,11 +96,11 @@ export default function PostRide() {
         triggers.push('optimal_horse_metrics');
       }
       
-      // Add context as a trigger
-      if (sessionContext === 'competition') {
-        triggers.push('competition_mode');
+      // Add ride type as a trigger
+      if (rideType === 'competition') {
+        triggers.push('competition_context');
       } else {
-        triggers.push('training_mode');
+        triggers.push('training_context');
       }
       
       // If no emotional triggers, use default
