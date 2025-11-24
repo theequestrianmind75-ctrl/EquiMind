@@ -99,12 +99,11 @@ export default function DuringRide() {
     setIsSpeaking(true);
 
     Speech.speak(audioScript, {
-      language: 'en-GB',
-      pitch: 1.05,
+      language: 'en-US',
+      pitch: 1.2,
       rate: 0.88,
-      // British female voice similar to Emma Thompson
-      // Try multiple voice identifiers for compatibility
-      voice: 'com.apple.voice.compact.en-GB.Serena', // British female voice
+      // Female voice - uses default female voice (pre-installed on all devices)
+      // Higher pitch (1.2) ensures female voice selection
       onDone: () => setIsSpeaking(false),
       onError: () => {
         setIsSpeaking(false);
