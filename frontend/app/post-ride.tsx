@@ -837,6 +837,8 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
   recommendationItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
     backgroundColor: '#ffffff',
     padding: 14,
     borderRadius: 8,
@@ -844,7 +846,11 @@ const styles = StyleSheet.create({
     borderLeftWidth: 4,
     borderLeftColor: '#f59e0b',
   },
+  recommendationIcon: {
+    marginRight: 12,
+  },
   recommendationText: {
+    flex: 1,
     fontSize: 14,
     color: '#1e293b',
     lineHeight: 20,
