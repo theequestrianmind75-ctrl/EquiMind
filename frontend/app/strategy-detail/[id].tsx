@@ -65,9 +65,12 @@ export default function StrategyDetail() {
     setIsSpeaking(true);
 
     Speech.speak(audioScript, {
-      language: 'en',
+      language: 'en-GB',
       pitch: 1.0,
-      rate: 0.9,
+      rate: 0.85,
+      // British female voice similar to Emma Thompson - sophisticated and warm
+      voice: 'com.apple.speech.synthesis.voice.Kate', // Premium British female voice (iOS)
+      quality: Speech.VoiceQuality.Enhanced,
       onDone: () => setIsSpeaking(false),
       onError: () => setIsSpeaking(false),
     });
