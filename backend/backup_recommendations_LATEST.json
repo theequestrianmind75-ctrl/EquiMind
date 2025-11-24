@@ -1,0 +1,368 @@
+[
+  {
+    "id": "6f9f7df1-d12e-4bdd-8e58-0258c36e03dc",
+    "text": "Try 'Box Breath' or '4:8 Tension Melt Exhale' from BODY RESET before your next ride to regulate your nervous system.",
+    "trigger_condition": "high_anxiety",
+    "priority": 10,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.310000",
+    "suggested_tool_names": [
+      "The 3-Minute Halt (DBT STOP Skill)",
+      "Temperature Reset (DBT TIP Skill)",
+      "5-4-3-2-1 Sensory Anchors (Rider Edition)",
+      "Mindful Mounting Sequence",
+      "Breath Sync With Your Horse",
+      "Arena Edge Mindfulness Walk",
+      "Noticing Micro-Tension (2 Percent Release)",
+      "Observation Without Judgment (MBSR)"
+    ]
+  },
+  {
+    "id": "14c3308f-4f1c-4e51-8c4b-55e49c5bcc3d",
+    "text": "Consider practicing 'The Safe Seat Reset' during rides when anxiety spikes - it activates your parasympathetic nervous system.",
+    "trigger_condition": "high_anxiety",
+    "priority": 9,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.356000",
+    "suggested_tool_names": [
+      "Box Breath (Modified for Riding)",
+      "4:8 Tension Melt Exhale",
+      "The Safe Seat Reset (Somatic Trauma Model + Polyvagal)",
+      "60-Second Rider Body Scan",
+      "Present-Moment Reins Check",
+      "Seat-Bone Awareness Tracking",
+      "Body-to-Horse Synchrony Check"
+    ]
+  },
+  {
+    "id": "42dfcbd9-876a-4831-96c7-8c70f136a696",
+    "text": "Your anxiety increased during the ride. Try 'Cognitive Grounding Through Sensory Anchors' (identify 3 things you see, 2 things you feel) to stay present.",
+    "trigger_condition": "anxiety_increased",
+    "priority": 8,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.389000",
+    "suggested_tool_names": [
+      "Name It to Tame It",
+      "5-4-3-2-1 Sensory Anchors (Rider Edition)",
+      "Sports Psychology Performance Reset",
+      "60-Second Rider Body Scan",
+      "Mindful Half-Halt",
+      "Present-Moment Reins Check",
+      "Rider Thought Labeling: 'This is a thought'",
+      "Observation Without Judgment (MBSR)"
+    ]
+  },
+  {
+    "id": "eb260a4e-7da1-4b1b-bd5f-de9457a9daf4",
+    "text": "Practice 'Thought Labeling + Releasing' - name the anxious thought and separate from it: 'That's an anxious thought, I don't have to act on it.'",
+    "trigger_condition": "anxiety_increased",
+    "priority": 7,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.422000",
+    "suggested_tool_names": [
+      "Cognitive Grounding Through Sensory Anchors (CBT)",
+      "Thought Labelling + Releasing (CBT + ACT)",
+      "Peripheral Vision Expansion (Nervous System Regulation)"
+    ]
+  },
+  {
+    "id": "c7e632ce-e5f9-4b44-b083-59636f0b2806",
+    "text": "Build confidence with 'Micro-Goal Cueing' - set small achievable goals like '5 steady strides' or 'one smooth corner.'",
+    "trigger_condition": "low_confidence",
+    "priority": 10,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.455000",
+    "suggested_tool_names": [
+      "Five-Sense Horseback Scan",
+      "Why I Ride Values Reminder",
+      "10-Minute Single Skill Focus",
+      "Mindful Arena Entry",
+      "Mindful Transition Focus",
+      "Noticing Horse Micro-Cues",
+      "Visual Horizon Soft-Gaze Practice"
+    ]
+  },
+  {
+    "id": "0e288609-7988-4872-9459-c3c9be604564",
+    "text": "Try EFT Tapping sequences specifically for confidence building - research shows tapping reduces cortisol by 24%.",
+    "trigger_condition": "low_confidence",
+    "priority": 9,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.488000",
+    "suggested_tool_names": [
+      "Micro-Goal Cueing (Sports Psychology)",
+      "Pelvic 'Float' Reset",
+      "Breath-Per-Stride Sync",
+      "Visual Horizon Soft-Gaze Practice",
+      "Mindful Rein Contact Check"
+    ]
+  },
+  {
+    "id": "5563d48c-bab7-4cc6-a87b-a5e64c9265ae",
+    "text": "Your confidence dropped during this ride. This is normal! Review what went well first, then identify one specific skill to practice next time.",
+    "trigger_condition": "confidence_decreased",
+    "priority": 8,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.521000",
+    "suggested_tool_names": [
+      "Five-Sense Horseback Scan",
+      "Training Ride Mindfulness Scan",
+      "Why I Ride Values Reminder"
+    ]
+  },
+  {
+    "id": "ae167b82-3053-4f15-8d54-c6618fdc1455",
+    "text": "Consider the 'Peripheral Vision Expansion' technique - widening your gaze reduces amygdala activation and improves calm focus.",
+    "trigger_condition": "confidence_decreased",
+    "priority": 7,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.554000",
+    "suggested_tool_names": [
+      "Peripheral Vision Expansion (Nervous System Regulation)",
+      "The 'Downward Breath' (Polyvagal Down-Regulation)",
+      "Micro-Goal Cueing (Sports Psychology)",
+      "Visual Horizon Soft-Gaze Practice",
+      "Mindful Listening to Arena Sounds"
+    ]
+  },
+  {
+    "id": "f98bdcd9-9949-47c5-9613-d4dde9d7f0a5",
+    "text": "High anxiety + low confidence pattern detected. This is a common cycle. Start with 'Breath-Sync Regulation' (3-count inhale, 4-5 count exhale) to interrupt the stress response.",
+    "trigger_condition": "high_anxiety_low_confidence",
+    "priority": 10,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.587000",
+    "suggested_tool_names": [
+      "The 3-Minute Halt (DBT STOP Skill)",
+      "Wise Mind Saddle Check",
+      "Groundwork First Rule"
+    ]
+  },
+  {
+    "id": "c72c4f53-aeb8-48e1-b257-c2f79d4daf57",
+    "text": "Practice 'Co-Regulation' - match your breathing to your horse's rhythm. Research shows horses' calm state can regulate rider's nervous system.",
+    "trigger_condition": "high_anxiety_low_confidence",
+    "priority": 9,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.620000",
+    "suggested_tool_names": [
+      "Breath-Sync Regulation (Somatic + HRV Training)",
+      "Co-Regulation Cue (Polyvagal + Equine Behavior Science)",
+      "The 'Safe Seat Reset' (Somatic Trauma Model + Polyvagal)",
+      "Breath Sync With Your Horse",
+      "Arena Edge Mindfulness Walk",
+      "Body-to-Horse Synchrony Check",
+      "Noticing Horse Micro-Cues"
+    ]
+  },
+  {
+    "id": "97efb217-1678-4b9d-9bd5-0954fc3f532f",
+    "text": "Your horse's high energy may be overwhelming your confidence. Practice 'Interoception Check-In' - notice where tension lives in your body and soften by 5%.",
+    "trigger_condition": "high_horse_energy_low_confidence",
+    "priority": 8,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.654000",
+    "suggested_tool_names": [
+      "Horseback Body Scan",
+      "Gentle Shoulder and Hip Reset",
+      "Hand-Graze Connection Ritual",
+      "Breath Sync With Your Horse",
+      "60-Second Rider Body Scan",
+      "Noticing Horse Micro-Cues",
+      "Seat-Bone Awareness Tracking"
+    ]
+  },
+  {
+    "id": "3f6cfa6b-7665-461a-8e5f-1c506f55bda6",
+    "text": "Use 'Dual Awareness' statements: 'My horse has energy AND I can stay grounded.' This DBT technique prevents catastrophic thinking.",
+    "trigger_condition": "high_horse_energy_low_confidence",
+    "priority": 7,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.686000",
+    "suggested_tool_names": [
+      "Interoception Check-In (Somatic + Mind-Body Integration)",
+      "Dual Awareness Cue (DBT Distress Tolerance)",
+      "The 'Safe Seat' Reset (Somatic Trauma Model + Polyvagal)",
+      "Body-to-Horse Synchrony Check",
+      "Noticing Micro-Tension (2 Percent Release)"
+    ]
+  },
+  {
+    "id": "1b437b76-314e-4378-a55f-0ba11d4a94ff",
+    "text": "Your horse's focus was low. Try the 'Micro-Shake Release' for yourself between exercises - releasing your tension helps your horse regulate too.",
+    "trigger_condition": "low_horse_focus",
+    "priority": 6,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.719000",
+    "suggested_tool_names": [
+      "Hand-Graze Connection Ritual",
+      "Gentle Shoulder and Hip Reset",
+      "Training Ride Mindfulness Scan",
+      "Arena Edge Mindfulness Walk",
+      "Footfall Awareness Drill",
+      "Noticing Horse Micro-Cues",
+      "Mindful Listening to Arena Sounds"
+    ]
+  },
+  {
+    "id": "38ba8e82-3e1f-47e9-abcc-6c8b783cdfcf",
+    "text": "Consider shorter, more varied exercises next session. Horses' attention spans are 10-15 minutes - break training into smaller chunks.",
+    "trigger_condition": "low_horse_focus",
+    "priority": 5,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.752000",
+    "suggested_tool_names": [
+      "Micro-Shake Release",
+      "Eye-Softening Peripheral Vision",
+      "Glute/Thigh Release Scan",
+      "Mindful Listening to Arena Sounds",
+      "Mindful Rein Contact Check"
+    ]
+  },
+  {
+    "id": "38d02241-d32f-42c0-ae6f-93d81690e275",
+    "text": "Excellent session! Low anxiety + high confidence. Document what you did in pre-ride prep - this is your optimal state formula.",
+    "trigger_condition": "optimal_performance",
+    "priority": 10,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.786000",
+    "suggested_tool_names": [
+      "Five-Sense Horseback Scan",
+      "Clear Round Mini Visualization",
+      "10-Minute Single Skill Focus"
+    ]
+  },
+  {
+    "id": "90194ebb-b78b-4b67-a31e-91af2bded6d2",
+    "text": "Consider this your 'flow state' session. Research shows this anxiety-confidence combo predicts peak performance. Repeat your pre-ride routine!",
+    "trigger_condition": "optimal_performance",
+    "priority": 9,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.819000",
+    "suggested_tool_names": [
+      "Breath-Per-Stride Sync",
+      "Heart-Space Breath",
+      "Pelvic 'Float' Reset",
+      "Post-Ride Mindful Cooldown",
+      "Footfall Awareness Drill"
+    ]
+  },
+  {
+    "id": "1eaa022f-1fad-4279-a922-ec413cd12b3f",
+    "text": "Great progress! Your anxiety decreased AND confidence increased. You're building emotional resilience - this is the goal of mental training.",
+    "trigger_condition": "good_improvement",
+    "priority": 8,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.852000",
+    "suggested_tool_names": [
+      "Five-Sense Horseback Scan",
+      "Why I Ride Values Reminder",
+      "Post-Ride Mindful Cooldown"
+    ]
+  },
+  {
+    "id": "20c7a5b9-003f-4176-9a9d-b5b183d95dd4",
+    "text": "Your horse showed optimal metrics (balanced energy, good focus, strong responsiveness). Your mental state likely contributed to this - keep doing what you're doing!",
+    "trigger_condition": "optimal_horse_metrics",
+    "priority": 7,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.885000",
+    "suggested_tool_names": [
+      "Hand-Graze Connection Ritual",
+      "Five-Sense Horseback Scan",
+      "Horseback Body Scan",
+      "Post-Ride Mindful Cooldown",
+      "Breath Sync With Your Horse"
+    ]
+  },
+  {
+    "id": "bf812d09-6360-4664-8d84-ee64f46db3a9",
+    "text": "Great job completing your session! Review the Rider Tools library for techniques that match your specific goals.",
+    "trigger_condition": "default",
+    "priority": 1,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.918000",
+    "suggested_tool_names": [
+      "Five-Sense Horseback Scan",
+      "Low Energy 5-Minute Activation",
+      "Training Ride Mindfulness Scan",
+      "Post-Ride Mindful Cooldown"
+    ]
+  },
+  {
+    "id": "c07de1c8-561d-4f72-b50b-dc8352710a05",
+    "text": "Track patterns over multiple sessions to identify your optimal pre-ride preparation routine.",
+    "trigger_condition": "default",
+    "priority": 1,
+    "active": true,
+    "created_at": "2025-11-20 02:02:24.951000",
+    "suggested_tool_names": [
+      "Box Breath (Modified for Riding)",
+      "Cognitive Grounding Through Sensory Anchors (CBT)",
+      "Micro-Goal Cueing (Sports Psychology)"
+    ]
+  },
+  {
+    "trigger_condition": "high_confidence_high_anxiety",
+    "context": "any",
+    "text": "You feel capable, but your nerves are high. Let's channel that energy into focus instead of overwhelm.",
+    "suggested_tool_names": [
+      "90-Second Arousal Balance Reset",
+      "Competition Nerves: Label and Aim",
+      "Show Ring Box Breathing",
+      "Mindful Arena Entry",
+      "60-Second Rider Body Scan",
+      "Breath Sync With Your Horse",
+      "Noticing Micro-Tension (2 Percent Release)",
+      "Visual Horizon Soft-Gaze Practice"
+    ],
+    "priority": 10,
+    "active": true
+  },
+  {
+    "trigger_condition": "low_energy_low_motivation",
+    "context": "any",
+    "text": "You're not broken\u2014you're tired. Let's gently build a bit of momentum and reconnect with why you ride.",
+    "suggested_tool_names": [
+      "Low Energy 5-Minute Activation",
+      "Gentle Shoulder and Hip Reset",
+      "Why I Ride Values Reminder",
+      "Observation Without Judgment (MBSR)",
+      "Mindful Listening to Arena Sounds"
+    ],
+    "priority": 10,
+    "active": true
+  },
+  {
+    "trigger_condition": "context_competition",
+    "context": "competition",
+    "text": "You're in show mode. Let's get you competition-ready with focused, performance-oriented tools.",
+    "suggested_tool_names": [
+      "Competition Pre-Ride Focus 3\u00d73",
+      "Mounting Block Focus Sequence",
+      "At-the-Gate Calm Start Visual",
+      "Visual Horizon Soft-Gaze Practice",
+      "Noticing Micro-Tension (2 Percent Release)"
+    ],
+    "priority": 8,
+    "active": true
+  },
+  {
+    "trigger_condition": "context_training",
+    "context": "training",
+    "text": "You're in training mode. Let's work on skill development, connection, and mindful exploration.",
+    "suggested_tool_names": [
+      "Training Ride Mindfulness Scan",
+      "10-Minute Single Skill Focus",
+      "Hand-Graze Connection Ritual",
+      "Mindful Arena Entry",
+      "Footfall Awareness Drill",
+      "Mindful Transition Focus",
+      "Noticing Horse Micro-Cues",
+      "Mindful Rein Contact Check",
+      "Body-to-Horse Synchrony Check"
+    ],
+    "priority": 8,
+    "active": true
+  }
+]
