@@ -55,6 +55,12 @@ const CATEGORIES: any = {
     keywords: ['tapping / eft'],
     description: 'EFT (Emotional Freedom Technique) combines modern psychology with ancient Chinese acupressure. By tapping on specific meridian points while focusing on your concerns, you send calming signals to your brain, helping release stress, anxiety, and emotional blocks. Perfect for pre-ride nerves, competition anxiety, or processing difficult experiences.',
   },
+  distress: {
+    title: 'Distress Tolerance',
+    color: '#ef4444',
+    keywords: ['distress tolerance'],
+    description: 'Evidence-based crisis tools for high-stress moments. These techniques from DBT, ACT, and sports psychology help you stay safe and regulated when emotions feel overwhelming. Use these tools when anxiety is high, panic is present, or you need to make a wise decision about whether to ride.',
+  },
 };
 
 const ADMIN_PASSWORD = 'equimind2025';
