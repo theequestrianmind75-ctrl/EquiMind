@@ -21,7 +21,6 @@ interface Session {
   id: string;
   session_type: string;
   ride_type: string;
-  context?: string; // NEW: "training" or "competition"
   rider_name: string | null;
   anxiety_level: number | null;
   confidence_level: number | null;
