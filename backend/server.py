@@ -249,8 +249,7 @@ async def get_mental_strategies(
     min_anxiety: Optional[int] = None,
     max_anxiety: Optional[int] = None,
     min_confidence: Optional[int] = None,
-    max_confidence: Optional[int] = None,
-    current_user: dict = Depends(get_current_user)
+    max_confidence: Optional[int] = None
 ):
     query = {}
     
