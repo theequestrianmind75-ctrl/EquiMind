@@ -311,9 +311,15 @@ export default function CategoryDetail() {
           </View>
         )}
 
-        <Text style={styles.subtitle}>{strategies.length} tools available</Text>
+        <Text style={styles.subtitle}>
+          {showCrisisOnly 
+            ? `${strategies.filter(s => s.is_crisis_tool).length} crisis tools` 
+            : `${strategies.length} tools available`}
+        </Text>
 
-        {strategies.map((strategy) => (
+        {strategies
+          .filter(strategy => !showCrisisOnly || strategy.is_crisis_tool)
+          .map((strategy) => (
           <TouchableOpacity
             key={strategy.id}
             style={[
