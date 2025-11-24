@@ -44,6 +44,14 @@ const CATEGORIES = [
     color: '#ec4899',
     keywords: ['tapping', 'eft'],
   },
+  {
+    id: 'distress',
+    title: 'Distress Tolerance',
+    description: 'Crisis tools for high-stress moments',
+    icon: 'alert-circle',
+    color: '#ef4444',
+    keywords: ['distress', 'crisis'],
+  },
 ];
 
 export default function Strategies() {
