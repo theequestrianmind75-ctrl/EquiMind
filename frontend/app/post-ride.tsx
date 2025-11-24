@@ -272,11 +272,11 @@ export default function PostRide() {
         <ScrollView style={styles.scrollView}>
           {!selectedSession ? (
             <View style={styles.noSessionCard}>
-              <Ionicons name="document-text-outline" size={64} color="#000000" />
+              <Ionicons name="star" size={64} color="#f59e0b" />
               <Text style={styles.noSessionTitle}>No Active Session</Text>
               <Text style={styles.noSessionText}>Create a post-ride session to track your progress</Text>
               <TouchableOpacity style={styles.createButton} onPress={createNewSession}>
-                <Ionicons name="add-circle" size={24} color="#ffffff" />
+                <Ionicons name="star" size={24} color="#ffffff" />
                 <Text style={styles.createButtonText}>Create Session</Text>
               </TouchableOpacity>
             </View>
