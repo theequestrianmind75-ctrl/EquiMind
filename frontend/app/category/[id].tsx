@@ -511,6 +511,10 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#dc2626',
   },
+  crisisButtonActive: {
+    backgroundColor: '#dc2626',
+    borderColor: '#b91c1c',
+  },
   guideButtonText: {
     color: '#ffffff',
     fontSize: 14,
