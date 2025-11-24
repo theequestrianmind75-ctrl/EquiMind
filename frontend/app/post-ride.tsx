@@ -536,7 +536,7 @@ export default function PostRide() {
                               <Text style={styles.toolButtonName}>{tool.name}</Text>
                               <Text style={styles.toolButtonDuration}>{tool.duration_minutes} min</Text>
                             </View>
-                            <Ionicons name="arrow-forward-circle" size={24} color="#375B50" />
+                            <Ionicons name="star" size={24} color="#f59e0b" />
                           </TouchableOpacity>
                         ))}
                       </View>
