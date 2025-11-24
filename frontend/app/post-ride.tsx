@@ -550,7 +550,7 @@ export default function PostRide() {
                 onPress={handleComplete}
                 disabled={saving}
               >
-                <Ionicons name="checkmark-circle" size={24} color="#ffffff" />
+                <Ionicons name="star" size={24} color="#ffffff" />
                 <Text style={styles.completeButtonText}>
                   {saving ? 'Saving...' : 'Complete & Save Session'}
                 </Text>
