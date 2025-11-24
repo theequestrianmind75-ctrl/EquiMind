@@ -28,9 +28,22 @@ async def init_production_database():
     
     print(f"📊 Found {total_count} total tools, {valid_count} with valid instructions")
     
-    # If database is empty or mostly corrupted, restore from backup
-    if valid_count < 50:  # Less than 50 valid tools = needs restoration
-        print("⚠️  Database needs restoration - loading backup...")
+    # Check backup file to see expected count
+    backup_file = Path(__file__).parent / 'backup_mental_strategies_LATEST.json'
+    expected_count = 0
+    
+    if backup_file.exists():
+        with open(backup_file, 'r') as f:
+            backup_tools = json.load(f)
+            expected_count = len(backup_tools)
+    
+    # Determine if restoration is needed:
+    # 1. Database is empty or corrupted (< 50 tools)
+    # 2. Database has significantly fewer tools than backup (< 80% of expected)
+    needs_restoration = valid_count < 50 or (expected_count > 0 and total_count < expected_count * 0.8)
+    
+    if needs_restoration:
+        print(f"⚠️  Database needs restoration (has {total_count}, expected ~{expected_count}) - loading backup...")
         
         backup_file = Path(__file__).parent / 'backup_mental_strategies_LATEST.json'
         
