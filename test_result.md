@@ -157,6 +157,18 @@ backend:
           comment: "All 6 session management tests passed: create session (pre-ride, during-ride, post-ride), list sessions, get session by ID, update session (anxiety/confidence levels, notes, completed status), filter by completed status, and delete session. Full CRUD operations verified."
 
 frontend:
+  - task: "Distress Tolerance Category with Crisis Tools Button"
+    implemented: true
+    working: "NA"
+    file: "frontend/app/category/[id].tsx, frontend/app/(tabs)/strategies.tsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Added Distress Tolerance category to both strategies list and category detail page. Category includes red 'Crisis Tools Below' button with alert icon to emphasize the urgent nature of these tools. Category uses red color (#ef4444) for visual urgency. Database contains 11 Distress Tolerance tools in equimind_production database."
+
   - task: "Authentication Screens (Login/Signup)"
     implemented: true
     working: "NA"
