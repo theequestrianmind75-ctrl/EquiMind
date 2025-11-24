@@ -67,19 +67,35 @@ async def init_production_database():
         # Clear existing corrupted data
         if total_count > 0:
             delete_result = await db.mental_strategies.delete_many({})
-            print(f"🗑️  Deleted {delete_result.deleted_count} corrupted tools")
+            print(f"🗑️  Deleted {delete_result.deleted_count} old tools")
         
         # Insert backup data
         if tools:
             result = await db.mental_strategies.insert_many(tools)
             print(f"✅ Restored {len(result.inserted_ids)} tools from backup")
         
+        # Also restore recommendations
+        recs_backup_file = Path(__file__).parent / 'backup_recommendations_LATEST.json'
+        if recs_backup_file.exists():
+            with open(recs_backup_file, 'r') as f:
+                recs = json.load(f)
+            
+            # Clear old recommendations
+            await db.recommendations.delete_many({})
+            
+            # Insert new recommendations
+            if recs:
+                await db.recommendations.insert_many(recs)
+                print(f"✅ Restored {len(recs)} recommendations")
+        
         # Verify restoration
         final_count = await db.mental_strategies.count_documents({})
         final_valid = await db.mental_strategies.count_documents({
             "instructions": {"$exists": True, "$ne": ""}
         })
+        final_recs = await db.recommendations.count_documents({})
         print(f"✅ Database now has {final_count} tools, {final_valid} with valid instructions")
+        print(f"✅ Database now has {final_recs} recommendations")
         
         client.close()
         return True
