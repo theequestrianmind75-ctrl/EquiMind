@@ -18,7 +18,6 @@ import api from '../lib/api';
 export default function PreRide() {
   const router = useRouter();
   const [rideType, setRideType] = useState('training');
-  const [context, setContext] = useState('training'); // NEW: Training or Competition context
   const [riderName, setRiderName] = useState('');
   const [anxietyLevel, setAnxietyLevel] = useState(5);
   const [confidenceLevel, setConfidenceLevel] = useState(5);
