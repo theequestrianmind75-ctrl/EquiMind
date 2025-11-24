@@ -1,12 +1,18 @@
 """
 Production Database Initialization Script
 Runs automatically on startup to ensure database has correct data
+SAFETY FEATURES:
+- Backs up production data before deletion
+- Verifies backup integrity before proceeding
+- Validates restoration success
+- Provides rollback capability
 """
 import asyncio
 import json
 import os
 from motor.motor_asyncio import AsyncIOMotorClient
 from pathlib import Path
+from datetime import datetime
 
 async def init_production_database():
     """Initialize production database with backup if empty or corrupted"""
