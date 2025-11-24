@@ -100,10 +100,10 @@ export default function DuringRide() {
 
     Speech.speak(audioScript, {
       language: 'en-US',
-      pitch: 1.2,
-      rate: 0.88,
-      // Female voice - uses default female voice (pre-installed on all devices)
-      // Higher pitch (1.2) ensures female voice selection
+      pitch: 1.0,
+      rate: 0.9,
+      // Use Samantha - premium natural female voice (pre-installed on all iOS devices)
+      voice: 'com.apple.ttsbundle.Samantha-compact',
       onDone: () => setIsSpeaking(false),
       onError: () => {
         setIsSpeaking(false);
