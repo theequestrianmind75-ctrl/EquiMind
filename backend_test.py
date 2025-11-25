@@ -194,29 +194,26 @@ def test_public_recommendations():
         return False, f"Request failed: {str(e)}"
 
 def test_protected_session_create():
-    """Test POST /api/sessions (should still require auth - return 403)"""
+    """Test POST /api/sessions WITHOUT auth (should still be protected - return 403)"""
     try:
         session_data = {
-            "session_type": "pre-ride",
-            "ride_type": "training",
-            "anxiety_level": 5,
-            "confidence_level": 7
+            "session_type": "post-ride",
+            "ride_type": "competition",
+            "rider_name": "Test Rider",
+            "anxiety_level": 3,
+            "confidence_level": 8
         }
         
-        response = requests.post(
-            f"{API_BASE}/sessions", 
-            json=session_data,
-            timeout=10
-        )
+        response = requests.post(f"{API_BASE}/sessions", json=session_data, timeout=10)
         
         if response.status_code == 403:
-            return True, f"SUCCESS - Protected endpoint correctly returns 403 without auth"
+            return True, f"SUCCESS - Protected endpoint correctly returns 403 Forbidden without auth"
         elif response.status_code == 401:
-            return True, f"SUCCESS - Protected endpoint correctly returns 401 without auth"
+            return True, f"SUCCESS - Protected endpoint correctly returns 401 Unauthorized without auth"
         elif response.status_code == 422:
             return False, f"CRITICAL: Endpoint not protected - got validation error instead of auth error"
         else:
-            return False, f"CRITICAL: Endpoint not protected - got status {response.status_code}"
+            return False, f"CRITICAL: Endpoint not protected - got status {response.status_code}: {response.text[:100]}"
             
     except Exception as e:
         return False, f"Request failed: {str(e)}"
