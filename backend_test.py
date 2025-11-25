@@ -1,17 +1,24 @@
 #!/usr/bin/env python3
 """
-Backend API Testing for EquiMind Strategy Detail Navigation Fix
-Testing the fix for 404 errors when clicking on suggested tool boxes in post-ride analysis
+EquiMind Backend API Testing - Deployment 403 Forbidden Fix
+Testing public endpoints accessibility without authentication
 """
 
 import requests
 import json
 import sys
-import random
-from typing import Dict, List, Optional
+from typing import Dict, Any
+import os
+from dotenv import load_dotenv
 
-# Get backend URL from frontend .env
-BACKEND_URL = "https://horseback-calm.preview.emergentagent.com/api"
+# Load environment variables
+load_dotenv('/app/frontend/.env')
+
+# Get backend URL from frontend environment
+BACKEND_URL = os.getenv('EXPO_PUBLIC_BACKEND_URL', 'https://horseback-calm.preview.emergentagent.com')
+API_BASE = f"{BACKEND_URL}/api"
+
+print(f"🔗 Testing backend at: {API_BASE}")
 
 class EquiMindTester:
     def __init__(self):
