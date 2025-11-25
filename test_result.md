@@ -155,6 +155,18 @@ backend:
         - working: true
           agent: "testing"
           comment: "All 6 session management tests passed: create session (pre-ride, during-ride, post-ride), list sessions, get session by ID, update session (anxiety/confidence levels, notes, completed status), filter by completed status, and delete session. Full CRUD operations verified."
+  
+  - task: "Public API Endpoints Fix (Deployment 403 Fix)"
+    implemented: true
+    working: "NA"
+    file: "backend/server.py"
+    stuck_count: 0
+    priority: "critical"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "CRITICAL FIX: Removed authentication middleware (Depends(get_current_user)) from public GET endpoints that were causing 403 Forbidden deployment errors. Fixed: (1) GET /api/mental-strategies/{strategy_id} - Line 287, (2) GET /api/sessions - Line 490. These endpoints must be publicly accessible for the app to load initial data without authentication. Backend restarted successfully. This should resolve the deployment failure where frontend couldn't fetch essential data."
 
 frontend:
   - task: "Distress Tolerance Category with Crisis Tools Button"
