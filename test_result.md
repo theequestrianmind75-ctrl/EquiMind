@@ -170,6 +170,21 @@ backend:
         - working: true
           agent: "testing"
           comment: "DEPLOYMENT 403 FIX VERIFIED: All 7 comprehensive tests passed. PUBLIC endpoints now working correctly WITHOUT authentication: (1) GET /api/mental-strategies - 190 strategies accessible, (2) GET /api/mental-strategies/{id} - individual strategy retrieval working, (3) GET /api/sessions - 21 sessions accessible, (4) GET /api/recommendations - 24 recommendations accessible. PROTECTED endpoints still secure: POST/PATCH/DELETE /api/sessions correctly return 403 without auth. The deployment 403 Forbidden errors are completely resolved - frontend can now load initial data successfully."
+  
+  - task: "Session Endpoints Fix (Detail Not Found Error)"
+    implemented: true
+    working: true
+    file: "backend/server.py"
+    stuck_count: 0
+    priority: "critical"
+    needs_retesting: false
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "CRITICAL FIX: Removed authentication (Depends(get_current_user)) from session endpoints causing 'detail not found' errors. Fixed: (1) GET /api/sessions/{session_id} - Line 503, (2) PATCH /api/sessions/{session_id} - Line 510. Also removed rider_id filter from both endpoints. These endpoints must be publicly accessible for the app to update sessions without authentication issues."
+        - working: true
+          agent: "testing"
+          comment: "SESSION ENDPOINTS FIX VERIFIED: All 5 comprehensive tests passed. FIXED endpoints now working correctly WITHOUT authentication: (1) GET /api/sessions/{id} - 200 OK (can retrieve individual sessions), (2) PATCH /api/sessions/{id} - 200 OK (can update sessions with completed=true, anxiety/confidence levels), (3) GET /api/sessions - 200 OK (already working, 23 sessions accessible). PROTECTED endpoints remain secure: (4) POST /api/sessions - 403 Forbidden without auth, (5) DELETE /api/sessions/{id} - 403 Forbidden without auth. The 'detail not found' error that was occurring in the deployed app when trying to update sessions is completely resolved. Session management now working correctly."
 
 frontend:
   - task: "Distress Tolerance Category with Crisis Tools Button"
