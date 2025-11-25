@@ -234,48 +234,71 @@ def test_protected_session_delete(session_id):
         return False, f"Request failed: {str(e)}"
 
 def main():
-    print("🧪 EquiMind Backend API Testing - Deployment 403 Fix")
-    print("=" * 60)
+    print("🧪 EquiMind Backend API Testing - Session Endpoints Fix Verification")
+    print("🎯 TESTING: Fix for 'detail not found' error in session endpoints")
+    print("=" * 70)
     
     results = TestResults()
     
-    # Test public endpoints (should return 200 OK without auth)
-    print("\n🔓 Testing PUBLIC endpoints (should work WITHOUT authentication):")
+    # Step 1: Get authentication token and create test session
+    print("\n🔐 Step 1: Setting up test session...")
+    token, email = get_auth_token()
+    if not token:
+        print("❌ CRITICAL: Cannot obtain auth token - aborting tests")
+        return 1
     
-    passed, msg = test_public_mental_strategies_list()
-    results.add_result("GET /api/mental-strategies", passed, msg)
+    print(f"✅ Authenticated as: {email}")
     
-    passed, msg = test_public_mental_strategy_detail()
-    results.add_result("GET /api/mental-strategies/{id}", passed, msg)
+    session_id, session_data = create_test_session(token)
+    if not session_id:
+        print("❌ CRITICAL: Cannot create test session - aborting tests")
+        return 1
     
-    passed, msg = test_public_sessions_list()
-    results.add_result("GET /api/sessions", passed, msg)
+    print(f"✅ Created test session: {session_id}")
+    print(f"   Session details: {session_data.get('rider_name')} - {session_data.get('session_type')}")
     
-    passed, msg = test_public_recommendations()
-    results.add_result("GET /api/recommendations", passed, msg)
+    # Step 2: Test the FIXED endpoints (main focus)
+    print("\n🎯 Step 2: Testing FIXED session endpoints (WITHOUT authentication):")
     
-    # Test protected endpoints (should still return 403/401 without auth)
-    print("\n🔒 Testing PROTECTED endpoints (should return 403/401 WITHOUT authentication):")
+    passed, msg = test_get_single_session_no_auth(session_id)
+    results.add_result("GET /api/sessions/{id} (FIXED)", passed, msg)
+    
+    passed, msg = test_patch_session_no_auth(session_id)
+    results.add_result("PATCH /api/sessions/{id} (FIXED)", passed, msg)
+    
+    # Step 3: Test existing public endpoint
+    print("\n📊 Step 3: Testing existing public endpoint:")
+    
+    passed, msg = test_get_sessions_list_no_auth()
+    results.add_result("GET /api/sessions (Already Public)", passed, msg)
+    
+    # Step 4: Test protected endpoints (should still be protected)
+    print("\n🔒 Step 4: Testing PROTECTED endpoints (should still require auth):")
     
     passed, msg = test_protected_session_create()
-    results.add_result("POST /api/sessions", passed, msg)
+    results.add_result("POST /api/sessions (Protected)", passed, msg)
     
-    passed, msg = test_protected_session_update()
-    results.add_result("PATCH /api/sessions/{id}", passed, msg)
-    
-    passed, msg = test_protected_session_delete()
-    results.add_result("DELETE /api/sessions/{id}", passed, msg)
+    passed, msg = test_protected_session_delete(session_id)
+    results.add_result("DELETE /api/sessions/{id} (Protected)", passed, msg)
     
     # Summary
     success = results.summary()
     
+    print("\n" + "=" * 70)
     if success:
-        print("\n🎉 ALL TESTS PASSED - Deployment 403 fix is working correctly!")
-        print("✅ Public endpoints are accessible without authentication")
-        print("✅ Protected endpoints still require authentication")
+        print("🎉 SESSION ENDPOINTS FIX VERIFICATION: SUCCESS")
+        print("✅ GET /api/sessions/{id} - 200 OK (FIXED)")
+        print("✅ PATCH /api/sessions/{id} - 200 OK (FIXED)")
+        print("✅ GET /api/sessions - 200 OK (Already working)")
+        print("✅ POST /api/sessions - 403 Forbidden (Protected)")
+        print("✅ DELETE /api/sessions/{id} - 403 Forbidden (Protected)")
+        print("\n🔧 The 'detail not found' error has been resolved!")
+        print("🚀 Session endpoints are now working correctly in the deployed app")
         return 0
     else:
-        print("\n⚠️  SOME TESTS FAILED - Issues found with deployment fix")
+        print("❌ SESSION ENDPOINTS FIX VERIFICATION: FAILED")
+        print("⚠️  Some endpoints are not working as expected")
+        print("\nFailed tests:")
         for result in results.results:
             if not result['passed']:
                 print(f"❌ {result['test']}: {result['message']}")
