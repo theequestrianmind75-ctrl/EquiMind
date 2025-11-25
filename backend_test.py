@@ -106,33 +106,21 @@ def create_test_session(token):
         print(f"    Exception creating test session: {str(e)}")
         return None, None
 
-def test_public_mental_strategy_detail():
-    """Test GET /api/mental-strategies/{id} (should be public after fix)"""
+def test_get_single_session_no_auth(session_id):
+    """Test GET /api/sessions/{session_id} WITHOUT authentication (FIXED)"""
     try:
-        # First get a strategy ID from the list
-        list_response = requests.get(f"{API_BASE}/mental-strategies", timeout=10)
-        if list_response.status_code != 200:
-            return False, f"Cannot get strategy list: {list_response.status_code}"
-        
-        strategies = list_response.json()
-        if not strategies:
-            return False, "No strategies found to test detail endpoint"
-        
-        # Test with first strategy
-        strategy_id = strategies[0].get('id')
-        if not strategy_id:
-            return False, "Strategy missing ID field"
-        
-        response = requests.get(f"{API_BASE}/mental-strategies/{strategy_id}", timeout=10)
+        response = requests.get(f"{API_BASE}/sessions/{session_id}", timeout=10)
         
         if response.status_code == 200:
             data = response.json()
-            if 'id' in data and 'name' in data:
-                return True, f"SUCCESS - Got strategy '{data.get('name')}'"
+            if 'id' in data and 'session_type' in data:
+                return True, f"SUCCESS - Retrieved session: {data.get('rider_name', 'Unknown')} - {data.get('session_type', 'Unknown')}"
             else:
                 return False, f"SUCCESS but missing required fields: {list(data.keys())}"
+        elif response.status_code == 404:
+            return False, f"CRITICAL: Still getting 404 'Session not found' - fix not working"
         elif response.status_code == 403:
-            return False, f"CRITICAL: Still getting 403 Forbidden - auth middleware not removed from line 287"
+            return False, f"CRITICAL: Still getting 403 Forbidden - auth middleware not removed from line 503"
         else:
             return False, f"Unexpected status {response.status_code}: {response.text[:200]}"
             
