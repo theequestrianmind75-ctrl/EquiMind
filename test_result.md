@@ -235,7 +235,7 @@ frontend:
   - task: "During-Ride Coaching with TTS"
     implemented: true
     working: "NA"
-    file: "frontend/app/during-ride.tsx"
+    file: "frontend/app/during-ride.tsx, frontend/app/strategy-detail/[id].tsx"
     stuck_count: 0
     priority: "high"
     needs_retesting: true
@@ -243,6 +243,9 @@ frontend:
         - working: "NA"
           agent: "main"
           comment: "Real-time coaching using expo-speech TTS. Voice trigger placeholder (manual button for demo)."
+        - working: "NA"
+          agent: "main"
+          comment: "VOICE UPDATE: Implemented dynamic voice selection using Speech.getAvailableVoicesAsync() to automatically select the best natural-sounding female voice available on the device. Prioritizes enhanced quality voices (Samantha, Karen, Moira, Fiona, Tessa) for iOS/Android. Uses natural pitch (1.0) and slower rate (0.85) for clarity. Applied to both during-ride.tsx and strategy-detail/[id].tsx. This replaces hardcoded voice identifiers that were causing male/robotic voices."
   
   - task: "Post-Ride Analysis Screen"
     implemented: true
