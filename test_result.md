@@ -291,6 +291,9 @@ frontend:
         - working: "NA"
           agent: "main"
           comment: "View strategy details with audio playback using expo-speech."
+        - working: "NA"
+          agent: "main"
+          comment: "SIMPLIFIED UI: Removed rating box, target levels section, duration box, category badge, and tags. Now shows only: (1) Strategy title (32px, centered), (2) Audio button, (3) Instructions card. Cleaner, focused design for post-ride analysis suggested tools."
 
 metadata:
   created_by: "main_agent"
