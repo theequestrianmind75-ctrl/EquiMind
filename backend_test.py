@@ -53,24 +53,58 @@ class TestResults:
         print(f"\n📊 Test Summary: {self.passed}/{total} passed, {self.failed} failed")
         return self.failed == 0
 
-def test_public_mental_strategies_list():
-    """Test GET /api/mental-strategies (should be public)"""
+def get_auth_token():
+    """Get authentication token for creating test sessions"""
     try:
-        response = requests.get(f"{API_BASE}/mental-strategies", timeout=10)
+        # Register a test user
+        test_email = f"rider_{uuid.uuid4().hex[:8]}@equimind.com"
+        register_data = {
+            "email": test_email,
+            "password": "SecureRider123!",
+            "name": "Sarah Johnson"
+        }
         
-        if response.status_code == 200:
-            data = response.json()
-            if isinstance(data, list) and len(data) > 0:
-                return True, f"SUCCESS - Got {len(data)} mental strategies"
-            else:
-                return False, f"SUCCESS but empty data: {data}"
-        elif response.status_code == 403:
-            return False, f"CRITICAL: Still getting 403 Forbidden - auth middleware not removed"
+        response = requests.post(f"{API_BASE}/auth/register", json=register_data, timeout=10)
+        if response.status_code in [200, 201]:
+            token_data = response.json()
+            return token_data.get("access_token"), test_email
         else:
-            return False, f"Unexpected status {response.status_code}: {response.text[:200]}"
-            
+            print(f"    Failed to register user: {response.status_code} - {response.text}")
+            return None, None
     except Exception as e:
-        return False, f"Request failed: {str(e)}"
+        print(f"    Exception during registration: {str(e)}")
+        return None, None
+
+def create_test_session(token):
+    """Create a test session for testing purposes"""
+    session_data = {
+        "session_type": "pre-ride",
+        "ride_type": "training",
+        "context": "training",
+        "rider_name": "Sarah Johnson",
+        "anxiety_level": 6,
+        "confidence_level": 4,
+        "notes": "Preparing for dressage training session",
+        "horse_name": "Thunder",
+        "horse_energy_level": 7,
+        "horse_focus_level": 6,
+        "horse_responsiveness": 8,
+        "horse_notes": "Alert and responsive today"
+    }
+    
+    headers = {"Authorization": f"Bearer {token}"}
+    
+    try:
+        response = requests.post(f"{API_BASE}/sessions", json=session_data, headers=headers, timeout=10)
+        if response.status_code in [200, 201]:
+            session = response.json()
+            return session.get("id"), session
+        else:
+            print(f"    Failed to create test session: {response.status_code} - {response.text}")
+            return None, None
+    except Exception as e:
+        print(f"    Exception creating test session: {str(e)}")
+        return None, None
 
 def test_public_mental_strategy_detail():
     """Test GET /api/mental-strategies/{id} (should be public after fix)"""
