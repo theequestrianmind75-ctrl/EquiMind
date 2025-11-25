@@ -490,10 +490,9 @@ async def create_session(session_data: SessionCreate, current_user: dict = Depen
 @api_router.get("/sessions", response_model=List[Session])
 async def get_sessions(
     completed: Optional[bool] = None,
-    limit: int = 50,
-    current_user: dict = Depends(get_current_user)
+    limit: int = 50
 ):
-    query = {"rider_id": current_user["user_id"]}
+    query = {}
     if completed is not None:
         query["completed"] = completed
     
