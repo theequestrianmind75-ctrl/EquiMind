@@ -26,7 +26,7 @@ export default function Index() {
       <View style={styles.overlay}>
         <Image
           source={require('../assets/images/horse-head-logo.png')}
-          style={styles.logo}
+          style={[styles.logo, { tintColor: '#000000' }]}
         />
         <ActivityIndicator size="large" color="#000000" />
         <Text style={styles.text}>Loading The Equestrian Mind...</Text>
