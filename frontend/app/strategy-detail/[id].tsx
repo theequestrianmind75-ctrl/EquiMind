@@ -159,30 +159,7 @@ export default function StrategyDetail() {
 
       <ScrollView style={styles.content}>
         <View style={styles.strategyHeader}>
-          <View
-            style={[
-              styles.categoryBadge,
-              { backgroundColor: getCategoryColor(strategy.category) + '20' },
-            ]}
-          >
-            <Text style={[styles.categoryText, { color: getCategoryColor(strategy.category) }]}>
-              {strategy.category.split(',')[0].trim()}
-            </Text>
-          </View>
           <Text style={styles.strategyName}>{strategy.name}</Text>
-        </View>
-
-        <View style={styles.metaRow}>
-          <View style={styles.metaCard}>
-            <Ionicons name="time" size={24} color="#000000" />
-            <Text style={styles.metaValue}>{strategy.duration_minutes}</Text>
-            <Text style={styles.metaLabel}>Minutes</Text>
-          </View>
-          <View style={styles.metaCard}>
-            <Ionicons name="star" size={24} color="#f59e0b" />
-            <Text style={styles.metaValue}>{strategy.effectiveness_rating.toFixed(1)}</Text>
-            <Text style={styles.metaLabel}>Rating</Text>
-          </View>
         </View>
 
         <TouchableOpacity
@@ -200,44 +177,10 @@ export default function StrategyDetail() {
         </TouchableOpacity>
 
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Target Levels</Text>
-          <View style={styles.levelRow}>
-            <View style={styles.levelCard}>
-              <Ionicons name="pulse" size={20} color="#ef4444" />
-              <Text style={styles.levelLabel}>Anxiety</Text>
-              <Text style={styles.levelValue}>
-                {Math.min(...strategy.anxiety_level)}-{Math.max(...strategy.anxiety_level)}/10
-              </Text>
-            </View>
-            <View style={styles.levelCard}>
-              <Ionicons name="shield-checkmark" size={20} color="#10b981" />
-              <Text style={styles.levelLabel}>Confidence</Text>
-              <Text style={styles.levelValue}>
-                {Math.min(...strategy.confidence_level)}-{Math.max(...strategy.confidence_level)}/10
-              </Text>
-            </View>
-          </View>
-        </View>
-
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Instructions</Text>
           <View style={styles.instructionsCard}>
             <Text style={styles.instructionsText}>{strategy.instructions}</Text>
           </View>
         </View>
-
-        {strategy.metadata?.phases && (
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>Best Used During</Text>
-            <View style={styles.tagContainer}>
-              {strategy.metadata.phases.map((phase: string, index: number) => (
-                <View key={index} style={styles.tag}>
-                  <Text style={styles.tagText}>{phase}</Text>
-                </View>
-              ))}
-            </View>
-          </View>
-        )}
       </ScrollView>
     </SafeAreaView>
   );
