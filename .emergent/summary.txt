@@ -1,83 +1,73 @@
 <analysis>
-The trajectory chronicles an intensive debugging and feature implementation cycle for the EquiMind application. The initial problem was a user login failure in the preview environment, which was traced back to a series of cascading issues: a database connection error (), an empty database, and a name mismatch ( vs. ). The engineer systematically resolved these backend issues, confirming API and authentication functionality with .
+The trajectory details an extensive development cycle for the EquiMind mobile app. The work began with debugging and resolving database configuration issues, revealing that the backend was pointing to an empty database. The core of the effort was a major overhaul and expansion of the app's content and recommendation logic. This involved adding numerous Distress Tolerance and Mindfulness tools, mapping them to recommendation triggers, and creating a Crisis Tools filter, all managed through Python scripts that interact with the MongoDB database.
 
-A significant roadblock emerged with the frontend's Metro bundler, which consistently failed to start due to file watcher limits within the containerized environment. After multiple failed attempts to fix it, the engineer devised a successful workaround by generating a static build of the frontend (- Making sure project is set up correctly...
-- Making sure project is set up correctly...
-- Making sure project is set up correctly...
-- Making sure project is set up correctly...
-- Making sure project is set up correctly...
-- Making sure project is set up correctly...
-- Making sure project is set up correctly...) and serving it with a Python HTTP server.
+Several UI/UX features were implemented based on user requests, including changing icons, removing a redundant Ride Context feature, and multiple attempts to refine the text-to-speech voice for audio guidance. A significant portion of the interaction was dedicated to user support, guiding them through local environment setup (Node, Git, EAS CLI) and troubleshooting GitHub connection issues, ultimately revealing that the local setup path was unproductive.
 
-With a stable preview, the work shifted to user-driven requests: changing the app's logo (requiring two iterations to get the correct image), and fixing a data integrity issue where a tool category (BODY RESET) was mislabeled as Somatic Reset in the database.
-
-The final and current task involves a major data unification effort. The user wants to merge new tools from Word documents with the existing database. In response, the engineer created a sophisticated Python script () to standardize categories and data formats. The last action was extracting tool data from the first of three user-provided Word documents. The user's primary language is English; all future responses should be in English.
+The final and most critical phase involved debugging repeated deployment failures. The root causes were identified as a data-sync mismatch between development and production databases (which was solved by creating an automated data restoration script) and, most recently, 403 Forbidden errors on API calls due to incorrect authentication middleware on public endpoints. The user's primary language is English; all future responses must be in English.
 </analysis>
 
 <product_requirements>
-EquiMind is a mental performance mobile app for equestrians, providing Rider Tools—mental strategies to manage emotional states.
+EquiMind is a mental performance mobile application for equestrians, providing a library of Rider Tools (mental strategies) to manage emotional states and improve performance.
 
-**Core Features & Requirements:**
-1.  **Rider Tools Library:** A browsable collection of over 100 mental exercises, categorized for easy access. The data for these tools must be consistent and easily managed.
-2.  **Data Unification:** The user needs to consolidate tool data from multiple sources (existing database, Word documents) into a single, standardized JSON format within the MongoDB database. All tools, legacy and new, must share the same category names and data structure.
-3.  **Admin Text Editor:** A password-protected interface for bulk editing tool content.
-4.  **Logo Customization:** The app's branding, specifically the horse logo on the login/home screen, must match the user's provided image.
-
-**Implementation So Far:**
-The application's database has been cleaned, and all 107 existing tools now have a unified format and correct category names (, , etc.). To address the user's latest request, a Python-based data ingestion pipeline has been started to process new tools from uploaded Word documents. The first document has been successfully processed.
+**Core Features & Recent Enhancements:**
+1.  **Rider Tools Library:** A browsable library of over 190 mental exercises across multiple categories. Recent work added extensive Distress Tolerance and Mindfulness categories.
+2.  **Pre & Post-Ride Analysis:** A workflow for riders to log their state (anxiety, confidence, energy). The Training vs. Competition context selector was removed as it was deemed redundant with existing Ride Types.
+3.  **Personalized Recommendations:** Post-ride, the app provides personalized tool suggestions. The logic for this is stored in the database and was recently expanded to include all new Mindfulness tools.
+4.  **Specialized Content & UI:**
+    *   A Crisis Tools button was added to the Distress Tolerance category page, which filters the list to show only high-urgency tools.
+    *   Icons on the post-ride screen were updated for consistency, and emojis were removed from recommendation text stored in the database.
+    *   The text-to-speech voice for audio guidance was changed to a more natural-sounding female voice.
 </product_requirements>
 
 <key_technical_concepts>
-- **Full-Stack Architecture:** Python (FastAPI) backend and a React Native (Expo) frontend.
-- **Database:** MongoDB, with a focus on data integrity, normalization, and scripted data manipulation.
-- **Frontend Workaround:** Use of - Making sure project is set up correctly...
-- Making sure project is set up correctly...
-- Making sure project is set up correctly...
-- Making sure project is set up correctly...
-- Making sure project is set up correctly...
-- Making sure project is set up correctly...
-- Making sure project is set up correctly... to create a static build, served by a Python , to bypass persistent Metro bundler issues in the development environment.
-- **Data Ingestion & Scripting:** Heavy use of Python scripts (, ad-hoc scripts) to analyze, clean, format, and import data from JSON and Word documents into MongoDB.
+- **Full-Stack Architecture:** Monorepo with a FastAPI (Python) backend and an Expo (React Native) frontend.
+- **Database-as-Source-of-Truth:** MongoDB Atlas stores all app content (190+ tools, 24 recommendations), making logic dynamic.
+- **Script-based Migrations:** A consistent pattern of using standalone Python scripts (, , ) to perform all database seeding and content updates.
+- **FastAPI Authentication:** Use of  to protect endpoints. This was the root cause of recent 403 Forbidden deployment errors when applied to public endpoints.
 </key_technical_concepts>
 
 <code_architecture>
-The application is a monorepo with distinct  and  directories. The frontend preview is currently being served as a static build due to Metro bundler issues.
+The application uses a monorepo structure with distinct  and  directories.
 
 **Directory Structure:**
 
-- ****
-    - **Importance:** A new, crucial script created to solve the user's core problem of data inconsistency. It standardizes category names and can convert tool data between different formats.
-    - **Changes:** This file was created from scratch to handle the data unification task.
 
 - ****
-    - **Importance:** This image is the primary logo for the app, displayed on login and home screens.
-    - **Changes:** The file was replaced twice. First, with a black chess knight from a vision agent, and then with the user's specific black horse head image, which was uploaded as an artifact.
+  - **Importance:** The core FastAPI application that defines all API endpoints.
+  - **Summary of Changes:** Authentication middleware () was incorrectly applied to public GET endpoints. The most recent work involved attempts to remove this dependency from  to resolve 403 Forbidden errors during deployment. The work was interrupted before all necessary endpoints were fixed.
 
-- ** (directory)**
-    - **Importance:** This directory contains the static HTML/JS/CSS output from the - Making sure project is set up correctly...
-- Making sure project is set up correctly...
-- Making sure project is set up correctly...
-- Making sure project is set up correctly...
-- Making sure project is set up correctly...
-- Making sure project is set up correctly...
-- Making sure project is set up correctly... command. It is the result of a critical workaround to make the frontend preview functional despite Metro bundler failures. The app preview is currently served from here.
-    - **Changes:** This directory is repeatedly deleted and regenerated to reflect changes in the frontend code, such as the logo update and data fixes.
+- ****
+  - **Importance:** A critical script that runs on application startup to ensure the production database is correctly seeded with the latest data.
+  - **Summary of Changes:** This script was created and then significantly enhanced to add a safety layer. It now backs up the production  and  collections before wiping them and restoring them from  files. This ensures deployments always have the correct data (190 tools).
+
+- ****
+  - **Importance:** Displays the list of tools for a selected category.
+  - **Summary of Changes:** It was modified to conditionally render a red Crisis Tools button only for the Distress Tolerance category. State and filtering logic were added to this button to show/hide tools marked with an  flag in the database.
+
+- ****
+  - **Importance:** Contains the logic for analyzing user input and displaying personalized recommendations.
+  - **Summary of Changes:** The logic was updated to use  after the  feature was removed. Icons within the component were updated, and a major bug was fixed where emojis embedded in the database recommendation text were causing unwanted icons to appear in the UI.
+
+- ****
+  - **Importance:** The screen where the user starts a session.
+  - **Summary of Changes:** It was heavily modified to completely remove the Ride Context section (UI, state, and API parameter), simplifying the user flow.
+
+- ** & **
+    - **Importance:** These screens provide audio guidance.
+    - **Summary of Changes:** Both files were modified multiple times to change the text-to-speech voice, eventually landing on a platform-agnostic approach using  and  after specific voice identifiers proved unreliable in the preview environment.
 </code_architecture>
 
 <pending_tasks>
-- **Process Remaining Word Documents:** Extract, convert, and merge tools from the two remaining uploaded Word documents ( and ) into the database.
-- **Resolve Production Deployment:** The original issue of the production environment using the local  has not been fully resolved. The user needs to ensure platform environment variables are set correctly for a successful deployment.
-- **Implement Deep Assessment Feature:** The 18-question assessment schema is pending implementation.
+- **Deep Assessment Feature:** A known, but deferred, future feature involving an 18-question assessment.
+- **Fix Deployment:** The primary, urgent task is to resolve the 403 Forbidden errors preventing a successful deployment.
 </pending_tasks>
 
 <current_work>
-The immediate task is to ingest new Rider Tools from three Word documents provided by the user and merge them into the existing database. This work is a direct response to the user's request: I just have word documents of rider tools that I would like to put into JSON. Can you help me...?
+The immediate and critical task is resolving a persistent deployment failure. The deployment logs clearly show **** and **** errors. This indicates that public API endpoints, which the frontend needs to access without user authentication to display initial data, are incorrectly protected by an authentication layer.
 
-Before this, the AI engineer first unified the format and categories of the 107 tools already present in the MongoDB database, creating a clean foundation. A  script was built to standardize tool data.
-
-The work concluded immediately after the successful extraction of data from the *first* of the three uploaded documents, . The output confirmed the extraction of 161 tools from this document. The process of handling the remaining two documents ( and ) has not yet begun. The goal is to process all documents and merge all tools into a single, unified collection in the database.
+The previous engineer correctly identified this and attempted to fix it by removing the  dependency from some endpoints in . However, the issue persists in the latest deployment, meaning the fix was either incomplete or not successfully deployed. The last action taken was investigating the  endpoint, but the logs show that other endpoints like  are also affected. The core problem remains: the app is not accessible upon deployment because essential data cannot be fetched.
 </current_work>
 
 <optional_next_step>
-I will now process the second Word document you uploaded, , to extract the tools, convert them to the standard JSON format, and prepare them for merging.
+Check the  file to identify all API endpoints that are still incorrectly protected by the  dependency (like ) and remove it from all public-facing GET routes.
 </optional_next_step>

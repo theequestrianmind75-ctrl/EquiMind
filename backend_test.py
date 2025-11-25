@@ -11,7 +11,7 @@ import random
 from typing import Dict, List, Optional
 
 # Get backend URL from frontend .env
-BACKEND_URL = "https://mindful-equine.preview.emergentagent.com/api"
+BACKEND_URL = "https://horseback-calm.preview.emergentagent.com/api"
 
 class EquiMindTester:
     def __init__(self):
