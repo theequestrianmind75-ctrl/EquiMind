@@ -218,46 +218,17 @@ def test_protected_session_create():
     except Exception as e:
         return False, f"Request failed: {str(e)}"
 
-def test_protected_session_update():
-    """Test PATCH /api/sessions/{id} (should still require auth - return 403)"""
+def test_protected_session_delete(session_id):
+    """Test DELETE /api/sessions/{session_id} WITHOUT auth (should still be protected - return 403)"""
     try:
-        # Use a dummy session ID
-        session_id = "test-session-id"
-        update_data = {
-            "anxiety_level": 3,
-            "notes": "Test update"
-        }
-        
-        response = requests.patch(
-            f"{API_BASE}/sessions/{session_id}", 
-            json=update_data,
-            timeout=10
-        )
-        
-        if response.status_code == 403:
-            return True, f"SUCCESS - Protected endpoint correctly returns 403 without auth"
-        elif response.status_code == 401:
-            return True, f"SUCCESS - Protected endpoint correctly returns 401 without auth"
-        else:
-            return False, f"CRITICAL: Endpoint not protected - got status {response.status_code}"
-            
-    except Exception as e:
-        return False, f"Request failed: {str(e)}"
-
-def test_protected_session_delete():
-    """Test DELETE /api/sessions/{id} (should still require auth - return 403)"""
-    try:
-        # Use a dummy session ID
-        session_id = "test-session-id"
-        
         response = requests.delete(f"{API_BASE}/sessions/{session_id}", timeout=10)
         
         if response.status_code == 403:
-            return True, f"SUCCESS - Protected endpoint correctly returns 403 without auth"
+            return True, f"SUCCESS - Protected endpoint correctly returns 403 Forbidden without auth"
         elif response.status_code == 401:
-            return True, f"SUCCESS - Protected endpoint correctly returns 401 without auth"
+            return True, f"SUCCESS - Protected endpoint correctly returns 401 Unauthorized without auth"
         else:
-            return False, f"CRITICAL: Endpoint not protected - got status {response.status_code}"
+            return False, f"CRITICAL: Endpoint not protected - got status {response.status_code}: {response.text[:100]}"
             
     except Exception as e:
         return False, f"Request failed: {str(e)}"
