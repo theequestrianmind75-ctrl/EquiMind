@@ -509,10 +509,9 @@ async def get_session(session_id: str):
 @api_router.patch("/sessions/{session_id}", response_model=Session)
 async def update_session(
     session_id: str,
-    update_data: SessionUpdate,
-    current_user: dict = Depends(get_current_user)
+    update_data: SessionUpdate
 ):
-    session = await db.sessions.find_one({"id": session_id, "rider_id": current_user["user_id"]})
+    session = await db.sessions.find_one({"id": session_id})
     if not session:
         raise HTTPException(status_code=404, detail="Session not found")
     
