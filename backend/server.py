@@ -284,7 +284,7 @@ async def get_mental_strategies(
     return strategies
 
 @api_router.get("/mental-strategies/{strategy_id}")
-async def get_strategy(strategy_id: str, current_user: dict = Depends(get_current_user)):
+async def get_strategy(strategy_id: str):
     # Try to find by 'id' field first
     strategy = await db.mental_strategies.find_one({"id": strategy_id})
     
