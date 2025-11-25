@@ -64,15 +64,21 @@ export default function StrategyDetail() {
     const audioScript = extractAudioScript(strategy.instructions);
     setIsSpeaking(true);
 
-    Speech.speak(audioScript, {
+    // Configure voice options for cross-platform female voice
+    const voiceOptions: any = {
       language: 'en-US',
-      pitch: 1.0,
+      pitch: 1.15,
       rate: 0.9,
-      // Use Samantha - premium natural female voice (pre-installed on all iOS devices)
-      voice: 'com.apple.ttsbundle.Samantha-compact',
       onDone: () => setIsSpeaking(false),
       onError: () => setIsSpeaking(false),
-    });
+    };
+
+    // Try to use a female voice identifier (works on real devices)
+    if (Platform.OS === 'ios') {
+      voiceOptions.voice = 'com.apple.ttsbundle.Samantha-compact';
+    }
+
+    Speech.speak(audioScript, voiceOptions);
   };
 
   const handleStopAudio = () => {
