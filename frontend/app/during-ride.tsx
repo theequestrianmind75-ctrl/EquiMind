@@ -98,18 +98,24 @@ export default function DuringRide() {
     setLastAdvice(`${strategy.name}: ${audioScript}`);
     setIsSpeaking(true);
 
-    Speech.speak(audioScript, {
+    // Configure voice options for cross-platform female voice
+    const voiceOptions: any = {
       language: 'en-US',
-      pitch: 1.0,
+      pitch: 1.15,
       rate: 0.9,
-      // Use Samantha - premium natural female voice (pre-installed on all iOS devices)
-      voice: 'com.apple.ttsbundle.Samantha-compact',
       onDone: () => setIsSpeaking(false),
       onError: () => {
         setIsSpeaking(false);
         Alert.alert('Error', 'Failed to speak advice');
       },
-    });
+    };
+
+    // Try to use a female voice identifier (works on real devices)
+    if (Platform.OS === 'ios') {
+      voiceOptions.voice = 'com.apple.ttsbundle.Samantha-compact';
+    }
+
+    Speech.speak(audioScript, voiceOptions);
   };
 
   const stopSpeaking = () => {
