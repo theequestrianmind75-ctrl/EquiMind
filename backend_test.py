@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
 """
-EquiMind Backend API Testing - Deployment 403 Forbidden Fix
-Testing public endpoints accessibility without authentication
+EquiMind Backend API Testing - Session Endpoints Fix Verification
+Testing the fix for "detail not found" error in session endpoints.
+
+FIX APPLIED:
+- Removed authentication (Depends(get_current_user)) from:
+  1. GET /api/sessions/{session_id} (line 503)
+  2. PATCH /api/sessions/{session_id} (line 510)
+- Also removed rider_id filter from both endpoints
 """
 
 import requests
@@ -10,6 +16,8 @@ import sys
 from typing import Dict, Any
 import os
 from dotenv import load_dotenv
+import uuid
+from datetime import datetime
 
 # Load environment variables
 load_dotenv('/app/frontend/.env')
@@ -19,6 +27,7 @@ BACKEND_URL = os.getenv('EXPO_PUBLIC_BACKEND_URL', 'https://horseback-calm.previ
 API_BASE = f"{BACKEND_URL}/api"
 
 print(f"🔗 Testing backend at: {API_BASE}")
+print("🎯 FOCUS: Session endpoints fix verification")
 
 class TestResults:
     def __init__(self):
