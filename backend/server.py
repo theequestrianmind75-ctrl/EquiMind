@@ -500,8 +500,8 @@ async def get_sessions(
     return [Session(**s) for s in sessions]
 
 @api_router.get("/sessions/{session_id}", response_model=Session)
-async def get_session(session_id: str, current_user: dict = Depends(get_current_user)):
-    session = await db.sessions.find_one({"id": session_id, "rider_id": current_user["user_id"]})
+async def get_session(session_id: str):
+    session = await db.sessions.find_one({"id": session_id})
     if not session:
         raise HTTPException(status_code=404, detail="Session not found")
     return Session(**session)
