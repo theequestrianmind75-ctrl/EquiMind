@@ -187,7 +187,7 @@ frontend:
   - task: "Authentication Screens (Login/Signup)"
     implemented: true
     working: "NA"
-    file: "frontend/app/(auth)/"
+    file: "frontend/app/(auth)/login.tsx, frontend/app/(auth)/signup.tsx, frontend/app/index.tsx"
     stuck_count: 0
     priority: "high"
     needs_retesting: true
@@ -195,6 +195,9 @@ frontend:
         - working: "NA"
           agent: "main"
           comment: "Login and signup screens created with zustand state management and expo-secure-store for tokens."
+        - working: "NA"
+          agent: "main"
+          comment: "LOGO COLOR CHANGE: Applied tintColor: '#000000' to horse head logo on login, signup, and loading screens. Changes logo from blue to black for better visual consistency with app design."
   
   - task: "Main Tab Navigation"
     implemented: true
