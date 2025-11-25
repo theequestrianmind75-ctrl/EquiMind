@@ -99,24 +99,53 @@ export default function DuringRide() {
     setLastAdvice(`${strategy.name}: ${audioScript}`);
     setIsSpeaking(true);
 
-    // Configure voice options for cross-platform female voice
-    const voiceOptions: any = {
-      language: 'en-US',
-      pitch: 1.15,
-      rate: 0.9,
-      onDone: () => setIsSpeaking(false),
-      onError: () => {
-        setIsSpeaking(false);
-        Alert.alert('Error', 'Failed to speak advice');
-      },
-    };
+    try {
+      // Get all available voices on the device
+      const voices = await Speech.getAvailableVoicesAsync();
+      
+      // Find a natural female voice
+      // Priority order: enhanced quality female voices, then any female voice
+      const femaleVoice = voices.find(v => 
+        v.language.startsWith('en') && 
+        (v.name.toLowerCase().includes('samantha') || 
+         v.name.toLowerCase().includes('karen') ||
+         v.name.toLowerCase().includes('moira') ||
+         v.name.toLowerCase().includes('fiona') ||
+         v.name.toLowerCase().includes('tessa'))
+      ) || voices.find(v => 
+        v.language.startsWith('en') && 
+        v.quality === 'Enhanced'
+      ) || voices.find(v => 
+        v.language.startsWith('en')
+      );
 
-    // Try to use a female voice identifier (works on real devices)
-    if (Platform.OS === 'ios') {
-      voiceOptions.voice = 'com.apple.ttsbundle.Samantha-compact';
+      // Configure voice options for natural-sounding female voice
+      const voiceOptions: any = {
+        language: 'en-US',
+        pitch: 1.0,  // Natural pitch
+        rate: 0.85,  // Slightly slower for clarity and natural sound
+        voice: femaleVoice?.identifier,
+        onDone: () => setIsSpeaking(false),
+        onError: () => {
+          setIsSpeaking(false);
+          Alert.alert('Error', 'Failed to speak advice');
+        },
+      };
+
+      Speech.speak(audioScript, voiceOptions);
+    } catch (error) {
+      // Fallback if voice selection fails
+      Speech.speak(audioScript, {
+        language: 'en-US',
+        pitch: 1.0,
+        rate: 0.85,
+        onDone: () => setIsSpeaking(false),
+        onError: () => {
+          setIsSpeaking(false);
+          Alert.alert('Error', 'Failed to speak advice');
+        },
+      });
     }
-
-    Speech.speak(audioScript, voiceOptions);
   };
 
   const stopSpeaking = () => {
