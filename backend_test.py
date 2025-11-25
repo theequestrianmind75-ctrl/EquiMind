@@ -127,8 +127,36 @@ def test_get_single_session_no_auth(session_id):
     except Exception as e:
         return False, f"Request failed: {str(e)}"
 
-def test_public_sessions_list():
-    """Test GET /api/sessions (should be public after fix)"""
+def test_patch_session_no_auth(session_id):
+    """Test PATCH /api/sessions/{session_id} WITHOUT authentication (FIXED)"""
+    update_data = {
+        "completed": True,
+        "anxiety_level": 5,
+        "confidence_level": 7,
+        "notes": "Session completed successfully - anxiety reduced, confidence improved"
+    }
+    
+    try:
+        response = requests.patch(f"{API_BASE}/sessions/{session_id}", json=update_data, timeout=10)
+        
+        if response.status_code == 200:
+            data = response.json()
+            if 'id' in data and data.get('completed') == True:
+                return True, f"SUCCESS - Session updated: completed={data.get('completed')}, anxiety={data.get('anxiety_level')}, confidence={data.get('confidence_level')}"
+            else:
+                return False, f"SUCCESS but update not reflected: completed={data.get('completed')}"
+        elif response.status_code == 404:
+            return False, f"CRITICAL: Still getting 404 'Session not found' - fix not working"
+        elif response.status_code == 403:
+            return False, f"CRITICAL: Still getting 403 Forbidden - auth middleware not removed from line 510"
+        else:
+            return False, f"Unexpected status {response.status_code}: {response.text[:200]}"
+            
+    except Exception as e:
+        return False, f"Request failed: {str(e)}"
+
+def test_get_sessions_list_no_auth():
+    """Test GET /api/sessions WITHOUT authentication (should already work)"""
     try:
         response = requests.get(f"{API_BASE}/sessions", timeout=10)
         
@@ -139,7 +167,7 @@ def test_public_sessions_list():
             else:
                 return False, f"SUCCESS but unexpected data format: {type(data)}"
         elif response.status_code == 403:
-            return False, f"CRITICAL: Still getting 403 Forbidden - auth middleware not removed from line 490"
+            return False, f"CRITICAL: Getting 403 Forbidden - should be public"
         else:
             return False, f"Unexpected status {response.status_code}: {response.text[:200]}"
             
