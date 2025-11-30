@@ -44,9 +44,9 @@ async def init_production_database():
             expected_count = len(backup_tools)
     
     # Determine if restoration is needed:
-    # 1. Database is empty or corrupted (< 50 tools)
-    # 2. Database has significantly fewer tools than backup (< 80% of expected)
-    needs_restoration = valid_count < 50 or (expected_count > 0 and total_count < expected_count * 0.8)
+    # Only restore if database is truly empty or corrupted (< 50 tools with valid instructions)
+    # This prevents overwriting manual edits made through the admin text editor
+    needs_restoration = valid_count < 50
     
     if needs_restoration:
         print(f"⚠️  Database needs restoration (has {total_count}, expected ~{expected_count})")
