@@ -411,6 +411,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     borderWidth: 1,
     borderColor: '#375B50',
+    minHeight: 280,
   },
   trendHeader: {
     flexDirection: 'column',
