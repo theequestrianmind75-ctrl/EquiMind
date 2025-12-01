@@ -38,10 +38,10 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="ride"
+        name="trends"
         options={{
-          title: 'Ride',
-          tabBarIcon: ({ color, size }) => <Ionicons name="play-circle" size={size} color={color} />,
+          title: 'Trends',
+          tabBarIcon: ({ color, size }) => <Ionicons name="trending-up" size={size} color={color} />,
         }}
       />
       <Tabs.Screen
