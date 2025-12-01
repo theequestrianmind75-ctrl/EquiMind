@@ -4291,7 +4291,7 @@
     "id": "3-minute-halt-stop-skill",
     "name": "The 3-Minute Halt (DBT STOP Skill)",
     "category": "Distress Tolerance",
-    "instructions": "1. Stop: Pause all action immediately. Do not mount or continue the ride.\n2. Take a breath: Inhale slowly through your nose and lengthen the exhale through your mouth.\n3. Observe: Notice your thoughts, emotions, body sensations, and your horse's body language.\n4. Proceed mindfully: Choose the safest option\u2014full ride, modified ride, groundwork only, or no ride today.",
+    "instructions": "Stop: Pause all action immediately. Do not mount or continue the ride.\nTake a breath: Inhale slowly through your nose and lengthen the exhale through your mouth.\nObserve: Notice your thoughts, emotions, body sensations, and your horse's body language.\nProceed mindfully: Choose the safest option\u2014full ride, modified ride, groundwork only, or no ride today.",
     "duration_minutes": 3,
     "anxiety_level": [
       6,
@@ -4323,7 +4323,7 @@
     "id": "temperature-reset-tip-skill",
     "name": "Temperature Reset (DBT TIP Skill)",
     "category": "Distress Tolerance",
-    "instructions": "1. Apply cold water to your wrists, face, or the back of your neck for 20\u201330 seconds.\n2. If possible, step into cool fresh air and focus on slow, steady breathing.\n3. Notice changes in your heart rate, muscle tension, and mental intensity.\n4. Re-rate your anxiety from 0\u201310 and decide whether you need additional grounding before riding.",
+    "instructions": "Apply cold water to your wrists, face, or the back of your neck for 20\u201330 seconds.\nIf possible, step into cool fresh air and focus on slow, steady breathing.\nNotice changes in your heart rate, muscle tension, and mental intensity.\nRe-rate your anxiety from 0\u201310 and decide whether you need additional grounding before riding.",
     "duration_minutes": 2,
     "anxiety_level": [
       7,
@@ -4352,7 +4352,7 @@
     "id": "groundwork-first-rule",
     "name": "Groundwork First Rule",
     "category": "Distress Tolerance",
-    "instructions": "1. Lead your horse at the walk for 3\u20135 minutes, focusing on a calm rhythm and clear boundaries.\n2. Add simple yielding or backing exercises to check connection and responsiveness.\n3. Notice your own breathing, tension, and thoughts as you move with your horse.\n4. Observe your horse's signals\u2014head position, muscle tone, responsiveness, and startle level.\n5. Decide whether today is appropriate for a full ride, a modified ride, or groundwork only.",
+    "instructions": "Lead your horse at the walk for 3\u20135 minutes, focusing on a calm rhythm and clear boundaries.\nAdd simple yielding or backing exercises to check connection and responsiveness.\nNotice your own breathing, tension, and thoughts as you move with your horse.\nObserve your horse's signals\u2014head position, muscle tone, responsiveness, and startle level.\nDecide whether today is appropriate for a full ride, a modified ride, or groundwork only.",
     "duration_minutes": 5,
     "anxiety_level": [
       4,
@@ -4384,7 +4384,7 @@
     "id": "name-it-to-tame-it",
     "name": "Name It to Tame It",
     "category": "Distress Tolerance",
-    "instructions": "1. Pause and complete the sentence: \"I am feeling ____ because ____.\" Say it silently or out loud.\n2. Acknowledge that the emotion is valid without judging it as good or bad.\n3. Remind yourself: \"This emotion does not get to control my choices with my horse.\"\n4. Take three slow breaths and check whether your emotional intensity has shifted.",
+    "instructions": "Pause and complete the sentence: \"I am feeling ____ because ____.\" Say it silently or out loud.\nAcknowledge that the emotion is valid without judging it as good or bad.\nRemind yourself: \"This emotion does not get to control my choices with my horse.\"\nTake three slow breaths and check whether your emotional intensity has shifted.",
     "duration_minutes": 2,
     "anxiety_level": [
       3,
@@ -4415,7 +4415,7 @@
     "id": "dbt-sensory-anchors-rider",
     "name": "5-4-3-2-1 Sensory Anchors (Rider Edition)",
     "category": "Distress Tolerance",
-    "instructions": "1. Name 5 things you can see around you (e.g., arena rails, mountains, saddle, your horse's ears).\n2. Identify 4 things you can hear (hoofbeats, wind, voices, barn sounds).\n3. Notice 3 things you can touch (reins, your boots, your horse's coat or mane).\n4. Identify 2 scents you can smell (hay, leather, fresh air).\n5. Choose 1 grounding movement (press your heels into the ground, roll your shoulders, or place a hand on your horse's neck) and take a slow exhale.",
+    "instructions": "Name 5 things you can see around you (e.g., arena rails, mountains, saddle, your horse's ears).\nIdentify 4 things you can hear (hoofbeats, wind, voices, barn sounds).\nNotice 3 things you can touch (reins, your boots, your horse's coat or mane).\nIdentify 2 scents you can smell (hay, leather, fresh air).\nChoose 1 grounding movement (press your heels into the ground, roll your shoulders, or place a hand on your horse's neck) and take a slow exhale.",
     "duration_minutes": 4,
     "anxiety_level": [
       3,
@@ -4448,7 +4448,7 @@
     "id": "wise-mind-saddle-check",
     "name": "Wise Mind Saddle Check",
     "category": "Distress Tolerance",
-    "instructions": "1. Emotion Mind: Ask yourself, \"What do I feel like doing right now with my horse?\" Notice impulses such as pushing through or avoiding.\n2. Reasonable Mind: Ask, \"Given my current state and my horse's behavior, what is the safest and most realistic plan?\"\n3. Wise Mind: Blend both and ask, \"What choice honors both safety and partnership?\"\n4. Clearly state your decision (e.g., full ride, walk-only ride, groundwork, or no ride) and commit to it for this session.",
+    "instructions": "Emotion Mind: Ask yourself, \"What do I feel like doing right now with my horse?\" Notice impulses such as pushing through or avoiding.\nReasonable Mind: Ask, \"Given my current state and my horse's behavior, what is the safest and most realistic plan?\"\nWise Mind: Blend both and ask, \"What choice honors both safety and partnership?\"\nClearly state your decision (e.g., full ride, walk-only ride, groundwork, or no ride) and commit to it for this session.",
     "duration_minutes": 3,
     "anxiety_level": [
       5,
@@ -4478,7 +4478,7 @@
     "id": "act-open-the-door-exercise",
     "name": "ACT Open the Door Exercise",
     "category": "Distress Tolerance",
-    "instructions": "1. Visualize a door in front of you labeled with your current emotion (e.g., anxiety, anger, grief).\n2. Imagine gently opening the door and allowing the emotion to be present without fighting or suppressing it.\n3. Ask yourself, \"What value do I want to ride from today?\" (e.g., safety, patience, connection, kindness, learning).\n4. Choose one small, concrete action that reflects that value\u2014for example, a quiet walk ride, focused grooming, or simple groundwork.",
+    "instructions": "Visualize a door in front of you labeled with your current emotion (e.g., anxiety, anger, grief).\nImagine gently opening the door and allowing the emotion to be present without fighting or suppressing it.\nAsk yourself, \"What value do I want to ride from today?\" (e.g., safety, patience, connection, kindness, learning).\nChoose one small, concrete action that reflects that value\u2014for example, a quiet walk ride, focused grooming, or simple groundwork.",
     "duration_minutes": 4,
     "anxiety_level": [
       4,
@@ -4510,7 +4510,7 @@
     "id": "sports-psychology-performance-reset",
     "name": "Sports Psychology Performance Reset",
     "category": "Distress Tolerance",
-    "instructions": "1. Notice unhelpful thoughts, such as \"I'm a bad rider\" or \"This ride will go badly.\"\n2. Internally say \"Stop\" or imagine a stop sign to interrupt the spiral.\n3. Choose a simple cue word or phrase like \"steady,\" \"soft,\" \"breathe,\" or \"present.\"\n4. Take one slow breath and repeat your cue word on the exhale as you return to the next small task with your horse.",
+    "instructions": "Notice unhelpful thoughts, such as \"I'm a bad rider\" or \"This ride will go badly.\"\nInternally say \"Stop\" or imagine a stop sign to interrupt the spiral.\nChoose a simple cue word or phrase like \"steady,\" \"soft,\" \"breathe,\" or \"present.\"\nTake one slow breath and repeat your cue word on the exhale as you return to the next small task with your horse.",
     "duration_minutes": 2,
     "anxiety_level": [
       3,
@@ -4542,7 +4542,7 @@
     "id": "co-regulation-through-body-position",
     "name": "Co-Regulation Through Body Position",
     "category": "Distress Tolerance",
-    "instructions": "1. Stand or sit with your feet grounded and briefly scan for tension in your jaw, shoulders, chest, back, and legs.\n2. Soften your jaw, drop your shoulders, and allow your chest and ribcage to gently expand.\n3. Take several slow exhales, imagining the breath traveling down into your seat and legs.\n4. While near or on your horse, maintain this softened posture and notice any changes in your horse's breathing, expression, or muscle tone.",
+    "instructions": "Stand or sit with your feet grounded and briefly scan for tension in your jaw, shoulders, chest, back, and legs.\nSoften your jaw, drop your shoulders, and allow your chest and ribcage to gently expand.\nTake several slow exhales, imagining the breath traveling down into your seat and legs.\nWhile near or on your horse, maintain this softened posture and notice any changes in your horse's breathing, expression, or muscle tone.",
     "duration_minutes": 3,
     "anxiety_level": [
       4,
@@ -4574,7 +4574,7 @@
     "id": "ride-alternatives-list",
     "name": "Ride Alternatives Menu",
     "category": "Distress Tolerance",
-    "instructions": "1. Create a personal list of alternatives such as: grooming only, hand-walking, in-hand trail, groundwork, walk-only ride, or no ride today.\n2. Before mounting, rate your emotional intensity from 0\u201310.\n3. If your number is above your chosen safety threshold (for example, 6 or higher), commit to selecting one alternative instead of a full schooling ride.\n4. After the session, briefly reflect on how your emotional state and your horse's behavior changed using the alternative plan.",
+    "instructions": "Create a personal list of alternatives such as: grooming only, hand-walking, in-hand trail, groundwork, walk-only ride, or no ride today.\nBefore mounting, rate your emotional intensity from 0\u201310.\nIf your number is above your chosen safety threshold (for example, 6 or higher), commit to selecting one alternative instead of a full schooling ride.\nAfter the session, briefly reflect on how your emotional state and your horse's behavior changed using the alternative plan.",
     "duration_minutes": 5,
     "anxiety_level": [
       6,
@@ -4640,7 +4640,7 @@
     "name": "Pre-Ride Emotional Check-In",
     "category": "Distress Tolerance",
     "description": "A brief self-assessment to help riders identify emotional state, triggers, body sensations, horse feedback, and choose the safest, kindest ride plan.",
-    "instructions": "1. What am I feeling emotionally right now?\nWrite your answer.\n\n2. On a scale of 1\u201310, what is my emotional intensity?\nCircle or note a number from 1\u201310.\n\n3. What triggered or contributed to my current state?\nDescribe any events, thoughts, or stressors.\n\n4. What physical sensations do I notice in my body?\nWrite the sensations (e.g., tight chest, shaky hands, tense jaw).\n\n5. What is my horse showing me right now?\nDescribe your horse's behavior, expression, and energy.\n\n6. What is one thing I need before deciding to ride? (e.g., breathing, grounding, pause, drinking water, going outside.)\nWrite your answer.\n\n7. If I ride, what is the safest, kindest plan for me and my horse?\nDescribe the plan (e.g., walk-only ride, light schooling, groundwork, or no ride).",
+    "instructions": "What am I feeling emotionally right now?\nWrite your answer.\n\nOn a scale of 1\u201310, what is my emotional intensity?\nCircle or note a number from 1\u201310.\n\nWhat triggered or contributed to my current state?\nDescribe any events, thoughts, or stressors.\n\nWhat physical sensations do I notice in my body?\nWrite the sensations (e.g., tight chest, shaky hands, tense jaw).\n\nWhat is my horse showing me right now?\nDescribe your horse's behavior, expression, and energy.\n\nWhat is one thing I need before deciding to ride? (e.g., breathing, grounding, pause, drinking water, going outside.)\nWrite your answer.\n\nIf I ride, what is the safest, kindest plan for me and my horse?\nDescribe the plan (e.g., walk-only ride, light schooling, groundwork, or no ride).",
     "duration_minutes": 5,
     "anxiety_level": [
       3,
@@ -4682,7 +4682,7 @@
     "name": "Emergency Ground-Tie & Breathe",
     "category": "Distress Tolerance",
     "description": "A mounted crisis tool for when the rider feels near panic or emotional overload and needs to rapidly stabilize and keep both horse and rider safe.",
-    "instructions": "1. If it is safe to do so, bring your horse to a halt in the safest available spot (center of arena, away from traffic or obstacles).\n2. Shorten your reins just enough to maintain control without pulling, and sit deep in the saddle.\n3. Take 3\u20135 slow breaths: inhale through your nose for a count of 4, exhale through your mouth for a count of 6.\n4. Silently repeat a grounding phrase such as: \"I am here, I am on my horse, we are standing, we are safe right now.\"\n5. Scan for danger: if any real safety risk is present (loose horses, severe spook, unstable footing), dismount calmly and move both of you to a safer area.\n6. Once stable, decide whether to continue at the walk only, switch to groundwork, or end the ride for today.",
+    "instructions": "If it is safe to do so, bring your horse to a halt in the safest available spot (center of arena, away from traffic or obstacles).\nShorten your reins just enough to maintain control without pulling, and sit deep in the saddle.\nTake 3\u20135 slow breaths: inhale through your nose for a count of 4, exhale through your mouth for a count of 6.\nSilently repeat a grounding phrase such as: \"I am here, I am on my horse, we are standing, we are safe right now.\"\nScan for danger: if any real safety risk is present (loose horses, severe spook, unstable footing), dismount calmly and move both of you to a safer area.\nOnce stable, decide whether to continue at the walk only, switch to groundwork, or end the ride for today.",
     "duration_minutes": 3,
     "anxiety_level": [
       7,
@@ -4712,7 +4712,7 @@
     "name": "Barn Safe Space Time-Out",
     "category": "Distress Tolerance",
     "description": "A short, structured time-out away from the horse to prevent escalation when the rider feels on the verge of losing emotional control.",
-    "instructions": "1. Ensure your horse is secured safely (cross-ties, stall, or safe tie location) before stepping away.\n2. Tell yourself clearly: \"I am taking a 5-minute time-out to keep both of us safe.\" This frames the pause as a skill, not a failure.\n3. Move to a pre-chosen safe space at the barn (tack room, bathroom, car, quiet corner) where you can be physically away from stimuli.\n4. Use a grounding sequence while away: identify 3 things you see, 2 things you hear, and 1 thing you feel physically (chair, wall, floor under feet).\n5. Take at least 5 slow breaths, lengthening the exhale.\n6. At the end of the time-out, ask yourself: \"Am I calm enough to return and choose a safe plan\u2014groundwork, gentle ride, or no ride today?\"",
+    "instructions": "Ensure your horse is secured safely (cross-ties, stall, or safe tie location) before stepping away.\nTell yourself clearly: \"I am taking a 5-minute time-out to keep both of us safe.\" This frames the pause as a skill, not a failure.\nMove to a pre-chosen safe space at the barn (tack room, bathroom, car, quiet corner) where you can be physically away from stimuli.\nUse a grounding sequence while away: identify 3 things you see, 2 things you hear, and 1 thing you feel physically (chair, wall, floor under feet).\nTake at least 5 slow breaths, lengthening the exhale.\nAt the end of the time-out, ask yourself: \"Am I calm enough to return and choose a safe plan\u2014groundwork, gentle ride, or no ride today?\"",
     "duration_minutes": 5,
     "anxiety_level": [
       6,
@@ -4744,7 +4744,7 @@
     "name": "Crisis Ride Stop Plan (Dismount & Decompress)",
     "category": "Distress Tolerance",
     "description": "A clear plan for safely ending a ride in progress when emotions or fear become too intense to continue mounted work.",
-    "instructions": "1. Acknowledge the crisis without judgment: silently say, \"This is too much for me right now. Stopping is a smart, safe choice.\"\n2. Bring your horse to a walk and then a controlled halt in the safest available location.\n3. Dismount calmly and deliberately, keeping your breathing slow throughout the movement.\n4. Lead your horse at the walk for 2\u20133 minutes, allowing both of your nervous systems to downshift while you stay in motion.\n5. Once both of you are calmer, move to a safe area (grooming area, stall, or quiet corner) and untack or loosen tack as appropriate.\n6. Briefly debrief with yourself: what signs did you notice in your body and thoughts that told you it was time to stop? What did your horse show you? Log this as a success in using a safety plan, not a failure.",
+    "instructions": "Acknowledge the crisis without judgment: silently say, \"This is too much for me right now. Stopping is a smart, safe choice.\"\nBring your horse to a walk and then a controlled halt in the safest available location.\nDismount calmly and deliberately, keeping your breathing slow throughout the movement.\nLead your horse at the walk for 2\u20133 minutes, allowing both of your nervous systems to downshift while you stay in motion.\nOnce both of you are calmer, move to a safe area (grooming area, stall, or quiet corner) and untack or loosen tack as appropriate.\nBriefly debrief with yourself: what signs did you notice in your body and thoughts that told you it was time to stop? What did your horse show you? Log this as a success in using a safety plan, not a failure.",
     "duration_minutes": 7,
     "anxiety_level": [
       7,
@@ -4774,7 +4774,7 @@
     "name": "Call-and-Connect Support Script",
     "category": "Distress Tolerance",
     "description": "A phone-based connection script to prevent isolation and help the rider co-regulate with a trusted person during or after a barn crisis.",
-    "instructions": "1. Identify 1\u20133 safe people ahead of time (coach, barn friend, therapist, partner) who are willing to be in your support list.\n2. When your distress feels too big to manage alone (e.g., shaking, crying, overwhelmed), step away to a safe spot and call or text one person on your list.\n3. Use this simple script: \"Hey, I'm at the barn and I'm really overwhelmed right now. My distress is about a ___ out of 10. I don't need you to fix it\u2014I just need you to listen for a few minutes while I calm down.\"\n4. While on the call, focus on slowing your breathing and describing concrete facts (what happened, what your horse did, what you did) instead of global self-criticism.\n5. End the call by naming one next step: \"I'm going to do groundwork only,\" or \"I'm going to groom and then go home,\" or \"I'm going to sit in my car and listen to music for 10 minutes.\"\n6. Thank your support person and note that reaching out was a skillful crisis tool, not a burden.",
+    "instructions": "Identify 1\u20133 safe people ahead of time (coach, barn friend, therapist, partner) who are willing to be in your support list.\nWhen your distress feels too big to manage alone (e.g., shaking, crying, overwhelmed), step away to a safe spot and call or text one person on your list.\nUse this simple script: \"Hey, I'm at the barn and I'm really overwhelmed right now. My distress is about a ___ out of 10. I don't need you to fix it\u2014I just need you to listen for a few minutes while I calm down.\"\nWhile on the call, focus on slowing your breathing and describing concrete facts (what happened, what your horse did, what you did) instead of global self-criticism.\nEnd the call by naming one next step: \"I'm going to do groundwork only,\" or \"I'm going to groom and then go home,\" or \"I'm going to sit in my car and listen to music for 10 minutes.\"\nThank your support person and note that reaching out was a skillful crisis tool, not a burden.",
     "duration_minutes": 10,
     "anxiety_level": [
       6,
@@ -4806,7 +4806,7 @@
     "name": "Flashback Anchor Kit",
     "category": "Distress Tolerance",
     "description": "A sensory and cognitive grounding protocol for riders who experience trauma-related flashbacks, vivid memories, or intense fear spikes at the barn.",
-    "instructions": "1. As soon as you notice flashback signs (sudden fear, images, feeling \"back there\" instead of \"here\"), move yourself and your horse to the safest available place (halt, dismount if needed, or secure your horse in a stall or tie area).\n2. Say to yourself (out loud if possible): \"This is a memory, not the present moment. I am at the barn today, not in the past.\"\n3. Use three sensory anchors from your environment: name one thing you can see, one thing you can touch (wall, saddle, gate), and one thing you can hear right now.\n4. Place a hand on your chest or thighs and take 5 slow breaths, feeling the physical contact.\n5. Decide on a very gentle next step: simply sitting near your horse, grooming, or leaving the ride for another day. Avoid forcing yourself to \"push through\" a flashback.\n6. Afterward, consider noting the trigger, what helped, and any patterns to discuss later with a therapist or trusted professional.",
+    "instructions": "As soon as you notice flashback signs (sudden fear, images, feeling \"back there\" instead of \"here\"), move yourself and your horse to the safest available place (halt, dismount if needed, or secure your horse in a stall or tie area).\nSay to yourself (out loud if possible): \"This is a memory, not the present moment. I am at the barn today, not in the past.\"\nUse three sensory anchors from your environment: name one thing you can see, one thing you can touch (wall, saddle, gate), and one thing you can hear right now.\nPlace a hand on your chest or thighs and take 5 slow breaths, feeling the physical contact.\nDecide on a very gentle next step: simply sitting near your horse, grooming, or leaving the ride for another day. Avoid forcing yourself to \"push through\" a flashback.\nAfterward, consider noting the trigger, what helped, and any patterns to discuss later with a therapist or trusted professional.",
     "duration_minutes": 6,
     "anxiety_level": [
       7,
@@ -4836,7 +4836,7 @@
     "name": "Mindful Mounting Sequence",
     "category": "Mindfulness & Flow",
     "description": "A grounded, step-by-step routine for mounting with awareness, calm breathing, and intentional connection to your horse.",
-    "instructions": "1. Stand beside your horse with one hand on their shoulder and take a slow breath.\n2. Feel your feet on the ground and release tension in your jaw and shoulders.\n3. Place your foot in the stirrup slowly, pausing to exhale before mounting.\n4. Lower yourself softly into the saddle and take three breaths to settle your seat.\n5. Notice your horse's breathing and match it with your own for a few cycles.",
+    "instructions": "Stand beside your horse with one hand on their shoulder and take a slow breath.\nFeel your feet on the ground and release tension in your jaw and shoulders.\nPlace your foot in the stirrup slowly, pausing to exhale before mounting.\nLower yourself softly into the saddle and take three breaths to settle your seat.\nNotice your horse's breathing and match it with your own for a few cycles.",
     "duration_minutes": 3,
     "anxiety_level": [
       2,
@@ -4867,7 +4867,7 @@
     "name": "Breath Sync With Your Horse",
     "category": "Mindfulness & Flow",
     "description": "A co-regulation technique that synchronizes breath rhythms between horse and rider to create calm, safety, and connection.",
-    "instructions": "1. Stand beside your horse's ribcage or shoulder.\n2. Place a soft hand on your horse (or hover your hand if preferred).\n3. Notice the rhythm of your horse's breathing.\n4. Let your own breath gently match their rhythm for 5\u201310 cycles.\n5. Once synced, take one long exhale and begin the ride or groundwork from this calmer state.",
+    "instructions": "Stand beside your horse's ribcage or shoulder.\nPlace a soft hand on your horse (or hover your hand if preferred).\nNotice the rhythm of your horse's breathing.\nLet your own breath gently match their rhythm for 5\u201310 cycles.\nOnce synced, take one long exhale and begin the ride or groundwork from this calmer state.",
     "duration_minutes": 2,
     "anxiety_level": [
       2,
@@ -4897,7 +4897,7 @@
     "name": "Mindful Arena Entry",
     "category": "Mindfulness & Flow",
     "description": "A short grounding ritual to create intentional focus and presence each time a rider steps into the arena.",
-    "instructions": "1. Stop at the arena gate and take one slow breath.\n2. Set a single intention for the ride (e.g., 'soft hands,' 'connection,' 'patience').\n3. Notice three sounds and two sensations before entering.\n4. Enter the arena deliberately, allowing your breath to guide your pace.\n5. Begin the ride with your intention in mind.",
+    "instructions": "Stop at the arena gate and take one slow breath.\nSet a single intention for the ride (e.g., 'soft hands,' 'connection,' 'patience').\nNotice three sounds and two sensations before entering.\nEnter the arena deliberately, allowing your breath to guide your pace.\nBegin the ride with your intention in mind.",
     "duration_minutes": 2,
     "anxiety_level": [
       1,
@@ -4925,7 +4925,7 @@
     "name": "60-Second Rider Body Scan",
     "category": "Mindfulness & Flow",
     "description": "A fast, targeted body scan that helps riders release tension that could interfere with connection or balance.",
-    "instructions": "1. While standing or mounted, bring awareness to your head and relax your jaw.\n2. Scan down through your shoulders, letting them drop.\n3. Feel your ribs and soften around the diaphragm.\n4. Notice your hips and allow them to widen and settle.\n5. Release tension in your legs, knees, and ankles, allowing your weight to fall evenly.",
+    "instructions": "While standing or mounted, bring awareness to your head and relax your jaw.\nScan down through your shoulders, letting them drop.\nFeel your ribs and soften around the diaphragm.\nNotice your hips and allow them to widen and settle.\nRelease tension in your legs, knees, and ankles, allowing your weight to fall evenly.",
     "duration_minutes": 1,
     "anxiety_level": [
       2,
@@ -4954,7 +4954,7 @@
     "name": "Mindful Half-Halt",
     "category": "Mindfulness & Flow",
     "description": "A breath-centered version of the classical half-halt to improve balance, timing, and rider awareness.",
-    "instructions": "1. Inhale softly as you prepare to rebalance.\n2. On your exhale, engage your core and close your fingers slightly.\n3. Allow your horse to respond, then release and soften.\n4. Keep attention on your breath to avoid over-aiding.\n5. Repeat only as needed with mindful intention.",
+    "instructions": "Inhale softly as you prepare to rebalance.\nOn your exhale, engage your core and close your fingers slightly.\nAllow your horse to respond, then release and soften.\nKeep attention on your breath to avoid over-aiding.\nRepeat only as needed with mindful intention.",
     "duration_minutes": 1,
     "anxiety_level": [
       1,
@@ -4983,7 +4983,7 @@
     "name": "Footfall Awareness Drill",
     "category": "Mindfulness & Flow",
     "description": "A rhythm-based attentional drill where the rider becomes mindful of each hoofbeat to enhance timing and presence.",
-    "instructions": "1. At the walk, silently say '1-2-3-4' with each hooffall.\n2. Notice which hind leg you feel most clearly.\n3. Shift to trot or canter only when you can track rhythm without losing breath.\n4. Use the rhythm to anchor your attention during transitions.\n5. End by noticing how connected you feel to your horse's movement.",
+    "instructions": "At the walk, silently say '1-2-3-4' with each hooffall.\nNotice which hind leg you feel most clearly.\nShift to trot or canter only when you can track rhythm without losing breath.\nUse the rhythm to anchor your attention during transitions.\nEnd by noticing how connected you feel to your horse's movement.",
     "duration_minutes": 3,
     "anxiety_level": [
       1,
@@ -5013,7 +5013,7 @@
     "name": "Present-Moment Reins Check",
     "category": "Mindfulness & Flow",
     "description": "A tactile mindfulness drill using rein contact to build awareness, softness, and moment-to-moment feel.",
-    "instructions": "1. Hold the reins softly and notice the weight in your fingers.\n2. Take one slow exhale and feel contact lighten.\n3. Pay attention to subtle changes in your horse's mouth, neck, and poll.\n4. Adjust only as much as needed\u2014no more, no less.\n5. Repeat every few minutes as a reset.",
+    "instructions": "Hold the reins softly and notice the weight in your fingers.\nTake one slow exhale and feel contact lighten.\nPay attention to subtle changes in your horse's mouth, neck, and poll.\nAdjust only as much as needed\u2014no more, no less.\nRepeat every few minutes as a reset.",
     "duration_minutes": 1,
     "anxiety_level": [
       1,
@@ -5043,7 +5043,7 @@
     "name": "Mindful Transition Focus",
     "category": "Mindfulness & Flow",
     "description": "A mindfulness approach to transitions that improves clarity, timing, and emotional steadiness.",
-    "instructions": "1. Before each transition, take one slow breath.\n2. Set a micro-intention: 'smooth,' 'balanced,' or 'quiet seat.'\n3. Ask for the transition lightly.\n4. Notice if your horse responds with tension or ease.\n5. Use your breath to soften any tightness.",
+    "instructions": "Before each transition, take one slow breath.\nSet a micro-intention: 'smooth,' 'balanced,' or 'quiet seat.'\nAsk for the transition lightly.\nNotice if your horse responds with tension or ease.\nUse your breath to soften any tightness.",
     "duration_minutes": 2,
     "anxiety_level": [
       1,
@@ -5071,7 +5071,7 @@
     "name": "Post-Ride Mindful Cooldown",
     "category": "Mindfulness & Flow",
     "description": "A closing mindfulness ritual that reinforces learning, calm, and gratitude after each ride.",
-    "instructions": "1. Allow your horse to walk on a long rein.\n2. Take three slow breaths, letting your weight sink into the saddle.\n3. Notice your horse's footfalls and your body's movement.\n4. Gently reflect: What went well today? What felt connected?\n5. End by thanking your horse\u2014silently or verbally.",
+    "instructions": "Allow your horse to walk on a long rein.\nTake three slow breaths, letting your weight sink into the saddle.\nNotice your horse's footfalls and your body's movement.\nGently reflect: What went well today? What felt connected?\nEnd by thanking your horse\u2014silently or verbally.",
     "duration_minutes": 3,
     "anxiety_level": [
       1,
@@ -5097,7 +5097,7 @@
     "name": "Arena Edge Mindfulness Walk",
     "category": "Mindfulness & Flow",
     "description": "A structured walking practice around the arena to bring awareness to breathing, footfalls, and the environment.",
-    "instructions": "1. Walk your horse on a loose rein along the arena edge.\n2. Match your breath to your horse's steps: inhale for 2 steps, exhale for 4.\n3. Notice sounds, shadows, light, and footing changes.\n4. Keep your eyes soft and avoid tunnel vision.\n5. Complete at least one full lap before beginning work.",
+    "instructions": "Walk your horse on a loose rein along the arena edge.\nMatch your breath to your horse's steps: inhale for 2 steps, exhale for 4.\nNotice sounds, shadows, light, and footing changes.\nKeep your eyes soft and avoid tunnel vision.\nComplete at least one full lap before beginning work.",
     "duration_minutes": 4,
     "anxiety_level": [
       2,
