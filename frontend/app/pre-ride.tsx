@@ -230,10 +230,10 @@ export default function PreRide() {
           </View>
 
           <View style={styles.divider} />
-          <Text style={styles.sectionHeader}>{horseName ? horseName.toUpperCase() : 'YOUR HORSE'}</Text>
+          <Text style={styles.sectionHeader}>ABOUT YOUR HORSE</Text>
 
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>Horse Name (Optional)</Text>
+            <Text style={styles.sectionTitle}>Horse's Name (Optional)</Text>
             <TextInput
               style={styles.horseNameInput}
               placeholder="Enter your horse's name..."
