@@ -23,7 +23,6 @@ export default function HorseRiderConnection() {
   const [ridingGoals, setRidingGoals] = useState('');
   const [horseName, setHorseName] = useState('');
   const [horseAge, setHorseAge] = useState('');
-  const [horseBreed, setHorseBreed] = useState('');
   const [timeWithHorse, setTimeWithHorse] = useState('');
   const [horsePersonality, setHorsePersonality] = useState('');
   const [connectionChallenges, setConnectionChallenges] = useState('');
