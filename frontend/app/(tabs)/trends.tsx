@@ -257,7 +257,6 @@ export default function Trends() {
         {trends.patterns && trends.patterns.length > 0 && (
           <View style={styles.section}>
             <View style={styles.sectionHeader}>
-              <Ionicons name="search" size={24} color="#375B50" />
               <Text style={styles.sectionTitle}>Patterns Detected</Text>
             </View>
             {trends.patterns.map((pattern, index) => (
