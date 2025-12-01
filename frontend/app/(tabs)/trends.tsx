@@ -200,11 +200,6 @@ export default function Trends() {
               <View style={styles.trendHeader}>
                 <Text style={styles.trendLabel}>Confidence Level</Text>
                 <View style={[styles.trendBadge, { backgroundColor: getTrendColor(trends.confidence.trend, 'confidence') + '20' }]}>
-                  <Ionicons
-                    name={getTrendIcon(trends.confidence.trend)}
-                    size={16}
-                    color={getTrendColor(trends.confidence.trend, 'confidence')}
-                  />
                   <Text style={[styles.trendText, { color: getTrendColor(trends.confidence.trend, 'confidence') }]}>
                     {trends.confidence.trend}
                   </Text>
