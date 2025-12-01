@@ -144,17 +144,6 @@ export default function HorseRiderConnection() {
           </View>
 
           <View style={styles.questionCard}>
-            <Text style={styles.questionLabel}>Horse's Breed</Text>
-            <TextInput
-              style={styles.input}
-              placeholder="e.g., Thoroughbred, Quarter Horse, Warmblood"
-              placeholderTextColor="#94a3b8"
-              value={horseBreed}
-              onChangeText={setHorseBreed}
-            />
-          </View>
-
-          <View style={styles.questionCard}>
             <Text style={styles.questionLabel}>Time Together</Text>
             <TextInput
               style={styles.input}
