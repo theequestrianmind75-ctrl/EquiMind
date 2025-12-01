@@ -279,7 +279,6 @@ export default function Trends() {
         {trends.best_session && (
           <View style={styles.section}>
             <View style={styles.sectionHeader}>
-              <Ionicons name="trophy" size={24} color="#f59e0b" />
               <Text style={styles.sectionTitle}>Best Session</Text>
             </View>
             <View style={styles.bestSessionCard}>
