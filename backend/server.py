@@ -610,15 +610,23 @@ async def get_trends():
                 "severity": "moderate"
             })
     
-    # Confidence building pattern
-    if len(confidence_levels) >= 3:
+    # Confidence building pattern - only show if trend is NOT decreasing
+    if len(confidence_levels) >= 3 and confidence_trend != "decreasing":
         recent_avg = sum(confidence_levels[-3:]) / 3
-        if recent_avg > 6:
+        if recent_avg > 6.5:  # Raised threshold to be more selective
             patterns.append({
                 "type": "confidence_building",
                 "message": "Your confidence has been consistently strong recently",
                 "severity": "positive"
             })
+    
+    # Confidence declining pattern - show if decreasing
+    if confidence_trend == "decreasing" and len(confidence_levels) >= 2:
+        patterns.append({
+            "type": "confidence_declining",
+            "message": "Your confidence has decreased from earlier sessions - consider reviewing what changed",
+            "severity": "moderate"
+        })
     
     # Horse focus pattern
     if len(horse_focus_levels) >= 3:
