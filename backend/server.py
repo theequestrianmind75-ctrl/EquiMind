@@ -15,7 +15,7 @@ import jwt
 from passlib.context import CryptContext
 
 ROOT_DIR = Path(__file__).parent
-load_dotenv(ROOT_DIR / '.env')
+load_dotenv(ROOT_DIR / '.env', override=False)
 
 # Setup logger
 logging.basicConfig(
