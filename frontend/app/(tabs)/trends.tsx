@@ -425,15 +425,17 @@ const styles = StyleSheet.create({
     marginBottom: 6,
   },
   trendBadge: {
-    alignSelf: 'flex-start',
-    paddingHorizontal: 12,
-    paddingVertical: 4,
-    borderRadius: 6,
+    alignSelf: 'center',
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    borderRadius: 8,
+    marginTop: 4,
   },
   trendText: {
-    fontSize: 13,
-    fontWeight: '600',
+    fontSize: 18,
+    fontWeight: 'bold',
     textTransform: 'capitalize',
+    textAlign: 'center',
   },
   trendStats: {
     flexDirection: 'row',
