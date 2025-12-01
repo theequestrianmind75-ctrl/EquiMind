@@ -457,7 +457,7 @@ const styles = StyleSheet.create({
   },
   historyChart: {
     flexDirection: 'row',
-    height: 80,
+    height: 60,
     alignItems: 'flex-end',
     justifyContent: 'space-between',
   },
