@@ -475,21 +475,21 @@ const styles = StyleSheet.create({
   horseMetrics: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    marginTop: 16,
+    marginTop: 8,
   },
   horseMetric: {
     alignItems: 'center',
+    flex: 1,
   },
   horseMetricValue: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: 'bold',
     color: '#1e293b',
-    marginTop: 8,
   },
   horseMetricLabel: {
     fontSize: 12,
     color: '#64748b',
-    marginTop: 4,
+    marginTop: 8,
   },
   patternCard: {
     flexDirection: 'row',
