@@ -151,7 +151,6 @@ export default function Trends() {
         {/* Historical Trend Analysis */}
         <View style={styles.section}>
           <View style={styles.sectionHeader}>
-            <Ionicons name="trending-up" size={24} color="#375B50" />
             <Text style={styles.sectionTitle}>Historical Trends</Text>
           </View>
 
