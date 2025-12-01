@@ -306,25 +306,6 @@ export default function Trends() {
           </View>
         )}
 
-        {/* Ride Type Distribution */}
-        {trends.ride_type_distribution && (
-          <View style={styles.section}>
-            <View style={styles.sectionHeader}>
-              <Ionicons name="pie-chart" size={24} color="#375B50" />
-              <Text style={styles.sectionTitle}>Session Distribution</Text>
-            </View>
-            <View style={styles.distributionCard}>
-              {Object.entries(trends.ride_type_distribution).map(([type, count]) => (
-                count > 0 && (
-                  <View key={type} style={styles.distributionRow}>
-                    <Text style={styles.distributionType}>{type}</Text>
-                    <Text style={styles.distributionCount}>{count} sessions</Text>
-                  </View>
-                )
-              ))}
-            </View>
-          </View>
-        )}
       </ScrollView>
     </SafeAreaView>
   );
