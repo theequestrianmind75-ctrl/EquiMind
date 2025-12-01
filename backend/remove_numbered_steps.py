@@ -47,12 +47,17 @@ async def remove_numbered_steps():
         
         # Only update if something changed
         if cleaned_instructions != original:
-            await db.mental_strategies.update_one(
-                {'_id': tool['_id']},
-                {'$set': {'instructions': cleaned_instructions}}
-            )
-            updated_count += 1
-            print(f'  ✓ Updated: {tool.get("name", "Unknown")}')
+            tool_id = tool.get('id')
+            if tool_id:
+                result = await db.mental_strategies.update_one(
+                    {'id': tool_id},
+                    {'$set': {'instructions': cleaned_instructions}}
+                )
+                if result.modified_count > 0:
+                    updated_count += 1
+                    print(f'  ✓ Updated: {tool.get("name", "Unknown")}')
+                else:
+                    print(f'  ⚠ Failed to update: {tool.get("name", "Unknown")}')
     
     print(f'\n✅ Finished!')
     print(f'   • Updated: {updated_count} tools')
