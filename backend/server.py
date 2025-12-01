@@ -634,6 +634,17 @@ async def export_tools():
         headers={"Content-Disposition": "attachment; filename=equimind_rider_tools.csv"}
     )
 
+# Root health check endpoint
+@app.get("/")
+async def root():
+    """Health check endpoint for the root path"""
+    return {
+        "status": "healthy",
+        "app": "EquiMind API",
+        "version": "1.0.0",
+        "message": "Welcome to EquiMind API. Visit /docs for API documentation."
+    }
+
 # Include the router in the main app
 app.include_router(api_router)
 
