@@ -236,15 +236,15 @@ export default function Trends() {
           {/* Horse Metrics */}
           {trends.horse && (
             <View style={styles.trendCard}>
-              <Text style={styles.trendLabel}>Horse Averages</Text>
+              <View style={styles.trendHeader}>
+                <Text style={styles.trendLabel}>Horse Averages</Text>
+              </View>
               <View style={styles.horseMetrics}>
                 <View style={styles.horseMetric}>
-                  <Ionicons name="flash" size={20} color="#f59e0b" />
                   <Text style={styles.horseMetricValue}>{trends.horse.avg_energy?.toFixed(1)}/10</Text>
                   <Text style={styles.horseMetricLabel}>Energy</Text>
                 </View>
                 <View style={styles.horseMetric}>
-                  <Ionicons name="eye" size={20} color="#3b82f6" />
                   <Text style={styles.horseMetricValue}>{trends.horse.avg_focus?.toFixed(1)}/10</Text>
                   <Text style={styles.horseMetricLabel}>Focus</Text>
                 </View>
