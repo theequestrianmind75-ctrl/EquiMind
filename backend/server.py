@@ -537,6 +537,134 @@ async def delete_session(session_id: str, current_user: dict = Depends(get_curre
 
 # ==================== RECOMMENDATIONS ENDPOINTS ====================
 
+@api_router.get("/trends")
+async def get_trends():
+    """Analyze trends across last 5 completed sessions"""
+    # Get last 5 completed sessions
+    sessions = await db.sessions.find({"completed": True}).sort("created_at", -1).limit(5).to_list(5)
+    
+    if len(sessions) < 2:
+        return {
+            "has_enough_data": False,
+            "message": "Complete at least 2 sessions to see trends",
+            "session_count": len(sessions)
+        }
+    
+    # Calculate trends
+    anxiety_levels = []
+    confidence_levels = []
+    ride_types = []
+    horse_energy_levels = []
+    horse_focus_levels = []
+    
+    for session in reversed(sessions):  # Oldest to newest
+        if session.get("anxiety_level"):
+            anxiety_levels.append(session["anxiety_level"])
+        if session.get("confidence_level"):
+            confidence_levels.append(session["confidence_level"])
+        if session.get("ride_type"):
+            ride_types.append(session["ride_type"])
+        if session.get("horse_energy_level"):
+            horse_energy_levels.append(session["horse_energy_level"])
+        if session.get("horse_focus_level"):
+            horse_focus_levels.append(session["horse_focus_level"])
+    
+    # Calculate anxiety trend
+    anxiety_trend = "stable"
+    if len(anxiety_levels) >= 2:
+        if anxiety_levels[-1] < anxiety_levels[0] - 1:
+            anxiety_trend = "decreasing"
+        elif anxiety_levels[-1] > anxiety_levels[0] + 1:
+            anxiety_trend = "increasing"
+    
+    # Calculate confidence trend
+    confidence_trend = "stable"
+    if len(confidence_levels) >= 2:
+        if confidence_levels[-1] > confidence_levels[0] + 1:
+            confidence_trend = "increasing"
+        elif confidence_levels[-1] < confidence_levels[0] - 1:
+            confidence_trend = "decreasing"
+    
+    # Find best session (lowest anxiety + highest confidence)
+    best_session = None
+    best_score = -999
+    for session in sessions:
+        anxiety = session.get("anxiety_level", 5)
+        confidence = session.get("confidence_level", 5)
+        score = confidence - anxiety  # Higher is better
+        if score > best_score:
+            best_score = score
+            best_session = session
+    
+    # Pattern detection
+    patterns = []
+    
+    # Competition anxiety pattern
+    competition_sessions = [s for s in sessions if s.get("ride_type") == "competition"]
+    if len(competition_sessions) >= 2:
+        comp_avg_anxiety = sum(s.get("anxiety_level", 5) for s in competition_sessions) / len(competition_sessions)
+        if comp_avg_anxiety > 6:
+            patterns.append({
+                "type": "competition_anxiety",
+                "message": "You tend to have higher anxiety during competitions",
+                "severity": "moderate"
+            })
+    
+    # Confidence building pattern
+    if len(confidence_levels) >= 3:
+        recent_avg = sum(confidence_levels[-3:]) / 3
+        if recent_avg > 6:
+            patterns.append({
+                "type": "confidence_building",
+                "message": "Your confidence has been consistently strong recently",
+                "severity": "positive"
+            })
+    
+    # Horse focus pattern
+    if len(horse_focus_levels) >= 3:
+        avg_focus = sum(horse_focus_levels) / len(horse_focus_levels)
+        if avg_focus < 5:
+            patterns.append({
+                "type": "horse_focus_low",
+                "message": "Your horse's focus has been lower than ideal across sessions",
+                "severity": "moderate"
+            })
+    
+    return {
+        "has_enough_data": True,
+        "session_count": len(sessions),
+        "anxiety": {
+            "current": anxiety_levels[-1] if anxiety_levels else None,
+            "average": sum(anxiety_levels) / len(anxiety_levels) if anxiety_levels else None,
+            "trend": anxiety_trend,
+            "history": anxiety_levels
+        },
+        "confidence": {
+            "current": confidence_levels[-1] if confidence_levels else None,
+            "average": sum(confidence_levels) / len(confidence_levels) if confidence_levels else None,
+            "trend": confidence_trend,
+            "history": confidence_levels
+        },
+        "horse": {
+            "avg_energy": sum(horse_energy_levels) / len(horse_energy_levels) if horse_energy_levels else None,
+            "avg_focus": sum(horse_focus_levels) / len(horse_focus_levels) if horse_focus_levels else None,
+        },
+        "best_session": {
+            "id": best_session.get("id") if best_session else None,
+            "ride_type": best_session.get("ride_type") if best_session else None,
+            "anxiety": best_session.get("anxiety_level") if best_session else None,
+            "confidence": best_session.get("confidence_level") if best_session else None,
+            "created_at": best_session.get("created_at") if best_session else None
+        } if best_session else None,
+        "patterns": patterns,
+        "ride_type_distribution": {
+            "training": ride_types.count("training"),
+            "competition": ride_types.count("competition"),
+            "trail": ride_types.count("trail"),
+            "lesson": ride_types.count("lesson")
+        }
+    }
+
 @api_router.get("/recommendations", response_model=List[Recommendation])
 async def get_recommendations():
     """Get all active recommendations"""
