@@ -261,13 +261,6 @@ export default function Trends() {
             </View>
             {trends.patterns.map((pattern, index) => (
               <View key={index} style={styles.patternCard}>
-                <View style={styles.patternIcon}>
-                  <Ionicons
-                    name={getPatternIcon(pattern.severity)}
-                    size={24}
-                    color={getPatternColor(pattern.severity)}
-                  />
-                </View>
                 <Text style={styles.patternText}>{pattern.message}</Text>
               </View>
             ))}
