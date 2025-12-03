@@ -96,6 +96,13 @@ export default function Login() {
               <Text style={styles.buttonText}>{loading ? 'Signing In...' : 'Sign In'}</Text>
             </TouchableOpacity>
 
+            <TouchableOpacity 
+              style={styles.forgotPassword}
+              onPress={() => router.push('/(auth)/forgot-password')}
+            >
+              <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
+            </TouchableOpacity>
+
             <View style={styles.footer}>
               <Text style={styles.footerText}>Don't have an account? </Text>
               <TouchableOpacity onPress={() => router.push('/(auth)/signup')}>
