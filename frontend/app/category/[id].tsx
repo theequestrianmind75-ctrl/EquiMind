@@ -242,7 +242,7 @@ export default function CategoryDetail() {
       </View>
 
       <ScrollView style={styles.scrollView}>
-        {category.description && (
+        {category.description && id !== 'distress' && (
           <View style={styles.descriptionCard}>
             <Text style={styles.descriptionText}>{category.description}</Text>
             {id === 'tapping' && (
