@@ -592,7 +592,25 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 14,
     color: '#000000',
-    marginBottom: 24,
+    marginBottom: 16,
+  },
+  toolsSectionBox: {
+    backgroundColor: '#ffffff',
+    padding: 16,
+    borderRadius: 12,
+    marginBottom: 20,
+    borderWidth: 2,
+    borderColor: '#375B50',
+  },
+  toolsSectionHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  toolsSectionTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#1e293b',
+    marginLeft: 12,
   },
   toolCard: {
     backgroundColor: '#ffffff',
