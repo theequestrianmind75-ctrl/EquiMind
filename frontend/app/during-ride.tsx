@@ -540,6 +540,31 @@ const styles = StyleSheet.create({
   section: {
     marginBottom: 32,
   },
+  emergencySection: {
+    marginBottom: 32,
+    alignItems: 'center',
+  },
+  emergencyTitle: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: '#dc2626',
+    marginBottom: 8,
+    textAlign: 'center',
+  },
+  emergencyMainButton: {
+    backgroundColor: '#dc2626',
+    paddingVertical: 24,
+    paddingHorizontal: 40,
+    borderRadius: 12,
+    alignItems: 'center',
+    marginTop: 12,
+    minWidth: '80%',
+  },
+  emergencyMainButtonText: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#ffffff',
+  },
   sectionTitle: {
     fontSize: 18,
     fontWeight: 'bold',
