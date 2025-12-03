@@ -204,22 +204,63 @@ export default function DuringRideNew() {
       </View>
 
       <ScrollView style={styles.content}>
-        {/* Tool Usage Counter */}
-        <View style={styles.counterCard}>
-          <Text style={styles.counterTitle}>
-            🎯 Tools Available: {recommendations.remaining_regular_tools}/2
-          </Text>
-          <Text style={styles.counterSubtitle}>
-            {recommendations.remaining_regular_tools > 0 
-              ? `You can access ${recommendations.remaining_regular_tools} more tool${recommendations.remaining_regular_tools > 1 ? 's' : ''} this ride`
-              : 'Tool limit reached. Emergency tool still available!'}
+        {/* Rules/Instructions Box */}
+        <View style={styles.rulesCard}>
+          <Text style={styles.rulesTitle}>Voice-Activated Coaching Rules</Text>
+          <Text style={styles.rulesDescription}>
+            • Use <Text style={styles.bold}>Start of Ride</Text> tool when beginning your session to set intentions and ground yourself{'\n\n'}
+            • Access <Text style={styles.bold}>During Your Ride</Text> tools when you need real-time support{'\n\n'}
+            • Maximum <Text style={styles.bold}>2 regular tools per ride session</Text> to maintain focus and safety{'\n\n'}
+            • Emergency tool is always available with no limits
           </Text>
         </View>
 
-        {/* START OF RIDE Tool */}
+        {/* Voice Selection */}
+        <View style={styles.voiceSelectionCard}>
+          <Text style={styles.voiceSelectionTitle}>Voice Preference</Text>
+          <View style={styles.voiceButtons}>
+            <TouchableOpacity
+              style={[styles.voiceButton, useFemaleVoice && styles.voiceButtonActive]}
+              onPress={() => setUseFemaleVoice(true)}
+            >
+              <Ionicons name="woman" size={24} color={useFemaleVoice ? "#ffffff" : "#375B50"} />
+              <Text style={[styles.voiceButtonText, useFemaleVoice && styles.voiceButtonTextActive]}>
+                Female
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.voiceButton, !useFemaleVoice && styles.voiceButtonActive]}
+              onPress={() => setUseFemaleVoice(false)}
+            >
+              <Ionicons name="man" size={24} color={!useFemaleVoice ? "#ffffff" : "#375B50"} />
+              <Text style={[styles.voiceButtonText, !useFemaleVoice && styles.voiceButtonTextActive]}>
+                Male
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        {/* Tools Remaining Indicator */}
+        <Text style={styles.toolsRemaining}>
+          Regular Tools Remaining: {recommendations.remaining_regular_tools}/2
+        </Text>
+
+        {/* START OF RIDE Button & Tool */}
         {recommendations.start_of_ride && (
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>🏇 Start of Ride</Text>
+            <TouchableOpacity
+              style={styles.mainButton}
+              onPress={() => {
+                if (currentPlayingTool === recommendations.start_of_ride?.id) {
+                  stopSpeaking();
+                } else {
+                  playTool(recommendations.start_of_ride, false);
+                }
+              }}
+              disabled={recommendations.remaining_regular_tools <= 0}
+            >
+              <Text style={styles.mainButtonText}>START OF RIDE</Text>
+            </TouchableOpacity>
             <View style={styles.toolCard}>
               <Text style={styles.toolName}>{recommendations.start_of_ride.name}</Text>
               <Text style={styles.toolCategory}>{recommendations.start_of_ride.category}</Text>
