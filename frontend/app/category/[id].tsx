@@ -582,6 +582,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#1e293b',
     marginBottom: 12,
+    textAlign: 'center',
   },
   breathingDescription: {
     fontSize: 14,
