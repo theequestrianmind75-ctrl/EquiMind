@@ -555,7 +555,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40,
     borderRadius: 12,
     alignItems: 'center',
-    marginTop: 12,
     minWidth: '80%',
   },
   emergencyMainButtonText: {
