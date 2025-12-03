@@ -112,25 +112,40 @@ export default function DuringRideNew() {
       setIsSpeaking(true);
       setCurrentPlayingTool(tool.id);
 
-      // Get natural female voice
+      // Get voice based on user selection
       const voices = await Speech.getAvailableVoicesAsync();
-      const femaleVoice = voices.find(v => 
-        v.language.startsWith('en') && 
-        (v.name.toLowerCase().includes('samantha') || 
-         v.name.toLowerCase().includes('karen') ||
-         v.name.toLowerCase().includes('moira') ||
-         v.name.toLowerCase().includes('fiona') ||
-         v.name.toLowerCase().includes('tessa'))
-      ) || voices.find(v => 
-        v.language.startsWith('en') && 
-        v.quality === 'Enhanced'
-      );
+      let selectedVoice;
+      
+      if (useFemaleVoice) {
+        selectedVoice = voices.find(v => 
+          v.language.startsWith('en') && 
+          (v.name.toLowerCase().includes('samantha') || 
+           v.name.toLowerCase().includes('karen') ||
+           v.name.toLowerCase().includes('moira') ||
+           v.name.toLowerCase().includes('fiona') ||
+           v.name.toLowerCase().includes('tessa'))
+        ) || voices.find(v => 
+          v.language.startsWith('en') && 
+          v.quality === 'Enhanced'
+        );
+      } else {
+        // Male voice selection
+        selectedVoice = voices.find(v => 
+          v.language.startsWith('en') && 
+          (v.name.toLowerCase().includes('alex') || 
+           v.name.toLowerCase().includes('daniel') ||
+           v.name.toLowerCase().includes('tom') ||
+           v.name.toLowerCase().includes('fred'))
+        ) || voices.find(v => 
+          v.language.startsWith('en')
+        );
+      }
 
       const voiceOptions: any = {
         language: 'en-US',
-        pitch: 1.0,
+        pitch: useFemaleVoice ? 1.0 : 0.9,
         rate: 0.85,
-        voice: femaleVoice?.identifier,
+        voice: selectedVoice?.identifier,
         onDone: () => {
           setIsSpeaking(false);
           setCurrentPlayingTool(null);
