@@ -264,16 +264,29 @@ export default function DuringRideNew() {
       </View>
 
       <ScrollView style={styles.content}>
-        {/* Rules/Instructions Box */}
-        <View style={styles.rulesCard}>
-          <Text style={styles.rulesTitle}>Voice-Activated Coaching Rules</Text>
-          <Text style={styles.rulesDescription}>
-            • Use <Text style={styles.bold}>Start of Ride</Text> tool when beginning your session to set intentions and ground yourself{'\n\n'}
-            • Access <Text style={styles.bold}>During Your Ride</Text> tools when you need real-time support{'\n\n'}
-            • Maximum <Text style={styles.bold}>2 regular tools per ride session</Text> to maintain focus and safety{'\n\n'}
-            • Emergency tool is always available with no limits
-          </Text>
-        </View>
+        {/* No Session Warning */}
+        {!currentSession && (
+          <View style={styles.warningCard}>
+            <Ionicons name="information-circle" size={32} color="#f59e0b" />
+            <Text style={styles.warningTitle}>No Active Ride Session</Text>
+            <Text style={styles.warningText}>
+              Start a pre-ride session to access personalized coaching tools. The Emergency Tool is always available below.
+            </Text>
+          </View>
+        )}
+
+        {/* Rules/Instructions Box - Only show with active session */}
+        {currentSession && (
+          <View style={styles.rulesCard}>
+            <Text style={styles.rulesTitle}>Voice-Activated Coaching Rules</Text>
+            <Text style={styles.rulesDescription}>
+              • Use <Text style={styles.bold}>Start of Ride</Text> tool when beginning your session to set intentions and ground yourself{'\n\n'}
+              • Access <Text style={styles.bold}>During Your Ride</Text> tools when you need real-time support{'\n\n'}
+              • Maximum <Text style={styles.bold}>2 regular tools per ride session</Text> to maintain focus and safety{'\n\n'}
+              • Emergency tool is always available with no limits
+            </Text>
+          </View>
+        )}
 
         {/* Voice Selection */}
         <View style={styles.voiceSelectionCard}>
