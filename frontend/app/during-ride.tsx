@@ -132,19 +132,46 @@ export default function DuringRideNew() {
           v.quality === 'Enhanced'
         );
       } else {
-        // Australian male voice selection
+        // Male voice selection - try multiple options
+        // First try: Australian male voices
         selectedVoice = voices.find(v => 
           v.language === 'en-AU' && 
           (v.name.toLowerCase().includes('gordon') || 
-           v.name.toLowerCase().includes('lee') ||
-           v.name.toLowerCase().includes('karen'))
-        ) || voices.find(v => 
-          v.language === 'en-AU' && v.quality === 'Enhanced'
-        ) || voices.find(v => 
-          v.language === 'en-AU'
-        ) || voices.find(v => 
-          v.language.startsWith('en')
+           v.name.toLowerCase().includes('lee'))
         );
+        
+        // Second try: US male voices
+        if (!selectedVoice) {
+          selectedVoice = voices.find(v => 
+            v.language === 'en-US' && 
+            (v.name.toLowerCase().includes('alex') || 
+             v.name.toLowerCase().includes('fred') ||
+             v.name.toLowerCase().includes('daniel'))
+          );
+        }
+        
+        // Third try: Any Australian voice
+        if (!selectedVoice) {
+          selectedVoice = voices.find(v => v.language === 'en-AU');
+        }
+        
+        // Fourth try: Any enhanced English voice (not female names)
+        if (!selectedVoice) {
+          selectedVoice = voices.find(v => 
+            v.language.startsWith('en') && 
+            v.quality === 'Enhanced' &&
+            !v.name.toLowerCase().includes('samantha') &&
+            !v.name.toLowerCase().includes('kate') &&
+            !v.name.toLowerCase().includes('karen') &&
+            !v.name.toLowerCase().includes('fiona') &&
+            !v.name.toLowerCase().includes('moira')
+          );
+        }
+        
+        // Final fallback: Any English voice
+        if (!selectedVoice) {
+          selectedVoice = voices.find(v => v.language.startsWith('en'));
+        }
       }
 
       const voiceOptions: any = {
