@@ -278,7 +278,7 @@ export default function CategoryDetail() {
         
         {id === 'mindfulness' && (
           <View style={styles.wiseMindCard}>
-            <Text style={styles.wiseMindTitle}>🧠 Understanding Wise Mind</Text>
+            <Text style={styles.wiseMindTitle}>Understanding Wise Mind</Text>
             <Text style={styles.wiseMindDescription}>
               Wise Mind is the balance between Emotional Mind (feelings, intuition) and Thinking Mind (logic, reason). 
               It's where you make your best decisions - integrating both emotion and logic.
