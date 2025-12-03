@@ -312,8 +312,6 @@ export default function DuringRideNew() {
         {/* EMERGENCY Tool */}
         {recommendations.emergency && (
           <View style={styles.emergencySection}>
-            <Text style={styles.emergencyTitle}>EMERGENCY TOOL</Text>
-            <Text style={styles.emergencyNote}>Available anytime - no limits</Text>
             <TouchableOpacity
               style={styles.emergencyMainButton}
               onPress={() => {
