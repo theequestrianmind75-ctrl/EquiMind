@@ -56,11 +56,32 @@ export default function DuringRideNew() {
         const recsResponse = await api.get(`/during-ride/recommendations/${session.id}`);
         setRecommendations(recsResponse.data);
       } else {
-        Alert.alert(
-          'No Active Session',
-          'Please start a pre-ride session first.',
-          [{ text: 'OK', onPress: () => router.back() }]
+        // No active session - still load emergency tool
+        // Fetch a default emergency tool from the database
+        const strategiesResponse = await api.get('/mental-strategies');
+        const allStrategies = strategiesResponse.data;
+        
+        // Find an emergency/distress tolerance tool
+        const emergencyTool = allStrategies.find((s: any) => 
+          s.category === "Distress Tolerance" || s.is_crisis_tool
         );
+        
+        if (emergencyTool) {
+          setRecommendations({
+            session_id: 'no-session',
+            start_of_ride: null,
+            during_ride: [],
+            emergency: {
+              id: emergencyTool._id || emergencyTool.id,
+              name: emergencyTool.name,
+              category: emergencyTool.category,
+              instructions: emergencyTool.instructions,
+              reason: 'Available anytime for immediate support - no session required'
+            },
+            remaining_regular_tools: 0,
+            tools_accessed: []
+          });
+        }
       }
     } catch (error) {
       console.error('Error fetching data:', error);
