@@ -19,20 +19,18 @@ API_BASE = f"{BASE_URL}/api"
 
 class DuringRideTestSuite:
     def __init__(self):
-        self.session = None
         self.test_sessions = []
         self.test_results = []
         
-    async def setup_session(self):
+    def setup_session(self):
         """Setup HTTP session for testing"""
-        self.session = aiohttp.ClientSession()
+        pass  # Using requests, no setup needed
         
-    async def cleanup_session(self):
+    def cleanup_session(self):
         """Cleanup HTTP session"""
-        if self.session:
-            await self.session.close()
+        pass  # Using requests, no cleanup needed
             
-    async def create_test_session(self, anxiety_level=5, confidence_level=5, rider_energy_level=5):
+    def create_test_session(self, anxiety_level=5, confidence_level=5, rider_energy_level=5):
         """Create a test session with specific levels for testing"""
         session_data = {
             "session_type": "pre-ride",
