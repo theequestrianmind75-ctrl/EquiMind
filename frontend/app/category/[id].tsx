@@ -46,7 +46,7 @@ const CATEGORIES: any = {
     keywords: ['activation / grounding'],
   },
   somatic: {
-    title: 'Body Reset',
+    title: 'Emotional Regulation',
     color: '#8b5cf6',
     keywords: ['body reset'],
   },
