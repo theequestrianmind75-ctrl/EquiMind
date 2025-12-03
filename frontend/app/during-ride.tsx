@@ -104,10 +104,10 @@ export default function DuringRideNew() {
   };
 
   const playTool = async (tool: Tool, isEmergency: boolean = false) => {
-    if (!currentSession || !recommendations) return;
+    if (!recommendations) return;
 
-    // Check if regular tool limit reached
-    if (!isEmergency && recommendations.remaining_regular_tools <= 0) {
+    // Check if regular tool limit reached (only if we have a session)
+    if (currentSession && !isEmergency && recommendations.remaining_regular_tools <= 0) {
       Alert.alert(
         'Tool Limit Reached',
         'You have used your 2 regular tools for this ride. You can still use the Emergency tool anytime.',
@@ -116,17 +116,19 @@ export default function DuringRideNew() {
       return;
     }
 
-    // Track tool access
+    // Track tool access (only if we have a session)
     try {
-      const response = await api.post(
-        `/during-ride/track-tool-access/${currentSession.id}?tool_id=${tool.id}&tool_name=${encodeURIComponent(tool.name)}&is_emergency=${isEmergency}`
-      );
-      
-      // Update remaining count
-      setRecommendations(prev => prev ? {
-        ...prev,
-        remaining_regular_tools: response.data.regular_tools_remaining
-      } : null);
+      if (currentSession) {
+        const response = await api.post(
+          `/during-ride/track-tool-access/${currentSession.id}?tool_id=${tool.id}&tool_name=${encodeURIComponent(tool.name)}&is_emergency=${isEmergency}`
+        );
+        
+        // Update remaining count
+        setRecommendations(prev => prev ? {
+          ...prev,
+          remaining_regular_tools: response.data.regular_tools_remaining
+        } : null);
+      }
 
       // Play audio
       const audioScript = extractAudioScript(tool.instructions);
