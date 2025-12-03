@@ -254,17 +254,6 @@ export default function CategoryDetail() {
                 <Text style={styles.guideButtonText}>View Full Tapping Guide</Text>
               </TouchableOpacity>
             )}
-            {id === 'distress' && (
-              <TouchableOpacity
-                style={[styles.guideButton, styles.crisisButton, showCrisisOnly && styles.crisisButtonActive]}
-                onPress={() => setShowCrisisOnly(!showCrisisOnly)}
-              >
-                <Ionicons name="alert-circle" size={20} color="#ffffff" />
-                <Text style={styles.guideButtonText}>
-                  {showCrisisOnly ? 'Show All Tools' : 'Crisis Tools'}
-                </Text>
-              </TouchableOpacity>
-            )}
             {id === 'horse-rider' && (
               <TouchableOpacity
                 style={[styles.guideButton, { backgroundColor: '#14b8a6' }]}
