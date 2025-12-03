@@ -331,6 +331,44 @@ export default function CategoryDetail() {
           </View>
         )}
         
+        {id === 'tapping' && (
+          <View style={styles.tappingExplanationCard}>
+            <Text style={styles.tappingTitle}>The Power of Tapping (EFT) for Equestrians</Text>
+            <Text style={styles.tappingDescription}>
+              Emotional Freedom Technique (EFT) or "tapping" combines acupressure with psychology to rapidly reduce 
+              anxiety, fear, and performance blocks. By tapping on specific meridian points while focusing on a stressor, 
+              you send calming signals directly to your amygdala—the brain's fear center.{'\n\n'}
+              
+              For riders, tapping is transformative. It can eliminate pre-show nerves in minutes, dissolve fear after 
+              a fall, and rewire negative beliefs about your riding abilities. The physical act of tapping interrupts 
+              your stress response while the verbal acknowledgment processes the emotion.{'\n\n'}
+              
+              These tools guide you through tapping sequences for confidence, fear release, and performance anxiety. 
+              Use them before rides, after challenging moments, or anytime you need rapid emotional relief. Tapping works 
+              fast—often in just one round.
+            </Text>
+          </View>
+        )}
+        
+        {id === 'distress' && (
+          <View style={styles.distressExplanationCard}>
+            <Text style={styles.distressTitle}>Distress Tolerance: Your Emergency Toolkit</Text>
+            <Text style={styles.distressDescription}>
+              Distress tolerance tools are your lifeline during overwhelming moments—when emotions feel too big, when 
+              panic threatens to take over, or when you need immediate grounding. These are crisis intervention techniques 
+              designed to bring you back from the edge.{'\n\n'}
+              
+              Unlike other skills that prevent distress, these tools help you survive it. They don't solve the problem—they 
+              help you get through the moment without making it worse. Think of them as emotional first aid: quick, 
+              effective techniques to ride out the storm until you can think clearly again.{'\n\n'}
+              
+              Use these tools when you're having a panic attack, experiencing flashbacks from a riding accident, feeling 
+              overwhelmed before a show, or in any moment when your emotions feel unmanageable. They work by interrupting 
+              your nervous system's crisis response and anchoring you back to safety.
+            </Text>
+          </View>
+        )}
+        
         {editMode && (
           <View style={styles.editModeIndicator}>
             <Ionicons name="create" size={20} color="#ef4444" />
