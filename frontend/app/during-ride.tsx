@@ -176,6 +176,8 @@ export default function DuringRideNew() {
         }
       }
 
+      console.log('✅ Selected voice:', selectedVoice?.name, '(', selectedVoice?.language, ')');
+      
       const voiceOptions: any = {
         language: 'en-US',
         pitch: useFemaleVoice ? 1.0 : 0.9,
