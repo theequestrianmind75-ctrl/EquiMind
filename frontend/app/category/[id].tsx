@@ -568,6 +568,25 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     marginBottom: 16,
   },
+  breathingExplanationCard: {
+    backgroundColor: '#ffffff',
+    padding: 20,
+    borderRadius: 12,
+    marginBottom: 20,
+    borderWidth: 2,
+    borderColor: '#375B50',
+  },
+  breathingTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#1e293b',
+    marginBottom: 12,
+  },
+  breathingDescription: {
+    fontSize: 14,
+    color: '#000000',
+    lineHeight: 22,
+  },
   wiseMindImage: {
     width: '100%',
     height: 200,
