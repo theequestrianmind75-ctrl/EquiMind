@@ -30,8 +30,8 @@ const CATEGORIES = [
   },
   {
     id: 'somatic',
-    title: 'Body Reset',
-    description: 'Body-based techniques for mental clarity',
+    title: 'Emotional Regulation',
+    description: 'Body-based techniques for emotional balance',
     icon: 'body',
     color: '#8b5cf6',
     keywords: ['body', 'reset', 'somatic'],
