@@ -71,6 +71,12 @@ class Token(BaseModel):
     token_type: str
     user: UserResponse
 
+class ToolAccess(BaseModel):
+    tool_id: str
+    tool_name: str
+    accessed_at: datetime = Field(default_factory=datetime.utcnow)
+    is_emergency: bool = False
+
 class SessionCreate(BaseModel):
     session_type: str  # "pre-ride", "during-ride", "post-ride"
     ride_type: str  # "training", "competition", "trail", etc.
