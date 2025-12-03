@@ -300,11 +300,12 @@ export default function DuringRideNew() {
       console.log('🔊 Voice quality:', selectedVoice?.quality);
       console.log('🔊 Voice identifier:', selectedVoice?.identifier);
       
-      // Adjust parameters based on gender for more natural sound
+      // Optimized parameters for iPhone voices
+      // Alex (male) and Samantha (female) are iOS premium voices with best quality
       const voiceOptions: any = {
         language: voiceLanguage,
-        pitch: useFemaleVoice ? 1.1 : 1.0,  // Female slightly higher, male at natural pitch
-        rate: useFemaleVoice ? 0.85 : 0.90,  // Male slightly faster to sound less robotic
+        pitch: useFemaleVoice ? 1.08 : 1.0,  // Female slightly higher, male neutral for Alex
+        rate: useFemaleVoice ? 0.88 : 0.92,  // Male slightly faster for more natural flow
         onDone: () => {
           setIsSpeaking(false);
           setCurrentPlayingTool(null);
@@ -320,9 +321,10 @@ export default function DuringRideNew() {
       // Only set voice identifier if we found one
       if (selectedVoice?.identifier) {
         voiceOptions.voice = selectedVoice.identifier;
+        console.log('🎙️ Using voice:', selectedVoice.name, 'with pitch:', voiceOptions.pitch, 'rate:', voiceOptions.rate);
       } else {
         // If no specific voice found, let system choose but guide with pitch
-        console.log('⚠️ No specific voice found, using system default with adjusted pitch');
+        console.log('⚠️ No specific voice found, using system default with pitch:', voiceOptions.pitch);
       }
 
       Speech.speak(audioScript, voiceOptions);
