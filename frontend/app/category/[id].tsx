@@ -318,15 +318,16 @@ export default function CategoryDetail() {
             : `${strategies.length} tools available`}
         </Text>
 
-        {/* Tools Section Box */}
-        <View style={styles.toolsSectionBox}>
-          <View style={styles.toolsSectionHeader}>
-            <Ionicons name="list" size={24} color="#375B50" />
-            <Text style={styles.toolsSectionTitle}>Tools</Text>
-          </View>
-        </View>
+        {/* Tools Toggle Button */}
+        <TouchableOpacity 
+          style={styles.toolsToggleButton}
+          onPress={() => setShowTools(!showTools)}
+        >
+          <Text style={styles.toolsToggleText}>TOOLS</Text>
+        </TouchableOpacity>
 
-        {strategies
+        {/* Show tools only when button is clicked */}
+        {showTools && strategies
           .filter(strategy => !showCrisisOnly || strategy.is_crisis_tool)
           .map((strategy) => (
           <TouchableOpacity
