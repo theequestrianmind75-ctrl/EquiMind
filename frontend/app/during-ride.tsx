@@ -261,72 +261,50 @@ export default function DuringRideNew() {
             >
               <Text style={styles.mainButtonText}>START OF RIDE</Text>
             </TouchableOpacity>
-            <View style={styles.toolCard}>
-              <Text style={styles.toolName}>{recommendations.start_of_ride.name}</Text>
-              <Text style={styles.toolCategory}>{recommendations.start_of_ride.category}</Text>
-              <Text style={styles.toolReason}>{recommendations.start_of_ride.reason}</Text>
-              <TouchableOpacity
-                style={[
-                  styles.playButton,
-                  currentPlayingTool === recommendations.start_of_ride.id && styles.playButtonActive
-                ]}
-                onPress={() => {
-                  if (currentPlayingTool === recommendations.start_of_ride?.id) {
-                    stopSpeaking();
-                  } else {
-                    playTool(recommendations.start_of_ride, false);
-                  }
-                }}
-                disabled={recommendations.remaining_regular_tools <= 0}
-              >
-                <Ionicons
-                  name={currentPlayingTool === recommendations.start_of_ride.id ? 'stop-circle' : 'play-circle'}
-                  size={24}
-                  color="#ffffff"
-                />
-                <Text style={styles.playButtonText}>
-                  {currentPlayingTool === recommendations.start_of_ride.id ? 'Stop Audio' : 'Play Guidance'}
-                </Text>
-              </TouchableOpacity>
-            </View>
+            {currentPlayingTool === recommendations.start_of_ride?.id && isSpeaking && (
+              <View style={styles.toolDetailsCard}>
+                <Text style={styles.toolDetailsTitle}>{recommendations.start_of_ride.name}</Text>
+                <Text style={styles.toolDetailsCategory}>{recommendations.start_of_ride.category}</Text>
+                <Text style={styles.toolDetailsReason}>{recommendations.start_of_ride.reason}</Text>
+                <TouchableOpacity style={styles.stopButton} onPress={stopSpeaking}>
+                  <Ionicons name="stop-circle" size={32} color="#ffffff" />
+                  <Text style={styles.stopButtonText}>Stop Audio</Text>
+                </TouchableOpacity>
+              </View>
+            )}
           </View>
         )}
 
-        {/* DURING RIDE Tools */}
+        {/* DURING YOUR RIDE Button & Tools */}
         {recommendations.during_ride && recommendations.during_ride.length > 0 && (
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>💪 During Your Ride</Text>
+            <TouchableOpacity
+              style={[styles.mainButton, styles.duringRideButton]}
+              onPress={() => {
+                // Play the first available during-ride tool
+                const tool = recommendations.during_ride[0];
+                if (currentPlayingTool === tool.id) {
+                  stopSpeaking();
+                } else {
+                  playTool(tool, false);
+                }
+              }}
+              disabled={recommendations.remaining_regular_tools <= 0}
+            >
+              <Text style={styles.mainButtonText}>DURING YOUR RIDE</Text>
+            </TouchableOpacity>
             {recommendations.during_ride.map((tool, index) => (
-              <View key={tool.id} style={styles.toolCard}>
-                <Text style={styles.toolName}>{tool.name}</Text>
-                <Text style={styles.toolCategory}>{tool.category}</Text>
-                <Text style={styles.toolReason}>{tool.reason}</Text>
-                <TouchableOpacity
-                  style={[
-                    styles.playButton,
-                    currentPlayingTool === tool.id && styles.playButtonActive,
-                    recommendations.remaining_regular_tools <= 0 && styles.playButtonDisabled
-                  ]}
-                  onPress={() => {
-                    if (currentPlayingTool === tool.id) {
-                      stopSpeaking();
-                    } else {
-                      playTool(tool, false);
-                    }
-                  }}
-                  disabled={recommendations.remaining_regular_tools <= 0}
-                >
-                  <Ionicons
-                    name={currentPlayingTool === tool.id ? 'stop-circle' : 'play-circle'}
-                    size={24}
-                    color="#ffffff"
-                  />
-                  <Text style={styles.playButtonText}>
-                    {currentPlayingTool === tool.id ? 'Stop Audio' : 
-                     recommendations.remaining_regular_tools <= 0 ? 'Limit Reached' : 'Play Guidance'}
-                  </Text>
-                </TouchableOpacity>
-              </View>
+              currentPlayingTool === tool.id && isSpeaking && (
+                <View key={tool.id} style={styles.toolDetailsCard}>
+                  <Text style={styles.toolDetailsTitle}>{tool.name}</Text>
+                  <Text style={styles.toolDetailsCategory}>{tool.category}</Text>
+                  <Text style={styles.toolDetailsReason}>{tool.reason}</Text>
+                  <TouchableOpacity style={styles.stopButton} onPress={stopSpeaking}>
+                    <Ionicons name="stop-circle" size={32} color="#ffffff" />
+                    <Text style={styles.stopButtonText}>Stop Audio</Text>
+                  </TouchableOpacity>
+                </View>
+              )
             ))}
           </View>
         )}
