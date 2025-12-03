@@ -339,22 +339,105 @@ export default function CategoryDetail() {
         )}
 
         <Text style={styles.subtitle}>
-          {showCrisisOnly 
-            ? `${strategies.filter(s => s.is_crisis_tool).length} crisis tools` 
-            : `${strategies.length} tools available`}
+          {strategies.length} tools available
+          {id === 'distress' && ` (${strategies.filter(s => s.is_crisis_tool).length} crisis tools)`}
         </Text>
 
         {/* Tools Toggle Button */}
         <TouchableOpacity 
           style={styles.toolsToggleButton}
-          onPress={() => setShowTools(!showTools)}
+          onPress={() => {
+            setShowTools(!showTools);
+            if (showCrisisTools) setShowCrisisTools(false); // Close crisis tools when opening regular tools
+          }}
         >
           <Text style={styles.toolsToggleText}>TOOLS</Text>
         </TouchableOpacity>
 
-        {/* Show tools only when button is clicked */}
-        {showTools && strategies
-          .filter(strategy => !showCrisisOnly || strategy.is_crisis_tool)
+        {/* Crisis Tools Button - Only for Distress Tolerance */}
+        {id === 'distress' && (
+          <TouchableOpacity 
+            style={styles.crisisToolsToggleButton}
+            onPress={() => {
+              setShowCrisisTools(!showCrisisTools);
+              if (showTools) setShowTools(false); // Close regular tools when opening crisis tools
+            }}
+          >
+            <Text style={styles.crisisToolsToggleText}>CRISIS TOOLS</Text>
+          </TouchableOpacity>
+        )}
+
+        {/* Show regular tools only when TOOLS button is clicked */}
+        {showTools && strategies.map((strategy) => (
+          <TouchableOpacity
+            key={strategy.id}
+            style={[
+              styles.toolCard,
+              editMode && styles.toolCardEditable,
+              editingId === strategy.id && styles.toolCardEditing,
+            ]}
+            onPress={() => editMode && handleEditClick(strategy)}
+            activeOpacity={editMode ? 0.7 : 1}
+          >
+            {editingId === strategy.id && editedStrategy ? (
+              // Edit Mode
+              <View>
+                <TextInput
+                  style={styles.editInput}
+                  value={editedStrategy.name}
+                  onChangeText={(text) => setEditedStrategy({ ...editedStrategy, name: text })}
+                  placeholder="Strategy Name"
+                />
+                <TextInput
+                  style={styles.editInput}
+                  value={editedStrategy.category}
+                  onChangeText={(text) => setEditedStrategy({ ...editedStrategy, category: text })}
+                  placeholder="Category"
+                />
+                <TextInput
+                  style={[styles.editInput, styles.editTextArea]}
+                  value={editedStrategy.instructions}
+                  onChangeText={(text) => setEditedStrategy({ ...editedStrategy, instructions: text })}
+                  placeholder="Instructions"
+                  multiline
+                  numberOfLines={10}
+                />
+                <View style={styles.editButtons}>
+                  <TouchableOpacity
+                    style={[styles.editButton, styles.saveButton]}
+                    onPress={handleSave}
+                    disabled={saving}
+                  >
+                    <Text style={styles.editButtonText}>
+                      {saving ? 'Saving...' : 'Save'}
+                    </Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={[styles.editButton, styles.cancelButton]}
+                    onPress={() => {
+                      setEditingId(null);
+                      setEditedStrategy(null);
+                    }}
+                  >
+                    <Text style={styles.editButtonText}>Cancel</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            ) : (
+              // View Mode
+              <View>
+                <Text style={styles.toolName}>{strategy.name}</Text>
+                <Text style={styles.toolDescription} numberOfLines={2}>
+                  {strategy.instructions}
+                </Text>
+              </View>
+            )}
+          </TouchableOpacity>
+        ))}
+
+        {/* Show ONLY crisis tools when CRISIS TOOLS button is clicked */}
+        {showCrisisTools && strategies
+          .filter(strategy => strategy.is_crisis_tool)
           .map((strategy) => (
           <TouchableOpacity
             key={strategy.id}
