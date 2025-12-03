@@ -305,6 +305,23 @@ export default function CategoryDetail() {
           </View>
         )}
         
+        {id === 'breathing' && (
+          <View style={styles.breathingExplanationCard}>
+            <Text style={styles.breathingTitle}>💨 Why Breathing Matters for Rider-Horse Performance</Text>
+            <Text style={styles.breathingDescription}>
+              Your breath is your horse's mirror. When you breathe slowly and deeply, your nervous system calms, 
+              lowering your heart rate and releasing tension. Your horse feels this shift instantly through your 
+              seat, legs, and hands—responding with relaxation and trust.{'\n\n'}
+              
+              Controlled breathing activates your parasympathetic nervous system (rest-and-digest mode), helping you 
+              stay centered, make clear decisions, and communicate calmly with your horse. It's the fastest way to 
+              regulate anxiety, build confidence, and create harmony in the saddle.{'\n\n'}
+              
+              Master your breath, master your ride.
+            </Text>
+          </View>
+        )}
+        
         {editMode && (
           <View style={styles.editModeIndicator}>
             <Ionicons name="create" size={20} color="#ef4444" />
