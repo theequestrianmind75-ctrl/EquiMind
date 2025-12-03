@@ -313,13 +313,15 @@ export default function DuringRideNew() {
           </View>
         </View>
 
-        {/* Tools Remaining Indicator */}
-        <Text style={styles.toolsRemaining}>
-          Regular Tools Remaining: {recommendations.remaining_regular_tools}/2
-        </Text>
+        {/* Tools Remaining Indicator - Only show with active session */}
+        {currentSession && (
+          <Text style={styles.toolsRemaining}>
+            Regular Tools Remaining: {recommendations.remaining_regular_tools}/2
+          </Text>
+        )}
 
         {/* START OF RIDE Button & Tool */}
-        {recommendations.start_of_ride && (
+        {currentSession && recommendations.start_of_ride && (
           <View style={styles.section}>
             <TouchableOpacity
               style={styles.mainButton}
