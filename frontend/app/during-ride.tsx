@@ -117,25 +117,31 @@ export default function DuringRideNew() {
       let selectedVoice;
       
       if (useFemaleVoice) {
+        // British female voice selection
         selectedVoice = voices.find(v => 
-          v.language.startsWith('en') && 
-          (v.name.toLowerCase().includes('samantha') || 
-           v.name.toLowerCase().includes('karen') ||
-           v.name.toLowerCase().includes('moira') ||
-           v.name.toLowerCase().includes('fiona') ||
-           v.name.toLowerCase().includes('tessa'))
+          v.language === 'en-GB' && 
+          (v.name.toLowerCase().includes('kate') || 
+           v.name.toLowerCase().includes('serena') ||
+           v.name.toLowerCase().includes('stephanie'))
+        ) || voices.find(v => 
+          v.language === 'en-GB' && v.quality === 'Enhanced'
+        ) || voices.find(v => 
+          v.language === 'en-GB'
         ) || voices.find(v => 
           v.language.startsWith('en') && 
           v.quality === 'Enhanced'
         );
       } else {
-        // Male voice selection
+        // Australian male voice selection
         selectedVoice = voices.find(v => 
-          v.language.startsWith('en') && 
-          (v.name.toLowerCase().includes('alex') || 
-           v.name.toLowerCase().includes('daniel') ||
-           v.name.toLowerCase().includes('tom') ||
-           v.name.toLowerCase().includes('fred'))
+          v.language === 'en-AU' && 
+          (v.name.toLowerCase().includes('gordon') || 
+           v.name.toLowerCase().includes('lee') ||
+           v.name.toLowerCase().includes('karen'))
+        ) || voices.find(v => 
+          v.language === 'en-AU' && v.quality === 'Enhanced'
+        ) || voices.find(v => 
+          v.language === 'en-AU'
         ) || voices.find(v => 
           v.language.startsWith('en')
         );
