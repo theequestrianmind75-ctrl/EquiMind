@@ -194,64 +194,63 @@ export default function DuringRideNew() {
           if (selectedVoice) voiceLanguage = selectedVoice.language;
         }
       } else {
-        // MALE voice selection with QUALITY focus
-        // iOS Priority: Alex (US), Gordon (Australian)
-        // Android Priority: Any male-sounding voice
+        // MALE voice selection - OPTIMIZED FOR iPHONE
+        // iPhone has "Alex" pre-installed - it's high quality and perfect for male voice
+        // Priority: Alex (iOS premium voice) > Other US males > Australian > British
         
-        // Try 1: US male voices with Enhanced quality
+        // Try 1: ALEX - iPhone's premium male voice (BEST QUALITY)
         selectedVoice = voices.find(v => 
-          v.language === 'en-US' && 
-          v.quality === 'Enhanced' &&
-          (v.name.toLowerCase().includes('alex') || 
-           v.name.toLowerCase().includes('fred') ||
-           v.name.toLowerCase().includes('daniel') ||
-           v.name.toLowerCase().includes('tom'))
+          v.name.toLowerCase() === 'alex' || 
+          v.name.toLowerCase().includes('alex')
         );
         
-        // Try 2: US male voices (any quality)
+        if (selectedVoice) {
+          console.log('✨ Found Alex (iPhone premium male voice)');
+          voiceLanguage = selectedVoice.language;
+        }
+        
+        // Try 2: Other US male voices with Enhanced quality
         if (!selectedVoice) {
           selectedVoice = voices.find(v => 
             v.language === 'en-US' && 
-            (v.name.toLowerCase().includes('alex') || 
-             v.name.toLowerCase().includes('fred') ||
+            v.quality === 'Enhanced' &&
+            (v.name.toLowerCase().includes('fred') ||
              v.name.toLowerCase().includes('daniel') ||
              v.name.toLowerCase().includes('tom'))
           );
         }
         
-        // Try 3: Australian male voices with Enhanced quality
+        // Try 3: Any US male voices (not just enhanced)
+        if (!selectedVoice) {
+          selectedVoice = voices.find(v => 
+            v.language === 'en-US' && 
+            (v.name.toLowerCase().includes('fred') ||
+             v.name.toLowerCase().includes('daniel') ||
+             v.name.toLowerCase().includes('tom'))
+          );
+        }
+        
+        // Try 4: Australian male voices (Gordon is high quality)
         if (!selectedVoice) {
           selectedVoice = voices.find(v => 
             v.language === 'en-AU' && 
-            v.quality === 'Enhanced' &&
             (v.name.toLowerCase().includes('gordon') || 
              v.name.toLowerCase().includes('lee'))
           );
           if (selectedVoice) voiceLanguage = 'en-AU';
         }
         
-        // Try 4: Australian male voices (any quality)
-        if (!selectedVoice) {
-          selectedVoice = voices.find(v => 
-            v.language === 'en-AU' && 
-            (v.name.toLowerCase().includes('gordon') || 
-             v.name.toLowerCase().includes('lee'))
-          );
-          if (selectedVoice) voiceLanguage = 'en-AU';
-        }
-        
-        // Try 5: British male voices with Enhanced quality
+        // Try 5: British male voices
         if (!selectedVoice) {
           selectedVoice = voices.find(v => 
             v.language === 'en-GB' && 
-            v.quality === 'Enhanced' &&
             (v.name.toLowerCase().includes('daniel') || 
              v.name.toLowerCase().includes('oliver'))
           );
           if (selectedVoice) voiceLanguage = 'en-GB';
         }
         
-        // Try 6: Any Enhanced quality English voice (not female names)
+        // Try 6: Any Enhanced quality English voice (excluding common female names)
         if (!selectedVoice) {
           selectedVoice = voices.find(v => 
             v.language.startsWith('en') &&
@@ -271,7 +270,7 @@ export default function DuringRideNew() {
           if (selectedVoice) voiceLanguage = selectedVoice.language;
         }
         
-        // Try 7: Any English voice that's NOT a common female name
+        // Try 7: Any English voice (not female names)
         if (!selectedVoice) {
           selectedVoice = voices.find(v => 
             v.language.startsWith('en') &&
