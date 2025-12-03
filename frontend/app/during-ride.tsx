@@ -351,7 +351,7 @@ export default function DuringRideNew() {
         )}
 
         {/* DURING YOUR RIDE Button & Tools */}
-        {recommendations.during_ride && recommendations.during_ride.length > 0 && (
+        {currentSession && recommendations.during_ride && recommendations.during_ride.length > 0 && (
           <View style={styles.section}>
             <TouchableOpacity
               style={[styles.mainButton, styles.duringRideButton]}
