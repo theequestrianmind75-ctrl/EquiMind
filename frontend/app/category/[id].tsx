@@ -608,6 +608,26 @@ const styles = StyleSheet.create({
     color: '#000000',
     lineHeight: 22,
   },
+  emotionalRegulationCard: {
+    backgroundColor: '#ffffff',
+    padding: 20,
+    borderRadius: 12,
+    marginBottom: 20,
+    borderWidth: 2,
+    borderColor: '#8b5cf6',
+  },
+  emotionalRegulationTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#1e293b',
+    marginBottom: 12,
+    textAlign: 'center',
+  },
+  emotionalRegulationDescription: {
+    fontSize: 14,
+    color: '#000000',
+    lineHeight: 22,
+  },
   wiseMindImage: {
     width: '100%',
     height: 200,
