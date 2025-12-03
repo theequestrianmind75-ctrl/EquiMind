@@ -596,23 +596,21 @@ const styles = StyleSheet.create({
     color: '#000000',
     marginBottom: 16,
   },
-  toolsSectionBox: {
+  toolsToggleButton: {
     backgroundColor: '#ffffff',
-    padding: 16,
+    padding: 20,
     borderRadius: 12,
     marginBottom: 20,
     borderWidth: 2,
     borderColor: '#375B50',
-  },
-  toolsSectionHeader: {
-    flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
   },
-  toolsSectionTitle: {
-    fontSize: 20,
+  toolsToggleText: {
+    fontSize: 24,
     fontWeight: 'bold',
-    color: '#1e293b',
-    marginLeft: 12,
+    color: '#ef4444',
+    textAlign: 'center',
   },
   toolCard: {
     backgroundColor: '#ffffff',
