@@ -38,6 +38,7 @@ export default function DuringRideNew() {
   const [loading, setLoading] = useState(true);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [currentPlayingTool, setCurrentPlayingTool] = useState<string | null>(null);
+  const [useFemaleVoice, setUseFemaleVoice] = useState(true);
 
   useEffect(() => {
     fetchCurrentSessionAndRecommendations();
