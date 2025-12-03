@@ -78,6 +78,7 @@ export default function CategoryDetail() {
   const [showPasswordPrompt, setShowPasswordPrompt] = useState(false);
   const [passwordInput, setPasswordInput] = useState('');
   const [showCrisisOnly, setShowCrisisOnly] = useState(false);
+  const [showTools, setShowTools] = useState(false);
 
   const category = CATEGORIES[id as string];
 
