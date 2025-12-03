@@ -490,7 +490,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   duringRideButton: {
-    backgroundColor: '#8b5cf6',
+    backgroundColor: '#166534',
   },
   mainButtonText: {
     fontSize: 20,
