@@ -610,6 +610,28 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     marginLeft: 12,
   },
+  warningCard: {
+    backgroundColor: '#fff7ed',
+    padding: 20,
+    borderRadius: 12,
+    marginBottom: 20,
+    borderWidth: 2,
+    borderColor: '#f59e0b',
+    alignItems: 'center',
+  },
+  warningTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#1e293b',
+    marginTop: 12,
+    marginBottom: 8,
+  },
+  warningText: {
+    fontSize: 14,
+    color: '#000000',
+    textAlign: 'center',
+    lineHeight: 20,
+  },
   section: {
     marginBottom: 32,
   },
