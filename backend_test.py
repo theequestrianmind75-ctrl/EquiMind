@@ -22,55 +22,22 @@ class DuringRideTestSuite:
         self.test_sessions = []
         self.test_results = []
         
-    def setup_session(self):
-        """Setup HTTP session for testing"""
-        pass  # Using requests, no setup needed
-        
-    def cleanup_session(self):
-        """Cleanup HTTP session"""
-        pass  # Using requests, no cleanup needed
-            
-    def create_test_session(self, anxiety_level=5, confidence_level=5, rider_energy_level=5):
-        """Create a test session with specific levels for testing"""
-        session_data = {
-            "session_type": "pre-ride",
-            "ride_type": "training",
-            "context": "training",
-            "rider_name": "Test Rider",
-            "anxiety_level": anxiety_level,
-            "confidence_level": confidence_level,
-            "rider_energy_level": rider_energy_level,
-            "notes": f"Test session - anxiety:{anxiety_level}, confidence:{confidence_level}, energy:{rider_energy_level}"
-        }
-        
-        # Create session without authentication (public endpoint)
-        async with self.session.post(f"{API_BASE}/sessions", json=session_data) as response:
-            if response.status == 403:
-                # Expected - sessions creation requires auth, but we can use existing sessions
-                print(f"⚠️  Session creation requires auth (expected) - will use existing sessions")
-                return None
-            elif response.status == 201:
-                session = await response.json()
-                session_id = session.get('id')
-                self.test_sessions.append(session_id)
-                print(f"✅ Created test session: {session_id}")
-                return session_id
-            else:
-                print(f"❌ Failed to create session: {response.status}")
-                return None
-                
-    async def get_existing_sessions(self):
+    def get_existing_sessions(self):
         """Get existing sessions to use for testing"""
-        async with self.session.get(f"{API_BASE}/sessions") as response:
-            if response.status == 200:
-                sessions = await response.json()
+        try:
+            response = requests.get(f"{API_BASE}/sessions", timeout=10)
+            if response.status_code == 200:
+                sessions = response.json()
                 print(f"📊 Found {len(sessions)} existing sessions")
                 return sessions
             else:
-                print(f"❌ Failed to get sessions: {response.status}")
+                print(f"❌ Failed to get sessions: {response.status_code}")
                 return []
+        except Exception as e:
+            print(f"❌ Exception getting sessions: {e}")
+            return []
                 
-    async def update_session_for_testing(self, session_id, anxiety_level, confidence_level, rider_energy_level):
+    def update_session_for_testing(self, session_id, anxiety_level, confidence_level, rider_energy_level):
         """Update an existing session with test data"""
         update_data = {
             "anxiety_level": anxiety_level,
@@ -79,20 +46,24 @@ class DuringRideTestSuite:
             "notes": f"Updated for testing - anxiety:{anxiety_level}, confidence:{confidence_level}, energy:{rider_energy_level}"
         }
         
-        async with self.session.patch(f"{API_BASE}/sessions/{session_id}", json=update_data) as response:
-            if response.status == 200:
+        try:
+            response = requests.patch(f"{API_BASE}/sessions/{session_id}", json=update_data, timeout=10)
+            if response.status_code == 200:
                 print(f"✅ Updated session {session_id} for testing")
                 return True
             else:
-                print(f"❌ Failed to update session {session_id}: {response.status}")
+                print(f"❌ Failed to update session {session_id}: {response.status_code}")
                 return False
+        except Exception as e:
+            print(f"❌ Exception updating session: {e}")
+            return False
                 
-    async def test_smart_recommendations_high_anxiety(self):
+    def test_smart_recommendations_high_anxiety(self):
         """Test 1: High anxiety (8/10) should return calming/breathing tools"""
         print("\n🧪 TEST 1: High Anxiety Recommendations")
         
         # Get existing sessions and use the first one
-        sessions = await self.get_existing_sessions()
+        sessions = self.get_existing_sessions()
         if not sessions:
             self.test_results.append({"test": "High Anxiety Recommendations", "status": "SKIP", "reason": "No sessions available"})
             return
@@ -100,14 +71,15 @@ class DuringRideTestSuite:
         session_id = sessions[0]['id']
         
         # Update session with high anxiety
-        if not await self.update_session_for_testing(session_id, anxiety_level=8, confidence_level=5, rider_energy_level=5):
+        if not self.update_session_for_testing(session_id, anxiety_level=8, confidence_level=5, rider_energy_level=5):
             self.test_results.append({"test": "High Anxiety Recommendations", "status": "FAIL", "reason": "Could not update session"})
             return
             
         # Test recommendations endpoint
-        async with self.session.get(f"{API_BASE}/during-ride/recommendations/{session_id}") as response:
-            if response.status == 200:
-                recommendations = await response.json()
+        try:
+            response = requests.get(f"{API_BASE}/during-ride/recommendations/{session_id}", timeout=10)
+            if response.status_code == 200:
+                recommendations = response.json()
                 
                 # Verify structure
                 required_keys = ['session_id', 'start_of_ride', 'during_ride', 'emergency', 'remaining_regular_tools']
@@ -184,14 +156,20 @@ class DuringRideTestSuite:
                 self.test_results.append({
                     "test": "High Anxiety Recommendations", 
                     "status": "FAIL", 
-                    "reason": f"HTTP {response.status}: {await response.text()}"
+                    "reason": f"HTTP {response.status_code}: {response.text}"
                 })
+        except Exception as e:
+            self.test_results.append({
+                "test": "High Anxiety Recommendations", 
+                "status": "FAIL", 
+                "reason": f"Exception: {e}"
+            })
                 
-    async def test_smart_recommendations_low_confidence(self):
+    def test_smart_recommendations_low_confidence(self):
         """Test 2: Low confidence (3/10) should return confidence-building tools"""
         print("\n🧪 TEST 2: Low Confidence Recommendations")
         
-        sessions = await self.get_existing_sessions()
+        sessions = self.get_existing_sessions()
         if not sessions:
             self.test_results.append({"test": "Low Confidence Recommendations", "status": "SKIP", "reason": "No sessions available"})
             return
@@ -199,13 +177,14 @@ class DuringRideTestSuite:
         session_id = sessions[0]['id']
         
         # Update session with low confidence
-        if not await self.update_session_for_testing(session_id, anxiety_level=5, confidence_level=3, rider_energy_level=5):
+        if not self.update_session_for_testing(session_id, anxiety_level=5, confidence_level=3, rider_energy_level=5):
             self.test_results.append({"test": "Low Confidence Recommendations", "status": "FAIL", "reason": "Could not update session"})
             return
             
-        async with self.session.get(f"{API_BASE}/during-ride/recommendations/{session_id}") as response:
-            if response.status == 200:
-                recommendations = await response.json()
+        try:
+            response = requests.get(f"{API_BASE}/during-ride/recommendations/{session_id}", timeout=10)
+            if response.status_code == 200:
+                recommendations = response.json()
                 during_ride_tools = recommendations.get('during_ride', [])
                 
                 # Check for confidence-building tools
@@ -232,14 +211,20 @@ class DuringRideTestSuite:
                 self.test_results.append({
                     "test": "Low Confidence Recommendations", 
                     "status": "FAIL", 
-                    "reason": f"HTTP {response.status}"
+                    "reason": f"HTTP {response.status_code}"
                 })
+        except Exception as e:
+            self.test_results.append({
+                "test": "Low Confidence Recommendations", 
+                "status": "FAIL", 
+                "reason": f"Exception: {e}"
+            })
                 
-    async def test_smart_recommendations_low_energy(self):
+    def test_smart_recommendations_low_energy(self):
         """Test 3: Low energy (2/10) should return energizing tools"""
         print("\n🧪 TEST 3: Low Energy Recommendations")
         
-        sessions = await self.get_existing_sessions()
+        sessions = self.get_existing_sessions()
         if not sessions:
             self.test_results.append({"test": "Low Energy Recommendations", "status": "SKIP", "reason": "No sessions available"})
             return
@@ -247,13 +232,14 @@ class DuringRideTestSuite:
         session_id = sessions[0]['id']
         
         # Update session with low energy
-        if not await self.update_session_for_testing(session_id, anxiety_level=5, confidence_level=5, rider_energy_level=2):
+        if not self.update_session_for_testing(session_id, anxiety_level=5, confidence_level=5, rider_energy_level=2):
             self.test_results.append({"test": "Low Energy Recommendations", "status": "FAIL", "reason": "Could not update session"})
             return
             
-        async with self.session.get(f"{API_BASE}/during-ride/recommendations/{session_id}") as response:
-            if response.status == 200:
-                recommendations = await response.json()
+        try:
+            response = requests.get(f"{API_BASE}/during-ride/recommendations/{session_id}", timeout=10)
+            if response.status_code == 200:
+                recommendations = response.json()
                 during_ride_tools = recommendations.get('during_ride', [])
                 
                 # Check for energizing tools
@@ -275,30 +261,43 @@ class DuringRideTestSuite:
                 self.test_results.append({
                     "test": "Low Energy Recommendations", 
                     "status": "FAIL", 
-                    "reason": f"HTTP {response.status}"
+                    "reason": f"HTTP {response.status_code}"
                 })
+        except Exception as e:
+            self.test_results.append({
+                "test": "Low Energy Recommendations", 
+                "status": "FAIL", 
+                "reason": f"Exception: {e}"
+            })
                 
-    async def test_invalid_session_id(self):
+    def test_invalid_session_id(self):
         """Test 4: Invalid session_id should return 404"""
         print("\n🧪 TEST 4: Invalid Session ID")
         
         fake_session_id = str(uuid.uuid4())
-        async with self.session.get(f"{API_BASE}/during-ride/recommendations/{fake_session_id}") as response:
-            if response.status == 404:
+        try:
+            response = requests.get(f"{API_BASE}/during-ride/recommendations/{fake_session_id}", timeout=10)
+            if response.status_code == 404:
                 self.test_results.append({"test": "Invalid Session ID", "status": "PASS"})
                 print("   ✅ Correctly returned 404 for invalid session ID")
             else:
                 self.test_results.append({
                     "test": "Invalid Session ID", 
                     "status": "FAIL", 
-                    "reason": f"Expected 404, got {response.status}"
+                    "reason": f"Expected 404, got {response.status_code}"
                 })
+        except Exception as e:
+            self.test_results.append({
+                "test": "Invalid Session ID", 
+                "status": "FAIL", 
+                "reason": f"Exception: {e}"
+            })
                 
-    async def test_tool_access_tracking_regular(self):
+    def test_tool_access_tracking_regular(self):
         """Test 5: Track regular tool access and verify limit enforcement"""
         print("\n🧪 TEST 5: Regular Tool Access Tracking")
         
-        sessions = await self.get_existing_sessions()
+        sessions = self.get_existing_sessions()
         if not sessions:
             self.test_results.append({"test": "Regular Tool Access", "status": "SKIP", "reason": "No sessions available"})
             return
@@ -306,67 +305,71 @@ class DuringRideTestSuite:
         session_id = sessions[0]['id']
         
         # Reset session tool counts by updating it
-        await self.update_session_for_testing(session_id, anxiety_level=5, confidence_level=5, rider_energy_level=5)
+        self.update_session_for_testing(session_id, anxiety_level=5, confidence_level=5, rider_energy_level=5)
         
         # Test first regular tool access
         tool_id = "test-tool-1"
         tool_name = "Test Breathing Tool"
         
-        async with self.session.post(
-            f"{API_BASE}/during-ride/track-tool-access/{session_id}",
-            params={"tool_id": tool_id, "tool_name": tool_name, "is_emergency": False}
-        ) as response:
-            if response.status == 200:
-                result = await response.json()
+        try:
+            response = requests.post(
+                f"{API_BASE}/during-ride/track-tool-access/{session_id}",
+                params={"tool_id": tool_id, "tool_name": tool_name, "is_emergency": False},
+                timeout=10
+            )
+            if response.status_code == 200:
+                result = response.json()
                 
                 if result.get('success') and result.get('regular_tools_remaining') == 1:
                     print("   ✅ First regular tool access successful")
                     
                     # Test second regular tool access
-                    async with self.session.post(
+                    response2 = requests.post(
                         f"{API_BASE}/during-ride/track-tool-access/{session_id}",
-                        params={"tool_id": "test-tool-2", "tool_name": "Test Confidence Tool", "is_emergency": False}
-                    ) as response2:
-                        if response2.status == 200:
-                            result2 = await response2.json()
+                        params={"tool_id": "test-tool-2", "tool_name": "Test Confidence Tool", "is_emergency": False},
+                        timeout=10
+                    )
+                    if response2.status_code == 200:
+                        result2 = response2.json()
+                        
+                        if result2.get('regular_tools_remaining') == 0:
+                            print("   ✅ Second regular tool access successful")
                             
-                            if result2.get('regular_tools_remaining') == 0:
-                                print("   ✅ Second regular tool access successful")
-                                
-                                # Test third regular tool access (should fail)
-                                async with self.session.post(
-                                    f"{API_BASE}/during-ride/track-tool-access/{session_id}",
-                                    params={"tool_id": "test-tool-3", "tool_name": "Test Third Tool", "is_emergency": False}
-                                ) as response3:
-                                    if response3.status == 400:
-                                        error_text = await response3.text()
-                                        if "Tool limit reached" in error_text:
-                                            print("   ✅ Third regular tool correctly rejected (limit reached)")
-                                            self.test_results.append({"test": "Regular Tool Access", "status": "PASS"})
-                                        else:
-                                            self.test_results.append({
-                                                "test": "Regular Tool Access", 
-                                                "status": "FAIL", 
-                                                "reason": f"Wrong error message: {error_text}"
-                                            })
-                                    else:
-                                        self.test_results.append({
-                                            "test": "Regular Tool Access", 
-                                            "status": "FAIL", 
-                                            "reason": f"Third tool should be rejected, got {response3.status}"
-                                        })
+                            # Test third regular tool access (should fail)
+                            response3 = requests.post(
+                                f"{API_BASE}/during-ride/track-tool-access/{session_id}",
+                                params={"tool_id": "test-tool-3", "tool_name": "Test Third Tool", "is_emergency": False},
+                                timeout=10
+                            )
+                            if response3.status_code == 400:
+                                error_text = response3.text
+                                if "Tool limit reached" in error_text:
+                                    print("   ✅ Third regular tool correctly rejected (limit reached)")
+                                    self.test_results.append({"test": "Regular Tool Access", "status": "PASS"})
+                                else:
+                                    self.test_results.append({
+                                        "test": "Regular Tool Access", 
+                                        "status": "FAIL", 
+                                        "reason": f"Wrong error message: {error_text}"
+                                    })
                             else:
                                 self.test_results.append({
                                     "test": "Regular Tool Access", 
                                     "status": "FAIL", 
-                                    "reason": f"Expected 0 remaining tools, got {result2.get('regular_tools_remaining')}"
+                                    "reason": f"Third tool should be rejected, got {response3.status_code}"
                                 })
                         else:
                             self.test_results.append({
                                 "test": "Regular Tool Access", 
                                 "status": "FAIL", 
-                                "reason": f"Second tool access failed: {response2.status}"
+                                "reason": f"Expected 0 remaining tools, got {result2.get('regular_tools_remaining')}"
                             })
+                    else:
+                        self.test_results.append({
+                            "test": "Regular Tool Access", 
+                            "status": "FAIL", 
+                            "reason": f"Second tool access failed: {response2.status_code}"
+                        })
                 else:
                     self.test_results.append({
                         "test": "Regular Tool Access", 
@@ -377,14 +380,20 @@ class DuringRideTestSuite:
                 self.test_results.append({
                     "test": "Regular Tool Access", 
                     "status": "FAIL", 
-                    "reason": f"First tool access failed: {response.status}"
+                    "reason": f"First tool access failed: {response.status_code}"
                 })
+        except Exception as e:
+            self.test_results.append({
+                "test": "Regular Tool Access", 
+                "status": "FAIL", 
+                "reason": f"Exception: {e}"
+            })
                 
-    async def test_emergency_tool_access(self):
+    def test_emergency_tool_access(self):
         """Test 6: Emergency tool access should always work (no limits)"""
         print("\n🧪 TEST 6: Emergency Tool Access")
         
-        sessions = await self.get_existing_sessions()
+        sessions = self.get_existing_sessions()
         if not sessions:
             self.test_results.append({"test": "Emergency Tool Access", "status": "SKIP", "reason": "No sessions available"})
             return
@@ -394,39 +403,47 @@ class DuringRideTestSuite:
         # Test multiple emergency tool accesses
         emergency_accesses = []
         
-        for i in range(3):  # Test 3 emergency accesses
-            async with self.session.post(
-                f"{API_BASE}/during-ride/track-tool-access/{session_id}",
-                params={"tool_id": f"emergency-tool-{i}", "tool_name": f"Emergency Tool {i+1}", "is_emergency": True}
-            ) as response:
-                if response.status == 200:
-                    result = await response.json()
+        try:
+            for i in range(3):  # Test 3 emergency accesses
+                response = requests.post(
+                    f"{API_BASE}/during-ride/track-tool-access/{session_id}",
+                    params={"tool_id": f"emergency-tool-{i}", "tool_name": f"Emergency Tool {i+1}", "is_emergency": True},
+                    timeout=10
+                )
+                if response.status_code == 200:
+                    result = response.json()
                     emergency_accesses.append(result.get('total_emergency_accesses', 0))
                     print(f"   ✅ Emergency tool {i+1} access successful")
                 else:
                     self.test_results.append({
                         "test": "Emergency Tool Access", 
                         "status": "FAIL", 
-                        "reason": f"Emergency tool {i+1} access failed: {response.status}"
+                        "reason": f"Emergency tool {i+1} access failed: {response.status_code}"
                     })
                     return
                     
-        # Verify emergency count incremented correctly
-        if len(emergency_accesses) == 3 and emergency_accesses[-1] >= 3:
-            self.test_results.append({"test": "Emergency Tool Access", "status": "PASS"})
-            print(f"   ✅ All emergency tools accessed successfully, final count: {emergency_accesses[-1]}")
-        else:
+            # Verify emergency count incremented correctly
+            if len(emergency_accesses) == 3 and emergency_accesses[-1] >= 3:
+                self.test_results.append({"test": "Emergency Tool Access", "status": "PASS"})
+                print(f"   ✅ All emergency tools accessed successfully, final count: {emergency_accesses[-1]}")
+            else:
+                self.test_results.append({
+                    "test": "Emergency Tool Access", 
+                    "status": "FAIL", 
+                    "reason": f"Emergency count tracking failed: {emergency_accesses}"
+                })
+        except Exception as e:
             self.test_results.append({
                 "test": "Emergency Tool Access", 
                 "status": "FAIL", 
-                "reason": f"Emergency count tracking failed: {emergency_accesses}"
+                "reason": f"Exception: {e}"
             })
             
-    async def test_session_model_updates(self):
+    def test_session_model_updates(self):
         """Test 7: Verify session model supports new fields"""
         print("\n🧪 TEST 7: Session Model Updates")
         
-        sessions = await self.get_existing_sessions()
+        sessions = self.get_existing_sessions()
         if not sessions:
             self.test_results.append({"test": "Session Model Updates", "status": "SKIP", "reason": "No sessions available"})
             return
@@ -451,9 +468,10 @@ class DuringRideTestSuite:
                 "notes": "Testing new fields support"
             }
             
-            async with self.session.patch(f"{API_BASE}/sessions/{session_id}", json=update_data) as response:
-                if response.status == 200:
-                    updated_session = await response.json()
+            try:
+                response = requests.patch(f"{API_BASE}/sessions/{session_id}", json=update_data, timeout=10)
+                if response.status_code == 200:
+                    updated_session = response.json()
                     if 'rider_energy_level' in updated_session and updated_session['rider_energy_level'] == 7:
                         self.test_results.append({"test": "Session Model Updates", "status": "PASS"})
                         print("   ✅ Session model supports rider_energy_level field")
@@ -467,31 +485,31 @@ class DuringRideTestSuite:
                     self.test_results.append({
                         "test": "Session Model Updates", 
                         "status": "FAIL", 
-                        "reason": f"Session update failed: {response.status}"
+                        "reason": f"Session update failed: {response.status_code}"
                     })
+            except Exception as e:
+                self.test_results.append({
+                    "test": "Session Model Updates", 
+                    "status": "FAIL", 
+                    "reason": f"Exception: {e}"
+                })
         else:
             self.test_results.append({"test": "Session Model Updates", "status": "PASS"})
             print("   ✅ All required fields present in session model")
             
-    async def run_all_tests(self):
+    def run_all_tests(self):
         """Run all during-ride smart tool access tests"""
         print("🚀 Starting During-Ride Smart Tool Access System Tests")
         print(f"🔗 Testing against: {API_BASE}")
         
-        await self.setup_session()
-        
-        try:
-            # Run all tests
-            await self.test_smart_recommendations_high_anxiety()
-            await self.test_smart_recommendations_low_confidence()
-            await self.test_smart_recommendations_low_energy()
-            await self.test_invalid_session_id()
-            await self.test_tool_access_tracking_regular()
-            await self.test_emergency_tool_access()
-            await self.test_session_model_updates()
-            
-        finally:
-            await self.cleanup_session()
+        # Run all tests
+        self.test_smart_recommendations_high_anxiety()
+        self.test_smart_recommendations_low_confidence()
+        self.test_smart_recommendations_low_energy()
+        self.test_invalid_session_id()
+        self.test_tool_access_tracking_regular()
+        self.test_emergency_tool_access()
+        self.test_session_model_updates()
             
         # Print summary
         print("\n" + "="*60)
@@ -520,10 +538,10 @@ class DuringRideTestSuite:
             'results': self.test_results
         }
 
-async def main():
+def main():
     """Main test runner"""
     test_suite = DuringRideTestSuite()
-    results = await test_suite.run_all_tests()
+    results = test_suite.run_all_tests()
     
     # Return exit code based on results
     if results['failed'] > 0:
@@ -534,5 +552,5 @@ async def main():
         return 0
 
 if __name__ == "__main__":
-    exit_code = asyncio.run(main())
+    exit_code = main()
     exit(exit_code)
