@@ -545,6 +545,174 @@ async def delete_session(session_id: str, current_user: dict = Depends(get_curre
         raise HTTPException(status_code=404, detail="Session not found")
     return {"message": "Session deleted successfully"}
 
+# ==================== DURING-RIDE SMART RECOMMENDATIONS ====================
+
+@api_router.get("/during-ride/recommendations/{session_id}")
+async def get_during_ride_recommendations(session_id: str):
+    """
+    Get smart tool recommendations based on pre-ride data
+    Returns:
+    - start_of_ride: 1 grounding tool (always shown)
+    - during_ride: 2 tools based on anxiety/confidence/energy levels
+    - emergency: 1 critical calming tool (always available, bypasses limits)
+    """
+    # Get the current session
+    session = await db.sessions.find_one({"id": session_id})
+    if not session:
+        raise HTTPException(status_code=404, detail="Session not found")
+    
+    anxiety_level = session.get("anxiety_level", 5)
+    confidence_level = session.get("confidence_level", 5)
+    rider_energy = session.get("rider_energy_level", 5)
+    
+    # Get all mental strategies
+    all_strategies = await db.mental_strategies.find({}).to_list(length=1000)
+    
+    # Initialize recommendations
+    recommendations = {
+        "session_id": session_id,
+        "start_of_ride": None,
+        "during_ride": [],
+        "emergency": None,
+        "remaining_regular_tools": 2 - session.get("regular_tools_count", 0),
+        "tools_accessed": session.get("tools_accessed_during_ride", [])
+    }
+    
+    # START OF RIDE - Grounding/Centering tool
+    grounding_tools = [s for s in all_strategies if "grounding" in s.get("name", "").lower() or 
+                       "centering" in s.get("name", "").lower() or
+                       "present" in s.get("name", "").lower() or
+                       s.get("category", "") == "Mindfulness & Flow"]
+    if grounding_tools:
+        recommendations["start_of_ride"] = {
+            "id": str(grounding_tools[0].get("_id", grounding_tools[0].get("id"))),
+            "name": grounding_tools[0].get("name"),
+            "category": grounding_tools[0].get("category"),
+            "instructions": grounding_tools[0].get("instructions"),
+            "reason": "Perfect to ground yourself and set intentions before starting"
+        }
+    
+    # DURING RIDE - Smart recommendations based on pre-ride state
+    during_ride_tools = []
+    
+    # High anxiety (7-10) → Calming/breathing tools
+    if anxiety_level >= 7:
+        calming_tools = [s for s in all_strategies if 
+                        s.get("category", "") in ["Breathing/HRV", "BODY RESET"] and
+                        ("calm" in s.get("name", "").lower() or 
+                         "breath" in s.get("name", "").lower() or
+                         "relax" in s.get("name", "").lower())]
+        during_ride_tools.extend(calming_tools[:2])
+        reason = "Your pre-ride anxiety was high - these tools will help calm your nervous system"
+    
+    # Low confidence (1-4) → Confidence-building tools
+    elif confidence_level <= 4:
+        confidence_tools = [s for s in all_strategies if 
+                           "confidence" in s.get("name", "").lower() or
+                           "power" in s.get("name", "").lower() or
+                           s.get("category", "") == "Tapping/EFT"]
+        during_ride_tools.extend(confidence_tools[:2])
+        reason = "Your pre-ride confidence was low - these tools will boost your self-assurance"
+    
+    # Low energy (1-4) → Energizing tools
+    elif rider_energy <= 4:
+        energy_tools = [s for s in all_strategies if 
+                       "energy" in s.get("name", "").lower() or
+                       "activate" in s.get("name", "").lower() or
+                       "power" in s.get("name", "").lower()]
+        during_ride_tools.extend(energy_tools[:2])
+        reason = "Your pre-ride energy was low - these tools will help energize you"
+    
+    # Moderate levels → Grounding/breathing tools
+    else:
+        moderate_tools = [s for s in all_strategies if 
+                         s.get("category", "") in ["Breathing/HRV", "Mindfulness & Flow"]]
+        during_ride_tools.extend(moderate_tools[:2])
+        reason = "These tools will help you maintain focus and presence during your ride"
+    
+    # Format during ride recommendations
+    for tool in during_ride_tools[:2]:  # Max 2 tools
+        recommendations["during_ride"].append({
+            "id": str(tool.get("_id", tool.get("id"))),
+            "name": tool.get("name"),
+            "category": tool.get("category"),
+            "instructions": tool.get("instructions"),
+            "reason": reason
+        })
+    
+    # EMERGENCY - Always available, bypasses limit
+    emergency_tools = [s for s in all_strategies if 
+                      s.get("category", "") == "Distress Tolerance" or
+                      "crisis" in s.get("name", "").lower() or
+                      "emergency" in s.get("name", "").lower()]
+    
+    # If no specific emergency tools, use powerful calming tools
+    if not emergency_tools:
+        emergency_tools = [s for s in all_strategies if 
+                          s.get("category", "") == "Breathing/HRV" and
+                          ("calm" in s.get("name", "").lower() or "breath" in s.get("name", "").lower())]
+    
+    if emergency_tools:
+        recommendations["emergency"] = {
+            "id": str(emergency_tools[0].get("_id", emergency_tools[0].get("id"))),
+            "name": emergency_tools[0].get("name"),
+            "category": emergency_tools[0].get("category"),
+            "instructions": emergency_tools[0].get("instructions"),
+            "reason": "Use this anytime you need immediate support - no limits"
+        }
+    
+    return recommendations
+
+@api_router.post("/during-ride/track-tool-access/{session_id}")
+async def track_tool_access(session_id: str, tool_id: str, tool_name: str, is_emergency: bool = False):
+    """
+    Track when a tool is accessed during a ride
+    Enforces 2-tool limit for regular tools, unlimited for emergency tools
+    """
+    # Get the current session
+    session = await db.sessions.find_one({"id": session_id})
+    if not session:
+        raise HTTPException(status_code=404, detail="Session not found")
+    
+    regular_count = session.get("regular_tools_count", 0)
+    emergency_count = session.get("emergency_tools_count", 0)
+    
+    # Check limit for regular tools
+    if not is_emergency and regular_count >= 2:
+        raise HTTPException(
+            status_code=400, 
+            detail="Tool limit reached. You can access up to 2 regular tools per ride session. Use the emergency tool if needed."
+        )
+    
+    # Create tool access record
+    tool_access = {
+        "tool_id": tool_id,
+        "tool_name": tool_name,
+        "accessed_at": datetime.utcnow().isoformat(),
+        "is_emergency": is_emergency
+    }
+    
+    # Update session
+    update_data = {
+        "$push": {"tools_accessed_during_ride": tool_access}
+    }
+    
+    if is_emergency:
+        update_data["$inc"] = {"emergency_tools_count": 1}
+    else:
+        update_data["$inc"] = {"regular_tools_count": 1}
+    
+    await db.sessions.update_one({"id": session_id}, update_data)
+    
+    # Return updated counts
+    return {
+        "success": True,
+        "tool_accessed": tool_name,
+        "is_emergency": is_emergency,
+        "regular_tools_remaining": 2 - (regular_count + (0 if is_emergency else 1)),
+        "total_emergency_accesses": emergency_count + (1 if is_emergency else 0)
+    }
+
 # ==================== RECOMMENDATIONS ENDPOINTS ====================
 
 @api_router.get("/trends")
