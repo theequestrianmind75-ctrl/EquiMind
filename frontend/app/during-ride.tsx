@@ -114,6 +114,8 @@ export default function DuringRideNew() {
 
       // Get voice based on user selection
       const voices = await Speech.getAvailableVoicesAsync();
+      console.log('🎤 Voice preference:', useFemaleVoice ? 'FEMALE' : 'MALE');
+      console.log('🎵 Available voices:', voices.length);
       let selectedVoice;
       
       if (useFemaleVoice) {
