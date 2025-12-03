@@ -762,6 +762,22 @@ const styles = StyleSheet.create({
     color: '#ef4444',
     textAlign: 'center',
   },
+  crisisToolsToggleButton: {
+    backgroundColor: '#ffffff',
+    padding: 20,
+    borderRadius: 12,
+    marginBottom: 20,
+    borderWidth: 3,
+    borderColor: '#dc2626',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  crisisToolsToggleText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#dc2626',
+    textAlign: 'center',
+  },
   toolCard: {
     backgroundColor: '#ffffff',
     padding: 20,
