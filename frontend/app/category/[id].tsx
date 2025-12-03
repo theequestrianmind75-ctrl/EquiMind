@@ -307,7 +307,7 @@ export default function CategoryDetail() {
         
         {id === 'breathing' && (
           <View style={styles.breathingExplanationCard}>
-            <Text style={styles.breathingTitle}>💨 Why Breathing Matters for Rider-Horse Performance</Text>
+            <Text style={styles.breathingTitle}>Why Breathing Matters for Rider-Horse Performance</Text>
             <Text style={styles.breathingDescription}>
               Your breath is your horse's mirror. When you breathe slowly and deeply, your nervous system calms, 
               lowering your heart rate and releasing tension. Your horse feels this shift instantly through your 
