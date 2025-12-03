@@ -1,73 +1,72 @@
 <analysis>
-The trajectory details an extensive development cycle for the EquiMind mobile app. The work began with debugging and resolving database configuration issues, revealing that the backend was pointing to an empty database. The core of the effort was a major overhaul and expansion of the app's content and recommendation logic. This involved adding numerous Distress Tolerance and Mindfulness tools, mapping them to recommendation triggers, and creating a Crisis Tools filter, all managed through Python scripts that interact with the MongoDB database.
+The trajectory documents a comprehensive development cycle for the EquiMind app, transitioning from bug-fixing to significant feature development and iterative UI refinement. The work began by resolving critical 403 Forbidden deployment errors, which were traced to incorrect authentication middleware on public API endpoints in .
 
-Several UI/UX features were implemented based on user requests, including changing icons, removing a redundant Ride Context feature, and multiple attempts to refine the text-to-speech voice for audio guidance. A significant portion of the interaction was dedicated to user support, guiding them through local environment setup (Node, Git, EAS CLI) and troubleshooting GitHub connection issues, ultimately revealing that the local setup path was unproductive.
+A major recurring challenge was data synchronization between the development environment and production deployments. Edits made by the user were repeatedly lost upon redeployment. This was initially due to an aggressive database initialization script and was ultimately solved by implementing a robust  script that runs on startup, ensuring the production database is always in sync with the latest backup file. This represents a critical architectural shift.
 
-The final and most critical phase involved debugging repeated deployment failures. The root causes were identified as a data-sync mismatch between development and production databases (which was solved by creating an automated data restoration script) and, most recently, 403 Forbidden errors on API calls due to incorrect authentication middleware on public endpoints. The user's primary language is English; all future responses must be in English.
+Based on user requests, a new Trends page was created from scratch, replacing a redundant Ride page. This involved building a new backend endpoint () and a corresponding frontend component (), followed by multiple rounds of stylistic adjustments. Other work included adding 15 new Mindfulness tools, automatically cleaning numbered lists from tool instructions via a script, and making several UI improvements like changing the TTS voice and simplifying page layouts. The user's primary language is English, and all future communications should be in English.
 </analysis>
 
 <product_requirements>
-EquiMind is a mental performance mobile application for equestrians, providing a library of Rider Tools (mental strategies) to manage emotional states and improve performance.
+EquiMind is a mental performance mobile app for equestrians. It offers a library of mental strategies (Rider Tools) and personalized recommendations based on user-inputted emotional states before and after a ride.
 
-**Core Features & Recent Enhancements:**
-1.  **Rider Tools Library:** A browsable library of over 190 mental exercises across multiple categories. Recent work added extensive Distress Tolerance and Mindfulness categories.
-2.  **Pre & Post-Ride Analysis:** A workflow for riders to log their state (anxiety, confidence, energy). The Training vs. Competition context selector was removed as it was deemed redundant with existing Ride Types.
-3.  **Personalized Recommendations:** Post-ride, the app provides personalized tool suggestions. The logic for this is stored in the database and was recently expanded to include all new Mindfulness tools.
-4.  **Specialized Content & UI:**
-    *   A Crisis Tools button was added to the Distress Tolerance category page, which filters the list to show only high-urgency tools.
-    *   Icons on the post-ride screen were updated for consistency, and emojis were removed from recommendation text stored in the database.
-    *   The text-to-speech voice for audio guidance was changed to a more natural-sounding female voice.
+The recent development cycle focused on several key areas:
+1.  **Deployment Stability:** The primary goal was to fix recurring deployment failures caused by authentication and data synchronization issues, making the app stable and editable.
+2.  **Content Expansion & Management:** The user added 15 new mindfulness tools, bringing the total to 205. A major requirement was ensuring that edits made to these tools in the admin editor would persist through deployments, which was achieved by creating a new data sync workflow. Numbered lists were also programmatically removed from tool instructions to improve formatting.
+3.  **New Feature - Trend Analysis:** A Trends page was created to replace the old Ride tab. This page provides riders with long-term insights by tracking anxiety, confidence, and energy levels over the last 5 sessions, detecting patterns, and highlighting their best session.
+4.  **UI/UX Refinements:** Numerous user-requested UI tweaks were implemented, including changing the TTS voice to a more natural female one, simplifying the strategy detail page, changing the auth screen logo color to black, and cleaning up icons and layouts on the new Trends page.
 </product_requirements>
 
 <key_technical_concepts>
-- **Full-Stack Architecture:** Monorepo with a FastAPI (Python) backend and an Expo (React Native) frontend.
-- **Database-as-Source-of-Truth:** MongoDB Atlas stores all app content (190+ tools, 24 recommendations), making logic dynamic.
-- **Script-based Migrations:** A consistent pattern of using standalone Python scripts (, , ) to perform all database seeding and content updates.
-- **FastAPI Authentication:** Use of  to protect endpoints. This was the root cause of recent 403 Forbidden deployment errors when applied to public endpoints.
+- **Full-Stack Monorepo:** FastAPI (Python) backend and Expo (React Native) frontend.
+- **Database-as-Source-of-Truth:** MongoDB contains all app content (tools, recommendations).
+- **Data Sync on Startup:** A  script now runs on every backend startup, comparing the database with a JSON backup and applying any necessary updates. This is the new standard for ensuring data consistency.
+- **Script-based Data Management:** Using standalone Python scripts to perform bulk operations like adding new content () and cleaning data ().
 </key_technical_concepts>
 
 <code_architecture>
-The application uses a monorepo structure with distinct  and  directories.
-
-**Directory Structure:**
+The application uses a monorepo structure with  and  directories.
 
 
-- ****
-  - **Importance:** The core FastAPI application that defines all API endpoints.
-  - **Summary of Changes:** Authentication middleware () was incorrectly applied to public GET endpoints. The most recent work involved attempts to remove this dependency from  to resolve 403 Forbidden errors during deployment. The work was interrupted before all necessary endpoints were fixed.
 
 - ****
-  - **Importance:** A critical script that runs on application startup to ensure the production database is correctly seeded with the latest data.
-  - **Summary of Changes:** This script was created and then significantly enhanced to add a safety layer. It now backs up the production  and  collections before wiping them and restoring them from  files. This ensures deployments always have the correct data (190 tools).
+    - **Importance:** The core FastAPI server defining all API endpoints.
+    - **Summary of Changes:** Multiple public endpoints (, ) had authentication incorrectly applied, causing 403 errors. These were fixed. A new  endpoint was added to perform trend analysis over the last 5 sessions. The logic for pattern detection in this endpoint was later fixed to resolve contradictions. A root  health check endpoint was also added. The startup logic was changed to call .
 
 - ****
-  - **Importance:** Displays the list of tools for a selected category.
-  - **Summary of Changes:** It was modified to conditionally render a red Crisis Tools button only for the Distress Tolerance category. State and filtering logic were added to this button to show/hide tools marked with an  flag in the database.
+    - **Importance:** This is a new, critical script that solves the persistent data loss issue on deployment. It runs on every server start.
+    - **Summary of Changes:** Created to compare the  file with the live MongoDB database. It updates, inserts, or deletes tools in the database to match the backup file, ensuring user edits are always deployed correctly.
 
 - ****
-  - **Importance:** Contains the logic for analyzing user input and displaying personalized recommendations.
-  - **Summary of Changes:** The logic was updated to use  after the  feature was removed. Icons within the component were updated, and a major bug was fixed where emojis embedded in the database recommendation text were causing unwanted icons to appear in the UI.
+    - **Importance:** A utility script created to automate a tedious content editing task.
+    - **Summary of Changes:** Created to iterate through all 205 tools in the database and remove numbered list prefixes (e.g., 1., 2.) from the  array. This saved significant manual effort.
 
 - ****
-  - **Importance:** The screen where the user starts a session.
-  - **Summary of Changes:** It was heavily modified to completely remove the Ride Context section (UI, state, and API parameter), simplifying the user flow.
+    - **Importance:** This new file constitutes the Trends feature, a major user request. It replaces the old .
+    - **Summary of Changes:** Created from scratch to fetch data from the  endpoint. It displays historical charts for anxiety and confidence, horse performance averages, detected patterns, and the user's best session. It underwent numerous stylistic revisions to resize cards, remove icons, and align text based on user feedback.
 
-- ** & **
-    - **Importance:** These screens provide audio guidance.
-    - **Summary of Changes:** Both files were modified multiple times to change the text-to-speech voice, eventually landing on a platform-agnostic approach using  and  after specific voice identifiers proved unreliable in the preview environment.
+- ****
+    - **Importance:** Defines the main tab navigation for the app.
+    - **Summary of Changes:** The tab configuration for Ride was removed and replaced with a new entry for the Trends page, updating the icon and title accordingly.
+
+- ****
+    - **Importance:** Displays the details of a single mental tool.
+    - **Summary of Changes:** The UI was simplified by removing the Rate this tool and Target Levels sections. The text-to-speech logic was also updated to dynamically select a natural-sounding female voice.
 </code_architecture>
 
 <pending_tasks>
-- **Deep Assessment Feature:** A known, but deferred, future feature involving an 18-question assessment.
-- **Fix Deployment:** The primary, urgent task is to resolve the 403 Forbidden errors preventing a successful deployment.
+- **User-Recorded Audio:** The user expressed interest in recording their own voice for the audio guidance on tools. The technical options (cloud storage, ) were discussed, but implementation was deferred for the user to consider.
 </pending_tasks>
 
 <current_work>
-The immediate and critical task is resolving a persistent deployment failure. The deployment logs clearly show **** and **** errors. This indicates that public API endpoints, which the frontend needs to access without user authentication to display initial data, are incorrectly protected by an authentication layer.
+The most recent work cycle concluded with a series of major fixes and feature implementations, preparing the app for a stable deployment.
 
-The previous engineer correctly identified this and attempted to fix it by removing the  dependency from some endpoints in . However, the issue persists in the latest deployment, meaning the fix was either incomplete or not successfully deployed. The last action taken was investigating the  endpoint, but the logs show that other endpoints like  are also affected. The core problem remains: the app is not accessible upon deployment because essential data cannot be fetched.
+1.  **Fixing Logic Contradiction:** The primary task was resolving a confusing issue on the new Trends page where the trend analysis (e.g., confidence decreasing) contradicted the pattern detection (e.g., confidence consistently strong). This was fixed by harmonizing the logic in the  endpoint in . The pattern now defers to the trend if a clear trend is detected.
+
+2.  **UI Finalization:** Several final UI tweaks were made to the Trends page, including removing all remaining icons from section headers (, , etc.) to create a clean, icon-free design as requested.
+
+3.  **Final Health Check & Backup:** A comprehensive health check was performed. A new, final backup of the database ( and ) was created to ensure all user edits and the automated removal of numbered steps were captured. This backup contains 205 tools and is ready for the sync script to use during the next deployment. All services were restarted, and the application is now in a state ready for deployment.
 </current_work>
 
 <optional_next_step>
-Check the  file to identify all API endpoints that are still incorrectly protected by the  dependency (like ) and remove it from all public-facing GET routes.
+Run the deployment. The app has been fully updated with all requested features and fixes, and a final health check and data backup have been successfully completed.
 </optional_next_step>
