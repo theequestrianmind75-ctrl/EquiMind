@@ -348,14 +348,14 @@ metadata:
 
 test_plan:
   current_focus:
-    - "All frontend testing completed successfully"
+    - "During-Ride Smart Tool Access System"
   stuck_tasks: []
   test_all: false
-  test_priority: "sequential"
+  test_priority: "high_first"
 
 agent_communication:
     - agent: "main"
-      message: "EquiMind mobile app MVP completed. Backend has authentication, strategies API, and session management. Frontend has all screens including auth, strategies library, pre/during/post-ride screens with TTS coaching, and session history. Ready for testing."
+      message: "NEW MAJOR FEATURE IMPLEMENTED: Smart tool access limiting system for during-ride coaching. Backend endpoints created: (1) GET /api/during-ride/recommendations/{session_id} - returns smart recommendations based on pre-ride anxiety/confidence/energy, (2) POST /api/during-ride/track-tool-access/{session_id} - tracks tool usage and enforces 2-tool limit. Frontend completely redesigned with tool counter, start-of-ride suggestion, 2 context-based recommendations, and unlimited emergency tool. Session model updated to track tool access. Ready for comprehensive testing of: (1) Backend endpoints functionality, (2) Smart recommendation logic, (3) Tool limiting enforcement, (4) Frontend UI and user flow."
     - agent: "testing"
       message: "Backend testing completed successfully. All 16 tests passed (6 authentication, 4 mental strategies, 6 session management). Verified: JWT authentication with proper error handling, 144 mental strategies with filtering, full CRUD operations for sessions. Backend is production-ready. Frontend testing skipped as per system limitations (mobile app requires device/emulator)."
     - agent: "main"
