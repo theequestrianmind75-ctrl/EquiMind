@@ -465,7 +465,7 @@ export default function CategoryDetail() {
               // View Mode
               <View>
                 <Text style={styles.toolName}>{strategy.name}</Text>
-                <Text style={styles.toolDescription} numberOfLines={2}>
+                <Text style={styles.toolDescription}>
                   {strategy.instructions}
                 </Text>
               </View>
