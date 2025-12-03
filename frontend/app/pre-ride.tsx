@@ -47,6 +47,7 @@ export default function PreRide() {
         rider_name: riderName || null,
         anxiety_level: anxietyLevel,
         confidence_level: confidenceLevel,
+        rider_energy_level: riderEnergyLevel,
         notes: notes || null,
         horse_name: horseName || null,
         horse_energy_level: horseEnergyLevel,
