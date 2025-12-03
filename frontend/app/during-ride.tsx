@@ -311,36 +311,34 @@ export default function DuringRideNew() {
 
         {/* EMERGENCY Tool */}
         {recommendations.emergency && (
-          <View style={styles.section}>
-            <Text style={styles.sectionTitleEmergency}>🚨 Emergency Tool</Text>
+          <View style={styles.emergencySection}>
+            <Text style={styles.emergencyTitle}>EMERGENCY TOOL</Text>
             <Text style={styles.emergencyNote}>Available anytime - no limits</Text>
-            <View style={[styles.toolCard, styles.emergencyCard]}>
-              <Text style={styles.toolName}>{recommendations.emergency.name}</Text>
-              <Text style={styles.toolCategory}>{recommendations.emergency.category}</Text>
-              <Text style={styles.toolReason}>{recommendations.emergency.reason}</Text>
-              <TouchableOpacity
-                style={[
-                  styles.emergencyButton,
-                  currentPlayingTool === recommendations.emergency.id && styles.emergencyButtonActive
-                ]}
-                onPress={() => {
-                  if (currentPlayingTool === recommendations.emergency?.id) {
-                    stopSpeaking();
-                  } else {
-                    playTool(recommendations.emergency, true);
-                  }
-                }}
-              >
-                <Ionicons
-                  name={currentPlayingTool === recommendations.emergency.id ? 'stop-circle' : 'alert-circle'}
-                  size={28}
-                  color="#ffffff"
-                />
-                <Text style={styles.emergencyButtonText}>
-                  {currentPlayingTool === recommendations.emergency.id ? 'Stop' : 'Use Emergency Tool'}
-                </Text>
-              </TouchableOpacity>
-            </View>
+            <TouchableOpacity
+              style={styles.emergencyMainButton}
+              onPress={() => {
+                if (currentPlayingTool === recommendations.emergency?.id) {
+                  stopSpeaking();
+                } else {
+                  playTool(recommendations.emergency, true);
+                }
+              }}
+            >
+              <Text style={styles.emergencyMainButtonText}>
+                {currentPlayingTool === recommendations.emergency.id ? 'STOP' : 'EMERGENCY TOOL'}
+              </Text>
+            </TouchableOpacity>
+            {currentPlayingTool === recommendations.emergency.id && isSpeaking && (
+              <View style={styles.toolDetailsCard}>
+                <Text style={styles.toolDetailsTitle}>{recommendations.emergency.name}</Text>
+                <Text style={styles.toolDetailsCategory}>{recommendations.emergency.category}</Text>
+                <Text style={styles.toolDetailsReason}>{recommendations.emergency.reason}</Text>
+                <TouchableOpacity style={styles.stopButton} onPress={stopSpeaking}>
+                  <Ionicons name="stop-circle" size={32} color="#ffffff" />
+                  <Text style={styles.stopButtonText}>Stop Audio</Text>
+                </TouchableOpacity>
+              </View>
+            )}
           </View>
         )}
 
