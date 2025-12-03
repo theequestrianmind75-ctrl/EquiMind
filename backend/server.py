@@ -84,6 +84,7 @@ class SessionCreate(BaseModel):
     rider_name: Optional[str] = None
     anxiety_level: Optional[int] = None
     confidence_level: Optional[int] = None
+    rider_energy_level: Optional[int] = None  # 1-10 scale - NEW FIELD
     notes: Optional[str] = None
     strategies_used: Optional[List[str]] = []
     # Horse information
