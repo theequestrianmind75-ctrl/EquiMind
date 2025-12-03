@@ -267,11 +267,11 @@ frontend:
   
   - task: "During-Ride Coaching with TTS"
     implemented: true
-    working: true
-    file: "frontend/app/during-ride.tsx, frontend/app/strategy-detail/[id].tsx"
+    working: "NA"
+    file: "frontend/app/during-ride.tsx, frontend/app/strategy-detail/[id].tsx, backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
@@ -282,6 +282,9 @@ frontend:
         - working: true
           agent: "testing"
           comment: "TTS VOICE IMPLEMENTATION VERIFIED: ✅ Code review confirms dynamic voice selection using Speech.getAvailableVoicesAsync() with priority for natural female voices (Samantha, Karen, Moira, Fiona, Tessa). ✅ Natural pitch (1.0) and slower rate (0.85) configured for clarity. ✅ Audio controls functional with Play/Stop Audio Guidance buttons. ✅ Applied to both during-ride.tsx and strategy-detail/[id].tsx. Note: Actual voice quality (natural female sound) cannot be verified by automation but implementation follows best practices for natural TTS voices."
+        - working: "NA"
+          agent: "main"
+          comment: "MAJOR FEATURE: Implemented smart tool access limiting system for during-ride coaching. (1) Backend: Added new endpoints /api/during-ride/recommendations/{session_id} and /api/during-ride/track-tool-access/{session_id}. Smart recommendations based on pre-ride anxiety/confidence/energy levels. Session model updated to track tools_accessed_during_ride, regular_tools_count, emergency_tools_count. (2) Frontend: Completely redesigned during-ride.tsx page with: 2-tool limit per ride session, Start of Ride grounding tool, 2 smart recommended tools based on pre-ride state, Emergency tool (unlimited access), Tool usage counter display, Context-based recommendations (high anxiety→calming tools, low confidence→confidence tools, low energy→energizing tools). (3) Pre-ride: Added rider_energy_level field to session creation. Ready for comprehensive backend and frontend testing."
   
   - task: "Post-Ride Analysis Screen"
     implemented: true
