@@ -564,9 +564,9 @@ async def get_during_ride_recommendations(session_id: str):
     if not session:
         raise HTTPException(status_code=404, detail="Session not found")
     
-    anxiety_level = session.get("anxiety_level", 5)
-    confidence_level = session.get("confidence_level", 5)
-    rider_energy = session.get("rider_energy_level", 5)
+    anxiety_level = session.get("anxiety_level") or 5
+    confidence_level = session.get("confidence_level") or 5
+    rider_energy = session.get("rider_energy_level") or 5
     
     # Get all mental strategies
     all_strategies = await db.mental_strategies.find({}).to_list(length=1000)
