@@ -126,6 +126,10 @@ class Session(BaseModel):
     horse_focus_level: Optional[int] = None
     horse_responsiveness: Optional[int] = None
     horse_notes: Optional[str] = None
+    # During-ride tool tracking
+    tools_accessed_during_ride: List[dict] = []  # List of {tool_id, tool_name, accessed_at, is_emergency}
+    regular_tools_count: int = 0  # Count of regular (non-emergency) tools accessed
+    emergency_tools_count: int = 0  # Count of emergency tools accessed
     created_at: datetime = Field(default_factory=datetime.utcnow)
     completed_at: Optional[datetime] = None
 
