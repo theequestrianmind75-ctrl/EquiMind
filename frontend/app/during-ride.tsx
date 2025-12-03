@@ -139,83 +139,141 @@ export default function DuringRideNew() {
       const voices = await Speech.getAvailableVoicesAsync();
       console.log('🎤 Voice preference:', useFemaleVoice ? 'FEMALE' : 'MALE');
       console.log('🎵 Available voices:', voices.length);
+      console.log('📋 First 10 voices:', voices.slice(0, 10).map(v => `${v.name} (${v.language})`));
+      
       let selectedVoice;
+      let voiceLanguage = 'en-US';
       
       if (useFemaleVoice) {
-        // British female voice selection
+        // FEMALE voice selection with extensive fallbacks
+        // iOS Priority: Samantha (US), Karen (Australian), Moira (Irish)
+        // Android Priority: Any high-quality female voice
+        
+        // Try 1: US female voices
         selectedVoice = voices.find(v => 
-          v.language === 'en-GB' && 
-          (v.name.toLowerCase().includes('kate') || 
-           v.name.toLowerCase().includes('serena') ||
-           v.name.toLowerCase().includes('stephanie'))
-        ) || voices.find(v => 
-          v.language === 'en-GB' && v.quality === 'Enhanced'
-        ) || voices.find(v => 
-          v.language === 'en-GB'
-        ) || voices.find(v => 
-          v.language.startsWith('en') && 
-          v.quality === 'Enhanced'
-        );
-      } else {
-        // Male voice selection - try multiple options
-        // First try: Australian male voices
-        selectedVoice = voices.find(v => 
-          v.language === 'en-AU' && 
-          (v.name.toLowerCase().includes('gordon') || 
-           v.name.toLowerCase().includes('lee'))
+          v.language === 'en-US' && 
+          (v.name.toLowerCase().includes('samantha') || 
+           v.name.toLowerCase().includes('allison') ||
+           v.name.toLowerCase().includes('ava') ||
+           v.name.toLowerCase().includes('susan') ||
+           v.name.toLowerCase().includes('zoe'))
         );
         
-        // Second try: US male voices
+        // Try 2: British female voices
         if (!selectedVoice) {
           selectedVoice = voices.find(v => 
-            v.language === 'en-US' && 
-            (v.name.toLowerCase().includes('alex') || 
-             v.name.toLowerCase().includes('fred') ||
-             v.name.toLowerCase().includes('daniel'))
+            v.language === 'en-GB' && 
+            (v.name.toLowerCase().includes('kate') || 
+             v.name.toLowerCase().includes('serena') ||
+             v.name.toLowerCase().includes('stephanie'))
           );
+          if (selectedVoice) voiceLanguage = 'en-GB';
         }
         
-        // Third try: Any Australian voice
+        // Try 3: Australian female voices
         if (!selectedVoice) {
-          selectedVoice = voices.find(v => v.language === 'en-AU');
+          selectedVoice = voices.find(v => 
+            v.language === 'en-AU' && 
+            v.name.toLowerCase().includes('karen')
+          );
+          if (selectedVoice) voiceLanguage = 'en-AU';
         }
         
-        // Fourth try: Any enhanced English voice (not female names)
+        // Try 4: Any enhanced quality English voice (higher quality = likely female default)
         if (!selectedVoice) {
           selectedVoice = voices.find(v => 
             v.language.startsWith('en') && 
-            v.quality === 'Enhanced' &&
+            v.quality === 'Enhanced'
+          );
+          if (selectedVoice) voiceLanguage = selectedVoice.language;
+        }
+        
+        // Try 5: First English voice (system default)
+        if (!selectedVoice) {
+          selectedVoice = voices.find(v => v.language.startsWith('en'));
+          if (selectedVoice) voiceLanguage = selectedVoice.language;
+        }
+      } else {
+        // MALE voice selection with extensive fallbacks
+        // iOS Priority: Alex (US), Gordon (Australian)
+        // Android Priority: Any male-sounding voice
+        
+        // Try 1: US male voices
+        selectedVoice = voices.find(v => 
+          v.language === 'en-US' && 
+          (v.name.toLowerCase().includes('alex') || 
+           v.name.toLowerCase().includes('fred') ||
+           v.name.toLowerCase().includes('daniel') ||
+           v.name.toLowerCase().includes('tom'))
+        );
+        
+        // Try 2: Australian male voices
+        if (!selectedVoice) {
+          selectedVoice = voices.find(v => 
+            v.language === 'en-AU' && 
+            (v.name.toLowerCase().includes('gordon') || 
+             v.name.toLowerCase().includes('lee'))
+          );
+          if (selectedVoice) voiceLanguage = 'en-AU';
+        }
+        
+        // Try 3: British male voices
+        if (!selectedVoice) {
+          selectedVoice = voices.find(v => 
+            v.language === 'en-GB' && 
+            (v.name.toLowerCase().includes('daniel') || 
+             v.name.toLowerCase().includes('oliver'))
+          );
+          if (selectedVoice) voiceLanguage = 'en-GB';
+        }
+        
+        // Try 4: Any English voice that's NOT a common female name
+        if (!selectedVoice) {
+          selectedVoice = voices.find(v => 
+            v.language.startsWith('en') &&
             !v.name.toLowerCase().includes('samantha') &&
             !v.name.toLowerCase().includes('kate') &&
             !v.name.toLowerCase().includes('karen') &&
             !v.name.toLowerCase().includes('fiona') &&
-            !v.name.toLowerCase().includes('moira')
+            !v.name.toLowerCase().includes('moira') &&
+            !v.name.toLowerCase().includes('ava') &&
+            !v.name.toLowerCase().includes('allison') &&
+            !v.name.toLowerCase().includes('susan') &&
+            !v.name.toLowerCase().includes('zoe')
           );
+          if (selectedVoice) voiceLanguage = selectedVoice.language;
         }
         
-        // Final fallback: Any English voice
+        // Try 5: Last resort - any English voice
         if (!selectedVoice) {
           selectedVoice = voices.find(v => v.language.startsWith('en'));
+          if (selectedVoice) voiceLanguage = selectedVoice.language;
         }
       }
 
       console.log('✅ Selected voice:', selectedVoice?.name, '(', selectedVoice?.language, ')');
+      console.log('🔊 Voice identifier:', selectedVoice?.identifier);
       
       const voiceOptions: any = {
-        language: 'en-US',
-        pitch: useFemaleVoice ? 1.0 : 0.9,
+        language: voiceLanguage,
+        pitch: useFemaleVoice ? 1.05 : 0.95,
         rate: 0.85,
-        voice: selectedVoice?.identifier,
         onDone: () => {
           setIsSpeaking(false);
           setCurrentPlayingTool(null);
         },
-        onError: () => {
+        onError: (error) => {
+          console.error('🔴 TTS Error:', error);
           setIsSpeaking(false);
           setCurrentPlayingTool(null);
           Alert.alert('Error', 'Failed to play audio');
         },
       };
+      
+      // Only set voice identifier if we found one
+      if (selectedVoice?.identifier) {
+        voiceOptions.voice = selectedVoice.identifier;
+      }
 
       Speech.speak(audioScript, voiceOptions);
     } catch (error: any) {
