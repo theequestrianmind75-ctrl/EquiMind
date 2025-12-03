@@ -4,13 +4,13 @@ Backend Testing Suite for EquiMind During-Ride Smart Tool Access System
 Tests the new smart recommendations and tool access tracking endpoints
 """
 
-import asyncio
-import aiohttp
+import requests
 import json
 import uuid
 from datetime import datetime
 import os
 from dotenv import load_dotenv
+import time
 
 # Load environment variables
 load_dotenv('/app/frontend/.env')
