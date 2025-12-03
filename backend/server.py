@@ -254,6 +254,42 @@ async def get_me(current_user: dict = Depends(get_current_user)):
         raise HTTPException(status_code=404, detail="User not found")
     return UserResponse(id=user_dict["id"], email=user_dict["email"], name=user_dict["name"])
 
+@api_router.post("/auth/check-email")
+async def check_email(request: dict):
+    """Check if an email exists in the database"""
+    email = request.get("email")
+    if not email:
+        raise HTTPException(status_code=400, detail="Email is required")
+    
+    user = await db.users.find_one({"email": email})
+    return {"exists": user is not None}
+
+@api_router.post("/auth/reset-password")
+async def reset_password(request: dict):
+    """Reset user password - no email verification for MVP"""
+    email = request.get("email")
+    new_password = request.get("new_password")
+    
+    if not email or not new_password:
+        raise HTTPException(status_code=400, detail="Email and new password are required")
+    
+    if len(new_password) < 6:
+        raise HTTPException(status_code=400, detail="Password must be at least 6 characters")
+    
+    # Find user
+    user = await db.users.find_one({"email": email})
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    
+    # Update password
+    hashed_password = hash_password(new_password)
+    await db.users.update_one(
+        {"email": email},
+        {"$set": {"hashed_password": hashed_password}}
+    )
+    
+    return {"message": "Password reset successfully"}
+
 # ==================== MENTAL STRATEGIES ROUTES ====================
 
 @api_router.get("/mental-strategies")
