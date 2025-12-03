@@ -119,6 +119,7 @@ class Session(BaseModel):
     rider_name: Optional[str] = None
     anxiety_level: Optional[int] = None
     confidence_level: Optional[int] = None
+    rider_energy_level: Optional[int] = None  # NEW FIELD
     notes: Optional[str] = None
     strategies_used: List[str] = []
     completed: bool = False
