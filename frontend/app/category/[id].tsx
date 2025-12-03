@@ -322,6 +322,25 @@ export default function CategoryDetail() {
           </View>
         )}
         
+        {id === 'somatic' && (
+          <View style={styles.emotionalRegulationCard}>
+            <Text style={styles.emotionalRegulationTitle}>Understanding Coregulation: The Horse-Rider Connection</Text>
+            <Text style={styles.emotionalRegulationDescription}>
+              Horses are masters of coregulation—the biological process where two nervous systems influence each other. 
+              Your horse can sense your emotional state through your muscle tension, breathing patterns, heart rate, 
+              and even the chemical signals in your sweat.{'\n\n'}
+              
+              When you're anxious or tense, your horse's nervous system mirrors yours, creating a feedback loop of 
+              stress. But here's the powerful part: when you regulate your own emotions through body-based techniques, 
+              your horse's nervous system calms in response. This is coregulation in action.{'\n\n'}
+              
+              These tools help you shift your internal state through movement, posture, and somatic awareness. By 
+              changing your body, you change your emotions—and your horse follows your lead. Coregulation transforms 
+              riding from physical control to a true partnership of nervous systems working in harmony.
+            </Text>
+          </View>
+        )}
+        
         {editMode && (
           <View style={styles.editModeIndicator}>
             <Ionicons name="create" size={20} color="#ef4444" />
