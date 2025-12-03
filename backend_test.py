@@ -1,33 +1,21 @@
 #!/usr/bin/env python3
 """
-EquiMind Backend API Testing - Session Endpoints Fix Verification
-Testing the fix for "detail not found" error in session endpoints.
-
-FIX APPLIED:
-- Removed authentication (Depends(get_current_user)) from:
-  1. GET /api/sessions/{session_id} (line 503)
-  2. PATCH /api/sessions/{session_id} (line 510)
-- Also removed rider_id filter from both endpoints
+Backend Testing Suite for EquiMind During-Ride Smart Tool Access System
+Tests the new smart recommendations and tool access tracking endpoints
 """
 
-import requests
+import asyncio
+import aiohttp
 import json
-import sys
-from typing import Dict, Any
-import os
-from dotenv import load_dotenv
 import uuid
 from datetime import datetime
+import os
+from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv('/app/frontend/.env')
-
-# Get backend URL from frontend environment
-BACKEND_URL = os.getenv('EXPO_PUBLIC_BACKEND_URL', 'https://mental-rider.preview.emergentagent.com')
-API_BASE = f"{BACKEND_URL}/api"
-
-print(f"🔗 Testing backend at: {API_BASE}")
-print("🎯 FOCUS: Session endpoints fix verification")
+BASE_URL = os.getenv('EXPO_PUBLIC_BACKEND_URL', 'https://mental-rider.preview.emergentagent.com')
+API_BASE = f"{BASE_URL}/api"
 
 class TestResults:
     def __init__(self):
