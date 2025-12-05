@@ -28,6 +28,7 @@ interface Recommendations {
   during_ride: Tool[];
   emergency: Tool | null;
   remaining_regular_tools: number;
+  remaining_breathing_tools: number;
   tools_accessed: any[];
 }
 
