@@ -285,7 +285,7 @@ export default function CategoryDetail() {
               </View>
               <View style={styles.legendItem}>
                 <View style={[styles.legendDot, { backgroundColor: '#60a5fa' }]} />
-                <Text style={styles.legendText}>Thinking Mind (also called Reasonable Mind): Logic-driven decisions</Text>
+                <Text style={styles.legendText}>Reasonable Mind (also called Thinking Mind): Logic-driven decisions</Text>
               </View>
               <View style={styles.legendItem}>
                 <View style={[styles.legendDot, { backgroundColor: '#a78bfa' }]} />
