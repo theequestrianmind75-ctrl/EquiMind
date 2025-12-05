@@ -837,7 +837,7 @@ const styles = StyleSheet.create({
   toolsToggleText: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#000000',
+    color: '#ffffff',
     textAlign: 'center',
   },
   crisisToolsToggleButton: {
