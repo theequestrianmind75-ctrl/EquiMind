@@ -80,6 +80,7 @@ export default function DuringRideNew() {
               reason: 'Available anytime for immediate support - no session required'
             },
             remaining_regular_tools: 0,
+            remaining_breathing_tools: 0,
             tools_accessed: []
           });
         }
