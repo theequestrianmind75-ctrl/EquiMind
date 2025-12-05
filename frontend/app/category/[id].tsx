@@ -825,7 +825,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   toolsToggleButton: {
-    backgroundColor: '#ffffff',
+    backgroundColor: '#375B50',
     padding: 20,
     borderRadius: 12,
     marginBottom: 20,
@@ -837,7 +837,7 @@ const styles = StyleSheet.create({
   toolsToggleText: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#ef4444',
+    color: '#000000',
     textAlign: 'center',
   },
   crisisToolsToggleButton: {
