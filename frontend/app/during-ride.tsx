@@ -769,17 +769,19 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   emergencyMainButton: {
-    backgroundColor: '#375B50',
+    backgroundColor: '#ffffff',
     paddingVertical: 24,
     paddingHorizontal: 40,
     borderRadius: 12,
     alignItems: 'center',
     minWidth: '80%',
+    borderWidth: 3,
+    borderColor: '#dc2626',
   },
   emergencyMainButtonText: {
     fontSize: 22,
     fontWeight: 'bold',
-    color: '#ffffff',
+    color: '#dc2626',
   },
   sectionTitle: {
     fontSize: 18,
