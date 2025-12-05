@@ -390,8 +390,8 @@ export default function DuringRideNew() {
           <View style={styles.rulesCard}>
             <Text style={styles.rulesTitle}>Voice-Activated Coaching Rules</Text>
             <Text style={styles.rulesDescription}>
-              • Use <Text style={styles.bold}>Start of Ride</Text> tool when beginning your session to set intentions and ground yourself{'\n\n'}
-              • Access <Text style={styles.bold}>During Your Ride</Text> tools when you need real-time support{'\n\n'}
+              • Use <Text style={styles.bold}>Start of Ride</Text> tool when beginning your session to set intentions and ground yourself <Text style={styles.bold}>before you get on your horse</Text>{'\n\n'}
+              • Access <Text style={styles.bold}>During Your Ride</Text> tools when you need real-time support: <Text style={styles.bold}>give your phone to your coach</Text> OR <Text style={styles.bold}>stop your horse in the middle of the ring and click on the "During Your Ride" button</Text> to listen to the tool{'\n\n'}
               • Maximum <Text style={styles.bold}>2 regular tools per ride session</Text> to maintain focus and safety{'\n\n'}
               • Emergency tool is always available with no limits
             </Text>
