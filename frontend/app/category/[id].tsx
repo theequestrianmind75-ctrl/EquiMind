@@ -280,12 +280,12 @@ export default function CategoryDetail() {
             />
             <View style={styles.wiseMindLegend}>
               <View style={styles.legendItem}>
-                <View style={[styles.legendDot, { backgroundColor: '#ef4444' }]} />
+                <View style={[styles.legendDot, { backgroundColor: '#1e3a8a' }]} />
                 <Text style={styles.legendText}>Emotional Mind: Feelings-driven decisions</Text>
               </View>
               <View style={styles.legendItem}>
                 <View style={[styles.legendDot, { backgroundColor: '#3b82f6' }]} />
-                <Text style={styles.legendText}>Thinking Mind: Logic-driven decisions</Text>
+                <Text style={styles.legendText}>Thinking Mind (also called Reasonable Mind): Logic-driven decisions</Text>
               </View>
               <View style={styles.legendItem}>
                 <View style={[styles.legendDot, { backgroundColor: '#10b981' }]} />
