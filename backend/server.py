@@ -723,7 +723,9 @@ async def track_tool_access(session_id: str, tool_id: str, tool_name: str, tool_
     emergency_count = session.get("emergency_tools_count", 0)
     
     # Determine if this is a breathing exercise
-    is_breathing = "breathing" in tool_category.lower() or "hrv" in tool_category.lower()
+    is_breathing = ("breathing" in tool_category.lower() or 
+                   "hrv" in tool_category.lower() or 
+                   "body reset" in tool_category.lower())
     
     # Check limits
     if not is_emergency:
