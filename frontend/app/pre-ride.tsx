@@ -355,7 +355,6 @@ export default function PreRide() {
             onPress={handleStartSession}
             disabled={loading}
           >
-            <Ionicons name="checkmark-circle" size={24} color="#ffffff" />
             <Text style={styles.startButtonText}>
               {loading ? 'Creating Session...' : 'Start Pre-Ride Session'}
             </Text>
