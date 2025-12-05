@@ -665,11 +665,15 @@ const styles = StyleSheet.create({
   voiceButtonTextActive: {
     color: '#ffffff',
   },
+  toolsRemainingContainer: {
+    marginBottom: 24,
+    alignItems: 'center',
+  },
   toolsRemaining: {
     fontSize: 14,
     color: '#1e293b',
     textAlign: 'center',
-    marginBottom: 24,
+    marginBottom: 4,
     fontWeight: '600',
   },
   mainButton: {
