@@ -427,9 +427,14 @@ export default function DuringRideNew() {
 
         {/* Tools Remaining Indicator - Only show with active session */}
         {currentSession && (
-          <Text style={styles.toolsRemaining}>
-            Regular Tools Remaining: {recommendations.remaining_regular_tools}/2
-          </Text>
+          <View style={styles.toolsRemainingContainer}>
+            <Text style={styles.toolsRemaining}>
+              Regular Tools Remaining: {recommendations.remaining_regular_tools}/2
+            </Text>
+            <Text style={styles.toolsRemaining}>
+              Breathing Tools Remaining: {recommendations.remaining_breathing_tools}/3
+            </Text>
+          </View>
         )}
 
         {/* START OF RIDE Button & Tool */}
