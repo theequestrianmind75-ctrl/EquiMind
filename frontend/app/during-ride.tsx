@@ -757,7 +757,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   emergencyMainButton: {
-    backgroundColor: '#dc2626',
+    backgroundColor: '#375B50',
     paddingVertical: 24,
     paddingHorizontal: 40,
     borderRadius: 12,
