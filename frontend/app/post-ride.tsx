@@ -797,7 +797,7 @@ const styles = StyleSheet.create({
   },
   completeButton: {
     flexDirection: 'row',
-    backgroundColor: '#000000',
+    backgroundColor: '#375B50',
     borderRadius: 12,
     padding: 16,
     alignItems: 'center',
@@ -812,7 +812,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
     color: '#ffffff',
-    marginLeft: 8,
   },
   recommendationsCard: {
     backgroundColor: '#fffbeb',
