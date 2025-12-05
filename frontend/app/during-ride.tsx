@@ -708,7 +708,7 @@ const styles = StyleSheet.create({
   },
   stopButton: {
     flexDirection: 'row',
-    backgroundColor: '#ef4444',
+    backgroundColor: '#375B50',
     padding: 16,
     borderRadius: 12,
     alignItems: 'center',
