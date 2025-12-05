@@ -120,13 +120,14 @@ export default function DuringRideNew() {
     try {
       if (currentSession) {
         const response = await api.post(
-          `/during-ride/track-tool-access/${currentSession.id}?tool_id=${tool.id}&tool_name=${encodeURIComponent(tool.name)}&is_emergency=${isEmergency}`
+          `/during-ride/track-tool-access/${currentSession.id}?tool_id=${tool.id}&tool_name=${encodeURIComponent(tool.name)}&tool_category=${encodeURIComponent(tool.category)}&is_emergency=${isEmergency}`
         );
         
-        // Update remaining count
+        // Update remaining counts
         setRecommendations(prev => prev ? {
           ...prev,
-          remaining_regular_tools: response.data.regular_tools_remaining
+          remaining_regular_tools: response.data.regular_tools_remaining,
+          remaining_breathing_tools: response.data.breathing_tools_remaining
         } : null);
       }
 
