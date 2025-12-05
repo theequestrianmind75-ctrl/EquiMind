@@ -615,6 +615,7 @@ async def get_during_ride_recommendations(session_id: str):
         "during_ride": [],
         "emergency": None,
         "remaining_regular_tools": 2 - session.get("regular_tools_count", 0),
+        "remaining_breathing_tools": 3 - session.get("breathing_tools_count", 0),
         "tools_accessed": session.get("tools_accessed_during_ride", [])
     }
     
