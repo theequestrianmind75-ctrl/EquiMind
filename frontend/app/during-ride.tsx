@@ -433,7 +433,7 @@ export default function DuringRideNew() {
               Regular Tools Remaining: {recommendations.remaining_regular_tools}/2
             </Text>
             <Text style={styles.toolsRemaining}>
-              Breathing Tools Remaining: {recommendations.remaining_breathing_tools}/3
+              Breathing Tools Remaining: {recommendations.remaining_breathing_tools}/4
             </Text>
           </View>
         )}
