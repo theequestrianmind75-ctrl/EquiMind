@@ -549,7 +549,6 @@ export default function PostRide() {
                 onPress={handleComplete}
                 disabled={saving}
               >
-                <Ionicons name="star" size={24} color="#ffffff" />
                 <Text style={styles.completeButtonText}>
                   {saving ? 'Saving...' : 'Complete & Save Session'}
                 </Text>
