@@ -704,10 +704,13 @@ async def get_during_ride_recommendations(session_id: str):
     return recommendations
 
 @api_router.post("/during-ride/track-tool-access/{session_id}")
-async def track_tool_access(session_id: str, tool_id: str, tool_name: str, is_emergency: bool = False):
+async def track_tool_access(session_id: str, tool_id: str, tool_name: str, tool_category: str = "", is_emergency: bool = False):
     """
     Track when a tool is accessed during a ride
-    Enforces 2-tool limit for regular tools, unlimited for emergency tools
+    Enforces:
+    - 2-tool limit for regular (non-breathing) tools
+    - 4-tool limit for breathing exercises
+    - Unlimited for emergency tools
     """
     # Get the current session
     session = await db.sessions.find_one({"id": session_id})
@@ -715,21 +718,32 @@ async def track_tool_access(session_id: str, tool_id: str, tool_name: str, is_em
         raise HTTPException(status_code=404, detail="Session not found")
     
     regular_count = session.get("regular_tools_count", 0)
+    breathing_count = session.get("breathing_tools_count", 0)
     emergency_count = session.get("emergency_tools_count", 0)
     
-    # Check limit for regular tools
-    if not is_emergency and regular_count >= 2:
-        raise HTTPException(
-            status_code=400, 
-            detail="Tool limit reached. You can access up to 2 regular tools per ride session. Use the emergency tool if needed."
-        )
+    # Determine if this is a breathing exercise
+    is_breathing = "breathing" in tool_category.lower() or "hrv" in tool_category.lower()
+    
+    # Check limits
+    if not is_emergency:
+        if is_breathing and breathing_count >= 4:
+            raise HTTPException(
+                status_code=400, 
+                detail="Breathing exercise limit reached. You can access up to 4 breathing exercises per ride session."
+            )
+        elif not is_breathing and regular_count >= 2:
+            raise HTTPException(
+                status_code=400, 
+                detail="Tool limit reached. You can access up to 2 regular tools per ride session. Breathing exercises have a separate limit of 4."
+            )
     
     # Create tool access record
     tool_access = {
         "tool_id": tool_id,
         "tool_name": tool_name,
         "accessed_at": datetime.utcnow().isoformat(),
-        "is_emergency": is_emergency
+        "is_emergency": is_emergency,
+        "is_breathing": is_breathing
     }
     
     # Update session
@@ -739,6 +753,8 @@ async def track_tool_access(session_id: str, tool_id: str, tool_name: str, is_em
     
     if is_emergency:
         update_data["$inc"] = {"emergency_tools_count": 1}
+    elif is_breathing:
+        update_data["$inc"] = {"breathing_tools_count": 1}
     else:
         update_data["$inc"] = {"regular_tools_count": 1}
     
@@ -749,7 +765,9 @@ async def track_tool_access(session_id: str, tool_id: str, tool_name: str, is_em
         "success": True,
         "tool_accessed": tool_name,
         "is_emergency": is_emergency,
-        "regular_tools_remaining": 2 - (regular_count + (0 if is_emergency else 1)),
+        "is_breathing": is_breathing,
+        "regular_tools_remaining": 2 - (regular_count + (0 if (is_emergency or is_breathing) else 1)),
+        "breathing_tools_remaining": 4 - (breathing_count + (1 if (is_breathing and not is_emergency) else 0)),
         "total_emergency_accesses": emergency_count + (1 if is_emergency else 0)
     }
 
