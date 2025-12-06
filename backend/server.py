@@ -411,16 +411,14 @@ async def bulk_update_strategies(
     updates: List[dict],
     current_user: dict = Depends(get_current_user)
 ):
-    """Bulk update multiple strategies - admin function"""
-    updated_count = 0
+    """Bulk update multiple strategies - admin function using bulk_write for performance"""
+    from pymongo import UpdateOne
+    
+    bulk_operations = []
     
     for update in updates:
         strategy_id = update.get("id")
         if not strategy_id:
-            continue
-            
-        strategy = await db.mental_strategies.find_one({"id": strategy_id})
-        if not strategy:
             continue
         
         # Build update dict
@@ -435,11 +433,16 @@ async def bulk_update_strategies(
             update_dict["duration_minutes"] = update["duration_minutes"]
         
         if update_dict:
-            await db.mental_strategies.update_one(
-                {"id": strategy_id},
-                {"$set": update_dict}
+            bulk_operations.append(
+                UpdateOne({"id": strategy_id}, {"$set": update_dict}, upsert=False)
             )
-            updated_count += 1
+    
+    # Execute all updates in a single database call
+    if bulk_operations:
+        result = await db.mental_strategies.bulk_write(bulk_operations, ordered=False)
+        updated_count = result.modified_count
+    else:
+        updated_count = 0
     
     return {"updated": updated_count, "total": len(updates)}
 
