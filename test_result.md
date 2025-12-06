@@ -271,7 +271,7 @@ frontend:
     file: "frontend/app/during-ride.tsx, frontend/app/strategy-detail/[id].tsx, backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
