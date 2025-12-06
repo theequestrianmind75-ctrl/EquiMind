@@ -1021,6 +1021,27 @@ async def root():
         "message": "Welcome to EquiMind API. Visit /docs for API documentation."
     }
 
+# Kubernetes health check endpoints
+@app.get("/health")
+async def health_check():
+    """Health check endpoint for Kubernetes liveness probe"""
+    return {"status": "healthy", "service": "equimind-api"}
+
+@app.get("/healthz")
+async def healthz():
+    """Alternative health check endpoint (K8s convention)"""
+    return {"status": "ok"}
+
+@app.get("/ready")
+async def readiness_check():
+    """Readiness check - verifies database connectivity"""
+    try:
+        # Quick ping to verify database is accessible
+        await db.command("ping")
+        return {"status": "ready", "database": "connected"}
+    except Exception as e:
+        raise HTTPException(status_code=503, detail=f"Database not ready: {str(e)}")
+
 # Include the router in the main app
 app.include_router(api_router)
 
