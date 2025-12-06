@@ -306,7 +306,13 @@ async def get_mental_strategies(
     if category:
         query["category"] = {"$regex": category, "$options": "i"}
     
-    strategies = await db.mental_strategies.find(query).to_list(1000)
+    # Define projection to fetch only required fields for better performance
+    projection = {
+        "_id": 1, "id": 1, "name": 1, "category": 1, 
+        "instructions": 1, "anxiety_level": 1, "confidence_level": 1,
+        "duration_minutes": 1, "is_crisis_tool": 1, "effectiveness_rating": 1
+    }
+    strategies = await db.mental_strategies.find(query, projection).limit(500).to_list(500)
     
     # Remove MongoDB _id and ensure id field exists
     for strategy in strategies:
