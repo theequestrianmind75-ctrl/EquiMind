@@ -658,8 +658,18 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     color: '#1e293b',
+    marginBottom: 8,
+    textAlign: 'center',
+  },
+  voiceSelectionSubtitle: {
+    fontSize: 13,
+    color: '#64748b',
     marginBottom: 12,
     textAlign: 'center',
+  },
+  voiceSelectionHighlight: {
+    fontWeight: 'bold',
+    color: '#375B50',
   },
   voiceButtons: {
     flexDirection: 'row',
