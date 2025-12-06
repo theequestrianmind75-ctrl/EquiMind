@@ -424,6 +424,9 @@ export default function DuringRideNew() {
         {/* Voice Selection */}
         <View style={styles.voiceSelectionCard}>
           <Text style={styles.voiceSelectionTitle}>Voice Preference</Text>
+          <Text style={styles.voiceSelectionSubtitle}>
+            Next tool will play with: <Text style={styles.voiceSelectionHighlight}>{useFemaleVoice ? 'Female' : 'Male'} Voice</Text>
+          </Text>
           <View style={styles.voiceButtons}>
             <TouchableOpacity
               style={[styles.voiceButton, useFemaleVoice && styles.voiceButtonActive]}
