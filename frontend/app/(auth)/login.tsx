@@ -56,7 +56,7 @@ export default function Login() {
               source={require('../../assets/images/horse-head-logo.png')}
               style={[styles.heroLogo, { tintColor: '#000000' }]}
             />
-            <Text style={styles.title}>The Equestrian Mind</Text>
+            <Text style={styles.title}>EquiMind</Text>
             <Text style={styles.subtitle}>Mental Performance Training</Text>
           </View>
 
