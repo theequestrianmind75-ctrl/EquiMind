@@ -483,19 +483,15 @@ async def admin_bulk_update_strategies(
     updates = request.get("updates", [])
     logger.info(f"📝 Bulk update request: {len(updates)} tools to update")
     
-    updated_count = 0
+    from pymongo import UpdateOne
+    
+    bulk_operations = []
     skipped_count = 0
     
     for update in updates:
         strategy_id = update.get("id")
         if not strategy_id:
             logger.warning(f"⚠️  Skipping update - no ID provided")
-            skipped_count += 1
-            continue
-            
-        strategy = await db.mental_strategies.find_one({"id": strategy_id})
-        if not strategy:
-            logger.warning(f"⚠️  Strategy not found: {strategy_id}")
             skipped_count += 1
             continue
         
@@ -511,14 +507,19 @@ async def admin_bulk_update_strategies(
             update_dict["duration_minutes"] = update["duration_minutes"]
         
         if update_dict:
-            await db.mental_strategies.update_one(
-                {"id": strategy_id},
-                {"$set": update_dict}
+            bulk_operations.append(
+                UpdateOne({"id": strategy_id}, {"$set": update_dict}, upsert=False)
             )
-            updated_count += 1
         else:
-            logger.warning(f"⚠️  No valid fields to update for tool: {strategy.get('name')}")
+            logger.warning(f"⚠️  No valid fields to update for tool ID: {strategy_id}")
             skipped_count += 1
+    
+    # Execute all updates in a single database call for better performance
+    if bulk_operations:
+        result = await db.mental_strategies.bulk_write(bulk_operations, ordered=False)
+        updated_count = result.modified_count
+    else:
+        updated_count = 0
     
     logger.info(f"✅ Bulk update complete: {updated_count} updated, {skipped_count} skipped")
     return {"updated": updated_count, "total": len(updates), "skipped": skipped_count}
