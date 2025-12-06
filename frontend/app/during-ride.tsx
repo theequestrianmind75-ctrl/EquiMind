@@ -318,9 +318,10 @@ export default function DuringRideNew() {
         }
       }
 
-      console.log('✅ Selected voice:', selectedVoice?.name, '(', selectedVoice?.language, ')');
+      console.log('✅ FINAL SELECTED VOICE:', selectedVoice?.name, '(', selectedVoice?.language, ')');
       console.log('🔊 Voice quality:', selectedVoice?.quality);
       console.log('🔊 Voice identifier:', selectedVoice?.identifier);
+      console.log('🎤 ============ VOICE SELECTION END ============');
       
       // Optimized parameters for iPhone voices
       // Alex (male) and Samantha (female) are iOS premium voices with best quality
