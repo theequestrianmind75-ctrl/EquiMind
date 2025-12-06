@@ -45,6 +45,23 @@ export default function DuringRideNew() {
     fetchCurrentSessionAndRecommendations();
   }, []);
 
+  // Stop any playing speech when voice preference changes
+  useEffect(() => {
+    if (isSpeaking) {
+      console.log('🔄 Voice preference changed! Stopping current audio to apply new voice.');
+      Speech.stop();
+      setIsSpeaking(false);
+      setCurrentPlayingTool(null);
+      
+      // Show alert to user
+      Alert.alert(
+        'Voice Changed',
+        `Voice preference updated to ${useFemaleVoice ? 'Female' : 'Male'}. Play a tool to hear the new voice.`,
+        [{ text: 'OK' }]
+      );
+    }
+  }, [useFemaleVoice]);
+
   const fetchCurrentSessionAndRecommendations = async () => {
     try {
       // Get current active session (not completed)
