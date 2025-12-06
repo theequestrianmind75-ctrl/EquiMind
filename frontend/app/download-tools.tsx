@@ -6,8 +6,8 @@ import { Ionicons } from '@expo/vector-icons';
 export default function DownloadTools() {
   const handleDownload = (format: string) => {
     const url = format === 'json' 
-      ? 'https://equimind-ride.preview.emergentagent.com/tools_backup_working.json'
-      : 'https://equimind-ride.preview.emergentagent.com/tools_export.csv';
+      ? 'https://equi-coach-1.preview.emergentagent.com/tools_backup_working.json'
+      : 'https://equi-coach-1.preview.emergentagent.com/tools_export.csv';
     
     Linking.openURL(url);
   };
@@ -57,10 +57,10 @@ export default function DownloadTools() {
         <View style={styles.directLinks}>
           <Text style={styles.directLinksTitle}>Direct Links:</Text>
           <Text style={styles.linkText} selectable>
-            JSON: https://equimind-ride.preview.emergentagent.com/tools_backup_working.json
+            JSON: https://equi-coach-1.preview.emergentagent.com/tools_backup_working.json
           </Text>
           <Text style={styles.linkText} selectable>
-            CSV: https://equimind-ride.preview.emergentagent.com/tools_export.csv
+            CSV: https://equi-coach-1.preview.emergentagent.com/tools_export.csv
           </Text>
         </View>
       </View>
