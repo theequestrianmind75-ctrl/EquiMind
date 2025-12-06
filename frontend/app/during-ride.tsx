@@ -157,8 +157,10 @@ export default function DuringRideNew() {
 
       // Get voice based on user selection
       const voices = await Speech.getAvailableVoicesAsync();
-      console.log('🎤 Voice preference:', useFemaleVoice ? 'FEMALE' : 'MALE');
-      console.log('🎵 Available voices:', voices.length);
+      console.log('🎤 ============ VOICE SELECTION START ============');
+      console.log('🎤 Current voice preference:', useFemaleVoice ? 'FEMALE' : 'MALE');
+      console.log('🎤 Playing tool:', tool.name);
+      console.log('🎵 Total available voices:', voices.length);
       console.log('📋 First 10 voices:', voices.slice(0, 10).map(v => `${v.name} (${v.language})`));
       
       let selectedVoice;
