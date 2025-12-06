@@ -999,11 +999,12 @@ async def delete_recommendation(rec_id: str):
 @app.get("/export/tools")
 async def export_tools():
     """Download all rider tools as CSV file - public endpoint"""
-    file_path = "/app/rider_tools_export.csv"
-    if not os.path.exists(file_path):
+    # Use Path for cross-environment compatibility
+    file_path = Path(__file__).parent.parent / "rider_tools_export.csv"
+    if not file_path.exists():
         raise HTTPException(status_code=404, detail="Export file not found")
     return FileResponse(
-        path=file_path,
+        path=str(file_path),
         filename="equimind_rider_tools.csv",
         media_type="text/csv",
         headers={"Content-Disposition": "attachment; filename=equimind_rider_tools.csv"}
