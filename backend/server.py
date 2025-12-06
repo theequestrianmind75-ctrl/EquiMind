@@ -1004,6 +1004,133 @@ async def delete_recommendation(rec_id: str):
         raise HTTPException(status_code=404, detail="Recommendation not found")
     return {"message": "Recommendation deleted successfully"}
 
+# ==================== ADMIN DASHBOARD ROUTES ====================
+
+@api_router.post("/admin/users")
+async def get_all_users(auth: AdminAuth):
+    """Get all users for admin dashboard - password protected"""
+    if auth.password != ADMIN_PASSWORD:
+        raise HTTPException(status_code=401, detail="Invalid admin password")
+    
+    users = await db.users.find({}, {"hashed_password": 0}).to_list(1000)
+    
+    # Convert _id to string and remove it
+    for user in users:
+        if '_id' in user:
+            del user['_id']
+    
+    return users
+
+@api_router.post("/admin/sessions/all")
+async def get_all_sessions(auth: AdminAuth):
+    """Get all sessions for admin dashboard - password protected"""
+    if auth.password != ADMIN_PASSWORD:
+        raise HTTPException(status_code=401, detail="Invalid admin password")
+    
+    sessions = await db.sessions.find({}).to_list(5000)
+    
+    # Convert _id to string and remove it
+    for session in sessions:
+        if '_id' in session:
+            del session['_id']
+    
+    return sessions
+
+@api_router.post("/admin/analytics")
+async def get_admin_analytics(auth: AdminAuth):
+    """Get analytics for admin dashboard - password protected"""
+    if auth.password != ADMIN_PASSWORD:
+        raise HTTPException(status_code=401, detail="Invalid admin password")
+    
+    # Get counts
+    total_users = await db.users.count_documents({})
+    total_tools = await db.mental_strategies.count_documents({})
+    total_sessions = await db.sessions.count_documents({})
+    
+    # Get recent sessions (last 30 days)
+    from datetime import datetime, timedelta
+    thirty_days_ago = datetime.utcnow() - timedelta(days=30)
+    recent_sessions = await db.sessions.count_documents({"created_at": {"$gte": thirty_days_ago}})
+    
+    # Get most used tools
+    pipeline = [
+        {"$unwind": "$tools_accessed"},
+        {"$group": {"_id": "$tools_accessed.tool_name", "count": {"$sum": 1}}},
+        {"$sort": {"count": -1}},
+        {"$limit": 10}
+    ]
+    most_used_tools = await db.sessions.aggregate(pipeline).to_list(10)
+    
+    # Get category distribution
+    category_pipeline = [
+        {"$group": {"_id": "$category", "count": {"$sum": 1}}},
+        {"$sort": {"count": -1}}
+    ]
+    category_distribution = await db.mental_strategies.aggregate(category_pipeline).to_list(10)
+    
+    return {
+        "total_users": total_users,
+        "total_tools": total_tools,
+        "total_sessions": total_sessions,
+        "recent_sessions_30d": recent_sessions,
+        "most_used_tools": most_used_tools,
+        "category_distribution": category_distribution
+    }
+
+@api_router.post("/admin/tools/delete")
+async def admin_delete_tool(request: dict):
+    """Delete a tool - password protected"""
+    password = request.get("password")
+    if password != ADMIN_PASSWORD:
+        raise HTTPException(status_code=401, detail="Invalid admin password")
+    
+    tool_id = request.get("tool_id")
+    if not tool_id:
+        raise HTTPException(status_code=400, detail="Tool ID is required")
+    
+    result = await db.mental_strategies.delete_one({"id": tool_id})
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Tool not found")
+    
+    return {"message": "Tool deleted successfully", "tool_id": tool_id}
+
+@api_router.post("/admin/tools/create")
+async def admin_create_tool(request: dict):
+    """Create a new tool - password protected"""
+    password = request.get("password")
+    if password != ADMIN_PASSWORD:
+        raise HTTPException(status_code=401, detail="Invalid admin password")
+    
+    tool_data = request.get("tool")
+    if not tool_data:
+        raise HTTPException(status_code=400, detail="Tool data is required")
+    
+    # Generate new ID if not provided
+    if "id" not in tool_data or not tool_data["id"]:
+        tool_data["id"] = str(uuid.uuid4())
+    
+    # Insert the tool
+    await db.mental_strategies.insert_one(tool_data)
+    
+    return {"message": "Tool created successfully", "tool_id": tool_data["id"]}
+
+@api_router.post("/admin/user/delete")
+async def admin_delete_user(request: dict):
+    """Delete a user - password protected"""
+    password = request.get("password")
+    if password != ADMIN_PASSWORD:
+        raise HTTPException(status_code=401, detail="Invalid admin password")
+    
+    user_id = request.get("user_id")
+    if not user_id:
+        raise HTTPException(status_code=400, detail="User ID is required")
+    
+    result = await db.users.delete_one({"id": user_id})
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="User not found")
+    
+    return {"message": "User deleted successfully", "user_id": user_id}
+
 # ==================== EXPORT ROUTE ====================
 
 @app.get("/export/tools")
