@@ -232,13 +232,7 @@ export default function CategoryDetail() {
           <Ionicons name="arrow-back" size={24} color="#f1f5f9" />
         </TouchableOpacity>
         <Text style={styles.title}>{category.title}</Text>
-        <TouchableOpacity onPress={handleEditModeToggle} style={styles.editButton}>
-          <Ionicons 
-            name={editMode ? 'close-circle' : 'create'} 
-            size={24} 
-            color={editMode ? '#ef4444' : '#375B50'} 
-          />
-        </TouchableOpacity>
+        <View style={styles.placeholder} />
       </View>
 
       <ScrollView style={styles.scrollView}>
