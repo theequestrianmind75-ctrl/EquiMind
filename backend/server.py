@@ -1056,22 +1056,29 @@ app.add_middleware(
 @app.on_event("startup")
 async def startup_db_init():
     """Initialize database on startup - sync tools from backup"""
-    try:
-        # First, check if database needs initial setup (< 50 tools)
-        from init_production_db import init_production_database
-        logger.info("🚀 Starting database initialization check...")
-        await init_production_database()
-        
-        # Then, always sync tools from backup to pick up any edits
-        from sync_tools_to_production import sync_tools_to_production
-        logger.info("🔄 Syncing tool edits from backup...")
-        await sync_tools_to_production()
-        
-        logger.info("✅ Database initialization and sync complete")
-    except Exception as e:
-        logger.error(f"⚠️  Database initialization failed: {e}")
-        # Don't crash the app, just log the error
-        pass
+    import asyncio
+    
+    async def background_init():
+        """Run database initialization in background to not block startup"""
+        try:
+            # First, check if database needs initial setup (< 50 tools)
+            from init_production_db import init_production_database
+            logger.info("🚀 Starting database initialization check...")
+            await init_production_database()
+            
+            # Then, always sync tools from backup to pick up any edits
+            from sync_tools_to_production import sync_tools_to_production
+            logger.info("🔄 Syncing tool edits from backup...")
+            await sync_tools_to_production()
+            
+            logger.info("✅ Database initialization and sync complete")
+        except Exception as e:
+            logger.error(f"⚠️  Database initialization failed: {e}")
+            # Don't crash the app, just log the error
+    
+    # Run database initialization in background (non-blocking)
+    # This allows health checks to pass while DB initialization completes
+    asyncio.create_task(background_init())
 
 @app.on_event("shutdown")
 async def shutdown_db_client():
