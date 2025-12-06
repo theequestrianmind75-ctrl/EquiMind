@@ -62,7 +62,7 @@ export default function Signup() {
               source={require('../../assets/images/horse-head-logo.png')}
               style={[styles.heroLogo, { tintColor: '#000000' }]}
             />
-            <Text style={styles.title}>Join The Equestrian Mind</Text>
+            <Text style={styles.title}>Join EquiMind</Text>
             <Text style={styles.subtitle}>Mental Performance Training</Text>
           </View>
 
