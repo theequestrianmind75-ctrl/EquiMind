@@ -1,72 +1,77 @@
 <analysis>
-The trajectory documents a comprehensive development cycle for the EquiMind app, transitioning from bug-fixing to significant feature development and iterative UI refinement. The work began by resolving critical 403 Forbidden deployment errors, which were traced to incorrect authentication middleware on public API endpoints in .
+The trajectory documents an extensive and highly iterative development process for the EquiMind mobile app. The work transitioned from a major feature implementation (a during-ride smart tool system) to a series of rapid, user-driven UI/UX refinements, critical bug fixes, and system improvements.
 
-A major recurring challenge was data synchronization between the development environment and production deployments. Edits made by the user were repeatedly lost upon redeployment. This was initially due to an aggressive database initialization script and was ultimately solved by implementing a robust  script that runs on startup, ensuring the production database is always in sync with the latest backup file. This represents a critical architectural shift.
+Initially, a complete during-ride feature was built, including backend logic in  to track tool usage (with a special limit for breathing exercises) and provide smart recommendations, alongside a full frontend redesign of the  page.
 
-Based on user requests, a new Trends page was created from scratch, replacing a redundant Ride page. This involved building a new backend endpoint () and a corresponding frontend component (), followed by multiple rounds of stylistic adjustments. Other work included adding 15 new Mindfulness tools, automatically cleaning numbered lists from tool instructions via a script, and making several UI improvements like changing the TTS voice and simplifying page layouts. The user's primary language is English, and all future communications should be in English.
+Subsequently, a significant portion of the effort was dedicated to refining the UI based on precise user feedback. This involved redesigning category pages () to include collapsible tool lists, educational summary boxes, and consistent branding (hunter green buttons).
+
+Several critical bugs were addressed, including a backend server crash due to a null value, voice selection failures on mobile devices versus web preview (a key technical challenge solved by implementing platform-specific voice identifiers and quality filters in ), and a major authentication gap where a Forgot Password feature was built from scratch (frontend page and backend endpoints).
+
+The most recent interaction involved the user exploring a paid, external TTS service. After a thorough analysis of the integration complexity and cost, the user decided to stick with the existing  library and focus on fixing a persistent voice-switching bug. The current work is focused on resolving this final issue.
+
+The user's primary language is English, and all future communications should be in English.
 </analysis>
 
 <product_requirements>
-EquiMind is a mental performance mobile app for equestrians. It offers a library of mental strategies (Rider Tools) and personalized recommendations based on user-inputted emotional states before and after a ride.
+EquiMind is a mental performance mobile app for equestrians. Recent development has focused on enhancing the in-app experience and fixing critical usability issues.
 
-The recent development cycle focused on several key areas:
-1.  **Deployment Stability:** The primary goal was to fix recurring deployment failures caused by authentication and data synchronization issues, making the app stable and editable.
-2.  **Content Expansion & Management:** The user added 15 new mindfulness tools, bringing the total to 205. A major requirement was ensuring that edits made to these tools in the admin editor would persist through deployments, which was achieved by creating a new data sync workflow. Numbered lists were also programmatically removed from tool instructions to improve formatting.
-3.  **New Feature - Trend Analysis:** A Trends page was created to replace the old Ride tab. This page provides riders with long-term insights by tracking anxiety, confidence, and energy levels over the last 5 sessions, detecting patterns, and highlighting their best session.
-4.  **UI/UX Refinements:** Numerous user-requested UI tweaks were implemented, including changing the TTS voice to a more natural female one, simplifying the strategy detail page, changing the auth screen logo color to black, and cleaning up icons and layouts on the new Trends page.
+A key feature, the During Ride page, was created to provide voice-activated coaching. It implements a system that limits riders to two tools per session for safety, with an increased limit of four for Breathing/HRV exercises. The page provides smart suggestions based on the user's pre-ride emotional state and includes an Emergency Tool that is always accessible, even without an active ride session.
+
+Extensive UI/UX improvements were made across the Rider Tools category pages. This included renaming categories, adding custom educational summaries (e.g., for Emotional Regulation and Distress Tolerance), and implementing collapsible TOOLS and CRISIS TOOLS sections to prevent information overload. A consistent brand identity was established by making all interactive buttons a uniform hunter green.
+
+A critical Forgot Password feature was also added to the authentication flow to address users being locked out of their accounts. The current priority is ensuring the text-to-speech voice selection works reliably on all devices.
 </product_requirements>
 
 <key_technical_concepts>
-- **Full-Stack Monorepo:** FastAPI (Python) backend and Expo (React Native) frontend.
-- **Database-as-Source-of-Truth:** MongoDB contains all app content (tools, recommendations).
-- **Data Sync on Startup:** A  script now runs on every backend startup, comparing the database with a JSON backup and applying any necessary updates. This is the new standard for ensuring data consistency.
-- **Script-based Data Management:** Using standalone Python scripts to perform bulk operations like adding new content () and cleaning data ().
+- **Full-Stack Development:** Using a FastAPI (Python) backend and an Expo (React Native) frontend.
+- **Mobile Text-to-Speech (TTS):** Utilizing the  library, which required implementing platform-specific logic () and advanced voice filtering (by name and quality) to handle discrepancies between web, iOS, and Android.
+- **Stateful Backend Session Management:** Tracking tool usage counts (, ) per session in MongoDB to enforce business rules.
+- **Iterative, User-Driven UI/UX:** Rapidly modifying React Native components and styles () based on direct user feedback.
 </key_technical_concepts>
 
 <code_architecture>
-The application uses a monorepo structure with  and  directories.
-
-
+The application follows a monorepo structure with distinct  and  directories.
 
 - ****
-    - **Importance:** The core FastAPI server defining all API endpoints.
-    - **Summary of Changes:** Multiple public endpoints (, ) had authentication incorrectly applied, causing 403 errors. These were fixed. A new  endpoint was added to perform trend analysis over the last 5 sessions. The logic for pattern detection in this endpoint was later fixed to resolve contradictions. A root  health check endpoint was also added. The startup logic was changed to call .
+    - **Importance:** The core FastAPI application that serves all data and handles business logic.
+    - **Summary of Changes:** Heavily modified to support the During Ride feature.  models were updated to track  and . New endpoints were added:  to get tool suggestions,  to increment usage counters, and two auth endpoints (, ) for the password recovery feature. A critical bug was fixed by adding  checks for rider state variables.
 
 - ****
-    - **Importance:** This is a new, critical script that solves the persistent data loss issue on deployment. It runs on every server start.
-    - **Summary of Changes:** Created to compare the  file with the live MongoDB database. It updates, inserts, or deletes tools in the database to match the backup file, ensuring user edits are always deployed correctly.
+    - **Importance:** The main interactive page for users during a ride. It controls the voice-activated coaching.
+    - **Summary of Changes:** The page was completely redesigned. It now includes a rules explanation, voice preference selection (Male/Female), and separate buttons for Start of Ride, During Your Ride, and Emergency. It contains the complex  logic that selects different, high-quality voices depending on the platform (iOS vs. Android) and user preference. It also handles the UI state for when no active ride session is present, ensuring the emergency tool remains available. Button colors and layouts were repeatedly refined.
 
 - ****
-    - **Importance:** A utility script created to automate a tedious content editing task.
-    - **Summary of Changes:** Created to iterate through all 205 tools in the database and remove numbered list prefixes (e.g., 1., 2.) from the  array. This saved significant manual effort.
+    - **Importance:** The template page for displaying lists of tools within a specific category (e.g., Mindfulness, Distress Tolerance).
+    - **Summary of Changes:** This file saw extensive, iterative UI changes. Functionality was added to make tool lists collapsible behind TOOLS and CRISIS TOOLS buttons. Several educational explanation boxes were added with custom content for different categories. A bug was fixed by removing the  property to show full tool descriptions. All buttons were styled to be hunter green for brand consistency. The text legend for the Wise Mind diagram was corrected to match the image.
 
 - ****
-    - **Importance:** This new file constitutes the Trends feature, a major user request. It replaces the old .
-    - **Summary of Changes:** Created from scratch to fetch data from the  endpoint. It displays historical charts for anxiety and confidence, horse performance averages, detected patterns, and the user's best session. It underwent numerous stylistic revisions to resize cards, remove icons, and align text based on user feedback.
+    - **Importance:** A new screen that provides a crucial password recovery function.
+    - **Summary of Changes:** This file was created from scratch to allow users to enter their email, have it verified by the backend, and then reset their password.
 
 - ****
-    - **Importance:** Defines the main tab navigation for the app.
-    - **Summary of Changes:** The tab configuration for Ride was removed and replaced with a new entry for the Trends page, updating the icon and title accordingly.
+    - **Importance:** The entry point for authenticated users.
+    - **Summary of Changes:** A Forgot Password? link was added to navigate users to the new  screen.
 
-- ****
-    - **Importance:** Displays the details of a single mental tool.
-    - **Summary of Changes:** The UI was simplified by removing the Rate this tool and Target Levels sections. The text-to-speech logic was also updated to dynamically select a natural-sounding female voice.
+- ** & **
+    - **Importance:** These screens manage the start and end of a ride session.
+    - **Summary of Changes:** Received minor UI updates. Icons were removed from the main action buttons, and the buttons were styled to be hunter green to match the app's new design language.
 </code_architecture>
 
 <pending_tasks>
-- **User-Recorded Audio:** The user expressed interest in recording their own voice for the audio guidance on tools. The technical options (cloud storage, ) were discussed, but implementation was deferred for the user to consider.
+- **User-Recorded Audio:** A feature allowing users to record their own voice for tools was discussed but deferred.
+- **Wise Mind Diagram Update:** The user requested changing the text within the Wise Mind diagram image, but this was not possible as the agent cannot edit image files. The text legend was updated to match the existing image instead.
 </pending_tasks>
 
 <current_work>
-The most recent work cycle concluded with a series of major fixes and feature implementations, preparing the app for a stable deployment.
+The most recent work focused on resolving issues with the Text-to-Speech (TTS) feature, which uses . After a deployment, the user reported that voice selection was failing on their mobile device (Expo Go app), and the male voice quality was poor and robotic.
 
-1.  **Fixing Logic Contradiction:** The primary task was resolving a confusing issue on the new Trends page where the trend analysis (e.g., confidence decreasing) contradicted the pattern detection (e.g., confidence consistently strong). This was fixed by harmonizing the logic in the  endpoint in . The pattern now defers to the trend if a clear trend is detected.
+The AI engineer correctly diagnosed that voice identifiers and quality differ significantly between web previews and actual mobile devices (iOS/Android). The  file was updated with platform-specific logic () to select high-quality voices by name (e.g., prioritizing Alex on iOS).
 
-2.  **UI Finalization:** Several final UI tweaks were made to the Trends page, including removing all remaining icons from section headers (, , etc.) to create a clean, icon-free design as requested.
+However, a follow-up issue was reported: users could not switch between male and female voices within the same ride session (e.g., play one tool with a female voice, then a second tool with a male voice).
 
-3.  **Final Health Check & Backup:** A comprehensive health check was performed. A new, final backup of the database ( and ) was created to ensure all user edits and the automated removal of numbered steps were captured. This backup contains 205 tools and is ready for the sync script to use during the next deployment. All services were restarted, and the application is now in a state ready for deployment.
+After investigating and ruling out a costly external TTS API, the user and AI engineer agreed to focus on fixing this final voice-switching bug within the existing  implementation. The current task is to diagnose and resolve this state synchronization issue in .
 </current_work>
 
 <optional_next_step>
-Run the deployment. The app has been fully updated with all requested features and fixes, and a final health check and data backup have been successfully completed.
+Diagnose and fix the voice-switching issue in  on the  page to ensure changing the voice preference is correctly applied to all subsequent tool playbacks.
 </optional_next_step>
