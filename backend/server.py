@@ -1147,6 +1147,19 @@ async def export_tools():
         headers={"Content-Disposition": "attachment; filename=equimind_rider_tools.csv"}
     )
 
+# Admin dashboard route
+@app.get("/admin")
+async def admin_dashboard():
+    """Serve the admin dashboard"""
+    admin_file = Path(__file__).parent / "static" / "admin.html"
+    if not admin_file.exists():
+        raise HTTPException(status_code=404, detail="Admin dashboard not found")
+    return FileResponse(
+        path=str(admin_file),
+        media_type="text/html",
+        headers={"Cache-Control": "no-cache"}
+    )
+
 # Root health check endpoint
 @app.get("/")
 async def root():
