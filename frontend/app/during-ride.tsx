@@ -547,6 +547,9 @@ export default function DuringRideNew() {
                 <Text style={styles.toolDetailsTitle}>{recommendations.emergency.name}</Text>
                 <Text style={styles.toolDetailsCategory}>{recommendations.emergency.category}</Text>
                 <Text style={styles.toolDetailsReason}>{recommendations.emergency.reason}</Text>
+                <ScrollView style={styles.instructionsScroll}>
+                  <Text style={styles.toolDetailsInstructions}>{recommendations.emergency.instructions}</Text>
+                </ScrollView>
                 <TouchableOpacity style={styles.stopButton} onPress={stopSpeaking}>
                   <Ionicons name="stop-circle" size={32} color="#ffffff" />
                   <Text style={styles.stopButtonText}>Stop Audio</Text>
