@@ -1156,13 +1156,13 @@ async def admin_delete_user(request: dict):
 async def submit_feedback(feedback: FeedbackCreate, current_user: dict = Depends(get_current_user)):
     """Submit feedback for a session"""
     # Verify session exists and belongs to user
-    session = await db.sessions.find_one({"id": feedback.session_id, "rider_id": current_user["id"]})
+    session = await db.sessions.find_one({"id": feedback.session_id, "rider_id": current_user["user_id"]})
     if not session:
         raise HTTPException(status_code=404, detail="Session not found")
     
     # Create feedback
     feedback_data = Feedback(
-        user_id=current_user["id"],
+        user_id=current_user["user_id"],
         session_id=feedback.session_id,
         rating=feedback.rating,
         comment=feedback.comment
