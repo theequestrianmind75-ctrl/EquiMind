@@ -110,6 +110,19 @@ class SessionUpdate(BaseModel):
     horse_responsiveness: Optional[int] = None
     horse_notes: Optional[str] = None
 
+class FeedbackCreate(BaseModel):
+    session_id: str
+    rating: int  # 1-5 stars
+    comment: Optional[str] = None
+
+class Feedback(BaseModel):
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    user_id: str
+    session_id: str
+    rating: int
+    comment: Optional[str] = None
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+
 class Session(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     rider_id: str
