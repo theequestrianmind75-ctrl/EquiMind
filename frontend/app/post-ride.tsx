@@ -197,9 +197,9 @@ export default function PostRide() {
         notes: notes || null,
         completed: true,
       });
-      Alert.alert('Success', 'Post-ride analysis saved!', [
-        { text: 'OK', onPress: () => router.back() },
-      ]);
+      
+      // Navigate to feedback page
+      router.push(`/feedback?sessionId=${selectedSession.id}`);
     } catch (error: any) {
       Alert.alert('Error', error.message || 'Failed to save session');
     } finally {
