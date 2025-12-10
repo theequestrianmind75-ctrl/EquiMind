@@ -455,4 +455,22 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     marginLeft: 12,
   },
+  feedbackButton: {
+    flexDirection: 'row',
+    backgroundColor: '#ffffff',
+    paddingVertical: 16,
+    paddingHorizontal: 24,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 12,
+    borderWidth: 2,
+    borderColor: '#375B50',
+  },
+  feedbackButtonText: {
+    color: '#375B50',
+    fontSize: 16,
+    fontWeight: '600',
+    marginLeft: 8,
+  },
 });
