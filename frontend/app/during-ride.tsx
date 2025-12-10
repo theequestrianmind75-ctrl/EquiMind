@@ -754,6 +754,15 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     lineHeight: 20,
   },
+  instructionsScroll: {
+    maxHeight: 300,
+    marginBottom: 16,
+  },
+  toolDetailsInstructions: {
+    fontSize: 15,
+    color: '#1e293b',
+    lineHeight: 24,
+  },
   stopButton: {
     flexDirection: 'row',
     backgroundColor: '#375B50',
