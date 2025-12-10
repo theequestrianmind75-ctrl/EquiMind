@@ -249,6 +249,14 @@ Status: ${session.completed ? 'Completed' : 'In Progress'}
             <Ionicons name="share-social" size={24} color="#ffffff" />
             <Text style={styles.shareButtonText}>Share Summary</Text>
           </TouchableOpacity>
+          
+          <TouchableOpacity 
+            style={styles.feedbackButton} 
+            onPress={() => router.push(`/feedback?sessionId=${sessionId}`)}
+          >
+            <Ionicons name="chatbox-ellipses" size={24} color="#375B50" />
+            <Text style={styles.feedbackButtonText}>Give Feedback</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>
