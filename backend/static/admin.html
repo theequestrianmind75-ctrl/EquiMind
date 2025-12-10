@@ -1175,6 +1175,92 @@
             setTimeout(() => alertDiv.remove(), 5000);
         }
 
+        // Load feedback
+        async function loadFeedback() {
+            try {
+                const response = await fetch(`${API_URL}/admin/feedback`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ password: adminPassword })
+                });
+
+                currentData.feedback = await response.json();
+                renderFeedback();
+            } catch (error) {
+                document.getElementById('feedback').innerHTML = `
+                    <div class="error">Error loading feedback: ${error.message}</div>
+                `;
+            }
+        }
+
+        // Render feedback
+        function renderFeedback() {
+            const feedback = currentData.feedback || [];
+            
+            let html = `
+                <div class="card">
+                    <h2>User Feedback (${feedback.length} total)</h2>
+
+                    <div class="search-box">
+                        <input type="text" id="feedback-search" placeholder="Search feedback..." 
+                               oninput="filterFeedback(this.value)">
+                    </div>
+
+                    ${feedback.length === 0 ? `
+                        <div class="empty-state">
+                            <p>No feedback submitted yet</p>
+                            <p style="margin-top: 10px; color: #9ca3af;">Feedback will appear here when users submit it after their rides.</p>
+                        </div>
+                    ` : `
+                    <div style="overflow-x: auto;">
+                        <table id="feedback-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>User</th>
+                                    <th>Session</th>
+                                    <th>Rating</th>
+                                    <th>Comment</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${feedback.map(fb => `
+                                    <tr>
+                                        <td>${formatDate(fb.created_at)}</td>
+                                        <td><strong>${fb.user_email || 'Unknown'}</strong><br/><small>${fb.user_name || ''}</small></td>
+                                        <td><small>${fb.session_type || 'N/A'} - ${fb.ride_type || 'N/A'}</small><br/><small>${formatDate(fb.session_date)}</small></td>
+                                        <td>
+                                            <div style="display: flex; gap: 2px;">
+                                                ${[1,2,3,4,5].map(star => `
+                                                    <span style="color: ${star <= fb.rating ? '#f59e0b' : '#d1d5db'};">★</span>
+                                                `).join('')}
+                                            </div>
+                                            <small>(${fb.rating}/5)</small>
+                                        </td>
+                                        <td style="max-width: 300px;">${fb.comment || '<em style="color: #9ca3af;">No comment</em>'}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                    `}
+                </div>
+            `;
+
+            document.getElementById('feedback').innerHTML = html;
+        }
+
+        // Filter feedback
+        function filterFeedback(searchTerm) {
+            const rows = document.querySelectorAll('#feedback-table tbody tr');
+            const term = searchTerm.toLowerCase();
+
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(term) ? '' : 'none';
+            });
+        }
+
         function logout() {
             sessionStorage.removeItem('admin_password');
             adminPassword = '';
