@@ -657,6 +657,8 @@ async def get_during_ride_recommendations(session_id: str):
         }
     
     # DURING RIDE - Smart recommendations based on pre-ride state
+    # Exclude the start_of_ride tool to avoid duplicates
+    start_of_ride_id = str(grounding_tools[0].get("_id", grounding_tools[0].get("id"))) if grounding_tools else None
     during_ride_tools = []
     
     # High anxiety (7-10) → Calming/breathing tools
@@ -665,32 +667,36 @@ async def get_during_ride_recommendations(session_id: str):
                         s.get("category", "") in ["Breathing/HRV", "BODY RESET"] and
                         ("calm" in s.get("name", "").lower() or 
                          "breath" in s.get("name", "").lower() or
-                         "relax" in s.get("name", "").lower())]
+                         "relax" in s.get("name", "").lower()) and
+                        str(s.get("_id", s.get("id"))) != start_of_ride_id]
         during_ride_tools.extend(calming_tools[:2])
         reason = "Your pre-ride anxiety was high - these tools will help calm your nervous system"
     
     # Low confidence (1-4) → Confidence-building tools
     elif confidence_level <= 4:
         confidence_tools = [s for s in all_strategies if 
-                           "confidence" in s.get("name", "").lower() or
-                           "power" in s.get("name", "").lower() or
-                           s.get("category", "") == "Tapping/EFT"]
+                           ("confidence" in s.get("name", "").lower() or
+                            "power" in s.get("name", "").lower() or
+                            s.get("category", "") == "Tapping/EFT") and
+                           str(s.get("_id", s.get("id"))) != start_of_ride_id]
         during_ride_tools.extend(confidence_tools[:2])
         reason = "Your pre-ride confidence was low - these tools will boost your self-assurance"
     
     # Low energy (1-4) → Energizing tools
     elif rider_energy <= 4:
         energy_tools = [s for s in all_strategies if 
-                       "energy" in s.get("name", "").lower() or
-                       "activate" in s.get("name", "").lower() or
-                       "power" in s.get("name", "").lower()]
+                       ("energy" in s.get("name", "").lower() or
+                        "activate" in s.get("name", "").lower() or
+                        "power" in s.get("name", "").lower()) and
+                       str(s.get("_id", s.get("id"))) != start_of_ride_id]
         during_ride_tools.extend(energy_tools[:2])
         reason = "Your pre-ride energy was low - these tools will help energize you"
     
-    # Moderate levels → Grounding/breathing tools
+    # Moderate levels → Breathing/body reset tools (NOT Mindfulness to avoid overlap)
     else:
         moderate_tools = [s for s in all_strategies if 
-                         s.get("category", "") in ["Breathing/HRV", "Mindfulness & Flow"]]
+                         s.get("category", "") in ["Breathing/HRV", "BODY RESET"] and
+                         str(s.get("_id", s.get("id"))) != start_of_ride_id]
         during_ride_tools.extend(moderate_tools[:2])
         reason = "These tools will help you maintain focus and presence during your ride"
     
