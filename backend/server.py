@@ -1144,6 +1144,57 @@ async def admin_delete_user(request: dict):
     
     return {"message": "User deleted successfully", "user_id": user_id}
 
+# ==================== FEEDBACK ROUTES ====================
+
+@api_router.post("/feedback", response_model=Feedback)
+async def submit_feedback(feedback: FeedbackCreate, current_user: dict = Depends(get_current_user)):
+    """Submit feedback for a session"""
+    # Verify session exists and belongs to user
+    session = await db.sessions.find_one({"id": feedback.session_id, "rider_id": current_user["id"]})
+    if not session:
+        raise HTTPException(status_code=404, detail="Session not found")
+    
+    # Create feedback
+    feedback_data = Feedback(
+        user_id=current_user["id"],
+        session_id=feedback.session_id,
+        rating=feedback.rating,
+        comment=feedback.comment
+    )
+    
+    await db.feedback.insert_one(feedback_data.model_dump())
+    return feedback_data
+
+@api_router.post("/admin/feedback")
+async def get_all_feedback(auth: AdminAuth):
+    """Get all feedback for admin dashboard - password protected"""
+    if auth.password != ADMIN_PASSWORD:
+        raise HTTPException(status_code=401, detail="Invalid admin password")
+    
+    # Get all feedback with user and session info
+    feedback_list = await db.feedback.find({}).sort("created_at", -1).to_list(1000)
+    
+    # Enrich with user and session data
+    for feedback in feedback_list:
+        # Get user info
+        user = await db.users.find_one({"id": feedback["user_id"]}, {"email": 1, "name": 1})
+        if user:
+            feedback["user_email"] = user.get("email", "Unknown")
+            feedback["user_name"] = user.get("name", "Unknown")
+        
+        # Get session info
+        session = await db.sessions.find_one({"id": feedback["session_id"]}, {"session_type": 1, "ride_type": 1, "created_at": 1})
+        if session:
+            feedback["session_type"] = session.get("session_type", "Unknown")
+            feedback["ride_type"] = session.get("ride_type", "Unknown")
+            feedback["session_date"] = session.get("created_at")
+        
+        # Remove internal _id
+        if '_id' in feedback:
+            del feedback['_id']
+    
+    return feedback_list
+
 # ==================== EXPORT ROUTE ====================
 
 @app.get("/export/tools")
