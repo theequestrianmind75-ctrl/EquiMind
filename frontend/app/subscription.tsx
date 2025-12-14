@@ -13,7 +13,7 @@ import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import api from '../lib/api';
 
-interface SubscriptionTier {
+type SubscriptionTier = {
   tier_id: string;
   name: string;
   price_monthly: number;
@@ -21,7 +21,7 @@ interface SubscriptionTier {
   features: string[];
   description: string;
   badge?: string;
-}
+};
 
 export default function Subscription() {
   const router = useRouter();
