@@ -129,6 +129,19 @@ class Feedback(BaseModel):
     comment: Optional[str] = None
     created_at: datetime = Field(default_factory=datetime.utcnow)
 
+class SubscriptionTier(BaseModel):
+    tier_id: str  # "standard" or "premium"
+    name: str  # "Standard" or "Premium"
+    price_monthly: float  # 25.00 or 35.00
+    features: List[str]
+    description: str
+
+class SubscriptionUpdate(BaseModel):
+    subscription_tier: str  # "standard" or "premium"
+    subscription_status: str  # "active", "cancelled", "expired"
+    subscription_start_date: Optional[datetime] = None
+    subscription_end_date: Optional[datetime] = None
+
 class Session(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     rider_id: str
