@@ -196,7 +196,7 @@ export default function PremiumContent() {
           <Text style={styles.faqTitle}>Frequently Asked Questions</Text>
           
           <View style={styles.faqItem}>
-            <Text style={styles.faqQuestion}>What's included in Premium?</Text>
+            <Text style={styles.faqQuestion}>What&apos;s included in Premium?</Text>
             <Text style={styles.faqAnswer}>
               Premium includes all Standard features plus access to video courses and digital downloads via Thinkific.
             </Text>
@@ -205,7 +205,7 @@ export default function PremiumContent() {
           <View style={styles.faqItem}>
             <Text style={styles.faqQuestion}>How do I access the courses?</Text>
             <Text style={styles.faqAnswer}>
-              Click the course button above. You'll be taken to Thinkific where you can create an account and access all content.
+              Click the course button above. You&apos;ll be taken to Thinkific where you can create an account and access all content.
             </Text>
           </View>
 
