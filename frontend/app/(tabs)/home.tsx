@@ -46,14 +46,6 @@ export default function Home() {
       color: '#8b5cf6',
       route: '/post-ride',
     },
-    {
-      id: 'premium',
-      title: 'Premium Content',
-      description: 'Courses, guides & training materials',
-      icon: 'star',
-      color: '#f59e0b',
-      route: '/premium-content',
-    },
   ];
 
   return (
