@@ -143,7 +143,7 @@ export default function PremiumContent() {
               <Text style={styles.contentDescription}>
                 • The Equestrian Mindset{'\n'}
                 • Break your Perfectionism{'\n'}
-                • When Shouldn't Ride Due to Emotions{'\n'}
+                • When You Shouldn&apos;t Ride Due to Emotions{'\n'}
                 • Plus 7 Digital Downloads & Guides
               </Text>
             </View>
