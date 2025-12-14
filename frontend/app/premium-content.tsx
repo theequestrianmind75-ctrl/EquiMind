@@ -18,7 +18,7 @@ import api from '../lib/api';
 export default function PremiumContent() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
-  const [subscriptionStatus, setSubscriptionStatus] = useState<any>(null);
+  const [subscriptionStatus, setSubscriptionStatus] = useState(null);
 
   useEffect(() => {
     checkSubscription();
