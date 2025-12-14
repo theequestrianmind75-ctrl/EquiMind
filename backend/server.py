@@ -1169,6 +1169,86 @@ async def admin_delete_user(request: dict):
     
     return {"message": "User deleted successfully", "user_id": user_id}
 
+# ==================== SUBSCRIPTION ROUTES ====================
+
+@api_router.get("/subscriptions/tiers")
+async def get_subscription_tiers():
+    """Get available subscription tiers"""
+    tiers = [
+        {
+            "tier_id": "standard",
+            "name": "Standard",
+            "price_monthly": 25.00,
+            "price_display": "$25/month",
+            "features": [
+                "All 205 mental performance tools",
+                "Voice-guided coaching during rides",
+                "Session tracking & analytics",
+                "Post-ride reflection tools",
+                "Personalized tool recommendations"
+            ],
+            "description": "Everything you need for mental performance"
+        },
+        {
+            "tier_id": "premium",
+            "name": "Premium",
+            "price_monthly": 35.00,
+            "price_display": "$35/month",
+            "features": [
+                "Everything in Standard",
+                "Access to all video courses",
+                "Digital downloads & guides",
+                "Advanced training materials",
+                "Exclusive premium content"
+            ],
+            "description": "Complete equestrian mental training package",
+            "badge": "Best Value"
+        }
+    ]
+    return tiers
+
+@api_router.get("/subscriptions/status")
+async def get_subscription_status(current_user: dict = Depends(get_current_user)):
+    """Get current user's subscription status"""
+    user = await db.users.find_one({"id": current_user["user_id"]})
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    
+    return {
+        "user_id": user["id"],
+        "subscription_tier": user.get("subscription_tier", "none"),
+        "subscription_status": user.get("subscription_status", "inactive"),
+        "subscription_start_date": user.get("subscription_start_date"),
+        "subscription_end_date": user.get("subscription_end_date"),
+        "has_access": user.get("subscription_status") == "active"
+    }
+
+@api_router.post("/subscriptions/update")
+async def update_subscription(
+    subscription_data: SubscriptionUpdate,
+    current_user: dict = Depends(get_current_user)
+):
+    """Update user subscription (called after successful payment)"""
+    user_id = current_user["user_id"]
+    
+    # Update user subscription in database
+    await db.users.update_one(
+        {"id": user_id},
+        {"$set": {
+            "subscription_tier": subscription_data.subscription_tier,
+            "subscription_status": subscription_data.subscription_status,
+            "subscription_start_date": subscription_data.subscription_start_date or datetime.utcnow(),
+            "subscription_end_date": subscription_data.subscription_end_date
+        }}
+    )
+    
+    return {
+        "success": True,
+        "message": f"Subscription updated to {subscription_data.subscription_tier}",
+        "subscription_tier": subscription_data.subscription_tier,
+        "subscription_status": subscription_data.subscription_status
+    }
+
 # ==================== FEEDBACK ROUTES ====================
 
 @api_router.post("/feedback", response_model=Feedback)
