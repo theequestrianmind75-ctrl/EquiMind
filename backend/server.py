@@ -60,6 +60,12 @@ class User(BaseModel):
     name: str
     hashed_password: str
     created_at: datetime = Field(default_factory=datetime.utcnow)
+    subscription_tier: str = "none"  # "none", "standard", "premium"
+    subscription_status: str = "inactive"  # "inactive", "active", "cancelled", "expired"
+    subscription_start_date: Optional[datetime] = None
+    subscription_end_date: Optional[datetime] = None
+    stripe_customer_id: Optional[str] = None
+    stripe_subscription_id: Optional[str] = None
 
 class UserResponse(BaseModel):
     id: str
