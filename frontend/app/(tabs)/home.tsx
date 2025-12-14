@@ -17,6 +17,23 @@ import api from '../../lib/api';
 export default function Home() {
   const router = useRouter();
   const { user, logout } = useAuthStore();
+  const [subscriptionStatus, setSubscriptionStatus] = useState(null);
+  const [loadingSubscription, setLoadingSubscription] = useState(true);
+
+  useEffect(() => {
+    loadSubscriptionStatus();
+  }, []);
+
+  const loadSubscriptionStatus = async () => {
+    try {
+      const response = await api.get('/subscriptions/status');
+      setSubscriptionStatus(response.data);
+    } catch (error) {
+      console.error('Error loading subscription:', error);
+    } finally {
+      setLoadingSubscription(false);
+    }
+  };
 
   const handleLogout = async () => {
     await logout();
