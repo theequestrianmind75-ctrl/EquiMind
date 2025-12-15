@@ -1,556 +1,513 @@
 #!/usr/bin/env python3
 """
-Backend Testing Suite for EquiMind During-Ride Smart Tool Access System
-Tests the new smart recommendations and tool access tracking endpoints
+Backend API Testing for EquiMind Subscription and Payment Integration
+Tests the subscription endpoints, RevenueCat webhook, and admin feedback with N+1 query fix
 """
 
 import requests
 import json
 import uuid
-from datetime import datetime
-import os
-from dotenv import load_dotenv
+from datetime import datetime, timedelta
 import time
 
-# Load environment variables
-load_dotenv('/app/frontend/.env')
-BASE_URL = os.getenv('EXPO_PUBLIC_BACKEND_URL', 'https://subscriptionapp.preview.emergentagent.com')
-API_BASE = f"{BASE_URL}/api"
+# Backend URL from environment
+BACKEND_URL = "https://subscriptionapp.preview.emergentagent.com/api"
+ADMIN_PASSWORD = "equimind2025"
 
-class DuringRideTestSuite:
+class EquiMindAPITester:
     def __init__(self):
-        self.test_sessions = []
-        self.test_results = []
+        self.session = requests.Session()
+        self.access_token = None
+        self.test_user_email = f"testuser_{uuid.uuid4().hex[:8]}@equimind.com"
+        self.test_user_password = "TestPass123!"
+        self.test_user_name = "Test User"
         
-    def get_existing_sessions(self):
-        """Get existing sessions to use for testing"""
+    def log_test(self, test_name, status, details=""):
+        """Log test results with timestamp"""
+        timestamp = datetime.now().strftime("%H:%M:%S")
+        status_icon = "✅" if status == "PASS" else "❌" if status == "FAIL" else "⚠️"
+        print(f"[{timestamp}] {status_icon} {test_name}: {status}")
+        if details:
+            print(f"    Details: {details}")
+        print()
+
+    def register_test_user(self):
+        """Register a test user for authenticated endpoints"""
         try:
-            response = requests.get(f"{API_BASE}/sessions", timeout=10)
+            response = self.session.post(f"{BACKEND_URL}/auth/register", json={
+                "email": self.test_user_email,
+                "password": self.test_user_password,
+                "name": self.test_user_name
+            })
+            
             if response.status_code == 200:
-                sessions = response.json()
-                print(f"📊 Found {len(sessions)} existing sessions")
-                return sessions
-            else:
-                print(f"❌ Failed to get sessions: {response.status_code}")
-                return []
-        except Exception as e:
-            print(f"❌ Exception getting sessions: {e}")
-            return []
-                
-    def update_session_for_testing(self, session_id, anxiety_level, confidence_level, rider_energy_level):
-        """Update an existing session with test data"""
-        update_data = {
-            "anxiety_level": anxiety_level,
-            "confidence_level": confidence_level,
-            "rider_energy_level": rider_energy_level,
-            "notes": f"Updated for testing - anxiety:{anxiety_level}, confidence:{confidence_level}, energy:{rider_energy_level}"
-        }
-        
-        try:
-            response = requests.patch(f"{API_BASE}/sessions/{session_id}", json=update_data, timeout=10)
-            if response.status_code == 200:
-                print(f"✅ Updated session {session_id} for testing")
+                data = response.json()
+                self.access_token = data.get("access_token")
+                self.log_test("User Registration", "PASS", f"User registered with email: {self.test_user_email}")
                 return True
             else:
-                print(f"❌ Failed to update session {session_id}: {response.status_code}")
+                self.log_test("User Registration", "FAIL", f"Status: {response.status_code}, Response: {response.text}")
                 return False
+                
         except Exception as e:
-            print(f"❌ Exception updating session: {e}")
+            self.log_test("User Registration", "FAIL", f"Exception: {str(e)}")
             return False
-                
-    def test_smart_recommendations_high_anxiety(self):
-        """Test 1: High anxiety (8/10) should return calming/breathing tools"""
-        print("\n🧪 TEST 1: High Anxiety Recommendations")
-        
-        # Get existing sessions and use the first one
-        sessions = self.get_existing_sessions()
-        if not sessions:
-            self.test_results.append({"test": "High Anxiety Recommendations", "status": "SKIP", "reason": "No sessions available"})
-            return
-            
-        session_id = sessions[0]['id']
-        
-        # Update session with high anxiety
-        if not self.update_session_for_testing(session_id, anxiety_level=8, confidence_level=5, rider_energy_level=5):
-            self.test_results.append({"test": "High Anxiety Recommendations", "status": "FAIL", "reason": "Could not update session"})
-            return
-            
-        # Test recommendations endpoint
+
+    def get_auth_headers(self):
+        """Get authorization headers with JWT token"""
+        if not self.access_token:
+            return {}
+        return {"Authorization": f"Bearer {self.access_token}"}
+
+    def test_subscription_tiers(self):
+        """Test GET /api/subscriptions/tiers endpoint"""
         try:
-            response = requests.get(f"{API_BASE}/during-ride/recommendations/{session_id}", timeout=10)
+            response = self.session.get(f"{BACKEND_URL}/subscriptions/tiers")
+            
             if response.status_code == 200:
-                recommendations = response.json()
+                tiers = response.json()
                 
-                # Verify structure
-                required_keys = ['session_id', 'start_of_ride', 'during_ride', 'emergency', 'remaining_regular_tools']
-                missing_keys = [key for key in required_keys if key not in recommendations]
+                # Verify we have 2 tiers
+                if len(tiers) != 2:
+                    self.log_test("Subscription Tiers", "FAIL", f"Expected 2 tiers, got {len(tiers)}")
+                    return False
                 
-                if missing_keys:
-                    self.test_results.append({
-                        "test": "High Anxiety Recommendations", 
-                        "status": "FAIL", 
-                        "reason": f"Missing keys: {missing_keys}"
-                    })
-                    return
-                    
-                # Verify start_of_ride tool exists
-                if not recommendations.get('start_of_ride'):
-                    self.test_results.append({
-                        "test": "High Anxiety Recommendations", 
-                        "status": "FAIL", 
-                        "reason": "No start_of_ride tool provided"
-                    })
-                    return
-                    
-                # Verify during_ride has 2 tools
-                during_ride_tools = recommendations.get('during_ride', [])
-                if len(during_ride_tools) != 2:
-                    self.test_results.append({
-                        "test": "High Anxiety Recommendations", 
-                        "status": "FAIL", 
-                        "reason": f"Expected 2 during_ride tools, got {len(during_ride_tools)}"
-                    })
-                    return
-                    
-                # Verify emergency tool exists
-                if not recommendations.get('emergency'):
-                    self.test_results.append({
-                        "test": "High Anxiety Recommendations", 
-                        "status": "FAIL", 
-                        "reason": "No emergency tool provided"
-                    })
-                    return
-                    
-                # Verify remaining_regular_tools is 2 initially
-                if recommendations.get('remaining_regular_tools') != 2:
-                    self.test_results.append({
-                        "test": "High Anxiety Recommendations", 
-                        "status": "FAIL", 
-                        "reason": f"Expected 2 remaining tools, got {recommendations.get('remaining_regular_tools')}"
-                    })
-                    return
-                    
-                # Check if tools are calming/breathing related for high anxiety
-                tool_categories = [tool.get('category', '') for tool in during_ride_tools]
-                calming_categories = ['Breathing/HRV', 'BODY RESET']
-                has_calming_tools = any(cat in calming_categories for cat in tool_categories)
+                # Check Standard tier
+                standard_tier = next((t for t in tiers if t["tier_id"] == "standard"), None)
+                if not standard_tier:
+                    self.log_test("Subscription Tiers", "FAIL", "Standard tier not found")
+                    return False
                 
-                print(f"   📋 Start of ride: {recommendations['start_of_ride']['name']}")
-                print(f"   📋 During ride tools: {[tool['name'] for tool in during_ride_tools]}")
-                print(f"   📋 Emergency tool: {recommendations['emergency']['name']}")
-                print(f"   📋 Tool categories: {tool_categories}")
-                print(f"   📋 Has calming tools: {has_calming_tools}")
+                if standard_tier["price_monthly"] != 25.00:
+                    self.log_test("Subscription Tiers", "FAIL", f"Standard tier price should be $25, got ${standard_tier['price_monthly']}")
+                    return False
                 
-                self.test_results.append({
-                    "test": "High Anxiety Recommendations", 
-                    "status": "PASS", 
-                    "details": {
-                        "start_tool": recommendations['start_of_ride']['name'],
-                        "during_tools": [tool['name'] for tool in during_ride_tools],
-                        "emergency_tool": recommendations['emergency']['name'],
-                        "has_calming_tools": has_calming_tools
-                    }
-                })
+                # Check Premium tier
+                premium_tier = next((t for t in tiers if t["tier_id"] == "premium"), None)
+                if not premium_tier:
+                    self.log_test("Subscription Tiers", "FAIL", "Premium tier not found")
+                    return False
+                
+                if premium_tier["price_monthly"] != 35.00:
+                    self.log_test("Subscription Tiers", "FAIL", f"Premium tier price should be $35, got ${premium_tier['price_monthly']}")
+                    return False
+                
+                # Verify features are present
+                if not standard_tier.get("features") or not premium_tier.get("features"):
+                    self.log_test("Subscription Tiers", "FAIL", "Features list missing from tiers")
+                    return False
+                
+                self.log_test("Subscription Tiers", "PASS", f"Standard: ${standard_tier['price_monthly']}/month, Premium: ${premium_tier['price_monthly']}/month")
+                return True
                 
             else:
-                self.test_results.append({
-                    "test": "High Anxiety Recommendations", 
-                    "status": "FAIL", 
-                    "reason": f"HTTP {response.status_code}: {response.text}"
-                })
-        except Exception as e:
-            self.test_results.append({
-                "test": "High Anxiety Recommendations", 
-                "status": "FAIL", 
-                "reason": f"Exception: {e}"
-            })
+                self.log_test("Subscription Tiers", "FAIL", f"Status: {response.status_code}, Response: {response.text}")
+                return False
                 
-    def test_smart_recommendations_low_confidence(self):
-        """Test 2: Low confidence (3/10) should return confidence-building tools"""
-        print("\n🧪 TEST 2: Low Confidence Recommendations")
-        
-        sessions = self.get_existing_sessions()
-        if not sessions:
-            self.test_results.append({"test": "Low Confidence Recommendations", "status": "SKIP", "reason": "No sessions available"})
-            return
-            
-        session_id = sessions[0]['id']
-        
-        # Update session with low confidence
-        if not self.update_session_for_testing(session_id, anxiety_level=5, confidence_level=3, rider_energy_level=5):
-            self.test_results.append({"test": "Low Confidence Recommendations", "status": "FAIL", "reason": "Could not update session"})
-            return
-            
+        except Exception as e:
+            self.log_test("Subscription Tiers", "FAIL", f"Exception: {str(e)}")
+            return False
+
+    def test_subscription_status_authenticated(self):
+        """Test GET /api/subscriptions/status endpoint (requires JWT)"""
         try:
-            response = requests.get(f"{API_BASE}/during-ride/recommendations/{session_id}", timeout=10)
+            headers = self.get_auth_headers()
+            response = self.session.get(f"{BACKEND_URL}/subscriptions/status", headers=headers)
+            
             if response.status_code == 200:
-                recommendations = response.json()
-                during_ride_tools = recommendations.get('during_ride', [])
+                status = response.json()
                 
-                # Check for confidence-building tools
-                tool_names = [tool.get('name', '').lower() for tool in during_ride_tools]
-                tool_categories = [tool.get('category', '') for tool in during_ride_tools]
+                # Verify required fields are present
+                required_fields = ["user_id", "subscription_tier", "subscription_status", "has_access"]
+                for field in required_fields:
+                    if field not in status:
+                        self.log_test("Subscription Status (Auth)", "FAIL", f"Missing field: {field}")
+                        return False
                 
-                has_confidence_tools = any('confidence' in name or 'power' in name for name in tool_names) or \
-                                     'Tapping/EFT' in tool_categories
+                # New user should have default values
+                if status["subscription_tier"] != "none":
+                    self.log_test("Subscription Status (Auth)", "FAIL", f"New user should have 'none' tier, got: {status['subscription_tier']}")
+                    return False
                 
-                print(f"   📋 During ride tools: {[tool['name'] for tool in during_ride_tools]}")
-                print(f"   📋 Tool categories: {tool_categories}")
-                print(f"   📋 Has confidence tools: {has_confidence_tools}")
+                if status["subscription_status"] != "inactive":
+                    self.log_test("Subscription Status (Auth)", "FAIL", f"New user should have 'inactive' status, got: {status['subscription_status']}")
+                    return False
                 
-                self.test_results.append({
-                    "test": "Low Confidence Recommendations", 
-                    "status": "PASS", 
-                    "details": {
-                        "during_tools": [tool['name'] for tool in during_ride_tools],
-                        "categories": tool_categories,
-                        "has_confidence_tools": has_confidence_tools
-                    }
-                })
+                self.log_test("Subscription Status (Auth)", "PASS", f"User ID: {status['user_id']}, Tier: {status['subscription_tier']}, Status: {status['subscription_status']}")
+                return True
+                
             else:
-                self.test_results.append({
-                    "test": "Low Confidence Recommendations", 
-                    "status": "FAIL", 
-                    "reason": f"HTTP {response.status_code}"
-                })
+                self.log_test("Subscription Status (Auth)", "FAIL", f"Status: {response.status_code}, Response: {response.text}")
+                return False
+                
         except Exception as e:
-            self.test_results.append({
-                "test": "Low Confidence Recommendations", 
-                "status": "FAIL", 
-                "reason": f"Exception: {e}"
-            })
-                
-    def test_smart_recommendations_low_energy(self):
-        """Test 3: Low energy (2/10) should return energizing tools"""
-        print("\n🧪 TEST 3: Low Energy Recommendations")
-        
-        sessions = self.get_existing_sessions()
-        if not sessions:
-            self.test_results.append({"test": "Low Energy Recommendations", "status": "SKIP", "reason": "No sessions available"})
-            return
-            
-        session_id = sessions[0]['id']
-        
-        # Update session with low energy
-        if not self.update_session_for_testing(session_id, anxiety_level=5, confidence_level=5, rider_energy_level=2):
-            self.test_results.append({"test": "Low Energy Recommendations", "status": "FAIL", "reason": "Could not update session"})
-            return
-            
+            self.log_test("Subscription Status (Auth)", "FAIL", f"Exception: {str(e)}")
+            return False
+
+    def test_subscription_update_authenticated(self):
+        """Test POST /api/subscriptions/update endpoint (requires JWT)"""
         try:
-            response = requests.get(f"{API_BASE}/during-ride/recommendations/{session_id}", timeout=10)
-            if response.status_code == 200:
-                recommendations = response.json()
-                during_ride_tools = recommendations.get('during_ride', [])
-                
-                # Check for energizing tools
-                tool_names = [tool.get('name', '').lower() for tool in during_ride_tools]
-                has_energy_tools = any('energy' in name or 'activate' in name or 'power' in name for name in tool_names)
-                
-                print(f"   📋 During ride tools: {[tool['name'] for tool in during_ride_tools]}")
-                print(f"   📋 Has energy tools: {has_energy_tools}")
-                
-                self.test_results.append({
-                    "test": "Low Energy Recommendations", 
-                    "status": "PASS", 
-                    "details": {
-                        "during_tools": [tool['name'] for tool in during_ride_tools],
-                        "has_energy_tools": has_energy_tools
-                    }
-                })
-            else:
-                self.test_results.append({
-                    "test": "Low Energy Recommendations", 
-                    "status": "FAIL", 
-                    "reason": f"HTTP {response.status_code}"
-                })
-        except Exception as e:
-            self.test_results.append({
-                "test": "Low Energy Recommendations", 
-                "status": "FAIL", 
-                "reason": f"Exception: {e}"
-            })
-                
-    def test_invalid_session_id(self):
-        """Test 4: Invalid session_id should return 404"""
-        print("\n🧪 TEST 4: Invalid Session ID")
-        
-        fake_session_id = str(uuid.uuid4())
-        try:
-            response = requests.get(f"{API_BASE}/during-ride/recommendations/{fake_session_id}", timeout=10)
-            if response.status_code == 404:
-                self.test_results.append({"test": "Invalid Session ID", "status": "PASS"})
-                print("   ✅ Correctly returned 404 for invalid session ID")
-            else:
-                self.test_results.append({
-                    "test": "Invalid Session ID", 
-                    "status": "FAIL", 
-                    "reason": f"Expected 404, got {response.status_code}"
-                })
-        except Exception as e:
-            self.test_results.append({
-                "test": "Invalid Session ID", 
-                "status": "FAIL", 
-                "reason": f"Exception: {e}"
-            })
-                
-    def test_tool_access_tracking_regular(self):
-        """Test 5: Track regular tool access and verify limit enforcement"""
-        print("\n🧪 TEST 5: Regular Tool Access Tracking")
-        
-        sessions = self.get_existing_sessions()
-        if not sessions:
-            self.test_results.append({"test": "Regular Tool Access", "status": "SKIP", "reason": "No sessions available"})
-            return
+            headers = self.get_auth_headers()
+            headers["Content-Type"] = "application/json"
             
-        session_id = sessions[0]['id']
-        
-        # Reset session tool counts by updating it
-        self.update_session_for_testing(session_id, anxiety_level=5, confidence_level=5, rider_energy_level=5)
-        
-        # Test first regular tool access
-        tool_id = "test-tool-1"
-        tool_name = "Test Breathing Tool"
-        
-        try:
-            response = requests.post(
-                f"{API_BASE}/during-ride/track-tool-access/{session_id}",
-                params={"tool_id": tool_id, "tool_name": tool_name, "is_emergency": False},
-                timeout=10
-            )
+            # Test updating to premium subscription
+            update_data = {
+                "subscription_tier": "premium",
+                "subscription_status": "active",
+                "subscription_start_date": datetime.utcnow().isoformat(),
+                "subscription_end_date": (datetime.utcnow() + timedelta(days=30)).isoformat()
+            }
+            
+            response = self.session.post(f"{BACKEND_URL}/subscriptions/update", 
+                                       headers=headers, 
+                                       json=update_data)
+            
             if response.status_code == 200:
                 result = response.json()
                 
-                if result.get('success') and result.get('regular_tools_remaining') == 1:
-                    print("   ✅ First regular tool access successful")
-                    
-                    # Test second regular tool access
-                    response2 = requests.post(
-                        f"{API_BASE}/during-ride/track-tool-access/{session_id}",
-                        params={"tool_id": "test-tool-2", "tool_name": "Test Confidence Tool", "is_emergency": False},
-                        timeout=10
-                    )
-                    if response2.status_code == 200:
-                        result2 = response2.json()
-                        
-                        if result2.get('regular_tools_remaining') == 0:
-                            print("   ✅ Second regular tool access successful")
-                            
-                            # Test third regular tool access (should fail)
-                            response3 = requests.post(
-                                f"{API_BASE}/during-ride/track-tool-access/{session_id}",
-                                params={"tool_id": "test-tool-3", "tool_name": "Test Third Tool", "is_emergency": False},
-                                timeout=10
-                            )
-                            if response3.status_code == 400:
-                                error_text = response3.text
-                                if "Tool limit reached" in error_text:
-                                    print("   ✅ Third regular tool correctly rejected (limit reached)")
-                                    self.test_results.append({"test": "Regular Tool Access", "status": "PASS"})
-                                else:
-                                    self.test_results.append({
-                                        "test": "Regular Tool Access", 
-                                        "status": "FAIL", 
-                                        "reason": f"Wrong error message: {error_text}"
-                                    })
-                            else:
-                                self.test_results.append({
-                                    "test": "Regular Tool Access", 
-                                    "status": "FAIL", 
-                                    "reason": f"Third tool should be rejected, got {response3.status_code}"
-                                })
-                        else:
-                            self.test_results.append({
-                                "test": "Regular Tool Access", 
-                                "status": "FAIL", 
-                                "reason": f"Expected 0 remaining tools, got {result2.get('regular_tools_remaining')}"
-                            })
-                    else:
-                        self.test_results.append({
-                            "test": "Regular Tool Access", 
-                            "status": "FAIL", 
-                            "reason": f"Second tool access failed: {response2.status_code}"
-                        })
-                else:
-                    self.test_results.append({
-                        "test": "Regular Tool Access", 
-                        "status": "FAIL", 
-                        "reason": f"First tool access failed or wrong remaining count: {result}"
-                    })
-            else:
-                self.test_results.append({
-                    "test": "Regular Tool Access", 
-                    "status": "FAIL", 
-                    "reason": f"First tool access failed: {response.status_code}"
-                })
-        except Exception as e:
-            self.test_results.append({
-                "test": "Regular Tool Access", 
-                "status": "FAIL", 
-                "reason": f"Exception: {e}"
-            })
+                # Verify response structure
+                if not result.get("success"):
+                    self.log_test("Subscription Update (Auth)", "FAIL", "Success field should be True")
+                    return False
                 
-    def test_emergency_tool_access(self):
-        """Test 6: Emergency tool access should always work (no limits)"""
-        print("\n🧪 TEST 6: Emergency Tool Access")
-        
-        sessions = self.get_existing_sessions()
-        if not sessions:
-            self.test_results.append({"test": "Emergency Tool Access", "status": "SKIP", "reason": "No sessions available"})
-            return
-            
-        session_id = sessions[0]['id']
-        
-        # Test multiple emergency tool accesses
-        emergency_accesses = []
-        
+                if result.get("subscription_tier") != "premium":
+                    self.log_test("Subscription Update (Auth)", "FAIL", f"Expected premium tier, got: {result.get('subscription_tier')}")
+                    return False
+                
+                if result.get("subscription_status") != "active":
+                    self.log_test("Subscription Update (Auth)", "FAIL", f"Expected active status, got: {result.get('subscription_status')}")
+                    return False
+                
+                self.log_test("Subscription Update (Auth)", "PASS", f"Updated to {result['subscription_tier']} tier with {result['subscription_status']} status")
+                return True
+                
+            else:
+                self.log_test("Subscription Update (Auth)", "FAIL", f"Status: {response.status_code}, Response: {response.text}")
+                return False
+                
+        except Exception as e:
+            self.log_test("Subscription Update (Auth)", "FAIL", f"Exception: {str(e)}")
+            return False
+
+    def test_revenuecat_webhook_initial_purchase(self):
+        """Test RevenueCat webhook with INITIAL_PURCHASE event"""
         try:
-            for i in range(3):  # Test 3 emergency accesses
-                response = requests.post(
-                    f"{API_BASE}/during-ride/track-tool-access/{session_id}",
-                    params={"tool_id": f"emergency-tool-{i}", "tool_name": f"Emergency Tool {i+1}", "is_emergency": True},
-                    timeout=10
-                )
-                if response.status_code == 200:
-                    result = response.json()
-                    emergency_accesses.append(result.get('total_emergency_accesses', 0))
-                    print(f"   ✅ Emergency tool {i+1} access successful")
-                else:
-                    self.test_results.append({
-                        "test": "Emergency Tool Access", 
-                        "status": "FAIL", 
-                        "reason": f"Emergency tool {i+1} access failed: {response.status_code}"
-                    })
-                    return
-                    
-            # Verify emergency count incremented correctly
-            if len(emergency_accesses) == 3 and emergency_accesses[-1] >= 3:
-                self.test_results.append({"test": "Emergency Tool Access", "status": "PASS"})
-                print(f"   ✅ All emergency tools accessed successfully, final count: {emergency_accesses[-1]}")
-            else:
-                self.test_results.append({
-                    "test": "Emergency Tool Access", 
-                    "status": "FAIL", 
-                    "reason": f"Emergency count tracking failed: {emergency_accesses}"
-                })
-        except Exception as e:
-            self.test_results.append({
-                "test": "Emergency Tool Access", 
-                "status": "FAIL", 
-                "reason": f"Exception: {e}"
-            })
-            
-    def test_session_model_updates(self):
-        """Test 7: Verify session model supports new fields"""
-        print("\n🧪 TEST 7: Session Model Updates")
-        
-        sessions = self.get_existing_sessions()
-        if not sessions:
-            self.test_results.append({"test": "Session Model Updates", "status": "SKIP", "reason": "No sessions available"})
-            return
-            
-        session = sessions[0]
-        
-        # Check for new fields in session model
-        required_fields = ['rider_energy_level', 'tools_accessed_during_ride', 'regular_tools_count', 'emergency_tools_count']
-        missing_fields = []
-        
-        for field in required_fields:
-            if field not in session:
-                missing_fields.append(field)
-                
-        if missing_fields:
-            print(f"   ⚠️  Missing fields in session model: {missing_fields}")
-            # This might be expected for older sessions, so we'll check if we can update with these fields
-            
-            session_id = session['id']
-            update_data = {
-                "rider_energy_level": 7,
-                "notes": "Testing new fields support"
+            webhook_data = {
+                "event": {
+                    "type": "INITIAL_PURCHASE",
+                    "app_user_id": str(uuid.uuid4()),  # Random user ID
+                    "subscriber_info": {
+                        "entitlements": {
+                            "premium": {
+                                "is_active": True,
+                                "product_identifier": "premium_monthly"
+                            }
+                        }
+                    }
+                }
             }
             
-            try:
-                response = requests.patch(f"{API_BASE}/sessions/{session_id}", json=update_data, timeout=10)
-                if response.status_code == 200:
-                    updated_session = response.json()
-                    if 'rider_energy_level' in updated_session and updated_session['rider_energy_level'] == 7:
-                        self.test_results.append({"test": "Session Model Updates", "status": "PASS"})
-                        print("   ✅ Session model supports rider_energy_level field")
-                    else:
-                        self.test_results.append({
-                            "test": "Session Model Updates", 
-                            "status": "FAIL", 
-                            "reason": "rider_energy_level not updated correctly"
-                        })
+            response = self.session.post(f"{BACKEND_URL}/subscriptions/webhook/revenuecat", 
+                                       json=webhook_data)
+            
+            if response.status_code == 200:
+                result = response.json()
+                if result.get("success"):
+                    self.log_test("RevenueCat Webhook (INITIAL_PURCHASE)", "PASS", "Webhook processed successfully")
+                    return True
                 else:
-                    self.test_results.append({
-                        "test": "Session Model Updates", 
-                        "status": "FAIL", 
-                        "reason": f"Session update failed: {response.status_code}"
-                    })
-            except Exception as e:
-                self.test_results.append({
-                    "test": "Session Model Updates", 
-                    "status": "FAIL", 
-                    "reason": f"Exception: {e}"
-                })
-        else:
-            self.test_results.append({"test": "Session Model Updates", "status": "PASS"})
-            print("   ✅ All required fields present in session model")
-            
-    def run_all_tests(self):
-        """Run all during-ride smart tool access tests"""
-        print("🚀 Starting During-Ride Smart Tool Access System Tests")
-        print(f"🔗 Testing against: {API_BASE}")
-        
-        # Run all tests
-        self.test_smart_recommendations_high_anxiety()
-        self.test_smart_recommendations_low_confidence()
-        self.test_smart_recommendations_low_energy()
-        self.test_invalid_session_id()
-        self.test_tool_access_tracking_regular()
-        self.test_emergency_tool_access()
-        self.test_session_model_updates()
-            
-        # Print summary
-        print("\n" + "="*60)
-        print("📊 TEST RESULTS SUMMARY")
-        print("="*60)
-        
-        passed = sum(1 for result in self.test_results if result['status'] == 'PASS')
-        failed = sum(1 for result in self.test_results if result['status'] == 'FAIL')
-        skipped = sum(1 for result in self.test_results if result['status'] == 'SKIP')
-        
-        for result in self.test_results:
-            status_icon = "✅" if result['status'] == 'PASS' else "❌" if result['status'] == 'FAIL' else "⏭️"
-            print(f"{status_icon} {result['test']}: {result['status']}")
-            if result['status'] == 'FAIL':
-                print(f"   Reason: {result.get('reason', 'Unknown')}")
-            elif result['status'] == 'PASS' and 'details' in result:
-                print(f"   Details: {result['details']}")
+                    self.log_test("RevenueCat Webhook (INITIAL_PURCHASE)", "FAIL", f"Webhook failed: {result}")
+                    return False
+            else:
+                self.log_test("RevenueCat Webhook (INITIAL_PURCHASE)", "FAIL", f"Status: {response.status_code}, Response: {response.text}")
+                return False
                 
-        print(f"\n📈 TOTAL: {len(self.test_results)} tests | ✅ {passed} passed | ❌ {failed} failed | ⏭️ {skipped} skipped")
-        
-        return {
-            'total': len(self.test_results),
-            'passed': passed,
-            'failed': failed,
-            'skipped': skipped,
-            'results': self.test_results
-        }
+        except Exception as e:
+            self.log_test("RevenueCat Webhook (INITIAL_PURCHASE)", "FAIL", f"Exception: {str(e)}")
+            return False
 
-def main():
-    """Main test runner"""
-    test_suite = DuringRideTestSuite()
-    results = test_suite.run_all_tests()
-    
-    # Return exit code based on results
-    if results['failed'] > 0:
-        print(f"\n❌ Tests failed: {results['failed']} failures detected")
-        return 1
-    else:
-        print(f"\n✅ All tests passed successfully!")
-        return 0
+    def test_revenuecat_webhook_renewal(self):
+        """Test RevenueCat webhook with RENEWAL event"""
+        try:
+            webhook_data = {
+                "event": {
+                    "type": "RENEWAL",
+                    "app_user_id": str(uuid.uuid4()),  # Random user ID
+                    "subscriber_info": {
+                        "entitlements": {
+                            "standard": {
+                                "is_active": True,
+                                "product_identifier": "standard_monthly"
+                            }
+                        }
+                    }
+                }
+            }
+            
+            response = self.session.post(f"{BACKEND_URL}/subscriptions/webhook/revenuecat", 
+                                       json=webhook_data)
+            
+            if response.status_code == 200:
+                result = response.json()
+                if result.get("success"):
+                    self.log_test("RevenueCat Webhook (RENEWAL)", "PASS", "Renewal webhook processed successfully")
+                    return True
+                else:
+                    self.log_test("RevenueCat Webhook (RENEWAL)", "FAIL", f"Webhook failed: {result}")
+                    return False
+            else:
+                self.log_test("RevenueCat Webhook (RENEWAL)", "FAIL", f"Status: {response.status_code}, Response: {response.text}")
+                return False
+                
+        except Exception as e:
+            self.log_test("RevenueCat Webhook (RENEWAL)", "FAIL", f"Exception: {str(e)}")
+            return False
+
+    def test_revenuecat_webhook_cancellation(self):
+        """Test RevenueCat webhook with CANCELLATION event"""
+        try:
+            webhook_data = {
+                "event": {
+                    "type": "CANCELLATION",
+                    "app_user_id": str(uuid.uuid4()),  # Random user ID
+                    "subscriber_info": {
+                        "entitlements": {}
+                    }
+                }
+            }
+            
+            response = self.session.post(f"{BACKEND_URL}/subscriptions/webhook/revenuecat", 
+                                       json=webhook_data)
+            
+            if response.status_code == 200:
+                result = response.json()
+                if result.get("success"):
+                    self.log_test("RevenueCat Webhook (CANCELLATION)", "PASS", "Cancellation webhook processed successfully")
+                    return True
+                else:
+                    self.log_test("RevenueCat Webhook (CANCELLATION)", "FAIL", f"Webhook failed: {result}")
+                    return False
+            else:
+                self.log_test("RevenueCat Webhook (CANCELLATION)", "FAIL", f"Status: {response.status_code}, Response: {response.text}")
+                return False
+                
+        except Exception as e:
+            self.log_test("RevenueCat Webhook (CANCELLATION)", "FAIL", f"Exception: {str(e)}")
+            return False
+
+    def test_revenuecat_webhook_unknown_user(self):
+        """Test RevenueCat webhook with unknown user (should return 200 to prevent retries)"""
+        try:
+            webhook_data = {
+                "event": {
+                    "type": "INITIAL_PURCHASE",
+                    "app_user_id": "unknown_user_12345",  # Non-existent user
+                    "subscriber_info": {
+                        "entitlements": {
+                            "premium": {
+                                "is_active": True
+                            }
+                        }
+                    }
+                }
+            }
+            
+            response = self.session.post(f"{BACKEND_URL}/subscriptions/webhook/revenuecat", 
+                                       json=webhook_data)
+            
+            # Should return 200 even for unknown users to prevent RevenueCat retries
+            if response.status_code == 200:
+                result = response.json()
+                self.log_test("RevenueCat Webhook (Unknown User)", "PASS", "Returns 200 for unknown users to prevent retries")
+                return True
+            else:
+                self.log_test("RevenueCat Webhook (Unknown User)", "FAIL", f"Status: {response.status_code}, should return 200 for unknown users")
+                return False
+                
+        except Exception as e:
+            self.log_test("RevenueCat Webhook (Unknown User)", "FAIL", f"Exception: {str(e)}")
+            return False
+
+    def test_admin_feedback_n_plus_one_fix(self):
+        """Test POST /api/admin/feedback endpoint with N+1 query fix"""
+        try:
+            # First create some test feedback data by creating a session and feedback
+            headers = self.get_auth_headers()
+            headers["Content-Type"] = "application/json"
+            
+            # Create a test session first
+            session_data = {
+                "session_type": "pre-ride",
+                "ride_type": "training",
+                "anxiety_level": 5,
+                "confidence_level": 7,
+                "notes": "Test session for feedback"
+            }
+            
+            session_response = self.session.post(f"{BACKEND_URL}/sessions", 
+                                               headers=headers, 
+                                               json=session_data)
+            
+            if session_response.status_code != 200:
+                self.log_test("Admin Feedback (N+1 Fix)", "FAIL", f"Failed to create test session: {session_response.status_code}")
+                return False
+            
+            session_id = session_response.json()["id"]
+            
+            # Create feedback for the session
+            feedback_data = {
+                "session_id": session_id,
+                "rating": 5,
+                "comment": "Great session, very helpful tools!"
+            }
+            
+            feedback_response = self.session.post(f"{BACKEND_URL}/feedback", 
+                                                headers=headers, 
+                                                json=feedback_data)
+            
+            if feedback_response.status_code != 200:
+                self.log_test("Admin Feedback (N+1 Fix)", "FAIL", f"Failed to create test feedback: {feedback_response.status_code}")
+                return False
+            
+            # Now test the admin feedback endpoint
+            admin_data = {"password": ADMIN_PASSWORD}
+            
+            response = self.session.post(f"{BACKEND_URL}/admin/feedback", json=admin_data)
+            
+            if response.status_code == 200:
+                feedback_list = response.json()
+                
+                # Verify it's a list
+                if not isinstance(feedback_list, list):
+                    self.log_test("Admin Feedback (N+1 Fix)", "FAIL", "Response should be a list")
+                    return False
+                
+                # Check if our test feedback is in the results
+                test_feedback = None
+                for feedback in feedback_list:
+                    if feedback.get("session_id") == session_id:
+                        test_feedback = feedback
+                        break
+                
+                if not test_feedback:
+                    self.log_test("Admin Feedback (N+1 Fix)", "FAIL", "Test feedback not found in results")
+                    return False
+                
+                # Verify the aggregated data includes user and session info (N+1 fix)
+                required_fields = ["id", "user_id", "session_id", "rating", "comment", 
+                                 "user_email", "user_name", "session_type", "ride_type"]
+                
+                for field in required_fields:
+                    if field not in test_feedback:
+                        self.log_test("Admin Feedback (N+1 Fix)", "FAIL", f"Missing aggregated field: {field}")
+                        return False
+                
+                # Verify the user info is correctly joined
+                if test_feedback["user_email"] != self.test_user_email:
+                    self.log_test("Admin Feedback (N+1 Fix)", "FAIL", f"User email mismatch: expected {self.test_user_email}, got {test_feedback['user_email']}")
+                    return False
+                
+                if test_feedback["session_type"] != "pre-ride":
+                    self.log_test("Admin Feedback (N+1 Fix)", "FAIL", f"Session type mismatch: expected pre-ride, got {test_feedback['session_type']}")
+                    return False
+                
+                self.log_test("Admin Feedback (N+1 Fix)", "PASS", f"N+1 query fix working - aggregated {len(feedback_list)} feedback entries with user/session data")
+                return True
+                
+            elif response.status_code == 401:
+                self.log_test("Admin Feedback (N+1 Fix)", "FAIL", "Invalid admin password")
+                return False
+            else:
+                self.log_test("Admin Feedback (N+1 Fix)", "FAIL", f"Status: {response.status_code}, Response: {response.text}")
+                return False
+                
+        except Exception as e:
+            self.log_test("Admin Feedback (N+1 Fix)", "FAIL", f"Exception: {str(e)}")
+            return False
+
+    def test_unauthenticated_access(self):
+        """Test that protected endpoints properly reject unauthenticated requests"""
+        try:
+            # Test subscription status without auth
+            response = self.session.get(f"{BACKEND_URL}/subscriptions/status")
+            if response.status_code != 403:
+                self.log_test("Unauthenticated Access", "FAIL", f"Subscription status should return 403 without auth, got {response.status_code}")
+                return False
+            
+            # Test subscription update without auth
+            response = self.session.post(f"{BACKEND_URL}/subscriptions/update", 
+                                       json={"subscription_tier": "premium", "subscription_status": "active"})
+            if response.status_code != 403:
+                self.log_test("Unauthenticated Access", "FAIL", f"Subscription update should return 403 without auth, got {response.status_code}")
+                return False
+            
+            self.log_test("Unauthenticated Access", "PASS", "Protected endpoints properly reject unauthenticated requests")
+            return True
+            
+        except Exception as e:
+            self.log_test("Unauthenticated Access", "FAIL", f"Exception: {str(e)}")
+            return False
+
+    def run_all_tests(self):
+        """Run all subscription and payment integration tests"""
+        print("=" * 80)
+        print("🧪 EQUIMIND SUBSCRIPTION & PAYMENT INTEGRATION TESTS")
+        print("=" * 80)
+        print(f"Backend URL: {BACKEND_URL}")
+        print(f"Test User: {self.test_user_email}")
+        print("=" * 80)
+        print()
+        
+        results = {}
+        
+        # Test 1: Register test user for authenticated endpoints
+        results["user_registration"] = self.register_test_user()
+        
+        # Test 2: Subscription tiers endpoint
+        results["subscription_tiers"] = self.test_subscription_tiers()
+        
+        # Test 3: RevenueCat webhook endpoints
+        results["webhook_initial_purchase"] = self.test_revenuecat_webhook_initial_purchase()
+        results["webhook_renewal"] = self.test_revenuecat_webhook_renewal()
+        results["webhook_cancellation"] = self.test_revenuecat_webhook_cancellation()
+        results["webhook_unknown_user"] = self.test_revenuecat_webhook_unknown_user()
+        
+        # Test 4: Admin feedback endpoint (N+1 query fix)
+        results["admin_feedback_n_plus_one"] = self.test_admin_feedback_n_plus_one_fix()
+        
+        # Test 5: Authenticated subscription endpoints (only if user registration succeeded)
+        if results["user_registration"]:
+            results["subscription_status_auth"] = self.test_subscription_status_authenticated()
+            results["subscription_update_auth"] = self.test_subscription_update_authenticated()
+        
+        # Test 6: Unauthenticated access protection
+        results["unauthenticated_access"] = self.test_unauthenticated_access()
+        
+        # Summary
+        print("=" * 80)
+        print("📊 TEST SUMMARY")
+        print("=" * 80)
+        
+        passed = sum(1 for result in results.values() if result)
+        total = len(results)
+        
+        for test_name, result in results.items():
+            status = "✅ PASS" if result else "❌ FAIL"
+            print(f"{status} {test_name.replace('_', ' ').title()}")
+        
+        print()
+        print(f"Results: {passed}/{total} tests passed ({(passed/total)*100:.1f}%)")
+        
+        if passed == total:
+            print("🎉 ALL TESTS PASSED - Subscription and payment integration is working correctly!")
+        else:
+            print(f"⚠️  {total - passed} test(s) failed - Review the failures above")
+        
+        print("=" * 80)
+        
+        return passed == total
 
 if __name__ == "__main__":
-    exit_code = main()
-    exit(exit_code)
+    tester = EquiMindAPITester()
+    success = tester.run_all_tests()
+    exit(0 if success else 1)
