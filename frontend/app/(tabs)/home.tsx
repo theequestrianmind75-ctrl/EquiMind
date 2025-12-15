@@ -459,17 +459,11 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#fef3c7',
   },
-  upgradeHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 12,
-    marginBottom: 16,
-  },
   upgradeTitle: {
     fontSize: 20,
     fontWeight: '700',
     color: '#000000',
-    flex: 1,
+    marginBottom: 16,
   },
   upgradeDescription: {
     fontSize: 15,
