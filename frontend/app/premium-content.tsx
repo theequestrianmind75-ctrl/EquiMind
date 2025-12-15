@@ -8,6 +8,7 @@ import {
   ActivityIndicator,
   Linking,
   Alert,
+  Image,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
@@ -15,10 +16,84 @@ import { Ionicons } from '@expo/vector-icons';
 import * as WebBrowser from 'expo-web-browser';
 import api from '../lib/api';
 
+// Thinkific site configuration
+const THINKIFIC_URL = 'https://kristi-s-site-43fb.thinkific.com';
+
+// Course catalog - matches your Thinkific courses
+const COURSES = [
+  {
+    id: 'equestrian-mindset',
+    title: 'The Equestrian Mindset',
+    description: 'Master the mental game of riding with proven psychological techniques',
+    duration: '6 modules',
+    icon: 'brain',
+    color: '#375B50',
+    url: `${THINKIFIC_URL}/courses/the-equestrian-mindset`,
+  },
+  {
+    id: 'perfectionism',
+    title: 'Break Your Perfectionism',
+    description: 'Overcome perfectionism to ride with confidence and joy',
+    duration: '4 modules',
+    icon: 'heart',
+    color: '#ef4444',
+    url: `${THINKIFIC_URL}/courses/break-your-perfectionism`,
+  },
+  {
+    id: 'emotional-riding',
+    title: "When You Shouldn't Ride Due to Emotions",
+    description: 'Learn to recognize when emotions affect your riding safety',
+    duration: '3 modules',
+    icon: 'alert-circle',
+    color: '#f59e0b',
+    url: `${THINKIFIC_URL}/courses/emotional-riding`,
+  },
+];
+
+// Digital downloads
+const DOWNLOADS = [
+  {
+    id: 'anxiety-workbook',
+    title: 'Rider Anxiety Workbook',
+    description: 'Comprehensive exercises to manage riding anxiety',
+    icon: 'document-text',
+    url: `${THINKIFIC_URL}/products/rider-anxiety-workbook`,
+  },
+  {
+    id: 'confidence-guide',
+    title: 'Confidence Building Guide',
+    description: 'Step-by-step guide to build unshakeable confidence',
+    icon: 'shield-checkmark',
+    url: `${THINKIFIC_URL}/products/confidence-guide`,
+  },
+  {
+    id: 'visualization-audio',
+    title: 'Visualization Audio Sessions',
+    description: 'Guided visualization for competition prep',
+    icon: 'headset',
+    url: `${THINKIFIC_URL}/products/visualization-audio`,
+  },
+  {
+    id: 'journal-templates',
+    title: 'Riding Journal Templates',
+    description: 'Track your mental and physical progress',
+    icon: 'journal',
+    url: `${THINKIFIC_URL}/products/journal-templates`,
+  },
+];
+
+type SubscriptionStatus = {
+  user_id: string;
+  subscription_tier: string;
+  subscription_status: string;
+  has_access: boolean;
+} | null;
+
 export default function PremiumContent() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
-  const [subscriptionStatus, setSubscriptionStatus] = useState(null);
+  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>(null);
+  const [activeTab, setActiveTab] = useState<'courses' | 'downloads'>('courses');
 
   useEffect(() => {
     checkSubscription();
@@ -34,8 +109,8 @@ export default function PremiumContent() {
           'Premium Required',
           'This content is only available with a Premium subscription ($35/month)',
           [
-            { text: 'Upgrade', onPress: () => router.push('/subscription') },
-            { text: 'Cancel', onPress: () => router.back() },
+            { text: 'Upgrade Now', onPress: () => router.push('/subscription') },
+            { text: 'Maybe Later', onPress: () => router.back() },
           ]
         );
       }
@@ -46,18 +121,40 @@ export default function PremiumContent() {
     }
   };
 
-  const openThinkific = async () => {
-    try {
-      await WebBrowser.openBrowserAsync(
-        'https://kristi-s-site-43fb.thinkific.com/bundles/my-membership',
-        {
-          presentationStyle: WebBrowser.WebBrowserPresentationStyle.FULL_SCREEN,
-          controlsColor: '#375B50',
-        }
+  const openThinkificContent = async (url: string, title: string) => {
+    if (!isPremium) {
+      Alert.alert(
+        'Premium Required',
+        `"${title}" requires a Premium subscription.`,
+        [
+          { text: 'Upgrade', onPress: () => router.push('/subscription') },
+          { text: 'Cancel', style: 'cancel' },
+        ]
       );
+      return;
+    }
+
+    try {
+      await WebBrowser.openBrowserAsync(url, {
+        presentationStyle: WebBrowser.WebBrowserPresentationStyle.FULL_SCREEN,
+        controlsColor: '#375B50',
+        toolbarColor: '#ffffff',
+      });
     } catch (error) {
-      console.error('Error opening Thinkific:', error);
-      Alert.alert('Error', 'Failed to open course content');
+      console.error('Error opening content:', error);
+      // Fallback to Linking if WebBrowser fails
+      Linking.openURL(url);
+    }
+  };
+
+  const openThinkificHome = async () => {
+    try {
+      await WebBrowser.openBrowserAsync(THINKIFIC_URL, {
+        presentationStyle: WebBrowser.WebBrowserPresentationStyle.FULL_SCREEN,
+        controlsColor: '#375B50',
+      });
+    } catch (error) {
+      Linking.openURL(THINKIFIC_URL);
     }
   };
 
@@ -77,6 +174,7 @@ export default function PremiumContent() {
       <SafeAreaView style={styles.container}>
         <View style={styles.loadingContainer}>
           <ActivityIndicator size="large" color="#375B50" />
+          <Text style={styles.loadingText}>Loading premium content...</Text>
         </View>
       </SafeAreaView>
     );
@@ -91,82 +189,151 @@ export default function PremiumContent() {
           <Ionicons name="arrow-back" size={24} color="#000000" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Premium Content</Text>
-        <View style={{ width: 40 }} />
+        <TouchableOpacity onPress={openThinkificHome} style={styles.backButton}>
+          <Ionicons name="globe-outline" size={24} color="#375B50" />
+        </TouchableOpacity>
       </View>
 
       <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
-        {/* Subscription Status */}
-        <View style={styles.statusCard}>
-          <View style={styles.statusHeader}>
+        {/* Subscription Status Banner */}
+        <View style={[styles.statusBanner, isPremium ? styles.statusBannerPremium : styles.statusBannerStandard]}>
+          <View style={styles.statusContent}>
             <Ionicons 
-              name={isPremium ? "checkmark-circle" : "lock-closed"} 
-              size={32} 
-              color={isPremium ? "#10b981" : "#f59e0b"} 
+              name={isPremium ? "star" : "lock-closed"} 
+              size={28} 
+              color={isPremium ? "#f59e0b" : "#ffffff"} 
             />
             <View style={styles.statusTextContainer}>
               <Text style={styles.statusTitle}>
-                {isPremium ? 'Premium Active' : 'Standard Plan'}
+                {isPremium ? '⭐ Premium Member' : '🔒 Standard Plan'}
               </Text>
               <Text style={styles.statusSubtitle}>
                 {isPremium 
-                  ? 'You have access to all premium content' 
-                  : 'Upgrade to Premium for exclusive content'}
+                  ? 'Full access to all courses & downloads' 
+                  : 'Upgrade to unlock all content'}
               </Text>
             </View>
           </View>
           {!isPremium && (
             <TouchableOpacity 
-              style={styles.upgradeButton}
+              style={styles.upgradeBannerButton}
               onPress={() => router.push('/subscription')}
             >
-              <Text style={styles.upgradeButtonText}>Upgrade to Premium</Text>
+              <Text style={styles.upgradeBannerButtonText}>Upgrade</Text>
+              <Ionicons name="arrow-forward" size={16} color="#375B50" />
             </TouchableOpacity>
           )}
         </View>
 
-        {/* Courses & Downloads Section */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Video Courses & Digital Downloads</Text>
-          <Text style={styles.sectionDescription}>
-            Access all courses, guides, and training materials
-          </Text>
-
+        {/* Tab Navigation */}
+        <View style={styles.tabContainer}>
           <TouchableOpacity
-            style={[styles.contentCard, !isPremium && styles.contentCardLocked]}
-            onPress={isPremium ? openThinkific : () => router.push('/subscription')}
+            style={[styles.tab, activeTab === 'courses' && styles.tabActive]}
+            onPress={() => setActiveTab('courses')}
           >
-            <View style={styles.contentIcon}>
-              <Ionicons name="school" size={32} color="#375B50" />
-            </View>
-            <View style={styles.contentInfo}>
-              <Text style={styles.contentTitle}>The Equestrian Mind Courses</Text>
-              <Text style={styles.contentDescription}>
-                • The Equestrian Mindset{'\n'}
-                • Break your Perfectionism{'\n'}
-                • When You Shouldn&apos;t Ride Due to Emotions{'\n'}
-                • Plus 7 Digital Downloads & Guides
-              </Text>
-            </View>
             <Ionicons 
-              name={isPremium ? "arrow-forward" : "lock-closed"} 
-              size={24} 
-              color={isPremium ? "#375B50" : "#cbd5e0"} 
+              name="school" 
+              size={20} 
+              color={activeTab === 'courses' ? '#375B50' : '#718096'} 
             />
+            <Text style={[styles.tabText, activeTab === 'courses' && styles.tabTextActive]}>
+              Courses
+            </Text>
           </TouchableOpacity>
-
-          {!isPremium && (
-            <View style={styles.lockMessage}>
-              <Ionicons name="information-circle" size={20} color="#f59e0b" />
-              <Text style={styles.lockMessageText}>
-                Unlock with Premium ($35/month)
-              </Text>
-            </View>
-          )}
+          <TouchableOpacity
+            style={[styles.tab, activeTab === 'downloads' && styles.tabActive]}
+            onPress={() => setActiveTab('downloads')}
+          >
+            <Ionicons 
+              name="download" 
+              size={20} 
+              color={activeTab === 'downloads' ? '#375B50' : '#718096'} 
+            />
+            <Text style={[styles.tabText, activeTab === 'downloads' && styles.tabTextActive]}>
+              Downloads
+            </Text>
+          </TouchableOpacity>
         </View>
 
-        {/* Book Section */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>The Equestrian Mind Book</Text>
+        {/* Courses Tab */}
+        {activeTab === 'courses' && (
+          <View style={styles.contentSection}>
+            <Text style={styles.sectionTitle}>Video Courses</Text>
+            <Text style={styles.sectionDescription}>
+              In-depth training programs for mental mastery
+            </Text>
+
+            {COURSES.map((course) => (
+              <TouchableOpacity
+                key={course.id}
+                style={[styles.courseCard, !isPremium && styles.cardLocked]}
+                onPress={() => openThinkificContent(course.url, course.title)}
+                activeOpacity={0.7}
+              >
+                <View style={[styles.courseIcon, { backgroundColor: course.color + '20' }]}>
+                  <Ionicons name={course.icon as any} size={28} color={course.color} />
+                </View>
+                <View style={styles.courseInfo}>
+                  <Text style={styles.courseTitle}>{course.title}</Text>
+                  <Text style={styles.courseDescription}>{course.description}</Text>
+                  <View style={styles.courseMeta}>
+                    <Ionicons name="time-outline" size={14} color="#718096" />
+                    <Text style={styles.courseMetaText}>{course.duration}</Text>
+                  </View>
+                </View>
+                <Ionicons 
+                  name={isPremium ? "play-circle" : "lock-closed"} 
+                  size={28} 
+                  color={isPremium ? course.color : "#cbd5e0"} 
+                />
+              </TouchableOpacity>
+            ))}
+
+            {/* Thinkific Note */}
+            <View style={styles.noteCard}>
+              <Ionicons name="information-circle" size={20} color="#3b82f6" />
+              <Text style={styles.noteText}>
+                Courses are hosted on Thinkific. You'll create a free account there to access your content.
+              </Text>
+            </View>
+          </View>
+        )}
+
+        {/* Downloads Tab */}
+        {activeTab === 'downloads' && (
+          <View style={styles.contentSection}>
+            <Text style={styles.sectionTitle}>Digital Downloads</Text>
+            <Text style={styles.sectionDescription}>
+              Guides, workbooks, and audio sessions
+            </Text>
+
+            <View style={styles.downloadsGrid}>
+              {DOWNLOADS.map((download) => (
+                <TouchableOpacity
+                  key={download.id}
+                  style={[styles.downloadCard, !isPremium && styles.cardLocked]}
+                  onPress={() => openThinkificContent(download.url, download.title)}
+                  activeOpacity={0.7}
+                >
+                  <View style={styles.downloadIcon}>
+                    <Ionicons name={download.icon as any} size={32} color="#375B50" />
+                  </View>
+                  <Text style={styles.downloadTitle}>{download.title}</Text>
+                  <Text style={styles.downloadDescription}>{download.description}</Text>
+                  {!isPremium && (
+                    <View style={styles.lockBadge}>
+                      <Ionicons name="lock-closed" size={12} color="#ffffff" />
+                    </View>
+                  )}
+                </TouchableOpacity>
+              ))}
+            </View>
+          </View>
+        )}
+
+        {/* Book Section - Always Visible */}
+        <View style={styles.bookSection}>
+          <Text style={styles.sectionTitle}>📚 The Equestrian Mind Book</Text>
           <Text style={styles.sectionDescription}>
             Available separately on Amazon
           </Text>
@@ -174,47 +341,45 @@ export default function PremiumContent() {
           <TouchableOpacity
             style={styles.bookCard}
             onPress={openAmazonBook}
+            activeOpacity={0.8}
           >
-            <View style={styles.bookIcon}>
-              <Ionicons name="book" size={32} color="#ff9900" />
-            </View>
-            <View style={styles.contentInfo}>
-              <Text style={styles.contentTitle}>Master Your Ride</Text>
-              <Text style={styles.contentDescription}>
-                The complete guide to mental mastery in equestrian sports
-              </Text>
-              <View style={styles.priceTag}>
-                <Text style={styles.priceText}>$25 on Amazon</Text>
+            <View style={styles.bookContent}>
+              <View style={styles.bookIcon}>
+                <Ionicons name="book" size={40} color="#ff9900" />
+              </View>
+              <View style={styles.bookInfo}>
+                <Text style={styles.bookTitle}>The Equestrian Mind</Text>
+                <Text style={styles.bookSubtitle}>
+                  Mental performance strategies for riders who want to ride like a champion
+                </Text>
+                <View style={styles.bookPriceRow}>
+                  <View style={styles.priceTag}>
+                    <Text style={styles.priceText}>$25</Text>
+                  </View>
+                  <Text style={styles.amazonText}>on Amazon</Text>
+                </View>
               </View>
             </View>
-            <Ionicons name="arrow-forward" size={24} color="#ff9900" />
+            <View style={styles.bookAction}>
+              <Text style={styles.bookActionText}>View on Amazon</Text>
+              <Ionicons name="open-outline" size={18} color="#ff9900" />
+            </View>
           </TouchableOpacity>
         </View>
 
-        {/* FAQ */}
-        <View style={styles.faqSection}>
-          <Text style={styles.faqTitle}>Frequently Asked Questions</Text>
-          
-          <View style={styles.faqItem}>
-            <Text style={styles.faqQuestion}>What&apos;s included in Premium?</Text>
-            <Text style={styles.faqAnswer}>
-              Premium includes all Standard features plus access to video courses and digital downloads via Thinkific.
-            </Text>
-          </View>
-
-          <View style={styles.faqItem}>
-            <Text style={styles.faqQuestion}>How do I access the courses?</Text>
-            <Text style={styles.faqAnswer}>
-              Click the course button above. You&apos;ll be taken to Thinkific where you can create an account and access all content.
-            </Text>
-          </View>
-
-          <View style={styles.faqItem}>
-            <Text style={styles.faqQuestion}>Is the book included?</Text>
-            <Text style={styles.faqAnswer}>
-              No, the physical/Kindle book is sold separately on Amazon for $25.
-            </Text>
-          </View>
+        {/* Help Section */}
+        <View style={styles.helpSection}>
+          <Text style={styles.helpTitle}>Need Help?</Text>
+          <Text style={styles.helpText}>
+            If you have trouble accessing your courses after subscribing, make sure to use the same email address when creating your Thinkific account.
+          </Text>
+          <TouchableOpacity 
+            style={styles.helpButton}
+            onPress={() => Linking.openURL('mailto:theequestrianmind75@gmail.com?subject=Premium Content Help')}
+          >
+            <Ionicons name="mail" size={18} color="#375B50" />
+            <Text style={styles.helpButtonText}>Contact Support</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -248,24 +413,30 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  loadingText: {
+    marginTop: 16,
+    fontSize: 16,
+    color: '#718096',
+  },
   scrollView: {
     flex: 1,
   },
-  statusCard: {
-    backgroundColor: '#ffffff',
+  statusBanner: {
     margin: 16,
-    padding: 20,
+    marginBottom: 0,
+    padding: 16,
     borderRadius: 12,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
   },
-  statusHeader: {
+  statusBannerPremium: {
+    backgroundColor: '#375B50',
+  },
+  statusBannerStandard: {
+    backgroundColor: '#64748b',
+  },
+  statusContent: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 16,
+    gap: 12,
   },
   statusTextContainer: {
     flex: 1,
@@ -273,145 +444,288 @@ const styles = StyleSheet.create({
   statusTitle: {
     fontSize: 18,
     fontWeight: '700',
-    color: '#000000',
-    marginBottom: 4,
+    color: '#ffffff',
+    marginBottom: 2,
   },
   statusSubtitle: {
     fontSize: 14,
+    color: 'rgba(255,255,255,0.8)',
+  },
+  upgradeBannerButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#ffffff',
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    borderRadius: 8,
+    marginTop: 12,
+    alignSelf: 'flex-start',
+    gap: 6,
+  },
+  upgradeBannerButtonText: {
+    color: '#375B50',
+    fontSize: 14,
+    fontWeight: '700',
+  },
+  tabContainer: {
+    flexDirection: 'row',
+    margin: 16,
+    backgroundColor: '#ffffff',
+    borderRadius: 12,
+    padding: 4,
+  },
+  tab: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    gap: 8,
+    borderRadius: 10,
+  },
+  tabActive: {
+    backgroundColor: '#f0fdf4',
+  },
+  tabText: {
+    fontSize: 15,
+    fontWeight: '600',
     color: '#718096',
   },
-  upgradeButton: {
-    backgroundColor: '#375B50',
-    marginTop: 16,
-    padding: 14,
-    borderRadius: 8,
-    alignItems: 'center',
+  tabTextActive: {
+    color: '#375B50',
   },
-  upgradeButtonText: {
-    color: '#ffffff',
-    fontSize: 16,
-    fontWeight: '600',
-  },
-  section: {
-    marginHorizontal: 16,
-    marginBottom: 24,
+  contentSection: {
+    paddingHorizontal: 16,
+    paddingBottom: 24,
   },
   sectionTitle: {
     fontSize: 22,
     fontWeight: '700',
     color: '#000000',
-    marginBottom: 8,
+    marginBottom: 4,
   },
   sectionDescription: {
     fontSize: 14,
     color: '#718096',
     marginBottom: 16,
   },
-  contentCard: {
+  courseCard: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#ffffff',
     padding: 16,
     borderRadius: 12,
-    gap: 16,
+    marginBottom: 12,
+    gap: 14,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
+    shadowOpacity: 0.06,
     shadowRadius: 4,
-    elevation: 3,
+    elevation: 2,
   },
-  contentCardLocked: {
-    opacity: 0.6,
+  cardLocked: {
+    opacity: 0.65,
   },
-  contentIcon: {
+  courseIcon: {
     width: 56,
     height: 56,
-    backgroundColor: '#f0fdf4',
-    borderRadius: 28,
+    borderRadius: 14,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  contentInfo: {
+  courseInfo: {
     flex: 1,
   },
-  contentTitle: {
+  courseTitle: {
     fontSize: 16,
     fontWeight: '700',
     color: '#000000',
+    marginBottom: 4,
+  },
+  courseDescription: {
+    fontSize: 13,
+    color: '#718096',
+    lineHeight: 18,
     marginBottom: 6,
   },
-  contentDescription: {
-    fontSize: 14,
+  courseMeta: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  },
+  courseMetaText: {
+    fontSize: 12,
     color: '#718096',
-    lineHeight: 20,
   },
-  lockMessage: {
+  noteCard: {
     flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 12,
-    gap: 8,
+    alignItems: 'flex-start',
+    backgroundColor: '#eff6ff',
+    padding: 14,
+    borderRadius: 10,
+    marginTop: 8,
+    gap: 10,
   },
-  lockMessageText: {
-    fontSize: 14,
-    color: '#f59e0b',
-    fontWeight: '600',
+  noteText: {
+    flex: 1,
+    fontSize: 13,
+    color: '#3b82f6',
+    lineHeight: 18,
   },
-  bookCard: {
+  downloadsGrid: {
     flexDirection: 'row',
-    alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: 12,
+  },
+  downloadCard: {
+    width: '48%',
     backgroundColor: '#ffffff',
     padding: 16,
     borderRadius: 12,
-    gap: 16,
-    borderWidth: 2,
-    borderColor: '#ff9900',
+    alignItems: 'center',
+    position: 'relative',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.06,
+    shadowRadius: 4,
+    elevation: 2,
   },
-  bookIcon: {
-    width: 56,
-    height: 56,
-    backgroundColor: '#fff7ed',
-    borderRadius: 28,
+  downloadIcon: {
+    width: 60,
+    height: 60,
+    backgroundColor: '#f0fdf4',
+    borderRadius: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  downloadTitle: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#000000',
+    textAlign: 'center',
+    marginBottom: 6,
+  },
+  downloadDescription: {
+    fontSize: 12,
+    color: '#718096',
+    textAlign: 'center',
+    lineHeight: 16,
+  },
+  lockBadge: {
+    position: 'absolute',
+    top: 8,
+    right: 8,
+    backgroundColor: '#94a3b8',
+    width: 24,
+    height: 24,
+    borderRadius: 12,
     justifyContent: 'center',
     alignItems: 'center',
   },
+  bookSection: {
+    paddingHorizontal: 16,
+    paddingBottom: 24,
+  },
+  bookCard: {
+    backgroundColor: '#ffffff',
+    borderRadius: 12,
+    borderWidth: 2,
+    borderColor: '#ff9900',
+    overflow: 'hidden',
+  },
+  bookContent: {
+    flexDirection: 'row',
+    padding: 16,
+    gap: 14,
+  },
+  bookIcon: {
+    width: 70,
+    height: 90,
+    backgroundColor: '#fff7ed',
+    borderRadius: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  bookInfo: {
+    flex: 1,
+  },
+  bookTitle: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: '#000000',
+    marginBottom: 4,
+  },
+  bookSubtitle: {
+    fontSize: 13,
+    color: '#718096',
+    lineHeight: 18,
+    marginBottom: 10,
+  },
+  bookPriceRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
   priceTag: {
     backgroundColor: '#ff9900',
-    paddingHorizontal: 12,
-    paddingVertical: 6,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
     borderRadius: 6,
-    alignSelf: 'flex-start',
-    marginTop: 8,
   },
   priceText: {
     color: '#ffffff',
     fontSize: 14,
     fontWeight: '700',
   },
-  faqSection: {
+  amazonText: {
+    fontSize: 13,
+    color: '#718096',
+  },
+  bookAction: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#fff7ed',
+    paddingVertical: 12,
+    gap: 8,
+  },
+  bookActionText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#ff9900',
+  },
+  helpSection: {
     backgroundColor: '#ffffff',
     margin: 16,
     padding: 20,
     borderRadius: 12,
+    marginBottom: 32,
   },
-  faqTitle: {
-    fontSize: 18,
+  helpTitle: {
+    fontSize: 16,
     fontWeight: '700',
     color: '#000000',
-    marginBottom: 16,
+    marginBottom: 8,
   },
-  faqItem: {
-    marginBottom: 16,
-  },
-  faqQuestion: {
-    fontSize: 15,
-    fontWeight: '600',
-    color: '#000000',
-    marginBottom: 6,
-  },
-  faqAnswer: {
+  helpText: {
     fontSize: 14,
     color: '#718096',
     lineHeight: 20,
+    marginBottom: 16,
+  },
+  helpButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#f0fdf4',
+    paddingVertical: 12,
+    borderRadius: 8,
+    gap: 8,
+  },
+  helpButtonText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#375B50',
   },
 });
