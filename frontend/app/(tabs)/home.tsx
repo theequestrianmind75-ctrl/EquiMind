@@ -425,17 +425,6 @@ const styles = StyleSheet.create({
     color: '#10b981',
     fontWeight: '600',
   },
-  upgradeSmallButton: {
-    backgroundColor: '#f59e0b',
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-    borderRadius: 8,
-  },
-  upgradeSmallButtonText: {
-    color: '#ffffff',
-    fontSize: 14,
-    fontWeight: '700',
-  },
   premiumContentCard: {
     flexDirection: 'row',
     alignItems: 'center',
