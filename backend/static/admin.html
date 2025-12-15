@@ -1267,6 +1267,426 @@
             });
         }
 
+        // ==================== PREMIUM CONTENT MANAGEMENT ====================
+
+        // Load premium content
+        async function loadPremiumContent() {
+            try {
+                const response = await fetch(`${API_URL}/admin/premium-content`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ password: adminPassword })
+                });
+
+                currentData.premiumContent = await response.json();
+                renderPremiumContent();
+            } catch (error) {
+                document.getElementById('premium').innerHTML = `
+                    <div class="error">Error loading premium content: ${error.message}</div>
+                `;
+            }
+        }
+
+        // Render premium content
+        function renderPremiumContent() {
+            const content = currentData.premiumContent || [];
+            const courses = content.filter(c => c.content_type === 'course');
+            const downloads = content.filter(c => c.content_type === 'download');
+
+            const iconOptions = ['book', 'school', 'brain', 'heart', 'alert-circle', 'document-text', 'shield-checkmark', 'headset', 'journal', 'play-circle', 'videocam', 'musical-notes', 'folder', 'star'];
+            
+            let html = `
+                <div class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                        <h2>Premium Content Management</h2>
+                        <div style="display: flex; gap: 10px;">
+                            <button onclick="openAddContentModal('course')">+ Add Course</button>
+                            <button onclick="openAddContentModal('download')" class="btn-secondary">+ Add Download</button>
+                            ${content.length === 0 ? `<button onclick="seedPremiumContent()" style="background: #f59e0b;">🌱 Seed Default Content</button>` : ''}
+                        </div>
+                    </div>
+                    <p style="color: #718096; margin-top: 10px;">
+                        Manage the courses and downloads shown to Premium subscribers. Changes appear instantly in the app.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h2>📚 Courses (${courses.length})</h2>
+                    ${courses.length === 0 ? `
+                        <div class="empty-state">
+                            <p>No courses yet</p>
+                            <p style="margin-top: 10px;">Click "Add Course" to add your first Thinkific course.</p>
+                        </div>
+                    ` : `
+                    <div style="overflow-x: auto;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Order</th>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                    <th>Duration</th>
+                                    <th>URL</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${courses.map(item => `
+                                    <tr>
+                                        <td>${item.order || 0}</td>
+                                        <td><strong>${escapeHtml(item.title)}</strong></td>
+                                        <td style="max-width: 200px; overflow: hidden; text-overflow: ellipsis;">${escapeHtml(item.description || '')}</td>
+                                        <td>${item.duration || '-'}</td>
+                                        <td style="max-width: 150px; overflow: hidden; text-overflow: ellipsis;">
+                                            <a href="${item.url}" target="_blank" style="color: #375B50;">${item.url}</a>
+                                        </td>
+                                        <td>
+                                            <span style="padding: 4px 8px; border-radius: 4px; font-size: 12px; background: ${item.active !== false ? '#d1fae5' : '#fee2e2'}; color: ${item.active !== false ? '#065f46' : '#991b1b'};">
+                                                ${item.active !== false ? 'Active' : 'Hidden'}
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button onclick='openEditContentModal(${JSON.stringify(item).replace(/'/g, "&#39;")})'>Edit</button>
+                                                <button class="btn-danger" onclick="deleteContent('${item.id}', '${escapeHtml(item.title)}')">Delete</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                    `}
+                </div>
+
+                <div class="card">
+                    <h2>📥 Downloads (${downloads.length})</h2>
+                    ${downloads.length === 0 ? `
+                        <div class="empty-state">
+                            <p>No downloads yet</p>
+                            <p style="margin-top: 10px;">Click "Add Download" to add workbooks, guides, or audio files.</p>
+                        </div>
+                    ` : `
+                    <div style="overflow-x: auto;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Order</th>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                    <th>URL</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${downloads.map(item => `
+                                    <tr>
+                                        <td>${item.order || 0}</td>
+                                        <td><strong>${escapeHtml(item.title)}</strong></td>
+                                        <td style="max-width: 250px; overflow: hidden; text-overflow: ellipsis;">${escapeHtml(item.description || '')}</td>
+                                        <td style="max-width: 150px; overflow: hidden; text-overflow: ellipsis;">
+                                            <a href="${item.url}" target="_blank" style="color: #375B50;">${item.url}</a>
+                                        </td>
+                                        <td>
+                                            <span style="padding: 4px 8px; border-radius: 4px; font-size: 12px; background: ${item.active !== false ? '#d1fae5' : '#fee2e2'}; color: ${item.active !== false ? '#065f46' : '#991b1b'};">
+                                                ${item.active !== false ? 'Active' : 'Hidden'}
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button onclick='openEditContentModal(${JSON.stringify(item).replace(/'/g, "&#39;")})'>Edit</button>
+                                                <button class="btn-danger" onclick="deleteContent('${item.id}', '${escapeHtml(item.title)}')">Delete</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                    `}
+                </div>
+
+                <div class="card" style="background: #f0fdf4; border: 1px solid #86efac;">
+                    <h3 style="color: #166534;">💡 How to Add Content</h3>
+                    <ol style="margin-top: 10px; padding-left: 20px; color: #166534;">
+                        <li>Create your course or product on <a href="https://kristi-s-site-43fb.thinkific.com" target="_blank" style="color: #166534; font-weight: bold;">your Thinkific site</a></li>
+                        <li>Copy the course/product URL from Thinkific</li>
+                        <li>Click "Add Course" or "Add Download" above</li>
+                        <li>Paste the URL and fill in the details</li>
+                        <li>Content appears instantly in the app for Premium users!</li>
+                    </ol>
+                </div>
+            `;
+
+            document.getElementById('premium').innerHTML = html;
+        }
+
+        // Open add content modal
+        function openAddContentModal(contentType) {
+            const isDownload = contentType === 'download';
+            const modal = document.getElementById('modal');
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Add New ${isDownload ? 'Download' : 'Course'}</h2>
+                        <button class="close-modal" onclick="closeModal()">&times;</button>
+                    </div>
+                    <form onsubmit="handleAddContent(event, '${contentType}')">
+                        <div class="form-group">
+                            <label for="content-title">Title *</label>
+                            <input type="text" id="content-title" placeholder="e.g., ${isDownload ? 'Rider Anxiety Workbook' : 'The Equestrian Mindset'}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="content-description">Description *</label>
+                            <textarea id="content-description" placeholder="Brief description of what this ${isDownload ? 'download' : 'course'} includes..." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="content-url">Thinkific URL *</label>
+                            <input type="url" id="content-url" placeholder="https://kristi-s-site-43fb.thinkific.com/courses/..." required>
+                        </div>
+                        ${!isDownload ? `
+                        <div class="form-group">
+                            <label for="content-duration">Duration</label>
+                            <input type="text" id="content-duration" placeholder="e.g., 6 modules, 2 hours">
+                        </div>
+                        ` : ''}
+                        <div class="form-group">
+                            <label for="content-icon">Icon</label>
+                            <select id="content-icon">
+                                <option value="book">📖 Book</option>
+                                <option value="school">🎓 School</option>
+                                <option value="brain">🧠 Brain</option>
+                                <option value="heart">❤️ Heart</option>
+                                <option value="alert-circle">⚠️ Alert</option>
+                                <option value="document-text">📄 Document</option>
+                                <option value="shield-checkmark">🛡️ Shield</option>
+                                <option value="headset">🎧 Headset</option>
+                                <option value="journal">📔 Journal</option>
+                                <option value="play-circle">▶️ Play</option>
+                                <option value="videocam">📹 Video</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="content-color">Color</label>
+                            <input type="color" id="content-color" value="#375B50">
+                        </div>
+                        <div class="form-group">
+                            <label for="content-order">Display Order</label>
+                            <input type="number" id="content-order" value="1" min="1">
+                        </div>
+                        <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                            <button type="button" class="btn-secondary" onclick="closeModal()">Cancel</button>
+                            <button type="submit">Add ${isDownload ? 'Download' : 'Course'}</button>
+                        </div>
+                    </form>
+                </div>
+            `;
+            modal.classList.add('active');
+        }
+
+        // Handle add content
+        async function handleAddContent(event, contentType) {
+            event.preventDefault();
+
+            const content = {
+                content_type: contentType,
+                title: document.getElementById('content-title').value,
+                description: document.getElementById('content-description').value,
+                url: document.getElementById('content-url').value,
+                icon: document.getElementById('content-icon').value,
+                color: document.getElementById('content-color').value,
+                order: parseInt(document.getElementById('content-order').value) || 1,
+                active: true
+            };
+
+            if (contentType === 'course') {
+                const durationEl = document.getElementById('content-duration');
+                if (durationEl && durationEl.value) {
+                    content.duration = durationEl.value;
+                }
+            }
+
+            try {
+                const response = await fetch(`${API_URL}/admin/premium-content/create`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ password: adminPassword, content })
+                });
+
+                if (response.ok) {
+                    closeModal();
+                    await loadPremiumContent();
+                    showSuccess(`${contentType === 'course' ? 'Course' : 'Download'} added successfully!`);
+                } else {
+                    const error = await response.json();
+                    showError(error.detail || 'Failed to add content');
+                }
+            } catch (error) {
+                showError('Error adding content: ' + error.message);
+            }
+        }
+
+        // Open edit content modal
+        function openEditContentModal(item) {
+            const isDownload = item.content_type === 'download';
+            const modal = document.getElementById('modal');
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Edit ${isDownload ? 'Download' : 'Course'}</h2>
+                        <button class="close-modal" onclick="closeModal()">&times;</button>
+                    </div>
+                    <form onsubmit="handleEditContent(event, '${item.id}')">
+                        <div class="form-group">
+                            <label for="edit-content-title">Title *</label>
+                            <input type="text" id="edit-content-title" value="${escapeHtml(item.title || '')}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-content-description">Description *</label>
+                            <textarea id="edit-content-description" required>${escapeHtml(item.description || '')}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-content-url">Thinkific URL *</label>
+                            <input type="url" id="edit-content-url" value="${escapeHtml(item.url || '')}" required>
+                        </div>
+                        ${!isDownload ? `
+                        <div class="form-group">
+                            <label for="edit-content-duration">Duration</label>
+                            <input type="text" id="edit-content-duration" value="${escapeHtml(item.duration || '')}">
+                        </div>
+                        ` : ''}
+                        <div class="form-group">
+                            <label for="edit-content-icon">Icon</label>
+                            <select id="edit-content-icon">
+                                <option value="book" ${item.icon === 'book' ? 'selected' : ''}>📖 Book</option>
+                                <option value="school" ${item.icon === 'school' ? 'selected' : ''}>🎓 School</option>
+                                <option value="brain" ${item.icon === 'brain' ? 'selected' : ''}>🧠 Brain</option>
+                                <option value="heart" ${item.icon === 'heart' ? 'selected' : ''}>❤️ Heart</option>
+                                <option value="alert-circle" ${item.icon === 'alert-circle' ? 'selected' : ''}>⚠️ Alert</option>
+                                <option value="document-text" ${item.icon === 'document-text' ? 'selected' : ''}>📄 Document</option>
+                                <option value="shield-checkmark" ${item.icon === 'shield-checkmark' ? 'selected' : ''}>🛡️ Shield</option>
+                                <option value="headset" ${item.icon === 'headset' ? 'selected' : ''}>🎧 Headset</option>
+                                <option value="journal" ${item.icon === 'journal' ? 'selected' : ''}>📔 Journal</option>
+                                <option value="play-circle" ${item.icon === 'play-circle' ? 'selected' : ''}>▶️ Play</option>
+                                <option value="videocam" ${item.icon === 'videocam' ? 'selected' : ''}>📹 Video</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-content-color">Color</label>
+                            <input type="color" id="edit-content-color" value="${item.color || '#375B50'}">
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-content-order">Display Order</label>
+                            <input type="number" id="edit-content-order" value="${item.order || 1}" min="1">
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="edit-content-active" ${item.active !== false ? 'checked' : ''}>
+                                Active (visible to users)
+                            </label>
+                        </div>
+                        <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                            <button type="button" class="btn-secondary" onclick="closeModal()">Cancel</button>
+                            <button type="submit">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            `;
+            modal.classList.add('active');
+        }
+
+        // Handle edit content
+        async function handleEditContent(event, contentId) {
+            event.preventDefault();
+
+            const updates = {
+                title: document.getElementById('edit-content-title').value,
+                description: document.getElementById('edit-content-description').value,
+                url: document.getElementById('edit-content-url').value,
+                icon: document.getElementById('edit-content-icon').value,
+                color: document.getElementById('edit-content-color').value,
+                order: parseInt(document.getElementById('edit-content-order').value) || 1,
+                active: document.getElementById('edit-content-active').checked
+            };
+
+            const durationEl = document.getElementById('edit-content-duration');
+            if (durationEl) {
+                updates.duration = durationEl.value;
+            }
+
+            try {
+                const response = await fetch(`${API_URL}/admin/premium-content/update`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ password: adminPassword, id: contentId, updates })
+                });
+
+                if (response.ok) {
+                    closeModal();
+                    await loadPremiumContent();
+                    showSuccess('Content updated successfully!');
+                } else {
+                    const error = await response.json();
+                    showError(error.detail || 'Failed to update content');
+                }
+            } catch (error) {
+                showError('Error updating content: ' + error.message);
+            }
+        }
+
+        // Delete content
+        async function deleteContent(contentId, title) {
+            if (!confirm(`Are you sure you want to delete "${title}"? This action cannot be undone.`)) {
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_URL}/admin/premium-content/delete`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ password: adminPassword, id: contentId })
+                });
+
+                if (response.ok) {
+                    await loadPremiumContent();
+                    showSuccess('Content deleted successfully!');
+                } else {
+                    const error = await response.json();
+                    showError(error.detail || 'Failed to delete content');
+                }
+            } catch (error) {
+                showError('Error deleting content: ' + error.message);
+            }
+        }
+
+        // Seed default premium content
+        async function seedPremiumContent() {
+            if (!confirm('This will add default courses and downloads to get you started. Continue?')) {
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_URL}/admin/premium-content/seed`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ password: adminPassword })
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    await loadPremiumContent();
+                    showSuccess(`Added ${result.courses} courses and ${result.downloads} downloads!`);
+                } else {
+                    const error = await response.json();
+                    showError(error.detail || error.message || 'Failed to seed content');
+                }
+            } catch (error) {
+                showError('Error seeding content: ' + error.message);
+            }
+        }
+
         function logout() {
             sessionStorage.removeItem('admin_password');
             adminPassword = '';
