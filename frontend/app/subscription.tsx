@@ -38,7 +38,6 @@ export default function Subscription() {
   const [loading, setLoading] = useState(true);
   const [selectedTier, setSelectedTier] = useState<string | null>(null);
   const [subscribing, setSubscribing] = useState(false);
-  const [restoring, setRestoring] = useState(false);
   const [isNativePlatform, setIsNativePlatform] = useState(false);
 
   useEffect(() => {
