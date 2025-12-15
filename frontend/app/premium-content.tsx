@@ -8,7 +8,6 @@ import {
   ActivityIndicator,
   Linking,
   Alert,
-  Image,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
@@ -19,68 +18,18 @@ import api from '../lib/api';
 // Thinkific site configuration
 const THINKIFIC_URL = 'https://kristi-s-site-43fb.thinkific.com';
 
-// Course catalog - matches your Thinkific courses
-const COURSES = [
-  {
-    id: 'equestrian-mindset',
-    title: 'The Equestrian Mindset',
-    description: 'Master the mental game of riding with proven psychological techniques',
-    duration: '6 modules',
-    icon: 'brain',
-    color: '#375B50',
-    url: `${THINKIFIC_URL}/courses/the-equestrian-mindset`,
-  },
-  {
-    id: 'perfectionism',
-    title: 'Break Your Perfectionism',
-    description: 'Overcome perfectionism to ride with confidence and joy',
-    duration: '4 modules',
-    icon: 'heart',
-    color: '#ef4444',
-    url: `${THINKIFIC_URL}/courses/break-your-perfectionism`,
-  },
-  {
-    id: 'emotional-riding',
-    title: "When You Shouldn't Ride Due to Emotions",
-    description: 'Learn to recognize when emotions affect your riding safety',
-    duration: '3 modules',
-    icon: 'alert-circle',
-    color: '#f59e0b',
-    url: `${THINKIFIC_URL}/courses/emotional-riding`,
-  },
-];
-
-// Digital downloads
-const DOWNLOADS = [
-  {
-    id: 'anxiety-workbook',
-    title: 'Rider Anxiety Workbook',
-    description: 'Comprehensive exercises to manage riding anxiety',
-    icon: 'document-text',
-    url: `${THINKIFIC_URL}/products/rider-anxiety-workbook`,
-  },
-  {
-    id: 'confidence-guide',
-    title: 'Confidence Building Guide',
-    description: 'Step-by-step guide to build unshakeable confidence',
-    icon: 'shield-checkmark',
-    url: `${THINKIFIC_URL}/products/confidence-guide`,
-  },
-  {
-    id: 'visualization-audio',
-    title: 'Visualization Audio Sessions',
-    description: 'Guided visualization for competition prep',
-    icon: 'headset',
-    url: `${THINKIFIC_URL}/products/visualization-audio`,
-  },
-  {
-    id: 'journal-templates',
-    title: 'Riding Journal Templates',
-    description: 'Track your mental and physical progress',
-    icon: 'journal',
-    url: `${THINKIFIC_URL}/products/journal-templates`,
-  },
-];
+type ContentItem = {
+  id: string;
+  content_type: string;
+  title: string;
+  description: string;
+  icon: string;
+  color: string;
+  url: string;
+  duration?: string;
+  order: number;
+  active: boolean;
+};
 
 type SubscriptionStatus = {
   user_id: string;
@@ -93,18 +42,27 @@ export default function PremiumContent() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>(null);
+  const [courses, setCourses] = useState<ContentItem[]>([]);
+  const [downloads, setDownloads] = useState<ContentItem[]>([]);
   const [activeTab, setActiveTab] = useState<'courses' | 'downloads'>('courses');
 
   useEffect(() => {
-    checkSubscription();
+    loadData();
   }, []);
 
-  const checkSubscription = async () => {
+  const loadData = async () => {
     try {
-      const response = await api.get('/subscriptions/status');
-      setSubscriptionStatus(response.data);
+      // Load subscription status and premium content in parallel
+      const [subResponse, contentResponse] = await Promise.all([
+        api.get('/subscriptions/status'),
+        api.get('/premium-content')
+      ]);
       
-      if (response.data.subscription_tier !== 'premium') {
+      setSubscriptionStatus(subResponse.data);
+      setCourses(contentResponse.data.courses || []);
+      setDownloads(contentResponse.data.downloads || []);
+      
+      if (subResponse.data.subscription_tier !== 'premium') {
         Alert.alert(
           'Premium Required',
           'This content is only available with a Premium subscription ($35/month)',
@@ -115,7 +73,7 @@ export default function PremiumContent() {
         );
       }
     } catch (error) {
-      console.error('Error checking subscription:', error);
+      console.error('Error loading data:', error);
     } finally {
       setLoading(false);
     }
