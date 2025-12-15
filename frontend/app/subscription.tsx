@@ -109,6 +109,13 @@ export default function Subscription() {
 
   return (
     <SafeAreaView style={styles.container}>
+      <View style={styles.topHeader}>
+        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+          <Ionicons name="arrow-back" size={24} color="#000000" />
+        </TouchableOpacity>
+        <Text style={styles.topHeaderTitle}>Subscription</Text>
+        <View style={{ width: 40 }} />
+      </View>
       <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <Ionicons name="ribbon" size={64} color="#375B50" />
