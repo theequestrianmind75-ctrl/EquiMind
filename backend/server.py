@@ -1195,14 +1195,18 @@ async def get_subscription_tiers():
             "price_monthly": 35.00,
             "price_display": "$35/month",
             "features": [
-                "Everything in Standard",
+                "All 205 mental performance tools",
+                "Voice-guided coaching during rides",
+                "Session tracking & analytics",
+                "Post-ride reflection tools",
+                "Personalized tool recommendations",
                 "Access to all video courses",
                 "Digital downloads & guides",
                 "Advanced training materials",
                 "Exclusive premium content"
             ],
             "description": "Complete equestrian mental training package",
-            "badge": "Best Value"
+            "badge": "Recommended"
         }
     ]
     return tiers
