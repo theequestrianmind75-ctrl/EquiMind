@@ -164,14 +164,6 @@ export default function Home() {
                       {subscriptionStatus?.subscription_status === 'active' ? 'Active' : 'Inactive'}
                     </Text>
                   </View>
-                  {subscriptionStatus?.subscription_tier === 'standard' && (
-                    <TouchableOpacity 
-                      style={styles.upgradeSmallButton}
-                      onPress={() => router.push('/subscription' as any)}
-                    >
-                      <Text style={styles.upgradeSmallButtonText}>Upgrade</Text>
-                    </TouchableOpacity>
-                  )}
                 </View>
               </View>
 
