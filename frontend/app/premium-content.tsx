@@ -164,7 +164,7 @@ export default function PremiumContent() {
             />
             <View style={styles.statusTextContainer}>
               <Text style={styles.statusTitle}>
-                {isPremium ? '⭐ Premium Member' : '🔒 Standard Plan'}
+                {isPremium ? 'Premium Member' : '🔒 Standard Plan'}
               </Text>
               <Text style={styles.statusSubtitle}>
                 {isPremium 
