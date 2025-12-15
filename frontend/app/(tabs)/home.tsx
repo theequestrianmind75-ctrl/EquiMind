@@ -191,10 +191,7 @@ export default function Home() {
                 </TouchableOpacity>
               ) : (
                 <View style={styles.upgradeCard}>
-                  <View style={styles.upgradeHeader}>
-                    <Ionicons name="sparkles" size={32} color="#f59e0b" />
-                    <Text style={styles.upgradeTitle}>Unlock Premium Content</Text>
-                  </View>
+                  <Text style={styles.upgradeTitle}>Unlock Premium Content</Text>
                   <Text style={styles.upgradeDescription}>
                     Get access to video courses, digital downloads, and exclusive training materials for just $10 more per month.
                   </Text>
