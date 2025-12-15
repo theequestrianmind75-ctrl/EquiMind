@@ -14,10 +14,19 @@ import { useAuthStore } from '../../lib/store';
 import { Ionicons } from '@expo/vector-icons';
 import api from '../../lib/api';
 
+type SubscriptionStatus = {
+  user_id: string;
+  subscription_tier: string;
+  subscription_status: string;
+  subscription_start_date: string | null;
+  subscription_end_date: string | null;
+  has_access: boolean;
+} | null;
+
 export default function Home() {
   const router = useRouter();
   const { user, logout } = useAuthStore();
-  const [subscriptionStatus, setSubscriptionStatus] = useState(null);
+  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus>(null);
   const [loadingSubscription, setLoadingSubscription] = useState(true);
 
   useEffect(() => {
