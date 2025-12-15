@@ -157,11 +157,13 @@ export default function PremiumContent() {
         {/* Subscription Status Banner */}
         <View style={[styles.statusBanner, isPremium ? styles.statusBannerPremium : styles.statusBannerStandard]}>
           <View style={styles.statusContent}>
-            <Ionicons 
-              name={isPremium ? "star" : "lock-closed"} 
-              size={28} 
-              color={isPremium ? "#f59e0b" : "#ffffff"} 
-            />
+            {!isPremium && (
+              <Ionicons 
+                name="lock-closed" 
+                size={28} 
+                color="#ffffff" 
+              />
+            )}
             <View style={styles.statusTextContainer}>
               <Text style={styles.statusTitle}>
                 {isPremium ? 'Premium Member' : '🔒 Standard Plan'}
