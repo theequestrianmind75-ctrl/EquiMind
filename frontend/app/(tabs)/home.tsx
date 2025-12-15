@@ -117,6 +117,93 @@ export default function Home() {
         </View>
 
         <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Subscription & Premium Content</Text>
+          
+          {loadingSubscription ? (
+            <View style={styles.loadingCard}>
+              <ActivityIndicator size="small" color="#375B50" />
+            </View>
+          ) : (
+            <>
+              <View style={styles.subscriptionCard}>
+                <View style={styles.subscriptionHeader}>
+                  <View style={styles.subscriptionBadge}>
+                    <Ionicons 
+                      name={subscriptionStatus?.subscription_tier === 'premium' ? 'star' : 'shield-checkmark'} 
+                      size={24} 
+                      color="#ffffff" 
+                    />
+                  </View>
+                  <View style={styles.subscriptionInfo}>
+                    <Text style={styles.subscriptionTier}>
+                      {subscriptionStatus?.subscription_tier === 'premium' ? 'Premium Plan' : 'Standard Plan'}
+                    </Text>
+                    <Text style={styles.subscriptionStatus}>
+                      {subscriptionStatus?.subscription_status === 'active' ? 'Active' : 'Inactive'}
+                    </Text>
+                  </View>
+                  {subscriptionStatus?.subscription_tier === 'standard' && (
+                    <TouchableOpacity 
+                      style={styles.upgradeSmallButton}
+                      onPress={() => router.push('/subscription' as any)}
+                    >
+                      <Text style={styles.upgradeSmallButtonText}>Upgrade</Text>
+                    </TouchableOpacity>
+                  )}
+                </View>
+              </View>
+
+              {subscriptionStatus?.subscription_tier === 'premium' ? (
+                <TouchableOpacity 
+                  style={styles.premiumContentCard}
+                  onPress={() => router.push('/premium-content' as any)}
+                >
+                  <View style={[styles.actionIcon, { backgroundColor: '#f59e0b20' }]}>
+                    <Ionicons name="star" size={28} color="#f59e0b" />
+                  </View>
+                  <View style={styles.actionContent}>
+                    <Text style={styles.actionTitle}>Premium Content</Text>
+                    <Text style={styles.actionDescription}>Access courses, guides & training materials</Text>
+                  </View>
+                  <Ionicons name="chevron-forward" size={24} color="#000000" />
+                </TouchableOpacity>
+              ) : (
+                <View style={styles.upgradeCard}>
+                  <View style={styles.upgradeHeader}>
+                    <Ionicons name="sparkles" size={32} color="#f59e0b" />
+                    <Text style={styles.upgradeTitle}>Unlock Premium Content</Text>
+                  </View>
+                  <Text style={styles.upgradeDescription}>
+                    Get access to video courses, digital downloads, and exclusive training materials for just $10 more per month.
+                  </Text>
+                  <View style={styles.upgradeFeatures}>
+                    <View style={styles.upgradeFeature}>
+                      <Ionicons name="checkmark-circle" size={20} color="#10b981" />
+                      <Text style={styles.upgradeFeatureText}>All video courses</Text>
+                    </View>
+                    <View style={styles.upgradeFeature}>
+                      <Ionicons name="checkmark-circle" size={20} color="#10b981" />
+                      <Text style={styles.upgradeFeatureText}>Digital downloads & guides</Text>
+                    </View>
+                    <View style={styles.upgradeFeature}>
+                      <Ionicons name="checkmark-circle" size={20} color="#10b981" />
+                      <Text style={styles.upgradeFeatureText}>Advanced training materials</Text>
+                    </View>
+                  </View>
+                  <TouchableOpacity 
+                    style={styles.upgradeLargeButton}
+                    onPress={() => router.push('/subscription' as any)}
+                  >
+                    <Text style={styles.upgradeLargeButtonText}>Upgrade to Premium - $35/month</Text>
+                    <Ionicons name="arrow-forward" size={20} color="#ffffff" />
+                  </TouchableOpacity>
+                </View>
+              )}
+            </>
+          )}
+        </View>
+
+        <View style={styles.section}>
           <Text style={styles.sectionTitle}>Horse-Rider Connection</Text>
           <TouchableOpacity 
             style={styles.connectionCard}
