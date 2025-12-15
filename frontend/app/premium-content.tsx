@@ -262,14 +262,6 @@ export default function PremiumContent() {
                 </TouchableOpacity>
               ))
             )}
-
-            {/* Thinkific Note */}
-            <View style={styles.noteCard}>
-              <Ionicons name="information-circle" size={20} color="#3b82f6" />
-              <Text style={styles.noteText}>
-                Courses are hosted on Thinkific. You'll create a free account there to access your content.
-              </Text>
-            </View>
           </View>
         )}
 
