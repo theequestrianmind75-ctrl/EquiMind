@@ -181,8 +181,8 @@ export default function Home() {
                   style={styles.premiumContentCard}
                   onPress={() => router.push('/premium-content' as any)}
                 >
-                  <View style={[styles.actionIcon, { backgroundColor: '#f59e0b20' }]}>
-                    <Ionicons name="star" size={28} color="#f59e0b" />
+                  <View style={[styles.actionIcon, { backgroundColor: '#375B5020' }]}>
+                    <Ionicons name="library" size={28} color="#375B50" />
                   </View>
                   <View style={styles.actionContent}>
                     <Text style={styles.actionTitle}>Premium Content</Text>
