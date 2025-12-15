@@ -1279,27 +1279,51 @@ async def get_all_feedback(auth: AdminAuth):
     if auth.password != ADMIN_PASSWORD:
         raise HTTPException(status_code=401, detail="Invalid admin password")
     
-    # Get all feedback with user and session info
-    feedback_list = await db.feedback.find({}).sort("created_at", -1).to_list(1000)
+    # Use aggregation pipeline with $lookup to fetch feedback with user and session data in ONE query
+    # This eliminates N+1 query problem
+    pipeline = [
+        # Sort by created_at descending first
+        {"$sort": {"created_at": -1}},
+        # Limit results
+        {"$limit": 1000},
+        # Join with users collection
+        {
+            "$lookup": {
+                "from": "users",
+                "localField": "user_id",
+                "foreignField": "id",
+                "as": "user_info"
+            }
+        },
+        # Join with sessions collection
+        {
+            "$lookup": {
+                "from": "sessions",
+                "localField": "session_id",
+                "foreignField": "id",
+                "as": "session_info"
+            }
+        },
+        # Project the final output format
+        {
+            "$project": {
+                "_id": 0,
+                "id": 1,
+                "user_id": 1,
+                "session_id": 1,
+                "rating": 1,
+                "comment": 1,
+                "created_at": 1,
+                "user_email": {"$ifNull": [{"$arrayElemAt": ["$user_info.email", 0]}, "Unknown"]},
+                "user_name": {"$ifNull": [{"$arrayElemAt": ["$user_info.name", 0]}, "Unknown"]},
+                "session_type": {"$ifNull": [{"$arrayElemAt": ["$session_info.session_type", 0]}, "Unknown"]},
+                "ride_type": {"$ifNull": [{"$arrayElemAt": ["$session_info.ride_type", 0]}, "Unknown"]},
+                "session_date": {"$arrayElemAt": ["$session_info.created_at", 0]}
+            }
+        }
+    ]
     
-    # Enrich with user and session data
-    for feedback in feedback_list:
-        # Get user info
-        user = await db.users.find_one({"id": feedback["user_id"]}, {"email": 1, "name": 1})
-        if user:
-            feedback["user_email"] = user.get("email", "Unknown")
-            feedback["user_name"] = user.get("name", "Unknown")
-        
-        # Get session info
-        session = await db.sessions.find_one({"id": feedback["session_id"]}, {"session_type": 1, "ride_type": 1, "created_at": 1})
-        if session:
-            feedback["session_type"] = session.get("session_type", "Unknown")
-            feedback["ride_type"] = session.get("ride_type", "Unknown")
-            feedback["session_date"] = session.get("created_at")
-        
-        # Remove internal _id
-        if '_id' in feedback:
-            del feedback['_id']
+    feedback_list = await db.feedback.aggregate(pipeline).to_list(1000)
     
     return feedback_list
 
