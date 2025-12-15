@@ -316,7 +316,7 @@ export default function PremiumContent() {
 
         {/* Book Section - Always Visible */}
         <View style={styles.bookSection}>
-          <Text style={styles.sectionTitle}>📚 The Equestrian Mind Book</Text>
+          <Text style={styles.sectionTitle}>The Equestrian Mind Book</Text>
           <Text style={styles.sectionDescription}>
             Available separately on Amazon
           </Text>
@@ -328,7 +328,7 @@ export default function PremiumContent() {
           >
             <View style={styles.bookContent}>
               <View style={styles.bookIcon}>
-                <Ionicons name="book" size={40} color="#ff9900" />
+                <Ionicons name="book" size={40} color="#375B50" />
               </View>
               <View style={styles.bookInfo}>
                 <Text style={styles.bookTitle}>The Equestrian Mind</Text>
@@ -345,7 +345,7 @@ export default function PremiumContent() {
             </View>
             <View style={styles.bookAction}>
               <Text style={styles.bookActionText}>View on Amazon</Text>
-              <Ionicons name="open-outline" size={18} color="#ff9900" />
+              <Ionicons name="open-outline" size={18} color="#375B50" />
             </View>
           </TouchableOpacity>
         </View>
