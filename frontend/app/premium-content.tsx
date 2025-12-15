@@ -221,31 +221,41 @@ export default function PremiumContent() {
               In-depth training programs for mental mastery
             </Text>
 
-            {COURSES.map((course) => (
-              <TouchableOpacity
-                key={course.id}
-                style={[styles.courseCard, !isPremium && styles.cardLocked]}
-                onPress={() => openThinkificContent(course.url, course.title)}
-                activeOpacity={0.7}
-              >
-                <View style={[styles.courseIcon, { backgroundColor: course.color + '20' }]}>
-                  <Ionicons name={course.icon as any} size={28} color={course.color} />
-                </View>
-                <View style={styles.courseInfo}>
-                  <Text style={styles.courseTitle}>{course.title}</Text>
-                  <Text style={styles.courseDescription}>{course.description}</Text>
-                  <View style={styles.courseMeta}>
-                    <Ionicons name="time-outline" size={14} color="#718096" />
-                    <Text style={styles.courseMetaText}>{course.duration}</Text>
+            {courses.length === 0 ? (
+              <View style={styles.emptyState}>
+                <Ionicons name="school-outline" size={48} color="#cbd5e0" />
+                <Text style={styles.emptyStateText}>No courses available yet</Text>
+                <Text style={styles.emptyStateSubtext}>Check back soon for new content!</Text>
+              </View>
+            ) : (
+              courses.map((course) => (
+                <TouchableOpacity
+                  key={course.id}
+                  style={[styles.courseCard, !isPremium && styles.cardLocked]}
+                  onPress={() => openThinkificContent(course.url, course.title)}
+                  activeOpacity={0.7}
+                >
+                  <View style={[styles.courseIcon, { backgroundColor: (course.color || '#375B50') + '20' }]}>
+                    <Ionicons name={(course.icon || 'book') as any} size={28} color={course.color || '#375B50'} />
                   </View>
-                </View>
-                <Ionicons 
-                  name={isPremium ? "play-circle" : "lock-closed"} 
-                  size={28} 
-                  color={isPremium ? course.color : "#cbd5e0"} 
-                />
-              </TouchableOpacity>
-            ))}
+                  <View style={styles.courseInfo}>
+                    <Text style={styles.courseTitle}>{course.title}</Text>
+                    <Text style={styles.courseDescription}>{course.description}</Text>
+                    {course.duration && (
+                      <View style={styles.courseMeta}>
+                        <Ionicons name="time-outline" size={14} color="#718096" />
+                        <Text style={styles.courseMetaText}>{course.duration}</Text>
+                      </View>
+                    )}
+                  </View>
+                  <Ionicons 
+                    name={isPremium ? "play-circle" : "lock-closed"} 
+                    size={28} 
+                    color={isPremium ? (course.color || '#375B50') : "#cbd5e0"} 
+                  />
+                </TouchableOpacity>
+              ))
+            )}
 
             {/* Thinkific Note */}
             <View style={styles.noteCard}>
