@@ -118,15 +118,14 @@ export default function Subscription() {
       </View>
       <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
-          <Ionicons name="ribbon" size={64} color="#375B50" />
-          <Text style={styles.title}>Choose Your Plan</Text>
+          <Ionicons name="star" size={64} color="#f59e0b" />
           <Text style={styles.subtitle}>
-            Start your mental performance journey
+            Upgrade to unlock exclusive content
           </Text>
         </View>
 
         <View style={styles.tiersContainer}>
-          {tiers.map((tier) => (
+          {tiers.filter(tier => tier.tier_id === 'premium').map((tier) => (
             <TouchableOpacity
               key={tier.tier_id}
               style={[
