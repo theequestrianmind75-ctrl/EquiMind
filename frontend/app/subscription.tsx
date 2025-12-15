@@ -290,18 +290,6 @@ export default function Subscription() {
               </>
             )}
           </TouchableOpacity>
-
-          <TouchableOpacity
-            style={styles.restoreButton}
-            onPress={handleRestorePurchases}
-            disabled={restoring}
-          >
-            {restoring ? (
-              <ActivityIndicator color="#375B50" size="small" />
-            ) : (
-              <Text style={styles.restoreButtonText}>Restore Purchases</Text>
-            )}
-          </TouchableOpacity>
         </View>
 
         <View style={styles.footer}>
@@ -309,15 +297,6 @@ export default function Subscription() {
             Subscriptions are billed monthly and can be cancelled anytime.
             Payment will be charged to your {Platform.OS === 'ios' ? 'Apple ID' : Platform.OS === 'android' ? 'Google Play' : 'App Store'} account.
           </Text>
-          <View style={styles.footerLinks}>
-            <TouchableOpacity>
-              <Text style={styles.footerLink}>Terms of Service</Text>
-            </TouchableOpacity>
-            <Text style={styles.footerDivider}>•</Text>
-            <TouchableOpacity>
-              <Text style={styles.footerLink}>Privacy Policy</Text>
-            </TouchableOpacity>
-          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
