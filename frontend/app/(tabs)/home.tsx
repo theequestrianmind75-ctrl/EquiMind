@@ -117,6 +117,28 @@ export default function Home() {
         </View>
 
         <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Horse-Rider Connection</Text>
+          <TouchableOpacity 
+            style={styles.connectionCard}
+            onPress={() => router.push('/horse-rider-connection' as any)}
+          >
+            <View style={styles.connectionHeader}>
+              <Text style={styles.connectionTitle}>Build Your Partnership Profile</Text>
+            </View>
+            <Text style={styles.connectionText}>
+              Understanding your riding background and your horse's personality helps create a stronger bond and improves your communication.
+            </Text>
+            <View style={styles.connectionButton}>
+              <Text style={styles.connectionButtonText}>Complete Profile</Text>
+              <Ionicons name="arrow-forward" size={20} color="#ffffff" />
+            </View>
+          </TouchableOpacity>
+          <Text style={styles.connectionDescription}>
+            Combining clinical expertise with deep equestrian knowledge to deliver results that transform both rider performance and horse-rider relationships.
+          </Text>
+        </View>
+
+        <View style={styles.section}>
           <Text style={styles.sectionTitle}>Subscription & Premium Content</Text>
           
           {loadingSubscription ? (
@@ -201,28 +223,6 @@ export default function Home() {
               )}
             </>
           )}
-        </View>
-
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Horse-Rider Connection</Text>
-          <TouchableOpacity 
-            style={styles.connectionCard}
-            onPress={() => router.push('/horse-rider-connection' as any)}
-          >
-            <View style={styles.connectionHeader}>
-              <Text style={styles.connectionTitle}>Build Your Partnership Profile</Text>
-            </View>
-            <Text style={styles.connectionText}>
-              Understanding your riding background and your horse's personality helps create a stronger bond and improves your communication.
-            </Text>
-            <View style={styles.connectionButton}>
-              <Text style={styles.connectionButtonText}>Complete Profile</Text>
-              <Ionicons name="arrow-forward" size={20} color="#ffffff" />
-            </View>
-          </TouchableOpacity>
-          <Text style={styles.connectionDescription}>
-            Combining clinical expertise with deep equestrian knowledge to deliver results that transform both rider performance and horse-rider relationships.
-          </Text>
         </View>
       </ScrollView>
     </SafeAreaView>
