@@ -1205,8 +1205,7 @@ async def get_subscription_tiers():
                 "Advanced training materials",
                 "Exclusive premium content"
             ],
-            "description": "Complete equestrian mental training package",
-            "badge": "Recommended"
+            "description": "Complete equestrian mental training package"
         }
     ]
     return tiers
