@@ -366,7 +366,7 @@ export default function PremiumContent() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f7fa',
+    backgroundColor: '#A7D2BB',
   },
   header: {
     flexDirection: 'row',
