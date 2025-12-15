@@ -15,9 +15,7 @@ import { Ionicons } from '@expo/vector-icons';
 import api from '../lib/api';
 import { 
   getOfferings, 
-  purchasePackage, 
-  restorePurchases, 
-  checkSubscriptionStatus 
+  purchasePackage
 } from '../lib/purchases';
 import { PurchasesPackage } from 'react-native-purchases';
 
