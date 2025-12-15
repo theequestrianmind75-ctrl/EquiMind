@@ -509,12 +509,20 @@ const styles = StyleSheet.create({
   cardLocked: {
     opacity: 0.65,
   },
-  courseIcon: {
+  courseIconContainer: {
     width: 56,
     height: 56,
     borderRadius: 14,
+    backgroundColor: '#ffffff',
     justifyContent: 'center',
     alignItems: 'center',
+    borderWidth: 2,
+    borderColor: '#000000',
+  },
+  courseHorseLogo: {
+    width: 40,
+    height: 40,
+    resizeMode: 'contain',
   },
   courseInfo: {
     flex: 1,
