@@ -1195,7 +1195,7 @@ async def get_subscription_tiers():
             "price_monthly": 35.00,
             "price_display": "$35/month",
             "features": [
-                "All 205 mental performance tools",
+                "Over 200 mental performance tools",
                 "Voice-guided coaching during rides",
                 "Session tracking & analytics",
                 "Post-ride reflection tools",
