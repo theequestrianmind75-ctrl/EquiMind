@@ -170,49 +170,6 @@ export default function Subscription() {
     }
   };
 
-  const handleRestorePurchases = async () => {
-    if (!isNativePlatform) {
-      Alert.alert('Not Available', 'Restore purchases is only available on iOS/Android.');
-      return;
-    }
-
-    setRestoring(true);
-    try {
-      const result = await restorePurchases();
-      
-      if (result.success) {
-        if (result.isPremium) {
-          // Update backend
-          await api.post('/subscriptions/update', {
-            subscription_tier: 'premium',
-            subscription_status: 'active',
-            subscription_start_date: new Date().toISOString(),
-          });
-          
-          Alert.alert(
-            'Purchases Restored!',
-            'Your premium subscription has been restored.',
-            [
-              {
-                text: 'Continue',
-                onPress: () => router.push('/(tabs)/home'),
-              },
-            ]
-          );
-        } else {
-          Alert.alert('No Purchases Found', 'We could not find any previous purchases associated with your account.');
-        }
-      } else {
-        Alert.alert('Restore Failed', result.error || 'Unable to restore purchases. Please try again.');
-      }
-    } catch (error) {
-      console.error('Error restoring purchases:', error);
-      Alert.alert('Error', 'Failed to restore purchases. Please try again.');
-    } finally {
-      setRestoring(false);
-    }
-  };
-
   if (loading) {
     return (
       <SafeAreaView style={styles.container}>
