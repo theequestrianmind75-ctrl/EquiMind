@@ -467,7 +467,7 @@ const styles = StyleSheet.create({
   },
   upgradeLargeButton: {
     flexDirection: 'row',
-    backgroundColor: '#f59e0b',
+    backgroundColor: '#375B50',
     paddingVertical: 16,
     paddingHorizontal: 24,
     borderRadius: 12,
