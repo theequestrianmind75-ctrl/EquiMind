@@ -647,7 +647,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     borderRadius: 12,
     borderWidth: 2,
-    borderColor: '#ff9900',
+    borderColor: '#375B50',
     overflow: 'hidden',
   },
   bookContent: {
@@ -658,7 +658,7 @@ const styles = StyleSheet.create({
   bookIcon: {
     width: 70,
     height: 90,
-    backgroundColor: '#fff7ed',
+    backgroundColor: '#f0fdf4',
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
@@ -684,7 +684,7 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   priceTag: {
-    backgroundColor: '#ff9900',
+    backgroundColor: '#375B50',
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 6,
@@ -702,14 +702,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#fff7ed',
+    backgroundColor: '#f0fdf4',
     paddingVertical: 12,
     gap: 8,
   },
   bookActionText: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#ff9900',
+    color: '#375B50',
   },
   helpSection: {
     backgroundColor: '#ffffff',
