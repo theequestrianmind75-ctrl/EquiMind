@@ -434,11 +434,11 @@ const styles = StyleSheet.create({
     gap: 16,
   },
   upgradeCard: {
-    backgroundColor: '#fffbeb',
+    backgroundColor: '#ffffff',
     padding: 24,
     borderRadius: 12,
     borderWidth: 2,
-    borderColor: '#fef3c7',
+    borderColor: '#e2e8f0',
   },
   upgradeTitle: {
     fontSize: 20,
@@ -448,7 +448,7 @@ const styles = StyleSheet.create({
   },
   upgradeDescription: {
     fontSize: 15,
-    color: '#78350f',
+    color: '#000000',
     lineHeight: 22,
     marginBottom: 16,
   },
