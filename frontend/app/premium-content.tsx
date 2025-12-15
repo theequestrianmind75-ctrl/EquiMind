@@ -294,8 +294,11 @@ export default function PremiumContent() {
                     onPress={() => openThinkificContent(download.url, download.title)}
                     activeOpacity={0.7}
                   >
-                    <View style={styles.downloadIcon}>
-                      <Ionicons name={(download.icon || 'document') as any} size={32} color={download.color || '#375B50'} />
+                    <View style={styles.downloadIconContainer}>
+                      <Image 
+                        source={require('../assets/images/equimind-icon.png')}
+                        style={styles.downloadHorseLogo}
+                      />
                     </View>
                     <Text style={styles.downloadTitle}>{download.title}</Text>
                     <Text style={styles.downloadDescription}>{download.description}</Text>
