@@ -275,27 +275,35 @@ export default function PremiumContent() {
               Guides, workbooks, and audio sessions
             </Text>
 
-            <View style={styles.downloadsGrid}>
-              {DOWNLOADS.map((download) => (
-                <TouchableOpacity
-                  key={download.id}
-                  style={[styles.downloadCard, !isPremium && styles.cardLocked]}
-                  onPress={() => openThinkificContent(download.url, download.title)}
-                  activeOpacity={0.7}
-                >
-                  <View style={styles.downloadIcon}>
-                    <Ionicons name={download.icon as any} size={32} color="#375B50" />
-                  </View>
-                  <Text style={styles.downloadTitle}>{download.title}</Text>
-                  <Text style={styles.downloadDescription}>{download.description}</Text>
-                  {!isPremium && (
-                    <View style={styles.lockBadge}>
-                      <Ionicons name="lock-closed" size={12} color="#ffffff" />
+            {downloads.length === 0 ? (
+              <View style={styles.emptyState}>
+                <Ionicons name="download-outline" size={48} color="#cbd5e0" />
+                <Text style={styles.emptyStateText}>No downloads available yet</Text>
+                <Text style={styles.emptyStateSubtext}>Check back soon for new content!</Text>
+              </View>
+            ) : (
+              <View style={styles.downloadsGrid}>
+                {downloads.map((download) => (
+                  <TouchableOpacity
+                    key={download.id}
+                    style={[styles.downloadCard, !isPremium && styles.cardLocked]}
+                    onPress={() => openThinkificContent(download.url, download.title)}
+                    activeOpacity={0.7}
+                  >
+                    <View style={styles.downloadIcon}>
+                      <Ionicons name={(download.icon || 'document') as any} size={32} color={download.color || '#375B50'} />
                     </View>
-                  )}
-                </TouchableOpacity>
-              ))}
-            </View>
+                    <Text style={styles.downloadTitle}>{download.title}</Text>
+                    <Text style={styles.downloadDescription}>{download.description}</Text>
+                    {!isPremium && (
+                      <View style={styles.lockBadge}>
+                        <Ionicons name="lock-closed" size={12} color="#ffffff" />
+                      </View>
+                    )}
+                  </TouchableOpacity>
+                ))}
+              </View>
+            )}
           </View>
         )}
 
