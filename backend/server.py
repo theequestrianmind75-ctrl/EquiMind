@@ -1333,6 +1333,250 @@ async def revenuecat_webhook(request: dict):
         # Return 200 to prevent RevenueCat from retrying
         return {"success": False, "error": str(e)}
 
+# ==================== PREMIUM CONTENT MANAGEMENT ====================
+
+class PremiumContentCreate(BaseModel):
+    content_type: str  # "course" or "download"
+    title: str
+    description: str
+    icon: str = "book"  # Ionicons icon name
+    color: str = "#375B50"
+    url: str  # Thinkific URL
+    duration: Optional[str] = None  # For courses: "6 modules", etc.
+    order: int = 0  # Display order
+
+class PremiumContentUpdate(BaseModel):
+    content_type: Optional[str] = None
+    title: Optional[str] = None
+    description: Optional[str] = None
+    icon: Optional[str] = None
+    color: Optional[str] = None
+    url: Optional[str] = None
+    duration: Optional[str] = None
+    order: Optional[int] = None
+    active: Optional[bool] = None
+
+@api_router.get("/premium-content")
+async def get_premium_content():
+    """Get all active premium content (courses and downloads) - public endpoint"""
+    content = await db.premium_content.find({"active": {"$ne": False}}).sort("order", 1).to_list(100)
+    
+    # Separate into courses and downloads
+    courses = []
+    downloads = []
+    
+    for item in content:
+        # Clean up MongoDB _id
+        if '_id' in item:
+            item['id'] = str(item['_id'])
+            del item['_id']
+        
+        if item.get('content_type') == 'course':
+            courses.append(item)
+        else:
+            downloads.append(item)
+    
+    return {
+        "courses": courses,
+        "downloads": downloads
+    }
+
+@api_router.post("/admin/premium-content")
+async def get_all_premium_content_admin(auth: AdminAuth):
+    """Get all premium content for admin - password protected"""
+    if auth.password != ADMIN_PASSWORD:
+        raise HTTPException(status_code=401, detail="Invalid admin password")
+    
+    content = await db.premium_content.find({}).sort("order", 1).to_list(100)
+    
+    for item in content:
+        if '_id' in item:
+            item['id'] = str(item['_id'])
+            del item['_id']
+    
+    return content
+
+@api_router.post("/admin/premium-content/create")
+async def create_premium_content(request: dict):
+    """Create new premium content - password protected"""
+    password = request.get("password")
+    if password != ADMIN_PASSWORD:
+        raise HTTPException(status_code=401, detail="Invalid admin password")
+    
+    content_data = request.get("content")
+    if not content_data:
+        raise HTTPException(status_code=400, detail="Content data required")
+    
+    # Generate ID
+    content_id = str(uuid.uuid4())
+    content_data["id"] = content_id
+    content_data["active"] = True
+    content_data["created_at"] = datetime.utcnow()
+    
+    await db.premium_content.insert_one(content_data)
+    
+    logger.info(f"✅ Created premium content: {content_data.get('title')}")
+    return {"success": True, "id": content_id, "content": content_data}
+
+@api_router.post("/admin/premium-content/update")
+async def update_premium_content(request: dict):
+    """Update premium content - password protected"""
+    password = request.get("password")
+    if password != ADMIN_PASSWORD:
+        raise HTTPException(status_code=401, detail="Invalid admin password")
+    
+    content_id = request.get("id")
+    updates = request.get("updates", {})
+    
+    if not content_id:
+        raise HTTPException(status_code=400, detail="Content ID required")
+    
+    result = await db.premium_content.update_one(
+        {"id": content_id},
+        {"$set": updates}
+    )
+    
+    if result.matched_count == 0:
+        raise HTTPException(status_code=404, detail="Content not found")
+    
+    logger.info(f"✅ Updated premium content: {content_id}")
+    return {"success": True, "id": content_id}
+
+@api_router.post("/admin/premium-content/delete")
+async def delete_premium_content(request: dict):
+    """Delete premium content - password protected"""
+    password = request.get("password")
+    if password != ADMIN_PASSWORD:
+        raise HTTPException(status_code=401, detail="Invalid admin password")
+    
+    content_id = request.get("id")
+    if not content_id:
+        raise HTTPException(status_code=400, detail="Content ID required")
+    
+    result = await db.premium_content.delete_one({"id": content_id})
+    
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Content not found")
+    
+    logger.info(f"🗑️ Deleted premium content: {content_id}")
+    return {"success": True, "id": content_id}
+
+@api_router.post("/admin/premium-content/seed")
+async def seed_premium_content(auth: AdminAuth):
+    """Seed initial premium content - password protected"""
+    if auth.password != ADMIN_PASSWORD:
+        raise HTTPException(status_code=401, detail="Invalid admin password")
+    
+    # Check if already seeded
+    existing = await db.premium_content.count_documents({})
+    if existing > 0:
+        return {"message": "Content already exists", "count": existing}
+    
+    # Default Thinkific URL
+    thinkific_url = "https://kristi-s-site-43fb.thinkific.com"
+    
+    # Seed courses
+    courses = [
+        {
+            "id": str(uuid.uuid4()),
+            "content_type": "course",
+            "title": "The Equestrian Mindset",
+            "description": "Master the mental game of riding with proven psychological techniques",
+            "icon": "brain",
+            "color": "#375B50",
+            "url": f"{thinkific_url}/courses/the-equestrian-mindset",
+            "duration": "6 modules",
+            "order": 1,
+            "active": True,
+            "created_at": datetime.utcnow()
+        },
+        {
+            "id": str(uuid.uuid4()),
+            "content_type": "course",
+            "title": "Break Your Perfectionism",
+            "description": "Overcome perfectionism to ride with confidence and joy",
+            "icon": "heart",
+            "color": "#ef4444",
+            "url": f"{thinkific_url}/courses/break-your-perfectionism",
+            "duration": "4 modules",
+            "order": 2,
+            "active": True,
+            "created_at": datetime.utcnow()
+        },
+        {
+            "id": str(uuid.uuid4()),
+            "content_type": "course",
+            "title": "When You Shouldn't Ride Due to Emotions",
+            "description": "Learn to recognize when emotions affect your riding safety",
+            "icon": "alert-circle",
+            "color": "#f59e0b",
+            "url": f"{thinkific_url}/courses/emotional-riding",
+            "duration": "3 modules",
+            "order": 3,
+            "active": True,
+            "created_at": datetime.utcnow()
+        }
+    ]
+    
+    # Seed downloads
+    downloads = [
+        {
+            "id": str(uuid.uuid4()),
+            "content_type": "download",
+            "title": "Rider Anxiety Workbook",
+            "description": "Comprehensive exercises to manage riding anxiety",
+            "icon": "document-text",
+            "color": "#375B50",
+            "url": f"{thinkific_url}/products/rider-anxiety-workbook",
+            "order": 1,
+            "active": True,
+            "created_at": datetime.utcnow()
+        },
+        {
+            "id": str(uuid.uuid4()),
+            "content_type": "download",
+            "title": "Confidence Building Guide",
+            "description": "Step-by-step guide to build unshakeable confidence",
+            "icon": "shield-checkmark",
+            "color": "#375B50",
+            "url": f"{thinkific_url}/products/confidence-guide",
+            "order": 2,
+            "active": True,
+            "created_at": datetime.utcnow()
+        },
+        {
+            "id": str(uuid.uuid4()),
+            "content_type": "download",
+            "title": "Visualization Audio Sessions",
+            "description": "Guided visualization for competition prep",
+            "icon": "headset",
+            "color": "#375B50",
+            "url": f"{thinkific_url}/products/visualization-audio",
+            "order": 3,
+            "active": True,
+            "created_at": datetime.utcnow()
+        },
+        {
+            "id": str(uuid.uuid4()),
+            "content_type": "download",
+            "title": "Riding Journal Templates",
+            "description": "Track your mental and physical progress",
+            "icon": "journal",
+            "color": "#375B50",
+            "url": f"{thinkific_url}/products/journal-templates",
+            "order": 4,
+            "active": True,
+            "created_at": datetime.utcnow()
+        }
+    ]
+    
+    # Insert all
+    all_content = courses + downloads
+    await db.premium_content.insert_many(all_content)
+    
+    logger.info(f"✅ Seeded {len(all_content)} premium content items")
+    return {"success": True, "courses": len(courses), "downloads": len(downloads)}
+
 # ==================== FEEDBACK ROUTES ====================
 
 @api_router.post("/feedback", response_model=Feedback)
