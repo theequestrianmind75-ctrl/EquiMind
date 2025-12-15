@@ -139,7 +139,7 @@ export default function Home() {
         </View>
 
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Subscription & Premium Content</Text>
+          <Text style={styles.sectionTitle}>Premium Subscription</Text>
           
           {loadingSubscription ? (
             <View style={styles.loadingCard}>
