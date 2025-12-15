@@ -236,8 +236,11 @@ export default function PremiumContent() {
                   onPress={() => openThinkificContent(course.url, course.title)}
                   activeOpacity={0.7}
                 >
-                  <View style={[styles.courseIcon, { backgroundColor: (course.color || '#375B50') + '20' }]}>
-                    <Ionicons name={(course.icon || 'book') as any} size={28} color={course.color || '#375B50'} />
+                  <View style={styles.courseIconContainer}>
+                    <Image 
+                      source={require('../assets/images/equimind-icon.png')}
+                      style={styles.courseHorseLogo}
+                    />
                   </View>
                   <View style={styles.courseInfo}>
                     <Text style={styles.courseTitle}>{course.title}</Text>
@@ -252,7 +255,7 @@ export default function PremiumContent() {
                   <Ionicons 
                     name={isPremium ? "play-circle" : "lock-closed"} 
                     size={28} 
-                    color={isPremium ? (course.color || '#375B50') : "#cbd5e0"} 
+                    color={isPremium ? '#375B50' : "#cbd5e0"} 
                   />
                 </TouchableOpacity>
               ))
