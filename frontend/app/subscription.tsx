@@ -184,14 +184,6 @@ export default function Subscription() {
             </>
           )}
         </TouchableOpacity>
-
-        <View style={styles.footer}>
-          <Text style={styles.footerText}>
-            • Cancel anytime{'\n'}
-            • Secure payment via Apple/Google{'\n'}
-            • 7-day money-back guarantee
-          </Text>
-        </View>
       </ScrollView>
     </SafeAreaView>
   );
