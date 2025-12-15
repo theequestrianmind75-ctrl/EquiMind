@@ -1171,6 +1171,9 @@ async def admin_delete_user(request: dict):
 
 # ==================== SUBSCRIPTION ROUTES ====================
 
+# RevenueCat Webhook Secret (optional, for webhook verification)
+REVENUECAT_WEBHOOK_SECRET = os.environ.get('REVENUECAT_WEBHOOK_SECRET', '')
+
 @api_router.get("/subscriptions/tiers")
 async def get_subscription_tiers():
     """Get available subscription tiers"""
@@ -1251,6 +1254,84 @@ async def update_subscription(
         "subscription_tier": subscription_data.subscription_tier,
         "subscription_status": subscription_data.subscription_status
     }
+
+@api_router.post("/subscriptions/webhook/revenuecat")
+async def revenuecat_webhook(request: dict):
+    """
+    Webhook endpoint for RevenueCat to notify about subscription events.
+    This keeps our database in sync with Apple/Google subscription status.
+    
+    Events handled:
+    - INITIAL_PURCHASE: New subscription purchased
+    - RENEWAL: Subscription renewed
+    - CANCELLATION: Subscription cancelled
+    - EXPIRATION: Subscription expired
+    - BILLING_ISSUE: Payment problem
+    - PRODUCT_CHANGE: User changed subscription tier
+    """
+    try:
+        event = request.get("event", {})
+        event_type = event.get("type", "")
+        app_user_id = event.get("app_user_id", "")
+        
+        logger.info(f"📨 RevenueCat webhook received: {event_type} for user {app_user_id}")
+        
+        # Map RevenueCat event to subscription status
+        status_map = {
+            "INITIAL_PURCHASE": "active",
+            "RENEWAL": "active",
+            "CANCELLATION": "cancelled",
+            "EXPIRATION": "expired",
+            "BILLING_ISSUE": "billing_issue",
+            "UNCANCELLATION": "active",
+            "NON_RENEWING_PURCHASE": "active",
+        }
+        
+        new_status = status_map.get(event_type)
+        
+        if new_status and app_user_id:
+            # Get entitlement info to determine tier
+            subscriber_info = event.get("subscriber_info", {})
+            entitlements = subscriber_info.get("entitlements", {})
+            
+            # Determine subscription tier based on entitlements
+            subscription_tier = "none"
+            if "premium" in entitlements and entitlements["premium"].get("is_active"):
+                subscription_tier = "premium"
+            elif "standard" in entitlements and entitlements["standard"].get("is_active"):
+                subscription_tier = "standard"
+            
+            # Update user in database
+            update_data = {
+                "subscription_status": new_status,
+            }
+            
+            if subscription_tier != "none":
+                update_data["subscription_tier"] = subscription_tier
+            
+            if new_status == "active":
+                update_data["subscription_start_date"] = datetime.utcnow()
+            
+            if new_status in ["cancelled", "expired"]:
+                update_data["subscription_end_date"] = datetime.utcnow()
+            
+            # Try to find user by app_user_id (RevenueCat uses our user ID)
+            result = await db.users.update_one(
+                {"id": app_user_id},
+                {"$set": update_data}
+            )
+            
+            if result.matched_count > 0:
+                logger.info(f"✅ Updated subscription for user {app_user_id}: {new_status}")
+            else:
+                logger.warning(f"⚠️ User not found for webhook: {app_user_id}")
+        
+        return {"success": True, "message": "Webhook processed"}
+        
+    except Exception as e:
+        logger.error(f"❌ RevenueCat webhook error: {str(e)}")
+        # Return 200 to prevent RevenueCat from retrying
+        return {"success": False, "error": str(e)}
 
 # ==================== FEEDBACK ROUTES ====================
 
