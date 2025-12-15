@@ -118,7 +118,7 @@ export default function Subscription() {
       </View>
       <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
-          <Ionicons name="star" size={64} color="#f59e0b" />
+          <Ionicons name="ribbon" size={64} color="#3b82f6" />
           <Text style={styles.subtitle}>
             Upgrade to unlock exclusive content
           </Text>
