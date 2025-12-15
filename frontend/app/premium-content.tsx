@@ -581,14 +581,21 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 2,
   },
-  downloadIcon: {
+  downloadIconContainer: {
     width: 60,
     height: 60,
-    backgroundColor: '#f0fdf4',
+    backgroundColor: '#ffffff',
     borderRadius: 30,
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 12,
+    borderWidth: 2,
+    borderColor: '#000000',
+  },
+  downloadHorseLogo: {
+    width: 38,
+    height: 38,
+    resizeMode: 'contain',
   },
   downloadTitle: {
     fontSize: 14,
