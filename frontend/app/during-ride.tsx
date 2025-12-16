@@ -562,6 +562,16 @@ export default function DuringRideNew() {
                 </TouchableOpacity>
               </View>
             )}
+            
+            {/* Video Coaching Message */}
+            <View style={styles.videoCoachingCard}>
+              <Ionicons name="videocam" size={24} color="#375B50" />
+              <Text style={styles.videoCoachingText}>
+                If you need some timely coaching, please feel free to send a video message with you and your horse to{' '}
+                <Text style={styles.videoCoachingEmail}>Theequestrianmind75@gmail.com</Text>
+                {' '}and I will respond with a video reply within 24 hours.
+              </Text>
+            </View>
           </View>
         )}
 
