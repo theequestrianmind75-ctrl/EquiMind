@@ -1785,3 +1785,17 @@ async def download_screenshots():
         filename="app-store-screenshots.zip",
         media_type="application/zip"
     )
+
+from fastapi.responses import Response
+
+@app.get("/screenshots-download")
+async def screenshots_download():
+    """Download App Store screenshots zip - alternative"""
+    file_path = Path(__file__).parent / "static" / "app-store-screenshots.zip"
+    with open(file_path, "rb") as f:
+        content = f.read()
+    return Response(
+        content=content,
+        media_type="application/zip",
+        headers={"Content-Disposition": "attachment; filename=app-store-screenshots.zip"}
+    )
