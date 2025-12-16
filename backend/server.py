@@ -1775,3 +1775,13 @@ async def privacy_policy():
     """Serve privacy policy page"""
     file_path = Path(__file__).parent / "static" / "privacy-policy.html"
     return FileResponse(path=str(file_path), media_type="text/html")
+
+@app.get("/download/screenshots")
+async def download_screenshots():
+    """Download App Store screenshots zip"""
+    file_path = Path(__file__).parent / "static" / "app-store-screenshots.zip"
+    return FileResponse(
+        path=str(file_path),
+        filename="app-store-screenshots.zip",
+        media_type="application/zip"
+    )
