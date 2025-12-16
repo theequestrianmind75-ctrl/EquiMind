@@ -1799,3 +1799,9 @@ async def screenshots_download():
         media_type="application/zip",
         headers={"Content-Disposition": "attachment; filename=app-store-screenshots.zip"}
     )
+
+@app.get("/screenshots")
+async def screenshots_page():
+    """Screenshots download page"""
+    file_path = Path(__file__).parent / "static" / "screenshots-page.html"
+    return FileResponse(path=str(file_path), media_type="text/html")
