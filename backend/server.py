@@ -1206,6 +1206,7 @@ async def get_subscription_tiers():
                 "Access to all video courses",
                 "Digital downloads & guides",
                 "Advanced training materials",
+                "Video messaging with coach",
                 "Exclusive premium content"
             ],
             "description": "Complete equestrian mental training package"
