@@ -2,7 +2,7 @@ import Purchases, { LOG_LEVEL, PurchasesPackage } from 'react-native-purchases';
 import { Platform } from 'react-native';
 
 // RevenueCat API Key - read from environment variable
-const REVENUECAT_API_KEY = process.env.EXPO_PUBLIC_REVENUECAT_API_KEY || 'test_NWSVzbWbKJdupmAVRHZrFxXQeaj';
+const REVENUECAT_API_KEY = process.env.EXPO_PUBLIC_REVENUECAT_API_KEY || 'appl_MUbgQbWxVMcMUFyJHfyyoDbANkf';
 
 export const configurePurchases = async () => {
   try {
