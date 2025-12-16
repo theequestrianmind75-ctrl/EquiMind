@@ -264,7 +264,7 @@ export default function Subscription() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f7fa',
+    backgroundColor: '#A7D2BB',
   },
   topHeader: {
     flexDirection: 'row',
@@ -305,9 +305,17 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     borderRadius: 40,
-    backgroundColor: '#fef3c7',
+    backgroundColor: '#ffffff',
     justifyContent: 'center',
     alignItems: 'center',
+    borderWidth: 2,
+    borderColor: '#000000',
+  },
+  horseLogo: {
+    width: 50,
+    height: 50,
+    resizeMode: 'contain',
+  },
     marginBottom: 16,
   },
   title: {
