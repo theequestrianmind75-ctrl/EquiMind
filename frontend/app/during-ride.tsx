@@ -574,14 +574,6 @@ export default function DuringRideNew() {
             </View>
           </View>
         )}
-
-        {/* Info Card */}
-        <View style={styles.infoCard}>
-          <Ionicons name="information-circle" size={24} color="#375B50" />
-          <Text style={styles.infoText}>
-            These tools were selected based on your pre-ride state. Use them as needed during your ride for real-time support.
-          </Text>
-        </View>
       </ScrollView>
     </SafeAreaView>
   );
