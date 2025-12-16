@@ -196,7 +196,10 @@ export default function Subscription() {
       <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <View style={styles.iconContainer}>
-            <Ionicons name="star" size={48} color="#f59e0b" />
+            <Image 
+              source={require('../assets/images/equimind-icon.png')}
+              style={styles.horseLogo}
+            />
           </View>
           <Text style={styles.title}>Unlock Premium</Text>
           <Text style={styles.subtitle}>
