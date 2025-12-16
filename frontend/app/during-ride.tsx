@@ -945,4 +945,25 @@ const styles = StyleSheet.create({
     lineHeight: 18,
     marginLeft: 12,
   },
+  videoCoachingCard: {
+    backgroundColor: '#ffffff',
+    padding: 16,
+    borderRadius: 12,
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    marginTop: 16,
+    borderWidth: 1,
+    borderColor: '#375B50',
+  },
+  videoCoachingText: {
+    flex: 1,
+    fontSize: 14,
+    color: '#1e293b',
+    lineHeight: 20,
+    marginLeft: 12,
+  },
+  videoCoachingEmail: {
+    color: '#375B50',
+    fontWeight: '700',
+  },
 });
