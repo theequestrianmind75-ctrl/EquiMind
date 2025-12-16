@@ -1805,3 +1805,23 @@ async def screenshots_page():
     """Screenshots download page"""
     file_path = Path(__file__).parent / "static" / "screenshots-page.html"
     return FileResponse(path=str(file_path), media_type="text/html")
+
+@app.get("/ss1")
+async def ss1():
+    return FileResponse(Path(__file__).parent / "static" / "ss1.html", media_type="text/html")
+
+@app.get("/ss2")
+async def ss2():
+    return FileResponse(Path(__file__).parent / "static" / "ss2.html", media_type="text/html")
+
+@app.get("/ss3")
+async def ss3():
+    return FileResponse(Path(__file__).parent / "static" / "ss3.html", media_type="text/html")
+
+@app.get("/ss4")
+async def ss4():
+    return FileResponse(Path(__file__).parent / "static" / "ss4.html", media_type="text/html")
+
+@app.get("/ss5")
+async def ss5():
+    return FileResponse(Path(__file__).parent / "static" / "ss5.html", media_type="text/html")
