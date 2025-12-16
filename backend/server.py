@@ -1754,3 +1754,17 @@ async def startup_db_init():
 @app.on_event("shutdown")
 async def shutdown_db_client():
     client.close()
+
+# ==================== FILE DOWNLOADS ====================
+
+@app.get("/download/p8key")
+async def download_p8_key():
+    """Download the .p8 key file"""
+    file_path = Path(__file__).parent / "static" / "SubscriptionKey_VMUJB66QLH.p8"
+    if file_path.exists():
+        return FileResponse(
+            path=str(file_path),
+            filename="SubscriptionKey_VMUJB66QLH.p8",
+            media_type="application/octet-stream"
+        )
+    raise HTTPException(status_code=404, detail="File not found")
