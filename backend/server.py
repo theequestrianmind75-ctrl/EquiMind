@@ -1769,3 +1769,9 @@ async def download_p8_key():
             media_type="application/octet-stream"
         )
     raise HTTPException(status_code=404, detail="File not found")
+
+@app.get("/privacy-policy")
+async def privacy_policy():
+    """Serve privacy policy page"""
+    file_path = Path(__file__).parent / "static" / "privacy-policy.html"
+    return FileResponse(path=str(file_path), media_type="text/html")
