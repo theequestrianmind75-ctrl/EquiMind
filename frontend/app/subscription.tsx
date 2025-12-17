@@ -40,20 +40,16 @@ export default function Subscription() {
   const [isNativePlatform, setIsNativePlatform] = useState(false);
 
   useEffect(() => {
-    // Check if running on native platform (iOS/Android)
     const isNative = Platform.OS === 'ios' || Platform.OS === 'android';
     setIsNativePlatform(isNative);
-    
     loadSubscriptionData(isNative);
   }, []);
 
   const loadSubscriptionData = async (isNative: boolean) => {
     try {
-      // Load tier info from backend (for feature list display)
       const response = await api.get('/subscriptions/tiers');
       setTiers(response.data);
       
-      // If on native platform, also try to load RevenueCat packages
       if (isNative) {
         try {
           const rcPackages = await getOfferings();
@@ -74,9 +70,7 @@ export default function Subscription() {
   const handleSubscribe = async (tierId: string) => {
     setSubscribing(true);
     try {
-      // Check if we have RevenueCat packages available
       if (packages.length > 0) {
-        // Find the matching package (premium)
         const premiumPackage = packages.find(
           pkg => pkg.identifier.toLowerCase().includes('premium') || 
                  pkg.identifier.toLowerCase().includes('monthly')
@@ -87,31 +81,22 @@ export default function Subscription() {
           const result = await purchasePackage(premiumPackage);
           
           if (result.success) {
-            // Update backend with subscription status
             await updateSubscription(tierId);
             
             Alert.alert(
               '🎉 Welcome to Premium!',
               'Your subscription has been activated. Enjoy full access to all premium content.',
-              [
-                {
-                  text: 'Start Exploring',
-                  onPress: () => router.push('/(tabs)/home'),
-                },
-              ]
+              [{ text: 'Start Exploring', onPress: () => router.push('/(tabs)/home') }]
             );
           } else if (result.error === 'User cancelled') {
-            // User cancelled - do nothing
             console.log('User cancelled purchase');
           } else {
             Alert.alert('Purchase Failed', result.error || 'An error occurred during purchase.');
           }
         } else {
-          // No matching package found
           showDevelopmentAlert(tierId);
         }
       } else {
-        // No packages available (development mode or web)
         showDevelopmentAlert(tierId);
       }
     } catch (error) {
@@ -129,10 +114,7 @@ export default function Subscription() {
         ? 'Subscriptions are available in the mobile app (iOS/Android). Please download the app from the App Store or Google Play to subscribe.'
         : 'In-app purchases will be available once the app is published to the App Store. For testing purposes, we can activate your subscription now.',
       [
-        {
-          text: 'Cancel',
-          style: 'cancel',
-        },
+        { text: 'Cancel', style: 'cancel' },
         {
           text: Platform.OS === 'web' ? 'OK' : 'Activate for Testing',
           onPress: () => {
@@ -156,12 +138,7 @@ export default function Subscription() {
       Alert.alert(
         'Success!',
         'Your subscription has been activated.',
-        [
-          {
-            text: 'Start Using App',
-            onPress: () => router.push('/(tabs)/home'),
-          },
-        ]
+        [{ text: 'Start Using App', onPress: () => router.push('/(tabs)/home') }]
       );
     } catch (error) {
       console.error('Error updating subscription:', error);
@@ -180,7 +157,6 @@ export default function Subscription() {
     );
   }
 
-  // Get the premium tier for display
   const premiumTier = tiers.find(tier => tier.tier_id === 'premium');
 
   return (
@@ -230,10 +206,7 @@ export default function Subscription() {
 
         <View style={styles.buttonContainer}>
           <TouchableOpacity
-            style={[
-              styles.subscribeButton,
-              subscribing && styles.subscribeButtonDisabled,
-            ]}
+            style={[styles.subscribeButton, subscribing && styles.subscribeButtonDisabled]}
             onPress={() => handleSubscribe('premium')}
             disabled={subscribing}
           >
@@ -242,9 +215,7 @@ export default function Subscription() {
             ) : (
               <>
                 <Ionicons name="star" size={24} color="#ffffff" />
-                <Text style={styles.subscribeButtonText}>
-                  Subscribe to Premium
-                </Text>
+                <Text style={styles.subscribeButtonText}>Subscribe to Premium</Text>
               </>
             )}
           </TouchableOpacity>
@@ -310,13 +281,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderWidth: 2,
     borderColor: '#000000',
+    marginBottom: 16,
   },
   horseLogo: {
     width: 50,
     height: 50,
     resizeMode: 'contain',
-  },
-    marginBottom: 16,
   },
   title: {
     fontSize: 28,
@@ -336,7 +306,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     padding: 24,
     borderWidth: 2,
-    borderColor: '#f59e0b',
+    borderColor: '#375B50',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
@@ -414,39 +384,14 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '700',
   },
-  restoreButton: {
-    padding: 16,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 8,
-  },
-  restoreButtonText: {
-    color: '#375B50',
-    fontSize: 16,
-    fontWeight: '600',
-  },
   footer: {
     padding: 24,
     alignItems: 'center',
   },
   footerText: {
     fontSize: 13,
-    color: '#94a3b8',
+    color: '#64748b',
     textAlign: 'center',
     lineHeight: 20,
-    marginBottom: 16,
-  },
-  footerLinks: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  footerLink: {
-    fontSize: 13,
-    color: '#375B50',
-    fontWeight: '500',
-  },
-  footerDivider: {
-    color: '#94a3b8',
   },
 });
